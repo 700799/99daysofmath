@@ -14,19 +14,19 @@
     "corresponding parts of congruent triangles are congruent"
   ],
   "acceptanceMode": "normalized",
-  "hint": "The reason is a five-letter abbreviation that starts with C.",
+  "hint": "The triangles are already proven congruent. The reason says what that tells you about their matching sides and angles.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The reason is a five-letter abbreviation that starts with C."
+      "text": "The triangles are already proven congruent. The reason says what that tells you about their matching sides and angles."
     },
     {
       "level": "guide",
-      "text": "It stands for \"Corresponding Parts of Congruent Triangles are Congruent.\""
+      "text": "The reason is the phrase \"Corresponding Parts of Congruent Triangles are Congruent\". Take the first letter of each main word."
     },
     {
       "level": "reveal",
-      "text": "The reason is CPCTC."
+      "text": "The standard abbreviation for this reason is CPCTC."
     }
   ],
   "explanation": [

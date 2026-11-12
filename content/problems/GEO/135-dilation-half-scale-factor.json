@@ -14,25 +14,25 @@
     "3,-2"
   ],
   "acceptanceMode": "normalized",
-  "hint": "A dilation centered at the origin multiplies BOTH coordinates by the scale factor.",
+  "hint": "A dilation centered at the origin moves every point toward or away from the origin. Think about what the scale factor does to each coordinate.",
   "hints": [
     {
       "level": "nudge",
-      "text": "A dilation centered at the origin multiplies BOTH coordinates by the scale factor."
+      "text": "A dilation centered at the origin moves every point toward or away from the origin. Think about what the scale factor does to each coordinate."
     },
     {
       "level": "guide",
-      "text": "Multiply each coordinate by $\\frac{1}{2}$: $6 \\times \\frac{1}{2}$ and $-4 \\times \\frac{1}{2}$."
+      "text": "Both coordinates are multiplied by the scale factor, so compute $6 \\times \\frac{1}{2}$ and $-4 \\times \\frac{1}{2}$."
     },
     {
       "level": "reveal",
-      "text": "The corner moves to $(3, -2)$."
+      "text": "$6 \\times \\frac{1}{2} = 3$ and $-4 \\times \\frac{1}{2} = -2$, so the corner moves to $(3, -2)$."
     }
   ],
   "explanation": [
-    "For a dilation centered at the origin, $(x, y) \\to (kx, ky)$.",
-    "With $k = \\frac{1}{2}$: $6 \\times \\frac{1}{2} = 3$ and $-4 \\times \\frac{1}{2} = -2$.",
-    "The image corner is $(3, -2)$ — the same direction from the origin, half as far out."
+    "A dilation centered at the origin with scale factor $k$ sends each point $(x, y)$ to $(kx, ky)$.",
+    "With $k = \\frac{1}{2}$, the two new coordinates become $6 \\times \\frac{1}{2} = 3$ and $-4 \\times \\frac{1}{2} = -2$.",
+    "The image corner is $(3, -2)$, which lies in the same direction from the origin but half as far away."
   ],
   "alternativeExplanations": [
     {

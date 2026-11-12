@@ -10,11 +10,11 @@
   "primaryAnswer": "60",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Call the angle $x$. Its supplement is $180 - x$ and its complement is $90 - x$.",
+  "hint": "Give the unknown angle a name such as $x$. Then think about how to write its supplement and its complement using $x$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Call the angle $x$. Its supplement is $180 - x$ and its complement is $90 - x$."
+      "text": "Give the unknown angle a name such as $x$. Then think about how to write its supplement and its complement using $x$."
     },
     {
       "level": "nudge",
@@ -23,18 +23,18 @@
     },
     {
       "level": "guide",
-      "text": "Translate the sentence into $180 - x = 4(90 - x)$ and distribute the 4."
+      "text": "The supplement is $180 - x$ and the complement is $90 - x$, so the sentence becomes $180 - x = 4(90 - x)$. Distribute the $4$ and solve."
     },
     {
       "level": "reveal",
-      "text": "$180 - x = 360 - 4x$, so $3x = 180$ and $x = 60$."
+      "text": "$180 - x = 360 - 4x$ gives $3x = 180$, so the angle measures $60^\\circ$."
     }
   ],
   "explanation": [
-    "Let the angle be $x$. Its supplement is $180 - x$; its complement is $90 - x$.",
-    "The sentence says supplement $= 4 \\times$ complement: $180 - x = 4(90 - x)$.",
-    "Distribute: $180 - x = 360 - 4x$. Add $4x$ to both sides and subtract 180: $3x = 180$.",
-    "So $x = 60^\\circ$. Check: supplement $= 120$, complement $= 30$, and $120 = 4(30)$. ✓"
+    "Let the angle be $x$ degrees, so its supplement is $180 - x$ and its complement is $90 - x$.",
+    "The problem says the supplement equals $4$ times the complement, which gives the equation $180 - x = 4(90 - x)$.",
+    "Distribute to get $180 - x = 360 - 4x$, then add $4x$ and subtract $180$ on both sides to reach $3x = 180$.",
+    "Dividing by $3$ gives $x = 60^\\circ$, and it checks because the supplement $120$ is $4$ times the complement $30$."
   ],
   "alternativeExplanations": [
     {

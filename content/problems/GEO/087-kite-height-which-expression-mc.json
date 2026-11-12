@@ -32,25 +32,25 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The string is the hypotenuse; the height is the side opposite the $40^\\circ$ angle.",
+  "hint": "Picture the right triangle formed by the string, the ground and the kite's height. Name each side relative to the $40^\\circ$ angle.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The string is the hypotenuse; the height is the side opposite the $40^\\circ$ angle."
+      "text": "Picture the right triangle formed by the string, the ground and the kite's height. Name each side relative to the $40^\\circ$ angle."
     },
     {
       "level": "guide",
-      "text": "Opposite and hypotenuse means sine: $\\sin 40^\\circ = \\frac{h}{80}$."
+      "text": "The string is the hypotenuse and the height is opposite the angle, so $\\sin 40^\\circ = \\frac{h}{80}$. Solve this for $h$."
     },
     {
       "level": "reveal",
-      "text": "Multiply: $h = 80 \\sin 40^\\circ \\approx 51.4$ ft. Choice A."
+      "text": "Multiplying by $80$ gives $h = 80 \\sin 40^\\circ \\approx 51.4$ feet, which is choice A."
     }
   ],
   "explanation": [
-    "The taut string is the longest side of the triangle, so it is the hypotenuse: $80$ ft.",
-    "Height is opposite the $40^\\circ$ angle, and opposite-over-hypotenuse is sine: $\\sin 40^\\circ = \\frac{h}{80}$.",
-    "So $h = 80 \\sin 40^\\circ \\approx 51.4$ ft. Choice A."
+    "The taut string runs from the ground to the kite across from the right angle, so it is the hypotenuse of length $80$ feet.",
+    "The height is opposite the $40^\\circ$ angle, and opposite over hypotenuse is sine, so $\\sin 40^\\circ = \\frac{h}{80}$.",
+    "Multiplying both sides by $80$ gives $h = 80 \\sin 40^\\circ \\approx 51.4$ feet, which is choice A."
   ],
   "alternativeExplanations": [
     {

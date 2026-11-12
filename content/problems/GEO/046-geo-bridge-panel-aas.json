@@ -17,19 +17,19 @@
     "saa"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Two angles are known, and the known side is off to the side rather than between them.",
+  "hint": "Two angles and one side match. Notice where the side sits compared with the two angles.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Two angles are known, and the known side is off to the side rather than between them."
+      "text": "Two angles and one side match. Notice where the side sits compared with the two angles."
     },
     {
       "level": "guide",
-      "text": "Walk around the triangle: angle, angle, then side. What three letters is that?"
+      "text": "The side is not between the angles, so going around the triangle you meet angle, angle, and then side. Write those letters in order."
     },
     {
       "level": "reveal",
-      "text": "This is AAS — Angle-Angle-Side."
+      "text": "Two angles and a non-included side is the AAS criterion, short for Angle-Angle-Side."
     }
   ],
   "explanation": [

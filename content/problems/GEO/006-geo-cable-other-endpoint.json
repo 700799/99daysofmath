@@ -32,19 +32,19 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The midpoint sits the same distance from each end.",
+  "hint": "A midpoint is equally far from both ends. You know one end and the middle, so think about how far apart they are.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The midpoint sits the same distance from each end."
+      "text": "A midpoint is equally far from both ends. You know one end and the middle, so think about how far apart they are."
     },
     {
       "level": "guide",
-      "text": "From $2$ to the midpoint $9$ is 7 units, so the far end is 7 units past $9$."
+      "text": "From the end at $2$ to the midpoint at $9$ is $9 - 2 = 7$ units. The other end must be the same $7$ units beyond $9$."
     },
     {
       "level": "reveal",
-      "text": "$9 + 7 = 16$."
+      "text": "$9 + 7 = 16$, so the other end is anchored at $16$, which is choice B."
     }
   ],
   "explanation": [

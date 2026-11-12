@@ -10,25 +10,25 @@
   "primaryAnswer": "12",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Walking from $A$ to $C$ means walking $A$ to $B$ and then $B$ to $C$.",
+  "hint": "Picture the walk from $A$ to $C$. Which two shorter stretches does it pass over on the way?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Walking from $A$ to $C$ means walking $A$ to $B$ and then $B$ to $C$."
+      "text": "Picture the walk from $A$ to $C$. Which two shorter stretches does it pass over on the way?"
     },
     {
       "level": "guide",
-      "text": "The Segment Addition Postulate says $AB + BC = AC$ when $B$ is between $A$ and $C$."
+      "text": "Since $B$ is between $A$ and $C$, the Segment Addition Postulate gives $AC = AB + BC$. Add $7$ and $5$."
     },
     {
       "level": "reveal",
-      "text": "$7 + 5 = 12$ m."
+      "text": "$7 + 5 = 12$, so the distance $AC$ is $12$ meters."
     }
   ],
   "explanation": [
-    "Because $B$ sits between $A$ and $C$, the two short walks stack end to end.",
-    "Segment Addition: $AB + BC = AC$.",
-    "$7 + 5 = 12$, so $AC = 12$ m."
+    "The hydrants are in the order $A$, $B$, $C$ on one straight line, so $B$ lies between the other two.",
+    "The Segment Addition Postulate then says the two shorter pieces join to make the whole: $AB + BC = AC$.",
+    "Substituting the lengths gives $7 + 5 = 12$, so $AC = 12$ meters."
   ],
   "alternativeExplanations": [
     {

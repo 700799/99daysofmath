@@ -10,25 +10,25 @@
   "primaryAnswer": "75",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Co-interior (same-side interior) angles are not equal — they are supplementary.",
+  "hint": "Co-interior angles lie between the rails on the same side of the road. Are such angles equal, or do they make a fixed total?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Co-interior (same-side interior) angles are not equal — they are supplementary."
+      "text": "Co-interior angles lie between the rails on the same side of the road. Are such angles equal, or do they make a fixed total?"
     },
     {
       "level": "guide",
-      "text": "They add to $180^\\circ$, so compute $180 - 105$."
+      "text": "With parallel lines, co-interior angles are supplementary, so the two add to $180^\\circ$. Work out $180 - 105$."
     },
     {
       "level": "reveal",
-      "text": "$180 - 105 = 75^\\circ$."
+      "text": "$180 - 105 = 75$, so the co-interior angle measures $75^\\circ$."
     }
   ],
   "explanation": [
-    "Co-interior angles (also called same-side interior or consecutive interior angles) lie between the parallel lines on the same side of the transversal.",
-    "When the lines are parallel, those two angles are supplementary: they add to $180^\\circ$.",
-    "$180 - 105 = 75$, so the co-interior angle is $75^\\circ$."
+    "Co-interior angles, also called same-side interior angles, lie between the two lines and on the same side of the transversal.",
+    "When the two lines are parallel, these angles are supplementary, which means they add to $180^\\circ$.",
+    "Subtracting the known angle gives $180 - 105 = 75$, so the co-interior angle is $75^\\circ$."
   ],
   "alternativeExplanations": [
     {

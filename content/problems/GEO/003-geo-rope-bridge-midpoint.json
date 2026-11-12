@@ -10,25 +10,25 @@
   "primaryAnswer": "7",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The midpoint is the number sitting exactly halfway between the two anchors.",
+  "hint": "The midpoint is the same distance from both anchors. How do you find a number halfway between two others?",
   "hints": [
     {
       "level": "nudge",
-      "text": "The midpoint is the number sitting exactly halfway between the two anchors."
+      "text": "The midpoint is the same distance from both anchors. How do you find a number halfway between two others?"
     },
     {
       "level": "guide",
-      "text": "On a number line, the midpoint is the average of the endpoints: $\\frac{3 + 11}{2}$."
+      "text": "On a number line the midpoint is the average of the two endpoints, so set up $\\frac{3 + 11}{2}$."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{3 + 11}{2} = \\frac{14}{2} = 7$."
+      "text": "$\\frac{3 + 11}{2} = \\frac{14}{2} = 7$, so the midpoint is at $7$."
     }
   ],
   "explanation": [
-    "The midpoint of a segment on a number line is the average of its endpoints.",
-    "$\\frac{3 + 11}{2} = \\frac{14}{2} = 7$.",
-    "Check: from 3 to 7 is 4 units, and from 7 to 11 is also 4 units. Balanced."
+    "The midpoint of a segment on a number line is the average of its two endpoints, because the average sits equally far from both.",
+    "Add the endpoints and halve the result: $\\frac{3 + 11}{2} = \\frac{14}{2} = 7$.",
+    "As a check, $7$ is $4$ units from $3$ and $4$ units from $11$, so the midpoint is at $7$."
   ],
   "alternativeExplanations": [
     {

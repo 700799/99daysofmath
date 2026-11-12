@@ -10,25 +10,25 @@
   "primaryAnswer": "85",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "When all four vertices lie on a circle, opposite angles are supplementary.",
+  "hint": "A quadrilateral with all four vertices on a circle is called cyclic. Its opposite angles have a special relationship.",
   "hints": [
     {
       "level": "nudge",
-      "text": "When all four vertices lie on a circle, opposite angles are supplementary."
+      "text": "A quadrilateral with all four vertices on a circle is called cyclic. Its opposite angles have a special relationship."
     },
     {
       "level": "guide",
-      "text": "So $95 + \\angle Y = 180$."
+      "text": "Opposite angles of an inscribed quadrilateral are supplementary, so $95 + \\angle Y = 180$. Subtract to find $\\angle Y$."
     },
     {
       "level": "reveal",
-      "text": "$\\angle Y = 180 - 95 = 85^\\circ$."
+      "text": "$\\angle Y = 180 - 95 = 85^\\circ$, so the opposite angle is $85^\\circ$."
     }
   ],
   "explanation": [
-    "In a quadrilateral inscribed in a circle, each pair of opposite angles adds to $180^\\circ$.",
-    "Substitute the known angle: $95 + \\angle Y = 180$.",
-    "$\\angle Y = 85^\\circ$."
+    "In a quadrilateral inscribed in a circle, each pair of opposite angles adds to $180^\\circ$, because together they intercept the whole circle.",
+    "Angles $W$ and $Y$ are opposite each other, so $95 + \\angle Y = 180$.",
+    "Subtracting $95$ from both sides gives the answer $\\angle Y = 85^\\circ$."
   ],
   "alternativeExplanations": [
     {

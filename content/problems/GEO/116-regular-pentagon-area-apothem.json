@@ -10,25 +10,25 @@
   "primaryAnswer": "110",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "For a regular polygon, $A = \\frac{1}{2} \\times \\text{perimeter} \\times \\text{apothem}$.",
+  "hint": "A regular polygon's area can be found from its perimeter and its apothem. Recall the formula that joins them.",
   "hints": [
     {
       "level": "nudge",
-      "text": "For a regular polygon, $A = \\frac{1}{2} \\times \\text{perimeter} \\times \\text{apothem}$."
+      "text": "A regular polygon's area can be found from its perimeter and its apothem. Recall the formula that joins them."
     },
     {
       "level": "guide",
-      "text": "Perimeter $= 5 \\times 8 = 40$ inches."
+      "text": "The formula is $A = \\frac{1}{2} \\times \\text{perimeter} \\times \\text{apothem}$. The perimeter is $5 \\times 8 = 40$ inches, so work out $\\frac{1}{2}(40)(5.5)$."
     },
     {
       "level": "reveal",
-      "text": "$A = \\frac{1}{2}(40)(5.5) = 20 \\times 5.5 = 110$ square inches."
+      "text": "$\\frac{1}{2}(40)(5.5) = 20 \\times 5.5 = 110$, so the tabletop has an area of $110$ square inches."
     }
   ],
   "explanation": [
-    "Find the perimeter first: five sides of $8$ in give $P = 40$ in.",
-    "Apply $A = \\frac{1}{2}Pa = \\frac{1}{2}(40)(5.5)$.",
-    "$20 \\times 5.5 = 110$ square inches."
+    "A regular pentagon has five equal sides, so its perimeter is $P = 5 \\times 8 = 40$ inches.",
+    "The area of a regular polygon is $A = \\frac{1}{2}Pa$, which here is $\\frac{1}{2}(40)(5.5)$.",
+    "Half of $40$ is $20$, and $20 \\times 5.5 = 110$, so the area is $110$ square inches."
   ],
   "alternativeExplanations": [
     {

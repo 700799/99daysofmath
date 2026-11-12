@@ -10,25 +10,25 @@
   "primaryAnswer": "12",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The ladder is the hypotenuse — it is the longest side, leaning across from the right angle where wall meets ground.",
+  "hint": "The wall and the ground meet at a right angle. Decide which side of the triangle the ladder is before using the Pythagorean Theorem.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The ladder is the hypotenuse — it is the longest side, leaning across from the right angle where wall meets ground."
+      "text": "The wall and the ground meet at a right angle. Decide which side of the triangle the ladder is before using the Pythagorean Theorem."
     },
     {
       "level": "guide",
-      "text": "Here $c = 13$ and one leg is $5$: solve $5^2 + b^2 = 13^2$."
+      "text": "The ladder is the hypotenuse, so $c = 13$ and one leg is $5$. Solve $5^2 + b^2 = 13^2$ for the height $b$."
     },
     {
       "level": "reveal",
-      "text": "$b^2 = 169 - 25 = 144$, so $b = 12$ ft."
+      "text": "$b^2 = 169 - 25 = 144$, so $b = 12$ and the ladder reaches $12$ feet up the wall."
     }
   ],
   "explanation": [
-    "The wall and ground form the right angle, so the ladder is the hypotenuse: $c = 13$.",
-    "Substitute: $5^2 + b^2 = 13^2$, or $25 + b^2 = 169$.",
-    "Subtract: $b^2 = 144$, so the ladder reaches $b = 12$ ft up the wall."
+    "The wall meets the ground at a right angle, so the leaning ladder is the hypotenuse with $c = 13$.",
+    "Putting the known leg into the Pythagorean Theorem gives $5^2 + b^2 = 13^2$, which is $25 + b^2 = 169$.",
+    "Subtracting $25$ gives $b^2 = 144$, so $b = 12$ and the ladder reaches $12$ feet up the wall."
   ],
   "alternativeExplanations": [
     {

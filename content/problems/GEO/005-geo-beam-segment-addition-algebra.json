@@ -10,25 +10,25 @@
   "primaryAnswer": "5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The two pieces have to add up to the whole beam: $AB + BC = AC$.",
+  "hint": "The beam is cut into two pieces at $B$. How do the lengths of the pieces relate to the length of the whole beam?",
   "hints": [
     {
       "level": "nudge",
-      "text": "The two pieces have to add up to the whole beam: $AB + BC = AC$."
+      "text": "The beam is cut into two pieces at $B$. How do the lengths of the pieces relate to the length of the whole beam?"
     },
     {
       "level": "guide",
-      "text": "Write the equation $2x + (x + 5) = 20$ and combine like terms."
+      "text": "Segment Addition gives $AB + BC = AC$, so write $2x + (x + 5) = 20$ and combine the like terms."
     },
     {
       "level": "reveal",
-      "text": "$3x + 5 = 20$, so $3x = 15$ and $x = 5$."
+      "text": "$3x + 5 = 20$ gives $3x = 15$, so the value is $x = 5$."
     }
   ],
   "explanation": [
-    "Segment Addition gives $AB + BC = AC$, so $2x + x + 5 = 20$.",
-    "Combine like terms: $3x + 5 = 20$.",
-    "Subtract 5 and divide by 3: $3x = 15$, so $x = 5$."
+    "Because $B$ is between $A$ and $C$, the Segment Addition Postulate gives $AB + BC = AC$, which here reads $2x + (x + 5) = 20$.",
+    "Combining the two $x$ terms on the left side turns the equation into $3x + 5 = 20$.",
+    "Subtract $5$ from both sides and then divide by $3$: $3x = 15$, so $x = 5$."
   ],
   "alternativeExplanations": [
     {

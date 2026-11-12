@@ -14,25 +14,25 @@
     "5π"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Arc length is a fraction of the whole circumference: $\\frac{\\theta}{360} \\times 2\\pi r$.",
+  "hint": "An arc is a part of the whole circumference. Think about what fraction of the full circle a $90^\\circ$ section is.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Arc length is a fraction of the whole circumference: $\\frac{\\theta}{360} \\times 2\\pi r$."
+      "text": "An arc is a part of the whole circumference. Think about what fraction of the full circle a $90^\\circ$ section is."
     },
     {
       "level": "guide",
-      "text": "The whole circumference is $2\\pi(10) = 20\\pi$, and $90^\\circ$ is $\\frac{1}{4}$ of the circle."
+      "text": "The circumference is $2\\pi(10) = 20\\pi$ ft, and $90^\\circ$ is $\\frac{90}{360} = \\frac{1}{4}$ of the circle. Take that fraction of the circumference."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{1}{4} \\times 20\\pi = 5\\pi$ ft."
+      "text": "$\\frac{1}{4} \\times 20\\pi = 5\\pi$, so the arc is exactly $5\\pi$ feet long."
     }
   ],
   "explanation": [
-    "Circumference of the whole circle: $C = 2\\pi r = 20\\pi$ ft.",
-    "A $90^\\circ$ arc is $\\frac{90}{360} = \\frac{1}{4}$ of the way around.",
-    "Arc length $= \\frac{1}{4}(20\\pi) = 5\\pi$ ft (about $15.7$ ft)."
+    "The circumference of the whole path is $C = 2\\pi r = 2\\pi(10) = 20\\pi$ feet.",
+    "A $90^\\circ$ section is $\\frac{90}{360} = \\frac{1}{4}$ of the full turn, so the arc is one quarter of the circumference.",
+    "The arc length is $\\frac{1}{4}(20\\pi) = 5\\pi$ feet, which is about $15.7$ feet."
   ],
   "alternativeExplanations": [
     {

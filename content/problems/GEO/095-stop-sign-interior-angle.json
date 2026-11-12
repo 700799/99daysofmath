@@ -10,25 +10,25 @@
   "primaryAnswer": "135",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "First find the total: $(8 - 2) \\times 180$.",
+  "hint": "Begin with the total of all the interior angles of an octagon. Then think about how a regular shape shares that total.",
   "hints": [
     {
       "level": "nudge",
-      "text": "First find the total: $(8 - 2) \\times 180$."
+      "text": "Begin with the total of all the interior angles of an octagon. Then think about how a regular shape shares that total."
     },
     {
       "level": "guide",
-      "text": "That total is $1080^\\circ$, shared equally by $8$ angles."
+      "text": "The sum is $(8 - 2) \\times 180 = 1080^\\circ$. The eight angles are equal, so divide that sum by $8$."
     },
     {
       "level": "reveal",
-      "text": "$1080 \\div 8 = 135^\\circ$."
+      "text": "$1080 \\div 8 = 135$, so each interior angle measures $135^\\circ$."
     }
   ],
   "explanation": [
-    "Interior angle sum: $(8 - 2) \\times 180 = 6 \\times 180 = 1080^\\circ$.",
-    "Regular means all $8$ angles are equal, so divide by $8$.",
-    "Each interior angle of a stop sign is $135^\\circ$."
+    "The interior angles of an octagon add to $(8 - 2) \\times 180 = 6 \\times 180 = 1080^\\circ$.",
+    "A regular octagon has $8$ equal angles, so each one is the total divided by $8$.",
+    "That gives $1080 \\div 8 = 135$, so each interior angle of the stop sign is $135^\\circ$."
   ],
   "alternativeExplanations": [
     {

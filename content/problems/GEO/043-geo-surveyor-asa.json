@@ -32,19 +32,19 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Record the known parts in the order you meet them walking around the triangle.",
+  "hint": "Name the criterion by listing the known parts in the order you meet them going around the plot.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Record the known parts in the order you meet them walking around the triangle."
+      "text": "Name the criterion by listing the known parts in the order you meet them going around the plot."
     },
     {
       "level": "guide",
-      "text": "Angle, then the side between them, then angle: A-S-A."
+      "text": "The known side lies between the two known angles, so the order is angle, then side, then angle."
     },
     {
       "level": "reveal",
-      "text": "This is ASA — Angle-Side-Angle."
+      "text": "Angle, included side, angle is ASA, which is choice A."
     }
   ],
   "explanation": [

@@ -10,25 +10,25 @@
   "primaryAnswer": "12",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Going through the exterior angle is far easier than the interior-sum formula.",
+  "hint": "An interior angle and its exterior angle sit on a straight line. Working with the exterior angle makes this question much shorter.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Going through the exterior angle is far easier than the interior-sum formula."
+      "text": "An interior angle and its exterior angle sit on a straight line. Working with the exterior angle makes this question much shorter."
     },
     {
       "level": "guide",
-      "text": "Each exterior angle is $180 - 150 = 30^\\circ$, and all the exterior angles add to $360^\\circ$."
+      "text": "Each exterior angle is $180 - 150 = 30^\\circ$, and all the exterior angles total $360^\\circ$. Count how many angles of $30^\\circ$ fit into $360^\\circ$."
     },
     {
       "level": "reveal",
-      "text": "$360 \\div 30 = 12$ sides."
+      "text": "$360 \\div 30 = 12$, so the polygon has $12$ sides."
     }
   ],
   "explanation": [
-    "At each corner, interior + exterior $= 180^\\circ$, so each exterior angle is $180 - 150 = 30^\\circ$.",
-    "The exterior angles of any convex polygon total $360^\\circ$.",
-    "Number of sides $= 360 \\div 30 = 12$."
+    "At each vertex the interior and exterior angles form a linear pair, so each exterior angle is $180 - 150 = 30^\\circ$.",
+    "The exterior angles of any convex polygon add to $360^\\circ$, and in a regular polygon they are all equal.",
+    "The number of sides is therefore $360 \\div 30 = 12$."
   ],
   "alternativeExplanations": [
     {

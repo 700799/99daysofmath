@@ -13,25 +13,25 @@
     ".96"
   ],
   "acceptanceMode": "normalized",
-  "hint": "CAH: **C**osine is **A**djacent over **H**ypotenuse.",
+  "hint": "Cosine uses the leg that touches the angle. The memory aid CAH tells you which two sides to compare.",
   "hints": [
     {
       "level": "nudge",
-      "text": "CAH: **C**osine is **A**djacent over **H**ypotenuse."
+      "text": "Cosine uses the leg that touches the angle. The memory aid CAH tells you which two sides to compare."
     },
     {
       "level": "guide",
-      "text": "Adjacent is $24$, hypotenuse is $25$, so $\\cos P = \\frac{24}{25}$."
+      "text": "Cosine is adjacent over hypotenuse, so $\\cos P = \\frac{24}{25}$. Change that fraction into a decimal."
     },
     {
       "level": "reveal",
-      "text": "$24 \\div 25 = 0.96$."
+      "text": "$24 \\div 25 = 0.96$, so the cosine of the angle is $0.96$."
     }
   ],
   "explanation": [
-    "Cosine is the adjacent leg over the hypotenuse.",
-    "Substitute: $\\cos P = \\frac{24}{25}$.",
-    "As a decimal that is $0.96$."
+    "The cosine of an acute angle in a right triangle is the adjacent leg divided by the hypotenuse.",
+    "Substituting the given sides for $\\angle P$ gives $\\cos P = \\frac{24}{25}$.",
+    "Dividing gives $24 \\div 25 = 0.96$, so the cosine of the angle is $\\cos P = 0.96$."
   ],
   "alternativeExplanations": [
     {

@@ -10,25 +10,25 @@
   "primaryAnswer": "36.9",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "You know both legs — the pole (opposite) and the shadow (adjacent) — so use tangent.",
+  "hint": "The pole and its shadow are the two legs of a right triangle. Which trig ratio uses the opposite and adjacent sides only?",
   "hints": [
     {
       "level": "nudge",
-      "text": "You know both legs — the pole (opposite) and the shadow (adjacent) — so use tangent."
+      "text": "The pole and its shadow are the two legs of a right triangle. Which trig ratio uses the opposite and adjacent sides only?"
     },
     {
       "level": "guide",
-      "text": "$\\tan \\theta = \\frac{30}{40} = 0.75$. To undo tangent, use $\\tan^{-1}$."
+      "text": "Tangent is opposite over adjacent, so $\\tan \\theta = \\frac{30}{40} = 0.75$. Use the inverse tangent key to turn the ratio back into an angle."
     },
     {
       "level": "reveal",
-      "text": "$\\theta = \\tan^{-1}(0.75) \\approx 36.9^\\circ$."
+      "text": "$\\theta = \\tan^{-1}(0.75) \\approx 36.9^\\circ$, so the sun's angle of elevation is about $36.9^\\circ$."
     }
   ],
   "explanation": [
-    "The sun's angle of elevation sits at the tip of the shadow, between the ground and the ray to the top of the pole.",
-    "Opposite $= 30$, adjacent $= 40$, so $\\tan \\theta = \\frac{30}{40} = 0.75$.",
-    "Take the inverse tangent: $\\theta = \\tan^{-1}(0.75) \\approx 36.9^\\circ$."
+    "The angle of elevation is at the tip of the shadow, between the ground and the line of sight to the top of the pole.",
+    "From that angle the pole is the opposite side and the shadow is the adjacent side, so $\\tan \\theta = \\frac{30}{40} = 0.75$.",
+    "The inverse tangent undoes the ratio: $\\theta = \\tan^{-1}(0.75) \\approx 36.9^\\circ$."
   ],
   "alternativeExplanations": [
     {

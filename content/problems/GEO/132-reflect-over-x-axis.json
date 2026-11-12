@@ -14,25 +14,25 @@
     "4,3"
   ],
   "acceptanceMode": "normalized",
-  "hint": "The $x$-axis is a horizontal mirror, so the point flips up or down but never sideways.",
+  "hint": "The $x$-axis acts as a horizontal mirror line. Think about which coordinate stays the same when a point flips over it.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The $x$-axis is a horizontal mirror, so the point flips up or down but never sideways."
+      "text": "The $x$-axis acts as a horizontal mirror line. Think about which coordinate stays the same when a point flips over it."
     },
     {
       "level": "guide",
-      "text": "Keep $x$ the same and change the sign of $y$: $(x, y) \\to (x, -y)$."
+      "text": "The rule is $(x, y) \\to (x, -y)$: keep $x$ and change the sign of $y$. Apply it to the point $(4, -3)$."
     },
     {
       "level": "reveal",
-      "text": "$(4, -3)$ becomes $(4, 3)$."
+      "text": "The sign of $-3$ flips to $3$, so the image is the point $(4, 3)$."
     }
   ],
   "explanation": [
-    "Reflecting across the $x$-axis leaves the horizontal position alone and flips the vertical one.",
-    "The rule is $(x, y) \\to (x, -y)$.",
-    "So $(4, -3) \\to (4, 3)$ — it was $3$ below the axis, now it is $3$ above."
+    "Reflecting across the $x$-axis keeps a point's horizontal position and moves it to the same distance on the other side of the axis.",
+    "As a rule this is $(x, y) \\to (x, -y)$, so only the sign of the second coordinate changes.",
+    "Applying it gives $(4, -3) \\to (4, 3)$, a point $3$ units above the axis instead of $3$ below."
   ],
   "alternativeExplanations": [
     {

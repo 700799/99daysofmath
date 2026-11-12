@@ -32,25 +32,25 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Find both slopes with $m = \\frac{y_2 - y_1}{x_2 - x_1}$, then compare.",
+  "hint": "The way two lines are related shows up in their slopes. Find the slope of each line from its two points.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Find both slopes with $m = \\frac{y_2 - y_1}{x_2 - x_1}$, then compare."
+      "text": "The way two lines are related shows up in their slopes. Find the slope of each line from its two points."
     },
     {
       "level": "guide",
-      "text": "Line $j$: $\\frac{3 - 1}{4 - 0} = \\frac{2}{4} = \\frac{1}{2}$. Line $k$: $\\frac{3 - 5}{2 - 1} = \\frac{-2}{1} = -2$."
+      "text": "Line $j$ has slope $\\frac{3 - 1}{4 - 0} = \\frac{1}{2}$ and line $k$ has slope $\\frac{3 - 5}{2 - 1} = -2$. Check whether they are equal or multiply to $-1$."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{1}{2} \\times (-2) = -1$, so the lines are perpendicular. Choice B."
+      "text": "$\\frac{1}{2} \\times (-2) = -1$, so the lines are perpendicular, which is choice B."
     }
   ],
   "explanation": [
-    "Slope of $j$: $\\frac{3 - 1}{4 - 0} = \\frac{1}{2}$.",
-    "Slope of $k$: $\\frac{3 - 5}{2 - 1} = -2$.",
-    "The slopes are opposite reciprocals and multiply to $-1$, so the lines meet at a right angle. Choice B."
+    "The slope of line $j$ is the change in $y$ over the change in $x$: $\\frac{3 - 1}{4 - 0} = \\frac{1}{2}$.",
+    "In the same way, the slope of line $k$ is $\\frac{3 - 5}{2 - 1} = -2$.",
+    "The slopes are opposite reciprocals with product $-1$, so the lines are perpendicular, which is choice B."
   ],
   "alternativeExplanations": [
     {

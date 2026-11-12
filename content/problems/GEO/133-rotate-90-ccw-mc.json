@@ -32,19 +32,19 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The rule for $90^\\circ$ counterclockwise is $(x, y) \\to (-y, x)$: swap, then negate the new first coordinate.",
+  "hint": "A quarter turn counterclockwise about the origin has a coordinate rule. It swaps the two coordinates and changes one sign.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The rule for $90^\\circ$ counterclockwise is $(x, y) \\to (-y, x)$: swap, then negate the new first coordinate."
+      "text": "A quarter turn counterclockwise about the origin has a coordinate rule. It swaps the two coordinates and changes one sign."
     },
     {
       "level": "guide",
-      "text": "With $(3, 1)$: swap to get $(1, 3)$, then negate the first: $(-1, 3)$."
+      "text": "The rule is $(x, y) \\to (-y, x)$. For $(3, 1)$, swap the coordinates to get $(1, 3)$ and then negate the first one."
     },
     {
       "level": "reveal",
-      "text": "The image is $(-1, 3)$. Choice A."
+      "text": "The image is the point $(-1, 3)$, which is choice A."
     }
   ],
   "explanation": [

@@ -10,25 +10,25 @@
   "primaryAnswer": "15",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Similar triangles have proportional corresponding sides. $AB$ pairs with $DE$, and $BC$ pairs with $EF$.",
+  "hint": "The order of the letters in a similarity statement shows which sides match. Find the partner of $AB$ and the partner of $BC$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Similar triangles have proportional corresponding sides. $AB$ pairs with $DE$, and $BC$ pairs with $EF$."
+      "text": "The order of the letters in a similarity statement shows which sides match. Find the partner of $AB$ and the partner of $BC$."
     },
     {
       "level": "guide",
-      "text": "The scale factor is $\\frac{DE}{AB} = \\frac{10}{4} = 2.5$. Apply it to $BC$."
+      "text": "$AB$ pairs with $DE$, so the scale factor is $\\frac{10}{4} = 2.5$. Multiply $BC = 6$ by that same factor to get $EF$."
     },
     {
       "level": "reveal",
-      "text": "$EF = 6 \\times 2.5 = 15$."
+      "text": "$6 \\times 2.5 = 15$, so the side $EF$ has length $15$."
     }
   ],
   "explanation": [
-    "The similarity statement pairs $A$ with $D$, $B$ with $E$, and $C$ with $F$, so $\\overline{AB}$ pairs with $\\overline{DE}$ and $\\overline{BC}$ with $\\overline{EF}$.",
-    "Find the scale factor: $\\frac{10}{4} = 2.5$.",
-    "Multiply the matching side: $EF = 6 \\times 2.5 = 15$."
+    "The statement $\\triangle ABC \\sim \\triangle DEF$ matches vertices in order, so side $\\overline{AB}$ corresponds to $\\overline{DE}$ and $\\overline{BC}$ corresponds to $\\overline{EF}$.",
+    "Corresponding sides of similar triangles share one scale factor, and the known pair gives $\\frac{DE}{AB} = \\frac{10}{4} = 2.5$.",
+    "Applying that factor to the other pair gives $EF = 6 \\times 2.5 = 15$."
   ],
   "alternativeExplanations": [
     {

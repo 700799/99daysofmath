@@ -32,11 +32,11 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Areas do not scale by the same ratio that sides do.",
+  "hint": "Area is measured in square units, so it does not grow by the same ratio as the side lengths. Think about what happens to the ratio.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Areas do not scale by the same ratio that sides do."
+      "text": "Area is measured in square units, so it does not grow by the same ratio as the side lengths. Think about what happens to the ratio."
     },
     {
       "level": "nudge",
@@ -45,11 +45,11 @@
     },
     {
       "level": "guide",
-      "text": "If sides scale by $\\frac{3}{2}$, areas scale by $\\left(\\frac{3}{2}\\right)^2 = \\frac{9}{4}$."
+      "text": "The sides grow by a factor of $\\frac{3}{2}$, so the area grows by $\\left(\\frac{3}{2}\\right)^2 = \\frac{9}{4}$. Multiply the smaller area $20$ by that factor."
     },
     {
       "level": "reveal",
-      "text": "$20 \\times \\frac{9}{4} = 45$ square inches."
+      "text": "$20 \\times \\frac{9}{4} = 45$, so the larger patch has an area of $45$ square inches, choice A."
     }
   ],
   "explanation": [

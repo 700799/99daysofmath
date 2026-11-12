@@ -16,19 +16,19 @@
     "side-angle-side"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Read the parts in order around the triangle: side, angle, side.",
+  "hint": "Name the criterion from the parts that are compared, listed in the order they sit around the triangle.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Read the parts in order around the triangle: side, angle, side."
+      "text": "Name the criterion from the parts that are compared, listed in the order they sit around the triangle."
     },
     {
       "level": "guide",
-      "text": "The angle is included between the two proportional sides."
+      "text": "An angle lies between two pairs of proportional sides, so the order is side, then angle, then side."
     },
     {
       "level": "reveal",
-      "text": "This is SAS similarity."
+      "text": "Two proportional side pairs with a congruent included angle is SAS similarity."
     }
   ],
   "explanation": [

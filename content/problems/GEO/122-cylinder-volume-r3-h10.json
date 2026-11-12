@@ -14,25 +14,25 @@
     "90π"
   ],
   "acceptanceMode": "normalized",
-  "hint": "A cylinder is a stack of identical circles: $V = \\pi r^2 h$.",
+  "hint": "A cylinder is like a stack of identical circles. Its volume comes from the area of one circle and the height of the stack.",
   "hints": [
     {
       "level": "nudge",
-      "text": "A cylinder is a stack of identical circles: $V = \\pi r^2 h$."
+      "text": "A cylinder is like a stack of identical circles. Its volume comes from the area of one circle and the height of the stack."
     },
     {
       "level": "guide",
-      "text": "The circular base has area $\\pi(3)^2 = 9\\pi$ square inches."
+      "text": "Use $V = \\pi r^2 h$. The base has area $\\pi(3)^2 = 9\\pi$ square inches, so multiply that by the height of $10$."
     },
     {
       "level": "reveal",
-      "text": "Multiply by the height: $9\\pi \\times 10 = 90\\pi$ cubic inches."
+      "text": "$9\\pi \\times 10 = 90\\pi$, so the can has a volume of exactly $90\\pi$ cubic inches."
     }
   ],
   "explanation": [
-    "Base area: $\\pi r^2 = \\pi(3)^2 = 9\\pi$ sq in.",
-    "Volume is base area times height: $9\\pi \\times 10$.",
-    "$V = 90\\pi$ cubic inches (about $282.7$)."
+    "The circular base of the can has area $\\pi r^2 = \\pi(3)^2 = 9\\pi$ square inches.",
+    "The volume of a cylinder is its base area times its height, which is $9\\pi \\times 10$.",
+    "So the exact volume is $V = 90\\pi$ cubic inches, or about $282.7$ cubic inches."
   ],
   "alternativeExplanations": [
     {

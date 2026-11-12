@@ -309,5 +309,285 @@
   "The range is the max minus the min.",
   "In this set the max is 11 and the min is 2.",
   "Take the min away from the max: 11 − 2 = 9, so the range is 9."
+ ],
+ "GEO-1#0": [
+  "S lies between R and T, so the two shorter segments join to make the whole segment RT.",
+  "Segment Addition gives RS + ST = RT, so add the two lengths: 9 + 14.",
+  "9 + 14 = 23, so the whole segment RT is 23 units long."
+ ],
+ "GEO-1#1": [
+  "The midpoint of a segment on a number line is the average of the two endpoint coordinates.",
+  "Add the coordinates and divide by 2: (−6 + 10)/2 = 4/2.",
+  "4/2 = 2, so the midpoint is at the coordinate 2."
+ ],
+ "GEO-1#2": [
+  "B is between A and C, so the two parts AB and BC add up to the whole length AC.",
+  "Put in the known lengths: AB + 17 = 41, so subtract 17 from 41.",
+  "41 − 17 = 24, so the missing part AB is 24 units long."
+ ],
+ "GEO-1#3": [
+  "The distance between two points on a number line is the absolute value of the difference of their coordinates.",
+  "Subtract the coordinates: 7 − (−5) = 7 + 5, because subtracting a negative means adding.",
+  "7 + 5 = 12, so the length PQ is 12 units."
+ ],
+ "GEO-2#0": [
+  "Two angles are supplementary when their measures add to 180°, a straight angle.",
+  "Subtract the known angle from the total: work out 180 − 72.",
+  "180 − 72 = 108, so the supplement of angle P measures 108°."
+ ],
+ "GEO-2#1": [
+  "Ray QS splits angle PQR into two smaller angles, and those two parts add up to the whole angle.",
+  "Angle addition gives 31 + angle SQR = 90, so subtract 31 from 90.",
+  "90 − 31 = 59, so the other part, angle SQR, measures 59°."
+ ],
+ "GEO-2#2": [
+  "Vertical angles are the two angles across from each other where two lines cross.",
+  "Vertical angles are always congruent, so no calculation is needed here.",
+  "The angle vertical to the 143° angle also measures 143°."
+ ],
+ "GEO-2#3": [
+  "Two angles are complementary when their measures add to 90°, a right angle.",
+  "Subtract the known angle from that total: work out 90 − 44.",
+  "90 − 44 = 46, so the complement of the angle measures 46°."
+ ],
+ "GEO-3#0": [
+  "Alternate exterior angles lie outside the parallel lines, on opposite sides of the transversal.",
+  "When the lines are parallel, alternate exterior angles are congruent, so the two measures are equal.",
+  "The alternate exterior partner of the 47° angle also measures 47°."
+ ],
+ "GEO-3#1": [
+  "Co-interior angles lie between the parallel lines on the same side of the transversal.",
+  "With parallel lines they are supplementary, so 118 + y = 180. Subtract 118 from 180.",
+  "180 − 118 = 62, so the other angle gives a value of y = 62."
+ ],
+ "GEO-3#2": [
+  "Corresponding angles sit in the same position at each of the two crossings.",
+  "When the lines are parallel, corresponding angles are congruent, so their measures match.",
+  "The corresponding angle therefore also measures 105°."
+ ],
+ "GEO-3#3": [
+  "A transversal across parallel lines makes only two angle sizes: one acute size and its supplement.",
+  "The acute size is 55°, so the obtuse size is its supplement: work out 180 − 55.",
+  "180 − 55 = 125, so the obtuse angle at the second avenue is 125°."
+ ],
+ "GEO-4#0": [
+  "A conditional has the form \"if p, then q\", and its related statements come from swapping or negating the parts.",
+  "Negating both parts gives the inverse, and swapping plus negating gives the contrapositive.",
+  "Swapping the hypothesis and conclusion with no negating gives the converse."
+ ],
+ "GEO-4#1": [
+  "The related statements of \"if p, then q\" are the converse, the inverse and the contrapositive.",
+  "The contrapositive swaps the two parts and negates both, giving \"if not q, then not p\".",
+  "It is logically equivalent to the original, so the answer is the contrapositive."
+ ],
+ "GEO-4#2": [
+  "Look for a shared quantity: angle B appears in both of the given equations.",
+  "Angle B links the two equations, so angle A and angle C must be equal to each other.",
+  "Chaining equalities through a middle term is the Transitive Property."
+ ],
+ "GEO-4#3": [
+  "A general claim says something is true in every case that fits its hypothesis.",
+  "One case that fits the hypothesis but breaks the conclusion is enough to show the claim is false.",
+  "An example like that is called a counterexample."
+ ],
+ "GEO-5#0": [
+  "Congruence criteria are named by listing the matching parts, using S for a side and A for an angle.",
+  "Here three pairs of sides match and no angles are used, so write one S for each pair.",
+  "Three pairs of equal sides is the SSS criterion."
+ ],
+ "GEO-5#1": [
+  "List the matching parts in the order you meet them going around the triangle.",
+  "There are two pairs of equal angles, and the equal side is not between them, so the order is angle, angle, side.",
+  "Two angles and a non-included side is the AAS criterion."
+ ],
+ "GEO-5#2": [
+  "The order of the letters in a congruence statement shows which parts match.",
+  "B pairs with Y and C pairs with Z, so side YZ corresponds to side BC.",
+  "Corresponding parts of congruent triangles are congruent, so YZ = 9 cm."
+ ],
+ "GEO-5#3": [
+  "Once two triangles are proven congruent, every pair of matching sides and angles is congruent too.",
+  "The reason is written out as \"Corresponding Parts of Congruent Triangles are Congruent\".",
+  "Taking the first letter of each main word gives the abbreviation CPCTC."
+ ],
+ "GEO-6#0": [
+  "The three interior angles of any triangle add to 180°.",
+  "Add the two known angles first: 35 + 85 = 120.",
+  "Subtract from the total: 180 − 120 = 60, so angle C is 60°."
+ ],
+ "GEO-6#1": [
+  "In an isosceles triangle the two base angles, opposite the equal sides, are equal.",
+  "Call each base angle x. The angle sum gives 30 + 2x = 180, so 2x = 150.",
+  "Dividing by 2 gives x = 75, so each base angle is 75°."
+ ],
+ "GEO-6#2": [
+  "A segment joining the midpoints of two sides of a triangle is called a midsegment.",
+  "A midsegment is parallel to the third side and half as long, so MN is half of QR.",
+  "24 ÷ 2 = 12, so the midsegment MN is 12 cm long."
+ ],
+ "GEO-6#3": [
+  "An exterior angle of a triangle equals the sum of the two remote interior angles.",
+  "So 45 plus the other remote angle equals 130. Subtract 45 from 130.",
+  "130 − 45 = 85, so the other remote interior angle is 85°."
+ ],
+ "GEO-7#0": [
+  "The scale factor is the ratio of a side in the new triangle to the matching side in the original.",
+  "AB matches PQ, so divide the new length by the original length: 15 ÷ 5.",
+  "15 ÷ 5 = 3, so the scale factor is 3 and every length triples."
+ ],
+ "GEO-7#1": [
+  "Similar triangles have matching sides in the same ratio. AB matches DE, and BC matches EF.",
+  "Find the scale factor from the known pair: 12/8 = 1.5.",
+  "Multiply BC by the scale factor: EF = 10 × 1.5 = 15."
+ ],
+ "GEO-7#2": [
+  "Similarity criteria are named by the matching parts, and here only angles are known.",
+  "Both triangles have a 40° angle and a 75° angle, so two pairs of angles are equal.",
+  "Two pairs of equal angles is enough, and this is AA similarity."
+ ],
+ "GEO-7#3": [
+  "The sun hits the child and the tree at the same angle, so the two shadow triangles are similar.",
+  "Match height to shadow in a proportion: 5/3 = h/27.",
+  "Multiply both sides by 27: h = 27 × 5/3 = 45, so the tree is 45 ft tall."
+ ],
+ "GEO-8#0": [
+  "The Pythagorean theorem links the sides of a right triangle: leg² + leg² = hypotenuse².",
+  "Square each leg and add the results: 9² + 12² = 81 + 144 = 225.",
+  "Take the square root: √225 = 15, so the hypotenuse is 15 units long."
+ ],
+ "GEO-8#1": [
+  "The diagonal splits the screen into two right triangles, with the width and height as the legs.",
+  "Use the Pythagorean theorem to square and add the legs: 36² + 15² = 1296 + 225 = 1521.",
+  "Take the square root: √1521 = 39, so the diagonal is 39 in long."
+ ],
+ "GEO-8#2": [
+  "The distance between two points is the hypotenuse of a right triangle whose legs are the horizontal and vertical gaps.",
+  "The horizontal gap is 3 − (−2) = 5 and the vertical gap is 13 − 1 = 12.",
+  "Use the Pythagorean theorem: d = √(25 + 144) = √169 = 13, so the distance is 13 units."
+ ],
+ "GEO-8#3": [
+  "A 45-45-90 triangle has two equal legs, and its sides follow a fixed pattern.",
+  "In this pattern the hypotenuse is always the leg length times √2.",
+  "The leg is 10 cm, so the hypotenuse is 10√2 cm, which is about 14.14 cm."
+ ],
+ "GEO-9#0": [
+  "The sine of an angle in a right triangle is the opposite side divided by the hypotenuse.",
+  "The opposite side is 3 and the hypotenuse is 5, so the sine is 3/5.",
+  "Dividing 3 by 5 gives 0.6, so the sine of the angle is 0.6."
+ ],
+ "GEO-9#1": [
+  "The cosine of an angle in a right triangle is the adjacent side divided by the hypotenuse.",
+  "Here the adjacent side is 8 and the hypotenuse is 17, so put 8 over 17.",
+  "The fraction cannot be simplified, so the cosine of the angle is 8/17."
+ ],
+ "GEO-9#2": [
+  "The memory aid SOH-CAH-TOA lists which two sides each ratio uses.",
+  "SOH is sine = opposite/hypotenuse, and CAH is cosine = adjacent/hypotenuse, so neither one matches.",
+  "TOA is tangent = opposite/adjacent, so the ratio is tangent."
+ ],
+ "GEO-9#3": [
+  "The ramp, the ground and the height form a right triangle. The ramp is the hypotenuse and the height is opposite the 30° angle.",
+  "Opposite and hypotenuse go with sine, so sin 30° = h/12, which gives h = 12 × sin 30°.",
+  "Since sin 30° = 0.5, h = 12 × 0.5 = 6, so the top end is 6 ft high."
+ ],
+ "GEO-10#0": [
+  "The interior angles of a polygon with n sides add to (n − 2) × 180°.",
+  "A pentagon has 5 sides, so the sum is (5 − 2) × 180 = 3 × 180.",
+  "3 × 180 = 540, so the interior angles add to 540°."
+ ],
+ "GEO-10#1": [
+  "Angles P and Q are next to each other, and consecutive angles of a parallelogram are supplementary.",
+  "That means 110 + angle Q = 180, so subtract 110 from 180.",
+  "180 − 110 = 70, so the neighboring angle Q of the parallelogram measures 70°."
+ ],
+ "GEO-10#2": [
+  "The exterior angles of any convex polygon add up to 360°, one full turn.",
+  "A regular polygon has equal exterior angles, so divide 360 by the 9 sides.",
+  "360 ÷ 9 = 40, so each exterior angle of the polygon measures 40°."
+ ],
+ "GEO-10#3": [
+  "The midsegment of a trapezoid joins the midpoints of the two non-parallel sides.",
+  "Its length is the average of the two parallel sides: (8 + 14)/2 = 22/2.",
+  "22/2 = 11, so the midsegment is 11 in long."
+ ],
+ "GEO-11#0": [
+  "An inscribed angle measures half of the arc it intercepts.",
+  "So the arc is twice the inscribed angle: multiply 35 by 2.",
+  "35 × 2 = 70, so the intercepted arc of the angle measures 70°."
+ ],
+ "GEO-11#1": [
+  "Arc length is a fraction of the whole circumference, and the fraction is the central angle over 360°.",
+  "The circumference is 2π(6) = 12π, and 120/360 = 1/3 of the circle.",
+  "One third of 12π is 4π, so the arc length is 4π units."
+ ],
+ "GEO-11#2": [
+  "A tangent line touches a circle at exactly one point, called the point of tangency.",
+  "A theorem says the radius drawn to the point of tangency is perpendicular to the tangent line.",
+  "Perpendicular lines meet at right angles, so the angle is 90°."
+ ],
+ "GEO-11#3": [
+  "A sector is a fraction of the whole circle, and the fraction is the central angle over 360°.",
+  "The whole circle has area π(4²) = 16π, and 90/360 = 1/4 of the circle.",
+  "One quarter of 16π is 4π, so the sector has an area of 4π cm²."
+ ],
+ "GEO-12#0": [
+  "The area of a triangle is half of the base times the height.",
+  "Multiply the base and the height first: 14 × 10 = 140.",
+  "Half of 140 is 70, so the area is 70 cm²."
+ ],
+ "GEO-12#1": [
+  "The area of a circle is A = πr², where r is the radius.",
+  "Square the radius first: 5² = 25, so the area is A = π × 25.",
+  "The exact area of the tabletop is 25π m²."
+ ],
+ "GEO-12#2": [
+  "The area of a trapezoid is half the sum of the parallel sides, times the height.",
+  "Add the parallel sides, 6 + 10 = 16, and take half to get an average width of 8.",
+  "Multiply by the height: 8 × 4 = 32, so the area is 32 square inches."
+ ],
+ "GEO-12#3": [
+  "Perimeter is the total distance around the outside of a shape.",
+  "A rectangle has two sides of each length: P = 2(8) + 2(5) = 16 + 10.",
+  "16 + 10 = 26, so the perimeter of the quilt is 26 ft."
+ ],
+ "GEO-13#0": [
+  "The volume of a cube is its edge length multiplied by itself three times.",
+  "Set up the product V = 5 × 5 × 5, and start with 5 × 5 = 25.",
+  "25 × 5 = 125, so the volume of the cube is 125 cm³."
+ ],
+ "GEO-13#1": [
+  "The volume of a cylinder is the area of its circular base times its height: V = πr²h.",
+  "The base area is π × 2² = 4π, so the volume is V = 4π × 7.",
+  "4 × 7 = 28, so the volume of the cylinder is 28π m³."
+ ],
+ "GEO-13#2": [
+  "A cone holds exactly one third as much as a cylinder with the same base and height.",
+  "The matching cylinder holds 60 cm³, so divide that volume by 3.",
+  "60 ÷ 3 = 20, so the volume of the cone is 20 cm³."
+ ],
+ "GEO-13#3": [
+  "When every length is multiplied by k, every area is multiplied by k², because area uses two dimensions.",
+  "Every length doubles here, so k = 2 and the area factor is 2².",
+  "2² = 4, so the surface area becomes 4 times as large."
+ ],
+ "GEO-14#0": [
+  "The y-axis is a vertical mirror line, so a reflection across it moves a point left or right only.",
+  "The rule is (x, y) → (−x, y): change the sign of x and keep y.",
+  "The opposite of −3 is 3, so the image is the point (3, 7)."
+ ],
+ "GEO-14#1": [
+  "A 180° rotation about the origin sends a point to the opposite side of the origin.",
+  "The rule is (x, y) → (−x, −y), so change the sign of both coordinates.",
+  "2 becomes −2 and −6 becomes 6, so the image is the point (−2, 6)."
+ ],
+ "GEO-14#2": [
+  "The midpoint of a segment is found by averaging the x-coordinates and averaging the y-coordinates.",
+  "For the x-coordinate, (2 + 8)/2 = 5. For the y-coordinate, (5 + 11)/2 = 8.",
+  "Putting the two averages together, the midpoint is the point (5, 8)."
+ ],
+ "GEO-14#3": [
+  "Slope is the change in y divided by the change in x between two points on the line.",
+  "Subtract in the same order for both: m = (9 − 1)/(4 − 0) = 8/4.",
+  "8/4 = 2, so the slope of the line is 2."
  ]
 }

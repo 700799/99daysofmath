@@ -10,25 +10,25 @@
   "primaryAnswer": "10",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The two sides that meet at the right angle are the legs; the slope is the hypotenuse. Use $a^2 + b^2 = c^2$.",
+  "hint": "The rise and the run meet at a right angle, and the sloped surface lies across from that angle. Which theorem links the three sides?",
   "hints": [
     {
       "level": "nudge",
-      "text": "The two sides that meet at the right angle are the legs; the slope is the hypotenuse. Use $a^2 + b^2 = c^2$."
+      "text": "The rise and the run meet at a right angle, and the sloped surface lies across from that angle. Which theorem links the three sides?"
     },
     {
       "level": "guide",
-      "text": "$6^2 + 8^2 = 36 + 64 = 100$, and $100 = c^2$."
+      "text": "The legs are $6$ and $8$, so the Pythagorean Theorem gives $c^2 = 6^2 + 8^2 = 36 + 64 = 100$. Take the square root to find $c$."
     },
     {
       "level": "reveal",
-      "text": "$c = \\sqrt{100} = 10$ ft."
+      "text": "$c = \\sqrt{100} = 10$, so the riding surface is $10$ feet long."
     }
   ],
   "explanation": [
-    "The rise and the run are the legs, so $a = 6$ and $b = 8$.",
-    "Square and add: $36 + 64 = 100$.",
-    "Take the square root: $c = 10$ ft of riding surface."
+    "The rise and run are the legs of a right triangle, so $a = 6$ and $b = 8$, and the sloped surface is the hypotenuse $c$.",
+    "The Pythagorean Theorem relates the three sides and gives $c^2 = 6^2 + 8^2 = 36 + 64 = 100$.",
+    "Taking the positive square root gives $c = 10$, so the riding surface is $10$ feet long."
   ],
   "alternativeExplanations": [
     {

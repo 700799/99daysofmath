@@ -10,11 +10,11 @@
   "primaryAnswer": "12",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Drop the height from the peak straight down to the floor — it splits the isosceles triangle into two identical right triangles.",
+  "hint": "Draw the height from the peak straight down to the floor. Look at the two smaller triangles that this line creates.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Drop the height from the peak straight down to the floor — it splits the isosceles triangle into two identical right triangles."
+      "text": "Draw the height from the peak straight down to the floor. Look at the two smaller triangles that this line creates."
     },
     {
       "level": "nudge",
@@ -23,11 +23,11 @@
     },
     {
       "level": "guide",
-      "text": "That height hits the middle of the floor, so each small triangle has a leg of $10 \\div 2 = 5$ and hypotenuse $13$."
+      "text": "The height meets the floor at its middle, so each right triangle has a leg of $10 \\div 2 = 5$ and a hypotenuse of $13$. Solve $5^2 + h^2 = 13^2$."
     },
     {
       "level": "reveal",
-      "text": "$5^2 + h^2 = 13^2$, so $h^2 = 169 - 25 = 144$ and $h = 12$ ft."
+      "text": "$h^2 = 169 - 25 = 144$, so $h = 12$ and the tent is $12$ feet tall."
     }
   ],
   "explanation": [

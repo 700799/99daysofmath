@@ -10,25 +10,25 @@
   "primaryAnswer": "13.2",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "This time the unknown is the hypotenuse and the known side is opposite the $65^\\circ$ angle.",
+  "hint": "Label the sides relative to the $65^\\circ$ angle at the ground. Notice that this time the unknown is the longest side.",
   "hints": [
     {
       "level": "nudge",
-      "text": "This time the unknown is the hypotenuse and the known side is opposite the $65^\\circ$ angle."
+      "text": "Label the sides relative to the $65^\\circ$ angle at the ground. Notice that this time the unknown is the longest side."
     },
     {
       "level": "guide",
-      "text": "$\\sin 65^\\circ = \\frac{12}{L}$ — the unknown is downstairs, so multiply both sides by $L$ first."
+      "text": "The $12$ ft height is opposite and the ladder $L$ is the hypotenuse, so $\\sin 65^\\circ = \\frac{12}{L}$. Rearrange to $L = \\frac{12}{\\sin 65^\\circ}$."
     },
     {
       "level": "reveal",
-      "text": "$L = \\frac{12}{\\sin 65^\\circ} \\approx \\frac{12}{0.9063} \\approx 13.2$ ft."
+      "text": "$L = \\frac{12}{\\sin 65^\\circ} \\approx \\frac{12}{0.9063} \\approx 13.2$, so the ladder is about $13.2$ feet long."
     }
   ],
   "explanation": [
-    "The height $12$ ft is opposite the $65^\\circ$ angle and the ladder $L$ is the hypotenuse, so use sine.",
-    "Write $\\sin 65^\\circ = \\frac{12}{L}$; because $L$ is in the denominator, solve by $L = \\frac{12}{\\sin 65^\\circ}$.",
-    "That gives $L \\approx 13.2$ ft."
+    "The height of $12$ feet is opposite the $65^\\circ$ angle and the ladder $L$ is the hypotenuse, so sine is the ratio that links them.",
+    "Writing $\\sin 65^\\circ = \\frac{12}{L}$ and multiplying by $L$, then dividing by $\\sin 65^\\circ$, gives $L = \\frac{12}{\\sin 65^\\circ}$.",
+    "Evaluating gives $L \\approx \\frac{12}{0.9063} \\approx 13.2$, so the ladder is about $13.2$ feet long."
   ],
   "alternativeExplanations": [
     {

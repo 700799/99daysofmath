@@ -32,25 +32,25 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Equal sides force equal angles, so all three angles are the same size.",
+  "hint": "A triangle with three equal sides also has three equal angles. Think about the total those angles must share.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Equal sides force equal angles, so all three angles are the same size."
+      "text": "A triangle with three equal sides also has three equal angles. Think about the total those angles must share."
     },
     {
       "level": "guide",
-      "text": "Three equal angles must share $180^\\circ$ evenly."
+      "text": "The angles of a triangle add to $180^\\circ$, and here all three are the same size, so divide $180$ by $3$."
     },
     {
       "level": "reveal",
-      "text": "$180 \\div 3 = 60^\\circ$."
+      "text": "$180 \\div 3 = 60$, so each angle is $60^\\circ$, which is choice A."
     }
   ],
   "explanation": [
-    "An equilateral triangle has three congruent sides, so it is also equiangular — all three angles are equal.",
-    "The three angles total $180^\\circ$.",
-    "Each one is $180 \\div 3 = 60^\\circ$."
+    "An equilateral triangle has three congruent sides, and equal sides lie opposite equal angles, so all three angles are congruent.",
+    "The Triangle Sum Theorem says those three equal angles must add to $180^\\circ$.",
+    "Sharing the total equally gives $180 \\div 3 = 60^\\circ$ for each angle, which is choice A."
   ],
   "alternativeExplanations": [
     {

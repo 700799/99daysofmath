@@ -32,25 +32,25 @@
   "primaryAnswer": "D",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "A cube has $6$ identical square faces.",
+  "hint": "Wrapping paper covers the outside faces of the box. Count the faces of a cube and think about their shape.",
   "hints": [
     {
       "level": "nudge",
-      "text": "A cube has $6$ identical square faces."
+      "text": "Wrapping paper covers the outside faces of the box. Count the faces of a cube and think about their shape."
     },
     {
       "level": "guide",
-      "text": "Each face is $4 \\times 4 = 16$ sq in."
+      "text": "A cube has $6$ identical square faces, and each one has area $4 \\times 4 = 16$ sq in. Multiply to get the total."
     },
     {
       "level": "reveal",
-      "text": "$6 \\times 16 = 96$ square inches. Choice D."
+      "text": "$6 \\times 16 = 96$, so the paper needed is $96$ square inches, which is choice D."
     }
   ],
   "explanation": [
-    "Surface area counts every face: a cube has $6$ of them.",
-    "One face is $4^2 = 16$ square inches.",
-    "Total: $6 \\times 16 = 96$ square inches. Choice D."
+    "The paper must cover the surface area, which is the total area of all $6$ faces of the cube.",
+    "Each face is a square with area $4^2 = 16$ square inches.",
+    "All six faces together give $6 \\times 16 = 96$ square inches, which is choice D."
   ],
   "alternativeExplanations": [
     {

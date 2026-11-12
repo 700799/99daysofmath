@@ -10,25 +10,25 @@
   "primaryAnswer": "70",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "A linear pair sits along a straight line, and a straight line measures $180^\\circ$.",
+  "hint": "The two angles of a linear pair sit side by side along the straight beam. What does a straight angle measure?",
   "hints": [
     {
       "level": "nudge",
-      "text": "A linear pair sits along a straight line, and a straight line measures $180^\\circ$."
+      "text": "The two angles of a linear pair sit side by side along the straight beam. What does a straight angle measure?"
     },
     {
       "level": "guide",
-      "text": "Compute $180 - 110$."
+      "text": "A linear pair is supplementary, so the two angles total $180^\\circ$. Subtract the known angle: work out $180 - 110$."
     },
     {
       "level": "reveal",
-      "text": "$180 - 110 = 70^\\circ$."
+      "text": "$180 - 110 = 70$, so the other angle measures $70^\\circ$."
     }
   ],
   "explanation": [
-    "Two angles that form a linear pair are supplementary: they add to $180^\\circ$.",
-    "$180 - 110 = 70$.",
-    "Check: $110 + 70 = 180$, a straight beam. ✓"
+    "The two angles of a linear pair together make a straight line, so they are supplementary and add to $180^\\circ$.",
+    "Take the known angle away from that total to find its partner: $180 - 110 = 70$.",
+    "Since $110 + 70 = 180$, the other angle in the pair is $70^\\circ$."
   ],
   "alternativeExplanations": [
     {

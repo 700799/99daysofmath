@@ -10,26 +10,26 @@
   "primaryAnswer": "20",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The exterior angle equals the sum of the two remote interior angles.",
+  "hint": "Recall how an exterior angle of a triangle compares with the two interior angles that are not next to it.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The exterior angle equals the sum of the two remote interior angles."
+      "text": "Recall how an exterior angle of a triangle compares with the two interior angles that are not next to it."
     },
     {
       "level": "guide",
-      "text": "Write $5x = (2x + 10) + (x + 30)$ and combine like terms on the right."
+      "text": "The exterior angle equals the sum of the remote interior angles, so write $5x = (2x + 10) + (x + 30)$ and simplify the right side."
     },
     {
       "level": "reveal",
-      "text": "$5x = 3x + 40$, so $2x = 40$ and $x = 20$."
+      "text": "$5x = 3x + 40$ gives $2x = 40$, so the answer is $x = 20$."
     }
   ],
   "explanation": [
-    "By the Exterior Angle Theorem, $5x = (2x + 10) + (x + 30)$.",
-    "Combine the right side: $5x = 3x + 40$.",
-    "Subtract $3x$: $2x = 40$, so $x = 20$.",
-    "Check: the exterior angle is $100^\\circ$ and the remote interiors are $50^\\circ$ and $50^\\circ$, which do add to $100$. ✓"
+    "By the Exterior Angle Theorem the exterior angle equals the sum of the two remote interior angles, so $5x = (2x + 10) + (x + 30)$.",
+    "Combining like terms on the right side gives $5x = 3x + 40$.",
+    "Subtract $3x$ from both sides to get $2x = 40$, and divide by $2$ to find $x = 20$.",
+    "As a check, the exterior angle is $100^\\circ$ and the remote angles are $50^\\circ$ and $50^\\circ$, which add to $100^\\circ$."
   ],
   "alternativeExplanations": [
     {

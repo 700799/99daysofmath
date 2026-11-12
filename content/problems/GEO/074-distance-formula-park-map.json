@@ -10,25 +10,25 @@
   "primaryAnswer": "5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The distance formula is the Pythagorean theorem in disguise: the horizontal gap and vertical gap are the legs.",
+  "hint": "Draw a right triangle with the segment between the two points as its hypotenuse. Its legs are the horizontal and vertical gaps.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The distance formula is the Pythagorean theorem in disguise: the horizontal gap and vertical gap are the legs."
+      "text": "Draw a right triangle with the segment between the two points as its hypotenuse. Its legs are the horizontal and vertical gaps."
     },
     {
       "level": "guide",
-      "text": "Horizontal gap: $6 - 2 = 4$. Vertical gap: $6 - 3 = 3$. Now find the hypotenuse."
+      "text": "The horizontal gap is $6 - 2 = 4$ and the vertical gap is $6 - 3 = 3$. Use the Pythagorean Theorem on legs $4$ and $3$."
     },
     {
       "level": "reveal",
-      "text": "$d = \\sqrt{4^2 + 3^2} = \\sqrt{25} = 5$ meters."
+      "text": "$d = \\sqrt{4^2 + 3^2} = \\sqrt{25} = 5$, so they are $5$ meters apart."
     }
   ],
   "explanation": [
-    "Subtract the coordinates to get the legs of a right triangle: $\\Delta x = 4$ and $\\Delta y = 3$.",
-    "Apply $d = \\sqrt{(\\Delta x)^2 + (\\Delta y)^2} = \\sqrt{16 + 9}$.",
-    "$\\sqrt{25} = 5$, so the fountain and oak are $5$ m apart."
+    "Subtracting coordinates gives the legs of a right triangle: the horizontal change is $6 - 2 = 4$ and the vertical change is $6 - 3 = 3$.",
+    "The distance is the hypotenuse, so $d = \\sqrt{4^2 + 3^2} = \\sqrt{16 + 9}$.",
+    "Since $\\sqrt{25} = 5$, the fountain and the oak tree are $5$ meters apart."
   ],
   "alternativeExplanations": [
     {

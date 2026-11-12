@@ -10,25 +10,25 @@
   "primaryAnswer": "36",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The sun hits both at the same angle, so the student and the flagpole form similar right triangles.",
+  "hint": "The sun's rays strike the student and the flagpole at the same angle. What does that tell you about the two triangles made by each object and its shadow?",
   "hints": [
     {
       "level": "nudge",
-      "text": "The sun hits both at the same angle, so the student and the flagpole form similar right triangles."
+      "text": "The sun's rays strike the student and the flagpole at the same angle. What does that tell you about the two triangles made by each object and its shadow?"
     },
     {
       "level": "guide",
-      "text": "Set up $\\frac{\\text{height}}{\\text{shadow}}$ for each: $\\frac{6}{4} = \\frac{h}{24}$."
+      "text": "The triangles are similar, so height over shadow is the same for both: set up $\\frac{6}{4} = \\frac{h}{24}$ and cross-multiply."
     },
     {
       "level": "reveal",
-      "text": "Cross-multiply: $4h = 144$, so $h = 36$ feet."
+      "text": "$4h = 144$, so $h = 36$ and the flagpole is $36$ feet tall."
     }
   ],
   "explanation": [
-    "Both objects stand vertically and the sun's rays arrive at the same angle, so the two right triangles are similar by AA.",
-    "Corresponding sides are proportional: $\\frac{6}{4} = \\frac{h}{24}$.",
-    "Cross-multiply: $4h = 6 \\times 24 = 144$, so $h = 36$ feet."
+    "The student and the flagpole both stand upright and the sun's rays hit them at the same angle, so the two right triangles are similar by AA.",
+    "Similar triangles have proportional sides, so comparing height to shadow gives $\\frac{6}{4} = \\frac{h}{24}$.",
+    "Cross-multiplying gives $4h = 6 \\times 24 = 144$, so the flagpole is $h = 36$ feet tall."
   ],
   "alternativeExplanations": [
     {

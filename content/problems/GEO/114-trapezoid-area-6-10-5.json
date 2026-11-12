@@ -10,25 +10,25 @@
   "primaryAnswer": "40",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Trapezoid area is $\\frac{1}{2}(b_1 + b_2)h$ — average the two parallel sides, then multiply by the height.",
+  "hint": "A trapezoid has two parallel sides of different lengths. Its area formula uses both of them along with the height.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Trapezoid area is $\\frac{1}{2}(b_1 + b_2)h$ — average the two parallel sides, then multiply by the height."
+      "text": "A trapezoid has two parallel sides of different lengths. Its area formula uses both of them along with the height."
     },
     {
       "level": "guide",
-      "text": "Average: $\\frac{6 + 10}{2} = 8$. Now multiply by the height $5$."
+      "text": "Average the parallel sides: $\\frac{6 + 10}{2} = 8$. Then multiply that average by the height of $5$ ft."
     },
     {
       "level": "reveal",
-      "text": "$8 \\times 5 = 40$ square feet."
+      "text": "$8 \\times 5 = 40$, so the flower bed has an area of $40$ square feet."
     }
   ],
   "explanation": [
-    "Add the parallel sides: $6 + 10 = 16$.",
-    "Half of that is the average width: $8$ ft.",
-    "Multiply by the height: $8 \\times 5 = 40$ square feet."
+    "The area of a trapezoid is $\\frac{1}{2}(b_1 + b_2)h$, so start by adding the parallel sides: $6 + 10 = 16$.",
+    "Half of that sum is $8$ feet, which is the average width of the bed.",
+    "Multiplying the average width by the height gives $8 \\times 5 = 40$ square feet."
   ],
   "alternativeExplanations": [
     {

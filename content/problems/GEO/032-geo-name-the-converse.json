@@ -13,19 +13,19 @@
     "Converse"
   ],
   "acceptanceMode": "normalized",
-  "hint": "The three related statements are the converse, the inverse, and the contrapositive. Only one of them is a pure swap.",
+  "hint": "A conditional has three related statements: the converse, the inverse and the contrapositive. Look at exactly what was changed here.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The three related statements are the converse, the inverse, and the contrapositive. Only one of them is a pure swap."
+      "text": "A conditional has three related statements: the converse, the inverse and the contrapositive. Look at exactly what was changed here."
     },
     {
       "level": "guide",
-      "text": "Swapping (with no negating) makes the converse; negating both parts makes the inverse."
+      "text": "Here the two parts traded places and nothing was negated. Negating both parts would give the inverse instead."
     },
     {
       "level": "reveal",
-      "text": "It is the converse."
+      "text": "A statement made by swapping the hypothesis and conclusion is called the converse."
     }
   ],
   "explanation": [

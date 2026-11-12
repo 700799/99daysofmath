@@ -14,19 +14,19 @@
     "colinear"
   ],
   "acceptanceMode": "normalized",
-  "hint": "The prefix \"co-\" means \"together,\" and the rest of the word names the figure they share.",
+  "hint": "The word is built from a prefix meaning \"together\" and a word for the figure the points share.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The prefix \"co-\" means \"together,\" and the rest of the word names the figure they share."
+      "text": "The word is built from a prefix meaning \"together\" and a word for the figure the points share."
     },
     {
       "level": "guide",
-      "text": "Points on the same LINE are co-... something. Points on the same plane are coplanar."
+      "text": "Points that share one plane are called coplanar. Swap the \"plane\" part for the word that describes a line."
     },
     {
       "level": "reveal",
-      "text": "They are collinear."
+      "text": "Points that lie on the same line are called collinear."
     }
   ],
   "explanation": [

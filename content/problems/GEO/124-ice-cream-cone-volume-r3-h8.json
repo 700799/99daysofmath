@@ -14,25 +14,25 @@
     "24π"
   ],
   "acceptanceMode": "normalized",
-  "hint": "A cone is exactly one third of the cylinder that surrounds it: $V = \\frac{1}{3}\\pi r^2 h$.",
+  "hint": "A cone fills only part of the cylinder with the same base and height. Recall what fraction of that cylinder it is.",
   "hints": [
     {
       "level": "nudge",
-      "text": "A cone is exactly one third of the cylinder that surrounds it: $V = \\frac{1}{3}\\pi r^2 h$."
+      "text": "A cone fills only part of the cylinder with the same base and height. Recall what fraction of that cylinder it is."
     },
     {
       "level": "guide",
-      "text": "The matching cylinder holds $\\pi(3)^2(8) = 72\\pi$."
+      "text": "Use $V = \\frac{1}{3}\\pi r^2 h$. The matching cylinder holds $\\pi(3)^2(8) = 72\\pi$, so take one third of that amount."
     },
     {
       "level": "reveal",
-      "text": "One third of $72\\pi$ is $24\\pi$ cubic inches."
+      "text": "One third of $72\\pi$ is $24\\pi$, so the cone has a volume of $24\\pi$ cubic inches."
     }
   ],
   "explanation": [
-    "Use $V = \\frac{1}{3}\\pi r^2 h$ with $r = 3$ and $h = 8$.",
-    "First $\\pi r^2 h = \\pi(9)(8) = 72\\pi$.",
-    "Take a third: $V = 24\\pi$ cubic inches (about $75.4$)."
+    "The volume of a cone is $V = \\frac{1}{3}\\pi r^2 h$, and here $r = 3$ and $h = 8$.",
+    "The cylinder part of the formula gives $\\pi r^2 h = \\pi(9)(8) = 72\\pi$.",
+    "One third of that is $V = 24\\pi$ cubic inches, or about $75.4$ cubic inches."
   ],
   "alternativeExplanations": [
     {

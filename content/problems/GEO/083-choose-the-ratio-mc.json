@@ -32,19 +32,19 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "List the two sides in play: the one you want (adjacent) and the one you know (hypotenuse).",
+  "hint": "Write down the two sides involved: the one you are looking for and the one you already know.",
   "hints": [
     {
       "level": "nudge",
-      "text": "List the two sides in play: the one you want (adjacent) and the one you know (hypotenuse)."
+      "text": "Write down the two sides involved: the one you are looking for and the one you already know."
     },
     {
       "level": "guide",
-      "text": "Which of the three ratios connects exactly adjacent and hypotenuse?"
+      "text": "The sides in play are the adjacent leg and the hypotenuse. Go through SOH-CAH-TOA to find the ratio that uses exactly those two."
     },
     {
       "level": "reveal",
-      "text": "Cosine — CAH. Choice B."
+      "text": "Cosine is adjacent over hypotenuse, so the right tool is cosine, choice B."
     }
   ],
   "explanation": [

@@ -16,19 +16,19 @@
     "substitution"
   ],
   "acceptanceMode": "normalized",
-  "hint": "A middle quantity, $CD$, links the first to the last.",
+  "hint": "Notice that $CD$ appears in both given equations. It acts as a link between $AB$ and $EF$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "A middle quantity, $CD$, links the first to the last."
+      "text": "Notice that $CD$ appears in both given equations. It acts as a link between $AB$ and $EF$."
     },
     {
       "level": "guide",
-      "text": "Chaining $A = B$ and $B = C$ into $A = C$ has a name."
+      "text": "The property says that if $a = b$ and $b = c$, then $a = c$. Its name sounds like the word \"transit\"."
     },
     {
       "level": "reveal",
-      "text": "It is the Transitive Property (of equality)."
+      "text": "The conclusion is justified by the Transitive Property of Equality, so the word is transitive."
     }
   ],
   "explanation": [

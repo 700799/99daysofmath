@@ -10,19 +10,19 @@
   "primaryAnswer": "70",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "In an isosceles triangle, the two angles opposite the equal sides are equal.",
+  "hint": "Equal legs tell you something about the two angles at the ground. How do those two base angles compare?",
   "hints": [
     {
       "level": "nudge",
-      "text": "In an isosceles triangle, the two angles opposite the equal sides are equal."
+      "text": "Equal legs tell you something about the two angles at the ground. How do those two base angles compare?"
     },
     {
       "level": "guide",
-      "text": "The two base angles share what is left of $180^\\circ$ after the $40^\\circ$ top: $180 - 40 = 140$."
+      "text": "The base angles are equal and share what is left after the top angle: $180 - 40 = 140$. Split that amount evenly between them."
     },
     {
       "level": "reveal",
-      "text": "$140 \\div 2 = 70^\\circ$ each."
+      "text": "$140 \\div 2 = 70$, so each base angle measures $70^\\circ$."
     }
   ],
   "explanation": [

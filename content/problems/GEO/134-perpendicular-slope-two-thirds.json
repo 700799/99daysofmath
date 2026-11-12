@@ -13,25 +13,25 @@
     "-3/2"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Perpendicular slopes are opposite reciprocals: flip the fraction and change the sign.",
+  "hint": "Perpendicular lines have slopes that are opposite reciprocals. That means two changes are made to the original slope.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Perpendicular slopes are opposite reciprocals: flip the fraction and change the sign."
+      "text": "Perpendicular lines have slopes that are opposite reciprocals. That means two changes are made to the original slope."
     },
     {
       "level": "guide",
-      "text": "Flip $\\frac{2}{3}$ to get $\\frac{3}{2}$."
+      "text": "First take the reciprocal by flipping $\\frac{2}{3}$ to get $\\frac{3}{2}$. Then give it the opposite sign."
     },
     {
       "level": "reveal",
-      "text": "Now change the sign: the brace has slope $-\\frac{3}{2}$."
+      "text": "Changing the sign gives $-\\frac{3}{2}$, so the brace has slope $-\\frac{3}{2}$."
     }
   ],
   "explanation": [
-    "Two lines are perpendicular exactly when their slopes multiply to $-1$.",
-    "Flip $\\frac{2}{3}$ upside down to get $\\frac{3}{2}$, then negate it: $-\\frac{3}{2}$.",
-    "Check: $\\frac{2}{3} \\times \\left(-\\frac{3}{2}\\right) = -1$ ✓"
+    "Two non-vertical lines are perpendicular exactly when their slopes multiply to $-1$, which makes the slopes opposite reciprocals.",
+    "The reciprocal of $\\frac{2}{3}$ is $\\frac{3}{2}$, and the opposite of that is $-\\frac{3}{2}$.",
+    "The check $\\frac{2}{3} \\times \\left(-\\frac{3}{2}\\right) = -1$ confirms the brace has slope $-\\frac{3}{2}$."
   ],
   "alternativeExplanations": [
     {

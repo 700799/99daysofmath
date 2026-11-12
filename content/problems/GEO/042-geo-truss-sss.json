@@ -15,25 +15,25 @@
     "side-side-side"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Count what is known: how many sides, how many angles?",
+  "hint": "List what is known to match in the two trusses. How many pairs of sides are there, and how many pairs of angles?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Count what is known: how many sides, how many angles?"
+      "text": "List what is known to match in the two trusses. How many pairs of sides are there, and how many pairs of angles?"
     },
     {
       "level": "guide",
-      "text": "Three sides and no angles gives three S's."
+      "text": "Three pairs of sides match and no angles are used, so the name has one letter S for each pair of sides."
     },
     {
       "level": "reveal",
-      "text": "This is SSS — Side-Side-Side."
+      "text": "Three pairs of equal sides is the SSS criterion, short for Side-Side-Side."
     }
   ],
   "explanation": [
-    "All three pairs of corresponding sides are congruent, and no angle information is used.",
-    "That is the SSS criterion.",
-    "Triangles are rigid: fix the three side lengths and the angles have no freedom left, which is exactly why builders trust triangular trusses."
+    "All three pairs of corresponding sides are congruent, and no angle measurements are needed at all.",
+    "Three matching sides is exactly the Side-Side-Side criterion, so the trusses are congruent by SSS.",
+    "This works because three fixed side lengths can only form one triangle shape, which is why builders trust triangular trusses."
   ],
   "alternativeExplanations": [
     {

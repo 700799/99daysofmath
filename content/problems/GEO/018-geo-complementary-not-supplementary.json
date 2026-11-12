@@ -32,25 +32,25 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Which total belongs to complementary angles: $90^\\circ$ or $180^\\circ$?",
+  "hint": "Two different totals show up in angle pairs. Decide which total belongs to the word complementary.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Which total belongs to complementary angles: $90^\\circ$ or $180^\\circ$?"
+      "text": "Two different totals show up in angle pairs. Decide which total belongs to the word complementary."
     },
     {
       "level": "guide",
-      "text": "Complementary means the two add to $90^\\circ$, so compute $90 - 62$."
+      "text": "Complementary angles add to $90^\\circ$, so the missing angle is $90 - 62$. Compare that with what the classmate did."
     },
     {
       "level": "reveal",
-      "text": "$90 - 62 = 28^\\circ$. The classmate used $180^\\circ$ by mistake."
+      "text": "$90 - 62 = 28$, so the angle is $28^\\circ$ and the classmate wrongly subtracted from $180^\\circ$. That is choice A."
     }
   ],
   "explanation": [
-    "Complementary angles add to $90^\\circ$; supplementary angles add to $180^\\circ$.",
-    "Subtracting from the right total: $90 - 62 = 28$.",
-    "The classmate computed $180 - 62 = 118$, which would be the SUPPLEMENT, not the complement."
+    "Complementary angles add to $90^\\circ$, while supplementary angles are the ones that add to $180^\\circ$.",
+    "Using the correct total, the other angle is $90 - 62 = 28^\\circ$.",
+    "The classmate found $180 - 62 = 118$, which is the supplement, so the correct response is choice A with $28^\\circ$."
   ],
   "alternativeExplanations": [
     {

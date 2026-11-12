@@ -14,25 +14,25 @@
     "288π"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Sphere volume is $V = \\frac{4}{3}\\pi r^3$ — the radius is CUBED.",
+  "hint": "Recall the volume formula for a sphere. Notice which power of the radius it uses.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Sphere volume is $V = \\frac{4}{3}\\pi r^3$ — the radius is CUBED."
+      "text": "Recall the volume formula for a sphere. Notice which power of the radius it uses."
     },
     {
       "level": "guide",
-      "text": "$6^3 = 216$, so $V = \\frac{4}{3}\\pi(216)$."
+      "text": "The formula is $V = \\frac{4}{3}\\pi r^3$. Since $6^3 = 216$, you need to work out $\\frac{4}{3}\\pi(216)$."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{4}{3}(216) = 288$, so $V = 288\\pi$ cubic inches."
+      "text": "$\\frac{4}{3}(216) = 288$, so the ball has a volume of $288\\pi$ cubic inches."
     }
   ],
   "explanation": [
-    "Start with $V = \\frac{4}{3}\\pi r^3$ and $r = 6$.",
-    "Cube the radius: $6^3 = 216$.",
-    "Multiply: $\\frac{4}{3} \\times 216 = 288$, so $V = 288\\pi$ cubic inches."
+    "The volume of a sphere is $V = \\frac{4}{3}\\pi r^3$, and the radius here is $r = 6$.",
+    "The radius is cubed first, which gives $6^3 = 216$.",
+    "Multiplying gives $\\frac{4}{3} \\times 216 = 288$, so the exact volume is $V = 288\\pi$ cubic inches."
   ],
   "alternativeExplanations": [
     {

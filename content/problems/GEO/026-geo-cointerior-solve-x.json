@@ -10,26 +10,26 @@
   "primaryAnswer": "30",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Same-side interior angles are supplementary, not congruent.",
+  "hint": "These angles are between the rafters and on the same side of the strut. Decide whether such a pair is equal or supplementary.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Same-side interior angles are supplementary, not congruent."
+      "text": "These angles are between the rafters and on the same side of the strut. Decide whether such a pair is equal or supplementary."
     },
     {
       "level": "guide",
-      "text": "Write $(2x + 10) + (3x + 20) = 180$."
+      "text": "Same-side interior angles on parallel lines add to $180^\\circ$, so write $(2x + 10) + (3x + 20) = 180$ and combine like terms."
     },
     {
       "level": "reveal",
-      "text": "$5x + 30 = 180$, so $5x = 150$ and $x = 30$."
+      "text": "$5x + 30 = 180$ gives $5x = 150$, so the answer is $x = 30$."
     }
   ],
   "explanation": [
-    "On parallel lines, co-interior angles add to $180^\\circ$.",
-    "$(2x + 10) + (3x + 20) = 180$ becomes $5x + 30 = 180$.",
-    "Subtract 30 and divide by 5: $5x = 150$, so $x = 30$.",
-    "Check: the angles are $70^\\circ$ and $110^\\circ$, and $70 + 110 = 180$. ✓"
+    "The rafters are parallel, so the co-interior angles made by the strut are supplementary and add to $180^\\circ$.",
+    "That gives $(2x + 10) + (3x + 20) = 180$, and collecting like terms gives $5x + 30 = 180$.",
+    "Subtract $30$ from both sides and divide by $5$: $5x = 150$, so $x = 30$.",
+    "The angles are then $70^\\circ$ and $110^\\circ$, and their sum of $180^\\circ$ confirms the answer."
   ],
   "alternativeExplanations": [
     {

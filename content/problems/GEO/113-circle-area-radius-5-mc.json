@@ -32,25 +32,25 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Area of a circle is $\\pi r^2$ — the radius gets squared, not doubled.",
+  "hint": "Recall the formula for the area of a circle. Pay attention to what happens to the radius in it.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Area of a circle is $\\pi r^2$ — the radius gets squared, not doubled."
+      "text": "Recall the formula for the area of a circle. Pay attention to what happens to the radius in it."
     },
     {
       "level": "guide",
-      "text": "With $r = 5$: $\\pi(5)^2$."
+      "text": "The formula is $A = \\pi r^2$, where the radius is squared and not doubled. Work out $\\pi(5)^2$."
     },
     {
       "level": "reveal",
-      "text": "$5^2 = 25$, so the area is $25\\pi$ square inches. Choice B."
+      "text": "$5^2 = 25$, so the area is $25\\pi$ square inches, which is choice B."
     }
   ],
   "explanation": [
-    "Use $A = \\pi r^2$ with $r = 5$.",
-    "Square the radius first: $5^2 = 25$.",
-    "Area $= 25\\pi$ square inches. Choice B."
+    "The area of a circle is $A = \\pi r^2$, and here the radius is $r = 5$ inches.",
+    "The exponent applies to the radius first, so compute $5^2 = 25$.",
+    "The exact area is $25\\pi$ square inches, which is choice B."
   ],
   "alternativeExplanations": [
     {
