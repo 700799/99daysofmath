@@ -12,29 +12,31 @@
     "80 sq units"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Subtract the removed area.",
+  "hint": "A corner square has been removed from the rectangle. The area left over is smaller than the full rectangle by exactly that square.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Tag every length with its units. Area answers are square units; volume is cubic."
+      "text": "Another way is to slice the leftover shape into a $12 \\times 4$ rectangle and an $8 \\times 4$ rectangle. Their areas add to the same answer."
     },
     {
       "level": "nudge",
-      "text": "Subtract the removed area."
+      "text": "A corner square has been removed from the rectangle. The area left over is smaller than the full rectangle by exactly that square."
     },
     {
       "level": "guide",
-      "text": "$12 \\cdot 8 = 96$, $4 \\cdot 4 = 16$."
+      "text": "The full rectangle is $12 \\times 8 = 96$ and the removed square is $4 \\times 4 = 16$. Subtract the square."
     },
     {
       "level": "reveal",
-      "text": "$96 - 16 = 80$."
+      "text": "$96 - 16 = 80$, so the area remaining is $80$ square units."
     }
   ],
   "explanation": [
-    "$96 - 16 = 80$ sq units.",
-    "Final answer: 80."
+    "Find the area of the rectangle before the corner is removed: $12 \\times 8 = 96$.",
+    "Find the area of the removed square: $4 \\times 4 = 16$.",
+    "Subtract the removed part from the whole: $96 - 16 = 80$.",
+    "The area remaining is $80$ square units."
   ],
   "alternativeExplanations": [
     {

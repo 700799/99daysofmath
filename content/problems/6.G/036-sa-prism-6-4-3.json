@@ -10,23 +10,27 @@
   "primaryAnswer": "108",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Three pairs of identical faces.",
+  "hint": "The box has a top and bottom, a front and back, and two ends. Each pair is a pair of equal rectangles.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Three pairs of identical faces."
+      "text": "The box has a top and bottom, a front and back, and two ends. Each pair is a pair of equal rectangles."
     },
     {
       "level": "guide",
-      "text": "$2(6 \\cdot 4) + 2(6 \\cdot 3) + 2(4 \\cdot 3)$."
+      "text": "Find the three face areas: $6 \\times 4 = 24$, $6 \\times 3 = 18$ and $4 \\times 3 = 12$. Each one is used twice."
     },
     {
       "level": "reveal",
-      "text": "$48 + 36 + 24 = 108$."
+      "text": "$2(24) + 2(18) + 2(12) = 48 + 36 + 24 = 108$, so the surface area is $108$ square centimeters."
     }
   ],
   "explanation": [
-    "$2(24) + 2(18) + 2(12) = 48 + 36 + 24 = 108$."
+    "A box has three pairs of equal faces, so work out the area of one face in each pair.",
+    "The faces measure $6 \\times 4 = 24$, $6 \\times 3 = 18$ and $4 \\times 3 = 12$ square centimeters.",
+    "Double each area because each face has an identical opposite face: $48$, $36$ and $24$.",
+    "Add the doubled areas to cover all six faces: $48 + 36 + 24 = 108$.",
+    "The surface area of the box is $108$ square centimeters."
   ],
   "tags": [
     "MAP-practice",

@@ -10,23 +10,26 @@
   "primaryAnswer": "30",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Triangle area $= \\frac{1}{2} \\cdot b \\cdot h$.",
+  "hint": "A triangle covers exactly half of the rectangle that shares its base and height. Which formula uses that fact?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Triangle area $= \\frac{1}{2} \\cdot b \\cdot h$."
+      "text": "A triangle covers exactly half of the rectangle that shares its base and height. Which formula uses that fact?"
     },
     {
       "level": "guide",
-      "text": "$\\frac{1}{2} \\cdot 10 \\cdot 6$."
+      "text": "Start with base times height, which is $10 \\times 6$, and then remember to cut that product in half."
     },
     {
       "level": "reveal",
-      "text": "$30$."
+      "text": "Half of $10 \\times 6 = 60$ is $30$, so the triangle has an area of $30$ square units."
     }
   ],
   "explanation": [
-    "$A = \\frac{1}{2}(10)(6) = 30$."
+    "The area of a triangle is half of base times height, since two equal triangles make a parallelogram.",
+    "Substitute the base $10$ and the height $6$ into the formula: $A = \\frac{1}{2}(10)(6)$.",
+    "An easy order is to halve the base first, $\\frac{1}{2} \\times 10 = 5$, and then multiply by the height: $5 \\times 6 = 30$.",
+    "The area of the triangle is $30$ square units."
   ],
   "tags": [
     "area",

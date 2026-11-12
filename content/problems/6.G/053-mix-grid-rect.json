@@ -10,23 +10,26 @@
   "primaryAnswer": "16",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Width: $|6 - 2| = 4$. Height: $|5 - 1| = 4$.",
+  "hint": "Opposite corners tell you how far the rectangle stretches left to right and bottom to top.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Width: $|6 - 2| = 4$. Height: $|5 - 1| = 4$."
+      "text": "Opposite corners tell you how far the rectangle stretches left to right and bottom to top."
     },
     {
       "level": "guide",
-      "text": "Area $= 4 \\times 4$."
+      "text": "The $x$-values go from $2$ to $6$, so the width is $6 - 2 = 4$. The $y$-values go from $1$ to $5$, so the height is $5 - 1 = 4$. Multiply them."
     },
     {
       "level": "reveal",
-      "text": "$16$."
+      "text": "$4 \\times 4 = 16$, so the area of the rectangle is $16$ square units."
     }
   ],
   "explanation": [
-    "Width $4$, height $4$. Area $= 16$."
+    "The sides are parallel to the axes, so the width is the change in $x$ between the opposite corners: $6 - 2 = 4$.",
+    "In the same way, the height is the change in $y$: $5 - 1 = 4$.",
+    "Area is width times height, so $A = 4 \\times 4 = 16$.",
+    "The area of the rectangle is $16$ square units."
   ],
   "tags": [
     "coord",

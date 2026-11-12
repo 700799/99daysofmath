@@ -10,24 +10,25 @@
   "primaryAnswer": "12",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "One triangle: $\\frac{1}{2}(4)(3) = 6$.",
+  "hint": "The two triangles are identical, so you only need to work out one area. Then what will you do with it?",
   "hints": [
     {
       "level": "nudge",
-      "text": "One triangle: $\\frac{1}{2}(4)(3) = 6$."
+      "text": "The two triangles are identical, so you only need to work out one area. Then what will you do with it?"
     },
     {
       "level": "guide",
-      "text": "Two of them."
+      "text": "One triangle has area $\\frac{1}{2} \\times 4 \\times 3$. Find that value and then double it for the second triangle."
     },
     {
       "level": "reveal",
-      "text": "$2 \\times 6 = 12$."
+      "text": "Each triangle has area $6$, and $2 \\times 6 = 12$, so the total area is $12$ square units."
     }
   ],
   "explanation": [
-    "Each: $\\frac{1}{2}(4)(3) = 6$.",
-    "Two: $12$."
+    "Find the area of one triangle with half of base times height: $\\frac{1}{2} \\times 4 \\times 3 = 6$.",
+    "The figure has two of these equal triangles, so multiply by $2$.",
+    "That gives $2 \\times 6 = 12$, so the total area is $12$ square units."
   ],
   "tags": [
     "composite"

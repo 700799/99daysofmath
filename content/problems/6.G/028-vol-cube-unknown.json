@@ -10,28 +10,31 @@
   "primaryAnswer": "5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$V = s^3$. Find cube root.",
+  "hint": "The volume of a cube is one edge multiplied by itself three times. You need to work backward from the volume.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Tag every length with its units. Area answers are square units; volume is cubic."
+      "text": "Try small cubes and list their volumes: a side of $3$ gives $27$, and a side of $4$ gives $64$. Keep going until you reach $125$."
     },
     {
       "level": "nudge",
-      "text": "$V = s^3$. Find cube root."
+      "text": "The volume of a cube is one edge multiplied by itself three times. You need to work backward from the volume."
     },
     {
       "level": "guide",
-      "text": "What number cubed is $125$?"
+      "text": "Look for a number $s$ with $s \\times s \\times s = 125$. Since $125$ ends in $5$, test $s = 5$ by computing $5 \\times 5 \\times 5$."
     },
     {
       "level": "reveal",
-      "text": "$5^3 = 125$, so $s = 5$."
+      "text": "$5 \\times 5 \\times 5 = 125$, so each edge of the cube is $5$ units long."
     }
   ],
   "explanation": [
-    "$s^3 = 125 \\Rightarrow s = 5$."
+    "A cube with edge $s$ has volume $s^3$, so the edge must satisfy $s^3 = 125$.",
+    "Test whole numbers: $4^3 = 64$ is too small, so try the next one.",
+    "For $5$, first $5 \\times 5 = 25$ and then $25 \\times 5 = 125$, which matches the volume.",
+    "The length of one edge of the cube is $5$ units."
   ],
   "tags": [
     "volume",

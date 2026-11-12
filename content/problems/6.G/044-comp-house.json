@@ -10,29 +10,31 @@
   "primaryAnswer": "56",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Rectangle + triangle.",
+  "hint": "A house shape is a rectangle for the walls with a triangle for the roof. Find the two areas separately.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Split or rearrange the shape into pieces whose formulas you already know."
+      "text": "Imagine a rectangle $8$ wide and $4$ tall drawn around the roof. The roof triangle fills exactly half of it."
     },
     {
       "level": "nudge",
-      "text": "Rectangle + triangle."
+      "text": "A house shape is a rectangle for the walls with a triangle for the roof. Find the two areas separately."
     },
     {
       "level": "guide",
-      "text": "$40 + \\frac{1}{2}(8)(4) = 40 + 16$."
+      "text": "The walls are $8 \\times 5 = 40$. The roof is $\\frac{1}{2} \\times 8 \\times 4$. Work out the roof and add it to $40$."
     },
     {
       "level": "reveal",
-      "text": "$56$."
+      "text": "The roof has area $16$, and $40 + 16 = 56$, so the total area is $56$ square units."
     }
   ],
   "explanation": [
-    "$A_{rect} = 40, A_{tri} = 16$.",
-    "Total: $56$."
+    "Split the house into its rectangle and its triangular roof.",
+    "The rectangle for the walls has an area of $8 \\times 5 = 40$.",
+    "The triangle has area $\\frac{1}{2} \\times 8 \\times 4 = 16$, because a triangle is half of base times height.",
+    "Add the parts together: $40 + 16 = 56$, so the total area is $56$ square units."
   ],
   "tags": [
     "composite",

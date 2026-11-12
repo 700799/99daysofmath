@@ -12,29 +12,31 @@
     "54 sq units"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Find the side first: side $\\cdot$ side $\\cdot$ side $= 27$.",
+  "hint": "You cannot go straight from volume to surface area. First find the edge length, then use it to find the faces.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Sketch the shape and label every length. A 30-second drawing saves 5 minutes of thinking."
+      "text": "Try a smaller cube first: volume $8$ means the edge is $2$, since $2 \\times 2 \\times 2 = 8$, and the surface area is $6 \\times 4 = 24$."
     },
     {
       "level": "nudge",
-      "text": "Find the side first: side $\\cdot$ side $\\cdot$ side $= 27$."
+      "text": "You cannot go straight from volume to surface area. First find the edge length, then use it to find the faces."
     },
     {
       "level": "guide",
-      "text": "Side $= 3$. Then SA $= 6 \\cdot 3^2$."
+      "text": "Find the edge from $s \\times s \\times s = 27$, which gives $s = 3$. Each face is then $3 \\times 3 = 9$, and there are $6$ faces."
     },
     {
       "level": "reveal",
-      "text": "$6 \\cdot 9 = 54$."
+      "text": "$6 \\times 9 = 54$, so the surface area of the cube is $54$ square units."
     }
   ],
   "explanation": [
-    "Volume $= s^3 = 27 \\to s = 3$.",
-    "Each face: $3^2 = 9$. SA: $6 \\cdot 9 = 54$."
+    "The volume of a cube is $s^3$, so look for the edge with $s^3 = 27$.",
+    "Since $3 \\times 3 \\times 3 = 27$, the edge length of the cube is $3$.",
+    "Each face is a square with area $3 \\times 3 = 9$.",
+    "A cube has $6$ faces, so the surface area is $6 \\times 9 = 54$ square units."
   ],
   "alternativeExplanations": [
     {

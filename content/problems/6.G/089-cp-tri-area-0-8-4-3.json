@@ -12,30 +12,31 @@
     "12 sq units"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Use the base on the x-axis. The height is the y-value of the apex.",
+  "hint": "Two of the vertices lie on the $x$-axis, so that side makes a good base. The height is how far the third vertex is above it.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Try a similar but smaller shape (all sides ÷ 2) and look at how the formula behaves."
+      "text": "Look at an easier triangle with vertices $(0, 0)$, $(8, 0)$ and $(0, 3)$. It has the same base and the same height, so it has the same area."
     },
     {
       "level": "nudge",
-      "text": "Use the base on the x-axis. The height is the y-value of the apex."
+      "text": "Two of the vertices lie on the $x$-axis, so that side makes a good base. The height is how far the third vertex is above it."
     },
     {
       "level": "guide",
-      "text": "Base $= 8$. Height $= 3$. Area $= \\tfrac{1}{2} \\cdot 8 \\cdot 3$."
+      "text": "The base from $(0, 0)$ to $(8, 0)$ is $8$ long. The point $(4, 3)$ is $3$ units above the $x$-axis, so the height is $3$. Find half of $8 \\times 3$."
     },
     {
       "level": "reveal",
-      "text": "$\\tfrac{1}{2} \\cdot 24 = 12$."
+      "text": "$\\frac{1}{2} \\times 8 \\times 3 = 12$, so the area of the triangle is $12$ square units."
     }
   ],
   "explanation": [
-    "Base along x-axis: length $8$.",
-    "Apex height (above the base): $3$.",
-    "Area: $\\tfrac{1}{2}(8)(3) = 12$."
+    "Use the side on the $x$-axis as the base: from $(0, 0)$ to $(8, 0)$ is $8$ units.",
+    "The height is the vertical distance from $(4, 3)$ down to the $x$-axis, which is its $y$-value, $3$.",
+    "Apply the triangle formula, half of base times height: $A = \\frac{1}{2} \\times 8 \\times 3$.",
+    "Half of $8$ is $4$, and $4 \\times 3 = 12$, so the area is $12$ square units."
   ],
   "tags": [
     "MAP-practice",

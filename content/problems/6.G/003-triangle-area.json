@@ -13,13 +13,13 @@
     "30 square cm"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Area of a triangle is $\\frac{1}{2} \\times \\text{base} \\times \\text{height}$.",
+  "hint": "A triangle is half of a parallelogram with the same base and height. What does that tell you about its area?",
   "explanation": [
-    "Use the formula: Area $= \\frac{1}{2} \\times b \\times h$.",
-    "Substitute: $\\frac{1}{2} \\times 10 \\times 6$.",
-    "$10 \\times 6 = 60$.",
-    "Half of $60$ is $30$. So the area is $30$ cm².",
-    "Or compute in another order: $\\frac{1}{2} \\times 10 = 5$, then $5 \\times 6 = 30$."
+    "Two copies of this triangle fit together to make a parallelogram, so a triangle's area is $\\frac{1}{2} \\times \\text{base} \\times \\text{height}$.",
+    "Put in the base and the height given in the problem: $\\frac{1}{2} \\times 10 \\times 6$.",
+    "Multiply base by height first to get the area of the whole parallelogram: $10 \\times 6 = 60$.",
+    "Take half of that because the triangle is half the parallelogram: $60 \\div 2 = 30$.",
+    "The area of the triangle is $30$ square centimeters."
   ],
   "alternativeExplanations": [
     {
@@ -40,15 +40,15 @@
   "hints": [
     {
       "level": "nudge",
-      "text": "Area of a triangle is $\\frac{1}{2} \\times \\text{base} \\times \\text{height}$."
+      "text": "A triangle is half of a parallelogram with the same base and height. What does that tell you about its area?"
     },
     {
       "level": "guide",
-      "text": "Use the formula: Area $= \\frac{1}{2} \\times b \\times h$."
+      "text": "Use half of base times height with base $10$ and height $6$: first find $10 \\times 6$, then take half of that product."
     },
     {
       "level": "reveal",
-      "text": "Or compute in another order: $\\frac{1}{2} \\times 10 = 5$, then $5 \\times 6 = 30$."
+      "text": "$10 \\times 6 = 60$ and half of $60$ is $30$, so the area is $30$ square centimeters."
     }
   ],
   "diagram": {

@@ -1,4 +1,109 @@
 {
+ "6.G-1#0": [
+  "The area of a rectangle is its length times its width.",
+  "The sides are 6 and 9, so multiply 6 × 9.",
+  "6 × 9 = 54, so the area is 54 square units."
+ ],
+ "6.G-1#1": [
+  "A triangle's area is half of its base times its height.",
+  "Set up ½ × 12 × 5. Take half of the base first: half of 12 is 6.",
+  "6 × 5 = 30, so the area is 30 square units."
+ ],
+ "6.G-2#0": [
+  "Both points have the same x, so the segment is vertical.",
+  "For a vertical segment, subtract the y-values: 5 − (−2).",
+  "Subtracting a negative is the same as adding: 5 + 2 = 7.",
+  "The distance between the points is 7 units."
+ ],
+ "6.G-2#1": [
+  "Find the side length first, then use side × side for area.",
+  "From (0,0) to (5,0) only x changes, so the side is 5 − 0 = 5.",
+  "Area = 5 × 5 = 25, so the area is 25 square units."
+ ],
+ "6.G-3#0": [
+  "The volume of a box is length × width × height.",
+  "Multiply two of the sides first: 4 × 2 = 8.",
+  "Then multiply by the third side: 8 × 3 = 24.",
+  "The volume of the box is 24 cubic units."
+ ],
+ "6.G-3#1": [
+  "Volume is still length × width × height when one side is a fraction.",
+  "Multiply the two whole numbers first: 4 × 6 = 24.",
+  "Multiplying by ½ takes half of the number: ½ × 24 = 12.",
+  "The volume of the box is 12 cubic units."
+ ],
+ "6.G-4#0": [
+  "Surface area adds up the areas of all the faces, and a cube has 6 equal square faces.",
+  "One face is a square with area 5 × 5 = 25 square units.",
+  "Multiply by the 6 faces of the cube: 6 × 25 = 150.",
+  "The surface area is 150 square units."
+ ],
+ "6.G-4#1": [
+  "A square face has area equal to side × side.",
+  "The side of this face is 2, so multiply 2 × 2.",
+  "2 × 2 = 4, so the face has an area of 4 square units."
+ ],
+ "6.G-5#0": [
+  "Find the area of each rectangle, then add the two areas.",
+  "The first rectangle is 3 × 4 = 12 and the second is 2 × 4 = 8.",
+  "12 + 8 = 20, so the combined area is 20 square units."
+ ],
+ "6.G-5#1": [
+  "When a piece is removed, subtract its area from the whole area.",
+  "The whole square is 10 × 10 = 100 and the corner is 5 × 5 = 25.",
+  "100 − 25 = 75, so the area left is 75 square units."
+ ],
+ "6.G-6#0": [
+  "The volume of a cube is side × side × side.",
+  "With side 4, start by multiplying two of them: 4 × 4 = 16.",
+  "Then 16 × 4 = 64, so the volume is 64 cubic units."
+ ],
+ "6.G-6#1": [
+  "The area of a triangle is half of base × height.",
+  "Set up ½ × 10 × 3. Take half of the base first: half of 10 is 5.",
+  "5 × 3 = 15, so the area is 15 square units."
+ ],
+ "6.G-7#0": [
+  "Side-by-side rectangles do not overlap, so add their areas.",
+  "The first is 5 × 4 = 20 and the second is 5 × 3 = 15.",
+  "20 + 15 = 35, so the total area is 35 square units."
+ ],
+ "6.G-7#1": [
+  "A cut-out piece is taken away, so subtract its area from the rectangle.",
+  "The rectangle is 10 × 6 = 60 and the cut-out is 3 × 2 = 6.",
+  "60 − 6 = 54, so the area left is 54 square units."
+ ],
+ "6.G-8#0": [
+  "A cube's volume is its edge multiplied three times.",
+  "Start with two of the edges: 3 × 3 = 9.",
+  "Then 9 × 3 = 27, so the volume is 27 cubic units."
+ ],
+ "6.G-8#1": [
+  "Multiply the three sides of the box, in any order you like.",
+  "Start with the two whole numbers: 1 × 2 = 2.",
+  "Now multiply by ½. Half of 2 is 1, so 2 × ½ = 1.",
+  "The volume of the box is 1 cubic unit."
+ ],
+ "6.G-9#0": [
+  "Both points have x = 1, so the segment is vertical.",
+  "The length is the difference of the y-values: 6 − 2.",
+  "6 − 2 = 4, so the segment is 4 units long."
+ ],
+ "6.G-9#1": [
+  "Use the corners to find the width and the height, then multiply.",
+  "From (0, 0) to (5, 0) the width is 5, and from (5, 0) to (5, 2) the height is 2.",
+  "5 × 2 = 10, so the area is 10 square units."
+ ],
+ "6.G-10#0": [
+  "SA means surface area: the total area of all 6 square faces of the cube.",
+  "Each face is a square with area 5 × 5 = 25 square units.",
+  "6 × 25 = 150, so the surface area is 150 square units."
+ ],
+ "6.G-10#1": [
+  "Faces are the flat sides of a solid shape, so count them on a cube.",
+  "A cube has a top, a bottom, and 4 faces around the sides.",
+  "1 + 1 + 4 = 6, so a cube has 6 faces, all equal squares."
+ ],
  "6.SP-1#0": [
   "The mean is the total of the values shared equally among them.",
   "Add the three values to get the total: 10 + 20 + 30 = 60.",

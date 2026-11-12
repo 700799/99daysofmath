@@ -10,23 +10,26 @@
   "primaryAnswer": "24000",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Multiply length × width × height.",
+  "hint": "The aquarium is shaped like a rectangular prism. Multiply its three measurements, and look for a shortcut with the zeros.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Multiply length × width × height."
+      "text": "The aquarium is shaped like a rectangular prism. Multiply its three measurements, and look for a shortcut with the zeros."
     },
     {
       "level": "guide",
-      "text": "$40 \\times 20 = 800$. $800 \\times 30 = ?$"
+      "text": "Set up $40 \\times 20 \\times 30$. Multiply $4 \\times 2 \\times 3$ first, then attach the three zeros from the tens."
     },
     {
       "level": "reveal",
-      "text": "$24{,}000$."
+      "text": "$4 \\times 2 \\times 3 = 24$, and with three zeros that is $24{,}000$, so the volume is $24{,}000$ cubic centimeters."
     }
   ],
   "explanation": [
-    "$V = 40 \\times 20 \\times 30 = 24{,}000$ cm³."
+    "Use volume equals length times width times height: $V = 40 \\times 20 \\times 30$.",
+    "Multiply length by width to get the area of the bottom: $40 \\times 20 = 800$.",
+    "Multiply by the height to stack up the layers: $800 \\times 30 = 24{,}000$.",
+    "The volume of the aquarium is $24{,}000$ cubic centimeters."
   ],
   "tags": [
     "volume",

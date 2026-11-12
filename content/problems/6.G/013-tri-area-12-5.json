@@ -12,23 +12,26 @@
     "30 sq ft"
   ],
   "acceptanceMode": "normalized",
-  "hint": "$\\frac{1}{2} b h$.",
+  "hint": "The height of a triangle is measured straight up from the base. What do you do with base and height to get area?",
   "hints": [
     {
       "level": "nudge",
-      "text": "$\\frac{1}{2} b h$."
+      "text": "The height of a triangle is measured straight up from the base. What do you do with base and height to get area?"
     },
     {
       "level": "guide",
-      "text": "$\\frac{1}{2}(12)(5) = ?$"
+      "text": "Take half of the base times the height. Half of the base $12$ is $6$, so you are left with $6 \\times 5$."
     },
     {
       "level": "reveal",
-      "text": "$30$."
+      "text": "$\\frac{1}{2} \\times 12 \\times 5 = 30$, so the area is $30$ square feet."
     }
   ],
   "explanation": [
-    "$A = \\frac{1}{2}(12)(5) = 30$ sq ft."
+    "Use the triangle area formula $A = \\frac{1}{2}bh$, which works because a triangle is half of a parallelogram.",
+    "Put in the base of $12$ ft and the height of $5$ ft: $A = \\frac{1}{2}(12)(5)$.",
+    "Halving the base first keeps the numbers small: $\\frac{1}{2} \\times 12 = 6$, and then $6 \\times 5 = 30$.",
+    "The area of the triangle is $30$ square feet."
   ],
   "tags": [
     "area",

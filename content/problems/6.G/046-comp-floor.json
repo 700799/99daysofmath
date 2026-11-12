@@ -10,28 +10,31 @@
   "primaryAnswer": "54",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$60 - 6$.",
+  "hint": "This L is described as a full rectangle with a corner missing. Compare the full rectangle's area with the missing corner's area.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Tag every length with its units. Area answers are square units; volume is cubic."
+      "text": "You could also slice the L into two rectangles and add them. Either way should give the same total, so use one way to check the other."
     },
     {
       "level": "nudge",
-      "text": "$60 - 6$."
+      "text": "This L is described as a full rectangle with a corner missing. Compare the full rectangle's area with the missing corner's area."
     },
     {
       "level": "guide",
-      "text": "$10 \\times 6 = 60$, cut: $3 \\times 2 = 6$."
+      "text": "The full rectangle is $10 \\times 6 = 60$ and the cut corner is $3 \\times 2 = 6$. Take the corner away from the full rectangle."
     },
     {
       "level": "reveal",
-      "text": "$54$."
+      "text": "$60 - 6 = 54$, so the area of the floor plan is $54$ square units."
     }
   ],
   "explanation": [
-    "$60 - 6 = 54$."
+    "Start with the full rectangle as if no corner were missing: $10 \\times 6 = 60$.",
+    "The corner that is cut away has area $3 \\times 2 = 6$.",
+    "Subtract the missing corner because it is not part of the floor: $60 - 6 = 54$.",
+    "The area of the L-shaped floor plan is $54$ square units."
   ],
   "tags": [
     "composite",

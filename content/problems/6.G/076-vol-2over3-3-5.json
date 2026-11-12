@@ -10,24 +10,26 @@
   "primaryAnswer": "10",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$\\tfrac{2}{3} \\cdot 3 = 2$.",
+  "hint": "Multiply the three dimensions. Notice that the fraction has a denominator that matches one of the whole numbers.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$\\tfrac{2}{3} \\cdot 3 = 2$."
+      "text": "Multiply the three dimensions. Notice that the fraction has a denominator that matches one of the whole numbers."
     },
     {
       "level": "guide",
-      "text": "Then $2 \\cdot 5$."
+      "text": "Start with $\\frac{2}{3} \\times 3$. The threes cancel and leave $2$, so the rest of the work is $2 \\times 5$."
     },
     {
       "level": "reveal",
-      "text": "$10$."
+      "text": "$2 \\times 5 = 10$, so the volume of the box is $10$ cubic units."
     }
   ],
   "explanation": [
-    "$\\tfrac{2}{3} \\cdot 3 = 2$.",
-    "$2 \\cdot 5 = 10$."
+    "The volume of the box is $\\frac{2}{3} \\times 3 \\times 5$.",
+    "Multiply the fraction by $3$ first because the threes cancel: $\\frac{2}{3} \\times 3 = \\frac{6}{3} = 2$.",
+    "Then multiply by the last dimension: $2 \\times 5 = 10$.",
+    "The volume of the box is $10$ cubic units."
   ],
   "tags": [
     "volume",

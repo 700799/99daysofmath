@@ -12,24 +12,26 @@
     "23 sq units"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Split the L into the two named rectangles.",
+  "hint": "You already know the two rectangles that make the L. Composite shapes are found piece by piece.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Split the L into the two named rectangles."
+      "text": "You already know the two rectangles that make the L. Composite shapes are found piece by piece."
     },
     {
       "level": "guide",
-      "text": "$5 \\cdot 3 = 15$ and $4 \\cdot 2 = 8$."
+      "text": "Compute $5 \\times 3$ for one piece and $4 \\times 2$ for the other piece. The total area is their sum."
     },
     {
       "level": "reveal",
-      "text": "$15 + 8 = 23$."
+      "text": "$15 + 8 = 23$, so the total area of the L-shape is $23$ square units."
     }
   ],
   "explanation": [
-    "Piece $1$: $15$ sq units. Piece $2$: $8$ sq units.",
-    "Total: $23$ sq units."
+    "The L-shape is made of two rectangles, so find each area separately.",
+    "The first piece has area $5 \\times 3 = 15$ square units.",
+    "The second piece has area $4 \\times 2 = 8$ square units.",
+    "Add the pieces: $15 + 8 = 23$, so the total area is $23$ square units."
   ],
   "tags": [
     "composite",

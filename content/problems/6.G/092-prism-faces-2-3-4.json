@@ -10,24 +10,25 @@
   "primaryAnswer": "6",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Think of a shoebox.",
+  "hint": "Picture a shoebox with its lid on. Faces are the flat rectangles that make up its outside.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Think of a shoebox."
+      "text": "Picture a shoebox with its lid on. Faces are the flat rectangles that make up its outside."
     },
     {
       "level": "guide",
-      "text": "Top, bottom, left, right, front, back."
+      "text": "Count the faces in opposite pairs: top and bottom, front and back, left and right. How many pairs is that?"
     },
     {
       "level": "reveal",
-      "text": "$6$."
+      "text": "Three pairs of faces make $3 \\times 2 = 6$, so a rectangular prism has $6$ faces."
     }
   ],
   "explanation": [
-    "A rectangular prism has $6$ rectangular faces.",
-    "Final answer: 6."
+    "The faces of a rectangular prism are the flat rectangles on its outside.",
+    "They come in opposite pairs: top and bottom, front and back, left and right.",
+    "Three pairs give $3 \\times 2 = 6$, so a rectangular prism has $6$ faces."
   ],
   "tags": [
     "surface-area",

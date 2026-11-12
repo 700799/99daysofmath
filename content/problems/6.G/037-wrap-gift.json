@@ -10,28 +10,31 @@
   "primaryAnswer": "54",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Wrapping covers the surface — $6s^2$.",
+  "hint": "The paper has to cover the outside of the cube. Is that a question about volume or about surface area?",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Split or rearrange the shape into pieces whose formulas you already know."
+      "text": "Think of wrapping one side at a time. You cover one square, then another, until every side of the cube is covered."
     },
     {
       "level": "nudge",
-      "text": "Wrapping covers the surface — $6s^2$."
+      "text": "The paper has to cover the outside of the cube. Is that a question about volume or about surface area?"
     },
     {
       "level": "guide",
-      "text": "$6 \\times 9 = ?$"
+      "text": "Each face is $3 \\times 3 = 9$ square centimeters, and there are $6$ faces to cover. Multiply to get the total."
     },
     {
       "level": "reveal",
-      "text": "$54$."
+      "text": "$6 \\times 9 = 54$, so you need $54$ square centimeters of paper."
     }
   ],
   "explanation": [
-    "$SA = 6s^2 = 6(9) = 54$."
+    "Wrapping paper covers the outside of the cube, so the amount needed is the surface area.",
+    "Each face is a square with side $3$, so one face has area $3 \\times 3 = 9$.",
+    "The cube has $6$ faces, which gives $SA = 6 \\times 9 = 54$.",
+    "You need $54$ square centimeters of paper to wrap the cube."
   ],
   "tags": [
     "CA",

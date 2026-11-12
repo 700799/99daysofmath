@@ -10,29 +10,31 @@
   "primaryAnswer": "160",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$SA = 2(lw + lh + wh)$.",
+  "hint": "Surface area adds up every face. Faces on opposite sides of the prism are the same size, so they come in pairs.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Tag every length with its units. Area answers are square units; volume is cubic."
+      "text": "Imagine the net of this prism laid flat. It has $6$ rectangles: two that are $10$ by $5$, two that are $10$ by $2$, and two that are $5$ by $2$."
     },
     {
       "level": "nudge",
-      "text": "$SA = 2(lw + lh + wh)$."
+      "text": "Surface area adds up every face. Faces on opposite sides of the prism are the same size, so they come in pairs."
     },
     {
       "level": "guide",
-      "text": "$2(50 + 20 + 10) = 2(80)$."
+      "text": "Work out $lw = 10 \\times 5 = 50$, $lh = 10 \\times 2 = 20$ and $wh = 5 \\times 2 = 10$. Add these and double the total."
     },
     {
       "level": "reveal",
-      "text": "$160$."
+      "text": "$2(50 + 20 + 10) = 2 \\times 80 = 160$, so the surface area is $160$ square units."
     }
   ],
   "explanation": [
-    "$lw = 50, lh = 20, wh = 10$.",
-    "$SA = 2(80) = 160$."
+    "Find the area of each different face: $lw = 10 \\times 5 = 50$, $lh = 10 \\times 2 = 20$ and $wh = 5 \\times 2 = 10$.",
+    "Add the three different face areas: $50 + 20 + 10 = 80$.",
+    "Every face has a matching face opposite it, so the surface area is $2 \\times 80$.",
+    "The surface area of the prism is $160$ square units."
   ],
   "tags": [
     "surface-area"

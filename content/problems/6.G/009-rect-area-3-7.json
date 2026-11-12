@@ -10,23 +10,25 @@
   "primaryAnswer": "21",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$A = l \\times w$.",
+  "hint": "Picture the rectangle filled with rows of unit squares. How could you count them without counting one by one?",
   "hints": [
     {
       "level": "nudge",
-      "text": "$A = l \\times w$."
+      "text": "Picture the rectangle filled with rows of unit squares. How could you count them without counting one by one?"
     },
     {
       "level": "guide",
-      "text": "$7 \\times 3$."
+      "text": "Multiply the length by the width. With length $7$ and width $3$, the product you need is $7 \\times 3$."
     },
     {
       "level": "reveal",
-      "text": "$21$."
+      "text": "$7 \\times 3 = 21$, so the area of the rectangle is $21$ square units."
     }
   ],
   "explanation": [
-    "$A = l \\times w = 7 \\times 3 = 21$."
+    "The area of a rectangle is length times width because the squares inside line up in equal rows.",
+    "This rectangle has $3$ rows with $7$ unit squares in each, so compute $7 \\times 3$.",
+    "The product is $7 \\times 3 = 21$, so the area is $21$ square units."
   ],
   "tags": [
     "area",

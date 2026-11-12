@@ -12,25 +12,26 @@
     "26 sq units"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Big area minus cut-out area.",
+  "hint": "The square hole is not part of the shape any more. How does cutting something out change the area?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Big area minus cut-out area."
+      "text": "The square hole is not part of the shape any more. How does cutting something out change the area?"
     },
     {
       "level": "guide",
-      "text": "$6 \\cdot 5 = 30$ and $2 \\cdot 2 = 4$."
+      "text": "The whole rectangle has area $6 \\times 5 = 30$, and the square that is cut out has area $2 \\times 2 = 4$. Subtract."
     },
     {
       "level": "reveal",
-      "text": "$30 - 4 = 26$."
+      "text": "$30 - 4 = 26$, so the area remaining is $26$ square units."
     }
   ],
   "explanation": [
-    "Big rect: $6 \\times 5 = 30$.",
-    "Cut-out: $2 \\times 2 = 4$.",
-    "Remaining: $30 - 4 = 26$."
+    "Start with the area of the whole rectangle: $6 \\times 5 = 30$.",
+    "Find the area of the square that is removed: $2 \\times 2 = 4$.",
+    "Take the removed area away from the whole: $30 - 4 = 26$.",
+    "The area remaining is $26$ square units."
   ],
   "tags": [
     "composite",

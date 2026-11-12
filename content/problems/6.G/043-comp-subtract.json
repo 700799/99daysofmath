@@ -10,28 +10,31 @@
   "primaryAnswer": "74",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Total minus cut-out.",
+  "hint": "When a piece is cut out of a shape, the area that is left is the whole area minus the piece.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Sketch the shape and label every length. A 30-second drawing saves 5 minutes of thinking."
+      "text": "Try smaller numbers: a $3 \\times 3$ square with a $1 \\times 1$ square cut out has $9 - 1 = 8$ squares left."
     },
     {
       "level": "nudge",
-      "text": "Total minus cut-out."
+      "text": "When a piece is cut out of a shape, the area that is left is the whole area minus the piece."
     },
     {
       "level": "guide",
-      "text": "$80 - 6$."
+      "text": "The large rectangle has area $10 \\times 8 = 80$ and the cut-out has area $2 \\times 3 = 6$. Subtract the small area from the large one."
     },
     {
       "level": "reveal",
-      "text": "$74$."
+      "text": "$80 - 6 = 74$, so the remaining area is $74$ square units."
     }
   ],
   "explanation": [
-    "$80 - 6 = 74$."
+    "Find the area of the large rectangle before anything is removed: $10 \\times 8 = 80$.",
+    "Find the area of the piece that is cut out: $2 \\times 3 = 6$.",
+    "The cut-out is no longer part of the shape, so subtract it: $80 - 6 = 74$.",
+    "The remaining area is $74$ square units."
   ],
   "tags": [
     "MAP-practice",

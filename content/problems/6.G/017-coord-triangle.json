@@ -10,29 +10,31 @@
   "primaryAnswer": "12",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Legs along the axes are base and height.",
+  "hint": "Two sides of this triangle lie on the axes and meet in a right angle. Those two sides can be the base and the height.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Tag every length with its units. Area answers are square units; volume is cubic."
+      "text": "Picture the rectangle with corners $(0, 0)$, $(6, 0)$, $(6, 4)$ and $(0, 4)$. The triangle is exactly half of that rectangle."
     },
     {
       "level": "nudge",
-      "text": "Legs along the axes are base and height."
+      "text": "Two sides of this triangle lie on the axes and meet in a right angle. Those two sides can be the base and the height."
     },
     {
       "level": "guide",
-      "text": "Base $= 6$, height $= 4$. Area $= \\frac{1}{2}(6)(4)$."
+      "text": "The side on the $x$-axis has length $6$ and the side on the $y$-axis has length $4$. Find half of $6 \\times 4$."
     },
     {
       "level": "reveal",
-      "text": "$12$."
+      "text": "$\\frac{1}{2} \\times 6 \\times 4 = 12$, so the area of the triangle is $12$ square units."
     }
   ],
   "explanation": [
-    "Base $6$, height $4$.",
-    "$A = \\frac{1}{2}(6)(4) = 12$."
+    "The side from $(0, 0)$ to $(6, 0)$ lies on the $x$-axis, so use it as the base with length $6$.",
+    "The side from $(0, 0)$ to $(0, 4)$ goes straight up the $y$-axis, so the height is $4$.",
+    "The base and height meet at a right angle, so the formula $A = \\frac{1}{2}bh$ applies: $\\frac{1}{2}(6)(4)$.",
+    "Half of $24$ is $12$, so the area of the triangle is $12$ square units."
   ],
   "tags": [
     "CA",

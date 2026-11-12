@@ -10,29 +10,31 @@
   "primaryAnswer": "12",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Multiply in any order.",
+  "hint": "The volume is the product of the three dimensions. Choose an order that saves the fraction for last.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Split or rearrange the shape into pieces whose formulas you already know."
+      "text": "Think of a full $6 \\times 1 \\times 4$ box with volume $24$. This storage box is only half as wide, so it holds half as much."
     },
     {
       "level": "nudge",
-      "text": "Multiply in any order."
+      "text": "The volume is the product of the three dimensions. Choose an order that saves the fraction for last."
     },
     {
       "level": "guide",
-      "text": "$6 \\cdot 4 = 24$. Then $24 \\cdot \\tfrac{1}{2}$."
+      "text": "Multiply $6 \\times 4 = 24$ first. Then multiply by $\\frac{1}{2}$, which means taking half of $24$."
     },
     {
       "level": "reveal",
-      "text": "$12$."
+      "text": "Half of $24$ is $12$, so the volume of the storage box is $12$ cubic units."
     }
   ],
   "explanation": [
-    "$6 \\cdot 4 = 24$.",
-    "$24 \\cdot \\tfrac{1}{2} = 12$."
+    "The volume of the box is $6 \\times \\frac{1}{2} \\times 4$.",
+    "The order of multiplying does not matter, so do the whole numbers first: $6 \\times 4 = 24$.",
+    "Multiplying by $\\frac{1}{2}$ takes half of the number: $24 \\times \\frac{1}{2} = 12$.",
+    "The volume of the storage box is $12$ cubic units."
   ],
   "tags": [
     "MAP-practice",

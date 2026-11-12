@@ -10,28 +10,31 @@
   "primaryAnswer": "42",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$48 - 6$.",
+  "hint": "The patio is a full rectangle with one corner taken away. Think about whole minus missing part.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Split or rearrange the shape into pieces whose formulas you already know."
+      "text": "Check by slicing instead: the L splits into an $8 \\times 4$ rectangle and a $5 \\times 2$ rectangle, and those two areas add to the same total."
     },
     {
       "level": "nudge",
-      "text": "$48 - 6$."
+      "text": "The patio is a full rectangle with one corner taken away. Think about whole minus missing part."
     },
     {
       "level": "guide",
-      "text": "Big minus cut."
+      "text": "The full rectangle is $8 \\times 6 = 48$ and the missing corner is $3 \\times 2 = 6$. Subtract the corner from the rectangle."
     },
     {
       "level": "reveal",
-      "text": "$42$."
+      "text": "$48 - 6 = 42$, so the area of the patio is $42$ square units."
     }
   ],
   "explanation": [
-    "$48 - 6 = 42$."
+    "Find the area of the full $8 \\times 6$ rectangle first: $8 \\times 6 = 48$.",
+    "Find the area of the corner that is missing: $3 \\times 2 = 6$.",
+    "The patio is what is left after removing the corner: $48 - 6 = 42$.",
+    "The area of the L-shaped patio is $42$ square units."
   ],
   "tags": [
     "CA",

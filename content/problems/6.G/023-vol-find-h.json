@@ -10,23 +10,26 @@
   "primaryAnswer": "6",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$V = l w h$.",
+  "hint": "You know the volume and two of the three dimensions. Think about which operation undoes multiplication.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$V = l w h$."
+      "text": "You know the volume and two of the three dimensions. Think about which operation undoes multiplication."
     },
     {
       "level": "guide",
-      "text": "$h = V / (l w) = 120 / 20$."
+      "text": "Length times width is $5 \\times 4 = 20$, so $20 \\times h = 120$. Divide the volume by $20$ to get the height."
     },
     {
       "level": "reveal",
-      "text": "$h = 6$."
+      "text": "$120 \\div 20 = 6$, so the height of the box is $6$ units."
     }
   ],
   "explanation": [
-    "$h = 120 / (5 \\cdot 4) = 6$."
+    "Volume is length times width times height, so here $120 = 5 \\times 4 \\times h$.",
+    "Multiply the two known dimensions to find the area of the base: $5 \\times 4 = 20$.",
+    "Now $20 \\times h = 120$, and dividing undoes the multiplication: $h = 120 \\div 20$.",
+    "The height of the box is $6$ units, and the check $5 \\times 4 \\times 6 = 120$ works."
   ],
   "tags": [
     "volume"

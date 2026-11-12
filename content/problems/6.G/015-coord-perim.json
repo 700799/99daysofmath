@@ -10,23 +10,26 @@
   "primaryAnswer": "16",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Length $= 5$, width $= 3$.",
+  "hint": "Perimeter means the total distance around. Find the length and width of the rectangle from its corners first.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Length $= 5$, width $= 3$."
+      "text": "Perimeter means the total distance around. Find the length and width of the rectangle from its corners first."
     },
     {
       "level": "guide",
-      "text": "Perimeter $= 2(l + w) = 2(5 + 3)$."
+      "text": "The bottom side goes from $(0, 0)$ to $(5, 0)$, so it is $5$ long. The right side goes from $(5, 0)$ to $(5, 3)$, so it is $3$ long. Add two of each."
     },
     {
       "level": "reveal",
-      "text": "$2(8) = 16$."
+      "text": "$2(5 + 3) = 2 \\times 8 = 16$, so the perimeter is $16$ units."
     }
   ],
   "explanation": [
-    "$P = 2(5 + 3) = 16$."
+    "The side from $(0, 0)$ to $(5, 0)$ lies on the $x$-axis and has length $5 - 0 = 5$.",
+    "The side from $(5, 0)$ to $(5, 3)$ is vertical and has length $3 - 0 = 3$.",
+    "A rectangle has two sides of each length, so the perimeter is $P = 2(5 + 3)$.",
+    "That works out to $2 \\times 8 = 16$, so the perimeter is $16$ units."
   ],
   "tags": [
     "coord",

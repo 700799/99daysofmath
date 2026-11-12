@@ -10,24 +10,26 @@
   "primaryAnswer": "1",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$V = l \\cdot w \\cdot h$.",
+  "hint": "Two of the sides are fractions, but you still multiply all three dimensions. Do the fractions first and see what you get.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$V = l \\cdot w \\cdot h$."
+      "text": "Two of the sides are fractions, but you still multiply all three dimensions. Do the fractions first and see what you get."
     },
     {
       "level": "guide",
-      "text": "$\\tfrac{1}{2} \\cdot \\tfrac{1}{2} = \\tfrac{1}{4}$. Then $\\tfrac{1}{4} \\cdot 4$."
+      "text": "Start with $\\frac{1}{2} \\times \\frac{1}{2} = \\frac{1}{4}$. Then multiply that result by the third side, $4$."
     },
     {
       "level": "reveal",
-      "text": "$1$."
+      "text": "$\\frac{1}{4} \\times 4 = 1$, so the volume of the box is $1$ cubic unit."
     }
   ],
   "explanation": [
-    "$\\tfrac{1}{2} \\cdot \\tfrac{1}{2} = \\tfrac{1}{4}$.",
-    "$\\tfrac{1}{4} \\cdot 4 = 1$ cu unit."
+    "The volume is the product of the three dimensions: $\\frac{1}{2} \\times \\frac{1}{2} \\times 4$.",
+    "Multiply the two fractions first, since half of a half is a quarter: $\\frac{1}{2} \\times \\frac{1}{2} = \\frac{1}{4}$.",
+    "Now multiply by the third side. A quarter of $4$ is $1$, so $\\frac{1}{4} \\times 4 = 1$.",
+    "The volume of the box is $1$ cubic unit."
   ],
   "tags": [
     "volume",

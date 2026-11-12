@@ -10,23 +10,26 @@
   "primaryAnswer": "6",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Distance from $-2$ to $4$.",
+  "hint": "Pick two vertices that share a coordinate. They are the ends of one side of the square.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Distance from $-2$ to $4$."
+      "text": "Pick two vertices that share a coordinate. They are the ends of one side of the square."
     },
     {
       "level": "guide",
-      "text": "$|4 - (-2)| = 6$."
+      "text": "The points $(-2, -2)$ and $(4, -2)$ have the same $y$, so the side between them is horizontal. Find the distance from $x = -2$ to $x = 4$."
     },
     {
       "level": "reveal",
-      "text": "$6$."
+      "text": "$4 - (-2) = 4 + 2 = 6$, so each side of the square is $6$ units long."
     }
   ],
   "explanation": [
-    "Side $= |4 - (-2)| = 6$."
+    "Choose two vertices on the same side, such as $(-2, -2)$ and $(4, -2)$, which share $y = -2$.",
+    "The side length is the distance between their $x$-values: $|4 - (-2)|$.",
+    "Subtracting a negative is the same as adding, so $4 - (-2) = 4 + 2 = 6$.",
+    "The side length of the square is $6$ units. You can check with the $y$-values too: $4 - (-2) = 6$."
   ],
   "tags": [
     "coord",

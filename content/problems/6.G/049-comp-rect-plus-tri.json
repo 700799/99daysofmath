@@ -10,23 +10,26 @@
   "primaryAnswer": "25",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Add the areas.",
+  "hint": "Treat the figure as two separate parts. The rectangle and the triangle each have their own area rule.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Add the areas."
+      "text": "Treat the figure as two separate parts. The rectangle and the triangle each have their own area rule."
     },
     {
       "level": "guide",
-      "text": "$20 + 5$."
+      "text": "The rectangle has area $5 \\times 4 = 20$. For the triangle, take half of $5 \\times 2$. Then add the two results."
     },
     {
       "level": "reveal",
-      "text": "$25$."
+      "text": "The triangle has area $5$, and $20 + 5 = 25$, so the total area is $25$ square units."
     }
   ],
   "explanation": [
-    "$20 + 5 = 25$."
+    "Find the rectangle's area by multiplying its sides: $5 \\times 4 = 20$.",
+    "Find the triangle's area with half of base times height: $\\frac{1}{2} \\times 5 \\times 2 = 5$.",
+    "The two parts make up the whole shape, so add them: $20 + 5 = 25$.",
+    "The total area of the shape is $25$ square units."
   ],
   "tags": [
     "composite"

@@ -12,29 +12,31 @@
     "20 units"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Add all four sides.",
+  "hint": "The perimeter is the trip all the way around the rectangle. You need the length and the width from the coordinates.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Sketch the shape and label every length. A 30-second drawing saves 5 minutes of thinking."
+      "text": "Try a small one first: a rectangle with corners $(0, 0)$, $(2, 0)$, $(2, 1)$, $(0, 1)$ has sides $2$ and $1$ and perimeter $6$."
     },
     {
       "level": "nudge",
-      "text": "Add all four sides."
+      "text": "The perimeter is the trip all the way around the rectangle. You need the length and the width from the coordinates."
     },
     {
       "level": "guide",
-      "text": "$L = 6$, $W = 4$. Perimeter $= 2(L + W)$."
+      "text": "The length from $(0, 0)$ to $(6, 0)$ is $6$ and the width from $(6, 0)$ to $(6, 4)$ is $4$. Compute $2(6 + 4)$."
     },
     {
       "level": "reveal",
-      "text": "$2(6 + 4) = 20$."
+      "text": "$2 \\times 10 = 20$, so the perimeter of the rectangle is $20$ units."
     }
   ],
   "explanation": [
-    "Length $6$, width $4$.",
-    "Perimeter: $2(10) = 20$."
+    "The bottom side goes from $(0, 0)$ to $(6, 0)$, so the length is $6$.",
+    "The right side goes from $(6, 0)$ to $(6, 4)$, so the width is $4$.",
+    "The perimeter counts each of these twice: $2(6 + 4) = 2 \\times 10$.",
+    "The perimeter of the rectangle is $20$ units."
   ],
   "tags": [
     "MAP-practice",

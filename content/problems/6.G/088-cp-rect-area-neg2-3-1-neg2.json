@@ -12,30 +12,31 @@
     "15 sq units"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Find length and width with absolute differences.",
+  "hint": "Some corners have negative coordinates, but a length is always positive. Find the distance across and the distance up.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Split or rearrange the shape into pieces whose formulas you already know."
+      "text": "Count along a number line instead of subtracting: from $-2$ up to $3$ is $2$ steps to zero and $3$ more steps."
     },
     {
       "level": "nudge",
-      "text": "Find length and width with absolute differences."
+      "text": "Some corners have negative coordinates, but a length is always positive. Find the distance across and the distance up."
     },
     {
       "level": "guide",
-      "text": "L $= |3 - (-2)| = 5$. W $= |1 - (-2)| = 3$."
+      "text": "The length is $3 - (-2) = 5$ from the $x$-values, and the width is $1 - (-2) = 3$ from the $y$-values. Multiply $5$ by $3$."
     },
     {
       "level": "reveal",
-      "text": "$5 \\cdot 3 = 15$."
+      "text": "$5 \\times 3 = 15$, so the area of the rectangle is $15$ square units."
     }
   ],
   "explanation": [
-    "Length: $|3 - (-2)| = 5$.",
-    "Width: $|1 - (-2)| = 3$.",
-    "Area: $5 \\cdot 3 = 15$."
+    "The top side runs from $(-2, 1)$ to $(3, 1)$, so its length is $|3 - (-2)| = 5$.",
+    "The right side runs from $(3, 1)$ to $(3, -2)$, so its length is $|1 - (-2)| = 3$.",
+    "Area of a rectangle is length times width: $5 \\times 3 = 15$.",
+    "The area of the rectangle is $15$ square units."
   ],
   "tags": [
     "MAP-practice",

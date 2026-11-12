@@ -13,11 +13,12 @@
     "36 sq in"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Area of a parallelogram is $\\text{base} \\times \\text{height}$, just like a rectangle.",
+  "hint": "A parallelogram can be cut and slid into a rectangle with the same base and height. How do you find that rectangle's area?",
   "explanation": [
-    "Use the formula: Area $= b \\times h$.",
-    "$9 \\times 4 = 36$.",
-    "The area is $36$ square inches."
+    "Cutting a triangle off one end of a parallelogram and sliding it to the other end makes a rectangle, so the area is base times height.",
+    "Use the base and the height from the problem, not a slanted side: $A = 9 \\times 4$.",
+    "Multiply the two numbers to get $9 \\times 4 = 36$.",
+    "The area of the parallelogram is $36$ square inches."
   ],
   "alternativeExplanations": [
     {
@@ -36,15 +37,15 @@
   "hints": [
     {
       "level": "nudge",
-      "text": "Area of a parallelogram is $\\text{base} \\times \\text{height}$, just like a rectangle."
+      "text": "A parallelogram can be cut and slid into a rectangle with the same base and height. How do you find that rectangle's area?"
     },
     {
       "level": "guide",
-      "text": "Use the formula: Area $= b \\times h$."
+      "text": "The area is base times height, and here the base is $9$ in and the height is $4$ in. Work out $9 \\times 4$."
     },
     {
       "level": "reveal",
-      "text": "The area is $36$ square inches."
+      "text": "$9 \\times 4 = 36$, so the area of the parallelogram is $36$ square inches."
     }
   ],
   "diagram": {

@@ -12,23 +12,26 @@
     "50 ft"
   ],
   "acceptanceMode": "normalized",
-  "hint": "$P = 2(l + w)$.",
+  "hint": "Fencing goes around the edge of the garden. Is that the area inside or the distance around?",
   "hints": [
     {
       "level": "nudge",
-      "text": "$P = 2(l + w)$."
+      "text": "Fencing goes around the edge of the garden. Is that the area inside or the distance around?"
     },
     {
       "level": "guide",
-      "text": "$2(15 + 10) = 2(25)$."
+      "text": "Add all four sides of the garden: two sides of $15$ ft and two sides of $10$ ft. That is $2(15 + 10)$."
     },
     {
       "level": "reveal",
-      "text": "$50$."
+      "text": "$2 \\times 25 = 50$, so the garden needs $50$ feet of fencing."
     }
   ],
   "explanation": [
-    "$P = 2(15 + 10) = 50$ ft."
+    "A fence follows the border of the garden, so the amount needed is the perimeter.",
+    "A rectangle has two lengths and two widths, so $P = 2(15 + 10)$.",
+    "Add first and then double: $15 + 10 = 25$, and $2 \\times 25 = 50$.",
+    "The garden needs $50$ feet of fencing."
   ],
   "tags": [
     "CA",

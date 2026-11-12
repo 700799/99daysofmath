@@ -10,23 +10,26 @@
   "primaryAnswer": "150",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$6s^2$.",
+  "hint": "Every face of a cube is the same square. Find the area of one face and think about how many faces there are.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$6s^2$."
+      "text": "Every face of a cube is the same square. Find the area of one face and think about how many faces there are."
     },
     {
       "level": "guide",
-      "text": "$6 \\times 25$."
+      "text": "One face measures $5$ by $5$, so its area is $5 \\times 5 = 25$. Multiply that by the $6$ faces."
     },
     {
       "level": "reveal",
-      "text": "$150$."
+      "text": "$6 \\times 25 = 150$, so the surface area of the cube is $150$ square units."
     }
   ],
   "explanation": [
-    "$6 \\times 5^2 = 6 \\times 25 = 150$."
+    "The surface area of a cube is $6$ times the area of one face, written $6s^2$.",
+    "With side $5$, one square face has area $5^2 = 5 \\times 5 = 25$.",
+    "Multiply by the $6$ faces of the cube: $6 \\times 25 = 150$.",
+    "The surface area of the cube is $150$ square units."
   ],
   "tags": [
     "surface-area",

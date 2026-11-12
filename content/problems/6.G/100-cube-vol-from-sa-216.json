@@ -12,30 +12,32 @@
     "216 cu units"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Find the area of one face first.",
+  "hint": "Volume needs the edge length. Work backward from the surface area to one face, and then from that face to the edge.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Try a similar but smaller shape (all sides ÷ 2) and look at how the formula behaves."
+      "text": "Start with a smaller cube: surface area $24$ means each face is $24 \\div 6 = 4$, the edge is $2$, and the volume is $2 \\times 2 \\times 2 = 8$."
     },
     {
       "level": "nudge",
-      "text": "Find the area of one face first."
+      "text": "Volume needs the edge length. Work backward from the surface area to one face, and then from that face to the edge."
     },
     {
       "level": "guide",
-      "text": "One face: $216 \\div 6 = 36$, so the side is $6$."
+      "text": "One face has area $216 \\div 6 = 36$, so the edge is $6$ because $6 \\times 6 = 36$. Now compute $6 \\times 6 \\times 6$."
     },
     {
       "level": "reveal",
-      "text": "Volume: $6^3 = 216$."
+      "text": "$6 \\times 6 \\times 6 = 216$, so the volume of the cube is $216$ cubic units."
     }
   ],
   "explanation": [
-    "One face: $216 / 6 = 36$ sq units.",
-    "Edge length: $\\sqrt{36} = 6$.",
-    "Volume: $6^3 = 216$ cu units."
+    "A cube has $6$ equal faces, so one face has area $216 \\div 6 = 36$ square units.",
+    "A face is a square, so the edge is the number whose square is $36$, which is $6$.",
+    "The volume of a cube is edge times edge times edge: $6 \\times 6 \\times 6$.",
+    "Multiply in two steps to keep it simple: $6 \\times 6 = 36$, and $36 \\times 6 = 216$.",
+    "The volume is $216$ cubic units. It is a coincidence that this matches the surface area number."
   ],
   "alternativeExplanations": [
     {

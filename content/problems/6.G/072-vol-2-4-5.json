@@ -12,24 +12,26 @@
     "40 cu units"
   ],
   "acceptanceMode": "normalized",
-  "hint": "$V = l \\cdot w \\cdot h$.",
+  "hint": "To fill a box you stack layers of unit cubes. How many cubes are in one layer, and how many layers are there?",
   "hints": [
     {
       "level": "nudge",
-      "text": "$V = l \\cdot w \\cdot h$."
+      "text": "To fill a box you stack layers of unit cubes. How many cubes are in one layer, and how many layers are there?"
     },
     {
       "level": "guide",
-      "text": "$2 \\cdot 4 \\cdot 5$."
+      "text": "Multiply the three numbers $2 \\times 4 \\times 5$. You could do $2 \\times 4 = 8$ first and then multiply by $5$."
     },
     {
       "level": "reveal",
-      "text": "$40$."
+      "text": "$8 \\times 5 = 40$, so the volume of the box is $40$ cubic units."
     }
   ],
   "explanation": [
-    "$2 \\cdot 4 = 8$, then $8 \\cdot 5 = 40$.",
-    "Final answer: 40."
+    "Use the volume formula for a box: $V = 2 \\times 4 \\times 5$.",
+    "Multiply the first two dimensions to get one layer: $2 \\times 4 = 8$.",
+    "Multiply by the third dimension for all the layers: $8 \\times 5 = 40$.",
+    "The volume of the box is $40$ cubic units."
   ],
   "tags": [
     "volume"

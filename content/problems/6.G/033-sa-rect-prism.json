@@ -10,24 +10,27 @@
   "primaryAnswer": "52",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$SA = 2(lw + lh + wh)$.",
+  "hint": "A rectangular prism has three different sizes of face, and each size appears twice, on opposite sides.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$SA = 2(lw + lh + wh)$."
+      "text": "A rectangular prism has three different sizes of face, and each size appears twice, on opposite sides."
     },
     {
       "level": "guide",
-      "text": "$2(12 + 8 + 6) = 2(26)$."
+      "text": "The three face areas are $4 \\times 3 = 12$, $4 \\times 2 = 8$ and $3 \\times 2 = 6$. Add them, then double the sum for the matching opposite faces."
     },
     {
       "level": "reveal",
-      "text": "$52$."
+      "text": "$2(12 + 8 + 6) = 2 \\times 26 = 52$, so the surface area is $52$ square units."
     }
   ],
   "explanation": [
-    "$lw = 12$, $lh = 8$, $wh = 6$.",
-    "$SA = 2(12 + 8 + 6) = 52$."
+    "The prism has three pairs of matching faces, so find one face from each pair.",
+    "Multiply the dimensions two at a time to get the face areas: $4 \\times 3 = 12$, $4 \\times 2 = 8$ and $3 \\times 2 = 6$.",
+    "Add the areas of the three different faces: $12 + 8 + 6 = 26$.",
+    "Each face has a twin on the opposite side, so double the sum: $2 \\times 26 = 52$.",
+    "The surface area of the prism is $52$ square units."
   ],
   "tags": [
     "surface-area",

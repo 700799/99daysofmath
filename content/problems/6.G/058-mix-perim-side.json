@@ -12,23 +12,26 @@
     "24 cm"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Add all sides — or multiply.",
+  "hint": "Perimeter is the total length of all the sides. In a regular hexagon every side has the same length.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Add all sides — or multiply."
+      "text": "Perimeter is the total length of all the sides. In a regular hexagon every side has the same length."
     },
     {
       "level": "guide",
-      "text": "$6 \\times 4$."
+      "text": "There are $6$ sides and each one is $4$ cm long. Instead of adding $4$ six times, multiply $6 \\times 4$."
     },
     {
       "level": "reveal",
-      "text": "$24$."
+      "text": "$6 \\times 4 = 24$, so the perimeter of the hexagon is $24$ centimeters."
     }
   ],
   "explanation": [
-    "$P = 6 \\times 4 = 24$ cm."
+    "The perimeter of any polygon is the sum of its side lengths.",
+    "A regular hexagon has $6$ equal sides, so the sum is $4 + 4 + 4 + 4 + 4 + 4$, or $6 \\times 4$.",
+    "Six groups of four make twenty-four, so $6 \\times 4 = 24$.",
+    "The perimeter of the hexagon is $24$ centimeters."
   ],
   "tags": [
     "perimeter"

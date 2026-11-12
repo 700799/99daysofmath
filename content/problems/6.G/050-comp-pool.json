@@ -12,28 +12,31 @@
     "550 sq ft"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Total minus pool.",
+  "hint": "The pool sits inside the backyard. The part that is not pool is what remains after you take the pool away.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Sketch the shape and label every length. A 30-second drawing saves 5 minutes of thinking."
+      "text": "Picture a tiny yard that is $3 \\times 3$ with a $1 \\times 1$ pool. The yard without the pool is $9 - 1 = 8$. Do the same with the big numbers."
     },
     {
       "level": "nudge",
-      "text": "Total minus pool."
+      "text": "The pool sits inside the backyard. The part that is not pool is what remains after you take the pool away."
     },
     {
       "level": "guide",
-      "text": "$600 - 50$."
+      "text": "The whole backyard is $20 \\times 30 = 600$ and the pool is $5 \\times 10 = 50$. Subtract the pool from the backyard."
     },
     {
       "level": "reveal",
-      "text": "$550$."
+      "text": "$600 - 50 = 550$, so the non-pool area is $550$ square feet."
     }
   ],
   "explanation": [
-    "$600 - 50 = 550$ sq ft."
+    "Find the area of the whole backyard: $20 \\times 30 = 600$ square feet.",
+    "Find the area taken up by the pool: $5 \\times 10 = 50$ square feet.",
+    "The pool is inside the yard, so subtract it to leave the rest: $600 - 50 = 550$.",
+    "The non-pool area of the backyard is $550$ square feet."
   ],
   "tags": [
     "CA",

@@ -10,23 +10,25 @@
   "primaryAnswer": "6",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Same as the number of faces.",
+  "hint": "A net is the flat pattern you get when you unfold a solid. Each face of the solid becomes one piece of the net.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Same as the number of faces."
+      "text": "A net is the flat pattern you get when you unfold a solid. Each face of the solid becomes one piece of the net."
     },
     {
       "level": "guide",
-      "text": "Cube has $6$ faces."
+      "text": "Count the faces of a cube: one on top, one on the bottom, and the ones around the sides. The net needs a square for each."
     },
     {
       "level": "reveal",
-      "text": "$6$ squares."
+      "text": "A cube has $6$ faces, so a net of a cube has $6$ squares."
     }
   ],
   "explanation": [
-    "A cube net unfolds into $6$ square faces."
+    "A net is a solid unfolded flat, so it has one flat piece for every face.",
+    "A cube has a top, a bottom and $4$ side faces, and every one of them is a square.",
+    "That is $1 + 1 + 4 = 6$ faces, so the net of a cube is made of $6$ squares."
   ],
   "tags": [
     "net"

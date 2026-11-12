@@ -10,24 +10,26 @@
   "primaryAnswer": "33",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Rectangle area + triangle area.",
+  "hint": "This shape is two familiar shapes joined along one side. Find the area of each one with its own formula.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Rectangle area + triangle area."
+      "text": "This shape is two familiar shapes joined along one side. Find the area of each one with its own formula."
     },
     {
       "level": "guide",
-      "text": "$24 + \\frac{1}{2}(6)(3) = 24 + 9$."
+      "text": "The rectangle is $6 \\times 4 = 24$. The triangle is half of $6 \\times 3$. Find the triangle's area and add it to $24$."
     },
     {
       "level": "reveal",
-      "text": "$33$."
+      "text": "The triangle has area $9$, and $24 + 9 = 33$, so the total area is $33$ square units."
     }
   ],
   "explanation": [
-    "$A_{rect} = 24$; $A_{tri} = 9$.",
-    "Total: $33$."
+    "Break the shape into the rectangle and the triangle, since each has a known area formula.",
+    "The rectangle's area is length times width: $6 \\times 4 = 24$.",
+    "The triangle's area is half of base times height: $\\frac{1}{2} \\times 6 \\times 3 = 9$.",
+    "Add the two parts to get the whole shape: $24 + 9 = 33$ square units."
   ],
   "tags": [
     "CA",

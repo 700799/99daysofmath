@@ -12,24 +12,26 @@
     "150 sq units"
   ],
   "acceptanceMode": "normalized",
-  "hint": "$6$ faces, each $25$.",
+  "hint": "Total surface area adds up every face. On a cube, all the faces have the same area.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$6$ faces, each $25$."
+      "text": "Total surface area adds up every face. On a cube, all the faces have the same area."
     },
     {
       "level": "guide",
-      "text": "$6 \\cdot 25$."
+      "text": "There are $6$ faces and each one has area $25$. Multiply $6 \\times 25$ to add them all at once."
     },
     {
       "level": "reveal",
-      "text": "$150$."
+      "text": "$6 \\times 25 = 150$, so the total surface area is $150$ square units."
     }
   ],
   "explanation": [
-    "$6 \\cdot 25 = 150$ sq units.",
-    "Final answer: 150."
+    "The total surface area is the sum of the areas of all the faces.",
+    "A cube has $6$ equal faces, and each has area $25$ square units.",
+    "Multiply the number of faces by the area of each: $6 \\times 25 = 150$.",
+    "The total surface area of the cube is $150$ square units."
   ],
   "tags": [
     "surface-area",

@@ -12,23 +12,26 @@
     "30 sq ft"
   ],
   "acceptanceMode": "normalized",
-  "hint": "$\\frac{1}{2} b h$.",
+  "hint": "The roof piece is a triangle, so its area is not simply base times height. What fraction of that product is it?",
   "hints": [
     {
       "level": "nudge",
-      "text": "$\\frac{1}{2} b h$."
+      "text": "The roof piece is a triangle, so its area is not simply base times height. What fraction of that product is it?"
     },
     {
       "level": "guide",
-      "text": "$\\frac{1}{2}(12)(5)$."
+      "text": "Use half of base times height: $\\frac{1}{2} \\times 12 \\times 5$. Halve the $12$ first to make the multiplying easy."
     },
     {
       "level": "reveal",
-      "text": "$30$."
+      "text": "$6 \\times 5 = 30$, so the area of the roof piece is $30$ square feet."
     }
   ],
   "explanation": [
-    "$A = \\frac{1}{2}(12)(5) = 30$ sq ft."
+    "The roof piece is a triangle, so use $A = \\frac{1}{2} \\times \\text{base} \\times \\text{height}$.",
+    "Substitute the base of $12$ ft and the height of $5$ ft: $\\frac{1}{2} \\times 12 \\times 5$.",
+    "Halve the base first, since half of $12$ is $6$, and then multiply by the height: $6 \\times 5 = 30$.",
+    "The area of the triangular roof piece is $30$ square feet."
   ],
   "tags": [
     "triangle",
