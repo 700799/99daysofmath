@@ -6,15 +6,16 @@ import { LessonCard } from '../components/LessonCard';
 import { LessonVideo } from '../components/LessonVideo';
 import { useSeo } from '../lib/seo';
 
-// Learning library: every unit's Manim animations side-by-side with the
-// written lesson plan (concept bullets + the full step-by-step deck).
+// Learning library: every unit's lesson video (rendered from its slide deck:
+// drawings, formulas and worked steps revealed one at a time) side-by-side
+// with the written lesson plan (concept bullets + the full step-by-step deck).
 // Videos live inside <details> so nothing downloads until a unit is opened.
 export function Videos() {
   const [openLesson, setOpenLesson] = useState<Lesson | null>(null);
   useSeo({
-    title: 'Math Video Lessons — Grades 5-6 & Beyond | Math10x',
+    title: 'Math Video Lessons — Grade 5 to AP Calculus | Math10x',
     description:
-      'Watch free animated math video lessons for grades 5-6: ratios, fractions, decimals, geometry, expressions, and statistics — each with worked examples and practice.',
+      'Watch free math video lessons from 5th grade to AP Calculus and AP Statistics: every unit explained with diagrams, graphs and worked examples, one step at a time.',
     canonicalPath: '/videos',
   });
 
@@ -36,7 +37,7 @@ export function Videos() {
         </Link>
       </div>
       <p className="text-sm text-ink-muted mt-1 mb-5">
-        Every unit has short animations <em>and</em> a written step-by-step
+        Every unit has a short video <em>and</em> a written step-by-step
         lesson — watch, read, or both. Tap a unit to open it.
       </p>
 

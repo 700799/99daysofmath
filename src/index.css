@@ -225,3 +225,34 @@ ol.steps,
     padding: 0 !important;
   }
 }
+
+/* Lesson video seek bar: a thin track that fills as it plays, with a thumb
+   big enough to grab on a phone. */
+.lesson-video-seek {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #5ee7ff var(--played, 0%), rgba(255, 255, 255, 0.22) var(--played, 0%));
+  cursor: pointer;
+  touch-action: none;
+}
+.lesson-video-seek::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #5ee7ff;
+}
+.lesson-video-seek::-moz-range-thumb {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #5ee7ff;
+}
+.lesson-video-seek:focus-visible {
+  outline: 2px solid #5ee7ff;
+  outline-offset: 4px;
+}
