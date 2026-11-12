@@ -10,26 +10,26 @@
   "primaryAnswer": "5.11",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Give every number the same number of decimal places by writing $0.8$ as $0.80$.",
+  "hint": "These three numbers do not all show the same decimal places. Fix that before adding, so the columns match.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Give every number the same number of decimal places by writing $0.8$ as $0.80$."
+      "text": "These three numbers do not all show the same decimal places. Fix that before adding, so the columns match."
     },
     {
       "level": "guide",
-      "text": "Add two at a time: $1.25 + 0.80 = 2.05$. Now add $3.06$."
+      "text": "Write $0.8$ as $0.80$. Add two numbers at a time: first $1.25 + 0.80$, and then add $3.06$ to that result."
     },
     {
       "level": "reveal",
-      "text": "$2.05 + 3.06 = 5.11$."
+      "text": "$1.25 + 0.80 = 2.05$ and $2.05 + 3.06 = 5.11$, so the sum is $5.11$."
     }
   ],
   "explanation": [
-    "Write $0.8$ as $0.80$ so all three numbers show hundredths — adding a zero on the end never changes a decimal.",
-    "Add the first two: $1.25 + 0.80 = 2.05$.",
-    "Add the third: $2.05 + 3.06 = 5.11$.",
-    "So the sum is $5.11$."
+    "Write $0.8$ as $0.80$ so all three numbers show hundredths. A zero on the end does not change a decimal's value.",
+    "Add the first two numbers together: $1.25 + 0.80 = 2.05$.",
+    "Add the third number to that result: $2.05 + 3.06 = 5.11$.",
+    "So the sum of the three numbers is $5.11$."
   ],
   "alternativeExplanations": [
     {

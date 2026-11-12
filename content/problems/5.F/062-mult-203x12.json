@@ -12,26 +12,26 @@
     "2,436"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Split the $12$ into $10 + 2$ — both are easy to multiply by.",
+  "hint": "Twelve is made of one ten and two ones. Multiplying by each of those parts is easier than multiplying by twelve all at once.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Split the $12$ into $10 + 2$ — both are easy to multiply by."
+      "text": "Twelve is made of one ten and two ones. Multiplying by each of those parts is easier than multiplying by twelve all at once."
     },
     {
       "level": "guide",
-      "text": "$203 \\times 10 = 2030$ and $203 \\times 2 = 406$. Add the two pieces."
+      "text": "Split $12$ into $10 + 2$. Work out $203 \\times 10$ and $203 \\times 2$, and then add those two partial products."
     },
     {
       "level": "reveal",
-      "text": "$2030 + 406 = 2436$."
+      "text": "$203 \\times 10 = 2030$ and $203 \\times 2 = 406$, and $2030 + 406 = 2436$, so the product is $2436$."
     }
   ],
   "explanation": [
-    "Split the second factor: $12 = 10 + 2$.",
-    "$203 \\times 10 = 2030$.",
-    "$203 \\times 2 = 406$.",
-    "Add the partial products: $2030 + 406 = 2436$."
+    "Split the second factor into parts that are easy to use: $12 = 10 + 2$.",
+    "Multiply by the ten: $203 \\times 10 = 2030$, which is $203$ with a zero attached.",
+    "Multiply by the two: $203 \\times 2 = 406$, which is $203$ doubled.",
+    "Add the partial products to get all twelve groups: $2030 + 406 = 2436$."
   ],
   "alternativeExplanations": [
     {

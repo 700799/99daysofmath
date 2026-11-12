@@ -13,25 +13,25 @@
     "3/2"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Two steps: find the total grams first, then trade grams for kilograms.",
+  "hint": "Two things are needed here: the total flour for all the loaves, and a change of units from grams to kilograms.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Two steps: find the total grams first, then trade grams for kilograms."
+      "text": "Two things are needed here: the total flour for all the loaves, and a change of units from grams to kilograms."
     },
     {
       "level": "guide",
-      "text": "$6 \\times 250 = 1500$ grams. There are $1000$ grams in a kilogram."
+      "text": "The total is $6 \\times 250 = 1500$ grams. A kilogram is $1000$ grams, so divide the total grams by $1000$."
     },
     {
       "level": "reveal",
-      "text": "$1500 \\div 1000 = 1.5$ kilograms."
+      "text": "$1500 \\div 1000 = 1.5$, so the baker uses $1.5$ kilograms of flour."
     }
   ],
   "explanation": [
-    "Step 1 — total grams: $6 \\times 250 = 1500$ grams.",
-    "Step 2 — convert: $1$ kilogram is $1000$ grams, and kilograms are the bigger unit, so divide.",
-    "$1500 \\div 1000 = 1.5$ kilograms of flour."
+    "First find the total in grams: six loaves at $250$ grams each is $6 \\times 250 = 1500$ grams.",
+    "One kilogram is $1000$ grams. Kilograms are the bigger unit, so divide to convert.",
+    "$1500 \\div 1000 = 1.5$, so the baker uses $1.5$ kilograms of flour."
   ],
   "alternativeExplanations": [
     {

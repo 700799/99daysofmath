@@ -29,10 +29,10 @@
     }
   ],
   "explanation": [
-    "Count positions in Pattern A: 1st $= 0$, 2nd $= 2$, 3rd $= 4$.",
-    "Count positions in Pattern B: 1st $= 0$, 2nd $= 6$, 3rd $= 12$.",
-    "The problem says Pattern A goes first, so the $x$-coordinate is $4$ and the $y$-coordinate is $12$.",
-    "The ordered pair is $(4, 12)$."
+    "Count positions in Pattern A: the 1st number is $0$, the 2nd is $2$ and the 3rd is $4$.",
+    "Count positions in Pattern B: the 1st number is $0$, the 2nd is $6$ and the 3rd is $12$.",
+    "Pattern A goes first, so the $x$-coordinate is $4$ and the $y$-coordinate is $12$.",
+    "Writing them in that order gives the ordered pair $(4, 12)$."
   ],
   "alternativeExplanations": [
     {

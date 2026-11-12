@@ -13,26 +13,26 @@
     "3.4"
   ],
   "acceptanceMode": "normalized",
-  "hint": "The fraction bar means divide: how many whole $5$s fit inside $17$?",
+  "hint": "The fraction bar means divide. Ask how many whole groups of five can be made from seventeen fifths.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The fraction bar means divide: how many whole $5$s fit inside $17$?"
+      "text": "The fraction bar means divide. Ask how many whole groups of five can be made from seventeen fifths."
     },
     {
       "level": "guide",
-      "text": "$5 \\times 3 = 15$, so $3$ wholes fit and something is left over."
+      "text": "$5 \\times 3 = 15$, so $3$ wholes fit inside $17$ fifths. Subtract to see how many fifths are left over."
     },
     {
       "level": "reveal",
-      "text": "$17 - 15 = 2$ fifths are left, so $\\frac{17}{5} = 3\\frac{2}{5}$."
+      "text": "$17 - 15 = 2$ fifths are left over, so $\\frac{17}{5} = 3\\frac{2}{5}$."
     }
   ],
   "explanation": [
-    "$\\frac{17}{5}$ means $17 \\div 5$.",
-    "$5 \\times 3 = 15$, so three whole groups of five fit inside $17$.",
+    "The fraction $\\frac{17}{5}$ means $17 \\div 5$, and every $5$ fifths make one whole.",
+    "Since $5 \\times 3 = 15$, three whole groups of five fit inside $17$.",
     "What is left is $17 - 15 = 2$, and those $2$ pieces are still fifths.",
-    "So $\\frac{17}{5} = 3\\frac{2}{5}$, which as a decimal is $3.4$."
+    "So the mixed number is $\\frac{17}{5} = 3\\frac{2}{5}$, which is $3.4$ as a decimal."
   ],
   "alternativeExplanations": [
     {

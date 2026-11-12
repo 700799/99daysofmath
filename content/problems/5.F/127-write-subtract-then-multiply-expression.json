@@ -17,19 +17,19 @@
     "5(40-9)"
   ],
   "acceptanceMode": "normalized",
-  "hint": "\"Subtract $9$ from $40$\" means $40$ comes first: $40 - 9$.",
+  "hint": "Read the phrase \"subtract nine from forty\" carefully. Which number is written first in that subtraction?",
   "hints": [
     {
       "level": "nudge",
-      "text": "\"Subtract $9$ from $40$\" means $40$ comes first: $40 - 9$."
+      "text": "Read the phrase \"subtract nine from forty\" carefully. Which number is written first in that subtraction?"
     },
     {
       "level": "guide",
-      "text": "That subtraction has to happen before the multiplying, so it needs parentheses."
+      "text": "The subtraction is $40 - 9$. It must be finished before multiplying, so put it inside parentheses and then multiply by $5$."
     },
     {
       "level": "reveal",
-      "text": "$(40 - 9) \\times 5$."
+      "text": "The expression is $(40 - 9) \\times 5$, and it does not need to be worked out."
     }
   ],
   "explanation": [

@@ -32,24 +32,25 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Ordered pairs always follow the same order.",
+  "hint": "Ordered pairs always list their two numbers in the same order. Think of how you plot a point starting from the origin.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Ordered pairs always follow the same order."
+      "text": "Ordered pairs always list their two numbers in the same order. Think of how you plot a point starting from the origin."
     },
     {
       "level": "guide",
-      "text": "Think: \"run before you jump\" — across before up."
+      "text": "A pair is written $(x, y)$. You move across first and then up, so decide which axis the first number $7$ belongs to."
     },
     {
       "level": "reveal",
-      "text": "The first number is the x-coordinate (left–right). Choose A."
+      "text": "The first number is the $x$-coordinate, so it is measured along the x-axis, left to right. That is choice A."
     }
   ],
   "explanation": [
-    "An ordered pair is $(x, y)$.",
-    "The $x$-coordinate always comes first and measures left–right distance along the x-axis."
+    "Every ordered pair is written in the form $(x, y)$, and the order never changes.",
+    "The first number is the $x$-coordinate, which tells how far to go left or right along the x-axis.",
+    "So in $(7, 2)$ the $7$ is a distance along the x-axis, which is choice A."
   ],
   "tags": [
     "coordinate-plane"

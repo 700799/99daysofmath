@@ -26,10 +26,10 @@
     }
   ],
   "explanation": [
-    "First multiply as if there were no decimal point: $6 \\times 7 = 42$.",
-    "Count the decimal places in the factors: $0.6$ has one, $7$ has none, so the product needs one.",
-    "Place the point one spot from the right of $42$: $4.2$.",
-    "So $0.6 \\times 7 = 4.2$."
+    "Multiply first as if there were no decimal point: $6 \\times 7 = 42$.",
+    "Count decimal places in the factors. $0.6$ has one and $7$ has none, so the product needs one decimal place.",
+    "Place the point one digit from the right of $42$ to get $4.2$.",
+    "So $0.6 \\times 7 = 4.2$, which makes sense because it is a bit more than half of $7$."
   ],
   "alternativeExplanations": [
     {

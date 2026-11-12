@@ -13,7 +13,7 @@
     "$6,500"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Try smaller numbers first: $10^1 = 10$ tickets at $\\$8$ is $\\$80$, and if costs were $\\$30$ you would have $80 - 30 = \\$50$ left. Turn the power of ten into a plain number, multiply, then subtract — exactly the same three moves.",
+  "hint": "Turn the power of ten into a regular number first. Then find the money the tickets brought in before taking away the costs.",
   "hints": [
     {
       "level": "nudge",
@@ -22,22 +22,22 @@
     },
     {
       "level": "nudge",
-      "text": "First rewrite $10^3$ as a regular number, then find the money taken in, then subtract the costs."
+      "text": "Turn the power of ten into a regular number first. Then find the money the tickets brought in before taking away the costs."
     },
     {
       "level": "guide",
-      "text": "$10^3 = 1{,}000$ tickets. Money taken in is $1{,}000 \\times 8$."
+      "text": "$10^3 = 1{,}000$ tickets, so the money taken in is $1{,}000 \\times 8$ dollars. After that, subtract the $1{,}500$ dollars in costs."
     },
     {
       "level": "reveal",
-      "text": "$1{,}000 \\times 8 = 8{,}000$, and $8{,}000 - 1{,}500 = 6{,}500$ dollars left."
+      "text": "$1{,}000 \\times 8 = 8{,}000$ and $8{,}000 - 1{,}500 = 6{,}500$, so the school has $\\$6{,}500$ left."
     }
   ],
   "explanation": [
-    "Step 1 — how many tickets: $10^3 = 1{,}000$.",
-    "Step 2 — money taken in: $1{,}000 \\times \\$8 = \\$8{,}000$, because multiplying by $1{,}000$ adds three zeros to the $8$.",
-    "Step 3 — pay the costs: $\\$8{,}000 - \\$1{,}500 = \\$6{,}500$.",
-    "The school keeps $\\$6{,}500$."
+    "First find the number of tickets by writing the power as a regular number: $10^3 = 1{,}000$.",
+    "Each ticket brings in eight dollars, so the money taken in is $1{,}000 \\times 8 = 8{,}000$ dollars.",
+    "The costs must be paid out of that money, so subtract: $8{,}000 - 1{,}500 = 6{,}500$ dollars.",
+    "The school has $6{,}500$ dollars left after paying the costs."
   ],
   "alternativeExplanations": [
     {

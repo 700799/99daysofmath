@@ -12,24 +12,25 @@
     "195 min"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Convert the hours first; then add the leftover minutes.",
+  "hint": "The time is given in two different units. Change the hours into minutes so everything is in the same unit.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Convert the hours first; then add the leftover minutes."
+      "text": "The time is given in two different units. Change the hours into minutes so everything is in the same unit."
     },
     {
       "level": "guide",
-      "text": "$3 \\times 60 = 180$ minutes."
+      "text": "Each hour has $60$ minutes, so $3$ hours is $3 \\times 60$ minutes. After that, add on the extra $15$ minutes."
     },
     {
       "level": "reveal",
-      "text": "$180 + 15 = 195$ minutes."
+      "text": "$3 \\times 60 = 180$ and $180 + 15 = 195$, so the movie lasts $195$ minutes."
     }
   ],
   "explanation": [
-    "$1$ hour $= 60$ minutes, so $3$ hours $= 180$ minutes.",
-    "Add the extra $15$: $180 + 15 = 195$ minutes."
+    "Each hour is $60$ minutes, so change the hours first: $3 \\times 60 = 180$ minutes.",
+    "The movie also runs $15$ minutes beyond the three full hours, so those must be added on.",
+    "Add them: $180 + 15 = 195$, so the movie lasts $195$ minutes."
   ],
   "tags": [
     "MAP-practice",

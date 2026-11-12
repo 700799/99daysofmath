@@ -32,19 +32,19 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Round each mixed number to the nearest whole number first.",
+  "hint": "You only need an estimate. Decide which whole number each mixed number is nearest to.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Round each mixed number to the nearest whole number first."
+      "text": "You only need an estimate. Decide which whole number each mixed number is nearest to."
     },
     {
       "level": "guide",
-      "text": "$\\frac{7}{8}$ is nearly a whole, so $2\\frac{7}{8} \\approx 3$. And $\\frac{1}{12}$ is tiny, so $1\\frac{1}{12} \\approx 1$."
+      "text": "$\\frac{7}{8}$ is nearly a whole, so $2\\frac{7}{8}$ is about $3$. $\\frac{1}{12}$ is tiny, so $1\\frac{1}{12}$ is about $1$. Add the two estimates."
     },
     {
       "level": "reveal",
-      "text": "$3 + 1 = 4$, so choose B."
+      "text": "$3 + 1 = 4$, so the sum is closest to $4$, which is choice B."
     }
   ],
   "explanation": [

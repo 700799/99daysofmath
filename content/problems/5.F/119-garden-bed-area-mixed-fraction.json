@@ -13,7 +13,7 @@
     "18/6"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Try a bed $3$ ft by $\\frac{2}{3}$ ft first. Area $= 3 \\times \\frac{2}{3} = \\frac{6}{3} = 2$ square feet. Same moves work with a mixed number — you just have to change it to an improper fraction first.",
+  "hint": "The area of a rectangle is its length times its width. Mixed numbers are easier to multiply when written as improper fractions.",
   "hints": [
     {
       "level": "nudge",
@@ -22,22 +22,22 @@
     },
     {
       "level": "nudge",
-      "text": "Area of a rectangle is length $\\times$ width, even when both are fractions."
+      "text": "The area of a rectangle is its length times its width. Mixed numbers are easier to multiply when written as improper fractions."
     },
     {
       "level": "guide",
-      "text": "Rewrite $4\\frac{1}{2}$ as $\\frac{9}{2}$, then multiply $\\frac{9}{2} \\times \\frac{2}{3}$ straight across."
+      "text": "Rewrite $4\\frac{1}{2}$ as $\\frac{9}{2}$. Then multiply $\\frac{9}{2} \\times \\frac{2}{3}$ straight across and simplify the fraction you get."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{9 \\times 2}{2 \\times 3} = \\frac{18}{6} = 3$ square feet."
+      "text": "$\\frac{9 \\times 2}{2 \\times 3} = \\frac{18}{6} = 3$, so the area of the garden bed is $3$ square feet."
     }
   ],
   "explanation": [
-    "Area $=$ length $\\times$ width, so this is $4\\frac{1}{2} \\times \\frac{2}{3}$.",
+    "Area equals length times width, so the area is $4\\frac{1}{2} \\times \\frac{2}{3}$.",
     "Change the mixed number to an improper fraction: $4\\frac{1}{2} = \\frac{8}{2} + \\frac{1}{2} = \\frac{9}{2}$.",
-    "Multiply straight across: $\\frac{9}{2} \\times \\frac{2}{3} = \\frac{18}{6}$.",
-    "$18 \\div 6 = 3$, so the garden bed covers $3$ square feet."
+    "Multiply the numerators and the denominators: $\\frac{9}{2} \\times \\frac{2}{3} = \\frac{18}{6}$.",
+    "Since $18 \\div 6 = 3$, the garden bed covers $3$ square feet."
   ],
   "alternativeExplanations": [
     {

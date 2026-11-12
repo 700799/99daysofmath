@@ -13,24 +13,25 @@
     "24/100"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Multiply $4 \\times 6$ first, then place the decimal point.",
+  "hint": "You can multiply decimals as if they were whole numbers and then decide where the decimal point belongs.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Multiply $4 \\times 6$ first, then place the decimal point."
+      "text": "You can multiply decimals as if they were whole numbers and then decide where the decimal point belongs."
     },
     {
       "level": "guide",
-      "text": "Tenths × tenths = hundredths: two decimal places in the answer."
+      "text": "Work out $4 \\times 6$ first. Each factor has one decimal place, so the product needs two decimal places, since tenths times tenths are hundredths."
     },
     {
       "level": "reveal",
-      "text": "$4 \\times 6 = 24 \\to 0.24$."
+      "text": "$4 \\times 6 = 24$, and with two decimal places that is $0.24$, so $0.4 \\times 0.6 = 0.24$."
     }
   ],
   "explanation": [
-    "$4 \\times 6 = 24$.",
-    "Each factor has one decimal place, so the product has two: $0.24$."
+    "Ignore the decimal points for a moment and multiply the digits: $4 \\times 6 = 24$.",
+    "Each factor is in tenths, and tenths times tenths gives hundredths, so the product has two decimal places.",
+    "Write $24$ as hundredths to get $0.24$, so $0.4 \\times 0.6 = 0.24$."
   ],
   "alternativeExplanations": [
     {

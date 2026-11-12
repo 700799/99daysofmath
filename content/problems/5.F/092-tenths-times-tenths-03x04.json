@@ -12,26 +12,26 @@
     ".12"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Start with the whole numbers: $3 \\times 4 = 12$.",
+  "hint": "Treat the digits as whole numbers first. Afterwards, think about how many decimal places the product should have.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Start with the whole numbers: $3 \\times 4 = 12$."
+      "text": "Treat the digits as whole numbers first. Afterwards, think about how many decimal places the product should have."
     },
     {
       "level": "guide",
-      "text": "Each factor has one decimal place, so the answer needs $1 + 1 = 2$ decimal places."
+      "text": "$3 \\times 4 = 12$. Each factor has one decimal place, so the product needs $1 + 1 = 2$ decimal places."
     },
     {
       "level": "reveal",
-      "text": "Two places in $12$ means $0.12$."
+      "text": "Writing $12$ with two decimal places gives $0.12$, so $0.3 \\times 0.4 = 0.12$."
     }
   ],
   "explanation": [
-    "Multiply as whole numbers: $3 \\times 4 = 12$.",
-    "Count decimal places: one in $0.3$ plus one in $0.4$ makes two.",
-    "Move in two places from the right of $12$, writing a zero in front: $0.12$.",
-    "So $0.3 \\times 0.4 = 0.12$."
+    "Multiply the digits as whole numbers: $3 \\times 4 = 12$.",
+    "Count the decimal places: one in $0.3$ plus one in $0.4$ makes two in the product.",
+    "Move the point two places in from the right of $12$ and write a zero in front: $0.12$.",
+    "So $0.3 \\times 0.4 = 0.12$, which is small because both factors are less than one half."
   ],
   "alternativeExplanations": [
     {

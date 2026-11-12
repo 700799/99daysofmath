@@ -10,25 +10,25 @@
   "primaryAnswer": "10",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Each X on a line plot stands for one bottle.",
+  "hint": "Each mark on a line plot stands for one bottle. The question asks about the number of bottles, not the amount of water.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Each X on a line plot stands for one bottle."
+      "text": "Each mark on a line plot stands for one bottle. The question asks about the number of bottles, not the amount of water."
     },
     {
       "level": "guide",
-      "text": "Add up how many times each amount appears: $3 + 4 + 2 + 1$."
+      "text": "Add how many times each amount appears: $3 + 4 + 2 + 1$. Leave the fractions themselves out of the sum."
     },
     {
       "level": "reveal",
-      "text": "$3 + 4 + 2 + 1 = 10$ bottles."
+      "text": "$3 + 4 + 2 + 1 = 10$, so $10$ bottles were measured in all."
     }
   ],
   "explanation": [
-    "On a line plot, every mark is one measurement — here, one bottle.",
-    "Add the counts, not the fractions: $3 + 4 + 2 + 1 = 10$.",
-    "So $10$ bottles were measured."
+    "On a line plot, every mark is one measurement, which here means one bottle.",
+    "To count bottles, add the counts and not the fractions: $3 + 4 + 2 + 1 = 10$.",
+    "So $10$ bottles were measured in all."
   ],
   "alternativeExplanations": [
     {

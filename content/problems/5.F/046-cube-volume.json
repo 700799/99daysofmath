@@ -10,24 +10,25 @@
   "primaryAnswer": "125",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "All three edges of a cube are equal.",
+  "hint": "A cube is a special box. What do you know about its length, width and height?",
   "hints": [
     {
       "level": "nudge",
-      "text": "All three edges of a cube are equal."
+      "text": "A cube is a special box. What do you know about its length, width and height?"
     },
     {
       "level": "guide",
-      "text": "$5 \\times 5 \\times 5$."
+      "text": "Every edge of this cube is $5$ inches, so the volume is $5 \\times 5 \\times 5$. Start with $5 \\times 5 = 25$."
     },
     {
       "level": "reveal",
-      "text": "$25 \\times 5 = 125$ cubic inches."
+      "text": "$25 \\times 5 = 125$, so the volume of the cube is $125$ cubic inches."
     }
   ],
   "explanation": [
-    "$V = 5 \\times 5 \\times 5$.",
-    "$5 \\times 5 = 25$, then $25 \\times 5 = 125$."
+    "A cube has equal length, width and height, so its volume is $5 \\times 5 \\times 5$.",
+    "Multiply the first two edges to get the bottom layer: $5 \\times 5 = 25$ cubes.",
+    "There are $5$ layers, and $25 \\times 5 = 125$, so the volume is $125$ cubic inches."
   ],
   "tags": [
     "volume"

@@ -13,25 +13,25 @@
     "3,4"
   ],
   "acceptanceMode": "normalized",
-  "hint": "The first number is the sideways move; the second is the up move.",
+  "hint": "An ordered pair has two numbers in a fixed order. Which move gets written first: the sideways one or the upward one?",
   "hints": [
     {
       "level": "nudge",
-      "text": "The first number is the sideways move; the second is the up move."
+      "text": "An ordered pair has two numbers in a fixed order. Which move gets written first: the sideways one or the upward one?"
     },
     {
       "level": "guide",
-      "text": "Right $3$ → $x = 3$. Up $4$ → $y = 4$."
+      "text": "Moving right changes the $x$-coordinate and moving up changes the $y$-coordinate. Starting from $0$, right $3$ gives $x = 3$, so now find $y$."
     },
     {
       "level": "reveal",
-      "text": "The point is $(3, 4)$."
+      "text": "Moving up $4$ gives $y = 4$, so you land on the point $(3, 4)$."
     }
   ],
   "explanation": [
-    "Coordinates are written $(x, y)$: across first, then up.",
-    "Right $3$ makes $x=3$; up $4$ makes $y=4$.",
-    "So you land on $(3, 4)$."
+    "Coordinates are written as $(x, y)$, with the distance across first and the distance up second.",
+    "Starting at the origin, moving $3$ right makes $x = 3$, and moving $4$ up makes $y = 4$.",
+    "Put them in order to get the point $(3, 4)$."
   ],
   "tags": [
     "coordinate-plane"

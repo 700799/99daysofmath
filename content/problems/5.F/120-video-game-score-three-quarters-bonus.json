@@ -10,7 +10,7 @@
   "primaryAnswer": "215",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Pretend Leo scored $40$. Then $\\frac{3}{4}$ of $40$ is $40 \\div 4 = 10$, and $3 \\times 10 = 30$; add a $5$-point bonus and Mia has $35$. Use those same two steps with the real numbers.",
+  "hint": "Mia's score comes in two parts. One part is a fraction of Leo's score, and the bonus is separate from that fraction.",
   "hints": [
     {
       "level": "nudge",
@@ -19,22 +19,22 @@
     },
     {
       "level": "nudge",
-      "text": "Do the fraction first, then add the bonus — the bonus is NOT part of the $\\frac{3}{4}$."
+      "text": "Mia's score comes in two parts. One part is a fraction of Leo's score, and the bonus is separate from that fraction."
     },
     {
       "level": "guide",
-      "text": "$240 \\div 4 = 60$, so $\\frac{3}{4}$ of $240$ is $3 \\times 60$."
+      "text": "Find $\\frac{3}{4}$ of $240$: one fourth is $240 \\div 4 = 60$, so three fourths is $3 \\times 60$. Then add the $35$ bonus points."
     },
     {
       "level": "reveal",
-      "text": "$3 \\times 60 = 180$, and $180 + 35 = 215$ points."
+      "text": "$3 \\times 60 = 180$ and $180 + 35 = 215$, so Mia has $215$ points in all."
     }
   ],
   "explanation": [
-    "Step 1 — Mia's game points: $\\frac{3}{4} \\times 240$. One fourth of $240$ is $240 \\div 4 = 60$, so three fourths is $3 \\times 60 = 180$.",
-    "Step 2 — add the bonus, which she earns on top: $180 + 35 = 215$.",
-    "Mia finishes with $215$ points.",
-    "That is sensible: $215$ is less than Leo's $240$, which it should be, since her game score was only three fourths of his."
+    "Find Mia's game points first, $\\frac{3}{4} \\times 240$. One fourth of $240$ is $240 \\div 4 = 60$, so three fourths is $3 \\times 60 = 180$.",
+    "The bonus is earned on top of that score, so add it: $180 + 35 = 215$.",
+    "Mia finishes with $215$ points in all.",
+    "This is sensible, because $215$ is less than Leo's $240$ even after the bonus."
   ],
   "alternativeExplanations": [
     {

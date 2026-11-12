@@ -10,25 +10,25 @@
   "primaryAnswer": "360",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Multiplying by $100$ makes a number $100$ times bigger, so the decimal point moves to the right.",
+  "hint": "Multiplying by one hundred makes a number much bigger. Think about how far each digit moves and in which direction.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Multiplying by $100$ makes a number $100$ times bigger, so the decimal point moves to the right."
+      "text": "Multiplying by one hundred makes a number much bigger. Think about how far each digit moves and in which direction."
     },
     {
       "level": "guide",
-      "text": "$100$ has two zeros, so slide the point two places right: $3.6 \\to 36. \\to 360.$"
+      "text": "$100$ has two zeros, so the digits of $3.6$ shift two places to the left. One shift makes $36$, and the second shift needs a zero in the ones place."
     },
     {
       "level": "reveal",
-      "text": "$3.6 \\times 100 = 360$."
+      "text": "The second shift turns $36$ into $360$, so $3.6 \\times 100 = 360$."
     }
   ],
   "explanation": [
-    "$100 = 10^2$, so multiplying by it shifts the decimal point two places to the right.",
-    "Starting at $3.6$, one shift gives $36$ and a second shift gives $360$ — you fill the empty spot with a zero.",
-    "So $3.6 \\times 100 = 360$."
+    "Since $100 = 10 \\times 10$, multiplying by it shifts the digits two places, the same as moving the decimal point two places right.",
+    "Start at $3.6$. One shift gives $36$, and the second shift gives $360$, with a zero filling the empty ones place.",
+    "So $3.6 \\times 100 = 360$, which is reasonable because it is a little more than $3 \\times 100$."
   ],
   "alternativeExplanations": [
     {

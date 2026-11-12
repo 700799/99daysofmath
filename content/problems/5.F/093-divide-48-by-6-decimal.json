@@ -12,19 +12,19 @@
     ".8"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Think in tenths: $4.8$ is $48$ tenths.",
+  "hint": "Try renaming the decimal using its smallest place. A number of tenths can be shared just like a whole number.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Think in tenths: $4.8$ is $48$ tenths."
+      "text": "Try renaming the decimal using its smallest place. A number of tenths can be shared just like a whole number."
     },
     {
       "level": "guide",
-      "text": "$48$ tenths shared into $6$ equal groups: $48 \\div 6 = 8$ tenths."
+      "text": "$4.8$ is $48$ tenths. Share those tenths into $6$ equal groups by working out $48 \\div 6$."
     },
     {
       "level": "reveal",
-      "text": "$8$ tenths is $0.8$."
+      "text": "$48 \\div 6 = 8$, and $8$ tenths is $0.8$, so the quotient $4.8 \\div 6$ is $0.8$."
     }
   ],
   "explanation": [

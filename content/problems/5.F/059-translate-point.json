@@ -13,11 +13,11 @@
     "6,4"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Right changes $x$; up changes $y$.",
+  "hint": "Each kind of move changes only one coordinate. Decide which coordinate a sideways move changes and which an upward move changes.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Right changes $x$; up changes $y$."
+      "text": "Each kind of move changes only one coordinate. Decide which coordinate a sideways move changes and which an upward move changes."
     },
     {
       "level": "nudge",
@@ -26,17 +26,17 @@
     },
     {
       "level": "guide",
-      "text": "$x: 4 + 2$ and $y: 1 + 3$."
+      "text": "Moving right adds to $x$ and moving up adds to $y$. Starting from $(4, 1)$, work out $4 + 2$ and $1 + 3$."
     },
     {
       "level": "reveal",
-      "text": "New point: $(6, 4)$."
+      "text": "$4 + 2 = 6$ and $1 + 3 = 4$, so $P$ is now at $(6, 4)$."
     }
   ],
   "explanation": [
-    "Moving right adds to the $x$-coordinate: $4 + 2 = 6$.",
-    "Moving up adds to the $y$-coordinate: $1 + 3 = 4$.",
-    "So $P$ lands on $(6, 4)$."
+    "Moving right makes the $x$-coordinate bigger, so add the $2$ units to it: $4 + 2 = 6$.",
+    "Moving up makes the $y$-coordinate bigger, so add the $3$ units to it: $1 + 3 = 4$.",
+    "Write the new $x$ first and the new $y$ second: $P$ lands on $(6, 4)$."
   ],
   "tags": [
     "MAP-practice",

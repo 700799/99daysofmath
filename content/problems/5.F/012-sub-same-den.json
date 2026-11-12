@@ -18,24 +18,25 @@
     "0.5"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Same denominators — subtract the numerators.",
+  "hint": "The denominators are the same, so the pieces match in size. Take pieces away, then check whether the result can be simplified.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Same denominators — subtract the numerators."
+      "text": "The denominators are the same, so the pieces match in size. Take pieces away, then check whether the result can be simplified."
     },
     {
       "level": "guide",
-      "text": "$5 - 2 = 3$, so you have $\\frac{3}{6}$. Can it simplify?"
+      "text": "Subtract the numerators: $5 - 2$ sixths. Then look for a number that divides both the top and the bottom of your answer."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{3}{6} = \\frac{1}{2}$."
+      "text": "$\\frac{5}{6} - \\frac{2}{6} = \\frac{3}{6}$, and dividing top and bottom by $3$ gives $\\frac{1}{2}$."
     }
   ],
   "explanation": [
-    "$\\frac{5}{6} - \\frac{2}{6} = \\frac{3}{6}$.",
-    "Divide top and bottom by $3$: $\\frac{3}{6} = \\frac{1}{2}$."
+    "The denominators are both $6$, so subtract the numerators and keep the sixths: $\\frac{5}{6} - \\frac{2}{6} = \\frac{3}{6}$.",
+    "Both $3$ and $6$ can be divided by $3$, so the fraction is not yet in simplest form.",
+    "Divide top and bottom by $3$ to get $\\frac{3}{6} = \\frac{1}{2}$, so the answer is $\\frac{1}{2}$."
   ],
   "tags": [
     "fractions",

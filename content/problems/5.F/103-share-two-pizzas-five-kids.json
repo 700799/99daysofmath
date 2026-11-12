@@ -12,26 +12,26 @@
     "0.4"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Sharing equally is division: $2$ pizzas $\\div$ $5$ kids.",
+  "hint": "Sharing equally is a division situation. Decide what is being shared and how many people are sharing it.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Sharing equally is division: $2$ pizzas $\\div$ $5$ kids."
+      "text": "Sharing equally is a division situation. Decide what is being shared and how many people are sharing it."
     },
     {
       "level": "guide",
-      "text": "Write that division as a fraction — the pizzas go on top."
+      "text": "The $2$ pizzas are divided among $5$ kids, so write $2 \\div 5$. As a fraction, the pizzas go on top and the kids go on the bottom."
     },
     {
       "level": "reveal",
-      "text": "$2 \\div 5 = \\frac{2}{5}$ of a pizza each."
+      "text": "$2 \\div 5 = \\frac{2}{5}$, so each kid gets $\\frac{2}{5}$ of a pizza."
     }
   ],
   "explanation": [
-    "Sharing $2$ pizzas equally among $5$ kids means $2 \\div 5$.",
-    "A division written as a fraction puts the dividend on top: $2 \\div 5 = \\frac{2}{5}$.",
-    "Each kid gets $\\frac{2}{5}$ of a pizza.",
-    "Check: $5$ kids $\\times$ $\\frac{2}{5}$ each $= \\frac{10}{5} = 2$ whole pizzas ✓"
+    "Sharing $2$ pizzas equally among $5$ kids is the division $2 \\div 5$.",
+    "A division can be written as a fraction with the dividend on top: $2 \\div 5 = \\frac{2}{5}$.",
+    "So each kid gets $\\frac{2}{5}$ of a pizza, which is less than a whole pizza as expected.",
+    "Check by multiplying back: $5$ kids with $\\frac{2}{5}$ each makes $\\frac{10}{5} = 2$ whole pizzas."
   ],
   "alternativeExplanations": [
     {

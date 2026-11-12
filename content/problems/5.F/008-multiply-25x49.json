@@ -12,25 +12,25 @@
     "1,225"
   ],
   "acceptanceMode": "normalized",
-  "hint": "$49$ is just one less than $50$ — that makes a shortcut possible.",
+  "hint": "One of these factors is very close to a round number. A round number makes mental multiplication much easier.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$49$ is just one less than $50$ — that makes a shortcut possible."
+      "text": "One of these factors is very close to a round number. A round number makes mental multiplication much easier."
     },
     {
       "level": "guide",
-      "text": "$25 \\times 50 = 1250$. You multiplied one extra $25$, so take it back off."
+      "text": "Think of $49$ as $50 - 1$. Find $25 \\times 50$, then take away the one extra group of $25$ you counted."
     },
     {
       "level": "reveal",
-      "text": "$1250 - 25 = 1225$."
+      "text": "$25 \\times 50 = 1250$ and $1250 - 25 = 1225$, so the product is $1225$."
     }
   ],
   "explanation": [
-    "Use a friendly number: $49 = 50 - 1$.",
-    "$25 \\times 50 = 1250$.",
-    "$25 \\times 1 = 25$, so subtract it: $1250 - 25 = 1225$."
+    "Rewrite $49$ as $50 - 1$, because multiplying by $50$ is much easier than multiplying by $49$.",
+    "Multiply by the round number: $25 \\times 50 = 1250$, which is half of $25 \\times 100$.",
+    "That counted one group of $25$ too many, so subtract it: $1250 - 25 = 1225$, and $25 \\times 49 = 1225$."
   ],
   "alternativeExplanations": [
     {

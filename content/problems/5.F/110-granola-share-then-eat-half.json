@@ -13,7 +13,7 @@
     "1.25"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Try smaller numbers: $3$ bars among $2$ friends is $\\frac{3}{2}$ each, and eating $\\frac{1}{2}$ leaves $\\frac{3}{2} - \\frac{1}{2} = \\frac{2}{2} = 1$ bar. Share first as a fraction, then subtract what gets eaten — same two steps.",
+  "hint": "Start with the sharing to find one friend's share as a fraction. After that, take away the part that gets eaten.",
   "hints": [
     {
       "level": "nudge",
@@ -22,21 +22,21 @@
     },
     {
       "level": "nudge",
-      "text": "Step one is a sharing problem; step two is a subtraction."
+      "text": "Start with the sharing to find one friend's share as a fraction. After that, take away the part that gets eaten."
     },
     {
       "level": "guide",
-      "text": "Each share is $7 \\div 4 = \\frac{7}{4}$. Now subtract $\\frac{1}{2}$, rewritten in fourths."
+      "text": "Each share is $7 \\div 4 = \\frac{7}{4}$ of a bar. Rename $\\frac{1}{2}$ as $\\frac{2}{4}$ so you can subtract it from $\\frac{7}{4}$."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{1}{2} = \\frac{2}{4}$, so $\\frac{7}{4} - \\frac{2}{4} = \\frac{5}{4} = 1\\frac{1}{4}$ bars."
+      "text": "$\\frac{7}{4} - \\frac{2}{4} = \\frac{5}{4}$, so $\\frac{5}{4}$ of a bar, or $1\\frac{1}{4}$ bars, is left."
     }
   ],
   "explanation": [
-    "Step 1 — the share: $7$ bars split among $4$ friends is $7 \\div 4 = \\frac{7}{4}$ of a bar each, which is $1\\frac{3}{4}$.",
-    "Step 2 — subtract what is eaten. Rewrite $\\frac{1}{2}$ as $\\frac{2}{4}$ so the pieces match.",
-    "$\\frac{7}{4} - \\frac{2}{4} = \\frac{5}{4}$.",
+    "First find one share: $7$ bars split among $4$ friends is $7 \\div 4 = \\frac{7}{4}$ of a bar, which is $1\\frac{3}{4}$ bars.",
+    "To subtract what is eaten, rewrite $\\frac{1}{2}$ as $\\frac{2}{4}$ so the pieces match.",
+    "Subtract the fourths from the fourths: $\\frac{7}{4} - \\frac{2}{4} = \\frac{5}{4}$.",
     "So $\\frac{5}{4}$ of a bar, or $1\\frac{1}{4}$ bars, is left of each friend's share."
   ],
   "alternativeExplanations": [

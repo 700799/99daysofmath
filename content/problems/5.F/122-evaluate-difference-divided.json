@@ -10,25 +10,25 @@
   "primaryAnswer": "6",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Handle what is inside the parentheses before you divide.",
+  "hint": "The parentheses group two numbers together. That grouped part has to be worked out before the division.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Handle what is inside the parentheses before you divide."
+      "text": "The parentheses group two numbers together. That grouped part has to be worked out before the division."
     },
     {
       "level": "guide",
-      "text": "$36 - 12 = 24$, so now you need $24 \\div 4$."
+      "text": "Subtract inside the parentheses first: $36 - 12 = 24$. What remains is the division $24 \\div 4$."
     },
     {
       "level": "reveal",
-      "text": "$24 \\div 4 = 6$."
+      "text": "$24 \\div 4 = 6$, so the whole expression equals $6$."
     }
   ],
   "explanation": [
-    "Do the parentheses first: $36 - 12 = 24$.",
-    "That leaves $24 \\div 4$.",
-    "$24 \\div 4 = 6$."
+    "Do the work inside the parentheses first: $36 - 12 = 24$.",
+    "With the parentheses finished, the expression that remains is $24 \\div 4$.",
+    "Divide to finish: $24 \\div 4 = 6$, so the value is $6$."
   ],
   "alternativeExplanations": [
     {

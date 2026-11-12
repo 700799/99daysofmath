@@ -10,25 +10,25 @@
   "primaryAnswer": "28",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Work from the inside out — the roundest, innermost parentheses first.",
+  "hint": "When grouping symbols are nested, start with the innermost pair and work your way outward.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Work from the inside out — the roundest, innermost parentheses first."
+      "text": "When grouping symbols are nested, start with the innermost pair and work your way outward."
     },
     {
       "level": "guide",
-      "text": "$9 - 5 = 4$, so the brackets hold $[4 \\times 4]$."
+      "text": "The parentheses come first: $9 - 5 = 4$. Then the brackets hold $4 \\times 4$, and the $12$ is added at the very end."
     },
     {
       "level": "reveal",
-      "text": "$4 \\times 4 = 16$, and $16 + 12 = 28$."
+      "text": "$4 \\times 4 = 16$ and $16 + 12 = 28$, so the expression equals $28$."
     }
   ],
   "explanation": [
-    "Start inside the parentheses: $9 - 5 = 4$.",
-    "Now the brackets say $[4 \\times 4] = 16$.",
-    "Finally add what is outside: $16 + 12 = 28$."
+    "Start with the innermost grouping, the parentheses: $9 - 5 = 4$.",
+    "Now the brackets contain $4 \\times 4$, which equals $16$.",
+    "Last, add the number outside the brackets: $16 + 12 = 28$, so the value is $28$."
   ],
   "alternativeExplanations": [
     {

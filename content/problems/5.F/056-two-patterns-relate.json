@@ -13,25 +13,25 @@
     "x3"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Line the patterns up term by term and compare.",
+  "hint": "Write the two patterns one above the other so that matching terms line up. Then compare each pair of terms.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Line the patterns up term by term and compare."
+      "text": "Write the two patterns one above the other so that matching terms line up. Then compare each pair of terms."
     },
     {
       "level": "guide",
-      "text": "When A is $2$, B is $6$. When A is $4$, B is $12$."
+      "text": "Skip the zeros and look at the next pairs: A has $2$ where B has $6$, and A has $4$ where B has $12$. Divide each B term by its A term."
     },
     {
       "level": "reveal",
-      "text": "$6 \\div 2 = 3$ and $12 \\div 4 = 3$ — each B term is $3\\times$ the A term."
+      "text": "$6 \\div 2 = 3$ and $12 \\div 4 = 3$, so each B term is $3$ times the matching A term."
     }
   ],
   "explanation": [
-    "Match the terms: A $= 2, 4, 6$ while B $= 6, 12, 18$.",
-    "Each B term divided by its A term gives $3$.",
-    "That happens because B adds $6$, which is $3$ times the $2$ that A adds."
+    "Line up matching terms: pattern A gives $2, 4, 6$ while pattern B gives $6, 12, 18$ in the same positions.",
+    "Divide each B term by its partner in A: $6 \\div 2 = 3$, $12 \\div 4 = 3$ and $18 \\div 6 = 3$.",
+    "This happens because B adds $6$ each time, which is $3$ times the $2$ that A adds, so every B term is $3$ times the A term."
   ],
   "tags": [
     "patterns",

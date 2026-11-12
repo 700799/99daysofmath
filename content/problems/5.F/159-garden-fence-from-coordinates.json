@@ -12,7 +12,7 @@
     "20 m"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Try a tiny garden at $(0,0)$, $(3,0)$, $(3,2)$, $(0,2)$. Width $= 3 - 0 = 3$, height $= 2 - 0 = 2$, so the fence is $3 + 2 + 3 + 2 = 10$. Same steps, bigger numbers below.",
+  "hint": "Fence around a shape is its perimeter. Use the corner coordinates to find how wide and how tall the rectangle is.",
   "hints": [
     {
       "level": "nudge",
@@ -21,15 +21,15 @@
     },
     {
       "level": "nudge",
-      "text": "Find the width and the height first by subtracting matching coordinates."
+      "text": "Fence around a shape is its perimeter. Use the corner coordinates to find how wide and how tall the rectangle is."
     },
     {
       "level": "guide",
-      "text": "Width: $8 - 2 = 6$ meters. Height: $5 - 1 = 4$ meters."
+      "text": "The width is $8 - 2 = 6$ meters and the height is $5 - 1 = 4$ meters. A rectangle has two of each, so add all four sides."
     },
     {
       "level": "reveal",
-      "text": "Fence $= 6 + 4 + 6 + 4 = 20$ meters."
+      "text": "$6 + 4 + 6 + 4 = 20$, so $20$ meters of fence are needed."
     }
   ],
   "explanation": [

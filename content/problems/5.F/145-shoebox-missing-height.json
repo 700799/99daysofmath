@@ -10,26 +10,26 @@
   "primaryAnswer": "4",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Find the area of the base first — that is how many cubes fit in one layer.",
+  "hint": "A box is made of equal layers stacked up. The base tells you how many cubes are in one layer.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Find the area of the base first — that is how many cubes fit in one layer."
+      "text": "A box is made of equal layers stacked up. The base tells you how many cubes are in one layer."
     },
     {
       "level": "guide",
-      "text": "$5 \\times 6 = 30$ cubes per layer. How many layers of $30$ make $120$?"
+      "text": "One layer holds $5 \\times 6 = 30$ cubic inches. Work out how many layers of $30$ are needed to make $120$."
     },
     {
       "level": "reveal",
-      "text": "$120 \\div 30 = 4$ inches tall."
+      "text": "$120 \\div 30 = 4$, so the box is $4$ inches tall."
     }
   ],
   "explanation": [
-    "The bottom layer holds $5 \\times 6 = 30$ cubic inches.",
-    "Volume is layers $\\times$ layer size, so $120 \\div 30 = 4$ layers.",
-    "The box is $4$ inches tall.",
-    "Check it: $5 \\times 6 \\times 4 = 120$ cubic inches ✓"
+    "The base is $5$ by $6$, so the bottom layer holds $5 \\times 6 = 30$ cubic inches.",
+    "Volume is the layer size times the number of layers, so the number of layers is $120 \\div 30 = 4$.",
+    "Each layer is one inch tall, so the box is $4$ inches tall.",
+    "Check by multiplying: $5 \\times 6 \\times 4 = 120$ cubic inches, which matches."
   ],
   "alternativeExplanations": [
     {

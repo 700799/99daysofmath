@@ -1,4 +1,256 @@
 {
+ "5.F-1#0": [
+  "Find which place the 8 sits in, because the place decides its value.",
+  "Counting places from the right, the 8 is in the thousands place.",
+  "Multiply the digit by the value of its place: 8 × 1000 = 8000.",
+  "So the value of the 8 in this number is 8000."
+ ],
+ "5.F-1#1": [
+  "Multiply the non-zero digits first and deal with the zeros afterwards.",
+  "The front digits of the two numbers give 6 × 4 = 24.",
+  "There is one zero in 60 and one in 40, so attach two zeros to 24.",
+  "So the product of 60 and 40 is 2400."
+ ],
+ "5.F-2#0": [
+  "The denominators match, so the pieces are the same size and you can add the tops.",
+  "Add the two numerators: 1 + 1 = 2, which gives 2/4.",
+  "Simplify the fraction by dividing its top and bottom by 2.",
+  "So the sum of the two fourths is 1/2."
+ ],
+ "5.F-2#1": [
+  "Both fractions are eighths, so subtract the numerators and keep the denominator.",
+  "Subtract the top numbers: 5 − 1 = 4, which gives 4/8.",
+  "Simplify the fraction by dividing its top and bottom by 4.",
+  "So the difference in simplest form is 1/2."
+ ],
+ "5.F-3#0": [
+  "To multiply fractions, multiply the tops together and the bottoms together.",
+  "The two top numbers give 1 × 1 = 1 for the new numerator.",
+  "The two bottom numbers give 3 × 2 = 6 for the new denominator.",
+  "So the product of the two fractions is 1/6."
+ ],
+ "5.F-3#1": [
+  "Dividing by 1/4 asks how many quarters fit inside 3 wholes.",
+  "Each whole can be cut into exactly 4 quarters.",
+  "Three wholes hold 3 × 4 = 12 quarters in all.",
+  "So the answer to 3 ÷ 1/4 is 12 quarters, or just 12."
+ ],
+ "5.F-4#0": [
+  "Line up the decimal points so that matching places are added together.",
+  "Write 0.2 as 0.20 so both numbers have hundredths.",
+  "Add the hundredths: 20 hundredths + 35 hundredths = 55 hundredths.",
+  "So the sum of the two decimals is 0.55."
+ ],
+ "5.F-4#1": [
+  "Split 1.5 into a whole part and a decimal part, then multiply each by 4.",
+  "The whole number part of 1.5 gives 1 × 4 = 4.",
+  "The decimal part gives 0.5 × 4 = 2, because four halves make two.",
+  "Add the two parts: 4 + 2 = 6, so the product is 6."
+ ],
+ "5.F-5#0": [
+  "Use the fact that 100 centimeters make 1 meter.",
+  "Meters are the bigger unit, so divide the centimeters by 100.",
+  "Divide to change the units to meters: 400 ÷ 100 = 4.",
+  "So a length of 400 cm is 4 meters."
+ ],
+ "5.F-5#1": [
+  "A cube has the same length, width and height, so multiply the edge three times.",
+  "Start with 3 × 3 = 9 cubes for the bottom layer.",
+  "There are 3 layers of that size, so 9 × 3 = 27.",
+  "The volume of the cube is 27 cubic units."
+ ],
+ "5.F-6#0": [
+  "An ordered pair is written (x, y): the distance across first, then the distance up.",
+  "Going right 4 from the origin makes the first number 4.",
+  "Going up 2 from there makes the second number 2.",
+  "So the coordinates of the point are (4, 2)."
+ ],
+ "5.F-6#1": [
+  "Look at how much the numbers grow from one term to the next.",
+  "From 5 to 10 and from 10 to 15 the jump is +5 each time.",
+  "Add 5 to the last number shown: 15 + 5 = 20.",
+  "So the next number in the pattern is 20."
+ ],
+ "5.F-7#0": [
+  "Think of 40 as 4 × 10, so you can multiply in two easy steps.",
+  "First multiply the 35 by the 4, which gives 35 × 4 = 140.",
+  "Then multiply that result by the 10: 140 × 10 = 1,400.",
+  "So the product of 35 and 40 is 1,400."
+ ],
+ "5.F-7#1": [
+  "Split 11 into 10 + 1 and multiply 124 by each part.",
+  "The ten gives 124 × 10 = 1,240, which is 124 with a zero attached.",
+  "The one gives 124 × 1 = 124, the number itself.",
+  "Add the two parts: 1,240 + 124 = 1,364, so the product is 1,364."
+ ],
+ "5.F-7#2": [
+  "Ask how many groups of 24 fit into 720, using a fact you already know.",
+  "A helpful multiplication fact to start from is 24 × 3 = 72.",
+  "Make both sides ten times bigger: 24 × 30 = 720.",
+  "So the quotient of 720 ÷ 24 is equal to 30."
+ ],
+ "5.F-8#0": [
+  "The exponent tells how many tens are multiplied together.",
+  "Here it means 10 × 10 × 10, three tens in all.",
+  "Three tens multiplied give a 1 followed by three zeros.",
+  "So 10³ written as a regular number is 1,000."
+ ],
+ "5.F-8#1": [
+  "Multiplying by 100 makes each digit worth 100 times as much.",
+  "The decimal point moves two places to the right, one for each zero in 100.",
+  "The number changes from 0.7 to 7 and then to 70.",
+  "So the product of 0.7 and 100 is 70."
+ ],
+ "5.F-8#2": [
+  "Dividing by 10 makes each digit worth one tenth as much.",
+  "Every digit moves one place to the right, so the zero at the end drops off.",
+  "The number changes from 250 to 25 after that shift.",
+  "So the quotient of 250 ÷ 10 is equal to 25."
+ ],
+ "5.F-9#0": [
+  "Line up the decimal points before adding, so matching places are added.",
+  "Write 0.5 as 0.50 so both numbers have hundredths.",
+  "Add place by place to get 1.25 + 0.50 = 1.75.",
+  "So the sum of the two decimals is 1.75."
+ ],
+ "5.F-9#1": [
+  "Give the whole number a decimal place so the two numbers line up.",
+  "Write 5 as 5.0, then trade one whole for ten tenths.",
+  "Now subtract: 10 tenths − 3 tenths = 7 tenths, and 4 − 1 = 3 ones.",
+  "Three ones and seven tenths make 3.7, so the difference is 3.7."
+ ],
+ "5.F-9#2": [
+  "Change is the amount paid minus the price, so this is a subtraction.",
+  "Set it up as 5.00 − 3.65 with the decimal points lined up.",
+  "Count up from 3.65: add 0.35 to reach 4.00, then 1.00 more to reach 5.00.",
+  "Add the two jumps: the change is 0.35 + 1.00 = 1.35 dollars."
+ ],
+ "5.F-10#0": [
+  "Multiply as if both numbers were whole, then place the decimal point.",
+  "Without the decimal point, the digits give 4 × 6 = 24.",
+  "The factor 0.4 has one decimal place, so the product needs one too.",
+  "Putting one decimal place in 24 gives the product 2.4."
+ ],
+ "5.F-10#1": [
+  "Multiply the digits first, then count the decimal places in both factors.",
+  "Without the decimal points, the digits give 2 × 5 = 10.",
+  "Each factor has one decimal place, so the product needs two: 0.10.",
+  "Dropping the zero at the end, the product is 0.1."
+ ],
+ "5.F-10#2": [
+  "Think of 3.6 as a number of tenths that can be shared equally.",
+  "There are 36 tenths in the number 3.6.",
+  "Share them into 4 equal groups: 36 ÷ 4 = 9 tenths in each.",
+  "Nine tenths is written 0.9, so the quotient is 0.9."
+ ],
+ "5.F-11#0": [
+  "A fraction bar means the same thing as a division sign.",
+  "The number being divided, 5, goes on top as the numerator.",
+  "The number you divide by, 6, goes on the bottom as the denominator.",
+  "So 5 ÷ 6 written as a fraction is five sixths, 5/6."
+ ],
+ "5.F-11#1": [
+  "Sharing equally is division: the sandwiches are divided by the friends.",
+  "Three sandwiches shared by four friends is the division 3 ÷ 4.",
+  "A division can be written as a fraction with the first number on top.",
+  "So each friend gets 3/4 of a sandwich."
+ ],
+ "5.F-11#2": [
+  "Divide the top by the bottom to see how many wholes there are.",
+  "Four goes into 11 two times, because 4 × 2 = 8.",
+  "Subtract to find the leftover pieces: 11 − 8 = 3 fourths.",
+  "Two wholes and three fourths make the mixed number 2 3/4."
+ ],
+ "5.F-12#0": [
+  "Split the 20 into as many equal parts as the denominator says.",
+  "One fourth of 20 is found by dividing: 20 ÷ 4 = 5.",
+  "Three fourths is three of those equal parts: 3 × 5 = 15.",
+  "So three fourths of 20 is equal to 15."
+ ],
+ "5.F-12#1": [
+  "Six laps of the same length means multiplying the lap length by 6.",
+  "Count the quarter miles in six laps: 6 × 1/4 = 6/4.",
+  "Four quarters make 1 whole, leaving 2 quarters, which is 1/2.",
+  "So the six laps add up to 1 1/2 miles."
+ ],
+ "5.F-12#2": [
+  "Split the 12 into as many equal parts as the denominator says.",
+  "One third of 12 is found by dividing: 12 ÷ 3 = 4.",
+  "Two thirds is two of those equal parts: 2 × 4 = 8.",
+  "So two thirds of 12 is equal to 8."
+ ],
+ "5.F-13#0": [
+  "Work out what is inside the parentheses before anything else.",
+  "Add the numbers inside the parentheses first: 6 + 2 = 8.",
+  "Now multiply by the number in front: 4 × 8 = 32.",
+  "So the value of the expression is 32."
+ ],
+ "5.F-13#1": [
+  "There are no parentheses, so multiplication is done before subtraction.",
+  "Do the multiplication part of the expression first: 3 × 4 = 12.",
+  "Then subtract that product from the 20: 20 − 12 = 8.",
+  "So the value of the expression is 8."
+ ],
+ "5.F-13#2": [
+  "The parentheses group the addition, so do that part first.",
+  "Add the numbers inside the parentheses first: 15 + 5 = 20.",
+  "Now divide that sum by the 5 outside: 20 ÷ 5 = 4.",
+  "So the value of the expression is 4."
+ ],
+ "5.F-14#0": [
+  "The starting number 0 counts as the 1st number in the pattern.",
+  "Keep adding 4 to list five numbers: 0, 4, 8, 12, 16.",
+  "Count along the list to find the number in position five.",
+  "So the 5th number in the pattern is 16."
+ ],
+ "5.F-14#1": [
+  "Compare the amounts the two patterns add each time.",
+  "Pattern A grows by 3 and pattern B grows by 9, and 9 ÷ 3 = 3.",
+  "Check with matching terms: 3 and 9, then 6 and 18.",
+  "So each B term is 3 times the A term."
+ ],
+ "5.F-14#2": [
+  "The starting number 0 counts as the 1st number in the pattern.",
+  "Keep adding 10 to list four numbers: 0, 10, 20, 30.",
+  "Count along the list to find the number in position four.",
+  "So the 4th number in the pattern is 30."
+ ],
+ "5.F-15#0": [
+  "The volume of a box is length times width times height.",
+  "Multiply two of the edges first to get one layer: 5 × 4 = 20.",
+  "Multiply that layer by the third edge: 20 × 3 = 60.",
+  "So the volume of the box is 60 cubic units."
+ ],
+ "5.F-15#1": [
+  "Use the fact that 1 meter equals 100 centimeters.",
+  "Centimeters are the smaller unit, so multiply the meters by 100.",
+  "Multiply to change the units to centimeters: 3 × 100 = 300.",
+  "So there are 300 centimeters in 3 meters."
+ ],
+ "5.F-15#2": [
+  "Use the fact that 1 foot equals 12 inches.",
+  "Inches are the smaller unit, so multiply the feet by 12.",
+  "Multiply to change the units to inches: 4 × 12 = 48.",
+  "So there are 48 inches in 4 feet."
+ ],
+ "5.F-16#0": [
+  "An ordered pair is written (x, y): the distance right first, then the distance up.",
+  "Going right 2 from the origin makes the first number 2.",
+  "Going up 5 from there makes the second number 5.",
+  "So the coordinates of the point are (2, 5)."
+ ],
+ "5.F-16#1": [
+  "Triangles are named by how many of their sides are the same length.",
+  "This triangle has all three of its sides equal.",
+  "The prefix \"equi\" means equal and \"lateral\" means side.",
+  "So the triangle is called an equilateral triangle."
+ ],
+ "5.F-16#2": [
+  "Think about what the corners of a rectangle look like.",
+  "Every corner of a rectangle is a square corner, which is a right angle.",
+  "A rectangle has four corners in all, one where each pair of sides meets.",
+  "So a rectangle has exactly 4 right angles."
+ ],
  "6.EE-1#0": [
   "The small 2 means you multiply the base by itself: use 4 two times.",
   "Write the power out as a multiplication, which is 4 × 4.",

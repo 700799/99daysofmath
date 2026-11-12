@@ -12,26 +12,26 @@
     "2,840"
   ],
   "acceptanceMode": "normalized",
-  "hint": "A $20$ is just $2 \\times 10$, so multiply by $2$ first and then tack on a zero.",
+  "hint": "The second factor is a multiple of ten. That lets you break the multiplication into two easy steps.",
   "hints": [
     {
       "level": "nudge",
-      "text": "A $20$ is just $2 \\times 10$, so multiply by $2$ first and then tack on a zero."
+      "text": "The second factor is a multiple of ten. That lets you break the multiplication into two easy steps."
     },
     {
       "level": "guide",
-      "text": "$142 \\times 2 = 284$. Now multiply that by $10$."
+      "text": "Since $20 = 2 \\times 10$, double $142$ first. Then multiply your result by $10$, which moves each digit one place to the left."
     },
     {
       "level": "reveal",
-      "text": "$284 \\times 10 = 2840$."
+      "text": "$142 \\times 2 = 284$ and $284 \\times 10 = 2840$, so the product is $2840$."
     }
   ],
   "explanation": [
-    "Break the $20$ apart: $20 = 2 \\times 10$.",
-    "First multiply by $2$: $142 \\times 2 = 284$.",
-    "Then multiply by $10$, which shifts every digit one place left: $284 \\times 10 = 2840$.",
-    "So $142 \\times 20 = 2840$."
+    "Break the $20$ into $2 \\times 10$, because each of those is easy to multiply by.",
+    "Multiply by $2$ first, which doubles the number: $142 \\times 2 = 284$.",
+    "Multiplying by $10$ shifts every digit one place left and puts a zero in the ones place: $284 \\times 10 = 2840$.",
+    "Putting the two steps together gives $142 \\times 20 = 2840$."
   ],
   "alternativeExplanations": [
     {

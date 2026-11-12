@@ -13,19 +13,19 @@
     "5,15"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Write both lists out to six numbers, starting the count at $0$.",
+  "hint": "Each rule makes its own list, and both lists begin with zero. The first list gives the $x$ values and the second gives the $y$ values.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Write both lists out to six numbers, starting the count at $0$."
+      "text": "Each rule makes its own list, and both lists begin with zero. The first list gives the $x$ values and the second gives the $y$ values."
     },
     {
       "level": "guide",
-      "text": "Rule 1: $0, 1, 2, 3, 4, 5$. Rule 2: $0, 3, 6, 9, 12, 15$."
+      "text": "Write six numbers for each rule. Rule 1 gives $0, 1, 2, 3, 4, 5$ and Rule 2 gives $0, 3, 6, 9, 12, 15$. Pair up the last numbers."
     },
     {
       "level": "reveal",
-      "text": "The 6th pair is $(5, 15)$."
+      "text": "The 6th numbers are $5$ and $15$, so the 6th ordered pair is $(5, 15)$."
     }
   ],
   "explanation": [

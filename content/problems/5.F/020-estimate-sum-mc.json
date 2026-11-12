@@ -32,25 +32,25 @@
   "primaryAnswer": "C",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "How big is each fraction compared with $1$?",
+  "hint": "You do not need an exact sum here. Compare each fraction with a whole number that it is close to.",
   "hints": [
     {
       "level": "nudge",
-      "text": "How big is each fraction compared with $1$?"
+      "text": "You do not need an exact sum here. Compare each fraction with a whole number that it is close to."
     },
     {
       "level": "guide",
-      "text": "Both $\\frac{7}{8}$ and $\\frac{11}{12}$ are just a little less than $1$."
+      "text": "$\\frac{7}{8}$ is only one eighth short of $1$, and $\\frac{11}{12}$ is only one twelfth short of $1$. Add those two estimates."
     },
     {
       "level": "reveal",
-      "text": "Almost $1$ plus almost $1$ is almost $2$ — choose $2$."
+      "text": "Each fraction is almost $1$, so the sum is almost $2$. The closest whole number is $2$, choice C."
     }
   ],
   "explanation": [
-    "$\\frac{7}{8}$ is only $\\frac{1}{8}$ away from $1$; $\\frac{11}{12}$ is only $\\frac{1}{12}$ away from $1$.",
-    "So the sum is just a little less than $1 + 1 = 2$.",
-    "The closest whole number is $2$."
+    "Estimate each fraction: $\\frac{7}{8}$ is only $\\frac{1}{8}$ away from $1$, and $\\frac{11}{12}$ is only $\\frac{1}{12}$ away from $1$.",
+    "Two numbers that are each just under $1$ add up to a little less than $1 + 1 = 2$.",
+    "The sum is far above $1$ and below $2$ by only a small amount, so the closest whole number is $2$."
   ],
   "alternativeExplanations": [
     {

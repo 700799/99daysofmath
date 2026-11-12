@@ -12,7 +12,7 @@
     "1,000"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Try it small: $5 \\times 10^2 = 500$ and $5 \\times 10^1 = 50$. Since $500 \\div 50 = 10$, the bigger one is $10$ times greater — and the exponents differ by $1$. The gap in the exponents is what counts.",
+  "hint": "To find how many times greater one number is than another, compare them by dividing. It helps to write both as regular numbers.",
   "hints": [
     {
       "level": "nudge",
@@ -21,22 +21,22 @@
     },
     {
       "level": "nudge",
-      "text": "Write both numbers out as regular numbers and compare them."
+      "text": "To find how many times greater one number is than another, compare them by dividing. It helps to write both as regular numbers."
     },
     {
       "level": "guide",
-      "text": "$6.4 \\times 10^5 = 640{,}000$ and $6.4 \\times 10^2 = 640$. Now divide the big one by the small one."
+      "text": "$6.4 \\times 10^5 = 640{,}000$ and $6.4 \\times 10^2 = 640$. Divide the larger number by the smaller one."
     },
     {
       "level": "reveal",
-      "text": "$640{,}000 \\div 640 = 1{,}000$."
+      "text": "$640{,}000 \\div 640 = 1{,}000$, so the first number is $1{,}000$ times greater."
     }
   ],
   "explanation": [
-    "Write both out: $6.4 \\times 10^5 = 640{,}000$ and $6.4 \\times 10^2 = 640$.",
-    "To compare sizes, divide: $640{,}000 \\div 640 = 1{,}000$.",
-    "That matches the exponents: the exponent goes up by $5 - 2 = 3$, and three extra factors of ten is $10^3 = 1{,}000$.",
-    "So the first number is $1{,}000$ times greater."
+    "Write both numbers in the usual way: $6.4 \\times 10^5 = 640{,}000$ and $6.4 \\times 10^2 = 640$.",
+    "\"How many times greater\" is a division question, so divide: $640{,}000 \\div 640 = 1{,}000$.",
+    "The exponents agree with this. They differ by $5 - 2 = 3$, and three extra factors of ten make $10^3 = 1{,}000$.",
+    "So the number $6.4 \\times 10^5$ is $1{,}000$ times greater than $6.4 \\times 10^2$."
   ],
   "alternativeExplanations": [
     {

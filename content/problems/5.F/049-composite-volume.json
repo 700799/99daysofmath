@@ -10,11 +10,11 @@
   "primaryAnswer": "100",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Find each box volume separately, then add.",
+  "hint": "The step is made of two separate boxes. Volumes can be added when shapes are joined without overlapping.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Find each box volume separately, then add."
+      "text": "The step is made of two separate boxes. Volumes can be added when shapes are joined without overlapping."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "Box 1: $5 \\times 4 \\times 3 = 60$. Box 2: $5 \\times 4 \\times 2 = ?$"
+      "text": "The first box is $5 \\times 4 \\times 3 = 60$. Work out $5 \\times 4 \\times 2$ for the second box, and then add the two volumes."
     },
     {
       "level": "reveal",
-      "text": "Box 2 is $40$. Total: $60 + 40 = 100$."
+      "text": "The second box is $40$, and $60 + 40 = 100$, so the total volume is $100$ cubic units."
     }
   ],
   "explanation": [
-    "Box 1: $5 \\times 4 \\times 3 = 60$ cubic units.",
-    "Box 2: $5 \\times 4 \\times 2 = 40$ cubic units.",
-    "Total volume: $60 + 40 = 100$ cubic units."
+    "Find the first box's volume by multiplying its three edges: $5 \\times 4 \\times 3 = 60$ cubic units.",
+    "Do the same for the second box: $5 \\times 4 \\times 2 = 40$ cubic units.",
+    "The boxes are glued together without overlapping, so add: $60 + 40 = 100$ cubic units in total."
   ],
   "alternativeExplanations": [
     {

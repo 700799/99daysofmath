@@ -12,26 +12,26 @@
     "16,488"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Two partial products again: one for the $6$ ones, one for the $3$ tens.",
+  "hint": "Think of the second factor as tens and ones. Each part gives its own partial product, and the two get added at the end.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Two partial products again: one for the $6$ ones, one for the $3$ tens."
+      "text": "Think of the second factor as tens and ones. Each part gives its own partial product, and the two get added at the end."
     },
     {
       "level": "guide",
-      "text": "$458 \\times 6 = 2748$. Now find $458 \\times 30$."
+      "text": "Split $36$ into $30 + 6$. You need $458 \\times 6$ and $458 \\times 30$, and the second is $458 \\times 3$ with a zero attached."
     },
     {
       "level": "reveal",
-      "text": "$458 \\times 30 = 13{,}740$, and $13{,}740 + 2{,}748 = 16{,}488$."
+      "text": "$458 \\times 6 = 2{,}748$ and $458 \\times 30 = 13{,}740$, and their sum is $16{,}488$, so the product is $16{,}488$."
     }
   ],
   "explanation": [
-    "Split $36$ into $30 + 6$.",
-    "$458 \\times 6 = 2{,}748$.",
-    "$458 \\times 30 = 13{,}740$.",
-    "Add them: $13{,}740 + 2{,}748 = 16{,}488$."
+    "Split $36$ into $30 + 6$ so that each part can be multiplied on its own.",
+    "Multiply by the ones part first: $458 \\times 6 = 2{,}748$.",
+    "Multiply by the tens part next: $458 \\times 3 = 1{,}374$, so $458 \\times 30 = 13{,}740$.",
+    "Add the two partial products: $13{,}740 + 2{,}748 = 16{,}488$, so $458 \\times 36 = 16{,}488$."
   ],
   "alternativeExplanations": [
     {

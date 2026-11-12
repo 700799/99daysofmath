@@ -12,19 +12,19 @@
     "6 m"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Both points have the same $x$-value, so they sit straight up and down from each other.",
+  "hint": "Compare the coordinates of the two stakes. One coordinate matches, which tells you the direction of the line between them.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Both points have the same $x$-value, so they sit straight up and down from each other."
+      "text": "Compare the coordinates of the two stakes. One coordinate matches, which tells you the direction of the line between them."
     },
     {
       "level": "guide",
-      "text": "Only the $y$-values differ: $3$ and $9$. Subtract them."
+      "text": "Both stakes have $x = 2$, so one is straight above the other. The distance is the difference of the $y$-values, $9 - 3$."
     },
     {
       "level": "reveal",
-      "text": "$9 - 3 = 6$ meters apart."
+      "text": "$9 - 3 = 6$, so the stakes are $6$ meters apart."
     }
   ],
   "explanation": [

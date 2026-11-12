@@ -12,25 +12,25 @@
     "10^{5}"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Count the zeros in $100{,}000$.",
+  "hint": "Powers of ten have a pattern that links the exponent to the way the number is written. Look closely at the zeros.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Count the zeros in $100{,}000$."
+      "text": "Powers of ten have a pattern that links the exponent to the way the number is written. Look closely at the zeros."
     },
     {
       "level": "guide",
-      "text": "The number of zeros becomes the exponent on the $10$."
+      "text": "Count the zeros after the $1$ in $100{,}000$. That count is the number of tens multiplied together, so it becomes the exponent."
     },
     {
       "level": "reveal",
-      "text": "There are five zeros, so $100{,}000 = 10^5$."
+      "text": "There are five zeros, so $100{,}000$ is written as $10^5$."
     }
   ],
   "explanation": [
-    "$100{,}000$ is $1$ followed by five zeros.",
-    "Each zero comes from one factor of $10$: $10 \\times 10 \\times 10 \\times 10 \\times 10$.",
-    "Five factors of $10$ is written $10^5$, so $100{,}000 = 10^5$."
+    "The number $100{,}000$ is a $1$ followed by five zeros.",
+    "Each zero comes from one factor of ten: $10 \\times 10 \\times 10 \\times 10 \\times 10 = 100{,}000$.",
+    "Five factors of ten are written with the exponent $5$, so $100{,}000 = 10^5$."
   ],
   "alternativeExplanations": [
     {

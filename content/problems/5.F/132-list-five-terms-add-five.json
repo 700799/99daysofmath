@@ -13,25 +13,25 @@
     "0 5 10 15 20"
   ],
   "acceptanceMode": "normalized",
-  "hint": "The first number is the starting number itself — you do not add yet.",
+  "hint": "The starting number is the first number in the list. The rule is only used to get from one number to the next.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The first number is the starting number itself — you do not add yet."
+      "text": "The starting number is the first number in the list. The rule is only used to get from one number to the next."
     },
     {
       "level": "guide",
-      "text": "After $0$ comes $0 + 5 = 5$, then $5 + 5 = 10$…"
+      "text": "Begin the list with $0$. Then keep adding $5$ to the latest number until you have five numbers written down."
     },
     {
       "level": "reveal",
-      "text": "$0, 5, 10, 15, 20$."
+      "text": "Adding $5$ four times gives the list $0, 5, 10, 15, 20$ as the first five numbers."
     }
   ],
   "explanation": [
-    "Start with $0$ — that is the first number in the pattern.",
-    "Apply the rule again and again: $0 + 5 = 5$, $5 + 5 = 10$, $10 + 5 = 15$, $15 + 5 = 20$.",
-    "The first five numbers are $0, 5, 10, 15, 20$."
+    "Begin with $0$, because the starting number is the first number in the pattern.",
+    "Use the rule again and again: $0 + 5 = 5$, $5 + 5 = 10$, $10 + 5 = 15$ and $15 + 5 = 20$.",
+    "Counting the start, the first five numbers are $0, 5, 10, 15, 20$."
   ],
   "alternativeExplanations": [
     {

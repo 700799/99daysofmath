@@ -10,26 +10,26 @@
   "primaryAnswer": "14/3",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "How many thirds are hiding in each whole?",
+  "hint": "An improper fraction counts everything in pieces of one size. How many thirds are inside each whole?",
   "hints": [
     {
       "level": "nudge",
-      "text": "How many thirds are hiding in each whole?"
+      "text": "An improper fraction counts everything in pieces of one size. How many thirds are inside each whole?"
     },
     {
       "level": "guide",
-      "text": "Each whole is $\\frac{3}{3}$, so $4$ wholes are $4 \\times 3 = 12$ thirds."
+      "text": "Each whole is $3$ thirds, so $4$ wholes are $4 \\times 3 = 12$ thirds. Add the $2$ extra thirds from the fraction part."
     },
     {
       "level": "reveal",
-      "text": "$12$ thirds plus the extra $2$ thirds is $\\frac{14}{3}$."
+      "text": "$12 + 2 = 14$ thirds in all, so the improper fraction is $4\\frac{2}{3} = \\frac{14}{3}$."
     }
   ],
   "explanation": [
     "One whole equals $\\frac{3}{3}$, so four wholes equal $4 \\times 3 = 12$ thirds.",
-    "The mixed number also carries $\\frac{2}{3}$ extra.",
-    "Altogether: $12 + 2 = 14$ thirds, so $4\\frac{2}{3} = \\frac{14}{3}$.",
-    "Check: $14 \\div 3 = 4$ remainder $2$, which is $4\\frac{2}{3}$ again ✓"
+    "The mixed number also has $\\frac{2}{3}$ on top of the four wholes.",
+    "Altogether there are $12 + 2 = 14$ thirds, so the improper fraction is $\\frac{14}{3}$.",
+    "Check by dividing: $14 \\div 3 = 4$ remainder $2$, which is $4\\frac{2}{3}$ again."
   ],
   "alternativeExplanations": [
     {

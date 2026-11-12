@@ -10,25 +10,25 @@
   "primaryAnswer": "4",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "How many $0.9$s fit into $3.6$?",
+  "hint": "Dividing by a decimal is easier when the divisor is a whole number. What can you do to both numbers without changing the answer?",
   "hints": [
     {
       "level": "nudge",
-      "text": "How many $0.9$s fit into $3.6$?"
+      "text": "Dividing by a decimal is easier when the divisor is a whole number. What can you do to both numbers without changing the answer?"
     },
     {
       "level": "guide",
-      "text": "Multiply both numbers by $10$: $36 \\div 9$."
+      "text": "Multiply both $3.6$ and $0.9$ by $10$. The quotient stays the same, so the problem becomes $36 \\div 9$."
     },
     {
       "level": "reveal",
-      "text": "$36 \\div 9 = 4$."
+      "text": "$36 \\div 9 = 4$, so the quotient $3.6 \\div 0.9$ is also $4$."
     }
   ],
   "explanation": [
-    "Shift both numbers one decimal place: $3.6 \\div 0.9 = 36 \\div 9$.",
-    "$36 \\div 9 = 4$.",
-    "Check: $4 \\times 0.9 = 3.6$ ✓."
+    "Multiply both numbers by $10$ to clear the decimals. This keeps the quotient the same, so $3.6 \\div 0.9 = 36 \\div 9$.",
+    "Now divide the two whole numbers: $36 \\div 9 = 4$.",
+    "Check with multiplication: $4 \\times 0.9 = 3.6$, so the quotient is $4$."
   ],
   "tags": [
     "decimals",

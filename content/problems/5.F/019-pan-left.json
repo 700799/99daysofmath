@@ -10,11 +10,11 @@
   "primaryAnswer": "5/12",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "First find how much was eaten in total.",
+  "hint": "The question asks for what is left, not what was eaten. Start by finding how much of the pan the two friends ate together.",
   "hints": [
     {
       "level": "nudge",
-      "text": "First find how much was eaten in total."
+      "text": "The question asks for what is left, not what was eaten. Start by finding how much of the pan the two friends ate together."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "Eaten: $\\frac{1}{4} + \\frac{1}{3} = \\frac{3}{12} + \\frac{4}{12} = \\frac{7}{12}$."
+      "text": "Add the eaten parts in twelfths: $\\frac{1}{4} = \\frac{3}{12}$ and $\\frac{1}{3} = \\frac{4}{12}$. Then subtract that total from the whole pan, $\\frac{12}{12}$."
     },
     {
       "level": "reveal",
-      "text": "Left: $1 - \\frac{7}{12} = \\frac{5}{12}$."
+      "text": "They ate $\\frac{7}{12}$ of the pan, and $\\frac{12}{12} - \\frac{7}{12} = \\frac{5}{12}$, so $\\frac{5}{12}$ of the pan is left."
     }
   ],
   "explanation": [
-    "Eaten in total: $\\frac{1}{4} + \\frac{1}{3}$.",
-    "Twelfths: $\\frac{3}{12} + \\frac{4}{12} = \\frac{7}{12}$.",
-    "The whole pan is $\\frac{12}{12}$, so what remains is $\\frac{12}{12} - \\frac{7}{12} = \\frac{5}{12}$."
+    "First find the total that was eaten, which is $\\frac{1}{4} + \\frac{1}{3}$.",
+    "Use twelfths so the pieces match: $\\frac{3}{12} + \\frac{4}{12} = \\frac{7}{12}$ of the pan was eaten.",
+    "The whole pan is $\\frac{12}{12}$, so the part left is $\\frac{12}{12} - \\frac{7}{12} = \\frac{5}{12}$."
   ],
   "alternativeExplanations": [
     {

@@ -10,25 +10,25 @@
   "primaryAnswer": "4.5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Dividing makes the number smaller, so the decimal point slides to the **left**.",
+  "hint": "Dividing by a power of ten makes the number smaller. Which way does the decimal point move, and how many places?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Dividing makes the number smaller, so the decimal point slides to the **left**."
+      "text": "Dividing by a power of ten makes the number smaller. Which way does the decimal point move, and how many places?"
     },
     {
       "level": "guide",
-      "text": "$1{,}000$ has three zeros, so move the point three places left from $4500.$"
+      "text": "$1{,}000$ has three zeros, so move the decimal point three places to the left, starting from the end of $4500$."
     },
     {
       "level": "reveal",
-      "text": "$4500. \\to 450. \\to 45. \\to 4.5$, so the answer is $4.5$."
+      "text": "The point moves from $4500$ to $450$, then $45$, then $4.5$, so $4{,}500 \\div 1{,}000 = 4.5$."
     }
   ],
   "explanation": [
-    "$1{,}000 = 10^3$, so dividing by it shifts the decimal point three places to the left.",
-    "Start at $4500.$ — one shift gives $450$, two gives $45$, three gives $4.5$.",
-    "So $4{,}500 \\div 1{,}000 = 4.5$."
+    "Since $1{,}000 = 10^3$, dividing by it shifts the decimal point three places to the left.",
+    "Start with the point at the end of $4500$. One shift gives $450$, two shifts give $45$ and three shifts give $4.5$.",
+    "So $4{,}500 \\div 1{,}000 = 4.5$, which fits because $4{,}500$ is four and a half thousands."
   ],
   "alternativeExplanations": [
     {

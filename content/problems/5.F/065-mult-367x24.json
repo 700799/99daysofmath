@@ -12,26 +12,26 @@
     "8,808"
   ],
   "acceptanceMode": "normalized",
-  "hint": "The standard algorithm does this in two rows: one for the ones digit, one for the tens digit.",
+  "hint": "The standard method uses one row for each digit of the bottom factor. Here that means a row for the ones and a row for the tens.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The standard algorithm does this in two rows: one for the ones digit, one for the tens digit."
+      "text": "The standard method uses one row for each digit of the bottom factor. Here that means a row for the ones and a row for the tens."
     },
     {
       "level": "guide",
-      "text": "Row 1: $367 \\times 4$. Row 2: $367 \\times 20$. Then add the rows."
+      "text": "Split $24$ into $20 + 4$. Find $367 \\times 4$ for the first row and $367 \\times 20$ for the second row, then add the rows."
     },
     {
       "level": "reveal",
-      "text": "$367 \\times 4 = 1468$ and $367 \\times 20 = 7340$, so $1468 + 7340 = 8808$."
+      "text": "$367 \\times 4 = 1468$ and $367 \\times 20 = 7340$, and $1468 + 7340 = 8808$, so the product is $8808$."
     }
   ],
   "explanation": [
-    "Split $24$ into $20 + 4$ — that is exactly what the two rows of the standard algorithm are doing.",
-    "$367 \\times 4 = 1468$.",
-    "$367 \\times 20 = 7340$.",
-    "Add the partial products: $1468 + 7340 = 8808$."
+    "Split $24$ into $20 + 4$, which is exactly what the two rows of the standard algorithm do.",
+    "Multiply by the ones digit first: $367 \\times 4 = 1468$.",
+    "Multiply by the tens: $367 \\times 20 = 7340$, which is $367 \\times 2 = 734$ with a zero attached.",
+    "Add the two partial products: $1468 + 7340 = 8808$, so $367 \\times 24 = 8808$."
   ],
   "alternativeExplanations": [
     {

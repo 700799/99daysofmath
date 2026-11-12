@@ -32,25 +32,25 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Round $29$ to a friendlier number first. What is it closest to?",
+  "hint": "An estimate uses rounded numbers that are easy to divide in your head. What round numbers are these two close to?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Round $29$ to a friendlier number first. What is it closest to?"
+      "text": "An estimate uses rounded numbers that are easy to divide in your head. What round numbers are these two close to?"
     },
     {
       "level": "guide",
-      "text": "$29$ is about $30$, and $5{,}812$ is about $6{,}000$. So think $6{,}000 \\div 30$."
+      "text": "Round $5{,}812$ to $6{,}000$ and round $29$ to $30$. Then work out $6{,}000 \\div 30$ mentally."
     },
     {
       "level": "reveal",
-      "text": "$6{,}000 \\div 30 = 200$, so choose B."
+      "text": "$6{,}000 \\div 30 = 200$, so the best estimate is $200$, choice B."
     }
   ],
   "explanation": [
-    "Round both numbers to something easy: $5{,}812 \\approx 6{,}000$ and $29 \\approx 30$.",
-    "$6{,}000 \\div 30 = 200$, because $30 \\times 200 = 6{,}000$.",
-    "So the quotient is close to $200$ — answer B."
+    "Round each number to one that is easy to work with: $5{,}812$ is about $6{,}000$ and $29$ is about $30$.",
+    "Divide the two rounded numbers: $6{,}000 \\div 30 = 200$, because $30 \\times 200 = 6{,}000$.",
+    "The exact quotient will be close to $200$, so the best estimate is choice B."
   ],
   "alternativeExplanations": [
     {

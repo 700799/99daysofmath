@@ -13,26 +13,26 @@
     "1.375"
   ],
   "acceptanceMode": "normalized",
-  "hint": "You cannot add fourths and eighths until the pieces are the same size.",
+  "hint": "The two distances are joined, so they get added. Notice that fourths and eighths are pieces of different sizes.",
   "hints": [
     {
       "level": "nudge",
-      "text": "You cannot add fourths and eighths until the pieces are the same size."
+      "text": "The two distances are joined, so they get added. Notice that fourths and eighths are pieces of different sizes."
     },
     {
       "level": "guide",
-      "text": "Eighths are half the size of fourths: $\\frac{3}{4} = \\frac{6}{8}$."
+      "text": "Rename $\\frac{3}{4}$ in eighths by doubling its top and bottom to get $\\frac{6}{8}$. Then add $\\frac{6}{8} + \\frac{5}{8}$."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{6}{8} + \\frac{5}{8} = \\frac{11}{8} = 1\\frac{3}{8}$ miles."
+      "text": "$\\frac{6}{8} + \\frac{5}{8} = \\frac{11}{8}$, so Ana walked $\\frac{11}{8}$ miles, which is $1\\frac{3}{8}$ miles."
     }
   ],
   "explanation": [
-    "Rewrite $\\frac{3}{4}$ with a denominator of $8$: multiply top and bottom by $2$ to get $\\frac{6}{8}$.",
-    "Now the pieces match, so add the numerators: $\\frac{6}{8} + \\frac{5}{8} = \\frac{11}{8}$.",
-    "$\\frac{8}{8}$ is one whole, so $\\frac{11}{8} = 1\\frac{3}{8}$.",
-    "Ana walked $\\frac{11}{8}$ miles, or $1\\frac{3}{8}$ miles."
+    "Rewrite $\\frac{3}{4}$ with a denominator of $8$ by multiplying top and bottom by $2$, which gives $\\frac{6}{8}$.",
+    "Now the pieces are the same size, so add the numerators: $\\frac{6}{8} + \\frac{5}{8} = \\frac{11}{8}$.",
+    "Since $\\frac{8}{8}$ is one whole, $\\frac{11}{8}$ is one whole and three more eighths, or $1\\frac{3}{8}$.",
+    "Ana walked $\\frac{11}{8}$ miles, which is $1\\frac{3}{8}$ miles."
   ],
   "alternativeExplanations": [
     {

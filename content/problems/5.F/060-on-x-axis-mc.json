@@ -32,25 +32,25 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "The y-coordinate measures how far UP a point is.",
+  "hint": "Think about what each coordinate measures. One of them tells how far a point is above or below the x-axis.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The y-coordinate measures how far UP a point is."
+      "text": "Think about what each coordinate measures. One of them tells how far a point is above or below the x-axis."
     },
     {
       "level": "guide",
-      "text": "A point on the x-axis is not up or down at all."
+      "text": "The $y$-coordinate is the height above the x-axis. A point that sits right on the x-axis has no height at all."
     },
     {
       "level": "reveal",
-      "text": "No height means $y = 0$ — choose B."
+      "text": "No height means the $y$-coordinate is $0$, so the answer is choice B."
     }
   ],
   "explanation": [
-    "The $y$-coordinate is the distance above (or below) the x-axis.",
-    "On the x-axis that distance is $0$, so every such point looks like $(x, 0)$.",
-    "Example: $(5, 0)$ is on the x-axis."
+    "The $y$-coordinate tells how far a point is above or below the x-axis.",
+    "A point on the x-axis is zero units above it, so its $y$-coordinate must be $0$. Its $x$-coordinate can be any number.",
+    "For example, $(5, 0)$ lies on the x-axis. So the true statement is that the $y$-coordinate is $0$, choice B."
   ],
   "tags": [
     "coordinate-plane"

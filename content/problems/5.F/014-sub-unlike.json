@@ -13,24 +13,25 @@
     "25%"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Rewrite $\\frac{1}{2}$ as fourths.",
+  "hint": "Fourths and halves are different sized pieces. One of these fractions can be renamed so that both use the same piece size.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Rewrite $\\frac{1}{2}$ as fourths."
+      "text": "Fourths and halves are different sized pieces. One of these fractions can be renamed so that both use the same piece size."
     },
     {
       "level": "guide",
-      "text": "$\\frac{1}{2} = \\frac{2}{4}$."
+      "text": "Rename the half as fourths by multiplying its top and bottom by $2$. Then subtract that many fourths from $\\frac{3}{4}$."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{3}{4} - \\frac{2}{4} = \\frac{1}{4}$."
+      "text": "$\\frac{1}{2} = \\frac{2}{4}$ and $\\frac{3}{4} - \\frac{2}{4} = \\frac{1}{4}$, so the difference is $\\frac{1}{4}$."
     }
   ],
   "explanation": [
-    "$\\frac{1}{2} = \\frac{2}{4}$.",
-    "$\\frac{3}{4} - \\frac{2}{4} = \\frac{1}{4}$."
+    "The denominators are different, so the pieces must be made the same size before subtracting.",
+    "Multiply the top and bottom of $\\frac{1}{2}$ by $2$ to rename it as $\\frac{2}{4}$. Its value does not change.",
+    "Now subtract fourths from fourths: $\\frac{3}{4} - \\frac{2}{4} = \\frac{1}{4}$, so the answer is $\\frac{1}{4}$."
   ],
   "tags": [
     "fractions",

@@ -12,11 +12,11 @@
     "$36.13"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Change means subtract: $50.00 - 13.87$.",
+  "hint": "Change is the difference between the money handed over and the price. Which operation finds a difference?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Change means subtract: $50.00 - 13.87$."
+      "text": "Change is the difference between the money handed over and the price. Which operation finds a difference?"
     },
     {
       "level": "nudge",
@@ -25,18 +25,18 @@
     },
     {
       "level": "guide",
-      "text": "Write $50$ as $50.00$ and line up the decimal points before subtracting."
+      "text": "Write the bill as $50.00$ so both amounts show cents, line up the decimal points, and subtract $13.87$ from $50.00$."
     },
     {
       "level": "reveal",
-      "text": "$50.00 - 13.87 = 36.13$."
+      "text": "$50.00 - 13.87 = 36.13$, so Jaylen should get $\\$36.13$ in change."
     }
   ],
   "explanation": [
-    "Write the money with two decimal places: $50.00 - 13.87$.",
-    "Counting up is easiest: $13.87 + 0.13 = 14.00$.",
-    "$14.00 + 36.00 = 50.00$.",
-    "Total counted up: $0.13 + 36.00 = 36.13$. The change is $\\$36.13$."
+    "Change is what is left after paying, so subtract the price from the bill: $50.00 - 13.87$.",
+    "Counting up from the price is an easy way to subtract: $13.87 + 0.13 = 14.00$ reaches the next whole dollar.",
+    "From $14.00$ it takes another $36.00$ to reach $50.00$.",
+    "Add the two jumps: $0.13 + 36.00 = 36.13$, so the change is $\\$36.13$."
   ],
   "alternativeExplanations": [
     {

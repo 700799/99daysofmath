@@ -10,19 +10,19 @@
   "primaryAnswer": "12",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Which number in the pair matches the $y$-axis?",
+  "hint": "Each number in an ordered pair belongs to one axis. Decide which axis on this graph shows the miles.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Which number in the pair matches the $y$-axis?"
+      "text": "Each number in an ordered pair belongs to one axis. Decide which axis on this graph shows the miles."
     },
     {
       "level": "guide",
-      "text": "In $(3, 12)$, the $3$ is hours and the $12$ is miles."
+      "text": "A pair is written $(x, y)$. Here $x$ counts hours and $y$ counts miles, so in $(3, 12)$ the $3$ is the hours."
     },
     {
       "level": "reveal",
-      "text": "$12$ miles."
+      "text": "The $y$-value is $12$, so $12$ miles had been walked after $3$ hours."
     }
   ],
   "explanation": [

@@ -10,19 +10,19 @@
   "primaryAnswer": "25",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Two steps: first find how many DID bring lunch, then subtract from $40$.",
+  "hint": "The fraction describes the students who did bring lunch, but the question asks about the others. Plan for two steps.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Two steps: first find how many DID bring lunch, then subtract from $40$."
+      "text": "The fraction describes the students who did bring lunch, but the question asks about the others. Plan for two steps."
     },
     {
       "level": "guide",
-      "text": "One eighth of $40$ is $40 \\div 8 = 5$, so $\\frac{3}{8}$ of $40$ is $3 \\times 5 = 15$."
+      "text": "One eighth of $40$ is $40 \\div 8 = 5$, so three eighths is $3 \\times 5$ students. Subtract that group from all $40$."
     },
     {
       "level": "reveal",
-      "text": "$40 - 15 = 25$ students did not bring lunch."
+      "text": "$3 \\times 5 = 15$ brought lunch, and $40 - 15 = 25$, so $25$ students did not bring lunch from home."
     }
   ],
   "explanation": [

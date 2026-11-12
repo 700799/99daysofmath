@@ -12,7 +12,7 @@
     "2,572"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Suppose each layer took $10$ blocks and the wall were $3$ layers tall: that is $10 \\times 3 = 30$ blocks total. If you had already placed $12$, you would still need $30 - 12 = 18$. Multiply first, then subtract — same two steps here.",
+  "hint": "This takes two steps. Find how many blocks the finished wall needs, and then remove the blocks that are already in place.",
   "hints": [
     {
       "level": "nudge",
@@ -21,22 +21,22 @@
     },
     {
       "level": "nudge",
-      "text": "Two steps: find the blocks the whole wall needs, then take away the ones already placed."
+      "text": "This takes two steps. Find how many blocks the finished wall needs, and then remove the blocks that are already in place."
     },
     {
       "level": "guide",
-      "text": "Total blocks $= 128 \\times 24$. Try $128 \\times 20$ plus $128 \\times 4$."
+      "text": "The whole wall needs $128 \\times 24$ blocks. Split it into $128 \\times 20$ plus $128 \\times 4$, and afterwards subtract the $500$ already placed."
     },
     {
       "level": "reveal",
-      "text": "$2560 + 512 = 3072$ blocks total, and $3072 - 500 = 2572$ blocks still needed."
+      "text": "$2560 + 512 = 3072$ blocks in the whole wall, and $3072 - 500 = 2572$, so you still need $2572$ blocks."
     }
   ],
   "explanation": [
-    "Step 1 — the whole wall: $128 \\times 24$. Split it as $128 \\times 20 = 2{,}560$ and $128 \\times 4 = 512$.",
+    "First find the blocks in the whole wall, $128 \\times 24$. Split it into $128 \\times 20 = 2{,}560$ and $128 \\times 4 = 512$.",
     "Add the partial products: $2{,}560 + 512 = 3{,}072$ blocks for the finished wall.",
-    "Step 2 — subtract what is already up: $3{,}072 - 500 = 2{,}572$.",
-    "So you still need $2{,}572$ blocks."
+    "Next subtract the blocks that are already placed: $3{,}072 - 500 = 2{,}572$.",
+    "So you still need $2{,}572$ more blocks."
   ],
   "alternativeExplanations": [
     {

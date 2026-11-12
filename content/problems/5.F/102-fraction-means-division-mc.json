@@ -32,25 +32,25 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Read the fraction bar out loud as \"divided by.\"",
+  "hint": "Try reading the fraction bar out loud as the words \"divided by\". Which number gets said first?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Read the fraction bar out loud as \"divided by.\""
+      "text": "Try reading the fraction bar out loud as the words \"divided by\". Which number gets said first?"
     },
     {
       "level": "guide",
-      "text": "The top number is the one being divided up."
+      "text": "The numerator is the number being divided, and the denominator is the number it is divided by. Here the numerator is $7$."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{7}{8}$ means $7 \\div 8$ — choose B."
+      "text": "So $\\frac{7}{8}$ means $7 \\div 8$, which is choice B."
     }
   ],
   "explanation": [
-    "The fraction bar is a division sign: numerator on top gets divided by denominator on the bottom.",
-    "So $\\frac{7}{8}$ means $7 \\div 8$, which is choice B.",
-    "Check the size: $7 \\div 8$ should be a little less than $1$, and $\\frac{7}{8}$ is indeed just under $1$ ✓"
+    "The fraction bar works as a division sign: the numerator on top is divided by the denominator below.",
+    "So the fraction $\\frac{7}{8}$ means $7 \\div 8$, which is choice B.",
+    "The size makes sense too. $7 \\div 8$ should be a little less than $1$, and $\\frac{7}{8}$ is just under $1$."
   ],
   "alternativeExplanations": [
     {

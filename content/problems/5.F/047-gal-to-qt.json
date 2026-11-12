@@ -13,24 +13,25 @@
     "12 quarts"
   ],
   "acceptanceMode": "normalized",
-  "hint": "$1$ gallon $= 4$ quarts.",
+  "hint": "Gallons and quarts both measure liquid, and a quart is the smaller one. How many quarts fill one gallon?",
   "hints": [
     {
       "level": "nudge",
-      "text": "$1$ gallon $= 4$ quarts."
+      "text": "Gallons and quarts both measure liquid, and a quart is the smaller one. How many quarts fill one gallon?"
     },
     {
       "level": "guide",
-      "text": "Bigger unit to smaller unit → multiply."
+      "text": "One gallon holds $4$ quarts. Changing from a bigger unit to a smaller one means multiplying, so work out $3 \\times 4$."
     },
     {
       "level": "reveal",
-      "text": "$3 \\times 4 = 12$ quarts."
+      "text": "$3 \\times 4 = 12$, so an amount of $3$ gallons equals $12$ quarts."
     }
   ],
   "explanation": [
-    "$1$ gal $= 4$ qt.",
-    "$3 \\times 4 = 12$ quarts."
+    "The key fact is that $1$ gallon equals $4$ quarts.",
+    "Quarts are smaller than gallons, so more of them are needed. Multiply the gallons by $4$.",
+    "Work it out: $3 \\times 4 = 12$, so $3$ gallons is $12$ quarts."
   ],
   "tags": [
     "measurement",

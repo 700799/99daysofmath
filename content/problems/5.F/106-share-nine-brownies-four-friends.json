@@ -13,26 +13,26 @@
     "2.25"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Equal sharing means division: $9 \\div 4$.",
+  "hint": "Equal sharing is division. The answer here will not be a whole number, so think of the division as a fraction.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Equal sharing means division: $9 \\div 4$."
+      "text": "Equal sharing is division. The answer here will not be a whole number, so think of the division as a fraction."
     },
     {
       "level": "guide",
-      "text": "Write it as a fraction: $\\frac{9}{4}$. Now see how many wholes that is."
+      "text": "Write $9 \\div 4$ as $\\frac{9}{4}$. To see its size, find how many times $4$ goes into $9$ and what is left."
     },
     {
       "level": "reveal",
-      "text": "$4 \\times 2 = 8$, leaving $1$ quarter, so each friend gets $\\frac{9}{4} = 2\\frac{1}{4}$ brownies."
+      "text": "$4$ goes into $9$ twice with $1$ left, so each friend gets $\\frac{9}{4}$, or $2\\frac{1}{4}$, brownies."
     }
   ],
   "explanation": [
-    "Sharing $9$ brownies among $4$ friends is $9 \\div 4 = \\frac{9}{4}$.",
+    "Sharing $9$ brownies among $4$ friends is $9 \\div 4$, which can be written as $\\frac{9}{4}$.",
     "To read that as a mixed number, divide: $4$ goes into $9$ twice with $1$ left over.",
-    "The leftover $1$ is still one fourth of a brownie, so each friend gets $2\\frac{1}{4}$ brownies.",
-    "Check: $4 \\times 2\\frac{1}{4} = 8 + 1 = 9$ brownies ✓"
+    "The leftover brownie is cut into fourths, so each friend gets $2\\frac{1}{4}$ brownies.",
+    "Check: $4 \\times 2\\frac{1}{4} = 8 + 1 = 9$ brownies, so each share is $\\frac{9}{4}$."
   ],
   "alternativeExplanations": [
     {

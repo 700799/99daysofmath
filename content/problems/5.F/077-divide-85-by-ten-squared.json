@@ -12,25 +12,25 @@
     ".85"
   ],
   "acceptanceMode": "normalized",
-  "hint": "$10^2 = 100$, and dividing shrinks the number.",
+  "hint": "Work out the power of ten first. Dividing by it makes the number smaller, so think about which way the decimal point moves.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$10^2 = 100$, and dividing shrinks the number."
+      "text": "Work out the power of ten first. Dividing by it makes the number smaller, so think about which way the decimal point moves."
     },
     {
       "level": "guide",
-      "text": "Move the decimal point two places left. Remember $85$ is really $85.$"
+      "text": "$10^2 = 100$, so move the decimal point two places to the left. The whole number $85$ has its point at the end, like $85.0$."
     },
     {
       "level": "reveal",
-      "text": "$85. \\to 8.5 \\to 0.85$."
+      "text": "The point moves from $85$ to $8.5$ and then to $0.85$, so $85 \\div 10^2 = 0.85$."
     }
   ],
   "explanation": [
-    "$10^2 = 100$, so dividing by it shifts the decimal point two places to the left.",
-    "Write $85$ as $85.0$ so you can see the point, then shift: $8.5$, then $0.85$.",
-    "So $85 \\div 10^2 = 0.85$."
+    "The power $10^2$ equals $100$, so dividing by it shifts the decimal point two places to the left.",
+    "Write $85$ as $85.0$ to see the point. One shift gives $8.5$ and a second shift gives $0.85$.",
+    "So $85 \\div 10^2 = 0.85$, which is the same as $85$ hundredths."
   ],
   "alternativeExplanations": [
     {

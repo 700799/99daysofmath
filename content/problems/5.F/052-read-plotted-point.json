@@ -18,25 +18,25 @@
     "2,5"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Count across from the corner first, then count up.",
+  "hint": "To read a point, start at the origin. Count how far across it is first, and only then how far up.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Count across from the corner first, then count up."
+      "text": "To read a point, start at the origin. Count how far across it is first, and only then how far up."
     },
     {
       "level": "guide",
-      "text": "The point is $2$ across and $5$ up."
+      "text": "Follow the grid lines from the point down to the $x$-axis and across to the $y$-axis. It lines up with $2$ across and $5$ up."
     },
     {
       "level": "reveal",
-      "text": "$(2, 5)$."
+      "text": "Across $2$ and up $5$ means the point is at $(2, 5)$."
     }
   ],
   "explanation": [
-    "From the origin, the point is $2$ units across — that is the $x$-coordinate.",
-    "It is $5$ units up — that is the $y$-coordinate.",
-    "So the point is $(2, 5)$."
+    "Starting at the origin, the point is $2$ units across, and that is its $x$-coordinate.",
+    "The point is $5$ units up from the $x$-axis, and that is its $y$-coordinate.",
+    "Write the across number first and the up number second: the point is $(2, 5)$."
   ],
   "tags": [
     "MAP-practice",

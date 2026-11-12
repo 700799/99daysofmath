@@ -10,24 +10,25 @@
   "primaryAnswer": "12",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Ask: how many thirds fit inside $4$ wholes?",
+  "hint": "Dividing by a fraction asks how many pieces of that size fit inside the first number. Picture cutting each whole into thirds.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Ask: how many thirds fit inside $4$ wholes?"
+      "text": "Dividing by a fraction asks how many pieces of that size fit inside the first number. Picture cutting each whole into thirds."
     },
     {
       "level": "guide",
-      "text": "Each whole holds $3$ thirds, and there are $4$ wholes."
+      "text": "One whole holds $3$ thirds. There are $4$ wholes, so count the thirds with $4 \\times 3$."
     },
     {
       "level": "reveal",
-      "text": "$4 \\times 3 = 12$."
+      "text": "$4 \\times 3 = 12$, so $4 \\div \\frac{1}{3} = 12$ because twelve thirds fit in four wholes."
     }
   ],
   "explanation": [
-    "$4 \\div \\frac{1}{3}$ asks how many $\\frac{1}{3}$-pieces fit in $4$.",
-    "One whole = $3$ thirds, so four wholes = $4 \\times 3 = 12$ thirds."
+    "$4 \\div \\frac{1}{3}$ asks how many pieces of size $\\frac{1}{3}$ fit into $4$ wholes.",
+    "Each whole can be cut into exactly $3$ thirds, so every whole gives $3$ pieces.",
+    "Four wholes give $4 \\times 3 = 12$ pieces, so the quotient $4 \\div \\frac{1}{3}$ is $12$."
   ],
   "alternativeExplanations": [
     {

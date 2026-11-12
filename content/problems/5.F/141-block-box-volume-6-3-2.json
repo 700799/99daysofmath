@@ -10,25 +10,25 @@
   "primaryAnswer": "36",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Volume of a box is length $\\times$ width $\\times$ height.",
+  "hint": "Volume counts the unit cubes that fill a box. Think about how many cubes cover the bottom and how many layers there are.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Volume of a box is length $\\times$ width $\\times$ height."
+      "text": "Volume counts the unit cubes that fill a box. Think about how many cubes cover the bottom and how many layers there are."
     },
     {
       "level": "guide",
-      "text": "$6 \\times 3 = 18$ cubes cover the bottom layer."
+      "text": "The bottom layer is $6$ by $3$, so it holds $6 \\times 3 = 18$ cubes. The box is $2$ inches tall, which makes $2$ layers."
     },
     {
       "level": "reveal",
-      "text": "There are $2$ layers, so $18 \\times 2 = 36$ cubic inches."
+      "text": "$18 \\times 2 = 36$, so the volume of the box is $36$ cubic inches."
     }
   ],
   "explanation": [
-    "Use $V = l \\times w \\times h$ with $l = 6$, $w = 3$, and $h = 2$.",
+    "The volume of a box is length times width times height, with length $6$, width $3$ and height $2$.",
     "The bottom layer holds $6 \\times 3 = 18$ unit cubes.",
-    "The box is $2$ layers tall, so $18 \\times 2 = 36$ cubic inches."
+    "The box is $2$ layers tall, so the volume is $18 \\times 2 = 36$ cubic inches."
   ],
   "alternativeExplanations": [
     {

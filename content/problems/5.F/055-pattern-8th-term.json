@@ -10,24 +10,25 @@
   "primaryAnswer": "21",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Term 1 is $0$. How many “+3 jumps” happen by term 8?",
+  "hint": "The first term is the starting number, before any adding has happened. How many times is $3$ added to get to the 8th term?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Term 1 is $0$. How many “+3 jumps” happen by term 8?"
+      "text": "The first term is the starting number, before any adding has happened. How many times is $3$ added to get to the 8th term?"
     },
     {
       "level": "guide",
-      "text": "From term 1 to term 8 is $7$ jumps of $3$."
+      "text": "Going from term 1 to term 8 takes $7$ jumps of $3$. Start at $0$ and add $7 \\times 3$."
     },
     {
       "level": "reveal",
-      "text": "$0 + 7 \\times 3 = 21$."
+      "text": "$7 \\times 3 = 21$ and $0 + 21 = 21$, so the 8th term is $21$."
     }
   ],
   "explanation": [
-    "The terms are $0, 3, 6, 9, 12, 15, 18, 21$.",
-    "Term 8 comes after $7$ jumps of $+3$: $0 + 21 = 21$."
+    "The pattern starts at $0$ and each new term is $3$ more than the one before.",
+    "The 8th term comes after $7$ jumps from the first term, so add $7 \\times 3 = 21$ to the start.",
+    "$0 + 21 = 21$, and listing the terms $0, 3, 6, 9, 12, 15, 18, 21$ confirms the 8th term is $21$."
   ],
   "alternativeExplanations": [
     {

@@ -13,11 +13,11 @@
     "3.75"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Five copies of $\\frac{3}{4}$ — that is multiplication.",
+  "hint": "Every batch uses the same amount of flour, so you need several equal groups. Which operation counts equal groups quickly?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Five copies of $\\frac{3}{4}$ — that is multiplication."
+      "text": "Every batch uses the same amount of flour, so you need several equal groups. Which operation counts equal groups quickly?"
     },
     {
       "level": "nudge",
@@ -26,16 +26,16 @@
     },
     {
       "level": "guide",
-      "text": "$5 \\times \\frac{3}{4} = \\frac{15}{4}$."
+      "text": "Multiply $5 \\times \\frac{3}{4}$ by counting fourths: $5 \\times 3$ fourths. Then turn the improper fraction into a mixed number."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{15}{4} = 3\\frac{3}{4}$ cups."
+      "text": "$5 \\times \\frac{3}{4} = \\frac{15}{4} = 3\\frac{3}{4}$, so five batches need $3\\frac{3}{4}$ cups of flour."
     }
   ],
   "explanation": [
-    "$5 \\times \\frac{3}{4} = \\frac{5 \\times 3}{4} = \\frac{15}{4}$.",
-    "$15 \\div 4 = 3$ remainder $3$, so $\\frac{15}{4} = 3\\frac{3}{4}$.",
+    "Five batches means five equal amounts of $\\frac{3}{4}$ cup, so multiply: $5 \\times \\frac{3}{4} = \\frac{15}{4}$.",
+    "Change the improper fraction to a mixed number: $15 \\div 4 = 3$ with remainder $3$, so $\\frac{15}{4} = 3\\frac{3}{4}$.",
     "Five batches need $3\\frac{3}{4}$ cups of flour."
   ],
   "alternativeExplanations": [

@@ -26,10 +26,10 @@
     }
   ],
   "explanation": [
-    "Set it up as division: $\\$5.20 \\div \\$0.65$.",
-    "Working in cents keeps it whole: $520$ cents $\\div$ $65$ cents.",
-    "$65 \\times 8 = 520$, so exactly $8$ bars fit with nothing left over.",
-    "You can buy $8$ granola bars."
+    "You need to know how many groups of $0.65$ dollars fit in $5.20$ dollars, which is the division $5.20 \\div 0.65$.",
+    "Working in cents keeps the numbers whole: $520$ cents divided by $65$ cents.",
+    "$65 \\times 8 = 520$, so exactly $8$ bars fit with no money left over.",
+    "You can buy $8$ granola bars with your allowance."
   ],
   "alternativeExplanations": [
     {

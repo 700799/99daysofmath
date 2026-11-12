@@ -32,19 +32,19 @@
   "primaryAnswer": "C",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Round each fraction to the nearest friendly number: $0$, $\\frac{1}{2}$, or $1$.",
+  "hint": "An estimate does not need a common denominator. Compare each fraction with easy benchmark numbers such as zero, one half and one.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Round each fraction to the nearest friendly number: $0$, $\\frac{1}{2}$, or $1$."
+      "text": "An estimate does not need a common denominator. Compare each fraction with easy benchmark numbers such as zero, one half and one."
     },
     {
       "level": "guide",
-      "text": "$\\frac{5}{8}$ is a little more than $\\frac{1}{2}$, and $\\frac{1}{3}$ is a little less than $\\frac{1}{2}$."
+      "text": "$\\frac{5}{8}$ is a little more than $\\frac{1}{2}$, and $\\frac{1}{3}$ is a little less than $\\frac{1}{2}$. Add the two benchmark values."
     },
     {
       "level": "reveal",
-      "text": "About $\\frac{1}{2} + \\frac{1}{2} = 1$ whole bar."
+      "text": "$\\frac{1}{2} + \\frac{1}{2} = 1$, so Ella ate about $1$ whole bar, which is choice C."
     }
   ],
   "explanation": [

@@ -12,25 +12,25 @@
     "6.0"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Split $1.2$ into $1 + 0.2$.",
+  "hint": "A decimal like this one can be broken into a whole part and a tenths part. Multiply each part by five.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Split $1.2$ into $1 + 0.2$."
+      "text": "A decimal like this one can be broken into a whole part and a tenths part. Multiply each part by five."
     },
     {
       "level": "guide",
-      "text": "$1 \\times 5 = 5$ and $0.2 \\times 5 = 1$."
+      "text": "Split $1.2$ into $1 + 0.2$. Work out $1 \\times 5$ and $0.2 \\times 5$ separately, and then add the two results."
     },
     {
       "level": "reveal",
-      "text": "$5 + 1 = 6$."
+      "text": "The parts are $1 \\times 5 = 5$ and $0.2 \\times 5 = 1$, so the product is $5 + 1 = 6$."
     }
   ],
   "explanation": [
-    "$1.2 \\times 5 = (1 + 0.2) \\times 5$.",
-    "$1 \\times 5 = 5$ and $0.2 \\times 5 = 1.0$.",
-    "$5 + 1 = 6$."
+    "Split the decimal so each part is easy to multiply: $1.2 \\times 5 = (1 + 0.2) \\times 5$.",
+    "Multiply each part: $1 \\times 5 = 5$, and $0.2 \\times 5 = 1.0$ because five groups of two tenths make ten tenths.",
+    "Add the two parts: $5 + 1 = 6$, so the product $1.2 \\times 5$ is $6$."
   ],
   "tags": [
     "decimals",

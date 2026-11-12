@@ -13,24 +13,25 @@
     "2500 g"
   ],
   "acceptanceMode": "normalized",
-  "hint": "$1$ kg $= 1000$ g.",
+  "hint": "The prefix kilo means one thousand. Use that to connect kilograms with grams, and think about which unit is smaller.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$1$ kg $= 1000$ g."
+      "text": "The prefix kilo means one thousand. Use that to connect kilograms with grams, and think about which unit is smaller."
     },
     {
       "level": "guide",
-      "text": "Multiply by $1000$ — the decimal point moves 3 places right."
+      "text": "One kilogram is $1000$ grams, so multiply $2.5$ by $1000$. Multiplying by $1000$ shifts the digits three places to the left."
     },
     {
       "level": "reveal",
-      "text": "$2.5 \\times 1000 = 2500$ g."
+      "text": "$2.5 \\times 1000 = 2500$, so a mass of $2.5$ kilograms equals $2500$ grams."
     }
   ],
   "explanation": [
-    "$1$ kg $= 1000$ g.",
-    "$2.5 \\times 1000 = 2500$ grams."
+    "The prefix kilo means a thousand, so $1$ kilogram equals $1000$ grams.",
+    "Grams are the smaller unit, so there will be more of them. Multiply the kilograms by $1000$.",
+    "Work it out: $2.5 \\times 1000 = 2500$, so $2.5$ kilograms is $2500$ grams."
   ],
   "tags": [
     "measurement",

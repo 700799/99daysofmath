@@ -15,25 +15,25 @@
   "primaryAnswer": "5/6",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The pieces are different sizes — find a common denominator first.",
+  "hint": "Halves and thirds are different sized pieces, so they cannot be added yet. What do the fractions need to have in common?",
   "hints": [
     {
       "level": "nudge",
-      "text": "The pieces are different sizes — find a common denominator first."
+      "text": "Halves and thirds are different sized pieces, so they cannot be added yet. What do the fractions need to have in common?"
     },
     {
       "level": "guide",
-      "text": "Sixths work for both: $\\frac{1}{2} = \\frac{3}{6}$ and $\\frac{1}{3} = \\frac{2}{6}$."
+      "text": "Use sixths, because $6$ is a multiple of both $2$ and $3$. Rewrite $\\frac{1}{2}$ as $\\frac{3}{6}$ and $\\frac{1}{3}$ as $\\frac{2}{6}$, then add."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{3}{6} + \\frac{2}{6} = \\frac{5}{6}$."
+      "text": "$\\frac{3}{6} + \\frac{2}{6} = \\frac{5}{6}$, so the sum of the two fractions is $\\frac{5}{6}$."
     }
   ],
   "explanation": [
-    "A common denominator for $2$ and $3$ is $6$.",
-    "$\\frac{1}{2} = \\frac{3}{6}$ and $\\frac{1}{3} = \\frac{2}{6}$.",
-    "$\\frac{3}{6} + \\frac{2}{6} = \\frac{5}{6}$."
+    "Halves and thirds are different sizes, so first find a common denominator. The smallest number both $2$ and $3$ divide is $6$.",
+    "Rename each fraction in sixths: $\\frac{1}{2} = \\frac{3}{6}$ and $\\frac{1}{3} = \\frac{2}{6}$.",
+    "Now the pieces match, so add the numerators: $\\frac{3}{6} + \\frac{2}{6} = \\frac{5}{6}$."
   ],
   "alternativeExplanations": [
     {

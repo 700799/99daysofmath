@@ -18,25 +18,25 @@
     "24 cubic cm"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Volume of a box $=$ length × width × height.",
+  "hint": "Volume counts the unit cubes that fill a box. Which three measurements of the box do you need to multiply?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Volume of a box $=$ length × width × height."
+      "text": "Volume counts the unit cubes that fill a box. Which three measurements of the box do you need to multiply?"
     },
     {
       "level": "guide",
-      "text": "$4 \\times 3 \\times 2$."
+      "text": "Read the length, width and height from the picture: $4$, $3$ and $2$ centimeters. Multiply all three, starting with $4 \\times 3$."
     },
     {
       "level": "reveal",
-      "text": "$4 \\times 3 = 12$, then $12 \\times 2 = 24$ cubic cm."
+      "text": "$4 \\times 3 = 12$ and $12 \\times 2 = 24$, so the volume is $24$ cubic centimeters."
     }
   ],
   "explanation": [
-    "$V = l \\times w \\times h = 4 \\times 3 \\times 2$.",
-    "$4 \\times 3 = 12$ and $12 \\times 2 = 24$.",
-    "The volume is $24$ cubic centimeters."
+    "The volume of a box is length times width times height, which here is $4 \\times 3 \\times 2$.",
+    "The bottom layer holds $4 \\times 3 = 12$ cubes, and there are $2$ layers, so multiply $12 \\times 2 = 24$.",
+    "The volume of the box is $24$ cubic centimeters."
   ],
   "alternativeExplanations": [
     {

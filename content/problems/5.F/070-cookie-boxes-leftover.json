@@ -10,7 +10,7 @@
   "primaryAnswer": "8",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Try $17$ cookies in boxes of $5$: $5 \\times 3 = 15$, so you fill $3$ boxes and $17 - 15 = 2$ cookies are left over. The leftover is the **remainder**, not the quotient. Same move with the big numbers.",
+  "hint": "Divide the cookies into boxes of eighteen. The question wants the cookies left at the end, not the number of boxes.",
   "hints": [
     {
       "level": "nudge",
@@ -19,21 +19,21 @@
     },
     {
       "level": "nudge",
-      "text": "Divide $1{,}250$ by $18$ — the number you want is what is left at the end, not the number of boxes."
+      "text": "Divide the cookies into boxes of eighteen. The question wants the cookies left at the end, not the number of boxes."
     },
     {
       "level": "guide",
-      "text": "$18 \\times 60 = 1080$, so try going higher: what is $18 \\times 69$?"
+      "text": "$18 \\times 60 = 1080$ is not enough boxes yet, so go higher. Work out $18 \\times 69$ and compare it with $1{,}250$."
     },
     {
       "level": "reveal",
-      "text": "$18 \\times 69 = 1242$, and $1250 - 1242 = 8$ cookies left over."
+      "text": "$18 \\times 69 = 1242$ and $1250 - 1242 = 8$, so $8$ cookies are left over."
     }
   ],
   "explanation": [
-    "Take a big chunk: $18 \\times 60 = 1{,}080$, leaving $1{,}250 - 1{,}080 = 170$.",
-    "$18 \\times 9 = 162$, which fits inside $170$ and leaves $170 - 162 = 8$.",
-    "So $1{,}250 \\div 18 = 69$ boxes with a remainder of $8$.",
+    "Fill a large number of boxes first: $18 \\times 60 = 1{,}080$, which leaves $1{,}250 - 1{,}080 = 170$ cookies.",
+    "Nine more boxes fit, since $18 \\times 9 = 162$, and that leaves $170 - 162 = 8$ cookies.",
+    "Eight cookies cannot fill another box, so $1{,}250 \\div 18$ is $69$ full boxes with remainder $8$.",
     "The question asks for the leftovers, so the answer is $8$ cookies."
   ],
   "alternativeExplanations": [

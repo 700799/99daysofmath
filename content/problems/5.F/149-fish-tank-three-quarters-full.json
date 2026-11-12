@@ -12,7 +12,7 @@
     "1,800"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Try a tiny tank $2 \\times 2 \\times 4$: its volume is $16$, and $\\frac{3}{4}$ of $16$ is $16 \\div 4 = 4$, then $3 \\times 4 = 12$. The big tank uses those same two moves.",
+  "hint": "The water does not fill the whole tank. Find the volume of the full tank first, and then take the fraction that holds water.",
   "hints": [
     {
       "level": "nudge",
@@ -21,15 +21,15 @@
     },
     {
       "level": "nudge",
-      "text": "Two steps: find the FULL volume of the tank, then take $\\frac{3}{4}$ of it."
+      "text": "The water does not fill the whole tank. Find the volume of the full tank first, and then take the fraction that holds water."
     },
     {
       "level": "guide",
-      "text": "Full tank: $20 \\times 10 \\times 12 = 2400$ cubic cm. Now find $\\frac{3}{4}$ of $2400$."
+      "text": "The full tank is $20 \\times 10 \\times 12 = 2400$ cubic centimeters. For $\\frac{3}{4}$ of it, divide $2400$ by $4$ and multiply by $3$."
     },
     {
       "level": "reveal",
-      "text": "$2400 \\div 4 = 600$, and $3 \\times 600 = 1800$ cubic centimeters."
+      "text": "$2400 \\div 4 = 600$ and $3 \\times 600 = 1800$, so there are $1800$ cubic centimeters of water."
     }
   ],
   "explanation": [

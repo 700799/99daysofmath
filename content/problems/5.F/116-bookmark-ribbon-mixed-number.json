@@ -13,25 +13,25 @@
     "7.5"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Turn the mixed number into an improper fraction first: $1\\frac{1}{4} = \\frac{5}{4}$.",
+  "hint": "Six bookmarks need six equal lengths of ribbon. A mixed number is easier to multiply once it is written as a single fraction.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Turn the mixed number into an improper fraction first: $1\\frac{1}{4} = \\frac{5}{4}$."
+      "text": "Six bookmarks need six equal lengths of ribbon. A mixed number is easier to multiply once it is written as a single fraction."
     },
     {
       "level": "guide",
-      "text": "Now find $6 \\times \\frac{5}{4} = \\frac{30}{4}$."
+      "text": "$1\\frac{1}{4}$ is $\\frac{5}{4}$. Multiply $6 \\times \\frac{5}{4}$ to get a number of fourths, then change it back to a mixed number."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{30}{4} = 7\\frac{2}{4} = 7\\frac{1}{2}$ feet."
+      "text": "$6 \\times \\frac{5}{4} = \\frac{30}{4} = 7\\frac{2}{4}$, so the bookmarks use $7\\frac{1}{2}$ feet of ribbon."
     }
   ],
   "explanation": [
-    "Rewrite the mixed number: $1\\frac{1}{4} = \\frac{4}{4} + \\frac{1}{4} = \\frac{5}{4}$.",
-    "Six bookmarks need $6 \\times \\frac{5}{4} = \\frac{30}{4}$ feet.",
-    "$30 \\div 4 = 7$ with $2$ left over, so $\\frac{30}{4} = 7\\frac{2}{4} = 7\\frac{1}{2}$.",
+    "Rewrite the mixed number as an improper fraction: $1\\frac{1}{4} = \\frac{4}{4} + \\frac{1}{4} = \\frac{5}{4}$.",
+    "Six bookmarks need six of those lengths, so multiply: $6 \\times \\frac{5}{4} = \\frac{30}{4}$ feet.",
+    "Divide to get a mixed number: $30 \\div 4 = 7$ with $2$ left over, so $\\frac{30}{4} = 7\\frac{2}{4} = 7\\frac{1}{2}$.",
     "The six bookmarks use $7\\frac{1}{2}$ feet of ribbon."
   ],
   "alternativeExplanations": [

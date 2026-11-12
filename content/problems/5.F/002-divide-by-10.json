@@ -10,24 +10,25 @@
   "primaryAnswer": "600",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Dividing by $10$ shifts every digit one place to the right.",
+  "hint": "Dividing by ten makes a number ten times smaller. What happens to each digit's place when that happens?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Dividing by $10$ shifts every digit one place to the right."
+      "text": "Dividing by ten makes a number ten times smaller. What happens to each digit's place when that happens?"
     },
     {
       "level": "guide",
-      "text": "One zero disappears: $6{,}000 \\to 600$."
+      "text": "Each digit of $6{,}000$ slides one place to the right, so the $6$ moves from the thousands place to the hundreds place."
     },
     {
       "level": "reveal",
-      "text": "$6{,}000 \\div 10 = 600$."
+      "text": "A $6$ in the hundreds place is $600$, so $6{,}000 \\div 10 = 600$."
     }
   ],
   "explanation": [
-    "Dividing by $10$ makes a number ten times smaller — each digit moves one place to the right.",
-    "$6{,}000 \\div 10 = 600$."
+    "Dividing by $10$ makes a number ten times smaller, which moves every digit one place to the right.",
+    "In $6{,}000$ the $6$ is in the thousands place, so after dividing it lands in the hundreds place.",
+    "That gives $6{,}000 \\div 10 = 600$, and the check $600 \\times 10 = 6{,}000$ agrees."
   ],
   "tags": [
     "place-value",

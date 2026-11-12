@@ -12,11 +12,11 @@
     "$5.75"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Two steps: total cost first, then the change from $\\$20$.",
+  "hint": "There are two questions hiding here: how much do the smoothies cost together, and how much money comes back?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Two steps: total cost first, then the change from $\\$20$."
+      "text": "There are two questions hiding here: how much do the smoothies cost together, and how much money comes back?"
     },
     {
       "level": "nudge",
@@ -25,17 +25,17 @@
     },
     {
       "level": "guide",
-      "text": "Total: $3 \\times 4.75 = 14.25$."
+      "text": "Find the total with $3 \\times 4.75$, using $3 \\times 4$ and $3 \\times 0.75$. Then subtract that total from $20.00$."
     },
     {
       "level": "reveal",
-      "text": "$20.00 - 14.25 = 5.75$."
+      "text": "The smoothies cost $3 \\times 4.75 = 14.25$, and $20.00 - 14.25 = 5.75$, so Nia gets $\\$5.75$ in change."
     }
   ],
   "explanation": [
-    "Cost: $3 \\times \\$4.75$.",
-    "$3 \\times 4 = 12$ and $3 \\times 0.75 = 2.25$, so the total is $\\$14.25$.",
-    "Change: $\\$20.00 - \\$14.25 = \\$5.75$."
+    "First find the cost of three smoothies, which is $3 \\times \\$4.75$.",
+    "Multiply in parts: $3 \\times 4 = 12$ and $3 \\times 0.75 = 2.25$, so the total cost is $\\$14.25$.",
+    "Change is the amount paid minus the cost: $\\$20.00 - \\$14.25 = \\$5.75$."
   ],
   "alternativeExplanations": [
     {

@@ -10,26 +10,26 @@
   "primaryAnswer": "5.4",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Line up the decimal points, then subtract column by column.",
+  "hint": "Decimals are subtracted one place at a time. What has to be lined up before you start?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Line up the decimal points, then subtract column by column."
+      "text": "Decimals are subtracted one place at a time. What has to be lined up before you start?"
     },
     {
       "level": "guide",
-      "text": "Tenths: $6 - 2 = 4$. Ones: $8 - 3 = ?$"
+      "text": "Line up the decimal points. Subtract the tenths, $6 - 2$, and then the ones, $8 - 3$. No regrouping is needed here."
     },
     {
       "level": "reveal",
-      "text": "$8 - 3 = 5$, so the answer is $5.4$."
+      "text": "The tenths give $4$ and the ones give $5$, so $8.6 - 3.2 = 5.4$."
     }
   ],
   "explanation": [
-    "Stack the numbers with the decimal points lined up.",
-    "Subtract the tenths: $6 - 2 = 4$ tenths. No regrouping needed.",
-    "Subtract the ones: $8 - 3 = 5$.",
-    "So $8.6 - 3.2 = 5.4$."
+    "Stack the numbers with the decimal points lined up, so each digit sits over the digit with the same place value.",
+    "Subtract the tenths: $6 - 2 = 4$ tenths, and no regrouping is needed.",
+    "Subtract the ones in the same way: $8 - 3 = 5$ ones.",
+    "Five ones and four tenths make $5.4$, so $8.6 - 3.2 = 5.4$."
   ],
   "alternativeExplanations": [
     {

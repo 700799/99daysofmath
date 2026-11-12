@@ -10,26 +10,26 @@
   "primaryAnswer": "63",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "How many $8$s fit in $50$? Start there.",
+  "hint": "Division asks how many groups of eight fit in the total. Try taking out a large, easy number of eights first.",
   "hints": [
     {
       "level": "nudge",
-      "text": "How many $8$s fit in $50$? Start there."
+      "text": "Division asks how many groups of eight fit in the total. Try taking out a large, easy number of eights first."
     },
     {
       "level": "guide",
-      "text": "$8 \\times 6 = 48$, so $8 \\times 60 = 480$. How much is left over from $504$?"
+      "text": "$8 \\times 60 = 480$ is close to $504$. Subtract $480$ from $504$ and then see how many more eights fit in what is left."
     },
     {
       "level": "reveal",
-      "text": "$504 - 480 = 24$, and $24 \\div 8 = 3$, so $60 + 3 = 63$."
+      "text": "$504 - 480 = 24$ and $24 \\div 8 = 3$, so the quotient is $60 + 3 = 63$."
     }
   ],
   "explanation": [
-    "$8 \\times 60 = 480$ — that uses up most of $504$.",
-    "$504 - 480 = 24$.",
-    "$24 \\div 8 = 3$.",
-    "So $504 \\div 8 = 60 + 3 = 63$."
+    "Take out a big group first: $8 \\times 60 = 480$, which uses up most of $504$.",
+    "Subtract to see what is still left to share: $504 - 480 = 24$.",
+    "The leftover $24$ holds exactly $3$ more eights, because $24 \\div 8 = 3$.",
+    "Add the two counts of eights: $60 + 3 = 63$, so $504 \\div 8 = 63$."
   ],
   "alternativeExplanations": [
     {

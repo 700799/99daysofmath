@@ -10,24 +10,25 @@
   "primaryAnswer": "4.25",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Line up the decimal points. $2.5$ is the same as $2.50$.",
+  "hint": "When adding decimals, digits with the same place value must be added together. How can you line the numbers up?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Line up the decimal points. $2.5$ is the same as $2.50$."
+      "text": "When adding decimals, digits with the same place value must be added together. How can you line the numbers up?"
     },
     {
       "level": "guide",
-      "text": "$2.50 + 1.75$ — add hundredths, tenths, then ones."
+      "text": "Write $2.5$ as $2.50$ and line up the decimal points with $1.75$. Add the hundredths, then the tenths, then the ones, regrouping when needed."
     },
     {
       "level": "reveal",
-      "text": "$2.50 + 1.75 = 4.25$."
+      "text": "$2.50 + 1.75 = 4.25$, so the sum of the two decimals is $4.25$."
     }
   ],
   "explanation": [
-    "Write $2.5$ as $2.50$ so both have hundredths.",
-    "$2.50 + 1.75 = 4.25$."
+    "Write $2.5$ as $2.50$ so both numbers have a hundredths digit and the decimal points line up.",
+    "Add from the right: $0 + 5 = 5$ hundredths, and $5 + 7 = 12$ tenths, which is $2$ tenths with $1$ whole regrouped.",
+    "Add the ones with the regrouped whole: $2 + 1 + 1 = 4$, so $2.5 + 1.75 = 4.25$."
   ],
   "alternativeExplanations": [
     {

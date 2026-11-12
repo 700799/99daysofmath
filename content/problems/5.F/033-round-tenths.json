@@ -10,25 +10,25 @@
   "primaryAnswer": "3.9",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The tenths digit is $8$; look at the digit after it.",
+  "hint": "Rounding to the nearest tenth keeps one digit after the decimal point. The digit just to its right decides which way to go.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The tenths digit is $8$; look at the digit after it."
+      "text": "Rounding to the nearest tenth keeps one digit after the decimal point. The digit just to its right decides which way to go."
     },
     {
       "level": "guide",
-      "text": "The hundredths digit is $6$, which is $5$ or more — round up."
+      "text": "The tenths digit of $3.86$ is $8$ and the hundredths digit is $6$. Since $6$ is $5$ or more, the tenths digit goes up by one."
     },
     {
       "level": "reveal",
-      "text": "$3.86 \\to 3.9$."
+      "text": "The $8$ tenths rounds up to $9$ tenths, so $3.86$ rounded to the nearest tenth is $3.9$."
     }
   ],
   "explanation": [
-    "$3.86$ sits between $3.8$ and $3.9$.",
-    "The hundredths digit is $6 \\ge 5$, so round the tenths up.",
-    "$3.86 \\approx 3.9$."
+    "The number $3.86$ lies between the tenths $3.8$ and $3.9$, so it must round to one of them.",
+    "Look at the hundredths digit, $6$. It is $5$ or more, so the number is closer to the higher tenth.",
+    "Round the tenths digit up from $8$ to $9$, which gives $3.86 \\approx 3.9$."
   ],
   "tags": [
     "decimals",

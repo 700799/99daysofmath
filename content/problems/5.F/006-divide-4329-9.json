@@ -10,26 +10,26 @@
   "primaryAnswer": "481",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Work place by place: how many $9$s in $43$ hundreds?",
+  "hint": "Long division goes one place at a time, starting with the biggest place. Begin by asking how many nines fit in the hundreds.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Work place by place: how many $9$s in $43$ hundreds?"
+      "text": "Long division goes one place at a time, starting with the biggest place. Begin by asking how many nines fit in the hundreds."
     },
     {
       "level": "guide",
-      "text": "$9 \\times 400 = 3600$. Subtract, then keep dividing what is left."
+      "text": "$9 \\times 400 = 3600$, so take $3600$ away from $4329$. Then divide the $729$ that remains by $9$ in the same way."
     },
     {
       "level": "reveal",
-      "text": "$4329 - 3600 = 729$; $9 \\times 80 = 720$; $9 \\times 1 = 9$. So $400 + 80 + 1 = 481$."
+      "text": "$729 = 720 + 9$, which is $80$ nines and $1$ nine, so the quotient is $400 + 80 + 1 = 481$."
     }
   ],
   "explanation": [
-    "$9 \\times 400 = 3600$, leaving $4329 - 3600 = 729$.",
-    "$9 \\times 80 = 720$, leaving $729 - 720 = 9$.",
-    "$9 \\times 1 = 9$, leaving $0$.",
-    "So $4329 \\div 9 = 400 + 80 + 1 = 481$."
+    "Start with the hundreds: $9 \\times 400 = 3600$ fits, and it leaves $4329 - 3600 = 729$.",
+    "Move to the tens: $9 \\times 80 = 720$ fits in $729$, and it leaves $729 - 720 = 9$.",
+    "The last $9$ is exactly one more nine, so nothing is left over.",
+    "Add up the nines you took out: $400 + 80 + 1 = 481$, so $4{,}329 \\div 9 = 481$."
   ],
   "tags": [
     "division"

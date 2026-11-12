@@ -10,25 +10,25 @@
   "primaryAnswer": "50",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Parentheses go first, always.",
+  "hint": "Check the order of operations. The grouping symbols show which part of the expression must be done first.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Parentheses go first, always."
+      "text": "Check the order of operations. The grouping symbols show which part of the expression must be done first."
     },
     {
       "level": "guide",
-      "text": "$7 + 3 = 10$, so the expression becomes $5 \\times 10$."
+      "text": "Add inside the parentheses first: $7 + 3 = 10$. The expression then becomes $5 \\times 10$."
     },
     {
       "level": "reveal",
-      "text": "$5 \\times 10 = 50$."
+      "text": "$5 \\times 10 = 50$, so the whole expression equals $50$."
     }
   ],
   "explanation": [
-    "Parentheses tell you which part to do first: $7 + 3 = 10$.",
-    "Now the expression is $5 \\times 10$.",
-    "$5 \\times 10 = 50$."
+    "Parentheses show which part to do first, so add inside them: $7 + 3 = 10$.",
+    "Replace the parentheses with that sum, and the expression becomes $5 \\times 10$.",
+    "Multiply to finish: $5 \\times 10 = 50$, so the value is $50$."
   ],
   "alternativeExplanations": [
     {
