@@ -10,24 +10,26 @@
   "primaryAnswer": "20",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Change the percent to a decimal first.",
+  "hint": "Try the decimal route: a percent becomes a decimal when you divide it by $100$. What decimal is $25\\%$?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Change the percent to a decimal first."
+      "text": "Try the decimal route: a percent becomes a decimal when you divide it by $100$. What decimal is $25\\%$?"
     },
     {
       "level": "guide",
-      "text": "$25\\% = 0.25$. Multiply: $0.25 \\times 80$."
+      "text": "As a decimal $25\\% = 0.25$, and the word \"of\" means multiply, so set up $0.25 \\times 80$."
     },
     {
       "level": "reveal",
-      "text": "$0.25 \\times 80 = 20$."
+      "text": "The product is $0.25 \\times 80 = 20$, so $25\\%$ of $80$ equals $20$."
     }
   ],
   "explanation": [
-    "$25\\% = 25/100 = 0.25$.",
-    "$0.25 \\times 80 = 20$."
+    "Divide the percent by $100$ to write it as a decimal: $25 \\div 100 = 0.25$.",
+    "The word \"of\" signals multiplication, so the problem becomes $0.25 \\times 80$.",
+    "Since $0.25$ is a quarter, the product is the same as $80 \\div 4$, which is $20$.",
+    "The decimal method shows that $25\\%$ of $80$ is $20$."
   ],
   "alternativeExplanations": [
     {

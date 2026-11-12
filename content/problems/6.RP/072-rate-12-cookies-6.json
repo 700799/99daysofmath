@@ -14,24 +14,26 @@
     "50 cents"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Total dollars $\\div$ number of cookies.",
+  "hint": "All the cookies cost the same, so the total price is shared equally. Which number gets divided: the dollars or the cookies?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Total dollars $\\div$ number of cookies."
+      "text": "All the cookies cost the same, so the total price is shared equally. Which number gets divided: the dollars or the cookies?"
     },
     {
       "level": "guide",
-      "text": "$6 \\div 12$."
+      "text": "\"Cost per cookie\" means dollars divided by cookies, so compute $6 \\div 12$. Expect an answer less than one dollar."
     },
     {
       "level": "reveal",
-      "text": "$\\$0.50$."
+      "text": "$6 \\div 12 = 0.50$, so each cookie costs $0.50$ dollars, or $50$ cents."
     }
   ],
   "explanation": [
-    "Per cookie = total $\\div$ count.",
-    "$6 \\div 12 = 0.50$."
+    "Cost per cookie is a unit rate with dollars first, so divide the dollars by the cookies.",
+    "Set up $\\frac{6}{12}$, which simplifies to $\\frac{1}{2}$ because $6$ is half of $12$.",
+    "Half a dollar written as a decimal is $0.50$.",
+    "Each cookie costs $0.50$ dollars, which is $50$ cents."
   ],
   "alternativeExplanations": [
     {

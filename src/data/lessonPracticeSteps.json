@@ -204,6 +204,133 @@
   "A cube has a top, a bottom, and 4 faces around the sides.",
   "1 + 1 + 4 = 6, so a cube has 6 faces, all equal squares."
  ],
+ "6.RP-1#0": [
+  "A ratio lists the amounts in the order the words are given, then gets simplified like a fraction.",
+  "Blue comes first, so blue to red is 6:9.",
+  "Both 6 and 9 can be divided by 3: 6 ÷ 3 = 2 and 9 ÷ 3 = 3.",
+  "The ratio of blue to red in simplest form is 2:3."
+ ],
+ "6.RP-1#1": [
+  "Write the boys first because the question says boys to girls, then look for a common factor.",
+  "There are 8 boys and 12 girls, so boys to girls is 8:12.",
+  "The largest number that divides both 8 and 12 is 4: 8 ÷ 4 = 2 and 12 ÷ 4 = 3.",
+  "The simplest ratio of boys to girls is 2:3."
+ ],
+ "6.RP-2#0": [
+  "Cost per apple means the price of one apple, so share the total cost equally.",
+  "Divide the dollars by the number of apples: 4 ÷ 8.",
+  "The division gives 4 ÷ 8 = 0.50, which is half a dollar.",
+  "Each apple costs 50 cents, which is 0.50 dollars."
+ ],
+ "6.RP-2#1": [
+  "Meters per second is the distance covered in one second.",
+  "Divide the meters by the seconds: 100 ÷ 20.",
+  "100 ÷ 20 = 5, so the runner goes 5 meters per second."
+ ],
+ "6.RP-3#0": [
+  "Every pair in a ratio table uses the same multiplier, so find it from a pair you know.",
+  "12 ÷ 3 = 4 and 20 ÷ 5 = 4, so each output is the input × 4.",
+  "Use the same rule on the input 7: 7 × 4 = 28.",
+  "The output that goes with 7 is 28."
+ ],
+ "6.RP-3#1": [
+  "More mix makes more cookies at the same rate, so compare the amounts of mix.",
+  "6 cups is 3 times as much as 2 cups, because 6 ÷ 2 = 3.",
+  "Triple the number of cookies too: 10 × 3 = 30.",
+  "So 6 cups of mix make 30 cookies."
+ ],
+ "6.RP-4#0": [
+  "This ratio compares a part with the whole team, so you need the total number of players first.",
+  "Add the two groups to get the whole team: 7 + 3 = 10 players.",
+  "Defenders come first in the ratio, and there are 3 of them.",
+  "The ratio of defenders to the whole team is 3:10."
+ ],
+ "6.RP-4#1": [
+  "A fraction of the bag is the part you want over the total number of chips.",
+  "Find the total number of chips in the bag: 5 + 5 = 10.",
+  "Red chips over total chips is 5/10.",
+  "Divide top and bottom by 5 to simplify, so 1/2 of the chips are red."
+ ],
+ "6.RP-5#0": [
+  "Percent means out of 100, so change the percent into a decimal and multiply.",
+  "Divide the percent by 100 to get the decimal: 10 ÷ 100 = 0.10.",
+  "Multiply the decimal by the whole amount: 0.10 × 250 = 25.",
+  "This shows that 10% of 250 is equal to 25."
+ ],
+ "6.RP-5#1": [
+  "Look for a simple fraction that means the same as 25%.",
+  "25% is one quarter, so divide the number by 4.",
+  "Dividing gives 40 ÷ 4 = 10, so 25% of 40 is equal to 10."
+ ],
+ "6.RP-6#0": [
+  "Use the fact that every foot is the same number of inches.",
+  "1 foot = 12 inches, so multiply the feet by 12.",
+  "5 × 12 = 60, so there are 60 inches in 5 feet."
+ ],
+ "6.RP-6#1": [
+  "Centimeters are smaller than meters, so the number will get bigger: multiply.",
+  "Each meter is 100 cm, so work out 3.5 × 100.",
+  "Multiplying by 100 moves the decimal point two places right: 3.5 becomes 350.",
+  "So there are 350 cm in 3.5 meters."
+ ],
+ "6.RP-7#0": [
+  "10% is one tenth, and there is a quick shortcut for dividing by 10.",
+  "Move the decimal point one place to the left: 250 becomes 25.0.",
+  "One tenth of 250 is 25, so 10% of 250 is 25."
+ ],
+ "6.RP-7#1": [
+  "Think about what everyday fraction 50% stands for.",
+  "50% is one half, so divide the number by 2.",
+  "Halving gives 86 ÷ 2 = 43, so 50% of 86 is equal to 43."
+ ],
+ "6.RP-8#0": [
+  "Speed in mph means how many miles the car goes in one hour.",
+  "Divide the miles by the hours: 240 ÷ 4.",
+  "240 ÷ 4 = 60, so the car drives at 60 mph."
+ ],
+ "6.RP-8#1": [
+  "Cost per orange is the price of one orange, so share the total cost equally.",
+  "Divide the dollars by the number of oranges: 4 ÷ 8.",
+  "4 ÷ 8 = 0.50, so each orange costs 50 cents (0.50 dollars)."
+ ],
+ "6.RP-9#0": [
+  "Inches are smaller than feet, so there will be fewer feet: divide.",
+  "12 inches make 1 foot, so count the groups of 12 in 36.",
+  "36 ÷ 12 = 3, so there are 3 feet in 36 inches."
+ ],
+ "6.RP-9#1": [
+  "A kilometer is much longer than a meter, so the number of meters will be bigger.",
+  "1 km = 1000 m, so multiply the kilometers by 1000.",
+  "Multiplying gives 5 × 1000 = 5000, so 5 km is equal to 5000 meters."
+ ],
+ "6.RP-10#0": [
+  "Find the price of one pack first, then build up to 8 packs.",
+  "Divide the cost by the packs: one pack costs 20 ÷ 5 = 4 dollars.",
+  "Multiply the unit price by 8 packs: 4 × 8 = 32.",
+  "The cost for 8 packs is 32 dollars."
+ ],
+ "6.RP-10#1": [
+  "The bigger batch keeps the same ratio of eggs to cookies, so find how many times bigger it is.",
+  "36 ÷ 12 = 3, so there are 3 times as many cookies.",
+  "Use 3 times as many eggs as well: 3 × 3 = 9.",
+  "The recipe needs 9 eggs to make 36 cookies."
+ ],
+ "6.RP-11#0": [
+  "When you know the speed and the time, distance = rate × time.",
+  "The rate is 20 km/h and the time is 2 hours, so work out 20 × 2.",
+  "20 × 2 = 40, so the boat travels a distance of 40 km."
+ ],
+ "6.RP-11#1": [
+  "Speed is the distance covered in one hour, so rate = distance ÷ time.",
+  "The distance is 900 miles and the time is 3 hours, so work out 900 ÷ 3.",
+  "900 ÷ 3 = 300, so the jet flies at 300 mph."
+ ],
+ "6.RP-11#2": [
+  "The speed is given per second but the time is in minutes, so match the units first.",
+  "There are 60 seconds in 1 minute, so the time is 60 seconds.",
+  "Now use the rule distance = rate × time: 5 × 60 = 300.",
+  "The runner covers 300 meters in 1 minute."
+ ],
  "6.SP-1#0": [
   "The mean is the total of the values shared equally among them.",
   "Add the three values to get the total: 10 + 20 + 30 = 60.",

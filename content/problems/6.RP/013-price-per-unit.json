@@ -15,24 +15,26 @@
     "0.50"
   ],
   "acceptanceMode": "normalized",
-  "hint": "\"Per apple\" means: cost for one apple.",
+  "hint": "\"Per apple\" means the price of one single apple. The total cost has to be shared equally among all the apples.",
   "hints": [
     {
       "level": "nudge",
-      "text": "\"Per apple\" means: cost for one apple."
+      "text": "\"Per apple\" means the price of one single apple. The total cost has to be shared equally among all the apples."
     },
     {
       "level": "guide",
-      "text": "Divide total cost by the number of apples."
+      "text": "Eight apples cost $4$ dollars in all, so divide the money by the number of apples: find $4 \\div 8$."
     },
     {
       "level": "reveal",
-      "text": "$4 \\div 8 = 0.5$ dollars (or $50$ cents)."
+      "text": "$4 \\div 8 = 0.5$, so each apple costs $0.50$ dollars, or $50$ cents."
     }
   ],
   "explanation": [
-    "Divide total cost by number of apples: $4 \\div 8 = 0.5$.",
-    "Price per apple is \\$$0.50$."
+    "The price per apple is a unit rate, found by dividing the total cost by the number of apples.",
+    "Be careful with the order: dollars go first, so the division is $4 \\div 8$ and not $8 \\div 4$.",
+    "As a fraction $\\frac{4}{8} = \\frac{1}{2}$, and one half of a dollar is $0.5$ dollars.",
+    "Each apple costs $0.5$ dollars, which is $50$ cents."
   ],
   "tags": [
     "unit-rate",

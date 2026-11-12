@@ -12,25 +12,26 @@
     "9 dogs"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Add the parts to find each part size.",
+  "hint": "The $24$ animals are the dogs and cats **together**. How many equal parts does the ratio $3 : 5$ split the whole shelter into?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Add the parts to find each part size."
+      "text": "The $24$ animals are the dogs and cats **together**. How many equal parts does the ratio $3 : 5$ split the whole shelter into?"
     },
     {
       "level": "guide",
-      "text": "Parts: $3 + 5 = 8$. Each part: $24 \\div 8 = 3$. Dogs $= 3 \\times 3$."
+      "text": "There are $3 + 5 = 8$ parts, so one part is $24 \\div 8 = 3$ animals. Dogs take up $3$ of the parts."
     },
     {
       "level": "reveal",
-      "text": "$3 \\times 3 = 9$."
+      "text": "$3 \\times 3 = 9$, so there are $9$ dogs at the shelter."
     }
   ],
   "explanation": [
-    "Total parts: $3 + 5 = 8$.",
-    "Each part: $24 \\div 8 = 3$.",
-    "Dogs (3 parts): $3 \\times 3 = 9$."
+    "Add the ratio numbers to get the total number of parts: $3 + 5 = 8$.",
+    "Divide the total animals by the parts to find one part: $24 \\div 8 = 3$ animals.",
+    "Dogs are $3$ of the $8$ parts, so there are $3 \\times 3 = 9$ dogs.",
+    "The shelter has $9$ dogs and $15$ cats, which add to $24$."
   ],
   "alternativeExplanations": [
     {

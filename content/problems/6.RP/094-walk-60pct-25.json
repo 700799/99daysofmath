@@ -12,24 +12,26 @@
     "15 students"
   ],
   "acceptanceMode": "normalized",
-  "hint": "$60\\% = 0.60$.",
+  "hint": "Sixty percent of the class means a fraction of the $25$ students. Which simple fraction equals $60\\%$?",
   "hints": [
     {
       "level": "nudge",
-      "text": "$60\\% = 0.60$."
+      "text": "Sixty percent of the class means a fraction of the $25$ students. Which simple fraction equals $60\\%$?"
     },
     {
       "level": "guide",
-      "text": "$0.60 \\times 25$."
+      "text": "$60\\% = \\frac{60}{100} = \\frac{3}{5}$. One fifth of $25$ is $5$ students, so take three of those fifths."
     },
     {
       "level": "reveal",
-      "text": "$15$."
+      "text": "$3 \\times 5 = 15$, so $15$ students walk to school."
     }
   ],
   "explanation": [
-    "$0.60 \\times 25 = 15$ students.",
-    "Final answer: 15."
+    "Write the percent as a fraction and simplify: $60\\% = \\frac{60}{100} = \\frac{3}{5}$.",
+    "Find one fifth of the class by dividing by $5$: $25 \\div 5 = 5$ students.",
+    "Three fifths is three times that amount: $3 \\times 5 = 15$. The decimal check $0.60 \\times 25 = 15$ agrees.",
+    "Fifteen of the students in the class walk to school."
   ],
   "alternativeExplanations": [
     {

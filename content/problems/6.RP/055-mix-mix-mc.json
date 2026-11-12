@@ -12,29 +12,31 @@
     "8 marbles"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Not red means $\\frac{2}{5}$.",
+  "hint": "The question asks about the marbles that are **not** red. If $\\frac{3}{5}$ are red, what fraction is left over for the other colors?",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Try the same problem with friendlier numbers first — say \"20% of 50\" — then come back to this one."
+      "text": "Picture a smaller bag of just $5$ marbles with $3$ of them red. How many in that small bag are not red?"
     },
     {
       "level": "nudge",
-      "text": "Not red means $\\frac{2}{5}$."
+      "text": "The question asks about the marbles that are **not** red. If $\\frac{3}{5}$ are red, what fraction is left over for the other colors?"
     },
     {
       "level": "guide",
-      "text": "$\\frac{2}{5}$ of $20$."
+      "text": "The rest is $1 - \\frac{3}{5} = \\frac{2}{5}$. One fifth of $20$ is $20 \\div 5 = 4$ marbles, so take two of those fifths."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{2}{5} \\times 20 = 8$."
+      "text": "$2 \\times 4 = 8$, so $8$ marbles are not red."
     }
   ],
   "explanation": [
-    "Not red: $1 - \\frac{3}{5} = \\frac{2}{5}$.",
-    "$\\frac{2}{5} \\times 20 = 8$."
+    "The whole bag is $\\frac{5}{5}$, so the fraction that is not red is $\\frac{5}{5} - \\frac{3}{5} = \\frac{2}{5}$.",
+    "Find one fifth of the bag by dividing by $5$: $20 \\div 5 = 4$ marbles.",
+    "Two fifths is twice as much, so $2 \\times 4 = 8$.",
+    "There are $8$ marbles that are not red, and the other $12$ are red."
   ],
   "tags": [
     "MAP-practice",

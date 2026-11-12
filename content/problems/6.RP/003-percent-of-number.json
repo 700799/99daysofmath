@@ -10,11 +10,12 @@
   "primaryAnswer": "20",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$25\\%$ means the same as $\\frac{1}{4}$. Or convert to a decimal: $25\\% = 0.25$.",
+  "hint": "Percent means \"out of $100$\". Think about which simple fraction is the same as $25$ out of $100$.",
   "explanation": [
-    "Convert $25\\%$ to a decimal: $25\\% = 0.25$.",
-    "Multiply: $0.25 \\times 80 = 20$.",
-    "So $25\\%$ of $80$ is $20$."
+    "Percent means \"per hundred\", so $25\\%$ is $\\frac{25}{100}$, which simplifies to $\\frac{1}{4}$.",
+    "Taking one fourth of a number means dividing it by $4$, so compute $80 \\div 4 = 20$.",
+    "Check the result with decimals: $0.25 \\times 80 = 20$, which matches the first method.",
+    "The final answer is that $25\\%$ of $80$ equals $20$."
   ],
   "alternativeExplanations": [
     {
@@ -41,15 +42,15 @@
   "hints": [
     {
       "level": "nudge",
-      "text": "$25\\%$ means the same as $\\frac{1}{4}$. Or convert to a decimal: $25\\% = 0.25$."
+      "text": "Percent means \"out of $100$\". Think about which simple fraction is the same as $25$ out of $100$."
     },
     {
       "level": "guide",
-      "text": "Convert $25\\%$ to a decimal: $25\\% = 0.25$."
+      "text": "$25\\%$ equals $\\frac{1}{4}$, so finding $25\\%$ of $80$ is the same as splitting $80$ into $4$ equal parts: work out $80 \\div 4$."
     },
     {
       "level": "reveal",
-      "text": "So $25\\%$ of $80$ is $20$."
+      "text": "Dividing gives $80 \\div 4 = 20$, so the answer is that $25\\%$ of $80$ equals $20$."
     }
   ],
   "diagram": {

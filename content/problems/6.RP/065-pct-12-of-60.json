@@ -13,25 +13,26 @@
     "20 %"
   ],
   "acceptanceMode": "exact",
-  "hint": "Divide the part by the whole.",
+  "hint": "\"What percent\" asks you to compare a part with a whole. Decide which number is the part and which is the whole.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Divide the part by the whole."
+      "text": "\"What percent\" asks you to compare a part with a whole. Decide which number is the part and which is the whole."
     },
     {
       "level": "guide",
-      "text": "$12 \\div 60 = 0.20$."
+      "text": "The part is $12$ and the whole is $60$, so write $\\frac{12}{60}$. Simplify it by dividing both numbers by $12$, then change it to a percent."
     },
     {
       "level": "reveal",
-      "text": "$0.20 = 20\\%$."
+      "text": "$\\frac{12}{60} = \\frac{1}{5} = 0.20$, so the number $12$ is $20\\%$ of $60$."
     }
   ],
   "explanation": [
-    "Part over whole: $\\frac{12}{60}$.",
-    "$12 \\div 60 = 0.20$.",
-    "$0.20 = 20\\%$."
+    "A percent compares a part to its whole, so write the fraction $\\frac{12}{60}$.",
+    "Divide top and bottom by $12$ to simplify it to $\\frac{1}{5}$.",
+    "One fifth as a decimal is $1 \\div 5 = 0.20$, and multiplying by $100$ gives $20$.",
+    "The answer is that $12$ is $20\\%$ of $60$."
   ],
   "alternativeExplanations": [
     {

@@ -10,29 +10,31 @@
   "primaryAnswer": "8",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Find the scale factor on peanuts.",
+  "hint": "Peanuts and raisins must grow together to keep the mix the same. How many times larger is this batch's peanut amount than the ratio's peanut number?",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Try the same problem with friendlier numbers first — say \"20% of 50\" — then come back to this one."
+      "text": "Start with a double batch: $6$ cups of peanuts would need $4$ cups of raisins. How many more doublings get you to $12$ cups of peanuts?"
     },
     {
       "level": "nudge",
-      "text": "Find the scale factor on peanuts."
+      "text": "Peanuts and raisins must grow together to keep the mix the same. How many times larger is this batch's peanut amount than the ratio's peanut number?"
     },
     {
       "level": "guide",
-      "text": "Peanuts go from $3$ to $12$ — multiplied by $4$. So scale raisins by $4$ too."
+      "text": "Peanuts are $3$ in the ratio and $12$ in the batch, and $12 \\div 3 = 4$. Multiply the raisin number, $2$, by the same $4$."
     },
     {
       "level": "reveal",
-      "text": "$2 \\times 4 = 8$ cups of raisins."
+      "text": "$2 \\times 4 = 8$, so the batch needs $8$ cups of raisins."
     }
   ],
   "explanation": [
-    "$3$ scales to $12$ by $\\times 4$.",
-    "Raisins scale by the same factor: $2 \\times 4 = 8$."
+    "The ratio peanuts to raisins is $3 : 2$, and the batch must be an equivalent ratio.",
+    "Find the scale factor from the peanuts: $12 \\div 3 = 4$.",
+    "Multiply the raisins by the same factor, since both parts scale together: $2 \\times 4 = 8$.",
+    "The batch needs $8$ cups of raisins, and $12 : 8$ simplifies to $3 : 2$."
   ],
   "alternativeExplanations": [
     {

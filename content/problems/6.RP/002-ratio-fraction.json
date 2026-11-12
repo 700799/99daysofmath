@@ -17,11 +17,12 @@
     "0.375"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Count the shaded parts (numerator) and the total parts (denominator).",
+  "hint": "A fraction has two jobs: the bottom number counts all the equal parts, and the top number counts the parts you care about.",
   "explanation": [
-    "There are $3$ shaded parts out of $8$ equal parts total.",
-    "Write that as a fraction: $\\frac{\\text{shaded}}{\\text{total}} = \\frac{3}{8}$.",
-    "Final answer: $\\frac{3}{8}$."
+    "The denominator names how many equal parts make the whole bar, and the bar has $8$ of them.",
+    "The numerator counts the parts being described, and $3$ parts are shaded.",
+    "Put shaded over total to get $\\frac{3}{8}$. It cannot be simplified because $3$ and $8$ share no factor except $1$.",
+    "The shaded fraction of the bar is $\\frac{3}{8}$."
   ],
   "alternativeExplanations": [
     {
@@ -58,15 +59,15 @@
   "hints": [
     {
       "level": "nudge",
-      "text": "Count the shaded parts (numerator) and the total parts (denominator)."
+      "text": "A fraction has two jobs: the bottom number counts all the equal parts, and the top number counts the parts you care about."
     },
     {
       "level": "guide",
-      "text": "There are $3$ shaded parts out of $8$ equal parts total."
+      "text": "The bar has $8$ equal parts, so $8$ goes on the bottom. Put the number of shaded parts on top."
     },
     {
       "level": "reveal",
-      "text": "Final answer: $\\frac{3}{8}$."
+      "text": "Three of the eight parts are shaded, so the fraction is $\\frac{3}{8}$, written $3/8$."
     }
   ]
 }

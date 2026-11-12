@@ -12,24 +12,26 @@
     "4 lb"
   ],
   "acceptanceMode": "normalized",
-  "hint": "$16$ oz make $1$ lb. Divide.",
+  "hint": "Ounces are smaller than pounds, so the number of pounds will be smaller than $64$. Which operation makes groups out of the ounces?",
   "hints": [
     {
       "level": "nudge",
-      "text": "$16$ oz make $1$ lb. Divide."
+      "text": "Ounces are smaller than pounds, so the number of pounds will be smaller than $64$. Which operation makes groups out of the ounces?"
     },
     {
       "level": "guide",
-      "text": "$64 \\div 16$."
+      "text": "Every $16$ ounces makes one pound, so count how many groups of $16$ fit in $64$: find $64 \\div 16$."
     },
     {
       "level": "reveal",
-      "text": "$4$ lb."
+      "text": "$64 \\div 16 = 4$, so a weight of $64$ ounces is $4$ pounds."
     }
   ],
   "explanation": [
-    "$64 \\div 16 = 4$ pounds.",
-    "Final answer: 4."
+    "Going from a smaller unit to a larger unit gives fewer units, so divide.",
+    "Each pound is a group of $16$ ounces, so compute $64 \\div 16$.",
+    "Use a multiplication fact to divide: because $16 \\times 4 = 64$, the quotient is $4$.",
+    "Sixty-four ounces are the same weight as $4$ pounds."
   ],
   "alternativeExplanations": [
     {

@@ -15,11 +15,12 @@
   ],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.005,
-  "hint": "Unit price means cost per **one** pen. Divide the total cost by the number of pens.",
+  "hint": "A unit price is the cost of just **one** item. If you know the cost of the whole box, how do you find the cost of one pen?",
   "explanation": [
-    "Set up the unit rate: $\\frac{\\$4.20}{6 \\text{ pens}}$.",
-    "Divide: $4.20 \\div 6 = 0.70$.",
-    "The unit price is $\\$0.70$ per pen."
+    "Unit price means the price for one item, so the total cost is divided by the number of items.",
+    "Set up the division $4.20 \\div 6$, because the box price is shared equally by $6$ pens.",
+    "Think of the price as $420$ cents: $420 \\div 6 = 70$ cents, which is $0.70$ dollars.",
+    "The unit price is $0.70$ dollars per pen."
   ],
   "alternativeExplanations": [
     {
@@ -40,15 +41,15 @@
   "hints": [
     {
       "level": "nudge",
-      "text": "Unit price means cost per **one** pen. Divide the total cost by the number of pens."
+      "text": "A unit price is the cost of just **one** item. If you know the cost of the whole box, how do you find the cost of one pen?"
     },
     {
       "level": "guide",
-      "text": "Set up the unit rate: $\\frac{\\$4.20}{6 \\text{ pens}}$."
+      "text": "The $6$ pens cost $4.20$ dollars together, so share the cost equally among them: work out $4.20 \\div 6$."
     },
     {
       "level": "reveal",
-      "text": "The unit price is $\\$0.70$ per pen."
+      "text": "$4.20 \\div 6 = 0.70$, so each pen costs $0.70$ dollars, which is $70$ cents."
     }
   ]
 }

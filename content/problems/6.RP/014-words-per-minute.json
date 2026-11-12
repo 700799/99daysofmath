@@ -12,24 +12,26 @@
     "60 wpm"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Find words for $1$ minute.",
+  "hint": "Words per minute is a unit rate. Ask yourself how many words fit into each one of the minutes if Mia types steadily.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Find words for $1$ minute."
+      "text": "Words per minute is a unit rate. Ask yourself how many words fit into each one of the minutes if Mia types steadily."
     },
     {
       "level": "guide",
-      "text": "$\\frac{240}{4} = ?$"
+      "text": "Mia's $240$ words are spread evenly over $4$ minutes, so divide: work out $240 \\div 4$."
     },
     {
       "level": "reveal",
-      "text": "$240 \\div 4 = 60$ words per minute."
+      "text": "$240 \\div 4 = 60$, so Mia types $60$ words per minute."
     }
   ],
   "explanation": [
-    "Divide: $240 \\div 4 = 60$.",
-    "Mia types $60$ words per minute."
+    "A \"per minute\" rate tells the amount for $1$ minute, so divide the words by the minutes.",
+    "Write the rate as $\\frac{240 \\text{ words}}{4 \\text{ minutes}}$ and divide both parts by $4$.",
+    "Since $24 \\div 4 = 6$, it follows that the larger division $240 \\div 4$ equals $60$.",
+    "Mia types at a rate of $60$ words per minute."
   ],
   "tags": [
     "unit-rate"

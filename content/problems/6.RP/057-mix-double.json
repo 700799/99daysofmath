@@ -12,7 +12,7 @@
     "16 gallons"
   ],
   "acceptanceMode": "normalized",
-  "hint": "First find gallons per mile (or miles per gallon).",
+  "hint": "The car burns gas at a steady rate. Find how far it travels on **one** gallon, then see how many gallons the trip needs.",
   "hints": [
     {
       "level": "nudge",
@@ -21,20 +21,22 @@
     },
     {
       "level": "nudge",
-      "text": "First find gallons per mile (or miles per gallon)."
+      "text": "The car burns gas at a steady rate. Find how far it travels on **one** gallon, then see how many gallons the trip needs."
     },
     {
       "level": "guide",
-      "text": "MPG: $150 / 5 = 30$. Gallons: $480 / 30$."
+      "text": "The car goes $150 \\div 5 = 30$ miles on each gallon. Divide the $480$-mile trip into $30$-mile pieces: find $480 \\div 30$."
     },
     {
       "level": "reveal",
-      "text": "$480 \\div 30 = 16$ gallons."
+      "text": "$480 \\div 30 = 16$, so the trip uses $16$ gallons."
     }
   ],
   "explanation": [
-    "$150 \\div 5 = 30$ mpg.",
-    "$480 \\div 30 = 16$ gallons."
+    "Find the unit rate first: $150 \\div 5 = 30$ miles for every gallon.",
+    "Each gallon covers $30$ miles, so the number of gallons is the trip length divided by $30$.",
+    "Divide: $480 \\div 30 = 16$, which you can check with $16 \\times 30 = 480$.",
+    "The $480$-mile trip needs $16$ gallons of gas."
   ],
   "tags": [
     "rate",

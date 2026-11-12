@@ -12,29 +12,31 @@
     "16 girls"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Find the scale factor from $3$ to $12$.",
+  "hint": "The class is a scaled-up version of the ratio. Compare the real number of boys with the boys' number in the ratio.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Convert percent ↔ fraction ↔ decimal. Sometimes the easiest form unlocks the answer."
+      "text": "Imagine the boys standing in $3$ equal groups and the girls in $4$ groups of that same size. How many boys would be in each group?"
     },
     {
       "level": "nudge",
-      "text": "Find the scale factor from $3$ to $12$."
+      "text": "The class is a scaled-up version of the ratio. Compare the real number of boys with the boys' number in the ratio."
     },
     {
       "level": "guide",
-      "text": "$12 \\div 3 = 4$."
+      "text": "Boys are $3$ in the ratio but $12$ in the class, and $12 \\div 3 = 4$. Multiply the girls' ratio number, $4$, by that same $4$."
     },
     {
       "level": "reveal",
-      "text": "Girls: $4 \\times 4 = 16$."
+      "text": "$4 \\times 4 = 16$, so there are $16$ girls in the class."
     }
   ],
   "explanation": [
-    "Scale: $12 \\div 3 = 4$.",
-    "Girls: $4 \\times 4 = 16$."
+    "The ratio boys to girls is $3 : 4$, so the real counts are both ratio numbers times one scale factor.",
+    "Find the scale factor using the boys: $12 \\div 3 = 4$.",
+    "Multiply the girls' part by the same factor: $4 \\times 4 = 16$.",
+    "There are $16$ girls, and $12 : 16$ simplifies to $3 : 4$ as it should."
   ],
   "tags": [
     "ratio"

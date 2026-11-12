@@ -12,24 +12,26 @@
     "30 mpg"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Miles $\\div$ gallons.",
+  "hint": "Miles per gallon measures how far one gallon takes the car. Put the miles first when you set up the division.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Miles $\\div$ gallons."
+      "text": "Miles per gallon measures how far one gallon takes the car. Put the miles first when you set up the division."
     },
     {
       "level": "guide",
-      "text": "$360 \\div 12$."
+      "text": "Divide the $360$ miles by the $12$ gallons. Knowing that $36 \\div 12 = 3$ makes this quick."
     },
     {
       "level": "reveal",
-      "text": "$30$."
+      "text": "$360 \\div 12 = 30$, so the car gets $30$ miles per gallon."
     }
   ],
   "explanation": [
-    "$360 \\div 12 = 30$ mpg.",
-    "Final answer: 30."
+    "The rate \"miles per gallon\" means miles divided by gallons.",
+    "Set up the division with the numbers given: $360 \\div 12$.",
+    "Since $36 \\div 12 = 3$, making the top ten times bigger gives $360 \\div 12 = 30$.",
+    "The car travels $30$ miles on each gallon."
   ],
   "tags": [
     "unit-rate",

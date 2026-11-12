@@ -14,25 +14,26 @@
     "5 : 3"
   ],
   "acceptanceMode": "normalized",
-  "hint": "A ratio compares two amounts. The order matters!",
+  "hint": "In a ratio the order of the words matters. Which color is named first in \"red to blue\"?",
   "hints": [
     {
       "level": "nudge",
-      "text": "A ratio compares two amounts. The order matters!"
+      "text": "In a ratio the order of the words matters. Which color is named first in \"red to blue\"?"
     },
     {
       "level": "guide",
-      "text": "You want **red : blue**, so write the red count first."
+      "text": "Red is named first, so the count of red marbles goes first. There are $5$ red and $3$ blue, so write red, a colon, then blue."
     },
     {
       "level": "reveal",
-      "text": "Red is $5$, blue is $3$. Write it as $5:3$ (or $5$ to $3$)."
+      "text": "The ratio of red to blue is $5 : 3$."
     }
   ],
   "explanation": [
-    "A ratio compares two quantities. **Red : blue** puts red first.",
-    "There are $5$ red and $3$ blue.",
-    "Write it as $5:3$ or \"$5$ to $3$\"."
+    "A ratio compares two amounts, and it lists them in the same order as the words in the question.",
+    "The question says \"red to blue\", so the $5$ red marbles come first and the $3$ blue marbles come second.",
+    "The numbers $5$ and $3$ share no common factor, so the ratio is already in simplest form.",
+    "The ratio of red to blue is $5 : 3$."
   ],
   "alternativeExplanations": [
     {

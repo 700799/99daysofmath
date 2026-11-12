@@ -13,7 +13,7 @@
     "$24.00"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Find cost per pound first.",
+  "hint": "Seven does not scale neatly to twelve. Find the price of **one** pound of grapes first.",
   "hints": [
     {
       "level": "nudge",
@@ -22,20 +22,22 @@
     },
     {
       "level": "nudge",
-      "text": "Find cost per pound first."
+      "text": "Seven does not scale neatly to twelve. Find the price of **one** pound of grapes first."
     },
     {
       "level": "guide",
-      "text": "Per lb: $14 \\div 7 = 2$. For $12$ lb: $12 \\times 2$."
+      "text": "One pound costs $14 \\div 7 = 2$ dollars. Multiply that unit price by $12$ pounds."
     },
     {
       "level": "reveal",
-      "text": "$12 \\times 2 = 24$."
+      "text": "$2 \\times 12 = 24$, so $12$ pounds of grapes cost $24$ dollars."
     }
   ],
   "explanation": [
-    "Cost per lb: $14 \\div 7 = 2$.",
-    "$12$ lb cost $12 \\times 2 = 24$."
+    "Find the unit price by dividing cost by pounds: $14 \\div 7 = 2$ dollars per pound.",
+    "Every pound costs the same, so multiply the unit price by the $12$ pounds wanted.",
+    "Multiplying the price by the weight gives $2 \\times 12 = 24$ dollars.",
+    "Twelve pounds of grapes cost $24$ dollars."
   ],
   "alternativeExplanations": [
     {

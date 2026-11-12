@@ -10,7 +10,7 @@
   "primaryAnswer": "60",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$30\\% \\cdot N = 18$.",
+  "hint": "You know a part and its percent, and you need the whole. A good path is to find what $10\\%$ of the number is first.",
   "hints": [
     {
       "level": "nudge",
@@ -19,20 +19,22 @@
     },
     {
       "level": "nudge",
-      "text": "$30\\% \\cdot N = 18$."
+      "text": "You know a part and its percent, and you need the whole. A good path is to find what $10\\%$ of the number is first."
     },
     {
       "level": "guide",
-      "text": "$N = 18 \\div 0.30$."
+      "text": "If $30\\%$ is $18$, then $10\\%$ is $18 \\div 3 = 6$. The whole is $100\\%$, which is ten lots of $10\\%$, so multiply $6$ by $10$."
     },
     {
       "level": "reveal",
-      "text": "$18 \\div 0.30 = 60$."
+      "text": "Ten lots of $6$ make $6 \\times 10 = 60$, so the number is $60$."
     }
   ],
   "explanation": [
-    "$0.30 \\cdot N = 18$.",
-    "$N = 18 \\div 0.30 = 60$."
+    "$30\\%$ is three groups of $10\\%$, so divide the part by $3$ to find $10\\%$: $18 \\div 3 = 6$.",
+    "The whole number is $100\\%$, which is ten groups of $10\\%$, so multiply $6 \\times 10 = 60$.",
+    "Check: $30\\%$ of $60$ is $0.30 \\times 60 = 18$, which is the part given.",
+    "The whole number we were looking for is $60$."
   ],
   "alternativeExplanations": [
     {

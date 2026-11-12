@@ -12,24 +12,26 @@
     "350 km"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Each cm represents $50$ km.",
+  "hint": "The scale works like a rate: each centimeter on the map always stands for the same real distance.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Each cm represents $50$ km."
+      "text": "The scale works like a rate: each centimeter on the map always stands for the same real distance."
     },
     {
       "level": "guide",
-      "text": "$7 \\times 50$."
+      "text": "One centimeter is $50$ km and the cities are $7$ centimeters apart, so multiply $7 \\times 50$."
     },
     {
       "level": "reveal",
-      "text": "$350$ km."
+      "text": "$7 \\times 50 = 350$, so the cities are really $350$ km apart."
     }
   ],
   "explanation": [
-    "$7 \\times 50 = 350$ kilometers.",
-    "Final answer: 350."
+    "The scale $1$ cm $: 50$ km means every map centimeter represents $50$ real kilometers.",
+    "The map distance is $7$ of those centimeters, so multiply $7$ by $50$.",
+    "Use the fact $7 \\times 5 = 35$ to see that the product $7 \\times 50$ is $350$.",
+    "The real distance between the cities is $350$ km."
   ],
   "tags": [
     "ratio",

@@ -12,23 +12,26 @@
     "12 quarts"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Each gallon adds $4$ quarts.",
+  "hint": "Each gallon holds the same number of quarts. Going from a larger unit to a smaller one gives a larger count.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Each gallon adds $4$ quarts."
+      "text": "Each gallon holds the same number of quarts. Going from a larger unit to a smaller one gives a larger count."
     },
     {
       "level": "guide",
-      "text": "Multiply $3 \\times 4$."
+      "text": "One gallon is $4$ quarts, so $3$ gallons is three groups of $4$ quarts: multiply $3 \\times 4$."
     },
     {
       "level": "reveal",
-      "text": "$3 \\times 4 = 12$."
+      "text": "$3 \\times 4 = 12$, so there are $12$ quarts in $3$ gallons."
     }
   ],
   "explanation": [
-    "$3 \\times 4 = 12$ quarts."
+    "The conversion rate is $4$ quarts for every $1$ gallon.",
+    "Each of the $3$ gallons contributes $4$ quarts, so multiply the gallons by $4$.",
+    "Carrying out the multiplication gives $3 \\times 4 = 12$ quarts.",
+    "Three gallons are the same amount as $12$ quarts."
   ],
   "tags": [
     "conversion"

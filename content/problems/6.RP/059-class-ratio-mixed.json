@@ -12,24 +12,26 @@
     "16 boys"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Add parts: $2 + 1 = 3$.",
+  "hint": "The ratio $2 : 1$ splits the class into equal parts, some for boys and some for girls. How many parts are there in all?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Add parts: $2 + 1 = 3$."
+      "text": "The ratio $2 : 1$ splits the class into equal parts, some for boys and some for girls. How many parts are there in all?"
     },
     {
       "level": "guide",
-      "text": "Each part is $24 / 3 = 8$ students."
+      "text": "There are $2 + 1 = 3$ parts, so each part is $24 \\div 3 = 8$ students. Boys make up $2$ of those parts."
     },
     {
       "level": "reveal",
-      "text": "Boys: $2 \\times 8 = 16$."
+      "text": "$2 \\times 8 = 16$, so there are $16$ boys in the class."
     }
   ],
   "explanation": [
-    "Parts: $3$. Each part: $24 / 3 = 8$.",
-    "Boys: $2 \\times 8 = 16$."
+    "Add the ratio numbers to find the total number of equal parts: $2 + 1 = 3$.",
+    "Share the $24$ students equally among the parts: $24 \\div 3 = 8$ students in each part.",
+    "Boys are $2$ of the parts, so multiply the part size by $2$: $2 \\times 8 = 16$.",
+    "There are $16$ boys and $8$ girls, which is a ratio of $2 : 1$."
   ],
   "tags": [
     "ratio"

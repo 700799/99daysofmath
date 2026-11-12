@@ -13,7 +13,7 @@
     "12 gallons"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Find each part first.",
+  "hint": "The $20$ gallons is the blue and yellow **combined**. Count how many equal parts the ratio makes in total.",
   "hints": [
     {
       "level": "nudge",
@@ -22,21 +22,22 @@
     },
     {
       "level": "nudge",
-      "text": "Find each part first."
+      "text": "The $20$ gallons is the blue and yellow **combined**. Count how many equal parts the ratio makes in total."
     },
     {
       "level": "guide",
-      "text": "Parts: $2 + 3 = 5$. Each part: $20 \\div 5 = 4$. Yellow $= 3 \\times 4$."
+      "text": "The mix has $2 + 3 = 5$ parts, so each part is $20 \\div 5 = 4$ gallons. Yellow is $3$ of those parts."
     },
     {
       "level": "reveal",
-      "text": "$3 \\times 4 = 12$ gallons."
+      "text": "$3 \\times 4 = 12$, so $12$ gallons of yellow are needed."
     }
   ],
   "explanation": [
-    "Total parts: $2 + 3 = 5$.",
-    "Each part: $20 \\div 5 = 4$ gal.",
-    "Yellow (3 parts): $3 \\times 4 = 12$ gal."
+    "Add the ratio numbers for the total parts in the mix: $2 + 3 = 5$.",
+    "Divide the total amount by the parts to find one part: $20 \\div 5 = 4$ gallons.",
+    "Yellow is $3$ of the parts, so multiply the part size by $3$: $3 \\times 4 = 12$.",
+    "The mix needs $12$ gallons of yellow and $8$ gallons of blue, which total $20$."
   ],
   "alternativeExplanations": [
     {

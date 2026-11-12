@@ -10,24 +10,26 @@
   "primaryAnswer": "12",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Look at the pattern: each output is $3$ times the input.",
+  "hint": "Compare each left number with the number it points to. What single multiplication turns every input into its output?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Look at the pattern: each output is $3$ times the input."
+      "text": "Compare each left number with the number it points to. What single multiplication turns every input into its output?"
     },
     {
       "level": "guide",
-      "text": "Multiply $4$ by $3$."
+      "text": "Each output is $3$ times its input: $1 \\times 3 = 3$, $2 \\times 3 = 6$, $3 \\times 3 = 9$. Use the same rule on $4$."
     },
     {
       "level": "reveal",
-      "text": "$4 \\times 3 = 12$."
+      "text": "$4 \\times 3 = 12$, so the blank is filled by $12$."
     }
   ],
   "explanation": [
-    "The pattern is \"multiply input by $3$\".",
-    "$4 \\times 3 = 12$."
+    "In a ratio table every pair has the same multiplier, so find it from a pair you know.",
+    "From $1 \\to 3$ the multiplier is $3$, and the pairs $2 \\to 6$ and $3 \\to 9$ agree with it.",
+    "Apply the multiplier to the last input: $4 \\times 3 = 12$.",
+    "The missing value in the table is $12$."
   ],
   "tags": [
     "ratio-table"

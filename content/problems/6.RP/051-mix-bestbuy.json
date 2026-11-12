@@ -27,25 +27,26 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Find price per pencil for both.",
+  "hint": "The packs hold different numbers of pencils, so compare what you pay for **one** pencil in each pack.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Find price per pencil for both."
+      "text": "The packs hold different numbers of pencils, so compare what you pay for **one** pencil in each pack."
     },
     {
       "level": "guide",
-      "text": "A: $1.20 / 6$. B: $1.80 / 10$."
+      "text": "Divide cost by pencils for each deal: $1.20 \\div 6$ for the small pack and $1.80 \\div 10$ for the large pack. Then see which is smaller."
     },
     {
       "level": "reveal",
-      "text": "A: \\$$0.20$/pencil; B: \\$$0.18$/pencil. B wins."
+      "text": "The prices are $0.20$ and $0.18$ dollars per pencil, so $10$ pencils for $1.80$ dollars (choice B) has the lower price."
     }
   ],
   "explanation": [
-    "A: $\\$1.20 \\div 6 = \\$0.20$.",
-    "B: $\\$1.80 \\div 10 = \\$0.18$.",
-    "B is cheaper per pencil."
+    "A fair comparison uses the unit price, the cost of a single pencil.",
+    "For the first deal, $1.20 \\div 6 = 0.20$ dollars, or $20$ cents per pencil.",
+    "For the second deal, $1.80 \\div 10 = 0.18$ dollars, or $18$ cents per pencil.",
+    "Since $18$ cents is less than $20$ cents, the $10$-pencil deal (choice B) has the lower price per pencil."
   ],
   "tags": [
     "MAP-practice",

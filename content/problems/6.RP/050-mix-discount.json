@@ -13,24 +13,26 @@
     "$45.00"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Find the discount, then subtract.",
+  "hint": "\"$25\\%$ off\" means part of the price is taken away. Find the amount of the discount first, then decide what to do with it.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Find the discount, then subtract."
+      "text": "\"$25\\%$ off\" means part of the price is taken away. Find the amount of the discount first, then decide what to do with it."
     },
     {
       "level": "guide",
-      "text": "Discount $= 25\\%$ of $60 = 15$."
+      "text": "$25\\%$ is one quarter, so the discount is $60 \\div 4 = 15$ dollars. Subtract that from the $60$ dollar price."
     },
     {
       "level": "reveal",
-      "text": "Sale: $60 - 15 = 45$ dollars."
+      "text": "$60 - 15 = 45$, so the sale price is $45$ dollars."
     }
   ],
   "explanation": [
-    "$25\\%$ of $60$: $60 \\div 4 = 15$.",
-    "Sale: $60 - 15 = 45$."
+    "$25\\%$ is the same as $\\frac{1}{4}$, so the discount is one quarter of the price: $60 \\div 4 = 15$ dollars.",
+    "A discount lowers the price, so subtract it: $60 - 15 = 45$.",
+    "Another way is to notice you pay $75\\%$ of the price, and $0.75 \\times 60 = 45$ as well.",
+    "The sale price of the jacket is $45$ dollars."
   ],
   "alternativeExplanations": [
     {

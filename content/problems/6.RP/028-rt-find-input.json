@@ -10,7 +10,7 @@
   "primaryAnswer": "7",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Find the rule first.",
+  "hint": "This time the output is known and the input is missing, so you will need to work backward. First find the rule from the complete pair.",
   "hints": [
     {
       "level": "nudge",
@@ -19,20 +19,22 @@
     },
     {
       "level": "nudge",
-      "text": "Find the rule first."
+      "text": "This time the output is known and the input is missing, so you will need to work backward. First find the rule from the complete pair."
     },
     {
       "level": "guide",
-      "text": "$\\frac{21}{3} = 7$, so output is $7 \\times$ input."
+      "text": "Since $21 \\div 3 = 7$, each output is $7$ times its input. Undo that multiplication for $49$ by working out $49 \\div 7$."
     },
     {
       "level": "reveal",
-      "text": "If output is $49$, input $= 49 \\div 7 = 7$."
+      "text": "$49 \\div 7 = 7$, so the missing input is $7$."
     }
   ],
   "explanation": [
-    "Rule: output $= 7 \\times$ input.",
-    "Inverse: input $= 49 \\div 7 = 7$."
+    "Find the multiplier from the complete pair: $21 \\div 3 = 7$, so outputs are $7$ times inputs.",
+    "To go from an output back to its input, use the opposite operation and divide by $7$.",
+    "Carrying out the division gives $49 \\div 7 = 7$ for the input.",
+    "The missing input is $7$, and the check $7 \\times 7 = 49$ confirms it."
   ],
   "tags": [
     "ratio-table"

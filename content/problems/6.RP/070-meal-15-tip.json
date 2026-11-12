@@ -13,7 +13,7 @@
     "27.6"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Find the tip, then add.",
+  "hint": "The total is the meal **plus** the tip. Work out the tip in dollars first, using $10\\%$ and $5\\%$ as stepping stones.",
   "hints": [
     {
       "level": "nudge",
@@ -22,20 +22,22 @@
     },
     {
       "level": "nudge",
-      "text": "Find the tip, then add."
+      "text": "The total is the meal **plus** the tip. Work out the tip in dollars first, using $10\\%$ and $5\\%$ as stepping stones."
     },
     {
       "level": "guide",
-      "text": "Tip $= 0.15 \\times 24 = 3.60$. Total $= 24 + 3.60$."
+      "text": "$10\\%$ of $24$ is $2.40$ dollars and $5\\%$ is half of that, $1.20$ dollars, so the tip is $3.60$ dollars. Add the tip to the $24$ dollar meal."
     },
     {
       "level": "reveal",
-      "text": "$24 + 3.60 = 27.60$."
+      "text": "$24 + 3.60 = 27.60$, so the total is $27.60$ dollars."
     }
   ],
   "explanation": [
-    "Tip: $0.15 \\times 24 = 3.60$.",
-    "Total: $24 + 3.60 = 27.60$."
+    "Split the tip into $10\\% + 5\\%$: $10\\%$ of $24$ is $2.40$ and $5\\%$ is half of that, $1.20$.",
+    "Add the two pieces to get the tip: $2.40 + 1.20 = 3.60$ dollars.",
+    "The tip is paid on top of the meal, so add: $24 + 3.60 = 27.60$.",
+    "The total with tip is $27.60$ dollars."
   ],
   "alternativeExplanations": [
     {

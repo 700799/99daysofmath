@@ -12,24 +12,26 @@
     "30 mpg"
   ],
   "acceptanceMode": "normalized",
-  "hint": "\"Per gallon\" means: miles for $1$ gallon.",
+  "hint": "\"Miles per gallon\" asks how many miles the car gets out of each single gallon. Which number should be divided by which?",
   "hints": [
     {
       "level": "nudge",
-      "text": "\"Per gallon\" means: miles for $1$ gallon."
+      "text": "\"Miles per gallon\" asks how many miles the car gets out of each single gallon. Which number should be divided by which?"
     },
     {
       "level": "guide",
-      "text": "Divide miles by gallons."
+      "text": "The miles go first in \"miles per gallon\", so divide the $120$ miles by the $4$ gallons."
     },
     {
       "level": "reveal",
-      "text": "$120 \\div 4 = 30$ miles per gallon."
+      "text": "$120 \\div 4 = 30$, so the car gets $30$ miles per gallon."
     }
   ],
   "explanation": [
-    "$\\frac{120 \\text{ mi}}{4 \\text{ gal}} = 30$ mpg.",
-    "The car gets $30$ miles per gallon."
+    "The word \"per\" means divide, and the unit named first (miles) is the number being divided.",
+    "Set up $\\frac{120 \\text{ miles}}{4 \\text{ gallons}}$ so the answer will be miles for $1$ gallon.",
+    "Divide both parts by $4$ to get $120 \\div 4 = 30$ miles for each gallon.",
+    "The car travels $30$ miles per gallon."
   ],
   "tags": [
     "unit-rate"

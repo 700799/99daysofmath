@@ -22,24 +22,26 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Simplify $9:12$ and compare.",
+  "hint": "Two ratios are equivalent when the same multiplier works on both parts. Compare the first numbers, then compare the second numbers.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Simplify $9:12$ and compare."
+      "text": "Two ratios are equivalent when the same multiplier works on both parts. Compare the first numbers, then compare the second numbers."
     },
     {
       "level": "guide",
-      "text": "Divide both sides of $9:12$ by $3$."
+      "text": "From $3$ to $9$ is times $3$. Check whether $4$ times that same $3$ gives the second number, $12$."
     },
     {
       "level": "reveal",
-      "text": "$9 \\div 3 = 3$, $12 \\div 3 = 4$. So $9:12 = 3:4$. Yes!"
+      "text": "$3 \\times 3 = 9$ and $4 \\times 3 = 12$, so yes, the ratios are equivalent (choice A)."
     }
   ],
   "explanation": [
-    "$9:12$ divided by $3$ on both sides gives $3:4$.",
-    "They are equivalent."
+    "To test for equivalence, look for one number that multiplies both parts of the first ratio to give the second.",
+    "The first parts give $9 \\div 3 = 3$, and the second parts give $12 \\div 4 = 3$.",
+    "Both parts were multiplied by the same number, $3$, so the ratio did not change.",
+    "Yes, $3 : 4$ is equivalent to $9 : 12$, which is choice A."
   ],
   "tags": [
     "ratio",

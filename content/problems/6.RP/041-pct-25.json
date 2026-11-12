@@ -10,24 +10,26 @@
   "primaryAnswer": "20",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$25\\%$ is the same as $\\frac{1}{4}$.",
+  "hint": "Some percents are friendly fractions in disguise. Which fraction of a whole is the same as $25\\%$?",
   "hints": [
     {
       "level": "nudge",
-      "text": "$25\\%$ is the same as $\\frac{1}{4}$."
+      "text": "Some percents are friendly fractions in disguise. Which fraction of a whole is the same as $25\\%$?"
     },
     {
       "level": "guide",
-      "text": "Find $\\frac{1}{4}$ of $80$."
+      "text": "Since $25\\%$ is one quarter, cut $80$ into $4$ equal pieces and take one of them: find $80 \\div 4$."
     },
     {
       "level": "reveal",
-      "text": "$80 \\div 4 = 20$."
+      "text": "One quarter of $80$ is $80 \\div 4 = 20$, so the answer is $20$."
     }
   ],
   "explanation": [
-    "$25\\% = 0.25 = \\frac{1}{4}$.",
-    "$80 \\div 4 = 20$."
+    "$25\\%$ means $25$ out of every $100$, which is the fraction $\\frac{1}{4}$.",
+    "Finding one quarter of a number is the same as dividing that number by $4$.",
+    "Carry out the division to get $80 \\div 4 = 20$.",
+    "This shows that $25\\%$ of $80$ is equal to $20$."
   ],
   "tags": [
     "percent"

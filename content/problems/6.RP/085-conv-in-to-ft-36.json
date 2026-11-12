@@ -12,24 +12,26 @@
     "3 ft"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Divide because feet are larger than inches.",
+  "hint": "Inches are being packed into feet, a larger unit. How many inches does it take to make each foot?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Divide because feet are larger than inches."
+      "text": "Inches are being packed into feet, a larger unit. How many inches does it take to make each foot?"
     },
     {
       "level": "guide",
-      "text": "$36 \\div 12$."
+      "text": "Twelve inches make one foot, so find how many twelves are in $36$ by working out $36 \\div 12$."
     },
     {
       "level": "reveal",
-      "text": "$3$ ft."
+      "text": "$36 \\div 12 = 3$, so there are $3$ feet in $36$ inches."
     }
   ],
   "explanation": [
-    "$36 \\div 12 = 3$ feet.",
-    "Final answer: 3."
+    "Converting from a smaller unit to a larger one means dividing by the number of small units in each large one.",
+    "There are $12$ inches in a foot, so compute $36 \\div 12$.",
+    "Use a multiplication fact to divide: since $12 \\times 3 = 36$, the quotient is $3$.",
+    "Thirty-six inches are the same length as $3$ feet."
   ],
   "tags": [
     "conversion",

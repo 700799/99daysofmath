@@ -12,24 +12,26 @@
     "60 mph"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Per hour means divide by hours.",
+  "hint": "Speed tells how far something moves in one unit of time. Here the unit of time is one hour.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Per hour means divide by hours."
+      "text": "Speed tells how far something moves in one unit of time. Here the unit of time is one hour."
     },
     {
       "level": "guide",
-      "text": "$180 \\div 3$."
+      "text": "Divide the distance by the time to get the miles for each hour: work out $180 \\div 3$."
     },
     {
       "level": "reveal",
-      "text": "$60$."
+      "text": "$180 \\div 3 = 60$, so the speed is $60$ miles per hour."
     }
   ],
   "explanation": [
-    "Speed = distance $\\div$ time.",
-    "$180 \\div 3 = 60$ mph."
+    "Speed is distance divided by time, because it measures the distance covered in each hour.",
+    "Put in the numbers from the problem: $180 \\text{ miles} \\div 3 \\text{ hours}$.",
+    "Use the easier fact $18 \\div 3 = 6$ to see that $180 \\div 3$ is $60$.",
+    "The car's speed is $60$ miles per hour."
   ],
   "tags": [
     "unit-rate"

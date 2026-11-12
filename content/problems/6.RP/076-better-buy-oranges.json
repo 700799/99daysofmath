@@ -22,25 +22,26 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Find each unit price, then compare.",
+  "hint": "More oranges for more money is not automatically a better deal. Compare the price of **one** orange in each offer.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Find each unit price, then compare."
+      "text": "More oranges for more money is not automatically a better deal. Compare the price of **one** orange in each offer."
     },
     {
       "level": "guide",
-      "text": "A: $3 \\div 6 = \\$0.50$ each. B: $4 \\div 10 = \\$0.40$ each."
+      "text": "For deal A work out $3 \\div 6$ dollars per orange, and for deal B work out $4 \\div 10$ dollars per orange. The smaller answer wins."
     },
     {
       "level": "reveal",
-      "text": "$\\$0.40 < \\$0.50$, so B is the better buy."
+      "text": "Deal A is $0.50$ dollars per orange and deal B is $0.40$ dollars per orange, so B ($10$ for $4$ dollars) is the better buy."
     }
   ],
   "explanation": [
-    "Unit price A: $3 \\div 6 = 0.50$.",
-    "Unit price B: $4 \\div 10 = 0.40$.",
-    "$0.40 < 0.50$, so B costs less per orange."
+    "The better buy has the lower unit price, so find the cost of one orange in each deal.",
+    "For deal A, divide the price by the oranges: $3 \\div 6 = 0.50$ dollars for each orange.",
+    "For deal B, divide the same way: $4 \\div 10 = 0.40$ dollars for each orange.",
+    "Since $0.40$ is less than $0.50$, deal B, $10$ oranges for $4$ dollars, is the better buy."
   ],
   "alternativeExplanations": [
     {

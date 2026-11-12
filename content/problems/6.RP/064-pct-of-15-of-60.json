@@ -10,24 +10,26 @@
   "primaryAnswer": "9",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$15\\% = 0.15$.",
+  "hint": "Fifteen percent is not a common fraction, but it splits into two friendly pieces. Which two easy percents add up to $15\\%$?",
   "hints": [
     {
       "level": "nudge",
-      "text": "$15\\% = 0.15$."
+      "text": "Fifteen percent is not a common fraction, but it splits into two friendly pieces. Which two easy percents add up to $15\\%$?"
     },
     {
       "level": "guide",
-      "text": "$0.15 \\times 60$."
+      "text": "$10\\%$ of $60$ is $6$, and $5\\%$ is half of that, which is $3$. Add those two amounts together."
     },
     {
       "level": "reveal",
-      "text": "$9$."
+      "text": "Adding the two pieces gives $6 + 3 = 9$, so $15\\%$ of $60$ equals $9$."
     }
   ],
   "explanation": [
-    "$15\\% = 0.15$.",
-    "$0.15 \\times 60 = 9$."
+    "Break $15\\%$ into $10\\% + 5\\%$, since both are simple to find.",
+    "$10\\%$ of $60$ is $60 \\div 10 = 6$, and $5\\%$ is half of $10\\%$, so it is $3$.",
+    "Add the two parts together: $6 + 3 = 9$. As a check, $0.15 \\times 60 = 9$.",
+    "Both ways show that $15\\%$ of $60$ is $9$."
   ],
   "alternativeExplanations": [
     {

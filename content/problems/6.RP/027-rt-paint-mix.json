@@ -13,29 +13,31 @@
     "6 parts"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Find the scale factor from $3$ blue to $9$ blue.",
+  "hint": "The shade of purple stays the same only if red and blue grow by the same factor. Compare the new amount of blue with the blue in the recipe.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Convert percent ↔ fraction ↔ decimal. Sometimes the easiest form unlocks the answer."
+      "text": "Think of the mix in groups: each group is $2$ red and $3$ blue. How many of those groups does it take to use up the blue you have?"
     },
     {
       "level": "nudge",
-      "text": "Find the scale factor from $3$ blue to $9$ blue."
+      "text": "The shade of purple stays the same only if red and blue grow by the same factor. Compare the new amount of blue with the blue in the recipe."
     },
     {
       "level": "guide",
-      "text": "$9 \\div 3 = 3$. Apply $\\times 3$ to red."
+      "text": "Blue went from $3$ parts to $9$, which is $3$ times as much. Multiply the $2$ parts of red by $3$."
     },
     {
       "level": "reveal",
-      "text": "$2 \\times 3 = 6$ parts red."
+      "text": "$2 \\times 3 = 6$, so you need $6$ parts of red paint."
     }
   ],
   "explanation": [
-    "$3 \\to 9$ is $\\times 3$.",
-    "Red: $2 \\times 3 = 6$."
+    "The mix ratio is red to blue $= 2 : 3$, and the same purple needs that same ratio.",
+    "Find the scale factor from the blue paint: $9 \\div 3 = 3$.",
+    "Scale the red by the same factor so the ratio is unchanged: $2 \\times 3 = 6$.",
+    "You need $6$ of red, because $6 : 9$ simplifies to $2 : 3$."
   ],
   "tags": [
     "CA",

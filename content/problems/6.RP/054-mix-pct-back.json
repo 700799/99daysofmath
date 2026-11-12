@@ -12,7 +12,7 @@
     "12 girls"
   ],
   "acceptanceMode": "normalized",
-  "hint": "$40\\% = 0.40$.",
+  "hint": "\"$40\\%$ are girls\" means $40\\%$ **of** the $30$ students. In percent problems the word \"of\" tells you to multiply.",
   "hints": [
     {
       "level": "nudge",
@@ -21,19 +21,22 @@
     },
     {
       "level": "nudge",
-      "text": "$40\\% = 0.40$."
+      "text": "\"$40\\%$ are girls\" means $40\\%$ **of** the $30$ students. In percent problems the word \"of\" tells you to multiply."
     },
     {
       "level": "guide",
-      "text": "$30 \\times 0.40 = ?$"
+      "text": "$10\\%$ of $30$ is $3$ students. Since $40\\%$ is four times $10\\%$, multiply that $3$ by $4$."
     },
     {
       "level": "reveal",
-      "text": "$30 \\times 0.40 = 12$."
+      "text": "$3 \\times 4 = 12$, so there are $12$ girls in the class."
     }
   ],
   "explanation": [
-    "$40\\%$ of $30$: $30 \\times 0.40 = 12$."
+    "Find $10\\%$ of the class first, since it is the total divided by $10$: $30 \\div 10 = 3$.",
+    "$40\\%$ is $4$ groups of $10\\%$, so multiply the $10\\%$ amount by $4$: $4 \\times 3 = 12$.",
+    "The decimal method gives the same result: $0.40 \\times 30 = 12$.",
+    "There are $12$ girls in the class."
   ],
   "tags": [
     "percent",

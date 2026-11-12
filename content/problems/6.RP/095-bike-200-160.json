@@ -13,7 +13,7 @@
     "20 %"
   ],
   "acceptanceMode": "exact",
-  "hint": "Find the dollars discounted first.",
+  "hint": "\"Percent off\" compares the amount saved with the **original** price. How many dollars were taken off?",
   "hints": [
     {
       "level": "nudge",
@@ -22,20 +22,22 @@
     },
     {
       "level": "nudge",
-      "text": "Find the dollars discounted first."
+      "text": "\"Percent off\" compares the amount saved with the **original** price. How many dollars were taken off?"
     },
     {
       "level": "guide",
-      "text": "Change: $200 - 160 = 40$. Divide: $40 \\div 200$."
+      "text": "The discount is $200 - 160 = 40$ dollars. Write it over the original price as $\\frac{40}{200}$ and convert that to a percent."
     },
     {
       "level": "reveal",
-      "text": "$40 / 200 = 0.20 = 20\\%$."
+      "text": "$\\frac{40}{200} = \\frac{20}{100} = 20\\%$, so the bike is $20\\%$ off."
     }
   ],
   "explanation": [
-    "Discount: $200 - 160 = 40$.",
-    "$40 \\div 200 = 0.20 = 20\\%$."
+    "Subtract to find the discount in dollars: $200 - 160 = 40$.",
+    "Compare the discount with the original price, since the percent off is based on the starting price: $\\frac{40}{200}$.",
+    "Divide top and bottom by $2$ to get $\\frac{20}{100}$, which is $20$ per hundred.",
+    "The sale price is $20\\%$ off the original price of the bike."
   ],
   "alternativeExplanations": [
     {

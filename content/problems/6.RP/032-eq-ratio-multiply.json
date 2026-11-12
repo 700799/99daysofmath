@@ -14,25 +14,26 @@
     "6 : 15"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Multiply each side by $3$.",
+  "hint": "An equivalent ratio keeps the comparison the same by changing **both** numbers in the same way. The question tells you which number to multiply by.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Multiply each side by $3$."
+      "text": "An equivalent ratio keeps the comparison the same by changing **both** numbers in the same way. The question tells you which number to multiply by."
     },
     {
       "level": "guide",
-      "text": "$2 \\times 3 = ?$ and $5 \\times 3 = ?$"
+      "text": "Multiply the first part and the second part by $3$: work out $2 \\times 3$ and $5 \\times 3$, and keep them in the same order."
     },
     {
       "level": "reveal",
-      "text": "$6 : 15$."
+      "text": "$2 \\times 3 = 6$ and $5 \\times 3 = 15$, so the equivalent ratio is $6 : 15$."
     }
   ],
   "explanation": [
-    "$2 \\times 3 = 6$.",
-    "$5 \\times 3 = 15$.",
-    "Answer: $6:15$."
+    "Multiplying both parts of a ratio by the same number gives an equivalent ratio.",
+    "Multiply the first part by $3$ to get $2 \\times 3 = 6$.",
+    "Multiply the second part by the same $3$ to get $5 \\times 3 = 15$.",
+    "The equivalent ratio is $6 : 15$, which simplifies back to $2 : 5$."
   ],
   "tags": [
     "equivalent",

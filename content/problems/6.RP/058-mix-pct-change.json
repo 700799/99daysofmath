@@ -13,7 +13,7 @@
     "25 %"
   ],
   "acceptanceMode": "exact",
-  "hint": "Find the **change**, then divide by the **original**.",
+  "hint": "Percent increase compares the **change** in price with the price you started from, not the new price.",
   "hints": [
     {
       "level": "nudge",
@@ -22,21 +22,22 @@
     },
     {
       "level": "nudge",
-      "text": "Find the **change**, then divide by the **original**."
+      "text": "Percent increase compares the **change** in price with the price you started from, not the new price."
     },
     {
       "level": "guide",
-      "text": "Change: $25 - 20 = 5$. Divide by $20$: $5/20 = 0.25$."
+      "text": "The price rose by $25 - 20 = 5$ dollars. Write that change over the original price, $\\frac{5}{20}$, and turn it into a percent."
     },
     {
       "level": "reveal",
-      "text": "$0.25 = 25\\%$ increase."
+      "text": "$\\frac{5}{20} = \\frac{1}{4} = 25\\%$, so the percent increase is $25\\%$."
     }
   ],
   "explanation": [
-    "Change: $25 - 20 = 5$.",
-    "$\\frac{5}{20} = 0.25 = 25\\%$.",
-    "Price went up $25\\%$."
+    "Find the amount of change by subtracting the old price from the new one: $25 - 20 = 5$ dollars.",
+    "Compare the change with the original price, because a percent increase is measured from the starting amount: $\\frac{5}{20}$.",
+    "Simplify to $\\frac{1}{4}$, which is $0.25$, and multiply by $100$ to get a percent.",
+    "The price of the book increased by $25\\%$."
   ],
   "tags": [
     "MAP-practice",

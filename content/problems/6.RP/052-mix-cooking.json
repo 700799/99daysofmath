@@ -12,24 +12,26 @@
     "5 cups"
   ],
   "acceptanceMode": "normalized",
-  "hint": "First find milk per serving.",
+  "hint": "The amount of milk for each serving stays the same. How much milk does a single serving use?",
   "hints": [
     {
       "level": "nudge",
-      "text": "First find milk per serving."
+      "text": "The amount of milk for each serving stays the same. How much milk does a single serving use?"
     },
     {
       "level": "guide",
-      "text": "Per serving: $2 \\div 4 = 0.5$ cup."
+      "text": "Four servings use $2$ cups, so one serving uses $2 \\div 4 = 0.5$ cup. Multiply that by $10$ servings."
     },
     {
       "level": "reveal",
-      "text": "$10 \\times 0.5 = 5$ cups."
+      "text": "$0.5 \\times 10 = 5$, so $10$ servings need $5$ cups of milk."
     }
   ],
   "explanation": [
-    "Per serving: $2 / 4 = 0.5$ cup.",
-    "For $10$: $10 \\times 0.5 = 5$ cups."
+    "Find the unit rate: $2 \\div 4 = 0.5$ cup of milk for each serving.",
+    "The unit rate works for any number of servings, so multiply it by $10$.",
+    "Multiplying half a cup by ten gives $0.5 \\times 10 = 5$ cups.",
+    "Ten servings need $5$ cups of milk."
   ],
   "tags": [
     "CA",

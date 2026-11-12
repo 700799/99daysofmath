@@ -13,7 +13,7 @@
     "67.5"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Apply one discount, then the other to the new price.",
+  "hint": "The two discounts happen one after the other. The coupon's $10\\%$ is taken from the **already reduced** price, so you cannot just add the percents.",
   "hints": [
     {
       "level": "nudge",
@@ -22,20 +22,22 @@
     },
     {
       "level": "nudge",
-      "text": "Apply one discount, then the other to the new price."
+      "text": "The two discounts happen one after the other. The coupon's $10\\%$ is taken from the **already reduced** price, so you cannot just add the percents."
     },
     {
       "level": "guide",
-      "text": "After $25\\%$ off: $100 \\times 0.75 = 75$. After $10\\%$ off: $75 \\times 0.90$."
+      "text": "First take $25\\%$ off $100$ dollars to get $75$ dollars. Then find $10\\%$ of $75$, which is $7.50$ dollars, and subtract it from $75$."
     },
     {
       "level": "reveal",
-      "text": "$75 \\times 0.90 = 67.50$."
+      "text": "$75 - 7.50 = 67.50$, so the final price is $67.50$ dollars."
     }
   ],
   "explanation": [
-    "After $25\\%$ off: $100 \\times 0.75 = 75$.",
-    "After $10\\%$ more off: $75 \\times 0.90 = 67.50$."
+    "Apply the first discount: $25\\%$ of $100$ is $25$ dollars, so the reduced price is $100 - 25 = 75$ dollars.",
+    "The coupon works on the reduced price, so find $10\\%$ of $75$: $75 \\div 10 = 7.50$ dollars.",
+    "Subtract the coupon amount from the reduced price: $75 - 7.50 = 67.50$.",
+    "The final price is $67.50$ dollars, which is not the same as taking $35\\%$ off at once."
   ],
   "alternativeExplanations": [
     {

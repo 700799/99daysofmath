@@ -14,7 +14,7 @@
     "$21.6"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Find $8\\%$ of $20$, then add to $20$.",
+  "hint": "Tax is an extra amount added on top of the price. Work out how much the tax is before thinking about the total.",
   "hints": [
     {
       "level": "nudge",
@@ -23,21 +23,22 @@
     },
     {
       "level": "nudge",
-      "text": "Find $8\\%$ of $20$, then add to $20$."
+      "text": "Tax is an extra amount added on top of the price. Work out how much the tax is before thinking about the total."
     },
     {
       "level": "guide",
-      "text": "$8\\%$ of $20 = 1.60$."
+      "text": "$8\\%$ of $20$ is $0.08 \\times 20 = 1.60$ dollars of tax. Add that tax to the $20$ dollar price."
     },
     {
       "level": "reveal",
-      "text": "$20 + 1.60 = 21.60$."
+      "text": "$20 + 1.60 = 21.60$, so the total cost is $21.60$ dollars."
     }
   ],
   "explanation": [
-    "Tax: $20 \\times 0.08 = 1.60$.",
-    "Total: $20 + 1.60 = 21.60$.",
-    "Cost is \\$$21.60$."
+    "Change the percent to a decimal by dividing by $100$: $8\\% = 0.08$.",
+    "Multiply to find the tax, because \"of\" means times: $0.08 \\times 20 = 1.60$ dollars.",
+    "Tax is added to the price, so the total is $20 + 1.60 = 21.60$.",
+    "The shirt costs $21.60$ dollars in total."
   ],
   "tags": [
     "CA",

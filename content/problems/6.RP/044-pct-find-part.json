@@ -10,24 +10,26 @@
   "primaryAnswer": "27",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$30\\% = 0.30$.",
+  "hint": "Thirty percent is three lots of ten percent. Ten percent of a number is quick to find, so start there.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$30\\% = 0.30$."
+      "text": "Thirty percent is three lots of ten percent. Ten percent of a number is quick to find, so start there."
     },
     {
       "level": "guide",
-      "text": "Multiply $90 \\times 0.30$."
+      "text": "$10\\%$ of $90$ is $90 \\div 10 = 9$. Since $30\\%$ is three times $10\\%$, multiply that $9$ by $3$."
     },
     {
       "level": "reveal",
-      "text": "$90 \\times 0.30 = 27$."
+      "text": "Three lots of $9$ make $9 \\times 3 = 27$, so $30\\%$ of $90$ equals $27$."
     }
   ],
   "explanation": [
-    "Convert: $30\\% = 0.30$.",
-    "$90 \\times 0.30 = 27$."
+    "Find $10\\%$ first because it is just the number divided by $10$: $90 \\div 10 = 9$.",
+    "$30\\%$ is $3$ times as much as $10\\%$, so multiply: $3 \\times 9 = 27$.",
+    "The decimal method agrees with this result, since $0.30 \\times 90 = 27$.",
+    "Both methods show that $30\\%$ of $90$ is $27$."
   ],
   "tags": [
     "percent"

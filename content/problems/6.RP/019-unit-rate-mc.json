@@ -32,27 +32,26 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Find each as miles per $1$ hour.",
+  "hint": "The four trips take different amounts of time, so the totals alone do not tell you which is fastest. Change each one to miles in **one** hour.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Find each as miles per $1$ hour."
+      "text": "The four trips take different amounts of time, so the totals alone do not tell you which is fastest. Change each one to miles in **one** hour."
     },
     {
       "level": "guide",
-      "text": "A: $50$ mph. B: $60$ mph. C: $50$ mph. D: $40$ mph."
+      "text": "Divide miles by hours for every choice: $150 \\div 3$, $240 \\div 4$, $300 \\div 6$ and $80 \\div 2$. Then pick the largest result."
     },
     {
       "level": "reveal",
-      "text": "B gives $60$ mph — the largest unit rate."
+      "text": "The rates are $50$, $60$, $50$ and $40$ miles per hour, so the greatest is $240$ miles in $4$ hours, choice B."
     }
   ],
   "explanation": [
-    "A: $150 \\div 3 = 50$ mph.",
-    "B: $240 \\div 4 = 60$ mph.",
-    "C: $300 \\div 6 = 50$ mph.",
-    "D: $80 \\div 2 = 40$ mph.",
-    "Largest: B at $60$ mph."
+    "Rates can only be compared fairly when they are all written for the same amount of time, so find each unit rate.",
+    "Choice A gives $150 \\div 3 = 50$ and choice B gives $240 \\div 4 = 60$ miles per hour.",
+    "Choice C gives $300 \\div 6 = 50$ and choice D gives $80 \\div 2 = 40$ miles per hour.",
+    "The largest unit rate is $60$ miles per hour, so the answer is choice B, $240$ miles in $4$ hours."
   ],
   "tags": [
     "MAP-practice",

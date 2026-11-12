@@ -13,29 +13,31 @@
     "25 minutes"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Divide total gallons by the rate.",
+  "hint": "Every minute the pump adds the same amount of water. How many of those equal amounts fit into the whole tank?",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Try the same problem with friendlier numbers first — say \"20% of 50\" — then come back to this one."
+      "text": "Try a tiny tank first: how long would this pump take to fill $8$ gallons? Use the same thinking for the $100$-gallon tank."
     },
     {
       "level": "nudge",
-      "text": "Divide total gallons by the rate."
+      "text": "Every minute the pump adds the same amount of water. How many of those equal amounts fit into the whole tank?"
     },
     {
       "level": "guide",
-      "text": "$100 \\div 4$."
+      "text": "The tank holds $100$ gallons and each minute adds $4$ gallons, so divide: work out $100 \\div 4$."
     },
     {
       "level": "reveal",
-      "text": "$25$ minutes."
+      "text": "$100 \\div 4 = 25$, so it takes $25$ minutes to fill the tank."
     }
   ],
   "explanation": [
-    "Time = gallons $\\div$ rate.",
-    "$100 \\div 4 = 25$ minutes."
+    "The rate is $4$ gallons for each minute, so the time is the number of $4$-gallon groups in the tank.",
+    "Divide the tank size by the rate: $100 \\div 4$.",
+    "The quotient is $25$, and the check $25 \\times 4 = 100$ confirms it.",
+    "The pump fills the tank in $25$ minutes."
   ],
   "tags": [
     "MAP-practice",

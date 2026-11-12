@@ -12,12 +12,12 @@
     "18 cups"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Find what you multiplied berries by, then do the same to yogurt.",
+  "hint": "The recipe keeps the same ratio of berries to yogurt. Compare the chef's berries with the recipe's berries to see how many times bigger the batch is.",
   "explanation": [
-    "Set up the ratio: berries to yogurt = $2 : 3$.",
-    "From $2$ cups of berries to $12$ cups of berries, multiply by $6$ (because $2 \\times 6 = 12$).",
-    "Apply the same scale factor to yogurt: $3 \\times 6 = 18$.",
-    "$18$ cups of yogurt are needed."
+    "The recipe ratio is berries to yogurt $= 2 : 3$, and a bigger batch must keep that same ratio.",
+    "Find the scale factor from the berries: $12 \\div 2 = 6$, so the batch is $6$ times the recipe.",
+    "Multiply the yogurt by the same factor so the ratio stays equal: $3 \\times 6 = 18$.",
+    "The chef needs $18$ cups of yogurt, since $12 : 18$ simplifies back to $2 : 3$."
   ],
   "alternativeExplanations": [
     {
@@ -37,15 +37,15 @@
   "hints": [
     {
       "level": "nudge",
-      "text": "Find what you multiplied berries by, then do the same to yogurt."
+      "text": "The recipe keeps the same ratio of berries to yogurt. Compare the chef's berries with the recipe's berries to see how many times bigger the batch is."
     },
     {
       "level": "guide",
-      "text": "Set up the ratio: berries to yogurt = $2 : 3$."
+      "text": "Berries went from $2$ cups to $12$ cups, which is $6$ times as much. Multiply the $3$ cups of yogurt by the same $6$."
     },
     {
       "level": "reveal",
-      "text": "$18$ cups of yogurt are needed."
+      "text": "$3 \\times 6 = 18$, so the chef needs $18$ cups of yogurt."
     }
   ]
 }
