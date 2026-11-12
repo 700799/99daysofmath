@@ -42,6 +42,14 @@ const lessonProse = (d: Domain) =>
     ? `A free ${COURSE_NAME[d]} lesson with clear worked examples and practice on Math10x.`
     : `A free ${d.startsWith('5.') ? '5th' : '6th'}-grade math lesson with an animated video, worked examples, and practice on Math10x.`;
 
+/** Crawlers that collect content for AI training or bulk datasets. */
+const AI_CRAWLERS = [
+  'GPTBot', 'ChatGPT-User', 'OAI-SearchBot', 'ClaudeBot', 'Claude-Web', 'anthropic-ai',
+  'Google-Extended', 'Applebot-Extended', 'CCBot', 'PerplexityBot', 'Perplexity-User',
+  'Bytespider', 'Amazonbot', 'Meta-ExternalAgent', 'FacebookBot', 'cohere-ai', 'Diffbot',
+  'ImagesiftBot', 'Omgilibot', 'Omgili', 'YouBot', 'Timpibot', 'AI2Bot', 'DuckAssistBot',
+];
+
 interface Route {
   path: string; // e.g. "/trail/6.RP" ("/" for home)
   title: string;
@@ -219,6 +227,12 @@ async function main() {
     'Disallow: /arcade',
     'Disallow: /shop',
     'Disallow: /rewards',
+    // Raw content files are for the app, not for crawlers.
+    'Disallow: /data/',
+    '',
+    // AI training and bulk-collection crawlers are not welcome anywhere.
+    ...AI_CRAWLERS.map((ua) => `User-agent: ${ua}`),
+    'Disallow: /',
     '',
     `Sitemap: ${SITE_URL}/sitemap.xml`,
     '',
