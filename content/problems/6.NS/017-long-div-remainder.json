@@ -5,7 +5,7 @@
   "orderInUnit": 7,
   "standard": "6.NS.B.2",
   "difficulty": 3,
-  "prompt": "Compute $4{,}872 \\div 24$ using long division. Express the remainder as a **decimal**. (Continue dividing past the decimal point as needed.)",
+  "prompt": "Compute $4{,}872 \\div 24$ using long division.",
   "answerType": "numeric",
   "primaryAnswer": "203",
   "alternativeAnswers": [

@@ -5,7 +5,7 @@
   "orderInUnit": 9,
   "standard": "6.NS.B.2",
   "difficulty": 3,
-  "prompt": "Compute $8{,}649 \\div 31$ using long division. Give your answer as a **decimal**.",
+  "prompt": "Compute $8{,}649 \\div 31$ using long division.",
   "answerType": "numeric",
   "primaryAnswer": "279",
   "alternativeAnswers": [
