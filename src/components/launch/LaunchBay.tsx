@@ -21,6 +21,11 @@ const CARGO: { to: string; label: string }[] = [
   { to: '/videos', label: 'Videos' },
 ];
 
+/** The title on a course card: the full course name, kept short for the two grades. */
+function bayTitle(course: { name: string; short: string }): string {
+  return /Grade$/.test(course.short) ? `${course.short} Math` : course.name;
+}
+
 /**
  * Home's first screen: pick a course and go. Nine bays, one per course, fill
  * with hatching as stars are earned. The resume card points at the course in
@@ -153,7 +158,7 @@ export function LaunchBay({ displayName, chosen }: { displayName: string; chosen
                   </span>
                 )}
                 <i className="lb-fill" style={{ height: `${b.pct}%` }} />
-                <span className="lb-name">{b.course.short}</span>
+                <span className="lb-name">{bayTitle(b.course)}</span>
                 <span className="lb-pct">
                   {b.pct}%
                   {active ? ' ▲' : ''}

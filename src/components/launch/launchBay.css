@@ -96,9 +96,9 @@
 .lb-cta::after { content: '→'; }
 .lb-cta:hover, .lb-cta:focus-visible { outline: none; background: rgb(var(--accent-hover)); box-shadow: 0 0 0 2px var(--lb-deep), 0 0 0 4px var(--lb-cyan); }
 
-.lb-bays { display: grid; grid-template-columns: repeat(9, minmax(0, 1fr)); gap: 8px; min-height: 290px; margin-top: 12px; }
+.lb-bays { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 34px 12px; margin-top: 30px; }
 .lb-bay {
-  position: relative; display: flex; flex-direction: column; justify-content: flex-end; padding: 10px 8px; min-width: 0;
+  position: relative; display: flex; flex-direction: column; justify-content: flex-end; padding: 16px 18px; min-width: 0; min-height: 104px;
   border-radius: 8px; background: var(--lb-g2); border: 1px solid var(--lb-l3); color: var(--lb-ink); text-decoration: none;
   box-shadow: 0 1px 2px rgb(var(--ink) / 0.04); transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s;
 }
@@ -108,13 +108,12 @@
   background: repeating-linear-gradient(135deg, var(--lb-l2) 0 2px, transparent 2px 10px); background-size: 14px 14px;
 }
 .lb-name {
-  font-family: var(--lb-display); font-weight: 700; font-size: 15px; line-height: 1.1; text-transform: uppercase; letter-spacing: 0.06em;
-  color: var(--lb-ink); writing-mode: vertical-rl; transform: rotate(180deg); align-self: flex-start; max-height: 150px; overflow: hidden;
-  /* Underline drawn as a border: text-decoration does not render reliably on
-     rotated vertical text. After the 180° turn the left edge is under the letters. */
-  border-left: 2px solid var(--lb-cyan); padding-left: 4px;
+  /* The course title is the main thing on the card: large, dark and upright. */
+  font-family: var(--lb-display); font-weight: 700; font-size: clamp(19px, 2.2vw, 26px); line-height: 1.1; text-transform: uppercase;
+  letter-spacing: 0.04em; color: var(--lb-ink); align-self: flex-start; text-wrap: balance;
+  border-bottom: 3px solid var(--lb-cyan); padding-bottom: 4px;
 }
-.lb-pct { font-family: var(--lb-mono); font-size: 11px; color: var(--lb-cyan); margin-top: 8px; font-variant-numeric: tabular-nums; }
+.lb-pct { font-family: var(--lb-mono); font-size: 13px; color: var(--lb-cyan); margin-top: 8px; font-variant-numeric: tabular-nums; }
 .lb-bay:hover, .lb-bay:focus-visible {
   outline: none; transform: translateY(-4px); border-color: var(--lb-cyan);
   box-shadow: 0 0 0 1px var(--lb-cyan), 0 4px 14px var(--lb-l2);
@@ -123,7 +122,7 @@
 .lb-bay.active .lb-name { border-color: var(--lb-lime); }
 .lb-bay.active .lb-pct { color: var(--lb-lime); }
 .lb-bay.active .lb-fill { background: repeating-linear-gradient(135deg, rgb(var(--ok) / 0.35) 0 3px, transparent 3px 8px); background-size: 14px 14px; }
-.lb-bay.idle .lb-name { color: var(--lb-dim); border-color: var(--lb-l4); }
+.lb-bay.idle .lb-name { border-color: var(--lb-l4); }
 
 .lb-cargo {
   position: relative; display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; padding: 9px 14px; font-size: 13px;
@@ -178,11 +177,8 @@
 }
 
 @media (max-width: 860px) {
-  .lb-bays { grid-template-columns: repeat(3, minmax(0, 1fr)); min-height: 0; gap: 30px 8px; margin-top: 26px; }
-  .lb-bay { min-height: 72px; }
-  .lb-name { writing-mode: horizontal-tb; transform: none; max-height: none; font-size: 14px; border-left: 0; padding-left: 0; border-bottom: 2px solid var(--lb-cyan); padding-bottom: 3px; align-self: flex-start; }
-  .lb-bay.active .lb-name { border-color: var(--lb-lime); }
-  .lb-bay.idle .lb-name { border-color: var(--lb-l4); }
+  .lb-bays { gap: 30px 8px; margin-top: 26px; }
+  .lb-bay { min-height: 84px; padding: 12px; }
   .lb-hero { grid-template-columns: auto 1fr; }
   .lb-cta { grid-column: 1 / -1; justify-content: center; }
   .lb-waver { left: auto; right: 64px; }
