@@ -1,6 +1,6 @@
 {
-  "name": "99 Days of Math",
-  "short_name": "99daysofmath",
+  "name": "Math10x",
+  "short_name": "Math10x",
   "description": "A Duolingo-style 6th-grade math practice app — lessons, adaptive practice, and a mock MAP test.",
   "start_url": "/99daysofmath/",
   "scope": "/99daysofmath/",

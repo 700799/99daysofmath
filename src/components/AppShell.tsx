@@ -7,7 +7,6 @@ import { LevelBadge } from './LevelBadge';
 import { XpFlash } from './XpFlash';
 import { MasteryCelebration } from '../routes/arcade/MasteryCelebration';
 import { submitHaptic, tapHaptic, successHaptic } from '../utils/haptics';
-import { playClick, playAdvance } from '../utils/sound';
 import { useThemeSync } from '../hooks/useTheme';
 import { parentOf } from '../utils/navHierarchy';
 import { Breadcrumbs } from './Breadcrumbs';
@@ -59,22 +58,17 @@ export function AppShell({ children }: Props) {
     };
   }, [tickAppSeconds]);
 
-  // Energize EVERY button, app-wide: a soft fx click + a light haptic on any
-  // tap, a punchier cue for Submit/Check, and a rising "advance" whoosh for
-  // Next / Continue / Start / Replay / Play again. Both channels are gated by
-  // their settings (soundEnabled / hapticsEnabled). Cheap and universal — no
-  // per-route or per-button edits needed. (Works under HashRouter: no path
-  // check, so the fx fires everywhere, not just /arcade.)
+  // A light haptic on any tap, app-wide, with a firmer cue for Submit/Check
+  // and for Next / Continue / Start. Taps make no sound: only answers, rewards
+  // and the arcade games do. Gated by the hapticsEnabled setting.
   useEffect(() => {
     const onClick = (e: MouseEvent) => {
       const target = (e.target as HTMLElement | null)?.closest('button, [role="button"], a[href]');
       if (!target || (target as HTMLButtonElement).disabled) return;
 
-      let sound = true;
       let haptics = true;
       try {
         const st = useProgress.getState();
-        sound = st.soundEnabled;
         haptics = st.hapticsEnabled;
       } catch {
         /* store not ready — default on */
@@ -96,14 +90,6 @@ export function AppShell({ children }: Props) {
         txt.startsWith('let’s go') ||
         txt.startsWith("let's go");
 
-      if (sound) {
-        try {
-          if (isAdvance) playAdvance();
-          else playClick();
-        } catch {
-          /* ignore */
-        }
-      }
       if (haptics) {
         if (isSubmit) submitHaptic();
         else if (isAdvance) successHaptic();
@@ -125,9 +111,9 @@ export function AppShell({ children }: Props) {
       >
         <div className="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between gap-2">
           {!parent ? (
-            <div className="flex items-center gap-2 min-w-0">
-              <span className="font-display font-bold text-lg sm:text-xl tracking-tight text-ink truncate">
-                99 Days of Math
+            <div className="flex shrink-0 items-center gap-2">
+              <span className="font-display font-bold text-lg sm:text-xl tracking-tight text-ink whitespace-nowrap">
+                Math10x
               </span>
             </div>
           ) : (

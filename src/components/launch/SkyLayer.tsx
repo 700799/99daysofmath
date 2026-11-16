@@ -59,9 +59,11 @@ export function SkyLayer() {
       if (!x) return;
       x.scale(dpr, dpr);
       const r = rng(w * 7 + h);
+      // Dots take the theme's text colour, so they show on a light or dark panel.
+      const rgb = getComputedStyle(c).color.match(/[\d.]+/g)?.slice(0, 3).join(',') ?? '134,139,147';
       for (let i = 0; i < Math.floor((w * h) / 2600); i++) {
         const s = r();
-        x.fillStyle = `rgba(232,238,252,${0.15 + s * 0.7})`;
+        x.fillStyle = `rgba(${rgb},${0.15 + s * 0.7})`;
         x.beginPath();
         x.arc(r() * w, r() * h, s < 0.9 ? 0.7 : 1.6, 0, 7);
         x.fill();
