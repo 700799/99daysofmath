@@ -40,15 +40,17 @@
     {
       "title": "Double one half",
       "steps": [
-        "Once the halves are known to be $22^\\circ$ each, the bisected angle is simply twice that.",
-        "$2 \\times 22 = 44^\\circ$."
+        "A bisector makes the whole angle twice either half, so $\\angle ABC = 2(4x + 2) = 8x + 4$.",
+        "The halves $4x + 2$ and $6x - 8$ agree only when $x = 5$, where each one measures $22^\\circ$.",
+        "Twice one half gives the full angle: $2 \\times 22 = 44^\\circ$, the same as $8(5) + 4 = 44$."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "The trap answer is 22 — one half — and the runner-up is 5, which is only $x$.",
-        "A bisector question almost always ends with a decision: half or whole? This one says \"the whole angle $\\angle ABC$,\" so double the half: 44."
+        "The common wrong answers are $22$, which is only one half of the angle, and $5$, which is only the value of $x$.",
+        "A bisector problem ends with a choice between the half and the whole, and this one asks for the whole angle $\\angle ABC$.",
+        "Add the two equal halves to finish: $22 + 22 = 44$, so the angle measures $44^\\circ$."
       ]
     }
   ],

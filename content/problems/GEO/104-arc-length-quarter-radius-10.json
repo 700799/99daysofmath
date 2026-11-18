@@ -38,8 +38,9 @@
     {
       "title": "Fraction first, then multiply",
       "steps": [
-        "Simplify the fraction before touching $\\pi$: $\\frac{90}{360} = \\frac{1}{4}$.",
-        "A quarter of $20\\pi$ is $5\\pi$ — much cleaner than multiplying $20\\pi$ by $90$ and dividing by $360$."
+        "Reduce the angle to a fraction of the circle before using $\\pi$: $\\frac{90}{360} = \\frac{1}{4}$, a quarter turn.",
+        "A quarter of the path uses a quarter of the factor $2$ in $2\\pi r$, so the arc is $\\frac{1}{4} \\times 2 \\times \\pi \\times 10 = \\frac{1}{2} \\times 10\\pi$.",
+        "Half of $10\\pi$ is $5\\pi$, so the gardener walks exactly $5\\pi$ feet."
       ]
     }
   ],

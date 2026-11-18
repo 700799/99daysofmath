@@ -40,15 +40,17 @@
     {
       "title": "Work with the whole triangles",
       "steps": [
-        "$\\triangle ADE \\sim \\triangle ABC$, so $\\frac{AD}{AB} = \\frac{AE}{AC}$, that is $\\frac{4}{10} = \\frac{6}{AC}$.",
-        "Cross-multiply: $4 \\cdot AC = 60$, so $AC = 15$. Then $EC = AC - AE = 15 - 6 = 9$."
+        "The brace cuts off a small triangle $ADE$ that is similar to the whole frame $ABC$, and the full side is $AB = 4 + 6 = 10$.",
+        "The scale factor from small to large is $\\frac{AB}{AD} = \\frac{10}{4} = 2.5$, so the other full side is $AC = 2.5 \\times 6 = 15$.",
+        "The piece below the brace is what remains of that side: $EC = AC - AE = 15 - 6 = 9$."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "The trap answer is 15 — writing $\\frac{AD}{DB} = \\frac{AE}{AC}$ mixes a PART-to-PART ratio on the left with a PART-to-WHOLE ratio on the right, and lands you on $AC$ instead of $EC$.",
-        "Keep both sides of a proportion the same kind: piece-to-piece with piece-to-piece ($\\frac{4}{6} = \\frac{6}{EC}$), or piece-to-whole with piece-to-whole. Match the types and $EC = 9$ falls out."
+        "The tempting wrong answer is $15$, which comes from writing $\\frac{AD}{AB} = \\frac{AE}{x}$ and then stopping, because that $x$ is the whole side $AC$.",
+        "Both sides of a proportion must be the same kind of ratio: piece to piece on both sides, or piece to whole on both sides.",
+        "Piece to piece gives $\\frac{4}{6} = \\frac{6}{EC}$, so $4 \\cdot EC = 36$ and $EC = 9$, which matches $15 - 6 = 9$ from the other setup."
       ]
     }
   ],

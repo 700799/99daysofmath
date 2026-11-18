@@ -40,15 +40,17 @@
     {
       "title": "Double the half",
       "steps": [
-        "Once you know a half is 14, the rod is just two of those halves.",
-        "$AB = 2 \\times AM = 2 \\times 14 = 28$."
+        "Because $M$ is the midpoint, the whole rod is two copies of one half, so write $AB = 2 \\times MB = 2(x + 9) = 2x + 18$.",
+        "The halves are equal, and $3x - 1$ matches $x + 9$ only when $x = 5$, since both expressions then give $14$.",
+        "Doubling that half gives the full rod: $AB = 2 \\times 14 = 28$, which agrees with $2(5) + 18 = 28$."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "The tempting wrong answers are 5 and 14. The 5 is only $x$, a bookkeeping number, and 14 is only HALF the rod.",
-        "Re-read the last line of the question before you answer: it asks for $AB$, the whole rod. Solve for $x$, plug in to get a half, then double it: 28."
+        "Two tempting wrong answers are $5$ and $14$: the $5$ is only the value of $x$, and the $14$ is only half of the rod.",
+        "The question asks for $AB$, the whole rod, so after finding $x = 5$ and the half $14$ there is still one step left.",
+        "Both halves together give $14 + 14 = 28$, so the rod is $28$ units long."
       ]
     }
   ],

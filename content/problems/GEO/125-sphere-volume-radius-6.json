@@ -38,8 +38,9 @@
     {
       "title": "Divide before you multiply",
       "steps": [
-        "$\\frac{4}{3} \\times 216$ is easiest as $216 \\div 3 = 72$, then $72 \\times 4 = 288$.",
-        "Dividing first keeps the numbers small and avoids a messy $864 \\div 3$."
+        "Write the cube as three factors, $6 \\times 6 \\times 6$, and let the $3$ in $\\frac{4}{3}$ divide one of the sixes to leave $2$.",
+        "The number part is now $4 \\times 2 \\times 6 \\times 6$, which is $8 \\times 36 = 288$, with no large division needed.",
+        "Putting $\\pi$ back gives the exact volume $288\\pi$ cubic inches."
       ]
     }
   ],

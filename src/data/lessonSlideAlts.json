@@ -1,1 +1,506 @@
-{}
+{
+ "GEO-1#1": {
+  "title": "Everyday stand-ins",
+  "text": "Use real objects as models. The tip of a sharp pencil pressed on paper marks a point. A string pulled tight between two nails is a segment, and you can measure it. A laser beam leaving a pointer is a ray: it has a start but no finish. A straight road imagined with no beginning and no end is a line, and a calm lake stretching forever in every direction is a plane. The real objects have thickness, but the ideas do not."
+ },
+ "GEO-1#2": {
+  "title": "Read it off a ruler",
+  "text": "Lay a ruler along the points so that A is at 0, B is at 12 and C is at 19. Each length is a subtraction of two ruler readings: AB = 12 − 0, BC = 19 − 12, AC = 19 − 0. When you add the first two, the reading at B is added once and taken away once, so it drops out and leaves AC. That only happens when B really sits between the other two readings."
+ },
+ "GEO-1#3": {
+  "title": "Fold the number line",
+  "text": "Mark −3 and 11 on a paper strip. Fold the strip so the two marks land on each other. The crease is the midpoint, and it falls at 4. Each mark travelled the same distance to the crease, 7 units, so the full gap is 7 + 7 = 14. That matches the formulas: 11 − (−3) = 14 for the distance and (−3 + 11) ÷ 2 = 4 for the midpoint."
+ },
+ "GEO-1#4": {
+  "title": "Use ruler positions",
+  "text": "Put A at the 0 mark of a ruler. B is 12 units along, so B sits at 12. C is 7 units past B, so C sits at 12 + 7 = 19. The length AC is the difference of the end readings, 19 − 0 = 19. Reading positions gives the same total as adding the two pieces, AC = 19."
+ },
+ "GEO-1#5": {
+  "title": "Slide both points",
+  "text": "Sliding two points the same amount does not change the gap between them. Move P and Q both 3 units to the right. P goes from −3 to 0 and Q goes from 9 to 12. Now one point sits at zero, so the distance is just the other coordinate. PQ = 12."
+ },
+ "GEO-1#6": {
+  "title": "Count up from 18",
+  "text": "Start at the 18 mark where B sits and count up to the end of the segment at 30. From 18 to 20 is 2. From 20 to 30 is 10. Together that is 2 + 10 = 12, so BC = 12. Counting up finds the missing piece without writing an equation."
+ },
+ "GEO-1#7": {
+  "title": "Make a table of values",
+  "text": "Try values of x and watch the two halves.\nx = 1: JM = 5, MK = 11. x = 2: JM = 10, MK = 14. x = 3: JM = 15, MK = 17. x = 4: JM = 20, MK = 20.\nThe gap shrinks by 2 each time, from 6 to 4 to 2 to 0. The halves match only at x = 4, where JM = MK = 20."
+ },
+ "GEO-1#8": {
+  "title": "Step in from both ends",
+  "text": "Put one finger on −3 and one on 11. Move both fingers one unit toward each other at the same time: −2 and 10, then −1 and 9, then 0 and 8, 1 and 7, 2 and 6, 3 and 5. On the seventh step both fingers land on 4. They moved equal distances, so 4 is halfway. Averaging agrees: (−3 + 11) ÷ 2 = 8 ÷ 2 = 4."
+ },
+ "GEO-1#9": {
+  "title": "Count up in friendly jumps",
+  "text": "Place X at 0 km, so Y is at 2.4 and Z is at 6.1. Count from Y up to Z in easy jumps. From 2.4 to 3 is 0.6. From 3 to 6 is 3. From 6 to 6.1 is 0.1. The jumps total 0.6 + 3 + 0.1 = 3.7, so YZ = 3.7 km."
+ },
+ "GEO-2#1": {
+  "title": "Read angles on a clock",
+  "text": "Look at the hands of a clock. They are two rays that meet at the centre, so the centre is the vertex. At 3:00 the hands make a square corner, a right angle of 90°. At 1:00 they are only 30° apart, which is acute. At 4:00 they are 120° apart, which is obtuse. If the hand tips are A and C and the centre is B, the angle is named ABC, with the centre letter in the middle."
+ },
+ "GEO-2#2": {
+  "title": "Protractor readings subtract",
+  "text": "Place a protractor at B with ray BA on the 0° mark. Suppose ray BD crosses at 25° and ray BC crosses at 73°. Then angle ABD is 25 − 0 = 25°, angle DBC is 73 − 25 = 48°, and angle ABC is 73 − 0 = 73°. Each angle is a difference of two readings, so adding the two small ones cancels the middle reading and leaves the big one: 25 + 48 = 73."
+ },
+ "GEO-2#3": {
+  "title": "Try it with a sheet of paper",
+  "text": "Take a sheet of paper. Draw a line from one corner into the sheet. It splits the square corner into two angles, perhaps 30° and 60°, and they add to 90° however you draw it. Those are complementary. Now pick a point on a straight edge and draw a line from it into the sheet. The two angles along the edge might be 110° and 70°. They always add to 180°, so they are supplementary."
+ },
+ "GEO-2#4": {
+  "title": "Count up to 90",
+  "text": "Start at 37 and count up to 90 in easy jumps. From 37 to 40 is 3. From 40 to 90 is 50. The jumps total 3 + 50 = 53, so the complement is 53°. This finds the missing angle by building up to the corner instead of subtracting."
+ },
+ "GEO-2#5": {
+  "title": "Split off a right angle",
+  "text": "A straight line is two right angles side by side. The 118° angle uses up one whole right angle and 28° of the second one, because 118 = 90 + 28. The other angle is what remains of the second right angle: 90 − 28 = 62°. Check: 118 + 62 = 180."
+ },
+ "GEO-2#6": {
+  "title": "Use the full turn",
+  "text": "The four angles at a crossing fill one full turn, 360°. The 65° angle and the one opposite it are equal, so together they use 65 + 65 = 130°. That leaves 360 − 130 = 230° for the other two angles. Those two are also opposite each other, so they are equal, and each is 230 ÷ 2 = 115°. The four angles are 65°, 115°, 65°, 115°."
+ },
+ "GEO-2#7": {
+  "title": "Draw a bar for 90",
+  "text": "Draw a bar that stands for 90°. One angle is two x-blocks. The other is one x-block plus a block of 30. Take the 30 block away from the bar: 90 − 30 = 60 is left, and it is made of three equal x-blocks. Each block is 60 ÷ 3 = 20, so x = 20. The angles are 2 × 20 = 40° and 20 + 30 = 50°."
+ },
+ "GEO-2#8": {
+  "title": "Balance around 45",
+  "text": "Two equal complements would be 45° each, because 45 + 45 = 90. The angle 37° is 8 below 45. To keep the total at 90, its partner must be 8 above 45, which is 45 + 8 = 53°. Check by adding: 37 + 53 = 90."
+ },
+ "GEO-2#9": {
+  "title": "Use two quarter pizzas",
+  "text": "The straight cut leaves a half pizza, which is two quarter pieces of 90° each. The 40° slice comes out of the first quarter and leaves 90 − 40 = 50° of it. The neighbour is that 50° piece plus the whole second quarter: 50 + 90 = 140°."
+ },
+ "GEO-3#1": {
+  "title": "Turning off a straight road",
+  "text": "Picture a straight road that crosses two parallel streets. To turn right onto the first street you swing the wheel through some angle, say 70°. At the second street you need exactly the same 70° turn, because that street points the same way as the first. If the two turns were different, the streets would point in different directions and would meet somewhere, so they would not be parallel."
+ },
+ "GEO-3#2": {
+  "title": "Spin the Z half a turn",
+  "text": "Mark the middle of the piece of transversal that lies between the two parallel lines. Spin the whole figure half a turn about that point. The transversal lands on itself, and each parallel line lands on the other one, because a half turn keeps a line pointing the same way. One corner of the Z lands exactly on the other corner. A turn does not change the size of an angle, so the two angles are equal."
+ },
+ "GEO-3#3": {
+  "title": "Tilt a perpendicular",
+  "text": "Start with a transversal that crosses both parallel lines at right angles. The two angles inside the C are 90° and 90°, which add to 180°. Now tilt the transversal by 15°. One inside angle closes to 75° and the other opens to 105°. Whatever one angle loses, the other gains, so the total stays at 180°."
+ },
+ "GEO-3#4": {
+  "title": "Go through the C angles",
+  "text": "Find the angle between the parallel lines that sits next to the 68° angle on the transversal. It is 180 − 68 = 112°. That angle and the wanted angle at the other crossing lie between the parallels on the same side, so they are co-interior and add to 180°. The wanted angle is 180 − 112 = 68°."
+ },
+ "GEO-3#5": {
+  "title": "Share 180 in a ratio",
+  "text": "The angles 3x and 2x are in the ratio 3 to 2, and together they make 180°. So the larger angle is 3 fifths of 180 and the smaller is 2 fifths. One fifth of 180 is 36. The angles are 3 × 36 = 108° and 2 × 36 = 72°, and one share is x = 36."
+ },
+ "GEO-3#6": {
+  "title": "Watch the gap close",
+  "text": "Try x = 10. The angles are 5(10) − 10 = 40 and 3(10) + 30 = 60, so the first is 20 behind. Each time x goes up by 1, the first angle gains 5 and the second gains 3, so the gap closes by 2. Closing a gap of 20 takes 10 more steps, which gives x = 20. Both angles are then 90°."
+ },
+ "GEO-3#7": {
+  "title": "Use the full turn at one crossing",
+  "text": "Look at one crossing. Its four angles make a full turn, 360°. The 47° angle and its vertical partner use 47 + 47 = 94°. The other two angles are equal to each other and share the remaining 360 − 94 = 266°, so each is 133°. The second crossing is a copy of the first because the lines are parallel, so the only sizes are 47° and 133°."
+ },
+ "GEO-3#8": {
+  "title": "Slide the upper rung down",
+  "text": "Imagine sliding the upper rung straight down the ladder until it lies on the lower rung. The rungs are parallel, so the rung does not turn as it slides. The 63° angle between ladder and rung rides down with it and lands exactly on the angle at the lower rung. A slide does not change an angle, so the lower angle is 63°."
+ },
+ "GEO-3#9": {
+  "title": "One step with the C angles",
+  "text": "Look between the two avenues on one side of the boulevard. The 55° angle at the first avenue and the obtuse angle at the second avenue are co-interior angles, the pair you trace with a C. Co-interior angles on parallel lines add to 180°, so the obtuse angle is 180 − 55 = 125° in one step."
+ },
+ "GEO-4#1": {
+  "title": "A vending machine promise",
+  "text": "Think of a vending machine: if you press button B4, then a juice drops out. Pressing B4 is the hypothesis and the juice is the conclusion. Many statements hide the same pattern. \"All squares have four right angles\" means \"if a shape is a square, then it has four right angles.\" Rewriting it this way shows that being a square is p and having four right angles is q."
+ },
+ "GEO-4#2": {
+  "title": "Dogs and animals",
+  "text": "Start with a true statement: if it is a dog, then it is an animal. Converse: if it is an animal, then it is a dog. A cat shows that is false. Inverse: if it is not a dog, then it is not an animal. The same cat shows that is false. Contrapositive: if it is not an animal, then it is not a dog. That is true, because a rock that is not an animal cannot be a dog."
+ },
+ "GEO-4#3": {
+  "title": "A pattern that finally breaks",
+  "text": "Take the claim \"n² + n + 41 is prime for every whole number n.\" Try n = 0, 1, 2, 3 and you get 41, 43, 47, 53, all prime. It keeps working up to n = 39. But n = 40 gives 1681, which is 41 × 41. Forty good cases proved nothing, and one bad case ended the claim. That is why a proof must give a reason for every step."
+ },
+ "GEO-4#4": {
+  "title": "List the causes of wet ground",
+  "text": "The converse says \"if the ground is wet, then it is raining.\" List the ways ground gets wet: rain, a sprinkler, a hose, a spilled bucket, morning dew. Rain is only one item on the list. Seeing wet ground does not tell you which cause it was, so the converse is false, even though rain always gives wet ground."
+ },
+ "GEO-4#5": {
+  "title": "Circles inside circles",
+  "text": "Draw a circle for \"angles that measure 90°\" and a circle for \"right angles.\" The statement says the first circle sits inside the second. Now pick anything outside the right-angle circle, such as an 89° angle. It must also be outside the 90° circle. In words: if an angle is not a right angle, then it does not measure 90°. That is the contrapositive, and the picture shows it is true."
+ },
+ "GEO-4#6": {
+  "title": "Build one from two triangles",
+  "text": "Take two equilateral triangles with side 1 and glue them together along one side. The outline has four sides and each has length 1, so the hypothesis holds. Its angles are 60° at two corners and 60 + 60 = 120° at the other two. A square needs four 90° angles, so this rhombus is not a square, and the claim is false."
+ },
+ "GEO-4#7": {
+  "title": "Think of a mirror",
+  "text": "The name gives it away: reflexive comes from reflect. A quantity looks in the mirror and sees itself, like 7 = 7 or AB = AB. The other properties need more than one thing. Symmetric turns AB = CD around into CD = AB, and Transitive links three quantities in a chain. In a figure, look for a side that belongs to two triangles at once. That shared side equals itself by the Reflexive Property."
+ },
+ "GEO-4#8": {
+  "title": "Compare the requirement lists",
+  "text": "Write what each shape needs. A rectangle needs four right angles. A square needs four right angles and four equal sides. The converse says that passing the short list guarantees the long list. It cannot, because the short list never mentions the side lengths. A door is a rectangle that is clearly not a square, so the converse is false."
+ },
+ "GEO-4#9": {
+  "title": "Test it with coordinates",
+  "text": "Put the points on a number line: A at 0, B at 3, C at 8 and D at 11. Then AB = 3 and CD = 3, so the Given holds. Now AC = 8 − 0 = 8 and BD = 11 − 3 = 8, so they are equal. The reason is visible: AC is the middle piece BC plus AB, and BD is the same middle piece plus CD. Equal ends on a shared middle give AC = BD."
+ },
+ "GEO-5#1": {
+  "title": "Build it with straws",
+  "text": "Join three straws of lengths 5, 6 and 7 cm at their ends. However you try, you get the same triangle. That is SSS. Join four straws and the frame flops about, so four sides do not fix a shape. Next draw a 5 cm side with a 40° angle at one end and a 60° angle at the other. The two rays cross at exactly one point, so the triangle is forced. That is ASA."
+ },
+ "GEO-5#2": {
+  "title": "Draw both cases",
+  "text": "Draw sides of 8 cm and 5 cm with a 30° angle between them. Joining the free ends gives one triangle only. Now change the order. Draw an 8 cm side, a 30° angle at its left end, and let the 5 cm side hang from the right end. Swing the 5 cm side like a compass. It crosses the 30° ray in two places, so two different triangles fit the same three facts."
+ },
+ "GEO-5#3": {
+  "title": "Read parts off the name",
+  "text": "Suppose triangle ABC ≅ triangle DEF, with AB = 5, BC = 7 and angle B = 40°. The order of the letters is a matching code: A with D, B with E, C with F. So DE = 5, EF = 7 and angle E = 40°, with no measuring. It is like two keys cut from the same pattern: once you know they are copies, every notch on one matches a notch on the other."
+ },
+ "GEO-5#4": {
+  "title": "Try to build a different triangle",
+  "text": "Imagine building the second triangle from three sticks cut to the marked lengths. Lay the longest stick down. Swing the other two sticks from its ends like compass arms. Their tips can meet at only one point above the base (and its mirror image below). So no different triangle is possible, and three matching sides are enough. The shortcut is SSS."
+ },
+ "GEO-5#5": {
+  "title": "Draw the second triangle",
+  "text": "Try to draw a triangle from the marks. Draw the marked side first. At each end, draw a ray at the marked angle. Two rays that lean toward each other cross at exactly one point, and that point is the third vertex. The side you started with lies between the two angles, so the triangle is fixed by angle, side, angle. The shortcut is ASA."
+ },
+ "GEO-5#6": {
+  "title": "Put in numbers",
+  "text": "Suppose each hypotenuse is 13 and the matching legs are 5. In each triangle the other leg is √(13² − 5²) = √(169 − 25) = √144 = 12. So both triangles have sides 5, 12 and 13, and they are congruent by SSS as well. The right angle is what makes this work, and that is why the shortcut is called HL and is saved for right triangles."
+ },
+ "GEO-5#7": {
+  "title": "Hunt for two different triangles",
+  "text": "Test each pattern by trying to draw two different triangles that fit it. SAS: two sticks hinged at a fixed angle leave one gap, so one triangle. ASA: two rays from a fixed side meet once, so one triangle. SSA: the last side can swing to two places, so it fails. AAA: triangles with sides 1, 1, 1 and 2, 2, 2 both have three 60° angles but different sizes, so it fails. SAS and ASA work; SSA and AAA do not."
+ },
+ "GEO-5#8": {
+  "title": "Try values for x",
+  "text": "AB matches DE, so AB must come out as 13. Test values in 3x + 1. With x = 3 it gives 10, which is too small. With x = 5 it gives 16, which is too big. With x = 4 it gives 3 × 4 + 1 = 13, exactly the length of DE. So x = 4."
+ },
+ "GEO-5#9": {
+  "title": "Fold along the diagonal",
+  "text": "Fold the kite along AC. Point A is the same distance from B and from D, and so is point C. Points that are equally far from B and D lie on the mirror line between them, so AC is that mirror line. The fold lands B exactly on D, and triangle ABC covers triangle ADC with nothing left over. The triangles are congruent, which agrees with SSS."
+ },
+ "GEO-6#1": {
+  "title": "Tear off the corners",
+  "text": "Cut any triangle out of paper and tear off its three corners. Place the three torn corners together at one point with their edges touching. They always form a straight edge, which is 180°. With numbers: a triangle with angles 50°, 60° and 70° totals 180°. Extend a side at the 70° corner. The outside angle is 180 − 70 = 110°, and that equals 50 + 60, the two far angles."
+ },
+ "GEO-6#2": {
+  "title": "Try it with sticks",
+  "text": "Take sticks of length 3, 4 and 10. Lay the 10 flat and hinge the others at its ends. Even pointing straight at each other they cover only 3 + 4 = 7, so their tips never meet and no triangle forms. For isosceles triangles, take sides 5, 5 and 6. A line from the peak to the middle of the base makes two triangles with sides 3, 4 and 5. They are identical, so the two base angles are equal."
+ },
+ "GEO-6#3": {
+  "title": "Check on a grid",
+  "text": "Put a triangle on a grid with corners A(0, 0), B(8, 0) and C(2, 6). The midpoint of AC is (1, 3) and the midpoint of BC is (5, 3). The segment joining them stays at height 3, so it is flat, just like side AB. Its length is 5 − 1 = 4, and AB is 8 long. So the midsegment is parallel to the third side and half as long."
+ },
+ "GEO-6#4": {
+  "title": "Compare with 60, 60, 60",
+  "text": "If all three angles were equal, each would be 60°. Here 48° is 12 below 60 and 67° is 7 above 60. Together the two known angles are 12 − 7 = 5 below their fair share. The third angle must make up the difference, so it is 5 above 60, which is 65°. Check: 48 + 67 + 65 = 180."
+ },
+ "GEO-6#5": {
+  "title": "Go through the neighbour angle",
+  "text": "The exterior angle and the interior angle beside it sit on a straight line. So the interior angle at that corner is 180 − 130 = 50°. Now the triangle has angles 50°, 55° and the unknown one, and they total 180°. The unknown angle is 180 − 50 − 55 = 75°."
+ },
+ "GEO-6#6": {
+  "title": "Lay the sticks on a ruler",
+  "text": "Lay the side of 11 along a ruler from 0 to 11. Hinge the side of 4 at the 0 end and the side of 6 at the 11 end. Fold both flat toward each other. The 4 reaches from 0 to 4, and the 6 reaches from 11 back to 5. A gap of 1 remains between 4 and 5. Lifting the sticks only pulls the tips further apart, so there is no triangle."
+ },
+ "GEO-6#7": {
+  "title": "Count up with the theorem",
+  "text": "The Exterior Angle Theorem says the two far angles add to the exterior angle, so 55 plus the missing angle makes 130. Count up from 55 to 130. From 55 to 100 is 45, and from 100 to 130 is 30. The missing angle is 45 + 30 = 75°. The straight-line method needed two subtractions, and this needs one."
+ },
+ "GEO-6#8": {
+  "title": "Place it on a grid",
+  "text": "Put the third side on a grid from (0, 0) to (18, 0), and choose any top corner, say (4, 10). The midpoints of the two other sides are (2, 5) and (11, 5). They are at the same height, so the midsegment is parallel to the third side, and its length is 11 − 2 = 9. Moving the top corner changes the midpoints but never the length 9."
+ },
+ "GEO-6#9": {
+  "title": "Fold the roof in half",
+  "text": "Fold the roof down the middle, from the peak to the centre of the base. The fold cuts the 40° peak into two 20° angles and meets the base at 90°. Each half is a right triangle with angles 90° and 20°, so its third angle is 90 − 20 = 70°. That third angle is a base angle of the roof, so b = 70°."
+ },
+ "GEO-7#1": {
+  "title": "One example of each test",
+  "text": "AA: one triangle has angles 50° and 60°, and so does another. Both third angles are 70°, so the shapes match. SSS: sides 3, 4, 5 and 6, 8, 10 give ratios 6 ÷ 3, 8 ÷ 4 and 10 ÷ 5, all equal to 2. SAS: sides 3 and 4 around a 90° angle, and sides 6 and 8 around a 90° angle. Both ratios are 2 and the angle between is the same."
+ },
+ "GEO-7#2": {
+  "title": "A table of matching sides",
+  "text": "Small triangle: 3, 4, 5. Big triangle: 7.5, 10, 12.5. Divide each big side by its partner: 7.5 ÷ 3 = 2.5, 10 ÷ 4 = 2.5, 12.5 ÷ 5 = 2.5. The same number appears every time, and that number is the scale factor. A factor above 1 enlarges and a factor below 1 shrinks. To go back from big to small, divide by 2.5."
+ },
+ "GEO-7#3": {
+  "title": "Compare sides inside one triangle",
+  "text": "There is a second way to see why x is 15. In the small triangle the sides are 4 and 10, and 10 is 2.5 times 4. Similar triangles have the same shape, so the big triangle keeps that relationship: x must be 2.5 times 6, which is 15. You can compare across the two triangles or within each one, and both give the same answer."
+ },
+ "GEO-7#4": {
+  "title": "Ask what multiplies 4",
+  "text": "Think of the scale factor as the number that turns 4 into 6. One times 4 is 4, which leaves 2 more to find. That 2 is half of 4, so the multiplier is 1 and a half. Check: 4 × 1.5 = 6. The scale factor is k = 1.5."
+ },
+ "GEO-7#5": {
+  "title": "Scale within the small triangle",
+  "text": "Look only at the small triangle first. Its two sides are 4 and 10, and 10 is 2.5 times as long as 4, because 10 ÷ 4 = 2.5. The big triangle has the same shape, so its matching sides have the same relationship. The side that matches 4 is 6, so x = 2.5 × 6 = 15."
+ },
+ "GEO-7#6": {
+  "title": "Draw both from a base",
+  "text": "Draw a base of any length. At one end draw a ray at 40°, and at the other end a ray at 75°. The rays meet and form a triangle whose third angle is 180 − 40 − 75 = 65°. Now repeat with a base twice as long. Every ray points the same way as before, so the new triangle is the old picture enlarged by 2. Same shape, different size: similar by AA."
+ },
+ "GEO-7#7": {
+  "title": "Write a proportion for each side",
+  "text": "Use the known pair 4 and 6 in a proportion for each missing side. For the side matching 10: 6/4 = x/10, so 4x = 60 and x = 15. For the side matching 8: 6/4 = y/8, so 4y = 48 and y = 12. The proportions give 10 → 15 and 8 → 12, the same as multiplying by 1.5."
+ },
+ "GEO-7#8": {
+  "title": "Compare the two shadows",
+  "text": "Compare shadow with shadow. The tree shadow is 20 ft and the person shadow is 4 ft, so the tree shadow is 20 ÷ 4 = 5 times as long. The sun hits both at the same angle, so the tree is also 5 times as tall as the person. The height is 5 × 6 = 30 ft."
+ },
+ "GEO-7#9": {
+  "title": "Double the small triangle",
+  "text": "Enlarge the 3, 4, 5 triangle by 2 and you get 6, 8, 10. A triangle similar to it with sides 6 and 8 would need a third side of 10, but this one has 11. There is a second clue: 3, 4, 5 has a right angle because 9 + 16 = 25, but 36 + 64 = 100 is not 121, so 6, 8, 11 has no right angle. The triangles are not similar."
+ },
+ "GEO-8#1": {
+  "title": "Four triangles in a square",
+  "text": "Take four copies of a 3-4-5 right triangle and fit them into the corners of a square with side 3 + 4 = 7. The big square has area 49. Each triangle has area ½ × 3 × 4 = 6, so the four use 24. The tilted square left in the middle has area 49 − 24 = 25, and its side is the hypotenuse. So the hypotenuse squared is 25, which is 9 + 16."
+ },
+ "GEO-8#2": {
+  "title": "Three third sides to compare",
+  "text": "Keep two sides at 6 and 8, so a² + b² = 36 + 64 = 100. If the third side is 10, then c² = 100 and the triangle is right. If the third side is 9, then c² = 81, which is less than 100, so the angle has closed and the triangle is acute. If the third side is 12, then c² = 144, more than 100, so the angle has opened and the triangle is obtuse."
+ },
+ "GEO-8#3": {
+  "title": "Walking city blocks",
+  "text": "Start at the corner (1, 2) and head for (4, 6). By the streets you walk 4 − 1 = 3 blocks east and then 6 − 2 = 4 blocks north. A bird flies straight across. The two street walks are the legs of a right triangle and the bird path is the hypotenuse, so its length is √(3² + 4²) = √25 = 5 blocks."
+ },
+ "GEO-8#4": {
+  "title": "Estimate, then test squares",
+  "text": "The hypotenuse is longer than the longer leg, 12, and shorter than the two legs together, 21. The target is 9² + 12² = 225. Test whole numbers above 12: 13² = 169 is too small, 14² = 196 is too small, 15² = 225 is exact. So c = 15."
+ },
+ "GEO-8#5": {
+  "title": "Factor the difference of squares",
+  "text": "You need 13² − 5². A difference of squares factors as (13 − 5)(13 + 5), which is 8 × 18 = 144. So b² = 144 and b = 12. Factoring means you never have to square 13, and the result shows the famous 5, 12, 13 right triangle."
+ },
+ "GEO-8#6": {
+  "title": "Use a square of side 21",
+  "text": "Fit four copies of the triangle into the corners of a square with side 9 + 12 = 21. The square has area 441. Each triangle has area ½ × 9 × 12 = 54, so the four use 216. The tilted square in the middle has area 441 − 216 = 225, and each of its sides is a hypotenuse. So c = √225 = 15."
+ },
+ "GEO-8#7": {
+  "title": "Cut the hypotenuse square",
+  "text": "Build a square on the hypotenuse and draw its two diagonals. They cut it into four right triangles, and each one is a copy of the 45-45-90 triangle with legs 7. Each copy has area ½ × 7 × 7 = 24.5, so the square has area 4 × 24.5 = 98. Its side is √98 = 7√2, about 9.9."
+ },
+ "GEO-8#8": {
+  "title": "Subtract the squares",
+  "text": "Check it from the other direction. If there is a right angle, then 25² − 24² must equal 7². Factor the difference: (25 − 24)(25 + 24) = 1 × 49 = 49, and 7² = 49. They match, so 7² + 24² = 25² and the triangle is a right triangle."
+ },
+ "GEO-8#9": {
+  "title": "Recognise 5, 12, 13",
+  "text": "The ladder is the hypotenuse, 13 ft, and the foot of the ladder is 5 ft from the wall. The numbers 5 and 13 belong to the whole-number right triangle 5, 12, 13. So the height on the wall is 12 ft. Check: 5² + 12² = 25 + 144 = 169 = 13²."
+ },
+ "GEO-9#1": {
+  "title": "Two triangles, same ratios",
+  "text": "Take a 3-4-5 right triangle and look at the angle across from the side 3. Opposite ÷ hypotenuse is 3 ÷ 5 = 0.6. Now double the triangle to 6-8-10. The same angle gives 6 ÷ 10 = 0.6. The cosine is 4 ÷ 5 = 0.8 in one and 8 ÷ 10 = 0.8 in the other, and the tangent is 0.75 in both. The size changed but the three ratios did not."
+ },
+ "GEO-9#2": {
+  "title": "Same angle, two questions",
+  "text": "Stand at a 30° angle. Question 1: the hypotenuse is 10 and you want the opposite side. Those two sides are in sine, so x = 10 × sin 30° = 10 × 0.5 = 5. Question 2: the adjacent side is 10 and you want the opposite side. Those are in tangent, so x = 10 × tan 30° ≈ 5.77. Always label the sides from the angle you are using before you choose."
+ },
+ "GEO-9#3": {
+  "title": "Read the table backwards",
+  "text": "Here is a short tangent table: tan 30° ≈ 0.577, tan 45° = 1, tan 60° ≈ 1.732. Reading left to right, you start with an angle and get a ratio. The inverse reads right to left. If a ramp rises 1.732 m for every 1 m forward, its ratio is 1.732, so its angle is 60°. The calculator key tan⁻¹ does this lookup for any ratio."
+ },
+ "GEO-9#4": {
+  "title": "Estimate, then check with Pythagoras",
+  "text": "At 30° the opposite side would be half the hypotenuse, 10. At 45° it would be about 14.1. The angle 35° is a little past 30°, so an answer a little above 10 makes sense, and 11.5 fits. Check with the other leg: 20 × cos 35° ≈ 16.4, and 11.5² + 16.4² ≈ 132 + 269 = 401, close to 20² = 400."
+ },
+ "GEO-9#5": {
+  "title": "Find the hypotenuse, then use sine",
+  "text": "The legs 8 and 15 give a hypotenuse of √(64 + 225) = √289 = 17. Now use sine: sin θ = opposite ÷ hypotenuse = 8 ÷ 17 ≈ 0.4706. Then θ = sin⁻¹(0.4706) ≈ 28.1°. A different ratio gives the same angle as the tangent did, which is a good check on the answer."
+ },
+ "GEO-9#6": {
+  "title": "Use the angle at the treetop",
+  "text": "Work from the top of the tree instead. From that corner the opposite side is the ground, 40 ft, and the adjacent side is the tree, 50 ft. So the tangent there is 40 ÷ 50 = 0.8, and the angle is tan⁻¹(0.8) ≈ 38.7°. The two acute angles of a right triangle add to 90°, so the angle of elevation is 90 − 38.7 = 51.3°."
+ },
+ "GEO-9#7": {
+  "title": "Find the other leg first",
+  "text": "Find the leg across from the 55° angle: 20 × sin 55° ≈ 20 × 0.8192 ≈ 16.38. Then use the Pythagorean theorem for x: x² = 20² − 16.38² ≈ 400 − 268.3 = 131.7, so x ≈ 11.5. It agrees with the cosine answer, and it uses only the sine key and the three sides."
+ },
+ "GEO-9#8": {
+  "title": "Use the angle at the clifftop",
+  "text": "Inside the triangle, the angle at the top of the cliff is between the cliff face and the line of sight. It is 90 − 25 = 65°. From that corner the distance to the boat is the opposite side and the 60 m cliff is the adjacent side. So tan 65° = d ÷ 60, and d = 60 × tan 65° ≈ 60 × 2.1445 ≈ 129 m. Multiplying replaces the division."
+ },
+ "GEO-9#9": {
+  "title": "Find the rise first",
+  "text": "First find how high the ramp climbs: rise = 10 × sin 12° ≈ 10 × 0.2079 ≈ 2.08 m. Then use the Pythagorean theorem for the ground distance: x² = 10² − 2.08² ≈ 100 − 4.32 = 95.68, so x ≈ 9.78 m. The ground distance is only a little shorter than the ramp because the angle is small."
+ },
+ "GEO-10#1": {
+  "title": "Cut from a point inside",
+  "text": "Pick a point in the middle of a hexagon and join it to all 6 corners. That makes 6 triangles, worth 6 × 180 = 1080°. But the angles packed around the middle point are not corners of the hexagon. They make a full turn, 360°, so take them away: 1080 − 360 = 720°. For n sides this is n × 180 − 360, which is the same as (n − 2) × 180."
+ },
+ "GEO-10#2": {
+  "title": "Check three regular shapes",
+  "text": "Try it with numbers. An equilateral triangle has interior angles of 60°, so each exterior angle is 120°, and 3 × 120 = 360. A square has exterior angles of 90°, and 4 × 90 = 360. A regular hexagon has interior angles of 120°, so each exterior angle is 60°, and 6 × 60 = 360. More sides mean smaller turns, but the total never changes."
+ },
+ "GEO-10#3": {
+  "title": "Like dogs and poodles",
+  "text": "Every poodle is a dog, but not every dog is a poodle. In the same way, every square is a rectangle and every square is a rhombus, but most rectangles and rhombuses are not squares. Test a shape with a checklist. A 3 by 5 rectangle has two pairs of parallel sides and four right angles, but its sides are not all equal. So it is a parallelogram and a rectangle, and it is not a rhombus or a square."
+ },
+ "GEO-10#4": {
+  "title": "Cut from the centre",
+  "text": "Join the centre of the octagon to all 8 corners. This makes 8 triangles, worth 8 × 180 = 1440°. The 8 angles that meet at the centre are not corners of the octagon, and together they make a full turn of 360°. Remove them: 1440 − 360 = 1080°."
+ },
+ "GEO-10#5": {
+  "title": "Six equilateral triangles",
+  "text": "Join the centre of a regular hexagon to its 6 corners. The 6 angles at the centre are 360 ÷ 6 = 60° each, and the two sides from the centre are equal, so every triangle is equilateral with three 60° angles. At each corner of the hexagon two of these triangles meet. The interior angle is 60 + 60 = 120°."
+ },
+ "GEO-10#6": {
+  "title": "Count triangles from one corner",
+  "text": "Draw diagonals from one corner of the hexagon to the three corners that are not next to it. The hexagon splits into 4 triangles, so its angles total 4 × 180 = 720°. The hexagon is regular, so the 6 angles are equal, and each is 720 ÷ 6 = 120°. This matches 180 − 60 from the exterior angle."
+ },
+ "GEO-10#7": {
+  "title": "Check with the interior angles",
+  "text": "Test the answer 15 from the inside. A 15-sided polygon cuts into 15 − 2 = 13 triangles, so its angles total 13 × 180 = 2340°. Each interior angle of the regular one is 2340 ÷ 15 = 156°. The exterior angle beside it is 180 − 156 = 24°, which matches the given angle. So the polygon has 15 sides."
+ },
+ "GEO-10#8": {
+  "title": "Use the total of 360",
+  "text": "The four angles of any quadrilateral total 360°. In a parallelogram opposite angles are equal, so angles A and C are both 65° and use 130°. That leaves 360 − 130 = 230° for angles B and D, which are also equal. Each is 230 ÷ 2 = 115°. The angles are 65°, 115°, 65°, 115°."
+ },
+ "GEO-10#9": {
+  "title": "Walk around the sign",
+  "text": "Walk along the edge of the stop sign. At each of the 8 corners you turn by the same amount, and after all 8 you have made one full turn. Each turn is 360 ÷ 8 = 45°. The turn and the inside corner lie along a straight line, so the interior angle is 180 − 45 = 135°."
+ },
+ "GEO-11#1": {
+  "title": "A stage seen from two seats",
+  "text": "Picture a round arena with a stage along part of the wall, covering an 80° arc. From the exact centre, the stage fills 80° of your view. Now sit at the wall on the far side. You are further from the stage, and it fills only 40° of your view. Move to any other seat on that far wall and it still fills 40°. Centre seats see the arc itself, and wall seats see half of it."
+ },
+ "GEO-11#2": {
+  "title": "A wheel on a flat road",
+  "text": "Think of a wheel resting on a flat road. The road is a tangent, because it touches the wheel at one point. The axle sits directly above that point, so the spoke from the axle to the road points straight down while the road runs level. Straight down and level meet at 90°. If the spoke leaned, the axle would be lower than one radius above the road and the wheel would sink into it."
+ },
+ "GEO-11#3": {
+  "title": "One slice of a pizza",
+  "text": "Take a pizza with radius 10 inches. Its crust is 2 × π × 10 = 20π inches long and its area is π × 10² = 100π square inches. Cut a 36° slice. Since 36 ÷ 360 = 1/10, the slice is one tenth of the pizza. It gets one tenth of the crust, 2π inches, and one tenth of the area, 10π square inches. The same fraction works for both."
+ },
+ "GEO-11#4": {
+  "title": "Go through the centre",
+  "text": "Draw the inscribed angle so one of its sides passes through the centre. Join the centre to the other end of the arc. The central angle on the 110° arc is 110°. The two radii make an isosceles triangle, and the 110° angle is an exterior angle of it, so it equals the two equal base angles together. Each base angle is 110 ÷ 2 = 55°, and one of them is the inscribed angle."
+ },
+ "GEO-11#5": {
+  "title": "Two isosceles triangles",
+  "text": "Join the centre to the vertex of the angle. Now there are three equal radii, to the vertex and to each end of the diameter, and they form two isosceles triangles. Call their base angles a and b. The big triangle has angles a, b and a + b at the vertex, so 2a + 2b = 180°. That makes a + b = 90°, and a + b is the inscribed angle."
+ },
+ "GEO-11#6": {
+  "title": "Spot the 5, 12, 13 triangle",
+  "text": "The radius meets the tangent at 90°, so the line to the centre, 13, is the hypotenuse and the radius, 5, is a leg. A hypotenuse of 13 with a leg of 5 is the whole-number right triangle 5, 12, 13. The tangent is the other leg, so t = 12. Quick check without squaring 13: (13 − 5)(13 + 5) = 8 × 18 = 144 = 12²."
+ },
+ "GEO-11#7": {
+  "title": "Take a fraction of the circumference",
+  "text": "Stay in degrees. The angle 60° is 60 ÷ 360 = 1/6 of a full turn. The whole circumference is 2 × π × 9 = 18π. One sixth of that is 18π ÷ 6 = 3π. The fraction method and the radian method agree: s = 3π."
+ },
+ "GEO-11#8": {
+  "title": "Treat the slice like a triangle",
+  "text": "A thin slice is nearly a triangle whose base is the crust and whose height is the radius. The whole crust is 2 × π × 6 = 12π, so one of 8 slices has 12π ÷ 8 = 1.5π inches of crust. Area = ½ × crust × radius = ½ × 1.5π × 6 = 4.5π, about 14.1 square inches."
+ },
+ "GEO-11#9": {
+  "title": "Why equal, then test x",
+  "text": "Join the centre O to P, A and B. Triangles OAP and OBP both have a right angle where the radius meets the tangent, they share the side OP, and OA = OB because both are radii. They are congruent by HL, so PA = PB. Now test x = 5 in the expression: 3 × 5 + 2 = 17, which matches the other tangent. So x = 5."
+ },
+ "GEO-12#1": {
+  "title": "Count squares on a grid",
+  "text": "Draw the shapes on grid paper. A rectangle 6 wide and 4 tall holds 24 squares. Lean it over into a parallelogram with base 6 and height 4 and it still holds 24. Cut that along a diagonal and each triangle has 12. A trapezoid with bases 4 and 8 and height 4 holds as much as a rectangle 6 wide, 24 again. A circle of radius 2 covers a little over 3 squares of side 2, about 12.6."
+ },
+ "GEO-12#2": {
+  "title": "Push a deck of cards",
+  "text": "Stack a deck of cards neatly and look at it from the side. You see a rectangle. Push the top sideways so the deck leans. The side view is now a parallelogram with a longer slanted edge, but no card was added or removed, so the area of the side view is the same. The deck is still the same number of cards tall. That straight-up thickness is the height, and the slanted edge is not."
+ },
+ "GEO-12#3": {
+  "title": "A picture frame both ways",
+  "text": "A frame is 10 by 8 on the outside with a 6 by 4 opening, and the border is 2 wide all round. Subtract: 80 − 24 = 56. Or add the pieces: the top and bottom strips are 10 by 2, which is 20 each, and the two side strips are 2 by 4, which is 8 each. That gives 20 + 20 + 8 + 8 = 56. Both plans agree, so choose the shorter one."
+ },
+ "GEO-12#4": {
+  "title": "Rectangle plus two triangles",
+  "text": "Drop two heights from the ends of the short base. The middle is a rectangle 8 wide and 5 tall, with area 40. The two triangles at the sides share the extra base length, 14 − 8 = 6, and both have height 5. Pushed together they make one triangle with area ½ × 6 × 5 = 15. The total is 40 + 15 = 55."
+ },
+ "GEO-12#5": {
+  "title": "Unroll the ring",
+  "text": "Cut the ring and straighten it into a strip. The strip is 5 − 3 = 2 wide. Its length is the circumference of the circle halfway through the ring, with radius 4, which is 2 × π × 4 = 8π. Area = length × width = 8π × 2 = 16π, about 50.3."
+ },
+ "GEO-12#6": {
+  "title": "Count 6 by 4 blocks",
+  "text": "The missing corner is 6 by 4, and the full 12 by 8 rectangle is exactly two of those blocks wide and two blocks tall. So the rectangle holds 4 blocks, and the L-shape is 3 of them. Each block has area 6 × 4 = 24, so the L-shape has area 3 × 24 = 72 square units."
+ },
+ "GEO-12#7": {
+  "title": "Sort edges by direction",
+  "text": "Group the edges instead of walking around. The horizontal edges are the 12 at the bottom and the two pieces of 6 above it, and 6 + 6 also makes 12. So the horizontal edges total 24. The vertical edges are the 8 on one side and the two pieces of 4 on the other, so they total 16. P = 24 + 16 = 40 units."
+ },
+ "GEO-12#8": {
+  "title": "Box in the half circle",
+  "text": "The half circle fits inside a 4 by 2 box with area 8. A circle fills about 78.5% of the square around it, and half a circle fills the same share of half the square. So the half circle is about 0.785 × 8 ≈ 6.28 square feet. Add the 4 by 3 rectangle: 12 + 6.28 ≈ 18.3 square feet. The answer sits between 12 and 20, as it should."
+ },
+ "GEO-12#9": {
+  "title": "Cut and slide a triangle",
+  "text": "Cut a right triangle off one end of the parallelogram with a straight up-and-down cut, and slide it to the other end. The shape becomes a rectangle with the same base, 10, and a side equal to the height, 5. Its area is 10 × 5 = 50. The slanted side 6 does not appear in the rectangle at all, which is why it is not used."
+ },
+ "GEO-13#1": {
+  "title": "Check with real numbers",
+  "text": "A box 4 by 3 by 5 has 12 unit cubes on its bottom layer and 5 layers, so 60 cubes. A cylinder with radius 3 and height 4 holds 9π × 4 = 36π, and the cone inside it holds a third, 12π. A sphere of radius 3 just fits in a cylinder of radius 3 and height 6, which holds 54π. The sphere fills two thirds of it: 36π, the same as (4/3) × π × 27."
+ },
+ "GEO-13#2": {
+  "title": "Wrap a cereal box",
+  "text": "Think of covering a 4 by 3 by 5 box with paper, one face at a time. Top and bottom are 4 by 3, so 12 each. Front and back are 4 by 5, so 20 each. The two ends are 3 by 5, so 15 each. The paper needed is 12 + 12 + 20 + 20 + 15 + 15 = 94 square units. For a can, the label peels off as a rectangle, and the two lids are circles."
+ },
+ "GEO-13#3": {
+  "title": "Double a small box",
+  "text": "A 2 by 3 by 4 box has surface area 2 × (6 + 8 + 12) = 52 and volume 24. Double every edge to get 4 by 6 by 8. The surface area is 2 × (24 + 32 + 48) = 208, which is 4 times 52. The volume is 4 × 6 × 8 = 192, which is 8 times 24. One doubling gives 2² = 4 for area and 2³ = 8 for volume."
+ },
+ "GEO-13#4": {
+  "title": "Compare with a square box",
+  "text": "Put the cylinder inside a box 6 by 6 by 10, which holds 360. Looking down, the circle fills π/4 of the 6 by 6 square, because 9π ÷ 36 = π/4. Every layer has that same share, so the cylinder holds 360 × π/4 = 90π, about 282.7. That is a bit over three quarters of the box, which looks right."
+ },
+ "GEO-13#5": {
+  "title": "Use the cone formula directly",
+  "text": "Use V = (1/3) × π × r² × h in one line. Here r² = 9 and h = 4. Divide by 3 early to keep numbers small: 9 ÷ 3 = 3, and 3 × 4 = 12. So V = 12π, about 37.7. Dividing the 9 first avoids building the 36π cylinder at all."
+ },
+ "GEO-13#6": {
+  "title": "Two thirds of its cylinder",
+  "text": "A sphere of radius 3 just fits inside a cylinder with radius 3 and height 6. That cylinder holds π × 9 × 6 = 54π. A sphere always fills two thirds of the cylinder that wraps it, so V = (2/3) × 54π = 36π, about 113.1. This matches the formula."
+ },
+ "GEO-13#7": {
+  "title": "A band plus two lids",
+  "text": "Stand the box on its 4 by 3 base. The four upright faces unfold into one long band. Its length is the distance around the base, 4 + 3 + 4 + 3 = 14, and its width is the height, 5, so the band has area 70. The top and bottom are 12 each, which adds 24. SA = 70 + 24 = 94 square units."
+ },
+ "GEO-13#8": {
+  "title": "Change to decimetres first",
+  "text": "One litre is a cube 10 cm on each side, which is 1 decimetre each way. Change the tank to decimetres: 50 cm = 5 dm, 30 cm = 3 dm, 40 cm = 4 dm. Then V = 5 × 3 × 4 = 60 cubic decimetres, which is 60 L straight away. Each litre is 1000 cm³, so that is 60,000 cm³."
+ },
+ "GEO-13#9": {
+  "title": "Stack copies of the small box",
+  "text": "Fill the big box with copies of the small one. Three fit along each edge, so it takes 3 × 3 × 3 = 27 small boxes. The volume is 27 × 60 = 1620. Each face of the big box is tiled by 3 × 3 = 9 copies of the matching small face, so the surface area is 9 × 94 = 846. SA grows by 9 and V grows by 27."
+ },
+ "GEO-14#1": {
+  "title": "Follow one point",
+  "text": "Plot the point (3, 1) and apply each move to it. Reflect over the x-axis and it drops to (3, −1). Reflect over the y-axis and it jumps to (−3, 1). Rotate it a quarter turn counterclockwise about the origin and it lands on (−1, 3). Dilate it by 2 and it moves out to (6, 2). Watching one point shows which coordinate changes sign, which ones swap, and which ones grow."
+ },
+ "GEO-14#2": {
+  "title": "Measure before and after",
+  "text": "Take the triangle (0, 0), (3, 0), (0, 4). Its sides are 3, 4 and 5. Slide it 2 to the right: (2, 0), (5, 0), (2, 4). The sides are still 3, 4 and 5. Reflect it over the x-axis and they are still 3, 4 and 5. Now dilate by 2: (0, 0), (6, 0), (0, 8). The sides are 6, 8 and 10. The right angle is still there, but every length has doubled."
+ },
+ "GEO-14#3": {
+  "title": "One segment, three questions",
+  "text": "Join A(0, 0) to B(4, 2). It rises 2 while running 4, so its slope is 1/2. Turn the step \"4 right, 2 up\" a quarter turn and it becomes \"2 left, 4 up\", a slope of −2. That is the perpendicular slope, and 1/2 × −2 = −1. The midpoint is halfway in each direction, (2, 1). The length is √(4² + 2²) = √20, about 4.47."
+ },
+ "GEO-14#4": {
+  "title": "Fold along the axis",
+  "text": "Plot (3, −2) and fold the paper along the x-axis. The point is 2 units below the fold, so it lands 2 units above the fold, straight up from where it was. Count it: from (3, −2) go up 2 to reach the axis at (3, 0), then up 2 more. The image is (3, 2). The point never moved left or right, so x stayed 3."
+ },
+ "GEO-14#5": {
+  "title": "Check with slope and distance",
+  "text": "Test the answer (−5, 2). The line from the origin to (2, 5) has slope 5/2. The line to (−5, 2) has slope 2 ÷ (−5) = −2/5. Their product is −1, so the two lines are perpendicular, a 90° turn. Both points are √(4 + 25) = √29 from the origin. And (−5, 2) is to the left, which is where a counterclockwise turn sends a point from Quadrant I."
+ },
+ "GEO-14#6": {
+  "title": "Repeat each walk",
+  "text": "Reach each corner by a walk from the origin, then do the same walk again. To (1, 1): 1 right, 1 up; again gives (2, 2). To (3, 1): 3 right, 1 up; again gives (6, 2). To (1, 2): 1 right, 2 up; again gives (2, 4). Each image is twice as far out in the same direction, so the image is (2, 2), (6, 2), (2, 4)."
+ },
+ "GEO-14#7": {
+  "title": "Use two reflections",
+  "text": "A quarter turn counterclockwise can be done with two mirror flips. First reflect (2, 5) over the diagonal line y = x, which swaps the coordinates: (5, 2). Then reflect over the y-axis, which changes the sign of x: (−5, 2). Two reflections across mirrors 45° apart make a 90° turn, so the image is (−5, 2)."
+ },
+ "GEO-14#8": {
+  "title": "Check the diagonals",
+  "text": "A quadrilateral is a parallelogram when its diagonals cut each other in half. One diagonal joins (0, 0) and (5, 4). Its midpoint is (2.5, 2). The other joins (4, 1) and (1, 3). Its midpoint is ((4 + 1) ÷ 2, (1 + 3) ÷ 2) = (2.5, 2). Both diagonals have the same midpoint, so they bisect each other and the quadrilateral is a parallelogram."
+ },
+ "GEO-14#9": {
+  "title": "Step straight across the mirror",
+  "text": "The shortest way to the line y = x is at right angles to it, which means stepping 1 right and 1 down each time. From (1, 4), one step gives (2, 3), and half a step more gives (2.5, 2.5), which is on the mirror. That was 1.5 steps. Take 1.5 more steps the same way: (2.5 + 1.5, 2.5 − 1.5) = (4, 1). The image is (4, 1)."
+ }
+}

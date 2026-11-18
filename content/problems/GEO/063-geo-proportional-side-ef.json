@@ -34,8 +34,9 @@
     {
       "title": "Set up a proportion",
       "steps": [
-        "Write $\\frac{AB}{DE} = \\frac{BC}{EF}$, which is $\\frac{4}{10} = \\frac{6}{EF}$.",
-        "Cross-multiply: $4 \\cdot EF = 60$, so $EF = 15$."
+        "Compare the two sides inside the small flag: $BC$ is $\\frac{6}{4} = 1.5$ times as long as $AB$.",
+        "Similar triangles keep the same shape, so the matching sides of the large flag have the same ratio: $\\frac{EF}{DE} = \\frac{BC}{AB}$, or $\\frac{EF}{10} = \\frac{6}{4}$.",
+        "Multiplying both sides of that proportion by $10$ gives the missing side, $EF = 10 \\times 1.5 = 15$."
       ]
     }
   ],

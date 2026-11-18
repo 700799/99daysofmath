@@ -34,8 +34,9 @@
     {
       "title": "Through the exterior angle",
       "steps": [
-        "Each exterior angle is $360 \\div 8 = 45^\\circ$.",
-        "Interior and exterior angles at a corner form a straight line, so the interior angle is $180 - 45 = 135^\\circ$ — same answer, fewer steps."
+        "Walking once around the stop sign you make $8$ equal turns that add up to one full turn, so each exterior angle is $360 \\div 8 = 45^\\circ$.",
+        "At every corner the interior angle and the exterior angle lie along a straight line, so together they make $180^\\circ$.",
+        "Each interior angle of the stop sign is therefore $180 - 45 = 135^\\circ$."
       ]
     }
   ],

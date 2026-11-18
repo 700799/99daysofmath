@@ -34,8 +34,9 @@
     {
       "title": "Triple spotting saves time",
       "steps": [
-        "$9$-$12$-$15$ is the $3$-$4$-$5$ triple scaled by $3$.",
-        "Once you recognize the family you can write $15$ immediately and use the squaring only as a check."
+        "Both sides share a factor of $3$, since $9 = 3 \\times 3$ and $12 = 3 \\times 4$, so the flag's triangle is a $3$-$4$-$5$ right triangle enlarged $3$ times.",
+        "Enlarging a triangle multiplies every side by the same factor, so the diagonal is $3 \\times 5 = 15$ inches.",
+        "A quick check by squaring confirms it, because $81 + 144 = 225$ and $15^2 = 225$."
       ]
     }
   ],

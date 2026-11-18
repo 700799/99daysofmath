@@ -34,8 +34,9 @@
     {
       "title": "Count through zero",
       "steps": [
-        "From $-4$ to $0$ you cover 4 units.",
-        "From $0$ to $6$ you cover 6 more. Total: $4 + 6 = 10$ units."
+        "The two markers sit on opposite sides of zero, so split the walk into two legs at the $0$ marker.",
+        "From $-4$ up to $0$ is $4$ units, and from $0$ on to $6$ is $6$ more units.",
+        "The legs join end to end with no overlap, so the markers are $4 + 6 = 10$ units apart."
       ]
     }
   ],
