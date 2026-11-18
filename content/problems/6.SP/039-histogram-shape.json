@@ -47,6 +47,16 @@
     "The direction of a skew is the direction in which the tail points, not where most of the data sits.",
     "The tail extends to the right, so the distribution is skewed right, which is choice B."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Build a small example",
+      "steps": [
+        "Make data that matches the description, such as $1, 1, 1, 2, 2, 3, 9$, with tall bins at the left.",
+        "Most values crowd between $1$ and $3$, and the single $9$ stretches the picture far out to the right.",
+        "That stretched side is the tail, and a tail on the right is called skewed right, choice B."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "histogram",

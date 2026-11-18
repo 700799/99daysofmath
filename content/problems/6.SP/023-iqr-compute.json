@@ -35,6 +35,16 @@
     "The problem gives both quartiles: $Q1 = 3$ and $Q3 = 11$.",
     "Subtract the lower quartile from the upper quartile: $11 - 3 = 8$, so the IQR is $8$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Count jumps between data values",
+      "steps": [
+        "Find $Q1 = 3$ and $Q3 = 11$ in the list, which goes up in steps of $2$.",
+        "Step from one quartile to the other: $3 \\to 5 \\to 7 \\to 9 \\to 11$ takes $4$ jumps.",
+        "Four jumps of $2$ cover a distance of $4 \\times 2 = 8$, so the IQR is $8$."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "IQR"

@@ -30,6 +30,16 @@
     "There are $7$ values, so the middle is the $4$th one, leaving $3$ values below and $3$ above.",
     "The $4$th value is $9$, so the median is $9$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Count smaller and larger",
+      "steps": [
+        "The median of $7$ values must have $3$ values below it and $3$ values above it.",
+        "Test $9$ against the list: the smaller values are $4$, $7$ and $6$, and the larger values are $10$, $12$ and $15$.",
+        "Exactly three values fall on each side of $9$, so the median is $9$."
+      ]
+    }
+  ],
   "tags": [
     "median"
   ],

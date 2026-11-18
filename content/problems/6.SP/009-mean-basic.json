@@ -30,6 +30,16 @@
     "Count how many values share that total: there are $4$ numbers in the list.",
     "Divide the total by the count to get the mean: $24 \\div 4 = 6$, so the mean is $6$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Balance around a guess",
+      "steps": [
+        "Guess that the mean is $6$ and write how far each value is from the guess: $3$ is $3$ below, $7$ is $1$ above, $8$ is $2$ above, and $6$ is $0$ away.",
+        "Add the distances above the guess: $1 + 2 = 3$, which exactly matches the $3$ below the guess.",
+        "The amounts above and below cancel, so the guess balances the data and the mean is $6$."
+      ]
+    }
+  ],
   "tags": [
     "mean"
   ],

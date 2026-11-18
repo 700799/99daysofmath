@@ -30,19 +30,20 @@
     "There are $5$ values, so the middle one is the $3$rd.",
     "The $3$rd value is $5$, so the median is $5$."
   ],
-  "tags": [
-    "median"
-  ],
-  "estimatedSeconds": 40,
   "alternativeExplanations": [
     {
       "title": "Check the answer",
       "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: 5 — verified."
+        "Test $5$ against the unsorted set by counting smaller and larger values.",
+        "The values $3$ and $1$ are smaller than $5$, and the values $7$ and $9$ are larger.",
+        "Two on each side confirms that the median is $5$."
       ]
     }
   ],
+  "tags": [
+    "median"
+  ],
+  "estimatedSeconds": 40,
   "diagram": {
     "kind": "inline-svg",
     "alt": "Dot plot of dataset",

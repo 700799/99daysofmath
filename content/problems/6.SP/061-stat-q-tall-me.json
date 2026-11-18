@@ -33,17 +33,18 @@
     "\"How tall am I?\" is about a single person, and measuring that person gives a single height.",
     "With only one answer there is no variability, so no, it is not a statistical question."
   ],
-  "tags": [
-    "statistical-question"
-  ],
-  "estimatedSeconds": 35,
   "alternativeExplanations": [
     {
       "title": "Check the answer",
       "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: no — verified."
+        "Test the answer by imagining the data you would collect for this question.",
+        "Measuring yourself gives one number, so a dot plot of the data would have a single dot.",
+        "One dot has no variability to describe, which confirms the answer no."
       ]
     }
-  ]
+  ],
+  "tags": [
+    "statistical-question"
+  ],
+  "estimatedSeconds": 35
 }

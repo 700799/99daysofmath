@@ -35,6 +35,16 @@
     "It is found by subtracting the lower quartile from the upper quartile: $Q_3 - Q_1$.",
     "Here that is $22 - 10 = 12$, so the IQR is $12$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Count up along the box",
+      "steps": [
+        "The IQR is the width of the box, so count from its left edge, $10$, to its right edge, $22$.",
+        "From $10$ to $20$ is $10$ units, and from $20$ to $22$ is $2$ more units.",
+        "The box is $10 + 2 = 12$ units wide, so the IQR is $12$."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "IQR",

@@ -35,19 +35,20 @@
     "The data is sorted and has $7$ values, so the median is the $4$th value.",
     "Counting along $3, 4, 5, 6$, the $4$th value is $6$, so the median is $6$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Test $6$ by counting the values on each side of it in the data.",
+        "The values $3, 4, 5$ are below $6$ and the values $7, 8, 9$ are above it.",
+        "Three on each side confirms that the median in the five-number summary is $6$."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "median",
     "five-number-summary"
   ],
-  "estimatedSeconds": 45,
-  "alternativeExplanations": [
-    {
-      "title": "Check the answer",
-      "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: 6 — verified."
-      ]
-    }
-  ]
+  "estimatedSeconds": 45
 }

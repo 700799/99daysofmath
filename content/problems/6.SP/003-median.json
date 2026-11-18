@@ -21,10 +21,10 @@
     {
       "title": "Cross out from both ends",
       "steps": [
-        "After sorting: $2, 3, 5, 7, 9$.",
-        "Cross out the smallest ($2$) and largest ($9$).",
-        "Repeat: cross out $3$ and $7$.",
-        "What remains is the median: $5$."
+        "Put the numbers in order so the ends are the smallest and largest: $2, 3, 5, 7, 9$.",
+        "Cross out one number from each end, the $2$ and the $9$, which keeps the middle in the middle.",
+        "Cross out the next pair from the ends, the $3$ and the $7$, for the same reason.",
+        "Only $5$ is left standing, so the median of the data is $5$."
       ]
     }
   ],

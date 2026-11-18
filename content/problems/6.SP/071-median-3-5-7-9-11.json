@@ -30,17 +30,18 @@
     "With $5$ values, the median is the $3$rd one because it has two values on each side.",
     "The $3$rd value is $7$, so the median is $7$."
   ],
-  "tags": [
-    "median"
-  ],
-  "estimatedSeconds": 30,
   "alternativeExplanations": [
     {
       "title": "Check the answer",
       "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: 7 — verified."
+        "A median must have as many values below it as above it, so test $7$.",
+        "The values $3$ and $5$ are below $7$, and the values $9$ and $11$ are above it.",
+        "Two on each side confirms that the median is $7$."
       ]
     }
-  ]
+  ],
+  "tags": [
+    "median"
+  ],
+  "estimatedSeconds": 30
 }

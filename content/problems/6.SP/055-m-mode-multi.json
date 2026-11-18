@@ -30,6 +30,16 @@
     "The highest count is $2$, and two different values, $3$ and $7$, reach it.",
     "Every value tied for the highest count is a mode, so there are $2$ modes."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Picture the dot plot",
+      "steps": [
+        "Draw the set as a dot plot: two dots above $3$, one above $5$, two above $7$ and one above $9$.",
+        "A mode is a tallest stack, and the tallest height here is $2$ dots.",
+        "Two stacks reach that height, the ones above $3$ and $7$, so there are $2$ modes."
+      ]
+    }
+  ],
   "tags": [
     "mode"
   ],

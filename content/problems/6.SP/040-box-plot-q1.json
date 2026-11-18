@@ -30,6 +30,16 @@
     "The box plot gives the lower quartile $Q1 = 12$ and the upper quartile $Q3 = 20$.",
     "Subtract: $20 - 12 = 8$, so the IQR for this box plot is $8$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Count up from the lower quartile",
+      "steps": [
+        "The IQR is the width of the box, so start at its left edge, $12$, and count to its right edge, $20$.",
+        "From $12$ up to $20$ is $8$ steps on the number line.",
+        "Adding back confirms the width, since $12 + 8 = 20$, so the IQR is $8$."
+      ]
+    }
+  ],
   "tags": [
     "box-plot",
     "IQR"

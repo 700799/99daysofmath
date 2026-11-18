@@ -40,8 +40,9 @@
     {
       "title": "Recompute",
       "steps": [
-        "New data: $\\{10, 12, 14, 16\\}$, sum $= 52$.",
-        "$52 / 4 = 13$."
+        "Write out the new data by adding $4$ to each value: $10, 12, 14, 16$.",
+        "Add the new values to get the total: $10 + 12 + 14 + 16 = 52$.",
+        "Divide by the $4$ values: $52 \\div 4 = 13$, so the new mean is $13$."
       ]
     }
   ],

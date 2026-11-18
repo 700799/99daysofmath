@@ -35,6 +35,17 @@
     "From the box plot, the maximum is $14$ and the minimum is $2$.",
     "Subtract: $14 - 2 = 12$, so the range of the data is $12$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Add the four sections",
+      "steps": [
+        "A box plot is made of four sections, and their lengths join up to cover the whole range.",
+        "The left whisker is $5 - 2 = 3$ long, and the two parts of the box are $8 - 5 = 3$ and $11 - 8 = 3$.",
+        "The right whisker is $14 - 11 = 3$ long, so the four lengths are all $3$.",
+        "Together they span $3 + 3 + 3 + 3 = 12$, so the range is $12$."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "range",

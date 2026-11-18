@@ -48,6 +48,16 @@
     "The mean is the balance point, and balanced sides put it at the center too.",
     "So the mean and median are typically equal, which is choice A."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Test a symmetric example",
+      "steps": [
+        "Take the symmetric data $2, 4, 6, 8, 10$, which mirrors itself around $6$.",
+        "Its mean is $(2 + 4 + 6 + 8 + 10) \\div 5 = 30 \\div 5 = 6$, and its median is the middle value, $6$.",
+        "Both centers land on the same number, so in symmetric data they are typically equal, choice A."
+      ]
+    }
+  ],
   "tags": [
     "shape"
   ],

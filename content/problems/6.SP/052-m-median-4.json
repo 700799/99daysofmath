@@ -30,6 +30,16 @@
     "With an even count there is no single middle value, so take the two middle values, $3$ and $5$.",
     "The median is their average: $(3 + 5) \\div 2 = 4$, so the median is $4$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Cross off, then find halfway",
+      "steps": [
+        "Cross off the smallest value, $1$, and the largest value, $7$, since the median stays in the middle.",
+        "The values $3$ and $5$ are left, and on a number line the only whole number between them is $4$.",
+        "The number $4$ is $1$ step from each of them, so it is exactly halfway and the median is $4$."
+      ]
+    }
+  ],
   "tags": [
     "median"
   ],

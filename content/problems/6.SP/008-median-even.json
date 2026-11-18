@@ -24,9 +24,10 @@
     {
       "title": "Why average the middle two?",
       "steps": [
-        "The median should split the data so half is below and half is above.",
-        "With $4$ numbers, no single value splits them evenly — but the **midpoint between the middle two** does.",
-        "Midpoint of $8$ and $11$ is $9.5$."
+        "A median must split the data so that half of the values are below it and half are above it.",
+        "With $4$ values, any number between $8$ and $11$ has two values below ($4$ and $8$) and two above ($11$ and $15$).",
+        "To pick one fair number from that stretch, take the point exactly halfway: it is $1.5$ above $8$ and $1.5$ below $11$.",
+        "That halfway point is $8 + 1.5 = 9.5$, so the median is $9.5$."
       ]
     }
   ],

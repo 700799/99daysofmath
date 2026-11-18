@@ -34,6 +34,16 @@
     "$Q_1$ has $25\\%$ of the data below it, and $Q_3$ has $75\\%$ of the data below it.",
     "The part between them holds $75\\% - 25\\% = 50\\%$, so the middle $50\\%$ sits between $Q_1$ and $Q_3$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Count with eight values",
+      "steps": [
+        "Use the data $1, 2, 3, 4, 5, 6, 7, 8$, which has $Q_1 = 2.5$ and $Q_3 = 6.5$.",
+        "The values between those quartiles are $3, 4, 5, 6$, which is $4$ of the $8$ values.",
+        "Four out of eight is $50\\%$, so the middle half of the data sits between $Q_1$ and $Q_3$."
+      ]
+    }
+  ],
   "tags": [
     "quartile",
     "box-plot"

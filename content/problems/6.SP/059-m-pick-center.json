@@ -43,6 +43,17 @@
     "The outlier $65$ pulls the mean up to $38.2$, which is older than four of the five teachers.",
     "The median $32$ is close to most of the ages, so the median, choice B, is the better summary."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Remove the outlier and compare",
+      "steps": [
+        "Cover the $65$ for a moment: the ages $30, 31, 32, 33$ have a mean of $126 \\div 4 = 31.5$ and a median of $31.5$.",
+        "Put the $65$ back: the median only moves to $32$, but the mean jumps to $38.2$.",
+        "One teacher changed the mean by almost $7$ years and the median by half a year.",
+        "The median still matches the usual ages, so it is the better summary, choice B."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "outlier",

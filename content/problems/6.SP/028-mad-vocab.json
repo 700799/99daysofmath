@@ -33,6 +33,16 @@
     "To compute it, you find the distance $|x - \\bar{x}|$ between each value $x$ and the mean $\\bar{x}$.",
     "Averaging those distances gives the MAD, so it measures the average distance from the mean."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Try a small example",
+      "steps": [
+        "Take the data $2, 4, 6$, which has a mean of $4$ and a MAD of $\\frac{4}{3}$.",
+        "That MAD comes from the distances $2$, $0$ and $2$, and each one is measured from the value $4$.",
+        "The value $4$ is the mean of the data, so MAD is the average distance from the mean."
+      ]
+    }
+  ],
   "tags": [
     "MAD",
     "vocabulary"

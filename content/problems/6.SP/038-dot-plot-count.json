@@ -30,6 +30,16 @@
     "The total number of data points is therefore the total number of dots across all three values.",
     "Add the stacks: $3 + 4 + 5 = 12$, so there are $12$ data points."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Level the stacks",
+      "steps": [
+        "Move one dot from the stack of $5$ onto the stack of $3$, which does not change how many dots there are.",
+        "Now all three stacks hold $4$ dots, so the total is $3 \\times 4 = 12$ dots.",
+        "Each dot is one data point, so the plot shows $12$ data points."
+      ]
+    }
+  ],
   "tags": [
     "dot-plot"
   ],

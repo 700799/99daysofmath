@@ -35,6 +35,17 @@
     "There are $3$ values, so the total must be split into $3$ equal shares.",
     "Divide: $10 \\div 3 = 3.333\\ldots$, which rounds to $3.33$, so the mean is about $3.33$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Level, then share the extra",
+      "steps": [
+        "Move $0.5$ from the $3.5$ to the $2.5$, which turns those two values into $3$ and $3$ without changing the total.",
+        "The data now looks like $3, 3, 4$, so every value has $3$ and one single extra unit is left over.",
+        "Share that extra $1$ among the three values: each gets $\\frac{1}{3} \\approx 0.33$.",
+        "The fair share is $3 + 0.33 = 3.33$, so the mean is about $3.33$."
+      ]
+    }
+  ],
   "tags": [
     "mean",
     "decimal"

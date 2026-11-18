@@ -26,18 +26,18 @@
     {
       "title": "Reading a dot plot",
       "steps": [
-        "Each **dot** represents one family.",
-        "The **horizontal number** below the dots tells you how many pets that family has.",
-        "To find \"how many families have 2 pets\", count the dots stacked above the number $2$.",
-        "There are $4$ dots → $4$ families."
+        "A dot plot is a tally drawn on a number line, where each **dot** is one family.",
+        "The number under a column tells how many pets every family in that column has.",
+        "Put a finger on the $2$ and move straight up, touching each dot once: you touch $4$ dots.",
+        "Four dots sit above $2$, so $4$ families have exactly $2$ pets."
       ]
     },
     {
       "title": "Sanity-check with the total",
       "steps": [
-        "If you count **all** the dots, you get the total number of families: $2 + 4 + 3 + 1 = 10$ families.",
-        "Of those $10$, the column above $2$ has $4$ dots.",
-        "So $4$ out of $10$ families have exactly $2$ pets. ✓"
+        "Count the dots in every column and add them to get the whole class: $2 + 4 + 3 + 1 = 10$ families.",
+        "The column above $2$ supplied the $4$ in that sum, and the other columns supply the remaining $6$ families.",
+        "Since $4 + 6 = 10$ uses every dot exactly once, the count of $4$ families with $2$ pets is consistent."
       ]
     }
   ],

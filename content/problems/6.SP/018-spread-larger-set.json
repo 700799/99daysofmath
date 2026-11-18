@@ -43,6 +43,16 @@
     "For the second set, $\\{2, 5, 9, 14\\}$, the range is $14 - 2 = 12$.",
     "Since $12 > 4$, the set $\\{2, 5, 9, 14\\}$ has the greater range, which is choice B."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Compare stretches on a line",
+      "steps": [
+        "Picture both sets on one number line: the first runs from $5$ to $9$ and the second runs from $2$ to $14$.",
+        "The second set starts $3$ units to the left of $5$ and ends $5$ units to the right of $9$.",
+        "It covers the whole stretch of the first set and more, so $\\{2, 5, 9, 14\\}$ has the greater range, choice B."
+      ]
+    }
+  ],
   "tags": [
     "range",
     "compare"

@@ -30,6 +30,16 @@
     "The list has $5$ values, so the middle one is the $3$rd, with two values on each side.",
     "The $3$rd value in the sorted list is $7$, so the median is $7$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Count smaller and larger",
+      "steps": [
+        "The median has the same number of values below it as above it, so test a likely value without sorting.",
+        "Try $7$: the values smaller than it are $2$ and $5$, and the values larger than it are $9$ and $11$.",
+        "Two values sit on each side of $7$, so it is the middle value and the median is $7$."
+      ]
+    }
+  ],
   "tags": [
     "median"
   ],

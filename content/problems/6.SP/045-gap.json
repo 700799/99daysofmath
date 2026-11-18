@@ -32,6 +32,16 @@
     "Such an empty stretch separates the groups of dots on either side of it.",
     "A region of a dot plot with no dots is called a gap."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Sketch a small example",
+      "steps": [
+        "Picture a dot plot with dots above $1$, $2$ and $3$, then no dots until $8$ and $9$.",
+        "The numbers from $4$ to $7$ are an empty space that splits the dots into two groups.",
+        "An empty space between things is called a gap in everyday speech too, so the region is a gap."
+      ]
+    }
+  ],
   "tags": [
     "vocabulary"
   ],

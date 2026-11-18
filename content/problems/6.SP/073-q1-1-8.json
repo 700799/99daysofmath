@@ -33,17 +33,18 @@
     "Four values have two in the middle, $2$ and $3$, so average them: $(2 + 3) \\div 2 = 2.5$.",
     "The lower quartile of the data is $Q_1 = 2.5$."
   ],
-  "tags": [
-    "quartile"
-  ],
-  "estimatedSeconds": 60,
   "alternativeExplanations": [
     {
       "title": "Check the answer",
       "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: 2.5 — verified."
+        "$Q_1$ should split the lower half $1, 2, 3, 4$ into two equal parts, so test $2.5$.",
+        "The values $1$ and $2$ are below $2.5$, and the values $3$ and $4$ are above it.",
+        "Two on each side within the lower half confirms $Q_1 = 2.5$."
       ]
     }
-  ]
+  ],
+  "tags": [
+    "quartile"
+  ],
+  "estimatedSeconds": 60
 }

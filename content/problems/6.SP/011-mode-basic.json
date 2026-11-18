@@ -30,6 +30,16 @@
     "The values $1$, $7$ and $2$ each appear once, while $4$ appears $3$ times.",
     "Since $4$ appears more often than any other value, the mode is $4$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Sort to group repeats",
+      "steps": [
+        "Rewrite the list in order so equal values end up side by side: $1, 2, 4, 4, 4, 7$.",
+        "Look for the longest run of the same number, which is the three $4$s in a row.",
+        "No other number appears more than once, so the most common value, the mode, is $4$."
+      ]
+    }
+  ],
   "tags": [
     "mode"
   ],

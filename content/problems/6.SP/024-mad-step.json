@@ -40,6 +40,16 @@
     "Add the distances to get the total deviation: $2 + 0 + 2 = 4$.",
     "Divide by the $3$ values to average them: the MAD is $\\frac{4}{3}$, or about $1.33$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Think in fractions of the data",
+      "steps": [
+        "Mark $2$, $4$ and $6$ on a number line: the mean $4$ is in the center with one value on each side.",
+        "Two of the three values sit exactly $2$ units from the mean, and the third sits right on it at distance $0$.",
+        "So the average distance is two thirds of $2$, which is $\\frac{2}{3} \\times 2 = \\frac{4}{3}$, about $1.33$."
+      ]
+    }
+  ],
   "tags": [
     "MAD"
   ],

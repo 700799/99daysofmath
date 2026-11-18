@@ -48,6 +48,17 @@
     "A pie chart of letter grades would hide the actual scores.",
     "So the dot plot, choice A, is the display that works well."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Try it with real scores",
+      "steps": [
+        "Suppose the scores are $72, 85, 85, 90, 96$ and picture each display.",
+        "A dot plot shows five dots on a line, so every score and the repeated $85$ can be read directly.",
+        "A histogram needs lots of data to form a shape, and a pie chart of letters would lose the numbers.",
+        "With so few values the dot plot shows everything, so the answer is choice A."
+      ]
+    }
+  ],
   "tags": [
     "display"
   ],

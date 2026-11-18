@@ -53,6 +53,17 @@
     "The shape tells whether the data is symmetric or skewed and whether it has clusters, gaps or outliers.",
     "A complete description uses all three, so the answer is choice A."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Compare two data sets",
+      "steps": [
+        "Take $9, 10, 11$ and $1, 10, 19$: both have a mean of $10$, so just the mean cannot tell them apart.",
+        "Their ranges, $2$ and $18$, show the difference, so spread is needed, and shape adds whether a set is lopsided.",
+        "Color and pattern belong to the drawing and say nothing about the values.",
+        "That leaves center, spread and shape together, which is choice A."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "describe"

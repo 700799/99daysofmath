@@ -1,4 +1,404 @@
 {
+ "6.SP-1#1": {
+  "title": "The balance point on a line",
+  "text": "Mark the values 2, 3 and 10 on a number line and look for the spot where they balance. Try 5: the 2 is 3 below and the 3 is 2 below, a total of 5 below. The 10 is 5 above. The two sides match, so 5 is the mean.\nAdding and dividing agrees: 15 ÷ 3 = 5."
+ },
+ "6.SP-1#2": {
+  "title": "Line up by height",
+  "text": "Five friends stand in a row from shortest to tallest. The third friend has two people on each side, so that friend's height is the median.\nNow let them stand in any order. The person in the third spot could be the tallest of all, with nobody above. The middle spot only means something after the line-up is sorted."
+ },
+ "6.SP-1#3": {
+  "title": "A class vote",
+  "text": "A class votes for a pet: hamster, fish, hamster, lizard, hamster, fish. Hamster gets 3 votes, fish gets 2 and lizard gets 1, so the mode is hamster.\nIf one hamster vote changed to fish, both would have 3 votes and there would be two modes. If six students all picked different pets, nothing would repeat and there would be no mode."
+ },
+ "6.SP-1#4": {
+  "title": "Level the stacks",
+  "text": "Build three stacks of blocks with heights 4, 6 and 8. Take 2 blocks off the tallest stack and put them on the shortest. The 8 becomes 6 and the 4 becomes 6, so the stacks are now 6, 6, 6.\nNo blocks were added or lost, and every stack is level at 6. That level height is the mean."
+ },
+ "6.SP-1#5": {
+  "title": "Think in tens",
+  "text": "Each value is a number of tens: 1 ten, 2 tens and 3 tens. The mean of 1, 2 and 3 is easy to see, because 1 is one below 2 and 3 is one above, so they balance at 2.\nThe mean is 2 tens, which is 20. Scaling every value by 10 scales the mean by 10 as well."
+ },
+ "6.SP-1#6": {
+  "title": "Count smaller and larger",
+  "text": "Test each value without sorting. Is 3 the middle? Nothing is smaller than 3 and two values are larger, so no. Is 7 the middle? Two values are smaller and none is larger, so no.\nTry 5: one value (3) is smaller and one value (7) is larger. The sides are equal, so the median is 5."
+ },
+ "6.SP-1#7": {
+  "title": "Test each value by counting",
+  "text": "A median of five values needs two values below it and two above. Test 8: the values 2, 5 and 4 are smaller, which is three, so 8 is too high. Test 4: only 2 is smaller, so 4 is too low.\nTest 5: the values 2 and 4 are smaller, and 8 and 9 are larger. Two on each side, so the median is 5."
+ },
+ "6.SP-1#8": {
+  "title": "Draw a quick dot plot",
+  "text": "Put a dot above each value on a number line. The 2 gets one dot, the 4 gets two dots stacked up, and the 9 gets one dot.\nThe mode is the tallest stack. Only the stack above 4 is two dots high, so the mode is 4. The picture shows the answer with no arithmetic."
+ },
+ "6.SP-1#9": {
+  "title": "Use the symmetry",
+  "text": "Look at the list around 5. The 3 is 2 below and the 7 is 2 above, so they cancel and the mean is 5 without adding.\nCross off the two ends, 3 and 7. The pair 5, 5 is left, and halfway between them is 5, so the median is 5.\nThe only value that repeats is 5, so the mode is 5 too."
+ },
+ "6.SP-1#10": {
+  "title": "Add, then divide",
+  "text": "Check the balance answer with the usual recipe. The total is 4 + 6 + 8 = 18. There are three values, so share 18 into three equal parts: 18 ÷ 3 = 6.\nAs a second check, three values of 6 would also total 18. Both routes agree that the mean is 6."
+ },
+ "6.SP-2#1": {
+  "title": "One score changes the average",
+  "text": "Four quiz scores are 6, 7, 8 and 9. The total is 30, so the mean is 7.5. Now a teacher finds a marking mistake and raises the 6 to 10. The total grows by 4 to 34, and the mean grows to 8.5.\nOne changed score moved the mean by 4 ÷ 4 = 1 point. Every value has a share in the mean, so no value can change without the mean noticing."
+ },
+ "6.SP-2#2": {
+  "title": "The new kid with 50 dollars",
+  "text": "Five kids have 1, 2, 2, 2 and 3 dollars. The total is 10, so the mean is 2 dollars, which looks like everyone.\nA sixth kid joins with 50 dollars. The total becomes 60 and the mean becomes 60 ÷ 6 = 10 dollars. Five of the six kids have 3 dollars or less, so a mean of 10 no longer describes a typical kid."
+ },
+ "6.SP-2#3": {
+  "title": "Swap in something huge",
+  "text": "Take 3, 5 and 8. The median is the middle value, 5. Change the 8 to 80 and the list is 3, 5, 80, with median 5. Change it to 8,000 and the median is still 5.\nThe means tell a different story: about 5.3, then about 29.3, then about 2,669. The big value still fills one seat at the end of the row, so the middle seat keeps the same value."
+ },
+ "6.SP-2#4": {
+  "title": "House prices on one street",
+  "text": "Five houses sold for 200, 210, 220, 230 and 900 thousand dollars. The total is 1,760, so the mean is 352 thousand. No house on the street sold for anything close to that.\nThe median is the middle price, 220 thousand, which sits right among four of the five houses. With one mansion in the data, the median gives the more honest picture."
+ },
+ "6.SP-2#5": {
+  "title": "Pair off the ends",
+  "text": "Match the smallest with the largest: 1 and 5 add to 6, so that pair averages 3. Match the next two: 2 and 4 also add to 6 and average 3. The value left over is 3 itself.\nEverything balances at 3, so the mean is 3. It is also the middle of the list, which is why it feels typical."
+ },
+ "6.SP-2#6": {
+  "title": "Start from the small values",
+  "text": "The values 2, 3 and 4 have a mean of 3. Pretend the fourth value is 3 too, so the mean is still 3.\nThe real fourth value is 100, which is 97 more than 3. Share that extra among all four values: 97 ÷ 4 = 24.25. The mean climbs to 3 + 24.25 = 27.25, and nearly all of it comes from one number."
+ },
+ "6.SP-2#7": {
+  "title": "Cross off the ends",
+  "text": "Cross off the smallest value, 2, and the largest value, 100. Removing one from each end keeps the middle where it was.\nThe values 3 and 4 are left. The median is the point halfway between them, which is 3.5. The 100 was crossed off first, so its size never entered the answer."
+ },
+ "6.SP-2#8": {
+  "title": "Count who is close",
+  "text": "Estimate the mean: the total is close to 300, and 300 ÷ 4 = 75. Now ask how many salaries are within 10 of 75. None are, since the nearest ones are 35 and 200.\nThe middle two salaries are 32 and 35, so the median is halfway, 33.5. Three of the four salaries are within 4 of it. Report the median, 33.5."
+ },
+ "6.SP-2#9": {
+  "title": "Cross off whatever is largest",
+  "text": "Find the median of 4, 4, 10 by crossing off the smallest value and the largest value. One 4 and the 10 go, and 4 is left.\nNow do the same with 4, 4, 1,000. One 4 and the 1,000 go, and 4 is left again. The largest value is removed whatever its size, so the median stays 4."
+ },
+ "6.SP-2#10": {
+  "title": "Measure the gaps between neighbors",
+  "text": "Put 2, 3, 4 and 100 on a number line and look at the spaces between neighbors. From 2 to 3 is 1. From 3 to 4 is 1. From 4 to 100 is 96.\nThree values sit one step apart, and then there is an empty stretch of 96 before the last one. A value that far from every neighbor is an outlier, so yes, the 100 is an outlier."
+ },
+ "6.SP-3#1": {
+  "title": "A week of temperatures",
+  "text": "In one city the coldest day of the week was 12 degrees and the warmest was 30 degrees. The range is 30 − 12 = 18 degrees, so the weather swung a lot.\nIn another city the week went from 20 to 22 degrees, a range of only 2. If every day had been exactly 21 degrees, the range would be 21 − 21 = 0."
+ },
+ "6.SP-3#2": {
+  "title": "Try it with eight numbers",
+  "text": "Take 1, 2, 3, 4, 5, 6, 7, 50. The bottom half is 1, 2, 3, 4, with middle 2.5. The top half is 5, 6, 7, 50, with middle 6.5. So the IQR is 6.5 − 2.5 = 4.\nThe range is 50 − 1 = 49 because of the 50. Change the 50 to 8 and the range drops to 7, but the IQR is still 4."
+ },
+ "6.SP-3#3": {
+  "title": "Walk to the meeting spot",
+  "text": "Four friends live at houses 1, 5, 6 and 8 on a street. They meet at the mean, house 5, because 20 ÷ 4 = 5.\nTheir walks are 4, 0, 1 and 3 houses long. A walk is never negative, whichever direction it goes. The total is 8, so the average walk is 8 ÷ 4 = 2 houses. That average walk is the MAD."
+ },
+ "6.SP-3#4": {
+  "title": "Add the gaps",
+  "text": "The list is in order, so measure the gap between each pair of neighbors. From 5 to 9 is 4. From 9 to 12 is 3. From 12 to 20 is 8.\nThe gaps join end to end and cover the whole stretch of the data: 4 + 3 + 8 = 15. That matches 20 − 5, so the range is 15."
+ },
+ "6.SP-3#5": {
+  "title": "Sort, then count up",
+  "text": "Write the list in order: 6, 9, 14, 22. Now the ends are the minimum and the maximum, with no scanning needed.\nCount up from 6 to 22 in easy jumps. From 6 to 10 is 4, from 10 to 20 is 10, and from 20 to 22 is 2. The jumps total 4 + 10 + 2 = 16, so the range is 16."
+ },
+ "6.SP-3#6": {
+  "title": "One stack on a dot plot",
+  "text": "Draw the data as a dot plot. All three dots land in one stack above 3. The range is the width of the plot from the leftmost dot to the rightmost dot, and a single stack has no width.\nA second check: the mean is 3, and each value is 0 away from it. Every measure of spread gives 0 here."
+ },
+ "6.SP-3#7": {
+  "title": "Use the even spacing",
+  "text": "The values 2, 4, 6 are evenly spaced, two apart. In an evenly spaced list of three, the middle value is the balance point, so the mean is 4.\nOn a number line, 6 is the very next value after 4, one step of 2 to the right. So the distance from 6 to the mean is 2."
+ },
+ "6.SP-3#8": {
+  "title": "Two thirds of the values",
+  "text": "Mark 2, 4 and 6 on a number line. The mean, 4, sits on the middle value. Two of the three values are 2 units away from it, and one is 0 units away.\nSo the average distance is two thirds of 2. Two thirds of 2 is 4 thirds, which is about 1.33. The MAD is about 1.33."
+ },
+ "6.SP-3#9": {
+  "title": "Halfway between the ends",
+  "text": "The values go up by 2 each time, so each half is evenly spaced, and the middle of an evenly spaced group is halfway between its ends.\nBottom half 1, 3, 5, 7: halfway between 1 and 7 is 4, so Q1 = 4. Top half 9, 11, 13, 15: halfway between 9 and 15 is 12, so Q3 = 12.\nIQR = 12 − 4 = 8."
+ },
+ "6.SP-3#10": {
+  "title": "List the values and add gaps",
+  "text": "Write out what the dots say: 3, 3, 5, 8, 8. Now walk along the list and add up each move. From 3 to 3 is 0. From 3 to 5 is 2. From 5 to 8 is 3. From 8 to 8 is 0.\nThe moves total 2 + 3 = 5, the same as 8 − 3. The range is 5."
+ },
+ "6.SP-4#1": {
+  "title": "Build one from quiz scores",
+  "text": "Five quiz scores come in: 7, 8, 8, 9, 8. Draw a number line and add a dot for each score as you read it. One dot goes above 7, one above 9, and three pile up above 8.\nThe finished plot has five dots for five scores. The tall stack above 8 shows the most common score at a glance."
+ },
+ "6.SP-4#2": {
+  "title": "Sorting ages into decades",
+  "text": "At a family party the ages are 12, 15, 18, 21, 24, 27 and 29. Sort them by decade. The teens box gets 12, 15 and 18, so its bar is 3 tall. The twenties box gets 21, 24, 27 and 29, so its bar is 4 tall.\nThe two boxes meet at 20 with nothing between, so the bars touch. The bars alone no longer tell you that someone is exactly 24."
+ },
+ "6.SP-4#3": {
+  "title": "Find the five numbers yourself",
+  "text": "Take 2, 4, 4, 5, 7, 8, 10. The smallest is 2 and the largest is 10, so the whiskers end there. The middle value is 5, so the line inside the box goes at 5.\nThe bottom half 2, 4, 4 has middle 4, and the top half 7, 8, 10 has middle 8. The box runs from 4 to 8."
+ },
+ "6.SP-4#4": {
+  "title": "Write the list behind the stack",
+  "text": "Turn the stack back into numbers. Each dot above the 3 is one data value equal to 3, so the stack stands for the list 3, 3, 3, 3.\nCount the entries in that list: there are four. So 4 values equal 3. Reading a stack as a list is a good way to check a count."
+ },
+ "6.SP-4#5": {
+  "title": "Make a ten",
+  "text": "Add the stacks in a friendlier order. The stack of 2 and the stack of 3 together hold 5 dots. The remaining stack also holds 5 dots. Two fives make 10.\nYou can check by writing the data out: 1, 1, 2, 2, 2, 2, 2, 3, 3, 3. That list has ten entries, so there are 10 values."
+ },
+ "6.SP-4#6": {
+  "title": "Try it with real numbers",
+  "text": "Use the data 10, 20, 30, 40, 50, 60, 70. The middle value is 40. The bottom half 10, 20, 30 has middle 20, and the top half 50, 60, 70 has middle 60.\nSo the box is drawn from 20 to 60 and the whiskers reach 10 and 70. The only summary number left is 40, and it is drawn inside the box. That line is the median."
+ },
+ "6.SP-4#7": {
+  "title": "Compare with a bar graph",
+  "text": "A bar graph of favorite pets has bars for cat, dog and fish. Those are separate things, and nothing lies between cat and dog, so the bars stand apart.\nA histogram sits on a number line. After the range 0 to 9 the very next number is 10, which starts the next range. The line has no break, so the bars have no gap. Yes, they touch."
+ },
+ "6.SP-4#8": {
+  "title": "Count up the grid lines",
+  "text": "Go to the bar over 5–9 and climb it one grid line at a time, counting from the bottom: 1, 2, 3, 4, 5, 6, 7. The top of the bar is at the seventh line.\nThink of the bar as a stack of seven values, each somewhere from 5 to 9, such as 5, 6, 6, 7, 8, 9, 9. Seven values make a bar 7 tall."
+ },
+ "6.SP-4#9": {
+  "title": "Ask each display a question",
+  "text": "Ask both displays, \"Where is the median?\" On a bar graph of favorite foods there is nowhere to point. Pizza, tacos and pasta have no order, so they have no middle.\nOn a box plot you can point straight at the answer: the line inside the box. The edges of the box are the quartiles. The box plot is the one that shows them."
+ },
+ "6.SP-4#10": {
+  "title": "Level the bars",
+  "text": "Even out the bar heights without changing the total. Take 2 from the bar of 6 and give it to the bar of 2. The heights 4, 6, 2 become 4, 4, 4.\nThree bars of height 4 hold 3 × 4 = 12 values. Moving counts between bars does not add or remove any, so the data set has 12 values."
+ },
+ "6.SP-5#1": {
+  "title": "Describe it over the phone",
+  "text": "Imagine telling a friend about a data set over the phone so they can sketch it. Say only \"it is around 70\" and they cannot draw anything yet. Add \"the values go from 65 to 75\" and they know how wide to make it. Add \"most are in the middle, with the same amount on each side\" and they can draw the hump.\nCenter, spread and shape are the three things the sketch needs."
+ },
+ "6.SP-5#2": {
+  "title": "Try it with numbers",
+  "text": "Look at 1, 1, 1, 2, 2, 3, 9. Six values crowd between 1 and 3, and the lone 9 trails far off to the right. This data is skewed right.\nFlip it: 1, 7, 8, 8, 9, 9, 9 has its crowd on the right and a lone 1 trailing off to the left, so it is skewed left.\nIn 4, 5, 5, 6 both sides match, so it is symmetric."
+ },
+ "6.SP-5#3": {
+  "title": "Ages at a birthday party",
+  "text": "The ages at a birthday party are 9, 9, 10, 10, 10, 11 and 38. Six of the ages sit within two years of each other. That group is a cluster, and it tells you the party is for a ten-year-old.\nThe 38 is far from all of them. It is an outlier, and it has a story too: a parent is in the room."
+ },
+ "6.SP-5#4": {
+  "title": "One number, three meanings",
+  "text": "The number 80 means nothing until you know where it came from. A center of 80 points on a test says the class did well. A center of 80 minutes for a bus ride says the trip is far too long. A center of 80 degrees says to pack shorts.\nThe arithmetic is the same each time. The answer to the real question is different each time."
+ },
+ "6.SP-5#5": {
+  "title": "Rule out the other names",
+  "text": "Go through the words used for features of data. A cluster is a group of values close together, and the 30 is alone. A gap is an empty space, and the 30 is a value, not a space. The mode is the most common value, and 30 appears once.\nThe word for a single value far from the rest is outlier, so the 30 is an outlier."
+ },
+ "6.SP-5#6": {
+  "title": "The fold test",
+  "text": "Imagine folding the plot in half at the middle of the number line. If the two sides landed on top of each other, the data would be symmetric. Here they do not match: the left side is a tall pile and the right side is long and thin.\nThe side that sticks out long and thin is the tail. It is on the right, so the data is skewed right."
+ },
+ "6.SP-5#7": {
+  "title": "Two buses, same typical time",
+  "text": "Two bus routes both have a typical trip of 20 minutes. On the first route every trip takes between 19 and 21 minutes. On the second, trips take anywhere from 5 to 35 minutes.\nYou would plan your morning very differently for each one, yet the center is the same. The missing piece is how much the times vary, which is the spread."
+ },
+ "6.SP-5#8": {
+  "title": "Sketch the dot plot",
+  "text": "Draw the scores as dots: one dot above 7, three above 8, two above 9 and one above 10.\nThe tallest stack is at 8, so the center is 8. The dots run from 7 to 10, a width of 3 points. The stacks get shorter on both sides of the peak and no dot sits far away, so the shape is roughly symmetric."
+ },
+ "6.SP-5#9": {
+  "title": "Set the 90 aside first",
+  "text": "Cover the 90 and look at what is left: 20, 25, 25, 30. These balance at 25 and fit inside 10 minutes, so most students do about 25 minutes.\nNow uncover the 90. It is 60 minutes beyond the next value, far outside that group, so it is an outlier. Report both facts: most about 25 minutes, one outlier at 90."
+ },
+ "6.SP-5#10": {
+  "title": "Look at the gaps",
+  "text": "Place the values on a number line. From 20 to 25 is 5, from 25 to 25 is 0, and from 25 to 30 is 5. Then from 30 to 90 is 60.\nFour values crowd together on the left and one sits far away on the right. That long empty stretch ending in a single value is a tail pointing right, so the data is skewed right."
+ },
+ "6.SP-6#1": {
+  "title": "A repeat still counts",
+  "text": "Take the scores 7, 9, 9, 10. There are four scores, because the 9 was earned twice and both count. The total is 35, so the mean is 35 ÷ 4 = 8.75.\nSomeone who counts only the different numbers gets n = 3 and a mean of 35 ÷ 3, about 11.7. That is higher than every score, which cannot be right. One wrong count ruined the answer."
+ },
+ "6.SP-6#2": {
+  "title": "Three centers, one data set",
+  "text": "Try all three on 2, 3, 3, 4, 18. The total is 30, so the mean is 30 ÷ 5 = 6. The middle value of the sorted list is 3, so the median is 3. The value that repeats is 3, so the mode is 3.\nFour of the five values are 4 or less. The median and mode match them, and the mean was pulled up by the 18."
+ },
+ "6.SP-6#3": {
+  "title": "Same center, different scatter",
+  "text": "The lists 9, 10, 11 and 1, 10, 19 both have a center of 10. A report that only says \"center 10\" makes them sound the same.\nSubtract the smallest from the largest in each. The first gives 11 − 9 = 2 and the second gives 19 − 1 = 18. Now the report shows that one list hugs its center and the other is scattered wide."
+ },
+ "6.SP-6#4": {
+  "title": "Use the skip-counting pattern",
+  "text": "The values are the twos you say when skip counting: 2 × 1, 2 × 2, 2 × 3, 2 × 4, 2 × 5. The list stops at 2 × 5, so it has five values and n = 5.\nThat tells you the mean will divide by 5. Five is odd, so one value will sit alone in the middle, the third one."
+ },
+ "6.SP-6#5": {
+  "title": "Pair them off",
+  "text": "Circle the values two at a time: 11 with 13, then 15 with 17. That makes two pairs with nothing left over, so n = 2 × 2 = 4.\nNothing left over means the count is even. An even count has no single middle value, so the median will be found halfway between the two inside values, 13 and 15."
+ },
+ "6.SP-6#6": {
+  "title": "Stack the dots",
+  "text": "Draw a number line and place a dot for each value. One dot goes above 3. Two dots go above 5, one on top of the other. One dot goes above 7.\nThe mode is the tallest stack. The stack above 5 is the only one two dots high, so the mode is 5."
+ },
+ "6.SP-6#7": {
+  "title": "Sort so repeats sit together",
+  "text": "Rewrite the list in order: 2, 6, 6, 6, 9. Sorting pulls equal values next to each other, so repeats show up as a run.\nThe longest run is the three 6s in a row. The 2 and the 9 each stand alone. The value with the longest run is the mode, so the mode is 6."
+ },
+ "6.SP-6#8": {
+  "title": "Balance around 5",
+  "text": "Two of the four values are already 5, so guess that the mean is 5. Check the other two. The 3 is 2 below the guess and the 7 is 2 above it.\nThe 2 below and the 2 above cancel, so nothing pulls the balance point away from 5. The mean is 5, with no adding needed."
+ },
+ "6.SP-6#9": {
+  "title": "Read it all off a dot plot",
+  "text": "Draw the data: one dot above 3, two above 5, one above 7. Count the dots to get n = 4.\nThe picture is a mirror image around 5, with the tall stack in the middle, so the center is 5. The dots stretch from 3 to 7, and 7 − 3 = 4, so the range is 4. One sketch gives all three finds."
+ },
+ "6.SP-6#10": {
+  "title": "Halfway between the ends",
+  "text": "The values go up by 2 each time, so the list is evenly spaced and its middle is halfway between its two ends. Add the ends and halve: 2 + 10 = 12, and 12 ÷ 2 = 6.\nCheck by counting: 2 and 4 are below 6, and 8 and 10 are above it. Two on each side, so the median is 6."
+ },
+ "6.SP-7#1": {
+  "title": "Ask five kids",
+  "text": "Ask five sixth graders how tall they are and you might write down 142, 150, 147, 155 and 150 centimeters. No single one of those is \"the\" answer. To reply you would have to say something like \"mostly around 150\".\nA question whose honest reply needs a list, and then a summary of the list, is a statistical question."
+ },
+ "6.SP-7#2": {
+  "title": "One stack on the dot plot",
+  "text": "Ask twenty people how many days are in a week. Every reply is 7. Plot the replies and you get one stack of twenty dots above 7, with a range of 7 − 7 = 0.\nThe twentieth reply told you nothing the first one did not. When the plot can only ever be one stack, the question is a fact question."
+ },
+ "6.SP-7#3": {
+  "title": "Rewrite one question two ways",
+  "text": "Start with \"How long is my bus ride?\" It is about one rider, and the reply is one number, such as 15 minutes.\nChange the subject to a group: \"How long are the bus rides of students at my school?\" Now the replies might be 5, 15, 20 and 40 minutes. The topic stayed the same. Only the words naming who is being asked about changed."
+ },
+ "6.SP-7#4": {
+  "title": "Picture the data you would get",
+  "text": "Imagine collecting the data. You stand against a wall, someone marks your height, and you write down one number. A dot plot of this data has a single dot.\nThere is nothing to average, no smallest or largest, and no spread. A question that produces one dot is not statistical."
+ },
+ "6.SP-7#5": {
+  "title": "Picture the dot plot",
+  "text": "Imagine measuring everyone in the class and writing down numbers such as 140, 152, 147 and 160 centimeters. Plot them and the dots spread along the number line, some low, some high, with a few stacks.\nTo answer the question you would need to describe that spread-out picture. Data that spreads out comes from a statistical question."
+ },
+ "6.SP-7#6": {
+  "title": "Check ten calendars",
+  "text": "Look up February 2025 on ten different calendars. Each one shows 28 days. A list of the results is 28 written ten times, with no variation.\nCompare \"How many days are in each month of 2025?\" That one gives 31, 28, 31, 30 and so on, which do vary. A number in the reply is not enough. The February question has one fixed reply, so it is not statistical."
+ },
+ "6.SP-7#7": {
+  "title": "Time the lunch table",
+  "text": "Imagine standing in the lunchroom with a stopwatch. One student is done in 8 minutes, another takes 15, and a slow eater takes 25. Your notebook fills with different times.\nTo report back you would say something like \"most take about 15 minutes\". Needing a summary of many different values is the sign of a statistical question."
+ },
+ "6.SP-7#8": {
+  "title": "Wrong replies are not variability",
+  "text": "Ask a hundred people and a few might say Los Angeles. Does that make the replies vary? No. Those people are mistaken, and a map settles it: the capital is Sacramento.\nIn a statistical question, different replies are all true at once, like different heights. Here only one reply is true, so the question is not statistical."
+ },
+ "6.SP-7#9": {
+  "title": "Test the new question",
+  "text": "Check the rewrite by imagining the replies. For \"How many pets do I have?\" you write one number, such as 2, and you are done.\nFor \"How many pets does each family on my street have?\" you knock on doors and write 0, 2, 1, 0, 3. Those replies differ from house to house. Adding the group turned one number into varying data, so the fix works."
+ },
+ "6.SP-7#10": {
+  "title": "Look for the group word",
+  "text": "Read the subject of the question: \"sixth-graders\". It is plural, so it points to many people, not one. You cannot look the reply up in one place or measure it once.\nYou would have to survey many students, and their sleep times would not all match. A group subject plus a quantity that differs between people makes the question statistical."
+ },
+ "6.SP-8#1": {
+  "title": "Level three towers",
+  "text": "Build towers of 2, 5 and 8 blocks. Take 3 blocks from the tallest tower and add them to the shortest. Now every tower is 5 blocks high.\nNo block was added or thrown away, so the 15 blocks are simply shared equally. The level height, 5, is the mean, and it matches 15 ÷ 3."
+ },
+ "6.SP-8#2": {
+  "title": "The fourth runner home",
+  "text": "Seven runners finish a race, and their times are written down in finishing order. The fourth runner has three people ahead and three behind, so that time is the median.\nSuppose the last runner stops to tie a shoe and takes an extra hour. The fourth runner is still fourth, with the same time. The order had to be known first, and the slowest time did not matter."
+ },
+ "6.SP-8#3": {
+  "title": "Four kids in a row",
+  "text": "Four kids line up by height: 130, 134, 138 and 150 centimeters. No kid stands in the middle. But any height between 134 and 138 has two kids shorter and two kids taller.\nTo agree on one number, everyone uses the point halfway between the two inside kids. Add 134 and 138 to get 272, then halve it to get 136. No kid is 136 tall, and that is fine."
+ },
+ "6.SP-8#4": {
+  "title": "Cross off from both ends",
+  "text": "Cross off the smallest value and the largest value together: 3 and 11 go. Do it again with the new ends: 5 and 9 go.\nEach round removes one value from each side, so the middle never shifts. The only value left is 7, so the median is 7."
+ },
+ "6.SP-8#5": {
+  "title": "Find the point between",
+  "text": "Put 2, 4, 6 and 8 on a number line. The median must have two values on each side, so it lies between 4 and 6.\nThe only whole number between them is 5. It is 1 step above 4 and 1 step below 6, so it is exactly halfway. Two values are below it and two are above. The median is 5."
+ },
+ "6.SP-8#6": {
+  "title": "Step inward until you meet",
+  "text": "The middle two values are 3 and 7. Put a finger on each and move both inward one step at a time. The fingers go to 4 and 6, and then both land on 5.\nThey moved the same distance, 2 steps each, so 5 is exactly halfway between 3 and 7. The median is 5."
+ },
+ "6.SP-8#7": {
+  "title": "Move two blocks across",
+  "text": "Picture stacks of 6, 8 and 10 blocks. Lift 2 blocks off the stack of 10 and set them on the stack of 6. All three stacks are now 8 high.\nThe total did not change, and the stacks are level, so each value's fair share is 8. The mean is 8."
+ },
+ "6.SP-8#8": {
+  "title": "Share out the extra 95",
+  "text": "Pretend for a moment that all four values are 5. The mean would be 5. The real last value is 100, which is 95 more.\nShare that extra among the four values: 95 ÷ 4 = 23.75. The mean is 5 + 23.75 = 28.75.\nFor the median, cross off one 5 and the 100. The pair 5, 5 is left, so the median is 5. Report 5."
+ },
+ "6.SP-8#9": {
+  "title": "Measure how far each center misses",
+  "text": "See how close each center is to the actual values. The median, 5, is exactly equal to three of the four values.\nThe mean, 28.75, is 23.75 away from each 5 and 71.25 away from the 100. It is not close to a single value in the data.\nThe center that matches most of the data is the median, 5."
+ },
+ "6.SP-8#10": {
+  "title": "Use the position formula",
+  "text": "Count the values: n = 4. The middle position is (4 + 1) ÷ 2 = 2.5. There is no slot 2.5, so the median sits between slot 2 and slot 3.\nSlot 2 holds 3 and slot 3 holds 7. Halfway between them is (3 + 7) ÷ 2 = 5. The median is 5, the same as crossing off gives."
+ },
+ "6.SP-9#1": {
+  "title": "Rebuild the list from the plot",
+  "text": "Suppose a plot has two dots above 4, one dot above 5, nothing above 6, and three dots above 7. Read it back into a list: 4, 4, 5, 7, 7, 7.\nThat is six values from six dots. The empty spot at 6 tells you no one got a 6. The plot and the list hold exactly the same information."
+ },
+ "6.SP-9#2": {
+  "title": "Seven ages, two bars",
+  "text": "Take the ages 12, 15, 18, 21, 24, 27, 29. Three of them fall in 10–19 and four fall in 20–29. The histogram is a bar of height 3 next to a bar of height 4.\nSomeone who sees only the bars knows that four people are in their twenties. They cannot tell whether anyone is exactly 24. The count is kept and the exact ages are dropped."
+ },
+ "6.SP-9#3": {
+  "title": "Twelve students in a line",
+  "text": "Line up 12 students from shortest to tallest and split the line into four groups of 3. The cut between groups 1 and 2 is Q1, the cut in the center is the median, and the cut between groups 3 and 4 is Q3.\nThe box covers groups 2 and 3. That is 6 of the 12 students, exactly half, whether their heights are close together or far apart."
+ },
+ "6.SP-9#4": {
+  "title": "Make a tiny plot",
+  "text": "Plot the data 5, 5, 6 yourself. Read the first 5 and draw a dot above 5. Read the second 5 and draw another dot on top. Read the 6 and draw a dot above 6.\nThree values were read and three dots were drawn, one at a time. Each dot stands for one data value."
+ },
+ "6.SP-9#5": {
+  "title": "Build the stack dot by dot",
+  "text": "Work forwards from the measuring. Each time a measurement comes out as 3, one dot is added above the 3. After the first such measurement the stack is 1 high, then 2, then 3, then 4.\nA stack 4 dots high can only come from four measurements equal to 3. So 4 measurements equal 3."
+ },
+ "6.SP-9#6": {
+  "title": "Invent data that fits",
+  "text": "Make up values that would create this bar, such as 10, 12, 15, 15 and 19. Each one lies in the interval 10–19, and each one raises the bar by 1.\nFive values raise it to height 5. A sixth value in the interval would make the height 6, which is not what the bar shows. So 5 values fall there."
+ },
+ "6.SP-9#7": {
+  "title": "Two lists, one bar",
+  "text": "Here are two different data sets: 20, 20, 20, 20, 20, 20, 20, 20 and 21, 22, 23, 24, 25, 26, 27, 28. Each has eight values between 20 and 29.\nBoth give the same bar of height 8 over 20–29. The bar tells you there are 8 values, but it cannot tell these two lists apart, so the exact positions are hidden."
+ },
+ "6.SP-9#8": {
+  "title": "Count with eight values",
+  "text": "Use the data 1, 2, 3, 4, 5, 6, 7, 8. The bottom half 1, 2, 3, 4 has middle 2.5, so Q1 = 2.5. The top half 5, 6, 7, 8 has middle 6.5, so Q3 = 6.5.\nThe values inside the box, between 2.5 and 6.5, are 3, 4, 5 and 6. That is 4 of the 8 values, so the box holds the middle 50% of the data."
+ },
+ "6.SP-9#9": {
+  "title": "Measure the four sections",
+  "text": "Find the length of each piece. Left whisker: 6 − 4 = 2. Left part of the box: 7 − 6 = 1. Right part of the box: 9 − 7 = 2. Right whisker: 10 − 9 = 1.\nThe box is 1 + 2 = 3 wide and runs from 6 to 9, split at the typical score, 7. All four pieces together are 2 + 1 + 2 + 1 = 6, the range."
+ },
+ "6.SP-9#10": {
+  "title": "Count up along the box",
+  "text": "Start at the left edge of the box, 15, and count up to the right edge, 35. From 15 to 20 is 5. From 20 to 35 is 15. Together that is 5 + 15 = 20.\nAdd back to check: 15 + 20 = 35, which is the right edge. The box is 20 units wide, so the IQR is 20."
+ },
+ "6.SP-10#1": {
+  "title": "Can a friend sketch it?",
+  "text": "Read this summary: \"Quiz scores are symmetric, centered at 8, and run from 6 to 10.\" A friend who never saw the scores can sketch a hump with its peak at 8 that fades out at 6 and 10.\nRemove \"centered at 8\" and they do not know where the peak goes. Remove \"from 6 to 10\" and they do not know how wide to draw it."
+ },
+ "6.SP-10#2": {
+  "title": "One sort, three answers",
+  "text": "Take 9, 3, 6. Sort it once to get 3, 6, 9. Read the left end for the minimum, 3. Read the right end for the maximum, 9. Read the middle for the median, 6.\nThe range is 9 − 3 = 6. For the mean, add and share: 18 ÷ 3 = 6. A single sorted list gave everything except the sum."
+ },
+ "6.SP-10#3": {
+  "title": "Five kids and their allowances",
+  "text": "Five kids get weekly allowances of 5, 5, 6, 6 and 78 dollars. The total is 100, so the mean is 20 dollars. Four of the five kids get less than a third of that.\nThe median is the middle value, 6 dollars, which is what a typical kid here really gets. With the 78 in the data, the median is the center to report."
+ },
+ "6.SP-10#4": {
+  "title": "Work in tens",
+  "text": "Every value is a number of tens: 1, 2, 3, 4 and 5 tens. The small list 1, 2, 3, 4, 5 adds to 15, and 15 ÷ 5 = 3.\nSo the mean is 3 tens, which is 30. Dividing every value by 10 first keeps the arithmetic small, and multiplying back by 10 at the end gives the same mean."
+ },
+ "6.SP-10#5": {
+  "title": "Pair small with large",
+  "text": "Match the smallest value with the largest: 2 + 8 = 10, so that pair averages 5. Match the two inside values: 4 + 6 = 10, so they average 5 too.\nBoth pairs balance at 5, so the mean of all four values is 5. This works because the values are evenly spaced."
+ },
+ "6.SP-10#6": {
+  "title": "Count smaller and larger",
+  "text": "Skip the sorting and test a value directly. The median of five values needs two values below it and two above.\nTest 5: the smaller values are 3 and 1, and the larger values are 7 and 9. Two on each side, so the median is 5. Testing 7 fails, because three values (3, 1, 5) are smaller."
+ },
+ "6.SP-10#7": {
+  "title": "Add up the gaps",
+  "text": "Sort the list: 5, 7, 12, 18, 20. Measure the gap between each pair of neighbors: 2, then 5, then 6, then 2.\nThe gaps link the smallest value to the largest with nothing missed, so their sum is the range: 2 + 5 + 6 + 2 = 15. It agrees with 20 − 5."
+ },
+ "6.SP-10#8": {
+  "title": "Count up from the minimum",
+  "text": "The smallest value is 2 and the largest is 11. Start at 2 and count up to 11 in two jumps. From 2 to 10 is 8, and from 10 to 11 is 1 more.\nThe distance is 8 + 1 = 9. Check by adding back: 2 + 9 = 11, the maximum. The range is 9."
+ },
+ "6.SP-10#9": {
+  "title": "Summarize from a dot plot",
+  "text": "Draw one dot above each of 1, 3, 5, 7 and 9. Count five dots, so there are five values.\nThe dots are evenly spaced and the picture is a mirror image around 5, so the shape is symmetric and the center is 5. The leftmost dot is at 1 and the rightmost is at 9, and 9 − 1 = 8, so the range is 8."
+ },
+ "6.SP-10#10": {
+  "title": "Pair the ends",
+  "text": "Match the outside values: 10 + 50 = 60, and half of 60 is 30. Match the next two: 20 + 40 = 60, and half of 60 is 30. The value left in the center is 30.\nEvery pair averages 30 and so does the leftover value, so the mean is 30. Adding everything gives 150 ÷ 5 = 30 as well."
+ },
  "GEO-1#1": {
   "title": "Everyday stand-ins",
   "text": "Use real objects as models. The tip of a sharp pencil pressed on paper marks a point. A string pulled tight between two nails is a segment, and you can measure it. A laser beam leaving a pointer is a ray: it has a start but no finish. A straight road imagined with no beginning and no end is a line, and a calm lake stretching forever in every direction is a plane. The real objects have thickness, but the ideas do not."

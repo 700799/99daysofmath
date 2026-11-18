@@ -35,6 +35,16 @@
     "The problem gives the quartiles to use: $Q1 = 3$ and $Q3 = 9$.",
     "Subtract the lower from the upper: $9 - 3 = 6$, so the IQR is $6$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Check the quartiles, count up",
+      "steps": [
+        "The lower half $1, 2, 4, 5$ has middle values $2$ and $4$, so $Q1 = 3$ is right; the upper half $7, 8, 10, 11$ gives $Q3 = 9$ the same way.",
+        "Now count up from $Q1$ to $Q3$ on a number line: $3$ to $9$ is $6$ steps.",
+        "Adding back confirms it, since $3 + 6 = 9$, so the IQR is $6$."
+      ]
+    }
+  ],
   "tags": [
     "CA",
     "IQR"

@@ -35,6 +35,16 @@
     "The IQR is the spread of the middle half, found as $Q3 - Q1$.",
     "Subtract: $20 - 7 = 13$, so the IQR of this data is $13$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Jump along a number line",
+      "steps": [
+        "Mark $Q1 = 7$ and $Q3 = 20$ on a number line, because the IQR is the distance between them.",
+        "Jump from $7$ to $10$, which is $3$ units, and then from $10$ to $20$, which is $10$ more units.",
+        "The jumps total $3 + 10 = 13$, so the IQR is $13$."
+      ]
+    }
+  ],
   "tags": [
     "IQR"
   ],

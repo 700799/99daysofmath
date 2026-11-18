@@ -33,6 +33,16 @@
     "The sum $2 + 2$ always equals $4$, so every correct response is the same.",
     "There is no variability in the answers, so no, it is not a statistical question."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Imagine asking the class",
+      "steps": [
+        "Picture asking every student in a class to work out $2 + 2$ and recording the results.",
+        "Every correct answer is $4$, so the dot plot is one tall stack with a range of $0$.",
+        "Data with no variability cannot come from a statistical question, so the answer is no."
+      ]
+    }
+  ],
   "tags": [
     "statistical-question"
   ],

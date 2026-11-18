@@ -53,6 +53,17 @@
     "The median is the middle value in order, and an outlier at one end does not change which value is in the middle by much.",
     "So the median, choice B, is the most reliable measure of center here."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Test it with numbers",
+      "steps": [
+        "Try the data $4, 5, 6, 7, 78$, where $78$ is a big outlier.",
+        "The mean is $100 \\div 5 = 20$, which is far above four of the five values.",
+        "No value repeats, so the mode gives no help here, while the median is $6$, right among the usual values.",
+        "The median describes the typical value best, so the answer is choice B."
+      ]
+    }
+  ],
   "tags": [
     "CA",
     "outlier",

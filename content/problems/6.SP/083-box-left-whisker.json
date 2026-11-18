@@ -35,17 +35,18 @@
     "The box covers $Q_1$ to $Q_3$, and the whiskers extend from the box to the extreme values.",
     "The left whisker ends at the smallest value, so it reaches the minimum."
   ],
-  "tags": [
-    "box-plot"
-  ],
-  "estimatedSeconds": 35,
   "alternativeExplanations": [
     {
       "title": "Check the answer",
       "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: minimum — verified."
+        "Check with the data $3, 5, 6, 8, 10$ drawn as a box plot on a number line.",
+        "The box starts at $Q_1 = 4$, and the whisker runs left from there to $3$.",
+        "The value $3$ is the smallest in the data, so the left whisker reaches the minimum."
       ]
     }
-  ]
+  ],
+  "tags": [
+    "box-plot"
+  ],
+  "estimatedSeconds": 35
 }

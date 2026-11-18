@@ -36,6 +36,16 @@
     "There are now $6$ scores, so the new total is divided by $6$.",
     "Dividing gives $474 \\div 6 = 79$, so the new mean is $79$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Share out the shortfall",
+      "steps": [
+        "Compare the new score with the old mean: $74$ is $80 - 74 = 6$ points below it.",
+        "That shortfall of $6$ points is shared by all $6$ scores, which lowers each fair share by $6 \\div 6 = 1$.",
+        "The mean drops from $80$ to $80 - 1 = 79$, so the new mean is $79$."
+      ]
+    }
+  ],
   "tags": [
     "CA",
     "mean"

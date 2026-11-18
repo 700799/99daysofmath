@@ -30,6 +30,16 @@
     "Looking across $12, 5, 18, 9, 14$, the maximum is $18$ and the minimum is $5$.",
     "Subtract to find how far apart they are: $18 - 5 = 13$, so the range of this list is $13$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Jump along a number line",
+      "steps": [
+        "Mark the smallest value, $5$, and the largest value, $18$, on a number line, since the range is the distance between them.",
+        "Jump from $5$ to $10$, which is $5$ units, and then from $10$ to $18$, which is $8$ more units.",
+        "The two jumps together cover $5 + 8 = 13$ units, so the range is $13$."
+      ]
+    }
+  ],
   "tags": [
     "range"
   ],

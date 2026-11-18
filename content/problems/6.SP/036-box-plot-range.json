@@ -30,6 +30,16 @@
     "From the box plot, the minimum is $5$ and the maximum is $25$.",
     "Subtract the minimum from the maximum: $25 - 5 = 20$, so the range is $20$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Count up in fives",
+      "steps": [
+        "Start at the minimum, $5$, on the number line of the box plot and count up to the maximum, $25$.",
+        "Going $5 \\to 10 \\to 15 \\to 20 \\to 25$ takes $4$ jumps of $5$, which is $20$ units.",
+        "Adding back checks it, because $5 + 20 = 25$, so the range is $20$."
+      ]
+    }
+  ],
   "tags": [
     "box-plot",
     "range"

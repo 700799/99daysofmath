@@ -35,18 +35,19 @@
     "Every value here equals $5$, so no value is different from any other.",
     "The range confirms it: $5 - 5 = 0$, so the variability is $0$."
   ],
-  "tags": [
-    "MAP-practice",
-    "variability"
-  ],
-  "estimatedSeconds": 50,
   "alternativeExplanations": [
     {
       "title": "Check the answer",
       "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: 0 — verified."
+        "Check with a second measure of variability, the mean absolute deviation.",
+        "The mean of $5, 5, 5$ is $5$, so every value is a distance of $0$ from the mean.",
+        "The average of those distances is $0$, which agrees that the variability is $0$."
       ]
     }
-  ]
+  ],
+  "tags": [
+    "MAP-practice",
+    "variability"
+  ],
+  "estimatedSeconds": 50
 }

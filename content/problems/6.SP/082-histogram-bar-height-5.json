@@ -30,17 +30,18 @@
     "The height of a bar shows how many data points fall inside its interval.",
     "The bar over $10$-$19$ has height $5$, so $5$ data points are in that interval."
   ],
-  "tags": [
-    "histogram"
-  ],
-  "estimatedSeconds": 30,
   "alternativeExplanations": [
     {
       "title": "Check the answer",
       "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: 5 — verified."
+        "Check by inventing data that would make this bar, such as $11, 12, 14, 17, 19$.",
+        "Each of those values lies between $10$ and $19$, so each one adds $1$ to the height of the bar.",
+        "Five values build a bar of height $5$, which confirms that the interval holds $5$ data points."
       ]
     }
-  ]
+  ],
+  "tags": [
+    "histogram"
+  ],
+  "estimatedSeconds": 30
 }

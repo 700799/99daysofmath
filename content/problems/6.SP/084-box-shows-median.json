@@ -34,17 +34,18 @@
     "The two edges of the box mark the quartiles $Q_1$ and $Q_3$.",
     "The line inside the box marks the median, so the statement is true."
   ],
-  "tags": [
-    "box-plot"
-  ],
-  "estimatedSeconds": 35,
   "alternativeExplanations": [
     {
       "title": "Check the answer",
       "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: true — verified."
+        "Check by drawing a box plot for the data $1, 2, 3, 4, 5, 6, 7$.",
+        "The box is drawn from $Q_1 = 2$ to $Q_3 = 6$, with a line inside at the median, $4$.",
+        "Both quartiles and the median appear in the picture, so the statement is true."
       ]
     }
-  ]
+  ],
+  "tags": [
+    "box-plot"
+  ],
+  "estimatedSeconds": 35
 }

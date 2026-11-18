@@ -41,6 +41,17 @@
     "The mean is the fair-share average, the median is the middle value in order, and the mode is the most common value.",
     "Any two of these work, so one correct answer is mean, median."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Test on a data set",
+      "steps": [
+        "Use the data $2, 4, 4, 10$ to see which measures land on a typical value.",
+        "The mean is $20 \\div 4 = 5$ and the median is $4$, and both sit in the middle of the data.",
+        "The range, $10 - 2 = 8$, is a width instead, so it does not describe the center.",
+        "Two measures that locate the center are therefore mean, median."
+      ]
+    }
+  ],
   "tags": [
     "vocabulary",
     "center"

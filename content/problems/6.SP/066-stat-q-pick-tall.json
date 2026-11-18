@@ -42,6 +42,17 @@
     "Choice A asks about one building, which has a single fixed height, so it is not statistical.",
     "Choice B asks about many students whose heights differ, so B is the statistical question."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Picture the data",
+      "steps": [
+        "Imagine recording the data each question would produce.",
+        "Choice A produces one number, because the building is measured once and the height never changes.",
+        "Choice B produces a different height for student after student, enough to fill a dot plot.",
+        "Only the second data set varies, so B is the statistical question."
+      ]
+    }
+  ],
   "tags": [
     "statistical-question"
   ],

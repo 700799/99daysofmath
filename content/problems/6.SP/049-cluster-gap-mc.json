@@ -48,6 +48,16 @@
     "The plot is not symmetric or uniform, because the dots are not balanced or evenly spread.",
     "So the best description is choice A, cluster + gap."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Write a list that fits",
+      "steps": [
+        "Invent data that matches the plot, for example $18, 19, 20, 20, 21, 22, 49, 50$.",
+        "Six of the values bunch together between $18$ and $22$, which makes a cluster.",
+        "Nothing at all falls between $22$ and $49$, which makes a gap, so the description is choice A."
+      ]
+    }
+  ],
   "tags": [
     "shape"
   ],

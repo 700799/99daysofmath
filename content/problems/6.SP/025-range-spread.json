@@ -30,6 +30,16 @@
     "Checking each number in $8, 12, 7, 15, 9$, the largest is $15$ and the smallest is $7$.",
     "Subtract the smallest from the largest: $15 - 7 = 8$, so the range is $8$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Sort, then count up",
+      "steps": [
+        "Put the data in order so the ends are easy to see: $7, 8, 9, 12, 15$.",
+        "Count up from the first value to the last: $7$ to $10$ is $3$, and $10$ to $15$ is $5$ more.",
+        "The whole stretch is $3 + 5 = 8$ units long, so the range is $8$."
+      ]
+    }
+  ],
   "tags": [
     "range"
   ],

@@ -35,17 +35,18 @@
     "So the number of dots above a value equals how many times that value was observed.",
     "That means each dot represents one data point."
   ],
-  "tags": [
-    "dot-plot"
-  ],
-  "estimatedSeconds": 30,
   "alternativeExplanations": [
     {
       "title": "Check the answer",
       "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: one data point — verified."
+        "Check by building a tiny dot plot for the data $1, 2, 2$.",
+        "You draw one dot above $1$ and two dots above $2$, which is three dots for three values.",
+        "The number of dots equals the number of values, so each dot is one data point."
       ]
     }
-  ]
+  ],
+  "tags": [
+    "dot-plot"
+  ],
+  "estimatedSeconds": 30
 }

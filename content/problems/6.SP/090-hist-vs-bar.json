@@ -38,19 +38,20 @@
     "A histogram groups numerical data into intervals that follow one another on a number line.",
     "Because the intervals join up, the bars touch, so the display described is a histogram."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Check with examples: a bar graph of favorite fruits has bars for apple, banana and grape with spaces between them.",
+        "A display of heights grouped as $50$-$59$ and $60$-$69$ inches has bars over number intervals that touch.",
+        "The second display matches the description, and it is a histogram."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "histogram",
     "bar-graph"
   ],
-  "estimatedSeconds": 50,
-  "alternativeExplanations": [
-    {
-      "title": "Check the answer",
-      "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: histogram — verified."
-      ]
-    }
-  ]
+  "estimatedSeconds": 50
 }
