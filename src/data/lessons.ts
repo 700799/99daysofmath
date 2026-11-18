@@ -1,6 +1,7 @@
 import type { Domain } from '../types/problem';
 import LESSON_VIDEO_KEYS from './lessonVideoKeys.json';
 import PRACTICE_STEPS from './lessonPracticeSteps.json';
+import SLIDE_ALTS from './lessonSlideAlts.json';
 import { LESSON_SLIDES } from './lessonSlides';
 import type { LessonSlide } from './lessonSlides';
 import { GEO_LESSONS } from './geo/lessons_u01_14';
@@ -1283,7 +1284,13 @@ const HAS_VIDEO = new Set<string>(LESSON_VIDEO_KEYS as string[]);
 for (const l of LESSONS) {
   const key = lessonKey(l.domain, l.unit);
   const s = LESSON_SLIDES[key];
-  if (s && s.length) l.slides = s;
+  if (s && s.length) {
+    // Each concept and example gets its "Another way", keyed "<lesson key>#<slide index>".
+    l.slides = s.map((slide, i) => {
+      const alt = (SLIDE_ALTS as Record<string, { title: string; text: string }>)[`${key}#${i}`];
+      return alt ? { ...slide, alt } : slide;
+    });
+  }
   if (HAS_VIDEO.has(key)) l.videos = [{ title: 'Watch the lesson', src: `${key}-lesson.mp4` }];
   // "Try it" questions get their full worked steps from one file, keyed
   // "<lesson key>#<question index>". The steps double as the hint ladder.

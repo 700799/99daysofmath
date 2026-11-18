@@ -560,6 +560,16 @@ function SlidePage({ slide }: { slide: LessonSlide }) {
           <RichText text={slide.why} className="mt-1" />
         </div>
       )}
+
+      {/* A second route to the same place, for the student the first one did not reach. */}
+      {slide.alt && (
+        <div className="mt-3 rounded-2xl border-2 border-ok/40 bg-ok-soft px-3 py-2.5">
+          <div className="font-display text-[11px] font-extrabold uppercase tracking-wider text-ok">
+            🔁 Another way · {slide.alt.title}
+          </div>
+          <RichText text={slide.alt.text} className="mt-1" />
+        </div>
+      )}
     </div>
   );
 }

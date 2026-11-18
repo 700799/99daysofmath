@@ -74,6 +74,33 @@ describe('layered help', () => {
     expect(bad).toEqual([]);
   });
 
+  it('every practice problem offers a second approach of 2+ explained steps', () => {
+    const bad: string[] = [];
+    for (const p of problems) {
+      const alts = p.alternativeExplanations ?? [];
+      if (alts.length < 1) bad.push(`${p.id}: no alternative explanation`);
+      for (const a of alts) {
+        if (!a.title?.trim() || a.steps.length < 2 || a.steps.some((s) => words(s.replace(/\\\$/g, ' ')) < 6)) {
+          bad.push(`${p.id}: "${a.title}" is too thin`);
+        }
+      }
+    }
+    expect(bad).toEqual([]);
+  });
+
+  it('every lesson concept and worked example carries an "Another way"', () => {
+    const bad: string[] = [];
+    for (const l of LESSONS) {
+      (l.slides ?? []).forEach((s, i) => {
+        if (s.kind !== 'concept' && s.kind !== 'example') return;
+        const n = (s.alt?.text ?? '').split(/\s+/).filter((x) => /[A-Za-z]{2,}/.test(x)).length;
+        if (!s.alt?.title || n < 25) bad.push(`${l.domain}-${l.unit}#${i} "${s.head}"`);
+        else if (/\$|\\[a-zA-Z]+/.test(s.alt.text)) bad.push(`${l.domain}-${l.unit}#${i}: alt must be plain text`);
+      });
+    }
+    expect(bad).toEqual([]);
+  });
+
   it('no help text has unbalanced math delimiters', () => {
     const bad: string[] = [];
     for (const p of problems) {
