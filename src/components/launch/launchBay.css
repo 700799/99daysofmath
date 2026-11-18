@@ -2,6 +2,7 @@
    theme tokens, so the frame is a soft grey panel in the light theme and a
    graphite one in the dark theme, and always matches the page around it. */
 .lb-frame {
+  --lb-sun: 242 166 42; /* one warm gold for the sun, in both themes */
   --lb-deep: rgb(var(--surface-2));
   --lb-ink: rgb(var(--ink));
   --lb-dim: rgb(var(--ink-muted));
@@ -10,7 +11,7 @@
   --lb-gold: rgb(var(--warn));
   --lb-lime: rgb(var(--ok));
   --lb-g1: rgb(var(--surface) / 0.5);
-  --lb-g2: rgb(var(--surface) / 0.85);
+  --lb-g2: rgb(var(--surface) / 0.66);
   --lb-l1: rgb(var(--accent) / 0.07);
   --lb-l2: rgb(var(--accent) / 0.16);
   --lb-l3: rgb(var(--accent) / 0.28);
@@ -31,7 +32,7 @@
   margin-inline: calc((100% - min(1100px, calc(100vw - 32px))) / 2);
 }
 
-.lb-stars { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; opacity: 0.45; color: rgb(var(--ink-dim)); pointer-events: none; }
+.lb-stars { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; opacity: 0.7; color: rgb(var(--ink-muted)); pointer-events: none; }
 .lb-nebula {
   position: absolute; inset: -10%; z-index: 0; pointer-events: none;
   background: radial-gradient(60% 50% at 80% 10%, rgb(var(--accent) / 0.1), transparent 60%),
@@ -43,6 +44,13 @@
   background-size: 48px 48px;
   mask-image: radial-gradient(80% 80% at 50% 50%, #000 40%, transparent 100%);
 }
+/* Space art: fixed-size drawings pinned to the corners so they keep their
+   shape on a phone and on a wide screen. */
+.lb-art { position: absolute; z-index: 0; pointer-events: none; overflow: visible; }
+.lb-sun { top: -70px; right: -60px; width: 560px; height: 560px; }
+.lb-planet { left: -60px; bottom: -30px; width: 420px; height: 315px; }
+.lb-track { left: 36%; top: 44%; width: 380px; height: 279px; }
+.lb-readout { font-family: var(--lb-mono); font-size: 9px; letter-spacing: 0.14em; fill: rgb(var(--ink-dim)); }
 .lb-glyphs { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; font-family: var(--lb-mono); color: var(--lb-cyan); user-select: none; }
 .lb-glyphs span { position: absolute; white-space: nowrap; line-height: 1; }
 .lb-glyphs span.big { font-family: var(--lb-display); font-weight: 500; }
@@ -59,6 +67,7 @@
     repeating-linear-gradient(0deg, var(--lb-l4) 0 1px, transparent 1px 60px) right / 8px 100% no-repeat;
 }
 
+.lb-topbar, .lb-hero, .lb-bay, .lb-cargo { -webkit-backdrop-filter: blur(2.5px); backdrop-filter: blur(2.5px); }
 .lb-ui { position: relative; z-index: 2; padding: 26px 20px 20px 28px; display: grid; gap: 16px; }
 .lb-label { font-family: var(--lb-mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--lb-dim); }
 
@@ -160,6 +169,14 @@
   @keyframes lb-drift { to { transform: translate(4%, 3%) scale(1.06); } }
   .lb-sweep { animation: lb-scan 9s linear infinite; }
   @keyframes lb-scan { 0% { top: -2px; } 100% { top: 100%; } }
+  .lb-orbit { animation: lb-orbit 80s linear infinite; }
+  .lb-orbit.slow { animation-duration: 140s; }
+  @keyframes lb-orbit { to { transform: rotate(360deg); } }
+  .lb-lock { animation: lb-orbit 24s linear infinite; }
+  .lb-twinkle { animation: lb-twinkle 5s ease-in-out infinite; }
+  @keyframes lb-twinkle { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.35; transform: scale(0.7); } }
+  .lb-flares { animation: lb-flare 7s ease-in-out infinite; }
+  @keyframes lb-flare { 50% { opacity: 0.55; } }
   .lb-led { animation: lb-blink 2.4s ease-in-out infinite; }
   @keyframes lb-blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
   .lb-bay.active .lb-fill { animation: lb-hatch 6s linear infinite; }
@@ -182,6 +199,11 @@
   .lb-hero { grid-template-columns: auto 1fr; }
   .lb-cta { grid-column: 1 / -1; justify-content: center; }
   .lb-waver { left: auto; right: 64px; }
+}
+@media (max-width: 860px) {
+  .lb-sun { width: 380px; height: 380px; top: -50px; right: -70px; }
+  .lb-planet { width: 300px; height: 225px; left: -70px; bottom: -30px; }
+  .lb-track { left: 18%; top: 50%; width: 260px; height: 191px; }
 }
 @media (max-width: 420px) {
   .lb-ui { padding: 24px 12px 14px 20px; }
