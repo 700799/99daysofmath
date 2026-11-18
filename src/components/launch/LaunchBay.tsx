@@ -21,6 +21,11 @@ const CARGO: { to: string; label: string }[] = [
   { to: '/videos', label: 'Videos' },
 ];
 
+/** The title on a course card: the full course name, kept short for the two grades. */
+function bayTitle(course: { name: string; short: string }): string {
+  return /Grade$/.test(course.short) ? `${course.short} Math` : course.name;
+}
+
 /**
  * Home's first screen: pick a course and go. Nine bays, one per course, fill
  * with hatching as stars are earned. The resume card points at the course in
@@ -75,10 +80,10 @@ export function LaunchBay({ displayName, chosen }: { displayName: string; chosen
 
       <div className="lb-crew lb-pilot" aria-hidden="true">
         <svg className="lb-disc" viewBox="0 0 70 46">
-          <ellipse cx="35" cy="32" rx="34" ry="8" fill="rgba(94,231,255,.35)" stroke="rgba(232,238,252,.7)" />
-          <ellipse cx="35" cy="31" rx="22" ry="4.5" fill="rgba(232,238,252,.5)" />
-          <path d="M18 28 Q35 4 52 28 Z" fill="rgba(94,231,255,.25)" stroke="rgba(94,231,255,.9)" />
-          <g fill="#ffd166">
+          <ellipse cx="35" cy="32" rx="34" ry="8" style={{ fill: 'rgb(var(--accent) / 0.25)', stroke: 'rgb(var(--accent) / 0.7)' }} />
+          <ellipse cx="35" cy="31" rx="22" ry="4.5" style={{ fill: 'rgb(var(--surface) / 0.7)' }} />
+          <path d="M18 28 Q35 4 52 28 Z" style={{ fill: 'rgb(var(--accent) / 0.15)', stroke: 'rgb(var(--accent) / 0.8)' }} />
+          <g style={{ fill: 'rgb(var(--warn))' }}>
             <circle cx="12" cy="35" r="1.5" />
             <circle cx="24" cy="38" r="1.5" />
             <circle cx="46" cy="38" r="1.5" />
@@ -153,9 +158,9 @@ export function LaunchBay({ displayName, chosen }: { displayName: string; chosen
                   </span>
                 )}
                 <i className="lb-fill" style={{ height: `${b.pct}%` }} />
-                <span className="lb-name">{b.course.short}</span>
+                <span className="lb-name">{bayTitle(b.course)}</span>
                 <span className="lb-pct">
-                  {b.pct > 0 ? `${b.pct}%` : '—'}
+                  {b.pct}%
                   {active ? ' ▲' : ''}
                 </span>
               </Link>
