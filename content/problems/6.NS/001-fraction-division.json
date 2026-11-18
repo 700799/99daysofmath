@@ -26,18 +26,18 @@
     {
       "title": "Think: how many halves fit in three-fourths?",
       "steps": [
-        "$\\frac{3}{4} \\div \\frac{1}{2}$ asks: **how many $\\frac{1}{2}$'s are inside $\\frac{3}{4}$?**",
-        "One $\\frac{1}{2}$ is the same as $\\frac{2}{4}$. So one whole half fits inside $\\frac{3}{4}$ with $\\frac{1}{4}$ left over.",
-        "That leftover $\\frac{1}{4}$ is half of $\\frac{1}{2}$, so $\\frac{1}{2}$ of another half fits.",
-        "Total: $1 + \\frac{1}{2} = 1\\frac{1}{2}$ halves fit inside $\\frac{3}{4}$."
+        "The division $\\frac{3}{4} \\div \\frac{1}{2}$ asks **how many halves fit inside** $\\frac{3}{4}$, so picture a bar that is three quarters long.",
+        "One half is the same as $\\frac{2}{4}$, so one whole half fits in the bar and $\\frac{1}{4}$ is left over.",
+        "The leftover $\\frac{1}{4}$ is exactly half of another $\\frac{1}{2}$ piece, so it counts as $\\frac{1}{2}$ of a piece.",
+        "Altogether $1 + \\frac{1}{2} = 1\\frac{1}{2}$ halves fit, and $1\\frac{1}{2}$ is the same as $\\frac{3}{2}$."
       ]
     },
     {
       "title": "Common denominator method",
       "steps": [
-        "Rewrite both with the same denominator: $\\frac{3}{4} \\div \\frac{2}{4}$.",
-        "When denominators match, just divide the numerators: $3 \\div 2 = \\frac{3}{2}$.",
-        "So $\\frac{3}{4} \\div \\frac{1}{2} = \\frac{3}{2} = 1\\frac{1}{2}$."
+        "Rename $\\frac{1}{2}$ as $\\frac{2}{4}$ so that both fractions are counted in quarters: $\\frac{3}{4} \\div \\frac{2}{4}$.",
+        "Now the question is how many groups of $2$ quarters fit in $3$ quarters, which is just $3 \\div 2$.",
+        "Since $3 \\div 2 = \\frac{3}{2}$, the quotient of the two fractions is $\\frac{3}{2}$, or $1\\frac{1}{2}$."
       ]
     }
   ],

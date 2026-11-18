@@ -35,9 +35,9 @@
     {
       "title": "Area-model rectangles",
       "steps": [
-        "Split: $(30 + 8)(20 + 4)$.",
-        "$30 \\cdot 20 = 600$; $30 \\cdot 4 = 120$; $8 \\cdot 20 = 160$; $8 \\cdot 4 = 32$.",
-        "Sum: $600 + 120 + 160 + 32 = 912$."
+        "Draw a rectangle $38$ long and $24$ wide, and split the sides into tens and ones: $38 = 30 + 8$ and $24 = 20 + 4$.",
+        "The cuts make four smaller rectangles with areas $30 \\times 20 = 600$, $30 \\times 4 = 120$, $8 \\times 20 = 160$ and $8 \\times 4 = 32$.",
+        "The area of the whole rectangle is the sum of the four pieces: $600 + 120 + 160 + 32 = 912$."
       ]
     }
   ],

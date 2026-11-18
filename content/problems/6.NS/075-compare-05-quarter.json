@@ -38,8 +38,9 @@
     {
       "title": "Use a common fraction",
       "steps": [
-        "$0.5 = \\tfrac{1}{2} = \\tfrac{2}{4}$.",
-        "$\\tfrac{2}{4} > \\tfrac{1}{4}$."
+        "Turn the decimal into a fraction this time: $0.5$ is five tenths, which is $\\frac{1}{2}$.",
+        "Rename one half in quarters so that both numbers use the same piece: $\\frac{1}{2} = \\frac{2}{4}$.",
+        "Two quarters is more than one quarter, so $0.5 > \\frac{1}{4}$ and the symbol is $>$."
       ]
     }
   ],

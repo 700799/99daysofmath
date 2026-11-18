@@ -31,6 +31,17 @@
     "Write $24$ with two decimal places, which means the point goes in front of the $2$.",
     "The product is $0.24$. This is sensible because both factors are less than $1$, so the answer is smaller than either."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Shade a hundred grid",
+      "steps": [
+        "Picture a square cut into $10$ columns and $10$ rows, which makes $100$ small squares that are each $0.01$ of the whole.",
+        "Shade $6$ of the columns to show $0.6$, then keep only $4$ of the rows inside them to show $0.4$ of that part.",
+        "The doubly shaded region is $6$ squares wide and $4$ squares tall, so it holds $6 \\times 4 = 24$ small squares.",
+        "Twenty-four squares out of $100$ is $\\frac{24}{100}$, so the product is $0.24$."
+      ]
+    }
+  ],
   "tags": [
     "decimal",
     "multiply"

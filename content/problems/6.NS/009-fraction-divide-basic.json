@@ -33,6 +33,16 @@
     "Multiply the numerators and the denominators to get $\\frac{1 \\times 4}{2 \\times 1} = \\frac{4}{2}$.",
     "Since $4 \\div 2 = 2$, the answer is $2$. This makes sense because two quarters make one half."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Count the quarters",
+      "steps": [
+        "Picture half of a pizza and ask how many quarter slices can be cut from it.",
+        "A whole pizza has $4$ quarter slices, so half of the pizza has half as many, which is $2$ slices.",
+        "Two quarters fill the half exactly, since $\\frac{1}{4} + \\frac{1}{4} = \\frac{2}{4} = \\frac{1}{2}$, so $\\frac{1}{2} \\div \\frac{1}{4} = 2$."
+      ]
+    }
+  ],
   "tags": [
     "fraction-division"
   ],

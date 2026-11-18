@@ -36,6 +36,25 @@
     "Add the last gain: $-3 + 3 = 0$, because a number plus its opposite is zero.",
     "The net yardage is $0$, so the team ends where it started."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Group gains and losses",
+      "steps": [
+        "Addition can be done in any order, so collect the two gains together before dealing with the loss.",
+        "The gains are $5$ yards and $3$ yards, which make $5 + 3 = 8$ yards gained in all.",
+        "The loss is also $8$ yards, and a gain of $8$ with a loss of $8$ cancel exactly: $8 - 8 = 0$.",
+        "The net yardage for the three plays is $0$ yards."
+      ]
+    },
+    {
+      "title": "Track the ball on a number line",
+      "steps": [
+        "Call the starting spot $0$ and follow the ball. A gain of $5$ yards moves it to $5$.",
+        "A loss of $8$ yards moves it back past the start to $5 - 8 = -3$.",
+        "A gain of $3$ yards moves it forward from $-3$ to $0$, the starting spot, so the net yardage is $0$."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "integer",

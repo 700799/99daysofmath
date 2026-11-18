@@ -31,6 +31,16 @@
     "$0.05$ is half of $0.10$, so $0.05 \\times 80$ is half of $8$, which is $4$.",
     "Add the parts: $8 + 4 = 12$. So the product $0.15 \\times 80$ is $12$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Trade a factor of ten",
+      "steps": [
+        "Move a factor of $10$ from one number to the other, which keeps the product the same: $0.15 \\times 80 = 1.5 \\times 8$.",
+        "Now multiply in two easy parts: $1 \\times 8 = 8$ and $0.5 \\times 8 = 4$, since half of $8$ is $4$.",
+        "The two parts add to $8 + 4 = 12$, so the product $0.15 \\times 80$ is $12$."
+      ]
+    }
+  ],
   "tags": [
     "decimal",
     "percent"

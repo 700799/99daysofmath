@@ -35,6 +35,17 @@
     "Add the third price: $7.95 + 1.05$. The cents make $95 + 5 = 100$ cents, which is one more dollar.",
     "So $7.95 + 1.05 = 9.00$, and the total cost is $9$ dollars."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Add dollars and cents separately",
+      "steps": [
+        "Split each price into whole dollars and cents: $4$ and $75$, $3$ and $20$, $1$ and $5$.",
+        "Add the whole dollars first: $4 + 3 + 1 = 8$ dollars.",
+        "Add the cents next: $75 + 20 + 5 = 100$ cents, which is exactly $1$ more dollar.",
+        "Put the two results together: $8 + 1 = 9$, so the total is $9$ dollars."
+      ]
+    }
+  ],
   "tags": [
     "CA",
     "decimal",

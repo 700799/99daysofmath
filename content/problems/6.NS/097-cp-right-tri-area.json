@@ -38,6 +38,17 @@
     "The area of a triangle is half of base times height: $\\tfrac{1}{2} \\cdot 6 \\cdot 4$.",
     "$\\tfrac{1}{2} \\cdot 24 = 12$, so the area is $12$ square units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Half of a rectangle",
+      "steps": [
+        "Add a fourth point at $(0, 4)$ to make a rectangle with corners $(0, 0)$, $(6, 0)$, $(6, 4)$ and $(0, 4)$.",
+        "That rectangle is $6$ units wide and $4$ units tall, so its area is $6 \\times 4 = 24$ square units.",
+        "The line from $(0, 0)$ to $(6, 4)$ is a diagonal, and it cuts the rectangle into two equal triangles.",
+        "The triangle is one of those halves, so its area is $24 \\div 2 = 12$ square units."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "coordinate-plane",

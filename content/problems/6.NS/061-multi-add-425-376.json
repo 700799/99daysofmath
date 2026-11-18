@@ -35,8 +35,9 @@
     {
       "title": "Round-then-adjust",
       "steps": [
-        "$425 + 400 = 825$.",
-        "We added $24$ extra, so subtract: $825 - 24 = 801$."
+        "The number $376$ is close to $400$, which is much easier to add: $425 + 400 = 825$.",
+        "That added too much, because $400$ is $24$ more than $376$.",
+        "Take the extra $24$ back off to fix the total: $825 - 24 = 801$."
       ]
     }
   ],

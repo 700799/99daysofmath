@@ -40,7 +40,17 @@
     {
       "title": "Subtract with absolute value",
       "steps": [
-        "Distance $= |8 - (-8)| = |16| = 16$."
+        "The distance between two numbers on a number line is the absolute value of their difference.",
+        "Here the difference is $8 - (-8)$, and subtracting $-8$ is the same as adding $8$, which gives $16$.",
+        "The absolute value of $16$ is $16$, so the two points are $16$ units apart."
+      ]
+    },
+    {
+      "title": "Double the distance to zero",
+      "steps": [
+        "Zero is exactly halfway between a number and its opposite, so the trip from $-8$ to $8$ has two equal halves.",
+        "Each half is the distance from $8$ to zero, which is $8$ units.",
+        "Doubling one half gives $2 \\times 8 = 16$ units for the whole trip."
       ]
     }
   ],

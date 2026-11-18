@@ -36,6 +36,24 @@
     "Multiply the whole number by the reciprocal to finish: $2 \\times \\frac{3}{1} = 6$.",
     "There are $6$ servings of $\\frac{1}{3}$ cup in $2$ cups."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Cut each cup into thirds",
+      "steps": [
+        "Picture the $2$ cups side by side and cut each cup into $3$ equal parts, so each part is one $\\frac{1}{3}$ cup serving.",
+        "One cup gives $3$ servings, so the first cup holds servings $1$, $2$, $3$ and the second cup holds servings $4$, $5$, $6$.",
+        "Counting all the parts gives $3 + 3 = 6$, so there are $6$ servings in $2$ cups."
+      ]
+    },
+    {
+      "title": "Check by adding servings",
+      "steps": [
+        "Start at $0$ and keep adding one serving of $\\frac{1}{3}$ cup until the total reaches $2$ cups.",
+        "After $3$ servings the total is $\\frac{3}{3} = 1$ cup, so the first cup is used up.",
+        "Three more servings fill the second cup, so the total reaches $2$ cups after exactly $6$ servings."
+      ]
+    }
+  ],
   "tags": [
     "CA",
     "fraction-division",

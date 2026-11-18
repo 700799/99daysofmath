@@ -36,6 +36,25 @@
     "The remaining $8 - 5 = 3$ units carry you to the right of $0$, landing on $3$.",
     "So the sum $-5 + 8$ is equal to $3$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Cancel with counters",
+      "steps": [
+        "Model $-5$ with $5$ red counters, each worth $-1$, and model $8$ with $8$ yellow counters, each worth $+1$.",
+        "One red and one yellow counter cancel to zero, so pair them up. All $5$ red counters get a partner.",
+        "That leaves $8 - 5 = 3$ yellow counters with no partner, and they are worth $+3$.",
+        "Three positive counters remain, so the value of $-5 + 8$ is $3$."
+      ]
+    },
+    {
+      "title": "Swap the order",
+      "steps": [
+        "Adding works in either order, so $-5 + 8$ is the same as $8 + (-5)$.",
+        "Adding $-5$ is the same as taking away $5$, so the problem becomes $8 - 5$.",
+        "Since $8 - 5 = 3$, the original sum $-5 + 8$ is also equal to $3$."
+      ]
+    }
+  ],
   "tags": [
     "integer",
     "add"

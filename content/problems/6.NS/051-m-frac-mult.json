@@ -35,6 +35,16 @@
     "Both $6$ and $12$ can be divided by $6$, so the fraction simplifies to $\\frac{1}{2}$.",
     "So the product of $\\frac{2}{3}$ and $\\frac{3}{4}$ is $\\frac{1}{2}$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Take two of the three quarters",
+      "steps": [
+        "Read the product as \"$\\frac{2}{3}$ of $\\frac{3}{4}$\", and picture $\\frac{3}{4}$ as three separate quarter pieces.",
+        "Two thirds of three pieces means taking $2$ of those $3$ pieces, so you keep two quarters.",
+        "Two quarters is $\\frac{2}{4}$, which simplifies to $\\frac{1}{2}$, so the product is $\\frac{1}{2}$."
+      ]
+    }
+  ],
   "tags": [
     "fraction",
     "multiply"

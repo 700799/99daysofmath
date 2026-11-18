@@ -35,9 +35,9 @@
     {
       "title": "Halve, halve, halve",
       "steps": [
-        "$256 \\div 2 = 128$.",
-        "$128 \\div 2 = 64$.",
-        "$64 \\div 2 = 32$. (Three halvings = $\\div 8$.)"
+        "Because $8 = 2 \\times 2 \\times 2$, dividing by $8$ is the same as cutting the number in half three times.",
+        "The first two halvings give $256 \\div 2 = 128$ and then $128 \\div 2 = 64$.",
+        "The third halving gives $64 \\div 2 = 32$, so the answer is $256 \\div 8 = 32$."
       ]
     }
   ],

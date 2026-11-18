@@ -31,6 +31,16 @@
     "Neither $10$ nor $20$ is a multiple of $6$, so $30$ is the first number in both lists.",
     "So the least common multiple of $6$ and $10$ is $30$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Prime factors",
+      "steps": [
+        "Break each number into primes: $6 = 2 \\times 3$ and $10 = 2 \\times 5$.",
+        "The LCM needs every prime that either number uses, but the shared $2$ is only needed once.",
+        "Multiply one $2$, one $3$ and one $5$: $2 \\times 3 \\times 5 = 30$, so the LCM is $30$."
+      ]
+    }
+  ],
   "tags": [
     "lcm"
   ],

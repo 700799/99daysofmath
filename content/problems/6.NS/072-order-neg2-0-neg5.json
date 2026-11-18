@@ -34,18 +34,20 @@
     "$0$ is to the right of both negative numbers, so it is the greatest.",
     "From least to greatest the order is $-5,\\ -2,\\ 0$."
   ],
-  "tags": [
-    "integer",
-    "order"
-  ],
-  "estimatedSeconds": 40,
   "alternativeExplanations": [
     {
       "title": "Check the answer",
       "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: -5, -2, 0 — verified."
+        "Test the order by checking each pair of neighbors, reading the numbers as amounts of money.",
+        "Owing $5$ dollars is worse than owing $2$ dollars, so $-5 < -2$ and the first pair is in the right order.",
+        "Owing $2$ dollars is worse than having nothing, so $-2 < 0$ and the second pair is right too.",
+        "Both pairs go up, which confirms the order $-5,\\ -2,\\ 0$."
       ]
     }
-  ]
+  ],
+  "tags": [
+    "integer",
+    "order"
+  ],
+  "estimatedSeconds": 40
 }

@@ -36,6 +36,16 @@
     "Quadrants are numbered I to IV counter-clockwise starting from the upper right, so the lower-right region is the fourth.",
     "The point $(3, -5)$ is in Quadrant IV, so the answer is $4$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Walk from the origin",
+      "steps": [
+        "Begin at the origin and follow the coordinates as directions: first across, then up or down.",
+        "The $x$-coordinate $3$ says walk $3$ steps right, and the $y$-coordinate $-5$ says walk $5$ steps down.",
+        "You end in the bottom-right corner of the plane. Counting the corners I, II, III, IV counter-clockwise from the top right, the bottom right is the fourth, so the answer is $4$."
+      ]
+    }
+  ],
   "tags": [
     "coordinate"
   ],

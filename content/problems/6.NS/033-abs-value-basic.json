@@ -30,6 +30,16 @@
     "$-8$ is $8$ units to the left of $0$, and the direction does not affect the distance.",
     "So the absolute value of $-8$ is $8$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Find the positive twin",
+      "steps": [
+        "Every negative number has a positive twin, its opposite, that is the same distance from zero. The twin of $-8$ is $8$.",
+        "Absolute value is that shared distance, and a distance is never written with a minus sign.",
+        "So the absolute value of $-8$ is the positive twin itself, and $|{-8}| = 8$."
+      ]
+    }
+  ],
   "tags": [
     "absolute-value"
   ],

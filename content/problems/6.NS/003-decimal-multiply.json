@@ -24,9 +24,9 @@
     {
       "title": "Convert to fractions",
       "steps": [
-        "$0.6 = \\frac{6}{10}$ and $0.4 = \\frac{4}{10}$.",
-        "Multiply: $\\frac{6}{10} \\times \\frac{4}{10} = \\frac{24}{100}$.",
-        "$\\frac{24}{100} = 0.24$."
+        "Write each decimal as tenths, because one decimal place means tenths: $0.6 = \\frac{6}{10}$ and $0.4 = \\frac{4}{10}$.",
+        "Multiply the tops and the bottoms of the two fractions: $\\frac{6}{10} \\times \\frac{4}{10} = \\frac{24}{100}$.",
+        "Twenty-four hundredths is written with two decimal places, so the product is $0.24$."
       ]
     }
   ],

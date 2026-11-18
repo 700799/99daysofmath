@@ -36,6 +36,24 @@
     "You can check by counting: $4$ units from $-4$ to $0$ and $7$ more from $0$ to $7$.",
     "Either way the distance between $-4$ and $7$ is $11$ units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Slide both points",
+      "steps": [
+        "Sliding two points the same amount along the number line does not change the gap between them.",
+        "Slide both points $4$ units to the right, so that $-4$ lands on $0$ and $7$ lands on $7 + 4 = 11$.",
+        "The distance from $0$ to $11$ is plainly $11$, so the distance between $-4$ and $7$ is $11$ units."
+      ]
+    },
+    {
+      "title": "Count through zero",
+      "steps": [
+        "Split the trip from $-4$ to $7$ at zero, because the two numbers are on different sides of it.",
+        "The part from $-4$ to $0$ is $4$ units long, and the part from $0$ to $7$ is $7$ units long.",
+        "The whole distance is the sum of the two parts, $4 + 7 = 11$ units."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "absolute-value",

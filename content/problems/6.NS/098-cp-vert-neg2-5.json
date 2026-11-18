@@ -38,6 +38,24 @@
     "Subtracting a negative is the same as adding, so this equals $|5 + 2| = 7$.",
     "The distance from $(1, -2)$ to $(1, 5)$ is $7$ units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Count through the x-axis",
+      "steps": [
+        "The points are on the line $x = 1$, one below the $x$-axis and one above it, so split the trip at the axis.",
+        "From $(1, -2)$ up to the axis is $2$ units, and from the axis up to $(1, 5)$ is $5$ more units.",
+        "The total is $2 + 5 = 7$, so the distance is $7$ units."
+      ]
+    },
+    {
+      "title": "Slide both points up",
+      "steps": [
+        "Moving both points up by $2$ units keeps them the same distance apart.",
+        "The point $(1, -2)$ moves to $(1, 0)$ and the point $(1, 5)$ moves to $(1, 7)$.",
+        "From height $0$ to height $7$ is plainly $7$ units, so the distance is $7$."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "coordinate-plane",

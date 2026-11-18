@@ -31,6 +31,16 @@
     "$12$ is the first number that appears in both lists, and no smaller number does.",
     "So the LCM of $4$ and $6$ is $12$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Test multiples of the larger number",
+      "steps": [
+        "The LCM must be a multiple of $6$, so check the multiples of $6$ one at a time and ask if $4$ divides each.",
+        "The first multiple is $6$, but $6 \\div 4$ leaves a remainder of $2$, so it fails.",
+        "The next multiple is $12$, and $12 \\div 4 = 3$ exactly, so $12$ is the first one that works and the LCM is $12$."
+      ]
+    }
+  ],
   "tags": [
     "lcm"
   ],

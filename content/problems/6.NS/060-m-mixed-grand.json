@@ -38,6 +38,24 @@
     "Multiply the whole number by the reciprocal: $6 \\times \\frac{4}{3} = \\frac{24}{3} = 8$.",
     "So $8$ boxes can be filled. Check: $8 \\times \\frac{3}{4} = 6$ pounds."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Count in quarter pounds",
+      "steps": [
+        "Measure the nuts in quarter pounds. One pound is $4$ quarters, so $6$ pounds is $6 \\times 4 = 24$ quarters.",
+        "Each box holds $\\frac{3}{4}$ pound, which is $3$ of those quarters.",
+        "Sharing $24$ quarters into groups of $3$ gives $24 \\div 3 = 8$ groups, so $8$ boxes can be filled."
+      ]
+    },
+    {
+      "title": "Fill boxes four at a time",
+      "steps": [
+        "Four boxes hold $4 \\times \\frac{3}{4} = 3$ pounds, which is a whole number and easy to count with.",
+        "Six pounds is two lots of $3$ pounds, so it fills two sets of four boxes.",
+        "Two sets of four boxes is $2 \\times 4 = 8$ boxes in all."
+      ]
+    }
+  ],
   "tags": [
     "CA",
     "fraction-division",

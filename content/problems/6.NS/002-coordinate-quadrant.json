@@ -48,18 +48,18 @@
     {
       "title": "Walk it out",
       "steps": [
-        "Start at the origin $(0, 0)$.",
-        "The $x$-coordinate is $-3$ — walk **3 steps left**.",
-        "The $y$-coordinate is $2$ — walk **2 steps up**.",
-        "You're now in the **upper-left** region. That's Quadrant II."
+        "Start at the origin $(0, 0)$, where the two axes cross, and follow the coordinates like directions.",
+        "The $x$-coordinate is $-3$, so walk **3 steps left**, which puts you on the left side of the $y$-axis.",
+        "The $y$-coordinate is $2$, so walk **2 steps up**, which puts you above the $x$-axis.",
+        "You finish in the upper-left region of the plane, and that region is **Quadrant II** (choice B)."
       ]
     },
     {
       "title": "The sign pattern trick",
       "steps": [
-        "Each quadrant has a unique sign pattern for $(x, y)$:",
-        "Quadrant I: $(+,+)$ • Quadrant II: $(-,+)$ • Quadrant III: $(-,-)$ • Quadrant IV: $(+,-)$.",
-        "$(-3, 2)$ matches $(-,+)$ → Quadrant II."
+        "Each quadrant has its own pair of signs: I is $(+,+)$, II is $(-,+)$, III is $(-,-)$ and IV is $(+,-)$.",
+        "Read only the signs of $(-3, 2)$: the first number is negative and the second is positive, so the pattern is $(-,+)$.",
+        "The pattern $(-,+)$ belongs to Quadrant II only, so the answer is choice B."
       ]
     }
   ],

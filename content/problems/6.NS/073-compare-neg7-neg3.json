@@ -37,8 +37,9 @@
     {
       "title": "Owe-money picture",
       "steps": [
-        "Owing \\$$3$ is better than owing \\$$7$.",
-        "So $-3$ is greater than $-7$."
+        "Think of each number as a debt: $-3$ means owing $3$ dollars and $-7$ means owing $7$ dollars.",
+        "The person who owes only $3$ dollars is better off than the person who owes $7$ dollars.",
+        "Being better off means having the greater balance, so $-3$ is greater than $-7$."
       ]
     }
   ],

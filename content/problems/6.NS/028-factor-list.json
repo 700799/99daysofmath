@@ -31,6 +31,17 @@
     "Listing each number from the pairs in order gives $1, 2, 4, 5, 10, 20$.",
     "Counting the list shows that $20$ has $6$ factors."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Build factors from primes",
+      "steps": [
+        "Break $20$ into primes, the smallest building blocks: $20 = 2 \\times 2 \\times 5$.",
+        "Every factor uses zero, one or two of the $2$s, which gives $1$, $2$ or $4$, and then either includes the $5$ or leaves it out.",
+        "Without the $5$ the factors are $1, 2, 4$, and with the $5$ they are $5, 10, 20$.",
+        "That is $3 + 3 = 6$ factors in all, so $20$ has $6$ factors."
+      ]
+    }
+  ],
   "tags": [
     "factors"
   ],

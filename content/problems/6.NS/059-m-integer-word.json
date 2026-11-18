@@ -33,6 +33,16 @@
     "Subtracting $-2$ is the same as adding $2$, so $|5 + 2| = 7$.",
     "The elevator descended $7$ floors: $5$ down to floor $0$ and $2$ more below it."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "List the floors passed",
+      "steps": [
+        "Write down each floor the elevator reaches on the way down from floor $5$: $4, 3, 2, 1, 0, -1, -2$.",
+        "Each number in the list is one floor lower than the one before it, so each stands for one floor of descent.",
+        "The list has $7$ numbers, so the elevator went down $7$ floors."
+      ]
+    }
+  ],
   "tags": [
     "integer",
     "word"

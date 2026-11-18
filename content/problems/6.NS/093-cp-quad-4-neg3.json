@@ -35,20 +35,21 @@
     "The bottom-right region is the fourth one when counting counter-clockwise from the top right.",
     "The point $(4, -3)$ is in Quadrant IV."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Test the answer by walking to the point from the origin: go $4$ steps right, then $3$ steps down.",
+        "You are now to the right of the $y$-axis and below the $x$-axis, in the lower-right corner of the plane.",
+        "Naming the corners I, II, III, IV counter-clockwise from the upper right makes the lower right number IV, so Quadrant IV is confirmed."
+      ]
+    }
+  ],
   "tags": [
     "coordinate-plane",
     "quadrants"
   ],
   "estimatedSeconds": 35,
-  "alternativeExplanations": [
-    {
-      "title": "Check the answer",
-      "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: IV — verified."
-      ]
-    }
-  ],
   "diagram": {
     "kind": "inline-svg",
     "alt": "Coordinate plane with point (4, -3) plotted",

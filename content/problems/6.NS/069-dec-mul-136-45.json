@@ -38,6 +38,25 @@
     "Each factor has one decimal place, so the product needs $1 + 1 = 2$ decimal places.",
     "Placing the point gives $61.20$, so the product is $61.2$. This is close to the estimate $14 \\times 4.5 = 63$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Split the 4.5",
+      "steps": [
+        "Break $4.5$ into $4 + 0.5$, because multiplying by $4$ and by one half are both easy.",
+        "Four times $13.6$ is found by doubling twice: $27.2$ and then $54.4$.",
+        "Half of $13.6$ is $6.8$, which is the part that comes from the $0.5$.",
+        "Add the two parts: $54.4 + 6.8 = 61.2$, so the product $13.6 \\times 4.5$ is $61.2$."
+      ]
+    },
+    {
+      "title": "Halve and double",
+      "steps": [
+        "Halving one factor and doubling the other keeps a product the same, so $13.6 \\times 4.5 = 6.8 \\times 9$.",
+        "Nine is one less than ten, so compute $6.8 \\times 10 = 68$ and then take away one $6.8$.",
+        "The result is $68 - 6.8 = 61.2$, which is the product."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "decimal",

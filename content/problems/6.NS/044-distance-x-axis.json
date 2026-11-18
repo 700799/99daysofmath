@@ -31,6 +31,16 @@
     "Subtracting a negative is the same as adding, so $|5 - (-3)| = |5 + 3| = 8$.",
     "The distance between the points is $8$ units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Count through the x-axis",
+      "steps": [
+        "Both points are on the line $x = 2$, one above the $x$-axis and one below it, so split the trip at the axis.",
+        "From $(2, 5)$ down to the axis is $5$ units, and from the axis down to $(2, -3)$ is $3$ more units.",
+        "The whole trip is $5 + 3 = 8$ units, so the distance is $8$."
+      ]
+    }
+  ],
   "tags": [
     "coordinate",
     "distance"

@@ -33,6 +33,17 @@
     "Tenths: $4$ tenths remain, and $4 - 7$ needs regrouping, so take one whole and compute $14 - 7 = 7$.",
     "Ones: $5$ ones remain, and $5 - 2 = 3$. The difference is $3.72$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Count up from 2.78",
+      "steps": [
+        "Find the gap between the numbers by counting up from $2.78$ until you reach $6.5$.",
+        "A jump of $0.22$ takes you from $2.78$ to the whole number $3$.",
+        "A second jump of $3.5$ takes you from $3$ to $6.5$.",
+        "The gap is the sum of the two jumps, $0.22 + 3.5 = 3.72$, so $6.5 - 2.78 = 3.72$."
+      ]
+    }
+  ],
   "tags": [
     "decimal",
     "subtract"

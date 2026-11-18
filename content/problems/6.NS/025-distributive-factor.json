@@ -35,6 +35,17 @@
     "The distributive property says $8 \\times 3 + 8 \\times 4 = 8(3 + 4)$, so the shared $8$ can move outside.",
     "So $24 + 32 = 8(3 + 4)$. Both sides equal $56$, which confirms the answer."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Draw an area model",
+      "steps": [
+        "Picture $24$ and $32$ as two rectangles of unit squares that stand side by side with the same height.",
+        "A height of $8$ works for both, since $24 = 8 \\times 3$ and $32 = 8 \\times 4$, and no taller shared height fits.",
+        "Joined together they form one rectangle that is $8$ tall and $3 + 4$ wide.",
+        "The area of that big rectangle is $8(3 + 4)$, so $24 + 32 = 8(3 + 4)$."
+      ]
+    }
+  ],
   "tags": [
     "CA",
     "gcf",

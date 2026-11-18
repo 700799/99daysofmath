@@ -53,6 +53,16 @@
     "Multiply across the tops and the bottoms to get $\\frac{2 \\times 10}{5 \\times 1} = \\frac{20}{5}$.",
     "Since $20 \\div 5 = 4$, the quotient is $4$, which is choice C."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Use tenths for both",
+      "steps": [
+        "Rename $\\frac{2}{5}$ as tenths so both fractions use the same size of piece: $\\frac{2}{5} = \\frac{4}{10}$.",
+        "The question is now how many pieces of $\\frac{1}{10}$ fit into $\\frac{4}{10}$, and four of them fit exactly.",
+        "A quick check confirms it, since $4 \\times \\frac{1}{10} = \\frac{4}{10} = \\frac{2}{5}$, so the quotient is $4$ (choice C)."
+      ]
+    }
+  ],
   "tags": [
     "fraction-division"
   ],

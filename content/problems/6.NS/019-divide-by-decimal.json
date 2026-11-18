@@ -36,6 +36,24 @@
     "Now divide the whole numbers in the usual way: $15 \\div 3 = 5$.",
     "So $1.5 \\div 0.3 = 5$. You can check by multiplying back: $0.3 \\times 5 = 1.5$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Skip-count by 0.3",
+      "steps": [
+        "The division asks how many groups of $0.3$ fit in $1.5$, so count up by $0.3$ until you reach $1.5$.",
+        "The counts are $0.3,\\ 0.6,\\ 0.9,\\ 1.2,\\ 1.5$, and the last one lands exactly on $1.5$.",
+        "That took $5$ jumps with nothing left over, so $1.5 \\div 0.3 = 5$."
+      ]
+    },
+    {
+      "title": "Think in tenths",
+      "steps": [
+        "Name both numbers with the same unit: $1.5$ is $15$ tenths and $0.3$ is $3$ tenths.",
+        "Splitting $15$ tenths into groups of $3$ tenths is the same as splitting $15$ things into groups of $3$.",
+        "There are $15 \\div 3 = 5$ groups, so the quotient is $5$."
+      ]
+    }
+  ],
   "tags": [
     "decimal",
     "divide"

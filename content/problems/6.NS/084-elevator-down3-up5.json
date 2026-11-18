@@ -34,19 +34,20 @@
     "Going up $5$ cancels the $3$ floors down and leaves $2$ more, so $-3 + 5 = 2$.",
     "The net change is $2$ floors up."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Test the answer with real floor numbers by choosing a starting floor, for example floor $10$.",
+        "Going down $3$ floors reaches floor $7$, and going up $5$ floors from there reaches floor $12$.",
+        "Floor $12$ is $2$ floors above the starting floor $10$, so the net change of $2$ floors up is confirmed."
+      ]
+    }
+  ],
   "tags": [
     "integer",
     "context",
     "word"
   ],
-  "estimatedSeconds": 55,
-  "alternativeExplanations": [
-    {
-      "title": "Check the answer",
-      "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: 2 — verified."
-      ]
-    }
-  ]
+  "estimatedSeconds": 55
 }

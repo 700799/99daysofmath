@@ -44,9 +44,17 @@
     {
       "title": "Match opposite sides",
       "steps": [
-        "Bottom edge runs from $x = -1$ to $x = 5$ (length $6$).",
-        "Top edge at $y = 6$ must also run from $-1$ to $5$.",
-        "Top-left vertex: $(-1, 6)$."
+        "The bottom side goes from $(-1, 2)$ to $(5, 2)$, so it runs from $x = -1$ to $x = 5$ and has length $6$.",
+        "The top side is at $y = 6$ and must be the same length, directly above the bottom side.",
+        "So the top side also runs from $x = -1$ to $x = 5$, and its left end is the missing corner, $(-1, 6)$."
+      ]
+    },
+    {
+      "title": "Slide the right side over",
+      "steps": [
+        "The right side goes from $(5, 2)$ up to $(5, 6)$, a climb of $4$ units.",
+        "The left side of a rectangle is a copy of the right side, so it must climb $4$ units as well.",
+        "Start at the left corner you know, $(-1, 2)$, and climb $4$ units to reach $(-1, 6)$, the fourth vertex."
       ]
     }
   ],

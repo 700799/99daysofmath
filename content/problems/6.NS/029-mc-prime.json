@@ -53,6 +53,17 @@
     "$17$ is not divisible by $2$, $3$ or $4$, and $5 \\times 5$ is already more than $17$, so no other factor exists.",
     "The prime number is $17$, which is choice C."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Try to build rectangles",
+      "steps": [
+        "A number is prime when that many tiles can only be arranged in a single row, never in a rectangle with $2$ or more full rows.",
+        "Nine tiles make a $3 \\times 3$ square, $15$ tiles make $3$ rows of $5$, and $21$ tiles make $3$ rows of $7$, so those are not prime.",
+        "Seventeen tiles leave $1$ tile over in rows of $2$, $2$ over in rows of $3$, and $1$ over in rows of $4$, so no rectangle works.",
+        "Only $17$ cannot form a rectangle, so $17$ is the prime number and the answer is choice C."
+      ]
+    }
+  ],
   "tags": [
     "prime"
   ],

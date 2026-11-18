@@ -24,9 +24,9 @@
     {
       "title": "Think about temperature",
       "steps": [
-        "$-5^\\circ$F and $-8^\\circ$F are both cold.",
-        "$-8^\\circ$F is **colder** than $-5^\\circ$F — so $-5$ is the warmer (larger) number.",
-        "$-5 > -8$."
+        "Read both numbers as winter temperatures: $-5^\\circ$ is five degrees below zero and $-8^\\circ$ is eight degrees below zero.",
+        "Eight below zero is the colder day, so $-8$ is the lower number and $-5$ is the warmer, higher one.",
+        "A higher temperature is a greater number, so $-5 > -8$ and the symbol is $>$."
       ]
     }
   ],

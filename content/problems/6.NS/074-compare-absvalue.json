@@ -34,18 +34,19 @@
     "$-7$ is $7$ units from $0$, so $|-7| = 7$. And $3$ is $3$ units from $0$, so $|3| = 3$.",
     "Compare the results: $7 > 3$. So $|-7|$ is greater than $|3|$, even though $-7$ itself is less than $3$."
   ],
-  "tags": [
-    "absolute-value",
-    "compare"
-  ],
-  "estimatedSeconds": 45,
   "alternativeExplanations": [
     {
       "title": "Check the answer",
       "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: |-7| — verified."
+        "Test the answer by counting steps to zero on a number line for each number inside the bars.",
+        "Walking from $-7$ to $0$ takes $7$ steps, and walking from $3$ to $0$ takes only $3$ steps.",
+        "Seven steps is the longer walk, which confirms that $|-7|$ is greater than $|3|$."
       ]
     }
-  ]
+  ],
+  "tags": [
+    "absolute-value",
+    "compare"
+  ],
+  "estimatedSeconds": 45
 }

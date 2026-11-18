@@ -38,20 +38,29 @@
     "Sea level is $0$, so the distance from sea level is the absolute value of the position: $|-175|$.",
     "$|-175| = 175$, so the submarine is $175$ ft from sea level."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Test the answer by undoing the move: a submarine $175$ ft from sea level and still under water is at $-175$ ft.",
+        "Dive back down the $75$ ft that it rose: $-175 - 75 = -250$, which is the depth the problem started with.",
+        "The starting depth matches, so the submarine is $175$ ft from sea level."
+      ]
+    },
+    {
+      "title": "Work with depth only",
+      "steps": [
+        "Treat depth as a positive amount, so the submarine starts $250$ ft under the surface.",
+        "Rising $75$ ft brings it closer to the surface, leaving a depth of $250 - 75 = 175$ ft.",
+        "The submarine has not reached the surface, so its distance from sea level is that depth, $175$ ft."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "integer",
     "absolute-value",
     "word"
   ],
-  "estimatedSeconds": 90,
-  "alternativeExplanations": [
-    {
-      "title": "Check the answer",
-      "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: 175 — verified."
-      ]
-    }
-  ]
+  "estimatedSeconds": 90
 }

@@ -32,18 +32,19 @@
     "$7$ is $7$ units to the right of $0$, so its opposite is $7$ units to the left.",
     "That number is $-7$, so the opposite of $7$ is $-7$."
   ],
-  "tags": [
-    "integer",
-    "opposite"
-  ],
-  "estimatedSeconds": 25,
   "alternativeExplanations": [
     {
       "title": "Check the answer",
       "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: -7 — verified."
+        "A number and its opposite always add up to zero, which gives a quick test for the answer.",
+        "Add the number and the answer together: $7 + (-7) = 0$, because $7$ steps right and $7$ steps left cancel.",
+        "The sum is zero, so $-7$ really is the opposite of $7$."
       ]
     }
-  ]
+  ],
+  "tags": [
+    "integer",
+    "opposite"
+  ],
+  "estimatedSeconds": 25
 }

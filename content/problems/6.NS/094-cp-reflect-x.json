@@ -35,20 +35,21 @@
     "For the point $(3, -5)$, $x$ stays $3$ and the value $y = -5$ becomes $5$.",
     "So the reflected point has coordinates $(3, 5)$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "A point and its reflection must be the same distance from the mirror line, on opposite sides of it.",
+        "The point $(3, -5)$ is $5$ units below the $x$-axis, and the answer $(3, 5)$ is $5$ units above it.",
+        "Both points have $x = 3$, so one is straight above the other, and the answer $(3, 5)$ passes the test."
+      ]
+    }
+  ],
   "tags": [
     "coordinate-plane",
     "reflection"
   ],
   "estimatedSeconds": 50,
-  "alternativeExplanations": [
-    {
-      "title": "Check the answer",
-      "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: (3, 5) — verified."
-      ]
-    }
-  ],
   "diagram": {
     "kind": "inline-svg",
     "alt": "Coordinate plane with point (3, -5) plotted",

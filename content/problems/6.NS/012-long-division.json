@@ -40,26 +40,27 @@
     "Divide $31$ into $279$. Here $31 \\times 9 = 279$ exactly, so the last digit is $9$ and the remainder is $0$.",
     "Reading the digits in order gives $8649 \\div 31 = 279$, which matches the estimate."
   ],
-  "tags": [
-    "long-division",
-    "MAP-practice"
-  ],
-  "estimatedSeconds": 120,
   "alternativeExplanations": [
     {
       "title": "Check by multiplying back",
       "steps": [
-        "$279 \\times 31 = 279 \\times 30 + 279 \\times 1 = 8370 + 279 = 8649$. ✓",
-        "If multiplying back doesn't hit the original dividend, redo the long division."
+        "Division and multiplication undo each other, so the quotient times $31$ must give back $8649$.",
+        "Split $31$ into $30 + 1$ and multiply each part by the quotient: $279 \\times 30 = 8370$ and $279 \\times 1 = 279$.",
+        "Add the two parts: $8370 + 279 = 8649$, which is the dividend, so the quotient $279$ is confirmed."
       ]
     },
     {
       "title": "Estimate to spot mistakes",
       "steps": [
-        "Round: $8649 \\approx 9000$, $31 \\approx 30$. $9000 \\div 30 = 300$.",
-        "So the true answer should be **close to but a little less than** $300$. $279$ fits.",
-        "If you had gotten $2790$ or $28$, the estimate would have flagged the missing place value."
+        "Round both numbers to easy ones before dividing: $8649$ is close to $9000$ and $31$ is close to $30$.",
+        "The estimate is $9000 \\div 30 = 300$, and since $9000$ was rounded up, the true answer should be a little less than $300$.",
+        "A result like $28$ or $2790$ would be far from $300$, which shows a digit in the wrong place, but $279$ fits the estimate well."
       ]
     }
-  ]
+  ],
+  "tags": [
+    "long-division",
+    "MAP-practice"
+  ],
+  "estimatedSeconds": 120
 }

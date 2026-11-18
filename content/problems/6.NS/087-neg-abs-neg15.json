@@ -33,6 +33,17 @@
     "The minus sign outside the bars means \"the opposite of\", and it is applied after the absolute value.",
     "The opposite of $15$ is $-15$, so the value of $-|-15|$ is $-15$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Decide the sign first",
+      "steps": [
+        "An absolute value is never negative, so $|-15|$ is some positive number.",
+        "The minus sign in front turns that positive number into its opposite, so the final answer must be negative.",
+        "The size comes from the distance of $-15$ from zero, which is $15$.",
+        "A negative number of size $15$ is $-15$, so $-|-15| = -15$."
+      ]
+    }
+  ],
   "tags": [
     "absolute-value",
     "order-of-ops"

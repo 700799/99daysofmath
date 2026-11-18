@@ -38,6 +38,24 @@
     "Four $25$s make $100$, so there are $4 \\times 3 = 12$ of them in $300$.",
     "You can buy $12$ pencils with $3$ dollars."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Count pencils per dollar",
+      "steps": [
+        "A pencil costs $0.25$ dollars, which is one quarter, and $4$ quarters make one dollar.",
+        "So every dollar buys exactly $4$ pencils with no change left.",
+        "With $3$ dollars you buy $3$ groups of $4$ pencils, and $3 \\times 4 = 12$ pencils."
+      ]
+    },
+    {
+      "title": "Add up the cost",
+      "steps": [
+        "Test the answer by building the cost: $4$ pencils cost $1$ dollar, $8$ pencils cost $2$ dollars, and $12$ pencils cost $3$ dollars.",
+        "Twelve pencils use the money exactly, because $12 \\times 0.25 = 3.00$.",
+        "A thirteenth pencil would bring the cost to $3.25$ dollars, which is too much, so the most you can buy is $12$."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "decimal",

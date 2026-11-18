@@ -411,6 +411,418 @@
   "title": "A band and two big faces",
   "text": "Lay the prism on its 5-by-6 face, so it is 2 tall. A band around the four thin sides is 5 + 6 + 5 + 6 = 22 long and 2 tall, covering 44. The top and the bottom are 5 × 6 = 30 each, adding 60. The surface area is 44 + 60 = 104 square units."
  },
+ "6.NS-1#1": {
+  "title": "See what goes wrong",
+  "text": "Try 3.4 + 1.25 the wrong way, with the last digits lined up. The 4 lands under the 5 and the 3 under the 2, so you really add 0.34 + 1.25 and get 1.59.\nA quick estimate catches it: 3 and a bit plus 1 and a bit must be more than 4.\nWith the points lined up, the sum is 4.65, which fits the estimate."
+ },
+ "6.NS-1#2": {
+  "title": "Tenths traded for hundredths",
+  "text": "Picture a square cut into 10 strips. Shading 4 strips shows 0.4.\nNow cut every strip into 10 small squares. The same shaded part is 40 small squares out of 100, which is 0.40.\nNothing was added or removed, so 0.4 = 0.40. The zero only says the pieces were cut smaller."
+ },
+ "6.NS-1#3": {
+  "title": "An estimate agrees",
+  "text": "Take 2.6 + 3.45. Added as plain digits, 260 + 345 gives 605. Where does the point go?\nRound the numbers: 3 + 3 = 6, so the answer has to be near 6. Only 6.05 fits. 60.5 and 0.605 are far too big or too small.\nThe estimate puts the point in the same column as the points above it, every time."
+ },
+ "6.NS-1#4": {
+  "title": "Jump along a number line",
+  "text": "Draw a number line from 0 to 1 with a mark at every tenth.\nStart at 0.3, which is the third mark. Adding 0.4 means jumping 4 marks to the right: 0.4, 0.5, 0.6, 0.7.\nYou land on the seventh mark, so 0.3 + 0.4 = 0.7."
+ },
+ "6.NS-1#5": {
+  "title": "Wholes first, then parts",
+  "text": "Split each number into its whole part and its decimal part: 3.4 is 3 and 0.4, and 1.25 is 1 and 0.25.\nAdd the wholes: 3 + 1 = 4.\nAdd the parts as money: 40 cents plus 25 cents is 65 cents, or 0.65.\nPut them back together: 4 + 0.65 = 4.65."
+ },
+ "6.NS-1#6": {
+  "title": "Count it in quarters",
+  "text": "Think of the numbers as money. 0.75 is three quarters of a dollar, and 0.5 is half a dollar, which is two quarters.\nThree quarters plus two quarters makes five quarters.\nFour of them make one whole dollar, with one quarter left over. One dollar and one quarter is 1.25."
+ },
+ "6.NS-1#7": {
+  "title": "Count up from 2.3",
+  "text": "A subtraction is the gap between two numbers, so count up from 2.3 to 5.\nFrom 2.3 to 3 is a jump of 0.7.\nFrom 3 to 5 is a jump of 2.\nThe gap is 2 + 0.7 = 2.7, with no borrowing needed."
+ },
+ "6.NS-1#8": {
+  "title": "Make a whole number first",
+  "text": "2.6 is only 0.4 short of 3, so move 0.4 over from the other number.\n2.6 + 0.4 = 3, and 3.45 − 0.4 = 3.05.\nThe total has not changed, because what one number gained the other lost.\nNow the sum is easy: 3 + 3.05 = 6.05."
+ },
+ "6.NS-1#9": {
+  "title": "Count up, no borrowing",
+  "text": "Find the gap by counting up from 1.75 to 4.2.\nFrom 1.75 to 2 is a jump of 0.25, like one more quarter making 2 dollars.\nFrom 2 to 4.2 is a jump of 2.2.\nAdd the jumps: 0.25 + 2.2 = 2.45. That is the same answer the borrowing gave."
+ },
+ "6.NS-1#10": {
+  "title": "Subtract dollars, then dimes",
+  "text": "Take the 2.30 away in two easy bites.\nFirst remove the 2 whole dollars: 5.00 − 2.00 = 3.00.\nThen remove the 30 cents. Thirty cents off 3 dollars leaves 2 dollars and 70 cents.\nSo the answer is 2.70, the same as 270 cents."
+ },
+ "6.NS-2#1": {
+  "title": "Watch the pattern shrink",
+  "text": "Start with whole numbers: 4 × 3 = 12.\nMake one factor ten times smaller: 0.4 × 3 = 1.2. The answer is ten times smaller too.\nMake the other factor ten times smaller as well: 0.4 × 0.3 = 0.12. The answer shrinks by ten again.\nTwo decimal places in the factors meant two shrinks by ten, so two decimal places in the answer."
+ },
+ "6.NS-2#2": {
+  "title": "A dime of a dime",
+  "text": "One tenth of a dollar is a dime. One tenth of a dime is a penny, and a penny is one hundredth of a dollar. So 0.1 × 0.1 = 0.01.\nNow 0.6 × 0.4 is 6 tenths of 4 dimes. That makes 6 × 4 = 24 of those pennies, which is 0.24.\nTenths of tenths are always hundredths."
+ },
+ "6.NS-2#3": {
+  "title": "Change the unit, not the count",
+  "text": "Cut 4.8 meters of ribbon into pieces 0.6 meters long. How many pieces?\nMeasure in tenths of a meter instead. The ribbon is 48 tenths long and each piece is 6 tenths long, so there are 48 ÷ 6 = 8 pieces.\nChanging the unit did not change the ribbon or the pieces. That is all sliding both points does."
+ },
+ "6.NS-2#4": {
+  "title": "Trap the answer between two products",
+  "text": "Take 4.8 × 2.5. The digits come from 48 × 25 = 1200.\nNow trap the answer. It must be more than 4 × 2 = 8 and less than 5 × 3 = 15.\nOf 1.2, 12 and 120, only 12 lies between 8 and 15.\nSo 4.8 × 2.5 = 12, and the point was placed without counting any places."
+ },
+ "6.NS-2#5": {
+  "title": "Multiply them as fractions",
+  "text": "Write each decimal as tenths: 0.3 is 3/10 and 0.7 is 7/10.\nMultiply tops and bottoms: 3 × 7 = 21 and 10 × 10 = 100, so the product is 21/100.\nTwenty-one hundredths is written 0.21. The 100 on the bottom is where the two decimal places come from."
+ },
+ "6.NS-2#6": {
+  "title": "Shade a hundred grid",
+  "text": "Draw a square with 10 columns and 10 rows, so each small square is one hundredth.\nShade 6 columns for 0.6. Inside those columns, keep only 4 rows for 0.4.\nThe part shaded both ways is 6 squares wide and 4 squares tall, so it has 24 small squares.\n24 hundredths is 0.24."
+ },
+ "6.NS-2#7": {
+  "title": "Add it three times",
+  "text": "Multiplying by 3 means adding the number three times: 1.2 + 1.2 + 1.2.\nThe wholes give 1 + 1 + 1 = 3.\nThe tenths give 2 + 2 + 2 = 6 tenths, which is 0.6.\nTogether that is 3 + 0.6 = 3.6, the same answer as counting places."
+ },
+ "6.NS-2#8": {
+  "title": "Count half-dollar coins",
+  "text": "Think of 2.5 as 2 dollars and 50 cents, and 0.5 as one half-dollar coin.\nHow many half-dollar coins make that amount? Each dollar is 2 coins, so 2 dollars is 4 coins.\nThe extra 50 cents is 1 more coin.\nThat makes 4 + 1 = 5 coins, so 2.5 ÷ 0.5 = 5."
+ },
+ "6.NS-2#9": {
+  "title": "Skip-count by 0.6",
+  "text": "The division asks how many jumps of 0.6 it takes to reach 4.8.\nCount them: 0.6, 1.2, 1.8, 2.4, 3.0, 3.6, 4.2, 4.8.\nThe eighth jump lands exactly on 4.8, with nothing left over.\nEight jumps were needed, so 4.8 ÷ 0.6 = 8."
+ },
+ "6.NS-2#10": {
+  "title": "Take half of 0.8",
+  "text": "The decimal 0.5 is one half, so 0.5 × 0.8 means half of 0.8.\n0.8 is 8 tenths, and half of 8 tenths is 4 tenths.\nSo the product is 0.4. No zero ever shows up this way, which confirms that 0.40 and 0.4 are the same number."
+ },
+ "6.NS-2#11": {
+  "title": "Use cents",
+  "text": "Read 0.4 as 40 cents. Then 0.6 × 0.4 asks for 0.6 of 40 cents.\nOne tenth of 40 cents is 4 cents, so six tenths is 6 × 4 = 24 cents.\n24 cents written as part of a dollar is 0.24, which matches the fraction method."
+ },
+ "6.NS-3#1": {
+  "title": "Making identical kits",
+  "text": "You have 12 pencils and 18 erasers and want to pack identical kits with nothing left over.\nThe number of kits must divide 12 and also divide 18. You could make 1, 2, 3 or 6 kits.\nThe most kits you can make is 6, each with 2 pencils and 3 erasers. That largest number of kits is the GCF."
+ },
+ "6.NS-3#2": {
+  "title": "Packs that come out even",
+  "text": "Sausages come in packs of 4 and buns in packs of 6. You want the same number of each, with none left over.\nSausage totals can be 4, 8, 12, 16. Bun totals can be 6, 12, 18.\nThe smallest total you can make both ways is 12: three packs of sausages and two packs of buns. That is the LCM of 4 and 6."
+ },
+ "6.NS-3#3": {
+  "title": "Test it on 8 and 12",
+  "text": "The GCF of 8 and 12 is 4, and 4 is smaller than both numbers. The LCM is 24, and 24 is bigger than both.\nIn order, the four numbers are 4, 8, 12, 24: GCF first, LCM last.\nA quick test for any answer: a GCF must divide both numbers, and both numbers must divide an LCM."
+ },
+ "6.NS-3#4": {
+  "title": "Bags of beads",
+  "text": "You have 18 red beads and 24 blue beads, and you fill 6 identical bags.\nEach bag gets 18 ÷ 6 = 3 red beads and 24 ÷ 6 = 4 blue beads.\nSo all the beads together are 6 bags of (3 + 4) beads.\nThat is the same as writing 18 + 24 = 6(3 + 4). Both ways count 42 beads."
+ },
+ "6.NS-3#5": {
+  "title": "Use prime factors",
+  "text": "Break each number into primes: 8 = 2 × 2 × 2 and 12 = 2 × 2 × 3.\nMatch up what they share. Both have two 2s. The third 2 belongs only to 8, and the 3 belongs only to 12.\nMultiply the shared primes: 2 × 2 = 4. So the GCF is 4, the same as the lists gave."
+ },
+ "6.NS-3#6": {
+  "title": "Test the factors of 12",
+  "text": "The GCF cannot be bigger than 12, so try the factors of 12 from the top: 12, 6, 4, 3, 2, 1.\nDoes 12 divide 18? No, there is 6 left over.\nDoes 6 divide 18? Yes, 18 ÷ 6 = 3.\nThe first one that works is the greatest, so the GCF is 6."
+ },
+ "6.NS-3#7": {
+  "title": "Check multiples of 6 only",
+  "text": "The LCM has to be a multiple of 6, so there is no need to list the multiples of 4. Just test each multiple of 6.\n6 ÷ 4 leaves 2 over, so 6 fails.\n12 ÷ 4 = 3 exactly, so 12 works.\nThe first multiple of 6 that 4 divides is 12, so the LCM is 12."
+ },
+ "6.NS-3#8": {
+  "title": "Test the multiples of 5",
+  "text": "Go through the multiples of 5 and ask each time whether 3 divides it.\n5 ÷ 3 leaves 2 over. 10 ÷ 3 leaves 1 over. 15 ÷ 3 = 5 exactly.\nSo 15 is the first number that both 3 and 5 divide, and the LCM is 15.\nIt took three tries because 3 and 5 share no factor."
+ },
+ "6.NS-3#9": {
+  "title": "List the factors",
+  "text": "Write every factor of each number.\n16: 1, 2, 4, 8, 16.\n24: 1, 2, 3, 4, 6, 8, 12, 24.\nThe numbers on both lists are 1, 2, 4 and 8. The largest is 8, so the GCF is 8, the same as the prime method gave."
+ },
+ "6.NS-3#10": {
+  "title": "Rows of dots",
+  "text": "Draw 18 dots as 6 rows of 3. Next to them draw 24 dots as 6 rows of 4.\nPush the two blocks together. Now there are 6 rows, and each row has 3 + 4 dots.\nThe picture shows 18 + 24 = 6(3 + 4). Counting it as 6 rows of 7 gives 42 dots either way."
+ },
+ "6.NS-3#11": {
+  "title": "Multiply, then divide by the GCF",
+  "text": "Multiply the two numbers: 4 × 6 = 24. This is a common multiple, but it may be too big.\nIt is too big because 4 and 6 share a factor of 2, which got counted twice.\nDivide it out once: 24 ÷ 2 = 12.\nSo the LCM is 12, matching the prime factor method."
+ },
+ "6.NS-4#1": {
+  "title": "Floors in a building",
+  "text": "Think of a tall building with a parking garage under it. The ground floor is 0.\nFloors above ground are 1, 2, 3 and so on. The basement levels go the other way: one level down is −1, two levels down is −2.\nAn elevator at −3 is three levels under the ground floor. The minus sign tells you which side of the ground floor you are on."
+ },
+ "6.NS-4#2": {
+  "title": "Who has to catch up?",
+  "text": "Two players have scores of −7 and −2. Who is ahead?\nThe player at −7 needs 5 more points to reach −2, because −7 + 5 = −2.\nThe one who has to add points to catch up has the smaller score. So −7 is less than −2, even though 7 looks bigger than 2."
+ },
+ "6.NS-4#3": {
+  "title": "The trip meter",
+  "text": "A car's trip meter counts miles driven. Drive 7 miles east of home and it reads 7. Drive 7 miles west of home and it also reads 7.\nThe meter never shows a negative number, because it does not care which way you went.\nAbsolute value is that meter: |7| = 7 and |−7| = 7."
+ },
+ "6.NS-4#4": {
+  "title": "Use the sign rule",
+  "text": "There is a rule that works without a picture. If the number inside the bars is positive or zero, leave it alone. If it is negative, take its opposite.\nHere the number inside is −7, which is negative. Its opposite is 7.\nSo |−7| = 7, the same as the seven steps counted on the number line."
+ },
+ "6.NS-4#5": {
+  "title": "What must be added?",
+  "text": "Ask how to get from one number to the other.\nStart at −5. Adding 3 takes you to −2, because −5 + 3 = −2.\nAdding a positive amount always makes a number greater. So the number you arrive at, −2, is greater than the number you left, −5."
+ },
+ "6.NS-4#6": {
+  "title": "Read it as a debt",
+  "text": "Think of −15 as a bank balance. The account is 15 dollars below zero.\nHow big is the debt? You would need to pay in 15 dollars to get back to a balance of 0.\nThe size of the debt is 15, with no minus sign. That size is the absolute value: |−15| = 15."
+ },
+ "6.NS-4#7": {
+  "title": "Sort by sign, then by debt",
+  "text": "First split the numbers by sign. 2 is the only positive number, so it is the greatest and goes last.\nThe other two are negative. Read them as debts: −8 means owing 8 and −3 means owing 3. The bigger debt is the worse one, so −8 is the least.\nThe order is −8, −3, 2."
+ },
+ "6.NS-4#8": {
+  "title": "Flip the diver above the water",
+  "text": "Imagine the diver's position mirrored above the surface. A depth of 30 ft becomes a height of 30 ft.\nNow both are on the same side and easy to compare: 30 ft up against the kite's 12 ft up.\n30 is more than 12, by 18 ft. So the diver is the one farther from sea level."
+ },
+ "6.NS-4#9": {
+  "title": "Read a thermometer",
+  "text": "Turn the two numbers into temperatures: −5 degrees and −2 degrees.\nOn a thermometer, −5 is five marks below zero and −2 is only two marks below zero, so −2 is higher up the tube.\nHigher on the thermometer means warmer, and warmer means the greater number. So −2 > −5."
+ },
+ "6.NS-5#1": {
+  "title": "Like a claw machine",
+  "text": "A claw machine has two controls. One slides the claw sideways and the other moves it forward or back. A point works the same way, with x as the sideways control.\nFor (−4, 1): slide 4 to the left, then go 1 up.\nFor (4, −1): slide 4 to the right, then go 1 down. Same digits, different signs, and a completely different spot."
+ },
+ "6.NS-5#2": {
+  "title": "One point in each quadrant",
+  "text": "Take the numbers 2 and 5 and try every pair of signs.\n(2, 5) is right and up: Quadrant I.\n(−2, 5) is left and up: Quadrant II.\n(−2, −5) is left and down: Quadrant III.\n(2, −5) is right and down: Quadrant IV.\nGoing through them in this order traces a circle counterclockwise around the origin."
+ },
+ "6.NS-5#3": {
+  "title": "Floors in one elevator shaft",
+  "text": "Two points with the same x are like two floors served by the same elevator. The ride is straight up or down.\nFrom floor 1 to floor 7 the elevator passes 6 floors.\nFrom basement level −2 to floor 3 it goes 2 up to the ground floor and 3 more, so 5 floors.\nThe number of floors travelled is the distance, and it is never negative."
+ },
+ "6.NS-5#4": {
+  "title": "Flip a whole triangle",
+  "text": "Take a triangle with corners (1, 1), (4, 1) and (4, 3) and reflect it across the y-axis.\nThe corners become (−1, 1), (−4, 1) and (−4, 3).\nEvery height is unchanged: 1, 1 and 3. Every x has the same size but the other sign.\nThe triangle has the same shape and now sits on the left side instead of the right."
+ },
+ "6.NS-5#5": {
+  "title": "Read the signs first",
+  "text": "You can name the region before plotting anything.\nThe x-coordinate, −2, is negative, so the point must be on the left half of the plane.\nThe y-coordinate, 3, is positive, so it must be on the top half.\nThe only region that is both left and top is Quadrant II, and plotting the point agrees."
+ },
+ "6.NS-5#6": {
+  "title": "Start from a point you know",
+  "text": "The point (3, 5) has two positive coordinates, so it is in Quadrant I, the top right.\nThe point (−3, 5) is at the same height, 5, but on the other side of the y-axis. It is the mirror image of (3, 5).\nMoving straight across from the top right puts you in the top left, which is Quadrant II."
+ },
+ "6.NS-5#7": {
+  "title": "Rule out quadrants",
+  "text": "Use one coordinate at a time to cross out quadrants.\nx = 6 is positive, so the point is on the right side. That leaves Quadrants I and IV.\ny = −2 is negative, so the point is on the bottom half. That leaves Quadrants III and IV.\nThe only quadrant on both lists is IV."
+ },
+ "6.NS-5#8": {
+  "title": "Slide both points down",
+  "text": "Moving both points by the same amount does not change how far apart they are.\nSlide each point down 1 unit. (2, 1) becomes (2, 0) and (2, 6) becomes (2, 5).\nNow one point sits on the x-axis and the other is at height 5, so the distance is clearly 5 units."
+ },
+ "6.NS-5#9": {
+  "title": "List the x-values",
+  "text": "Both points are at height 4, so walk along that line and write down each x-value you pass.\nStarting at −3, the next ones are −2, −1, 0, 1, 2, 3, 4, 5.\nThat is 8 moves of one unit each to get from −3 to 5, so the points are 8 units apart."
+ },
+ "6.NS-5#10": {
+  "title": "Use the sign rule",
+  "text": "Reflections across the y-axis follow one short rule: change the sign of x and keep y.\nFor (4, 3), the x-coordinate 4 becomes −4. The y-coordinate 3 stays as it is.\nThe image is (−4, 3). The rule gives the same point as measuring 4 steps to the mirror and 4 steps beyond it."
+ },
+ "6.NS-5#11": {
+  "title": "Fold the paper",
+  "text": "Plot (3, 2) on grid paper and fold the paper along the y-axis.\nThe right half lands on top of the left half. The dot at (3, 2) presses onto the square that is 3 to the left of the fold and still 2 up.\nUnfold the paper. The mark is at (−3, 2), which is the reflection."
+ },
+ "6.NS-6#1": {
+  "title": "Scoops of sugar",
+  "text": "A recipe needs 1/2 cup of sugar, but you only have a 1/4 cup scoop. You need 2 scoops, so 1/2 ÷ 1/4 = 2.\nWith an even smaller 1/8 cup scoop you would need 4 scoops.\nThe amount of sugar stayed the same. The smaller the scoop, the more scoops it takes, so dividing by a small fraction gives a large count."
+ },
+ "6.NS-6#2": {
+  "title": "Test it by multiplying back",
+  "text": "Division can always be checked with multiplication, because 12 ÷ 3 = 4 means 4 × 3 = 12.\nKeep-Change-Flip says 3/4 ÷ 1/2 = 3/4 × 2/1 = 6/4, which is 3/2.\nCheck it: 3/2 × 1/2 = 3/4. The answer times the divisor gives back the starting fraction, so the rule has found the right number."
+ },
+ "6.NS-6#3": {
+  "title": "Follow the pattern down",
+  "text": "Look at what happens as the divisor gets smaller.\n8 ÷ 4 = 2. 8 ÷ 2 = 4. 8 ÷ 1 = 8.\nEach time the divisor is cut in half, the answer doubles. Keep going: 8 ÷ 1/2 must be 16, and 8 ÷ 1/4 must be 32.\nThose are 8 × 2 and 8 × 4. Dividing by 1/2 or 1/4 is multiplying by the flipped number."
+ },
+ "6.NS-6#4": {
+  "title": "Count squares in a grid",
+  "text": "Find 2/3 × 4/5 with a rectangle. Cut it into 3 rows and 5 columns, which makes 3 × 5 = 15 equal squares.\nShade 2 of the rows and keep 4 of the columns. The part that counts is 2 × 4 = 8 squares.\nSo the product is 8/15. The tops gave the squares you keep, and the bottoms gave the squares in all."
+ },
+ "6.NS-6#5": {
+  "title": "Rename the half as quarters",
+  "text": "Give both fractions the same bottom. One half is the same as 2/4.\nNow the problem is 2/4 ÷ 1/4: how many single quarters fit into two quarters?\nTwo of them fit, so the answer is 2. No flipping was needed, and it matches Keep-Change-Flip."
+ },
+ "6.NS-6#6": {
+  "title": "Jump along a ruler",
+  "text": "Draw a line from 0 to 1 and mark it in sixths: 1/6, 2/6, 3/6 and so on.\nOne third is at the mark 2/6.\nStart at 0 and take jumps of 1/6. The first jump lands on 1/6 and the second lands on 2/6, which is 1/3.\nIt took 2 jumps, so 1/3 ÷ 1/6 = 2."
+ },
+ "6.NS-6#7": {
+  "title": "Fit the halves in",
+  "text": "Picture a bar that is 3/4 long, made of three quarter pieces.\nOne half is two quarters, so one full half fits and uses two of the pieces.\nOne quarter piece is left. A quarter is half of a half, so it counts as 1/2 of another piece.\nIn all, 1 and 1/2 halves fit, and 1 and 1/2 is 3/2."
+ },
+ "6.NS-6#8": {
+  "title": "Cut the thirds into sixths",
+  "text": "Two pieces are hard to share among 4 people, so cut each third in half.\nNow 2/3 is 4 pieces, and each piece is 1/6 of the whole.\nFour pieces shared among 4 people is one piece each.\nEach person gets 1/6, the same answer as Keep-Change-Flip."
+ },
+ "6.NS-6#9": {
+  "title": "Use sixths for both",
+  "text": "Rename 1/2 so both fractions are counted in sixths: 1/2 = 3/6.\nNow the problem is 5/6 ÷ 3/6, which asks how many groups of 3 sixths fit into 5 sixths.\nThat is just 5 ÷ 3, or 5/3.\nOne full group fits with 2 sixths left over, which is 2/3 of a group, so 1 and 2/3 agrees."
+ },
+ "6.NS-6#10": {
+  "title": "Switch to decimals",
+  "text": "Both fractions are easy to write as decimals: 3/4 = 0.75 and 1/2 = 0.5.\nDivide 0.75 ÷ 0.5. Slide both points one place to get 7.5 ÷ 5, which is 1.5.\nThe decimal 1.5 is one and a half, and that is 3/2. A third method gives the same answer."
+ },
+ "6.NS-7#1": {
+  "title": "What a crooked stack does",
+  "text": "Try 482 + 37 with the 37 pushed one column too far left, so the 3 sits under the 4 and the 7 under the 8.\nThe columns now add 482 + 370, which gives 852.\nAn estimate shows the mistake: 480 + 40 is about 520.\nStacked correctly, with the 7 under the 2, the sum is 519."
+ },
+ "6.NS-7#2": {
+  "title": "Split into tens and ones",
+  "text": "Add 48 + 27 by breaking each number apart.\nThe tens are 40 + 20 = 60. The ones are 8 + 7 = 15.\nBut 15 is really 10 + 5, so it holds one more ten. Move that ten over: 60 + 10 = 70, and 5 ones are left.\nThe sum is 75. Carrying the 1 is this same move, written in a shorter way."
+ },
+ "6.NS-7#3": {
+  "title": "Rename the top number",
+  "text": "Take 52 − 27. As 50 + 2 the top number does not have enough ones, so write it as 40 + 12. It is still 52.\nNow subtract each part: 40 − 20 = 20 and 12 − 7 = 5.\nThe answer is 20 + 5 = 25.\nBorrowing is exactly this renaming: one ten is moved over and counted as ten ones."
+ },
+ "6.NS-7#4": {
+  "title": "Add the tens, then the ones",
+  "text": "Start at 34 and add 25 in two jumps.\nFirst add the 2 tens: 34 + 20 = 54.\nThen add the 5 ones: 54 + 5 = 59.\nWorking from the big part to the small part is easy to do in your head, and it gives the same 59."
+ },
+ "6.NS-7#5": {
+  "title": "Add from the left",
+  "text": "Add each place value on its own, starting with the biggest.\nHundreds: 600 + 200 = 800.\nTens: 10 + 70 = 80.\nOnes: 8 + 4 = 12.\nNow add the three results: 800 + 80 + 12 = 892. The 12 ones are what caused the carry in the column method."
+ },
+ "6.NS-7#6": {
+  "title": "Use the friendly neighbor 375",
+  "text": "375 would be a friendlier number than 376, because 425 + 375 is exactly 800: the 25 and the 75 make another hundred.\nBut 376 is 1 more than 375, so the real sum is 1 more than 800.\n425 + 376 = 801, with no carrying to keep track of."
+ },
+ "6.NS-7#7": {
+  "title": "Subtract in three bites",
+  "text": "Take 387 away one place value at a time: 300, then 80, then 7.\n952 − 300 = 652.\n652 − 80 = 572.\n572 − 7 = 565.\nEach bite is easy enough to do in your head, and the result matches the column method."
+ },
+ "6.NS-7#8": {
+  "title": "Subtract from 499 first",
+  "text": "All the borrowing comes from the zeros in 500. So use 499 instead, which is 1 less.\n499 − 173 needs no borrowing at all: 9 − 3 = 6, 9 − 7 = 2, 4 − 1 = 3, giving 326.\nThe real top number was 1 bigger, so the answer is 1 bigger too: 326 + 1 = 327."
+ },
+ "6.NS-7#9": {
+  "title": "Count up from 247",
+  "text": "Find the gap between 247 and 1003 by counting up.\nFrom 247 to 250 is 3.\nFrom 250 to 1000 is 750.\nFrom 1000 to 1003 is 3 more.\nAdd the jumps: 3 + 750 + 3 = 756. No borrowing across zeros is needed."
+ },
+ "6.NS-7#10": {
+  "title": "Take away 200, then give back",
+  "text": "187 is close to 200, and 200 is easy to subtract: 1250 − 200 = 1050.\nThat took away too much. 200 is 13 more than 187, so put 13 back.\n1050 + 13 = 1063.\nThis agrees with the total of the jumps from counting up."
+ },
+ "6.NS-8#1": {
+  "title": "Think of heights",
+  "text": "Use height above or below sea level in place of a number line. A hilltop is at 40 meters, the beach is at 0, a reef is at −6 and a shipwreck is at −30.\nThe higher place always has the greater number: 40 > 0 > −6 > −30.\nThis holds above the water, below the water, and across the surface."
+ },
+ "6.NS-8#2": {
+  "title": "Zero stands in between",
+  "text": "To compare −100 and 1, go through zero.\n−100 is less than 0, because it is negative. 0 is less than 1, because 1 is positive.\nChain them: −100 < 0 < 1. So −100 < 1.\nThe same two steps work for any negative and any positive, which is why you never need to look at the digits."
+ },
+ "6.NS-8#3": {
+  "title": "A mirror reverses the order",
+  "text": "On the positive side, 4 comes before 9, so 4 < 9.\nThe negative side is a mirror image of the positive side, and a mirror swaps left and right. The order of the reflections is reversed: −9 comes before −4.\nSo −9 < −4, which is the same as −4 > −9. Flip both signs and the inequality sign flips too."
+ },
+ "6.NS-8#4": {
+  "title": "Count the steps to the right",
+  "text": "Start at −3 on the number line and walk toward 1.\nThe steps go −2, −1, 0, 1. That is 4 steps, all of them to the right.\nYou had to move right to get from −3 to 1, so 1 is the greater number. In symbols, −3 + 4 = 1."
+ },
+ "6.NS-8#5": {
+  "title": "Add to get across",
+  "text": "Start at −9 and ask what must be added to reach −4.\nYou need to add 5, because −9 + 5 = −4.\nAdding a positive number makes a number greater. So the number you reach, −4, is greater than the number you started from, −9."
+ },
+ "6.NS-8#6": {
+  "title": "Basement levels",
+  "text": "Picture a building with levels under the ground. Level −1 is one floor below the ground floor, and level −7 is seven floors below it.\nLevel −1 is higher up in the building than level −7.\nHigher means greater, so −1 > −7."
+ },
+ "6.NS-8#7": {
+  "title": "Think of three wallets",
+  "text": "Read each number as money. −5 means owing 5 dollars, −2 means owing 2 dollars, and 0 means having nothing and owing nothing.\nThe person owing 5 is worst off, then the person owing 2. The person with 0 is best off.\nFrom least to greatest: −5, −2, 0."
+ },
+ "6.NS-8#8": {
+  "title": "Sort by sign first",
+  "text": "Split the numbers into groups before comparing digits.\n2 is the only positive number, so it is the greatest.\n−3 and −5 are both negative. Five below zero is lower than three below zero, so −5 is the least.\nPut the groups together: −5, −3, 2."
+ },
+ "6.NS-8#9": {
+  "title": "Warm every city by 10 degrees",
+  "text": "Adding the same amount to every temperature does not change which city is coldest.\nAdd 10 degrees to each: Oslo becomes 2, Denver becomes 13 and Chicago becomes 8.\nNow all three are positive and easy to compare. The smallest is 2, which belongs to Oslo, so Oslo is the coldest."
+ },
+ "6.NS-8#10": {
+  "title": "Place them on a line",
+  "text": "Draw a number line and put a dot at −8, at −5 and at −2.\nThe dot at −8 is the furthest to the left. Next comes −5, and −2 is the closest to zero on the right.\nReading the dots from left to right gives least to greatest: −8, −5, −2."
+ },
+ "6.NS-9#1": {
+  "title": "The pair that adds to zero",
+  "text": "Opposites are two numbers that cancel each other. Earn 5 dollars and then spend 5 dollars, and you are back where you started: 5 + (−5) = 0.\nTo find the opposite of any number, ask what must be added to get 0.\nFor −5 the answer is 5. For 0 the answer is 0, so zero is its own opposite."
+ },
+ "6.NS-9#2": {
+  "title": "Count the minus signs",
+  "text": "Try it with three signs: −(−(−4)).\nWork from the inside. The opposite of 4 is −4. The opposite of that is 4. The opposite of that is −4.\nThree flips ended on the negative side. An even number of flips always brings the number home, and an odd number leaves it on the other side."
+ },
+ "6.NS-9#3": {
+  "title": "A bird and a fish",
+  "text": "A bird flies 6 meters above a lake, at +6. A fish swims 6 meters under the surface, at −6.\nBoth are 6 meters from the surface, so |6| = 6 and |−6| = 6.\nA leaf floating on the water is at 0, and its distance from the surface is 0. No distance can be less than that."
+ },
+ "6.NS-9#4": {
+  "title": "What adds to zero?",
+  "text": "A number and its opposite always add to zero.\nSo ask: 7 plus what number equals 0?\nGoing up 7 and then down 7 gets you back to 0, so the missing number is −7.\nCheck: 7 + (−7) = 0. The opposite of 7 is −7."
+ },
+ "6.NS-9#5": {
+  "title": "Opposite of a debt",
+  "text": "Read −15 as owing 15 dollars.\nThe opposite situation is having 15 dollars, which is +15.\nThe two cancel exactly: if you owe 15 and then get 15, you have nothing left and owe nothing, so −15 + 15 = 0.\nThe opposite of −15 is 15."
+ },
+ "6.NS-9#6": {
+  "title": "Ride the elevator up",
+  "text": "Imagine a deep garage where level −12 is twelve floors under the ground floor.\nTo get back to the ground floor, level 0, the elevator has to go up 12 floors.\nThe length of that ride is the absolute value. It is 12 floors, so |−12| = 12."
+ },
+ "6.NS-9#7": {
+  "title": "Compare with",
+  "text": "The bars give the distance from zero, and two numbers are 9 steps from zero: 9 and −9.\nFor −9 the bars change what you see, because |−9| = 9.\nFor 9 nothing changes, because 9 is already the distance: |9| = 9.\nSo the bars only ever change a negative number. A positive number passes through as it is."
+ },
+ "6.NS-9#8": {
+  "title": "Find what cancels −3",
+  "text": "The expression −(−3) means the opposite of −3, and opposites always add to zero.\nSo ask what number added to −3 gives 0.\nIf you owe 3 dollars, getting 3 dollars clears the debt: −3 + 3 = 0.\nThe number that cancels −3 is 3, so −(−3) = 3."
+ },
+ "6.NS-9#9": {
+  "title": "Mark both on one number line",
+  "text": "Put both results on the same number line.\nThe absolute value of −8 is a distance of 8, so mark it at 8, on the right of zero.\nThe opposite of 8 is the mirror image of 8, so mark it at −8, on the left of zero.\nThe two marks are 16 units apart, so the two results are certainly not the same."
+ },
+ "6.NS-9#10": {
+  "title": "A seal under the ice",
+  "text": "A seal is 6 meters under the ice, at −6. The surface is at 0.\nTo come up for air, the seal has to swim 6 meters.\nThe swim is a length, so it is written without a minus sign. That length is the absolute value: |−6| = 6."
+ },
+ "6.NS-10#1": {
+  "title": "Try it both ways round",
+  "text": "Take the points (4, 2) and (4, 9). They share x = 4, so one is straight above the other.\nSubtract the y-values one way: 9 − 2 = 7.\nSubtract them the other way: 2 − 9 = −7, and the absolute value turns that into 7.\nEither order gives 7 units, which is why the rule uses absolute value."
+ },
+ "6.NS-10#2": {
+  "title": "Houses on one street",
+  "text": "Two points with the same y are like two houses on the same street.\nTake (3, 5) and (11, 5). Both are on street number 5, at house 3 and at house 11.\nWalking from house 3 to house 11 passes 11 − 3 = 8 house lengths.\nThe street number never entered the sum. Only the house numbers did."
+ },
+ "6.NS-10#3": {
+  "title": "Slide the pair along",
+  "text": "Sliding two points by the same amount does not change the gap between them.\nTake −2 and 5 and slide both 2 steps to the right. They land on 0 and 7.\nThe gap from 0 to 7 is plainly 7.\nThe slide added 2 to the 5, which is exactly what 5 − (−2) = 5 + 2 does."
+ },
+ "6.NS-10#4": {
+  "title": "Read it off the corners",
+  "text": "Try the corners (2, 1), (8, 1), (8, 5) and (2, 5).\nOnly two x-values appear, 2 and 8. They are 6 apart, so the width is 6.\nOnly two y-values appear, 1 and 5. They are 4 apart, so the height is 4.\nThat gives a perimeter of 6 + 4 + 6 + 4 = 20 units and an area of 6 × 4 = 24 square units."
+ },
+ "6.NS-10#5": {
+  "title": "Read the coordinate",
+  "text": "The first point is the origin, where every count starts.\nThe second point, (0, 6), has directions \"0 across, 6 up\". Those directions describe the trip from the origin.\nThere is no sideways part, so the whole trip is 6 units straight up. The y-coordinate itself is the distance."
+ },
+ "6.NS-10#6": {
+  "title": "Slide both down to the axis",
+  "text": "Move both points down by 2 units. The gap between them stays the same.\n(3, 2) lands on (3, 0), which is on the x-axis. (3, 7) lands on (3, 5).\nA point at height 5 is 5 units above the axis, so the distance is 5 units."
+ },
+ "6.NS-10#7": {
+  "title": "Measure both from the y-axis",
+  "text": "Both points are at height 4, on the right side of the y-axis.\nThe point (1, 4) is 1 unit from the y-axis. The point (6, 4) is 6 units from it.\nThe second point is 6 − 1 = 5 units further out along the same line, so the two points are 5 units apart."
+ },
+ "6.NS-10#8": {
+  "title": "Shift everything right by 2",
+  "text": "Move both points 2 units to the right, which keeps them the same distance apart.\n(−2, 4) lands on (0, 4), right on the y-axis. (5, 4) lands on (7, 4).\nNow the trip starts at x = 0 and ends at x = 7, so it is 7 units long."
+ },
+ "6.NS-10#9": {
+  "title": "Subtract in the other order",
+  "text": "Start from the other point this time and subtract the x-values the other way round.\n−3 − 4 = −7. Going down 4 more from −3 lands on −7.\nA distance cannot be negative, so take the absolute value: |−7| = 7.\nThe order of the points does not matter. The distance is 7 units either way."
+ },
+ "6.NS-10#10": {
+  "title": "Walk the border, count the squares",
+  "text": "For the perimeter, walk around the corners in order: 4 units right, 3 units up, 4 units left and 3 units down. That is 4 + 3 + 4 + 3 = 14 units.\nFor the area, count unit squares. Between x = 1 and x = 5 there are 4 columns, and between y = 1 and y = 4 there are 3 rows. Four columns of 3 squares make 12 square units."
+ },
+ "6.NS-10#11": {
+  "title": "Use the subtraction rule",
+  "text": "The points share x = 1, so the distance is the absolute value of the difference of the y-values.\n|7 − 2| = |5| = 5.\nNaming the points in the other order gives |2 − 7| = |−5|, which is also 5.\nBoth agree with the five steps counted on the grid."
+ },
  "6.SP-1#1": {
   "title": "The balance point on a line",
   "text": "Mark the values 2, 3 and 10 on a number line and look for the spot where they balance. Try 5: the 2 is 3 below and the 3 is 2 below, a total of 5 below. The 10 is 5 above. The two sides match, so 5 is the mean.\nAdding and dividing agrees: 15 ÷ 3 = 5."

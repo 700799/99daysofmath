@@ -36,6 +36,25 @@
     "Perimeter is the sum of all four sides, which is two widths plus two heights: $2(4) + 2(4)$.",
     "That gives $8 + 8 = 16$, so the perimeter is $16$ units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Walk around the rectangle",
+      "steps": [
+        "Trace the border corner by corner. From $(1, 2)$ up to $(1, 6)$ is $4$ units, because $y$ goes from $2$ to $6$.",
+        "From $(1, 6)$ across to $(5, 6)$ is $4$ units, and from $(5, 6)$ down to $(5, 2)$ is another $4$ units.",
+        "The last side, from $(5, 2)$ back to $(1, 2)$, is $4$ units as well.",
+        "Add the four sides of the walk: $4 + 4 + 4 + 4 = 16$, so the perimeter is $16$ units."
+      ]
+    },
+    {
+      "title": "Notice it is a square",
+      "steps": [
+        "The $x$-values $1$ and $5$ are $4$ apart, and the $y$-values $2$ and $6$ are also $4$ apart.",
+        "So every side has length $4$, which means this rectangle is really a square.",
+        "A square has four equal sides, so its perimeter is $4 \\times 4 = 16$ units."
+      ]
+    }
+  ],
   "tags": [
     "CA",
     "coordinate",

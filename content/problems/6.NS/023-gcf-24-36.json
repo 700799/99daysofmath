@@ -31,6 +31,17 @@
     "Both numbers share two $2$s and one $3$, so the common part is $2^2 \\times 3$.",
     "Multiply to get $4 \\times 3 = 12$. The GCF of $24$ and $36$ is $12$, and indeed $24 = 12 \\times 2$ and $36 = 12 \\times 3$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Test the biggest factors first",
+      "steps": [
+        "The GCF cannot be larger than $24$, so try the factors of $24$ from the largest down: $24, 12, 8, \\ldots$",
+        "Does $24$ divide $36$? No, because $36 \\div 24$ leaves a remainder of $12$.",
+        "Does $12$ divide $36$? Yes, because $36 \\div 12 = 3$ exactly, with nothing left over.",
+        "The first factor of $24$ that also divides $36$ is $12$, so the GCF is $12$."
+      ]
+    }
+  ],
   "tags": [
     "gcf"
   ],

@@ -31,6 +31,16 @@
     "Add from the right: hundredths $5 + 0 = 5$, then tenths $4 + 7 = 11$, so write $1$ and carry $1$ to the ones.",
     "Ones: $2 + 1 + 1 = 4$. Keeping the point in line, the sum is $4.15$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Think in cents",
+      "steps": [
+        "Read both numbers as money: $2.45$ is $245$ cents and $1.7$ is $1.70$, which is $170$ cents.",
+        "Add the whole numbers of cents, which needs no decimal point at all: $245 + 170 = 415$ cents.",
+        "Change back to dollars by putting the point two places from the right, so the sum is $4.15$."
+      ]
+    }
+  ],
   "tags": [
     "decimal"
   ],

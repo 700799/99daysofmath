@@ -40,28 +40,29 @@
     "Apply the rule to $A(-2, 5)$: the $x$-coordinate stays $-2$ and the $y$-coordinate becomes $-5$.",
     "The new vertex $A$ is $(-2, -5)$. The other vertices would move to $(4, -1)$ and $(0, 3)$, but the question only asks about $A$."
   ],
-  "tags": [
-    "coordinate",
-    "reflect",
-    "MAP-practice"
-  ],
-  "estimatedSeconds": 90,
   "alternativeExplanations": [
     {
       "title": "Distance from the axis",
       "steps": [
-        "$A(-2, 5)$ is $5$ units **above** the $x$-axis.",
-        "Reflection puts its image $5$ units **below** the $x$-axis, same $x$-position.",
-        "That's $(-2, -5)$."
+        "Vertex $A(-2, 5)$ is $5$ units **above** the $x$-axis, which is the mirror line for this reflection.",
+        "A mirror image is the same distance from the mirror on the other side, so the image is $5$ units **below** the $x$-axis.",
+        "The point does not slide left or right, so its $x$-coordinate stays $-2$, and the new vertex is $(-2, -5)$."
       ]
     },
     {
       "title": "Compare reflection types",
       "steps": [
-        "Reflect across $x$-axis: $(x, y) \\to (x, -y)$ — flip the $y$.",
-        "Reflect across $y$-axis: $(x, y) \\to (-x, y)$ — flip the $x$.",
-        "Reflect across origin (both axes): $(x, y) \\to (-x, -y)$ — flip both."
+        "A reflection across the $x$-axis flips up and down, so only $y$ changes sign: $(x, y) \\to (x, -y)$.",
+        "A reflection across the $y$-axis flips left and right instead, so only $x$ changes sign: $(x, y) \\to (-x, y)$.",
+        "This problem uses the $x$-axis, so choose the first rule and change only the $y$-coordinate of $A(-2, 5)$.",
+        "The image is $(-2, -5)$. The other rule would give $(2, 5)$, which is the usual wrong answer."
       ]
     }
-  ]
+  ],
+  "tags": [
+    "coordinate",
+    "reflect",
+    "MAP-practice"
+  ],
+  "estimatedSeconds": 90
 }

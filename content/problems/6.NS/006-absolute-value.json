@@ -20,9 +20,9 @@
     {
       "title": "Drop the sign",
       "steps": [
-        "Easy rule: $|x|$ takes off the negative sign if there is one.",
-        "$|-7|$ → drop the minus → $7$.",
-        "Works for any number: $|3| = 3$, $|-12| = 12$, $|0| = 0$."
+        "Absolute value keeps the size of a number and ignores its sign, so look at $-7$ without the minus sign.",
+        "Removing the minus sign from $-7$ leaves $7$, which is how far $-7$ is from zero.",
+        "The same rule gives $|3| = 3$ and $|-12| = 12$, so here the answer is $|-7| = 7$."
       ]
     }
   ],

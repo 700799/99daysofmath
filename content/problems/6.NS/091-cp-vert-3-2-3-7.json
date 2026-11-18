@@ -32,18 +32,19 @@
     "For points on a vertical line, the distance is the absolute value of the difference of the $y$-values.",
     "Compute it: $|7 - 2| = 5$. The distance is $5$ units."
   ],
-  "tags": [
-    "coordinate-plane",
-    "distance"
-  ],
-  "estimatedSeconds": 45,
   "alternativeExplanations": [
     {
       "title": "Check the answer",
       "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: 5 — verified."
+        "Test the answer by counting grid steps straight up the line $x = 3$, starting from $(3, 2)$.",
+        "The steps land on $y = 3, 4, 5, 6, 7$, and the last one is the point $(3, 7)$.",
+        "That is $5$ steps of one unit each, which confirms the distance of $5$ units."
       ]
     }
-  ]
+  ],
+  "tags": [
+    "coordinate-plane",
+    "distance"
+  ],
+  "estimatedSeconds": 45
 }
