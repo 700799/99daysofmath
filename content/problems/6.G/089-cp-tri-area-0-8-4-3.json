@@ -38,6 +38,24 @@
     "Apply the triangle formula, half of base times height: $A = \\frac{1}{2} \\times 8 \\times 3$.",
     "Half of $8$ is $4$, and $4 \\times 3 = 12$, so the area is $12$ square units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Split into two right triangles",
+      "steps": [
+        "Draw a line straight down from $(4, 3)$ to $(4, 0)$, which cuts the triangle into two right triangles.",
+        "Each right triangle has legs of $4$ and $3$, so each is half of a $4$ by $3$ rectangle: $12 \\div 2 = 6$.",
+        "The two halves together give $6 + 6 = 12$ square units."
+      ]
+    },
+    {
+      "title": "Half of the surrounding box",
+      "steps": [
+        "Draw the rectangle with corners $(0, 0)$, $(8, 0)$, $(8, 3)$ and $(0, 3)$ around the triangle.",
+        "This rectangle is $8$ wide and $3$ tall, so its area is $8 \\times 3 = 24$.",
+        "A triangle with the same base and height fills half of the box, so its area is $24 \\div 2 = 12$ square units."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "coordinate-plane",

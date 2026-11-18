@@ -24,8 +24,18 @@
     {
       "title": "As $\\left(\\frac{1}{2}\\right)^3$",
       "steps": [
-        "Same value all three sides means $\\left(\\frac{1}{2}\\right)^3$.",
-        "$\\left(\\frac{1}{2}\\right)^3 = \\frac{1^3}{2^3} = \\frac{1}{8}$."
+        "All three sides have the same length, so the volume is $\\frac{1}{2}$ used as a factor three times: $\\left(\\frac{1}{2}\\right)^3$.",
+        "Cube the top and the bottom of the fraction separately: $\\frac{1^3}{2^3} = \\frac{1 \\times 1 \\times 1}{2 \\times 2 \\times 2}$.",
+        "That works out to $\\frac{1}{8}$, so the volume of the box is $\\frac{1}{8}$ cubic foot."
+      ]
+    },
+    {
+      "title": "Fill a one-foot cube",
+      "steps": [
+        "Picture a larger cube that is $1$ ft on every edge, which has a volume of $1$ cubic foot.",
+        "Two of the small boxes fit along each edge, because $\\frac{1}{2} + \\frac{1}{2} = 1$.",
+        "So the large cube holds $2 \\times 2 \\times 2 = 8$ small boxes with no space left over.",
+        "Eight equal boxes share $1$ cubic foot, so each one has a volume of $\\frac{1}{8}$ cubic foot."
       ]
     }
   ],

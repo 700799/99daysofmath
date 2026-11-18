@@ -36,6 +36,17 @@
     "Every face has a matching face opposite it, so the surface area is $2 \\times 80$.",
     "The surface area of the prism is $160$ square units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Label around the sides",
+      "steps": [
+        "Stand the prism on its $10$ by $5$ base, so the height is $2$.",
+        "A label around the four sides is $10 + 5 + 10 + 5 = 30$ long and $2$ tall, so it covers $30 \\times 2 = 60$.",
+        "The top and the bottom each have area $10 \\times 5 = 50$, which is $100$ for both.",
+        "Add the label to the two ends: $60 + 100 = 160$ square units of surface area."
+      ]
+    }
+  ],
   "tags": [
     "surface-area"
   ],

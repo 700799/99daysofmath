@@ -31,6 +31,16 @@
     "Multiply in two steps: $4 \\times 4 = 16$, and then $16 \\times 4 = 64$.",
     "The volume of the cube is $64$ cubic units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Add up the layers",
+      "steps": [
+        "The bottom layer of the cube is a $4$ by $4$ square of unit cubes, which is $16$ cubes.",
+        "The cube is $4$ units tall, so there are $4$ of these layers.",
+        "Add them by doubling: $16 + 16 = 32$ for two layers, and $32 + 32 = 64$ for all four, so the volume is $64$ cubic units."
+      ]
+    }
+  ],
   "tags": [
     "volume",
     "cube"

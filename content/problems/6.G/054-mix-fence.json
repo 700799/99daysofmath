@@ -33,6 +33,16 @@
     "Add first and then double: $15 + 10 = 25$, and $2 \\times 25 = 50$.",
     "The garden needs $50$ feet of fencing."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Walk the fence line",
+      "steps": [
+        "Start at one corner and walk along the fence: $15$ ft, then $10$ ft, then $15$ ft, then $10$ ft back to the start.",
+        "Group the easy pairs when adding: $15 + 15 = 30$ and $10 + 10 = 20$.",
+        "The whole walk is $30 + 20 = 50$, so the garden needs $50$ feet of fencing."
+      ]
+    }
+  ],
   "tags": [
     "CA",
     "perimeter",

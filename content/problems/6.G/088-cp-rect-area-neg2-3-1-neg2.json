@@ -38,6 +38,17 @@
     "Area of a rectangle is length times width: $5 \\times 3 = 15$.",
     "The area of the rectangle is $15$ square units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Split along the axes",
+      "steps": [
+        "The axes cut the rectangle into four smaller rectangles, one in each quadrant.",
+        "The widths are $2$ on the left of the $y$-axis and $3$ on the right; the heights are $1$ above the $x$-axis and $2$ below.",
+        "The four pieces have areas of $2 \\times 1 = 2$, $3 \\times 1 = 3$, $2 \\times 2 = 4$ and $3 \\times 2 = 6$.",
+        "Adding the four pieces gives $2 + 3 + 4 + 6 = 15$ square units."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "coordinate-plane",

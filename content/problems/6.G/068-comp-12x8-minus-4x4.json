@@ -42,8 +42,10 @@
     {
       "title": "Decompose into rectangles",
       "steps": [
-        "The remaining shape can be split into a $12 \\times 4$ and an $8 \\times 4$ rectangle.",
-        "$48 + 32 = 80$."
+        "Take away the corner and cut what is left into two rectangles with a line level with the edge of the missing square.",
+        "One piece is a full strip $12$ wide and $8 - 4 = 4$ tall, with area $12 \\times 4 = 48$.",
+        "The other piece is $12 - 4 = 8$ wide and $4$ tall, with area $8 \\times 4 = 32$.",
+        "Adding the two pieces gives $48 + 32 = 80$ square units remaining."
       ]
     }
   ],

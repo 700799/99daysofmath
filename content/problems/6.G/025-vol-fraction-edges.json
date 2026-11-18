@@ -38,6 +38,24 @@
     "What remains is the product $1 \\times \\frac{3}{4}$, and multiplying by one changes nothing, so it equals $\\frac{3}{4}$.",
     "The volume is $\\frac{3}{4}$ cubic unit. Multiplying straight across gives $\\frac{6}{8}$, which simplifies to the same value."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Use decimals",
+      "steps": [
+        "Write each fraction as a decimal: $\\frac{1}{2} = 0.5$ and $\\frac{3}{4} = 0.75$.",
+        "Multiply the first two dimensions: $0.5 \\times 0.75 = 0.375$, which is half of $0.75$.",
+        "Multiply by the last dimension: $0.375 \\times 2 = 0.75$, and $0.75$ is the same as $\\frac{3}{4}$ cubic units."
+      ]
+    },
+    {
+      "title": "Picture a thin slab",
+      "steps": [
+        "Lay the prism flat so its base is $\\frac{3}{4}$ by $2$, which has area $\\frac{3}{4} \\times 2 = \\frac{6}{4} = \\frac{3}{2}$.",
+        "A slab one unit thick on this base would hold $\\frac{3}{2}$ cubic units.",
+        "This prism is only $\\frac{1}{2}$ unit thick, so it holds half as much: half of $\\frac{3}{2}$ is $\\frac{3}{4}$ cubic units."
+      ]
+    }
+  ],
   "tags": [
     "CA",
     "volume",

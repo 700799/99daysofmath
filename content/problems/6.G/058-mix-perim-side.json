@@ -33,6 +33,16 @@
     "Six groups of four make twenty-four, so $6 \\times 4 = 24$.",
     "The perimeter of the hexagon is $24$ centimeters."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Pair up the sides",
+      "steps": [
+        "Group the six sides into pairs, so each pair has a length of $4 + 4 = 8$ cm.",
+        "Six sides make $3$ pairs, and their lengths add to $8 + 8 + 8$.",
+        "That sum is $24$, so the perimeter of the hexagon is $24$ cm."
+      ]
+    }
+  ],
   "tags": [
     "perimeter"
   ],

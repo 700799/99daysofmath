@@ -1,4 +1,416 @@
 {
+ "6.G-1#1": {
+  "title": "Tile a bathroom floor",
+  "text": "Think of a floor that is 7 feet by 3 feet, covered with tiles that are 1 foot on each side. You could count the tiles by columns: there are 7 columns with 3 tiles in each, and 3 counted seven times is 21. Counting by rows gives 21 as well. The number of tiles is the area, and it is the same whichever way you count."
+ },
+ "6.G-1#2": {
+  "title": "Cut a sheet of paper",
+  "text": "Take a sheet of paper 6 units wide and 4 units tall. Its area is 6 × 4 = 24. Cut it from one corner to the opposite corner. You get two triangles that match exactly when you stack them, so each one has area 12. That is the same as ½ × 6 × 4. A triangle that leans can be split into two of these corner-cut triangles, so the half rule still holds."
+ },
+ "6.G-1#3": {
+  "title": "The leaning ladder",
+  "text": "A ladder 10 feet long leans against a wall and touches it 8 feet above the ground. How high does it reach? Only 8 feet, not 10. The 10 is the slanted side, and the 8 is the height. Your own height is measured the same way: standing straight against the wall, not leaning. Use the straight-up number in the area formula."
+ },
+ "6.G-1#4": {
+  "title": "Split 7 into 5 + 2",
+  "text": "Cut the rectangle into two smaller ones with a line: a 5-by-3 piece and a 2-by-3 piece.\nThe first holds 5 × 3 = 15 squares and the second holds 2 × 3 = 6 squares.\nTogether that is 15 + 6 = 21 square units, the same as 7 × 3."
+ },
+ "6.G-1#5": {
+  "title": "Box it, then halve",
+  "text": "Draw a rectangle around the triangle that is 8 wide and 5 tall. It covers 8 × 5 = 40 square units. The triangle fills exactly half of that rectangle, so its area is 40 ÷ 2 = 20 square units. This multiplies first and halves last, and it lands on the same 20."
+ },
+ "6.G-1#6": {
+  "title": "Halve the height instead",
+  "text": "The half can go on either number. Half of the height 4 is 2. Picture the top of the triangle cut off and tucked in beside the bottom part, making a rectangle 10 wide and 2 tall. Its area is 10 × 2 = 20 square units. Halving the base works too: 5 × 4 = 20."
+ },
+ "6.G-1#7": {
+  "title": "Use 6 × 10, then trim",
+  "text": "Nine is one less than ten, so start with an easier rectangle. A 6-by-10 rectangle has area 60. The 6-by-9 rectangle is one strip of 6 squares narrower, so take that strip away: 60 − 6 = 54 square units. No half is needed because a rectangle is the whole box."
+ },
+ "6.G-1#8": {
+  "title": "Two copies make a parallelogram",
+  "text": "Make a second copy of the triangle, flip it, and fit it against the first. The pair forms a parallelogram with base 12 and height 5, so its area is 12 × 5 = 60. One triangle is half of the pair: 60 ÷ 2 = 30 square units."
+ },
+ "6.G-1#9": {
+  "title": "Multiply first, halve last",
+  "text": "When you are not sure which number to halve, leave the half until the end. Multiply the base and height: 7 × 6 = 42. That is the rectangle around the triangle. Now take half of it: 42 ÷ 2 = 21 square units. An even product is easy to halve, so this order always works when one number is even."
+ },
+ "6.G-1#10": {
+  "title": "Split into two right triangles",
+  "text": "Draw the height. Suppose it lands 2 units from one end of the base, so the base splits into 2 and 4. The left piece is half of a 2-by-4 box: 8 ÷ 2 = 4. The right piece is half of a 4-by-4 box: 16 ÷ 2 = 8. Together 4 + 8 = 12 square units. Wherever the height lands, the two pieces add to 12."
+ },
+ "6.G-2#1": {
+  "title": "Like a dot-to-dot puzzle",
+  "text": "In a dot-to-dot puzzle you join dot 1 to dot 2 to dot 3, and the picture appears. Vertices work the same way. Joining (1, 1), (5, 1), (5, 4), (1, 4) in that order and back to the start draws a rectangle. Join them as (1, 1), (5, 4), (5, 1), (1, 4) and the lines cross like a bow tie. Same dots, wrong order, wrong shape."
+ },
+ "6.G-2#2": {
+  "title": "Ride the elevator",
+  "text": "Think of x as the street a building stands on and y as the floor. Going from (2, 1) to (2, 6) means staying in the building on street 2 and riding from floor 1 to floor 6. The elevator passes floors 2, 3, 4, 5 and 6, so it climbs 5 floors. The street number never changes, so it plays no part in the distance."
+ },
+ "6.G-2#3": {
+  "title": "Houses on one street",
+  "text": "Two houses stand on the same street, at number 1 and number 7. The street is the shared y-value, 3. Walking from house 1 you pass 2, 3, 4, 5, 6 and arrive at 7, which is 6 steps. You never cross to another street, so only the house numbers matter. That is the points (1, 3) and (7, 3): 6 units apart."
+ },
+ "6.G-2#4": {
+  "title": "Move the shape, same answer",
+  "text": "A rectangle has corners (2, 3), (7, 3), (7, 6) and (2, 6). Its sides are 7 − 2 = 5 and 6 − 3 = 3, so the area is 15 and the perimeter is 16. Now slide it so one corner sits at (0, 0). The corners become (0, 0), (5, 0), (5, 3), (0, 3). The sides are still 5 and 3, so nothing changes. Only the lengths matter."
+ },
+ "6.G-2#5": {
+  "title": "Count the jumps up",
+  "text": "Put a finger on (2, 1) and hop up one grid line at a time. The hops land on y = 2, 3, 4, 5 and 6. That is 5 hops, so the side is 5 units long. You can check with addition: starting at 1 and adding 5 gives 6, the y-value of the top point."
+ },
+ "6.G-2#6": {
+  "title": "Add on to check",
+  "text": "Ask what must be added to the smaller x-value to reach the larger one. Starting at x = 1, add 6 and you arrive at x = 7. So the two corners are 6 units apart. Counting grid lines agrees: 2, 3, 4, 5, 6, 7 is six steps to the right along the line y = 3."
+ },
+ "6.G-2#7": {
+  "title": "Count the unit squares",
+  "text": "Draw the rectangle on grid paper. Between y = 0 and y = 3 there are 3 rows of squares. Each row runs from x = 0 to x = 4, so it holds 4 squares. Counting by rows gives 4 + 4 + 4 = 12 square units. No subtraction is needed when the grid is in front of you."
+ },
+ "6.G-2#8": {
+  "title": "Slide both points up 2",
+  "text": "Sliding a segment does not change its length. Move both points up 2 units so the lower one sits on the x-axis. The point (3, −2) becomes (3, 0) and the point (3, 5) becomes (3, 7). Now the distance is easy to read: from 0 up to 7 is 7 units."
+ },
+ "6.G-2#9": {
+  "title": "Build the square and count",
+  "text": "A side of 5 means the other two corners are (5, 5) and (0, 5). Draw the square on the grid. It has 5 rows, and every row has 5 unit squares. Count by fives: 5, 10, 15, 20, 25. The area is 25 square units, the same as 5 × 5."
+ },
+ "6.G-2#10": {
+  "title": "Walk around the corners",
+  "text": "Start at (0, 0) and walk the border. To (6, 0) is 6 units. Up to (6, 3) is 3 units. Back to (0, 3) is 6 units. Down to (0, 0) is 3 units. Keep a running total as you go: 6, then 9, then 15, then 18. The trip around is 18 units."
+ },
+ "6.G-2#11": {
+  "title": "Straighten out the border",
+  "text": "Imagine the border is a piece of string. Cut it at one corner and pull it straight. It is made of four pieces: 6, 3, 6 and 3. Slide the equal pieces next to each other: 6 + 6 = 12 and 3 + 3 = 6. The whole string is 12 + 6 = 18 units long, which is the perimeter."
+ },
+ "6.G-3#1": {
+  "title": "Slice the box a different way",
+  "text": "Take the same 2 × 3 × 5 box and look at it from the side. One side wall is 3 by 5, so a slice against it holds 15 cubes. The box is 2 slices thick, so it holds 15 + 15 = 30 cubes. Starting from the floor gave 6 × 5 = 30. Whichever face you start from, you count the same cubes, so the three numbers can be multiplied in any order."
+ },
+ "6.G-3#2": {
+  "title": "The fish tank test",
+  "text": "A fish tank has a bottom that is 4 by 3. Multiply those two numbers and you get 12 square units. That tells you how much glass covers the bottom, but not how much water goes in. For water you also need the depth. If the tank is 2 deep, the water takes 12 × 2 = 24 cubic units. Two numbers describe the glass. Three numbers describe the water."
+ },
+ "6.G-3#3": {
+  "title": "Stack two half boxes",
+  "text": "A box is 4 by 6 and only ½ unit tall. Put a second box just like it on top. Together they make a box 4 by 6 by 1, which holds 24 unit cubes. The two boxes are equal, so each holds 24 ÷ 2 = 12 cubic units. The formula agrees: 4 × 6 × ½ = 12. A fraction edge just means part of a full layer."
+ },
+ "6.G-3#4": {
+  "title": "Start from a side wall",
+  "text": "Look at the 3-by-5 face instead of the floor. A slice one cube thick against that face holds 3 × 5 = 15 cubes. The box is 2 cubes thick in the other direction, so there are 2 slices. That gives 15 × 2 = 30 cubic units, the same total as floor times layers."
+ },
+ "6.G-3#5": {
+  "title": "Add three layers of nine",
+  "text": "The bottom layer of the cube is a 3-by-3 square, which is 9 unit cubes. The cube is 3 tall, so there are three layers exactly alike. Add them one at a time: 9 + 9 = 18, and 18 + 9 = 27. The cube holds 27 cubic units."
+ },
+ "6.G-3#6": {
+  "title": "Slices from the end",
+  "text": "Look at the box from its end, where the face is 2 by 3. That face shows 6 cubes. The box is 4 long, so it is like a loaf cut into 4 slices of 6 cubes each. Count by sixes: 6, 12, 18, 24. The volume is 24 cubic units."
+ },
+ "6.G-3#7": {
+  "title": "Pair the half with the 4",
+  "text": "Multiplying can be done in any order, so let the fraction meet an even number first. Half of 4 is 2. Now the box is like one with edges 2 and 3, and 2 × 3 = 6 cubic units. Pairing ½ with an even edge removes the fraction in one step."
+ },
+ "6.G-3#8": {
+  "title": "Halve the 6 first",
+  "text": "Let the half act on one edge before any other multiplying. Half of 6 is 3. What is left is 3 × 4 = 12 cubic units. You could also halve the 4 to get 2, and then 2 × 6 = 12. Every order gives 12, so pick the one that feels easiest."
+ },
+ "6.G-3#9": {
+  "title": "Stack layers until 40",
+  "text": "The floor is 4 by 2, so each layer one unit tall holds 8 cubes. Keep adding layers and count by eights: 8, 16, 24, 32, 40. The count reaches the volume of 40 on the fifth layer. So the box is 5 units tall, with no division needed."
+ },
+ "6.G-3#10": {
+  "title": "Slices instead of layers",
+  "text": "Turn the box and cut it the other way. The end face is 4 by 3, which shows 12 cubes. The box is 5 long, so there are 5 slices of 12. Counting by twelves gives 12, 24, 36, 48, 60. The volume is 60 cubic units, the same as three layers of 20."
+ },
+ "6.G-4#1": {
+  "title": "Unfold a small gift box",
+  "text": "Picture a gift box that is 3 long, 2 wide and 1 tall. Unfold it and you find six flat pieces: two that are 3 by 2 (the lid and the base), two that are 3 by 1 (the long sides) and two that are 2 by 1 (the short ends). Nothing new was made and nothing was lost. The net is just the same six faces lying side by side."
+ },
+ "6.G-4#2": {
+  "title": "Stickers on a block",
+  "text": "Cover a 2 × 2 × 2 block with square stickers that are 1 unit on each side, with no gaps and no overlaps. Each face needs 4 stickers. There are 6 faces, so you use 4 + 4 + 4 + 4 + 4 + 4 = 24 stickers. That count is the surface area: 24 square units. Stickers are flat squares, which is why the unit is square, not cubic."
+ },
+ "6.G-4#3": {
+  "title": "Look around a room",
+  "text": "A room is a box you can stand in. The floor and the ceiling are the same size. The two long walls match each other, and so do the two short walls. For a room 5 long, 4 wide and 3 tall, the floor is 20, a long wall is 15 and a short wall is 12. One of each adds to 47, and doubling gives 94 square units for all six."
+ },
+ "6.G-4#4": {
+  "title": "Trace the footprint",
+  "text": "Set the box down on its 2-by-3 face on grid paper and trace around it. The outline covers 2 rows of 3 squares. Counting them gives 3 + 3 = 6 squares. So that face has an area of 6 square units. The height of 1 does not matter for this face."
+ },
+ "6.G-4#5": {
+  "title": "A band plus two ends",
+  "text": "The four side faces join into one strip that wraps around the cube. The strip is 2 + 2 + 2 + 2 = 8 long and 2 tall, so its area is 16. The top and the bottom are 4 each, which adds 8. Altogether the surface is 16 + 8 = 24 square units."
+ },
+ "6.G-4#6": {
+  "title": "Three pairs of faces",
+  "text": "Group the six faces in opposite pairs. The top and bottom are 9 each, so that pair is 18. The front and back also make 18, and so do the left and right. Add the pairs: 18 + 18 + 18 = 54 square units."
+ },
+ "6.G-4#7": {
+  "title": "Count it like quarters",
+  "text": "Each face has area 25, the same as the cents in a quarter. Four quarters make 100 cents, and two more make 50 cents. Six quarters are worth 150 cents. In the same way, six faces of 25 cover 150 square units."
+ },
+ "6.G-4#8": {
+  "title": "Wrap a label around",
+  "text": "Sit the box on its 2-by-3 face. A label around the four sides is as long as the trip around that face: 2 + 3 + 2 + 3 = 10. The box is 1 tall, so the label covers 10 × 1 = 10. The top and bottom are 6 each, adding 12. The total is 10 + 12 = 22 square units."
+ },
+ "6.G-4#9": {
+  "title": "Fold the net in your head",
+  "text": "Many box nets look like a cross: a row of 4 rectangles with 1 flap above and 1 flap below. Fold it in your mind. The row of 4 wraps around to become the front, right, back and left. The two flaps close the top and the bottom. That is 4 + 1 + 1 = 6 faces, so a net with fewer than 6 pieces is missing one."
+ },
+ "6.G-4#10": {
+  "title": "Band around, plus two ends",
+  "text": "Stand the box on its 3-by-4 face, so it is 5 tall. A band around the four sides is 3 + 4 + 3 + 4 = 14 long and 5 tall, which covers 14 × 5 = 70. The top and the bottom are 12 each, adding 24. The surface area is 70 + 24 = 94 square units."
+ },
+ "6.G-5#1": {
+  "title": "One L-shape, two cuts",
+  "text": "An L-shape is 6 wide along the bottom and 5 tall on the left. Its tall part is 2 wide and its low part is 2 tall. Cut it with an up-and-down line: a 2-by-5 tower and a 4-by-2 block, 10 + 8 = 18. Cut it with a side-to-side line instead: a 6-by-2 strip and a 2-by-3 block, 12 + 6 = 18. Both cuts give 18."
+ },
+ "6.G-5#2": {
+  "title": "Tiles for two rooms",
+  "text": "A kitchen floor takes 12 tiles and the hallway next to it takes 6 tiles. The doorway between them is only a line, so no tile belongs to both rooms and no part of the floor is left bare. To tile both you buy 12 + 6 = 18 tiles. Adding the areas of the pieces of a shape works for the same reason."
+ },
+ "6.G-5#3": {
+  "title": "A picture frame",
+  "text": "A wooden frame measures 10 by 8 on the outside, and the opening for the photo is 8 by 6. How much wood shows? The full outline covers 10 × 8 = 80 square units, but the opening has no wood in it. The opening is 8 × 6 = 48. The wood covers 80 − 48 = 32 square units. Subtracting is quicker than adding four separate strips."
+ },
+ "6.G-5#4": {
+  "title": "Subtract from the surrounding box",
+  "text": "Draw one big rectangle around the whole L. It is 9 wide and 2 + 2 = 4 tall, so it covers 36. The top strip is only 4 wide, so a gap 9 − 4 = 5 wide and 2 tall is empty. The gap is 5 × 2 = 10. The L covers 36 − 10 = 26 square units."
+ },
+ "6.G-5#5": {
+  "title": "Skip-count the columns",
+  "text": "Stand the joined shape so its columns are 4 squares tall. The first rectangle has 3 columns: count 4, 8, 12. The second rectangle adds 2 more columns, so keep counting: 16, 20. Every square has been counted once, and the combined area is 20 square units."
+ },
+ "6.G-5#6": {
+  "title": "Split what is left",
+  "text": "Picture the hole at a corner. A full strip 5 wide and 5 − 2 = 3 tall sits beside it, with area 15. Next to the hole there is a piece 5 − 2 = 3 wide and 2 tall, with area 6. The part that remains is 15 + 6 = 21 square units. Moving the hole somewhere else would not change the amount left."
+ },
+ "6.G-5#7": {
+  "title": "Flatten the roof",
+  "text": "A triangle with base 6 and height 2 covers the same area as a rectangle 6 wide and 1 tall, because half of the height is 1. Trade the roof for that flat strip. Now the house is one rectangle 6 wide and 3 + 1 = 4 tall. Its area is 6 × 4 = 24 square units."
+ },
+ "6.G-5#8": {
+  "title": "Think in quarters",
+  "text": "Fold the 10-by-10 square in half both ways. It splits into four 5-by-5 squares, and each one covers 25. The corner bite removes exactly one of the four. Three are left, so the area is 3 × 25 = 75 square units."
+ },
+ "6.G-5#9": {
+  "title": "Whole box minus the notch",
+  "text": "Skip the hunt for missing sides and use the outside measurements. A full rectangle 8 wide and 5 tall covers 40. The notch is 3 wide and 2 tall, so it takes away 6. The L covers 40 − 6 = 34 square units, which matches the answer from splitting."
+ },
+ "6.G-5#10": {
+  "title": "Split the L instead",
+  "text": "Take the bite to be 2 wide and 4 tall. Draw a line level with the bottom of the bite. Below it is a full strip 8 wide and 6 − 4 = 2 tall, with area 16. Above it is a piece 8 − 2 = 6 wide and 4 tall, with area 24. Together they cover 16 + 24 = 40 square units."
+ },
+ "6.G-6#1": {
+  "title": "Cover the pool or fill it",
+  "text": "Think about a swimming pool. In winter you pull a flat cover over the top. The size of the cover depends on the length and the width of the pool: that is area. In summer you fill the pool with water. How much water depends on the depth too: that is volume. One pool, two different questions, and two different kinds of unit."
+ },
+ "6.G-6#2": {
+  "title": "One pair of numbers, three shapes",
+  "text": "Use the numbers 6 and 4 three ways. A rectangle 6 by 4 has area 24. A triangle with base 6 and height 4 is half of that rectangle, so its area is 12. A prism with a 6-by-4 floor and a height of 2 stacks two layers of 24 cubes, so its volume is 48. Halve for a triangle. Multiply by a third number for a solid."
+ },
+ "6.G-6#3": {
+  "title": "One room, three questions",
+  "text": "A room is 5 long, 4 wide and 3 tall. \"How much carpet covers the floor?\" asks for area: 5 × 4 = 20 square units. \"How much air is in the room?\" asks for volume: 5 × 4 × 3 = 60 cubic units. \"How much trim goes around the floor?\" asks for perimeter: 5 + 4 + 5 + 4 = 18 units. The numbers are the same each time. Only the question tells you what to do with them."
+ },
+ "6.G-6#4": {
+  "title": "Two squares side by side",
+  "text": "An 8-by-4 rectangle is flat, so the question is about area. Cut it down the middle into two 4-by-4 squares. Each square covers 4 × 4 = 16. The two together cover 16 + 16 = 32 square units."
+ },
+ "6.G-6#5": {
+  "title": "Whole box, then half",
+  "text": "A triangle is flat, so this is area. Draw the rectangle around it, 6 wide and 9 tall. That rectangle covers 6 × 9 = 54. The triangle is half of it, and half of 54 is 27 square units. The half in the formula is this last step."
+ },
+ "6.G-6#6": {
+  "title": "Make a ten first",
+  "text": "Three edges mean volume, and the three numbers can be multiplied in any order. Pair 2 with 5 because they make 10. Then 10 × 3 = 30 cubic units. Looking for a pair that makes ten keeps the arithmetic short."
+ },
+ "6.G-6#7": {
+  "title": "Double, then double again",
+  "text": "A cube is a solid, so count cubes. The bottom layer is 4 by 4, which is 16 cubes. Two layers are 16 + 16 = 32. Four layers are double that: 32 + 32 = 64. The volume is 64 cubic units."
+ },
+ "6.G-6#8": {
+  "title": "A parallelogram from two triangles",
+  "text": "Flip a copy of the triangle and fit it against the first one. The pair makes a parallelogram with base 10 and height 3, covering 10 × 3 = 30. The triangle is one of the two equal parts, so its area is 30 ÷ 2 = 15 square units."
+ },
+ "6.G-6#9": {
+  "title": "Count towers of cubes",
+  "text": "\"Inside\" means filling the box, so count cubes. Look down on the 3-by-4 floor: it has 12 spots. On each spot a tower 2 cubes tall fits under the lid. Twelve towers of 2 make 24 cubes, so the space inside is 24 cubic units."
+ },
+ "6.G-6#10": {
+  "title": "Cut and turn the tip",
+  "text": "Use the leg of 5 as the base and the leg of 8 as the height. Cut the triangle straight across at half the height, 4 units up. Turn the small top triangle around and fit it beside the bottom piece. The result is a rectangle 5 wide and 4 tall, and 5 × 4 = 20 square units."
+ },
+ "6.G-7#1": {
+  "title": "A plus sign",
+  "text": "Take a plus sign in which every arm is 2 wide and 2 long. One way to slice it: five 2-by-2 squares, one in the middle and four arms, so 5 × 4 = 20. Another way: one long bar 6 by 2 across the middle, plus a 2-by-2 square above and one below, so 12 + 4 + 4 = 20. Different cuts, same simple pieces, same total."
+ },
+ "6.G-7#2": {
+  "title": "Painting a wall",
+  "text": "You paint the end wall of a house. The main part is 10 wide and 8 tall: 80. Above it is a triangular peak with base 10 and height 2. It is part of the wall, so add ½ × 10 × 2 = 10 to get 90. A window 3 by 2 is not painted, so take away 6. The paint covers 90 − 6 = 84 square units."
+ },
+ "6.G-7#3": {
+  "title": "Two ways up the same wall",
+  "text": "An L-shape is 7 tall on its left side. On the right side the same climb is made in two parts: a lower edge and an upper edge. If the lower edge is 3, the upper edge must be 7 − 3 = 4, because both routes go from the bottom to the top. The same works across: a bottom of 10 and a top piece of 4 leave a step of 6."
+ },
+ "6.G-7#4": {
+  "title": "Count the columns by twos",
+  "text": "Both rectangles are 2 tall, so every column of the joined shape holds 2 squares. The first rectangle has 3 columns and the second has 2, which makes 5 columns. Count by twos: 2, 4, 6, 8, 10. The total area is 10 square units."
+ },
+ "6.G-7#5": {
+  "title": "Start from two equal pieces",
+  "text": "Pretend both rectangles are 5 by 4. Two of them would cover 20 + 20 = 40. The second rectangle is really 5 by 3, which is one row of 5 squares smaller. Take that row away: 40 − 5 = 35 square units."
+ },
+ "6.G-7#6": {
+  "title": "Two rectangles are left",
+  "text": "With the square gone from a corner, cut the rest along a line level with the edge of the cutout. One piece is a full strip 6 wide and 5 − 2 = 3 tall, with area 18. The other is 6 − 2 = 4 wide and 2 tall, with area 8. The area left is 18 + 8 = 26 square units."
+ },
+ "6.G-7#7": {
+  "title": "Level the roof",
+  "text": "A triangle with base 8 and height 4 covers as much as a rectangle 8 wide and 2 tall. Swap the pointed roof for that flat block. The house becomes one rectangle 8 wide and 5 + 2 = 7 tall. Its area is 8 × 7 = 56 square units."
+ },
+ "6.G-7#8": {
+  "title": "Split the leftover shape",
+  "text": "Picture the 3-by-2 piece cut from a corner. Under the cut lies a full strip 10 wide and 6 − 2 = 4 tall, which covers 40. Beside the cut is a piece 10 − 3 = 7 wide and 2 tall, which covers 14. The area left is 40 + 14 = 54 square units."
+ },
+ "6.G-7#9": {
+  "title": "Box the T, remove the corners",
+  "text": "Draw a rectangle around the whole T: 9 wide and 6 tall, covering 54. The stem is only 3 wide, so beside it there are empty corners that are 9 − 3 = 6 wide in total and 4 tall. They cover 6 × 4 = 24. The T covers 54 − 24 = 30 square units."
+ },
+ "6.G-7#10": {
+  "title": "Split into bar and stem",
+  "text": "Take each corner to be 3 wide and 4 tall. The top bar is the full 10 wide and 8 − 4 = 4 tall, so it covers 40. The stem between the corners is 10 − 3 − 3 = 4 wide and 4 tall, so it covers 16. The T covers 40 + 16 = 56 square units."
+ },
+ "6.G-8#1": {
+  "title": "Loading a moving truck",
+  "text": "A truck is being packed with boxes that are all the same cube shape. Four boxes fit along the length of the floor and two fit across, so the floor holds 8 boxes. The boxes can be stacked 3 high. The truck holds 8 + 8 + 8 = 24 boxes, which is 4 × 2 × 3. If each box is 1 cubic foot, the truck space is 24 cubic feet."
+ },
+ "6.G-8#2": {
+  "title": "Half of a half dollar",
+  "text": "Think of money. Half of a dollar is 50 cents. Half of that half is 25 cents, a quarter of a dollar. So ½ × ½ = 1/4, and in decimals 0.5 × 0.5 = 0.25. The same thing happens with space: a cube that is ½ unit on each edge is so small that 2 × 2 × 2 = 8 of them fill one unit cube, so its volume is 1/8."
+ },
+ "6.G-8#3": {
+  "title": "A table of cubes",
+  "text": "Build cubes from small blocks and count. Edge 1: just 1 block. Edge 2: two layers of 4, so 8 blocks. Edge 3: three layers of 9, so 27 blocks, like a puzzle cube. Edge 4: four layers of 16, so 64 blocks. The list 1, 8, 27, 64 is what s³ gives for s = 1, 2, 3, 4."
+ },
+ "6.G-8#4": {
+  "title": "It is a single layer",
+  "text": "An edge of 1 means the box is only one cube thick. Lay it flat and it looks like a 3-by-5 rectangle of cubes. Count the rows: 5 + 5 + 5 = 15 cubes. With just one layer, the volume is the same number as the area of the floor: 15 cubic units."
+ },
+ "6.G-8#5": {
+  "title": "Find the ten",
+  "text": "The edges can be multiplied in any order. Pair 2 with 5 first, since 2 × 5 = 10. Then multiply by the edge that is left: 10 × 4 = 40 cubic units. This is like standing the box on its 2-by-5 face and stacking 4 layers of 10."
+ },
+ "6.G-8#6": {
+  "title": "Row, square, cube",
+  "text": "Build the cube in three stages. Put 3 blocks in a row. Lay 3 of those rows side by side to make a flat square of 9 blocks. Stack 3 of those squares to make the cube: 9, 18, 27 blocks. Each stage is 3 times the one before, which is what 3 × 3 × 3 means."
+ },
+ "6.G-8#7": {
+  "title": "Two half cubes",
+  "text": "The 1-by-2 floor is made of two unit squares. The box is only ½ tall, so above each square sits half of a unit cube. Two halves make one whole. The box holds exactly 1 cubic unit, even though one edge is 2 long."
+ },
+ "6.G-8#8": {
+  "title": "Chop the stick and bundle it",
+  "text": "This box is a long thin stick, ½ by ½ and 4 long. Chop it into four pieces that are each 1 long. Stand the four pieces together in a 2-by-2 bundle. The bundle is ½ + ½ = 1 wide, 1 deep and 1 tall. It is a unit cube, so the stick holds 1 cubic unit."
+ },
+ "6.G-8#9": {
+  "title": "Halve the 8 first",
+  "text": "Let the fraction meet the biggest even edge. Half of 8 is 4. Then multiply by the last edge: 4 × 3 = 12 cubic units. Halving 8 at the start keeps every number small, and the answer is the same 12."
+ },
+ "6.G-8#10": {
+  "title": "Trap it between two boxes",
+  "text": "The edge 3½ is halfway between 3 and 4. A box 3 × 2 × 4 holds 24 cubic units. A box 4 × 2 × 4 holds 32 cubic units. The real box must be halfway between them. Halfway between 24 and 32 is 28, so the volume is 28 cubic units."
+ },
+ "6.G-9#1": {
+  "title": "Read it like a ruler",
+  "text": "Lay a ruler along a horizontal segment. If one end sits at the 3 mark and the other end at the 11 mark, the segment is 11 − 3 = 8 long. You do not care where on the page the ruler lies. The points (3, 2) and (11, 2) work the same way: the shared 2 says where the ruler lies, and the x-values are the marks. The length is 8."
+ },
+ "6.G-9#2": {
+  "title": "Read it like a thermometer",
+  "text": "A thermometer is a vertical number line. If the reading climbs from 2 degrees to 9 degrees, it has risen 9 − 2 = 7 degrees. The points (4, 2) and (4, 9) are just like that. The shared x-value, 4, says which vertical line the thermometer stands on. The y-values are the two readings, and the segment is 7 units long."
+ },
+ "6.G-9#3": {
+  "title": "From owing to having",
+  "text": "Say you owe a friend 3 dollars, which is like standing at −3. Later you have 2 dollars of your own. How much money came in? You needed 3 dollars to pay off the debt and 2 more to keep, so 5 dollars. The amount is positive even though you started below zero. That is why the distance from −3 to 2 is 5."
+ },
+ "6.G-9#4": {
+  "title": "Check by counting squares",
+  "text": "A rectangle has corners (1, 2), (6, 2), (6, 5) and (1, 5). Across the bottom, x goes from 1 to 6, which is 5 units. Up the side, y goes from 2 to 5, which is 3 units. The area is 5 × 3 = 15. Draw it on a grid and count: 5 columns with 3 squares in each is 15 squares."
+ },
+ "6.G-9#5": {
+  "title": "Hop along the line",
+  "text": "Both points sit on the line y = 1. Start at x = 2 and hop one unit to the right each time. The hops land on 3, 4, 5, 6 and 7. That took 5 hops, so the segment is 5 units long."
+ },
+ "6.G-9#6": {
+  "title": "Slide it down to the axis",
+  "text": "Both points have x = 1, so the segment is vertical. Slide it down 2 units so the bottom end rests on the x-axis. The ends are now (1, 0) and (1, 4), and the length reads straight off: 4 units. Sliding moves a segment but does not stretch it."
+ },
+ "6.G-9#7": {
+  "title": "Slide it to start at zero",
+  "text": "Move the whole segment 3 units to the right. The point (−3, 4) lands on (0, 4) and the point (2, 4) lands on (5, 4). The length has not changed, and now it is easy to see: from 0 to 5 is 5 units. The negative sign is gone before any subtracting starts."
+ },
+ "6.G-9#8": {
+  "title": "Two triangles from a diagonal",
+  "text": "Draw the diagonal from (0, 0) to (4, 3). It cuts the rectangle into two right triangles, each with legs 4 and 3. Each triangle has area ½ × 4 × 3 = 6. The two together give 6 + 6 = 12 square units, the same as width times height."
+ },
+ "6.G-9#9": {
+  "title": "Two rows of five",
+  "text": "Sketch the rectangle on the grid. It is only 2 units tall, so it has 2 rows of squares. Each row runs from x = 0 to x = 5 and holds 5 squares. The area is 5 + 5 = 10 square units."
+ },
+ "6.G-9#10": {
+  "title": "Split along the axes",
+  "text": "The axes cut this rectangle into four pieces. Left of the y-axis the width is 2, and right of it the width is 3. Below the x-axis the height is 1, and above it the height is 2. The pieces are 2 × 1 = 2, 3 × 1 = 3, 2 × 2 = 4 and 3 × 2 = 6. Their sum is 2 + 3 + 4 + 6 = 15 square units."
+ },
+ "6.G-9#11": {
+  "title": "Shift it off the negatives",
+  "text": "Slide the rectangle 3 units to the right. Its left edge moves from x = −3 to x = 0, and its right edge moves from x = 4 to x = 7. A slide does not change the width. Now the width reads directly: from 0 to 7 is 7 units."
+ },
+ "6.G-10#1": {
+  "title": "The hidden sides of a die",
+  "text": "Hold a die and look at it from one corner. You can see at most three of its numbers. The other three are on the back and underneath. Now imagine the die unfolded into a flat cross of six squares. All the numbers from 1 to 6 show at once. A net does that for any box, which makes it easy to check that all six faces are counted."
+ },
+ "6.G-10#2": {
+  "title": "Cardboard for a tissue box",
+  "text": "A tissue box is 4 long, 2 wide and 3 tall. To make it you cut six pieces of cardboard. The top and bottom are 4 × 2 = 8 each. The front and back are 4 × 3 = 12 each. The two ends are 2 × 3 = 6 each. The cardboard needed is 8 + 8 + 12 + 12 + 6 + 6 = 52 square units, counting every face once."
+ },
+ "6.G-10#3": {
+  "title": "A table of cube surfaces",
+  "text": "Try a few edges and watch the pattern. Edge 1: each face is 1, so the surface is 6. Edge 2: each face is 4, so the surface is 24. Edge 4: each face is 16, so the surface is 96. Edge 10: each face is 100, so the surface is 600. Every time, you square the edge and then take 6 of them."
+ },
+ "6.G-10#4": {
+  "title": "Label plus two lids",
+  "text": "Think of a box as a label wrapped around four sides, with a lid on top and a lid on the bottom. For a box 4 by 3 on the floor and 2 tall, the label is 4 + 3 + 4 + 3 = 14 long and 2 tall, so it covers 28. Each lid is 4 × 3 = 12. The total is 28 + 12 + 12 = 52. The pairs formula gives 2 × (12 + 8 + 6) = 52 too."
+ },
+ "6.G-10#5": {
+  "title": "Count the room you are in",
+  "text": "A room is shaped like a rectangular prism. Look down: there is 1 floor. Look up: there is 1 ceiling. Turn all the way around and count the walls: 4. That is 1 + 1 + 4 = 6 flat surfaces. Every face has been looked at once, so the prism has 6 faces."
+ },
+ "6.G-10#6": {
+  "title": "Strip around the sides",
+  "text": "Unroll the four side faces into one strip. It is 3 + 3 + 3 + 3 = 12 long and 3 tall, so it covers 36. The top and the bottom are squares of 9 each. The total is 36 + 9 + 9 = 54 square units."
+ },
+ "6.G-10#7": {
+  "title": "Sides first, then the ends",
+  "text": "The four side faces make a strip 5 + 5 + 5 + 5 = 20 long and 5 tall. That strip covers 20 × 5 = 100. The top and bottom squares are 25 each, which adds 50. The surface area is 100 + 50 = 150 square units."
+ },
+ "6.G-10#8": {
+  "title": "Wrap the 3-by-4 base",
+  "text": "Stand the prism on its 3-by-4 face, so it is 2 tall. The distance around the base is 3 + 4 + 3 + 4 = 14. A strip that long and 2 tall covers the four sides: 14 × 2 = 28. The top and bottom are 12 each, adding 24. The surface area is 28 + 24 = 52 square units."
+ },
+ "6.G-10#9": {
+  "title": "Write out all six",
+  "text": "List every face instead of doubling at the end. Top and bottom: 2 and 2. Front and back: 3 and 3. Left and right: 6 and 6. Add them in order: 2 + 2 + 3 + 3 + 6 + 6 = 22 square units. Seeing six numbers in the sum is a quick check that no face was skipped."
+ },
+ "6.G-10#10": {
+  "title": "Read the net as a strip",
+  "text": "In the net, four rectangles sit in a row and fold around the 2-by-3 ends. That row is 2 + 3 + 2 + 3 = 10 long and 4 tall, so it covers 40. The two end flaps are 2 × 3 = 6 each. The whole net covers 40 + 6 + 6 = 52 square units."
+ },
+ "6.G-10#11": {
+  "title": "A band and two big faces",
+  "text": "Lay the prism on its 5-by-6 face, so it is 2 tall. A band around the four thin sides is 5 + 6 + 5 + 6 = 22 long and 2 tall, covering 44. The top and the bottom are 5 × 6 = 30 each, adding 60. The surface area is 44 + 60 = 104 square units."
+ },
  "6.SP-1#1": {
   "title": "The balance point on a line",
   "text": "Mark the values 2, 3 and 10 on a number line and look for the spot where they balance. Try 5: the 2 is 3 below and the 3 is 2 below, a total of 5 below. The 10 is 5 above. The two sides match, so 5 is the mean.\nAdding and dividing agrees: 15 ÷ 3 = 5."

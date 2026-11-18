@@ -33,20 +33,21 @@
     "Multiply length by width to count the unit squares inside: $4 \\times 3 = 12$.",
     "The area of the rectangle is $12$ square units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Check by drawing the rectangle on grid paper and counting the unit squares inside.",
+        "There are $3$ rows between $y = 0$ and $y = 3$, and each row has $4$ squares.",
+        "Counting by rows gives $4 + 4 + 4 = 12$, which agrees with the area of $12$ square units."
+      ]
+    }
+  ],
   "tags": [
     "coordinate-plane",
     "area"
   ],
   "estimatedSeconds": 35,
-  "alternativeExplanations": [
-    {
-      "title": "Check the answer",
-      "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: 12 — verified."
-      ]
-    }
-  ],
   "diagram": {
     "kind": "inline-svg",
     "alt": "Rectangle on the coordinate plane",

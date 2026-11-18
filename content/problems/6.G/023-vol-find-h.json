@@ -31,6 +31,16 @@
     "Now $20 \\times h = 120$, and dividing undoes the multiplication: $h = 120 \\div 20$.",
     "The height of the box is $6$ units, and the check $5 \\times 4 \\times 6 = 120$ works."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Stack layers until full",
+      "steps": [
+        "The base is $5$ by $4$, so each layer one unit tall holds $5 \\times 4 = 20$ unit cubes.",
+        "Keep adding layers and count by twenties: $20$, $40$, $60$, $80$, $100$, $120$.",
+        "The count reaches the volume of $120$ after $6$ layers, so the height of the box is $6$ units."
+      ]
+    }
+  ],
   "tags": [
     "volume"
   ],

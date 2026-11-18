@@ -30,6 +30,16 @@
     "A cube has a top, a bottom and $4$ side faces, and every one of them is a square.",
     "That is $1 + 1 + 4 = 6$ faces, so the net of a cube is made of $6$ squares."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Picture the cross-shaped net",
+      "steps": [
+        "A common net for a cube looks like a cross: a row of $4$ squares with $1$ extra square above and $1$ below.",
+        "When it folds, the row of $4$ wraps around to make the sides, and the two extra squares close the top and the bottom.",
+        "Counting the pieces gives $4 + 1 + 1 = 6$, so the net of a cube has $6$ squares."
+      ]
+    }
+  ],
   "tags": [
     "net"
   ],

@@ -33,6 +33,16 @@
     "Halve the base first, since half of $12$ is $6$, and then multiply by the height: $6 \\times 5 = 30$.",
     "The area of the triangular roof piece is $30$ square feet."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Cut a board corner to corner",
+      "steps": [
+        "Start with a rectangular board that is $12$ ft by $5$ ft, which has area $12 \\times 5 = 60$ square feet.",
+        "A straight cut from one corner to the opposite corner makes two matching triangles, each with base $12$ ft and height $5$ ft.",
+        "Each triangle is half of the board, so the roof piece has area $60 \\div 2 = 30$ square feet."
+      ]
+    }
+  ],
   "tags": [
     "triangle",
     "word"

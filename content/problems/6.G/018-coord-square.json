@@ -31,6 +31,16 @@
     "Subtracting a negative is the same as adding, so $4 - (-2) = 4 + 2 = 6$.",
     "The side length of the square is $6$ units. You can check with the $y$-values too: $4 - (-2) = 6$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Count through zero",
+      "steps": [
+        "Look along the bottom side, where $x$ goes from $-2$ to $4$ on a number line.",
+        "It takes $2$ steps to get from $-2$ up to $0$, and then $4$ more steps to reach $4$.",
+        "The whole trip is $2 + 4 = 6$ steps, so the side length of the square is $6$ units."
+      ]
+    }
+  ],
   "tags": [
     "coord",
     "square"

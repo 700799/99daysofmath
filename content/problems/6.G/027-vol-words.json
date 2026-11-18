@@ -31,6 +31,17 @@
     "Multiply by the height to stack up the layers: $800 \\times 30 = 24{,}000$.",
     "The volume of the aquarium is $24{,}000$ cubic centimeters."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Multiply the digits, then the tens",
+      "steps": [
+        "Each measurement is a small number of tens: $40 = 4 \\times 10$, $20 = 2 \\times 10$ and $30 = 3 \\times 10$.",
+        "Multiply the three small numbers together first: $4 \\times 2 \\times 3 = 24$.",
+        "Then multiply the three tens to count the zeros: $10 \\times 10 \\times 10 = 1{,}000$.",
+        "Put them together to get $24 \\times 1{,}000 = 24{,}000$ cubic centimeters."
+      ]
+    }
+  ],
   "tags": [
     "volume",
     "word"

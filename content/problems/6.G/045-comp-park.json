@@ -31,6 +31,16 @@
     "The square sandbox covers $5 \\times 5 = 25$ square units.",
     "Adding the two parts gives $300 + 25 = 325$ square units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Count sandbox-sized tiles",
+      "steps": [
+        "Use the $5$ by $5$ sandbox as a tile that covers $25$ square units.",
+        "The play area is $20 \\div 5 = 4$ tiles long and $15 \\div 5 = 3$ tiles wide, so it holds $4 \\times 3 = 12$ tiles.",
+        "With the sandbox itself there are $13$ tiles, and $13 \\times 25 = 325$ square units is the combined area."
+      ]
+    }
+  ],
   "tags": [
     "composite",
     "word"

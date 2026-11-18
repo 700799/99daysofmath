@@ -31,6 +31,16 @@
     "Multiply by the $6$ faces of the cube: $6 \\times 25 = 150$.",
     "The surface area of the cube is $150$ square units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Band plus two ends",
+      "steps": [
+        "Unroll the four side faces into one strip: it is $4 \\times 5 = 20$ long and $5$ tall, so its area is $20 \\times 5 = 100$.",
+        "The top and the bottom are squares with area $5 \\times 5 = 25$ each, which is $50$ together.",
+        "Add the strip and the two ends: $100 + 50 = 150$ square units of surface area."
+      ]
+    }
+  ],
   "tags": [
     "surface-area",
     "cube"

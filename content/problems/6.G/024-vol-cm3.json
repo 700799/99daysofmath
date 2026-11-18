@@ -31,6 +31,16 @@
     "Multiply by the last dimension to count all the layers: $6 \\times 4 = 24$.",
     "The volume of the box is $24$ cubic centimeters."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Slice the box",
+      "steps": [
+        "Look at the box from the end where the face is $3$ cm by $4$ cm; that face has area $12$ square centimeters.",
+        "The box is $2$ cm long in the other direction, so it is like $2$ slices that each hold $12$ cubes.",
+        "Two slices give $12 + 12 = 24$, so the volume is $24$ cubic centimeters."
+      ]
+    }
+  ],
   "tags": [
     "volume"
   ],

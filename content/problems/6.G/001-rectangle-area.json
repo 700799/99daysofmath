@@ -30,18 +30,18 @@
     {
       "title": "Count the unit squares",
       "steps": [
-        "Imagine the rectangle divided into a grid of $1$ cm $\\times$ $1$ cm squares.",
-        "Each row has $8$ unit squares. There are $5$ rows.",
-        "Total unit squares = $8 + 8 + 8 + 8 + 8 = 40$.",
-        "So the area is $40$ square cm."
+        "Picture the rectangle covered by a grid of squares that are each $1$ cm by $1$ cm.",
+        "Every row holds $8$ of these squares, and the height of $5$ cm makes $5$ rows.",
+        "Add the rows one at a time: $8 + 8 + 8 + 8 + 8 = 40$ squares.",
+        "Each square is one square centimeter, so the area is $40$ square centimeters."
       ]
     },
     {
       "title": "Why \"square\" centimeters?",
       "steps": [
-        "When you multiply $8$ cm × $5$ cm, the units multiply too: cm × cm = cm².",
-        "That's why area is always in **square** units — it covers a 2D region.",
-        "$8 \\text{ cm} \\times 5 \\text{ cm} = 40 \\text{ cm}^2$."
+        "Multiplying $8$ cm by $5$ cm multiplies the units as well as the numbers: cm $\\times$ cm gives cm².",
+        "A length only measures along a line, but an area covers a flat region, so it needs **square** units.",
+        "Putting the number and the unit together gives $8 \\text{ cm} \\times 5 \\text{ cm} = 40 \\text{ cm}^2$, which is $40$ square centimeters."
       ]
     }
   ],

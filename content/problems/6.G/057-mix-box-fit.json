@@ -36,6 +36,16 @@
     "One layer holds $4 \\times 3 = 12$ cubes, and $5$ layers hold $12 \\times 5 = 60$ cubes.",
     "Exactly $60$ unit cubes fit in the box."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Count towers of cubes",
+      "steps": [
+        "Look down on the box from above: the $4$ by $5$ floor has room for $4 \\times 5 = 20$ cubes.",
+        "On each of those $20$ spots you can stack a tower $3$ cubes tall before reaching the top of the box.",
+        "Twenty towers of $3$ cubes make $20 \\times 3 = 60$ cubes in the full box."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "volume"

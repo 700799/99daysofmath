@@ -31,20 +31,21 @@
     "Now multiply by the third side. A quarter of $4$ is $1$, so $\\frac{1}{4} \\times 4 = 1$.",
     "The volume of the box is $1$ cubic unit."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Redo the work with decimals to see if the same result comes out.",
+        "As decimals the first two sides give $0.5 \\times 0.5 = 0.25$.",
+        "Then $0.25 \\times 4 = 1$, like four quarters making one dollar, so the volume is $1$ cubic unit."
+      ]
+    }
+  ],
   "tags": [
     "volume",
     "fraction"
   ],
   "estimatedSeconds": 55,
-  "alternativeExplanations": [
-    {
-      "title": "Check the answer",
-      "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: 1 — verified."
-      ]
-    }
-  ],
   "diagram": {
     "kind": "inline-svg",
     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 250\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"99.8,171.3 110.2,163.8 260.2,163.8 249.8,171.3\" fill=\"#F59E0B10\" stroke=\"#F59E0B\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"249.8,171.3 260.2,163.8 260.2,182.5 249.8,190\" fill=\"#F59E0B18\" stroke=\"#F59E0B\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"99.8,190 249.8,190 249.8,171.3 99.8,171.3\" fill=\"#F59E0B26\" stroke=\"#F59E0B\" stroke-width=\"2.6\" stroke-linejoin=\"round\"/><line x1=\"110.2\" y1=\"182.5\" x2=\"110.2\" y2=\"163.8\" stroke=\"#F59E0B\" stroke-width=\"1.4\" stroke-dasharray=\"4 4\" opacity=\"0.5\"/><line x1=\"110.2\" y1=\"182.5\" x2=\"260.2\" y2=\"182.5\" stroke=\"#F59E0B\" stroke-width=\"1.4\" stroke-dasharray=\"4 4\" opacity=\"0.5\"/><line x1=\"99.8\" y1=\"190\" x2=\"110.2\" y2=\"182.5\" stroke=\"#F59E0B\" stroke-width=\"1.4\" stroke-dasharray=\"4 4\" opacity=\"0.5\"/><text x=\"174.8\" y=\"214\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">4</text><text x=\"87.8\" y=\"184.6\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"end\">½</text><text x=\"271.5\" y=\"198.3\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"start\">½</text><text x=\"180\" y=\"40\" font-size=\"15\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">V = ?</text></svg>",

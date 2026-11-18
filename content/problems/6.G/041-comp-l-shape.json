@@ -31,6 +31,16 @@
     "The second rectangle has an area of $2 \\times 5 = 10$ square units.",
     "The pieces do not overlap, so add them: $12 + 10 = 22$ square units in total."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Count on by rows",
+      "steps": [
+        "Picture the first rectangle as $3$ rows of $4$ unit squares and count by fours: $4$, $8$, $12$.",
+        "The second rectangle is $5$ rows of $2$ squares, so keep counting by twos from $12$: $14$, $16$, $18$, $20$, $22$.",
+        "Every square in the L-shape has now been counted once, so the total area is $22$ square units."
+      ]
+    }
+  ],
   "tags": [
     "composite",
     "area"

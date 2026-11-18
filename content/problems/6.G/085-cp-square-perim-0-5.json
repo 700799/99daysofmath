@@ -32,6 +32,16 @@
     "Every side of a square has the same length, so the perimeter is $4$ times one side.",
     "That gives $4 \\times 5 = 20$, so the perimeter is $20$ units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Trace the whole square",
+      "steps": [
+        "Follow the vertices in order: $(0,0)$ to $(5,0)$ is $5$ units, and $(5,0)$ to $(5,5)$ is $5$ units.",
+        "Then $(5,5)$ to $(0,5)$ is $5$ units, and $(0,5)$ back to $(0,0)$ is $5$ units.",
+        "The full trip is $5 + 5 + 5 + 5 = 20$, so the perimeter is $20$ units."
+      ]
+    }
+  ],
   "tags": [
     "coordinate-plane",
     "square",

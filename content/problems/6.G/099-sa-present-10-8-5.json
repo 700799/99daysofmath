@@ -39,6 +39,17 @@
     "Each face comes in a pair, so double it: $2 \\times 170 = 340$.",
     "The box needs $340$ square inches of wrapping paper."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Band around, plus lid and base",
+      "steps": [
+        "Sit the box on its $10$ by $8$ face, so the height is $5$ inches.",
+        "A band of paper around the four sides is $10 + 8 + 10 + 8 = 36$ inches long and $5$ inches tall, so it covers $36 \\times 5 = 180$.",
+        "The lid and the base are each $10 \\times 8 = 80$, which adds $160$.",
+        "The paper needed is $180 + 160 = 340$ square inches."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "surface-area",

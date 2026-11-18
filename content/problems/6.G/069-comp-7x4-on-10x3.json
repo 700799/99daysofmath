@@ -38,6 +38,17 @@
     "The rectangles touch but do not overlap, so add their areas: $28 + 30 = 58$.",
     "The total area of the figure is $58$ square units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Subtract from a surrounding box",
+      "steps": [
+        "Draw one big rectangle around the whole figure: it is $10$ wide and $4 + 3 = 7$ tall, so its area is $10 \\times 7 = 70$.",
+        "The top rectangle is only $7$ wide, so a gap $10 - 7 = 3$ wide and $4$ tall is empty.",
+        "The empty gap has area $3 \\times 4 = 12$ no matter where the top rectangle sits.",
+        "Subtract the gap from the big rectangle: $70 - 12 = 58$ square units."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "composite"

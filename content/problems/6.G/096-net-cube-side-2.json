@@ -33,6 +33,16 @@
     "There are $6$ squares, so the total is $6 \\times 4 = 24$.",
     "The surface area of the cube is $24$ square units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Measure the net as strips",
+      "steps": [
+        "In a cross-shaped net, four squares sit in a row, which makes a strip $8$ long and $2$ tall.",
+        "That strip has area $8 \\times 2 = 16$, and the two remaining squares add $4$ each.",
+        "The whole net covers $16 + 4 + 4 = 24$, so the surface area is $24$ square units."
+      ]
+    }
+  ],
   "tags": [
     "net",
     "surface-area",

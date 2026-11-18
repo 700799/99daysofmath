@@ -30,6 +30,16 @@
     "This rectangle has $3$ rows with $7$ unit squares in each, so compute $7 \\times 3$.",
     "The product is $7 \\times 3 = 21$, so the area is $21$ square units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Skip-count the rows",
+      "steps": [
+        "Picture the rectangle on grid paper, where each of its $3$ rows holds $7$ unit squares.",
+        "Count by sevens, one row at a time: $7$, then $14$, then $21$.",
+        "After the third row every square has been counted, so the area is $21$ square units."
+      ]
+    }
+  ],
   "tags": [
     "area",
     "rectangle"

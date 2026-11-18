@@ -33,6 +33,16 @@
     "Multiply by the edge again, as one whole plus one half of $2.25$: $2.25 \\times 1.5 = 2.25 + 1.125 = 3.375$.",
     "The volume of the cube is $3.375$ cubic units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Use the fraction three halves",
+      "steps": [
+        "Write the edge as a fraction instead of a decimal: $1.5 = \\frac{3}{2}$.",
+        "Cube the top and the bottom: $\\frac{3 \\times 3 \\times 3}{2 \\times 2 \\times 2} = \\frac{27}{8}$.",
+        "Divide to turn it back into a decimal: $27 \\div 8 = 3$ with $3$ left over, and $\\frac{3}{8} = 0.375$, so the volume is $3.375$ cubic units."
+      ]
+    }
+  ],
   "tags": [
     "volume",
     "cube",

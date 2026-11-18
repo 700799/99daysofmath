@@ -31,6 +31,16 @@
     "It also has a front, a back, a left side and a right side, which makes $4$ more.",
     "Add the two groups: altogether a rectangular prism has $2 + 4 = 6$ faces."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Think of a die",
+      "steps": [
+        "A die is a small box, and each of its flat faces shows a different number of dots.",
+        "The faces are numbered $1$, $2$, $3$, $4$, $5$ and $6$, with no number left out or repeated.",
+        "A rectangular prism has the same box shape as a die, so it also has $6$ faces."
+      ]
+    }
+  ],
   "tags": [
     "surface-area",
     "faces"

@@ -33,20 +33,21 @@
     "A rectangle has two sides of each length, so $P = 2(4 + 3) = 2 \\times 7$.",
     "The perimeter of the rectangle is $14$ units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Check by tracing the rectangle corner to corner and adding each side as you go.",
+        "The sides in order are $4$, then $3$, then $4$, then $3$.",
+        "Their sum is $4 + 3 + 4 + 3 = 14$, which agrees with the perimeter of $14$ units."
+      ]
+    }
+  ],
   "tags": [
     "coordinate-plane",
     "perimeter"
   ],
   "estimatedSeconds": 55,
-  "alternativeExplanations": [
-    {
-      "title": "Check the answer",
-      "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: 14 — verified."
-      ]
-    }
-  ],
   "diagram": {
     "kind": "inline-svg",
     "alt": "Rectangle on the coordinate plane",

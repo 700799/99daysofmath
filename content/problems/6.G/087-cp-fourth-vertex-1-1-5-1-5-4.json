@@ -35,6 +35,17 @@
     "In the same way, $y = 1$ appears twice but $y = 4$ appears once, so the missing corner has $y = 4$.",
     "The fourth vertex of the rectangle is $(1, 4)$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Copy the same move",
+      "steps": [
+        "Opposite sides of a rectangle are equal and point the same way, so the same move takes you along both.",
+        "Going from $(5,1)$ to $(5,4)$ is a move of $3$ units straight up.",
+        "Make that same move from $(1,1)$: the $x$ stays $1$ and the $y$ becomes $1 + 3 = 4$.",
+        "That landing point is the fourth vertex of the rectangle, $(1, 4)$."
+      ]
+    }
+  ],
   "tags": [
     "coordinate-plane",
     "rectangle"

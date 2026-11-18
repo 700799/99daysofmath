@@ -31,6 +31,16 @@
     "Area of a rectangle is width times height, which gives $3 \\times 4 = 12$.",
     "The area of the rectangle is $12$ square units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Count the grid squares",
+      "steps": [
+        "Plot the four corners and shade the rectangle between $x = 1$ and $x = 4$ and between $y = 1$ and $y = 5$.",
+        "The shaded part has $3$ columns of grid squares, and each column is $4$ squares tall.",
+        "Counting by columns gives $4 + 4 + 4 = 12$ squares, so the area is $12$ square units."
+      ]
+    }
+  ],
   "tags": [
     "coord",
     "area"

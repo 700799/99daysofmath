@@ -53,6 +53,17 @@
     "In choices A, C and D both coordinates change, so those pairs make slanted segments.",
     "The points $(1, 2)$ and $(1, 5)$ both have $x = 1$, so they form a vertical side. The answer is B."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Side or diagonal?",
+      "steps": [
+        "Sketch a rectangle with sides along the grid lines, such as the one with corners $(1, 2)$, $(1, 5)$, $(4, 5)$ and $(4, 2)$.",
+        "Neighboring corners like $(1, 2)$ and $(1, 5)$ differ in only one coordinate, and they are joined by a side.",
+        "Corners that differ in both coordinates, like $(1, 2)$ and $(4, 5)$, sit across from each other and are joined by a diagonal, not a side.",
+        "Only choice **B** changes just one coordinate, so $(1, 2)$ and $(1, 5)$ form a side."
+      ]
+    }
+  ],
   "tags": [
     "coord"
   ],

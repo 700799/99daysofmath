@@ -25,9 +25,9 @@
     {
       "title": "Why the $\\frac{1}{2}$?",
       "steps": [
-        "A triangle is **half** of a rectangle with the same base and height.",
-        "Rectangle area $= 10 \\times 6 = 60$ cm².",
-        "Triangle area is half: $\\frac{60}{2} = 30$ cm²."
+        "Draw a rectangle around the triangle that uses the same base of $10$ cm and the same height of $6$ cm.",
+        "That rectangle has area $10 \\times 6 = 60$ square centimeters, and the triangle fills exactly **half** of it.",
+        "Half of the rectangle is $\\frac{60}{2} = 30$, so the triangle has an area of $30$ square centimeters."
       ]
     }
   ],

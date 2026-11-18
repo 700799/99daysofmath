@@ -31,6 +31,16 @@
     "Multiply in two easy steps: $4 \\times 5 = 20$, and then $20 \\times 3 = 60$.",
     "The volume of the water tank is $60$ cubic feet."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Count by layers",
+      "steps": [
+        "The floor of the tank is $4$ ft by $5$ ft, so a layer of water one foot deep takes $20$ cubic feet.",
+        "The tank is $3$ ft tall, so it holds three of these layers, one on top of another.",
+        "Counting by twenties gives $20$, $40$, $60$, so the volume is $60$ cubic feet."
+      ]
+    }
+  ],
   "tags": [
     "volume",
     "word"

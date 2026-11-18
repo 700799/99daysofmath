@@ -36,6 +36,16 @@
     "The cube has $6$ equal faces, so the total is $6 \\times 9 = 54$.",
     "You paint $54$ square feet in all."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Paint in three pairs",
+      "steps": [
+        "Paint the top and the bottom first: each is $3 \\times 3 = 9$ square feet, so the pair takes $18$.",
+        "The front and back are the same size, and so are the left and right, so each of those pairs also takes $18$.",
+        "Three pairs give $18 + 18 + 18 = 54$ square feet of paint coverage."
+      ]
+    }
+  ],
   "tags": [
     "surface-area",
     "word"

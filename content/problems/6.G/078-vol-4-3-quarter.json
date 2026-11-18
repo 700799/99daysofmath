@@ -36,6 +36,16 @@
     "Multiplying by $\\frac{1}{4}$ means the same as dividing by $4$: $12 \\times \\frac{1}{4} = 12 \\div 4 = 3$.",
     "The volume of the box is $3$ cubic units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Pair the four with the fourth",
+      "steps": [
+        "The order of multiplying does not matter, so pair $4$ with $\\frac{1}{4}$ first.",
+        "Four quarters make one whole, so $4 \\times \\frac{1}{4} = 1$.",
+        "Multiply by the side that is left: $1 \\times 3 = 3$, so the volume is $3$ cubic units."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "volume",

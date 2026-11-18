@@ -37,6 +37,16 @@
     "Add all six edges to get the distance around: $6 + 4 + 4 + 2 + 2 + 2 = 20$.",
     "The perimeter is $20$ units, the same as the uncut $6 \\times 4$ rectangle, because the inner edges replace the missing outer ones."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Push the notch back out",
+      "steps": [
+        "Slide the two inner edges of the cut outward until they line up with the outer edges of the shape.",
+        "Each edge keeps its length when it slides, so the perimeter does not change, and the shape is now a full $6$ by $4$ rectangle.",
+        "The perimeter of that rectangle is $2 \\times (6 + 4) = 20$, so the L-shape also has a perimeter of $20$ units."
+      ]
+    }
+  ],
   "tags": [
     "composite",
     "perimeter"

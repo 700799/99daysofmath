@@ -31,6 +31,16 @@
     "Then multiply by the last dimension: $2 \\times 5 = 10$.",
     "The volume of the box is $10$ cubic units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Whole numbers first",
+      "steps": [
+        "Multiply the two whole-number sides first: $3 \\times 5 = 15$.",
+        "Now find $\\frac{2}{3}$ of $15$: one third of $15$ is $5$, so two thirds is $2 \\times 5 = 10$.",
+        "The volume of the box is $10$ cubic units."
+      ]
+    }
+  ],
   "tags": [
     "volume",
     "fraction"

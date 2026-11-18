@@ -31,6 +31,16 @@
     "The two parts make up the whole shape, so add them: $20 + 5 = 25$.",
     "The total area of the shape is $25$ square units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Trade the triangle for a strip",
+      "steps": [
+        "A triangle with base $5$ and height $2$ has the same area as a strip $5$ wide and $1$ tall, since half of the height is $1$.",
+        "Put that strip on top of the $5$ by $4$ rectangle to make a square that is $5$ wide and $5$ tall.",
+        "The square has area $5 \\times 5 = 25$, so the total area of the shape is $25$ square units."
+      ]
+    }
+  ],
   "tags": [
     "composite"
   ],

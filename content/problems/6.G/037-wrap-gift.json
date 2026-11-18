@@ -36,6 +36,17 @@
     "The cube has $6$ faces, which gives $SA = 6 \\times 9 = 54$.",
     "You need $54$ square centimeters of paper to wrap the cube."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Cut the paper in three pieces",
+      "steps": [
+        "Cut one long strip of paper to go around the four sides of the cube: it must be $3 + 3 + 3 + 3 = 12$ cm long and $3$ cm tall.",
+        "That strip has area $12 \\times 3 = 36$ square centimeters.",
+        "Two more squares cover the top and the bottom, and each has area $3 \\times 3 = 9$.",
+        "The total paper needed is $36 + 9 + 9 = 54$ square centimeters."
+      ]
+    }
+  ],
   "tags": [
     "CA",
     "surface-area",
