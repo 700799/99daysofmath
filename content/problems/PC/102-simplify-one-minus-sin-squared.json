@@ -34,15 +34,17 @@
     {
       "title": "Test it with real numbers",
       "steps": [
-        "Take θ = 30°: sin 30° = 0.5, so 1 − 0.5² = 1 − 0.25 = 0.75.",
-        "And cos 30° ≈ 0.866, so cos² 30° ≈ 0.75. They match, so the power is 2, not 1."
+        "Pick a test angle such as $\\theta = 30^\\circ$, where $\\sin 30^\\circ = 0.5$, so $1 - \\sin^2\\theta = 1 - 0.25 = 0.75$.",
+        "Compare with powers of $\\cos 30^\\circ \\approx 0.866$: the first power is $0.866$ and the square is about $0.75$.",
+        "Only the square matches $0.75$, so the expression is $\\cos^2\\theta$ and $n = 2$."
       ]
     },
     {
       "title": "Think of a full pie",
       "steps": [
-        "The identity says sin² and cos² are two slices that together make one whole pie.",
-        "Take the sin² slice away from the whole pie and what is left is exactly the cos² slice."
+        "The identity says $\\sin^2\\theta$ and $\\cos^2\\theta$ are two slices that together make one whole pie.",
+        "Removing the $\\sin^2\\theta$ slice from the whole pie leaves exactly the $\\cos^2\\theta$ slice.",
+        "So $1 - \\sin^2\\theta = \\cos^2\\theta$, and the power on the cosine is $n = 2$."
       ]
     }
   ],

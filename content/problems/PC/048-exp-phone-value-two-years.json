@@ -39,17 +39,17 @@
     {
       "title": "Subtract a quarter each year",
       "steps": [
-        "A quarter of $600$ is $150$, so year 1 ends at $600 - 150 = 450$.",
-        "A quarter of $450$ is $112.50$, so year 2 ends at $450 - 112.50 = 337.50$.",
-        "The drop gets smaller each year because it is a percent of a smaller number."
+        "Losing $25\\%$ is losing a quarter, and a quarter of $600$ is $150$, so year one ends at $600 - 150 = 450$ dollars.",
+        "The second loss is a quarter of the NEW value: a quarter of $450$ is $112.5$ dollars.",
+        "Subtracting gives $450 - 112.5 = 337.5$, so the phone is worth $337.5$ dollars after two years."
       ]
     },
     {
       "title": "One power instead of two steps",
       "steps": [
-        "Two years of the same factor is $0.75^2$.",
-        "$0.75 \\times 0.75 = 0.5625$.",
-        "$600 \\times 0.5625 = 337.5$ dollars."
+        "Each year keeps $75\\%$ of the value, so two years multiply by $0.75$ twice, which is $0.75^2$.",
+        "Work out the combined factor first: $0.75 \\times 0.75 = 0.5625$.",
+        "Apply that single factor to the starting price: $600 \\times 0.5625 = 337.5$ dollars."
       ]
     }
   ],

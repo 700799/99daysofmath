@@ -2122,5 +2122,669 @@
  "GEO-14#9": {
   "title": "Step straight across the mirror",
   "text": "The shortest way to the line y = x is at right angles to it, which means stepping 1 right and 1 down each time. From (1, 4), one step gives (2, 3), and half a step more gives (2.5, 2.5), which is on the mirror. That was 1.5 steps. Take 1.5 more steps the same way: (2.5 + 1.5, 2.5 − 1.5) = (4, 1). The image is (4, 1)."
+ },
+ "PC-1#1": {
+  "title": "Four tables of values",
+  "text": "Put the same inputs 0, 1, 4 and 9 into each rule and compare the outputs.\ny = x gives 0, 1, 4, 9. y = x² gives 0, 1, 16, 81. y = |x| gives 0, 1, 4, 9, but it also gives 4 for x = −4. y = √x gives 0, 1, 2, 3.\nSteady, speeding up, bouncing back, slowing down: those four behaviors are the four shapes."
+ },
+ "PC-1#2": {
+  "title": "Shift a table, keep the gaps",
+  "text": "Take three points on y = x²: (0, 0), (1, 1) and (2, 4). The heights climb by 1 and then by 3.\nNow lift every point 5 units: (0, 5), (1, 6), (2, 9). The heights still climb by 1 and then by 3.\nThe pattern of gaps is the shape, and moving the graph leaves that pattern alone."
+ },
+ "PC-1#3": {
+  "title": "An elevator for every point",
+  "text": "Think of f(x) + k as an elevator ride. Each point of the graph steps into its own elevator and rides k floors, without moving left or right.\nWith y = |x| + 2, the tip (0, 0) rides to (0, 2), and (3, 3) rides to (3, 5). With y = |x| − 2 the elevators go down, so the tip lands at (0, −2)."
+ },
+ "PC-1#4": {
+  "title": "A head start of h",
+  "text": "Compare tables for y = x² and y = (x − 3)².\nThe old rule reaches height 0 at x = 0 and height 1 at x = 1. The new rule subtracts 3 before squaring, so it needs x = 3 to reach height 0 and x = 4 to reach height 1.\nEvery height shows up 3 units later along the x-axis, so the picture sits 3 to the right."
+ },
+ "PC-1#5": {
+  "title": "Compare two tables",
+  "text": "Make a table for x = −1, 0, 1, 2.\ny = x² gives 1, 0, 1, 4.\ny = x² + 3 gives 4, 3, 4, 7.\nEach new height is exactly 3 more than the old one at the same x, and the lowest value moved from 0 to 3. The parabola keeps its shape and sits up 3."
+ },
+ "PC-1#6": {
+  "title": "Build a small table",
+  "text": "Try x = 2, 3, 4, 5, 6 in y = (x − 4)².\nThe heights are 4, 1, 0, 1, 4.\nThe smallest height, 0, happens at x = 4, and the heights match on either side of it, so the vertex is (4, 0). The parent has the same pattern 4, 1, 0, 1, 4 centered at x = 0, so the graph slid right 4."
+ },
+ "PC-1#7": {
+  "title": "Match heights between the paths",
+  "text": "Ask which x on the new path gives the same height as a point on the old path.\nOld path: x = 0 gives 0, x = 1 gives 1, x = 2 gives 4.\nNew path y = (x − 7)²: x = 7 gives 0, x = 8 gives 1, x = 9 gives 4.\nEach height now needs an x that is 7 larger, so the sprite path moved right 7 steps."
+ },
+ "PC-1#8": {
+  "title": "Check with two ramp points",
+  "text": "Pick two spots on the old ramp: x = 4 has height √4 = 2, and x = 9 has height √9 = 3.\nAfter a 3 foot lift those spots should be at heights 5 and 6.\nThe rule y = √x + 3 gives 2 + 3 = 5 and 3 + 3 = 6, and the front edge gives 0 + 3 = 3. All three agree with a straight lift, so the rule is y = √x + 3."
+ },
+ "PC-1#9": {
+  "title": "Test it on a simple function",
+  "text": "Use f(x) = x as a test picture. Its points include (5, 5) and (2, 2).\nTripling heights sends (5, 5) to (5, 15) and (2, 2) to (2, 6), and those points lie on y = 3x, which is 3 times f(x).\nSo the rule is y = 3f(x): each height is multiplied by 3, and a height of 5 becomes 15."
+ },
+ "PC-1#10": {
+  "title": "Fold the paper",
+  "text": "Make a table for x = −2, −1, 0, 1, 2.\ny = x² gives 4, 1, 0, 1, 4.\ny = −x² gives −4, −1, 0, −1, −4.\nEach pair of heights is the same distance from the x-axis on opposite sides. If you folded the paper along the x-axis, one graph would land on the other, so the graph is flipped over the x-axis."
+ },
+ "PC-1#11": {
+  "title": "Solve for the zero",
+  "text": "Skip the table and reason about the square. A squared number is never negative, so the smallest possible height of (x − 1)² is 0.\nThat height happens only when x − 1 = 0, which means x = 1.\nThe parent reaches its lowest point at x = 0, so the lowest point has moved to x = 1, one unit to the right."
+ },
+ "PC-1#12": {
+  "title": "Tables on both sides",
+  "text": "Try x = −6, −5, −4, −3, −2 in y = (x + 4)² − 6.\nThe squares are 4, 1, 0, 1, 4, so the heights are −2, −5, −6, −5, −2.\nThe heights fall to −6 and rise again, with matching values on each side of x = −4. The lowest point is (−4, −6)."
+ },
+ "PC-2#1": {
+  "title": "A table is a function too",
+  "text": "A function does not need a machine picture. A table works: for f(x) = x + 4, the row for 1 says 5, the row for 3 says 7, and the row for 10 says 14.\nEach input appears once on the left with one answer on the right. A graph is the same list drawn as points: (1, 5), (3, 7), (10, 14)."
+ },
+ "PC-2#2": {
+  "title": "A relay race of numbers",
+  "text": "Think of a relay. Runner g carries the number first and hands the result to runner f.\nLet g(x) = x − 2 and f(x) = x². Start with 5: g hands over 3, and f turns it into 9, so f(g(5)) = 9.\nThe name written closest to the number is the runner who starts, even though it is read last."
+ },
+ "PC-2#3": {
+  "title": "One number, two orders",
+  "text": "Try the single input 5 with a doubling machine and an add 3 machine.\nDouble first, then add 3: 5 becomes 10, then 13.\nAdd 3 first, then double: 5 becomes 8, then 16.\nThe same input and the same two machines give 13 one way and 16 the other, because the doubling also doubles the 3 only when the 3 is added first."
+ },
+ "PC-2#4": {
+  "title": "Reverse every arrow",
+  "text": "List some pairs for f(x) = 2x: 1 goes to 2, 3 goes to 6, 5 goes to 10.\nThe inverse is the same list with every arrow reversed: 2 goes to 1, 6 goes to 3, 10 goes to 5.\nReading the reversed list, each number is halved, so the inverse rule is x ÷ 2. On a graph, reversing the pairs mirrors the picture across the line y = x."
+ },
+ "PC-2#5": {
+  "title": "Build one rule first",
+  "text": "Combine the machines into a single rule before using any number.\ng turns x into 3x, and f adds 4 to whatever it gets, so f(g(x)) = 3x + 4.\nNow put in 2: 3 × 2 + 4 = 6 + 4 = 10.\nThe combined rule gives 10, the same as running the two machines one after the other."
+ },
+ "PC-2#6": {
+  "title": "Combine into one rule",
+  "text": "Write g(f(x)) as a single rule. f turns x into x + 4, and g triples whatever it gets, so g(f(x)) = 3(x + 4) = 3x + 12.\nPut in 2: 3 × 2 + 12 = 18.\nCompare with the other order, 3x + 4, which gave 10. The two rules differ by 8 for every input, so the order matters."
+ },
+ "PC-2#7": {
+  "title": "Find yen per dollar",
+  "text": "Work out what one dollar is worth in yen first. One dollar becomes 0.9 euros, and 0.9 euros becomes 0.9 × 160 = 144 yen.\nSo the two machines together act as one machine that multiplies by 144.\nFor 50 dollars: 144 × 50 = 7200 yen, the same answer as doing the two exchanges in turn."
+ },
+ "PC-2#8": {
+  "title": "Write one combined rule",
+  "text": "Turn the chain into a formula. Adding 3 turns x into x + 3, and doubling that gives 2(x + 3) = 2x + 6.\nPut in 2: 2 × 2 + 6 = 4 + 6 = 10.\nThe formula agrees with the drawn chain, and it shows why the swapped order differs: doubling first gives 2x + 3, which is 7 for the input 2."
+ },
+ "PC-2#9": {
+  "title": "Work in dollar amounts",
+  "text": "Find each change as an amount of money.\nThe coupon takes a quarter of 80 dollars, which is 20 dollars, leaving 60 dollars.\nThe tax is one tenth of that 60 dollars, which is 6 dollars.\n60 + 6 = 66 dollars.\nThis route never uses the factors 0.75 and 1.10, yet it lands on the same final price."
+ },
+ "PC-2#10": {
+  "title": "Guess and check forward",
+  "text": "Try inputs and run f forward until the output is 9.\nf(3) = 2 × 3 + 1 = 7, which is too small.\nf(5) = 2 × 5 + 1 = 11, which is too big.\nf(4) = 2 × 4 + 1 = 9, exactly right.\nThe outputs go up by 2 each time, so 4 is the only input that gives 9, and the inverse of f at 9 is 4."
+ },
+ "PC-2#11": {
+  "title": "Reverse the steps in words",
+  "text": "Describe f in words: double the input, then add 1.\nTo undo it, reverse the order and use opposite operations: subtract 1, then halve.\nWritten as a rule for an input x, that is (x − 1) ÷ 2, the same inverse the swap produced.\nTest it on 9: 9 − 1 = 8, and 8 ÷ 2 = 4."
+ },
+ "PC-2#12": {
+  "title": "Solve one equation",
+  "text": "Call the original price p and write the whole chain as one equation: 0.8p + 5 = 45.\nSubtract 5 from both sides to get 0.8p = 40.\nDivide both sides by 0.8 to get p = 50.\nThe equation packs both machines into one line, and solving it gives the same 50 dollars as peeling the steps off by hand."
+ },
+ "PC-3#1": {
+  "title": "Who wins the race?",
+  "text": "Picture each term of 4x³ − 2x + 7 as a runner whose speed depends on x.\nAt x = 1 they are close together: 4, −2 and 7. At x = 10 they are 4000, −20 and 7.\nThe highest power pulls far ahead, and its coefficient decides how big and which sign. That is why the degree, 3, and the leading coefficient, 4, describe the polynomial."
+ },
+ "PC-3#2": {
+  "title": "Four familiar shapes",
+  "text": "Remember four simple graphs and every case is covered.\ny = x² is a cup: both arms up. y = −x² is a cap: both arms down.\ny = x³ runs from low on the left to high on the right. y = −x³ runs from high on the left to low on the right.\nAny polynomial copies the arms of the simple graph that matches its degree type and sign."
+ },
+ "PC-3#3": {
+  "title": "Check with a table",
+  "text": "Make a table for (x − 5)(x + 2).\nAt x = 4 the brackets are −1 and 6, product −6.\nAt x = 5 they are 0 and 7, product 0.\nAt x = 6 they are 1 and 8, product 8.\nOnly the row where a bracket is 0 gives a product of 0. The same thing happens at x = −2, where the second bracket is 0."
+ },
+ "PC-3#4": {
+  "title": "Compare a line and a parabola",
+  "text": "Two simple graphs show both behaviors at the zero x = 0.\nThe line y = x has the factor x once. Its heights go −1, 0, 1, so it passes straight through the axis.\nThe parabola y = x² has the factor x twice. Its heights go 1, 0, 1, so it comes down, touches and goes back up.\nOdd count crosses, even count bounces."
+ },
+ "PC-3#5": {
+  "title": "Test with large inputs",
+  "text": "Check the claim by plugging in x = 10 and x = −10.\nAt x = 10: 4000 − 20 + 7 = 3987. At x = −10: −4000 + 20 + 7 = −3973.\nThe 4x³ term supplies nearly all of each value, so the degree is 3 and the leading coefficient is 4. The right side is high and the left side is low, as an odd degree with a positive lead should be."
+ },
+ "PC-3#6": {
+  "title": "Expand and use the quadratic formula",
+  "text": "Multiply the factors out: (x − 5)(x + 2) = x² − 3x − 10.\nNow solve x² − 3x − 10 = 0 with the quadratic formula, using a = 1, b = −3, c = −10: x = (3 ± √(9 + 40)) ÷ 2 = (3 ± 7) ÷ 2.\nThat is 10 ÷ 2 = 5 or −4 ÷ 2 = −2.\nThe long route gives the same two crossings of the x-axis, x = 5 and x = −2."
+ },
+ "PC-3#7": {
+  "title": "Plug in big numbers",
+  "text": "Test one large input on each side.\nAt x = 10: −2 × 10,000 + 30 = −19,970.\nAt x = −10: −2 × 10,000 − 30 = −20,030.\nBoth results are far below zero, and larger inputs only make them more negative. So the right arm and the left arm both point down."
+ },
+ "PC-3#8": {
+  "title": "Read the leading term",
+  "text": "Use the rule instead of numbers. The leading term of x³ − 4x is x³.\nThe degree 3 is odd, so the two arms point in opposite directions.\nThe leading coefficient is +1, which is positive, so the right arm goes up.\nThe left arm must then go down: left arm down, right arm up."
+ },
+ "PC-3#9": {
+  "title": "Use the symmetry of a parabola",
+  "text": "Expand the height: −(x − 2)(x − 8) = −x² + 10x − 16, a parabola that opens downward.\nA parabola is symmetric, so its peak is halfway between the two ground points. If the ground points are 2 and 8, the peak is at x = 5.\nCheck the ends: h(2) = −4 + 20 − 16 = 0 and h(8) = −64 + 80 − 16 = 0. The peak height is h(5) = −25 + 50 − 16 = 9, a hill."
+ },
+ "PC-3#10": {
+  "title": "Check signs in a table",
+  "text": "Compute p(x) on each side of the zeros.\nNear −1: p(−2) = 25 × (−1) = −25 and p(0) = 9 × 1 = 9. The sign changes, so the graph crosses at −1.\nNear 3: p(2) = 1 × 3 = 3 and p(4) = 1 × 5 = 5. The sign stays positive, so the graph touches the axis and bounces at 3."
+ },
+ "PC-3#11": {
+  "title": "Think about the parabola",
+  "text": "The factor (x − 3)² is the parabola y = x² slid 3 units to the right.\nA parabola opening upward has one lowest point, its vertex, and here that vertex sits on the axis at (3, 0).\nEvery other point of the parabola is higher than the vertex, so the graph is above the axis on both sides. The sign never flips, so it bounces."
+ },
+ "PC-3#12": {
+  "title": "Build the box from its sides",
+  "text": "Forget the formula and picture the box.\nCutting 2 inches from both ends of a 12 inch edge leaves 12 − 2 − 2 = 8 inches. So the base is 8 by 8, an area of 64 square inches.\nThe folded sides stand 2 inches tall.\nVolume is base area times height: 64 × 2 = 128 cubic inches."
+ },
+ "PC-4#1": {
+  "title": "Sharing cookies",
+  "text": "Think of top ÷ bottom as cookies shared among people.\nIf there are 0 cookies and 7 people, everyone gets 0: the top being zero makes the answer zero.\nIf there are 5 cookies and 0 people, the question has no answer: the bottom being zero breaks it.\nA rational function is this sharing with x deciding both numbers."
+ },
+ "PC-4#2": {
+  "title": "A wall on both sides",
+  "text": "Look at 1 ÷ (x − 1) from the LEFT of 1 as well. At x = 0.9 it is −10, at x = 0.99 it is −100, and at x = 0.999 it is −1000.\nSo on one side the graph climbs without end and on the other it dives without end.\nThe vertical line x = 1 acts like a wall that the two halves of the graph run along but can never cross."
+ },
+ "PC-4#3": {
+  "title": "A race between top and bottom",
+  "text": "Treat the top and bottom as two runners.\nIn 5 ÷ x the bottom runs and the top stands still, so the ratio drops toward 0.\nIn (4x) ÷ (2x) both run at matched speeds and the ratio stays at 2, which is 4 ÷ 2.\nIn x² ÷ x the top runs faster, the ratio is x itself, and it never levels off."
+ },
+ "PC-4#4": {
+  "title": "The 0 ÷ 0 signal",
+  "text": "Plug the forbidden value into both parts.\nFor (x² − 1) ÷ (x − 1) at x = 1 you get 0 ÷ 0. Two zeros mean a shared factor, and a shared factor means a hole. Nearby, x = 1.01 gives 2.01, so the hole sits at height 2.\nFor 3 ÷ (x − 1) at x = 1 you get 3 ÷ 0. Only the bottom is zero, so that one is an asymptote."
+ },
+ "PC-4#5": {
+  "title": "Watch values near 6",
+  "text": "Compute 1 ÷ (x − 6) close to the suspect value.\nAt x = 6.1 it is 10 and at x = 6.01 it is 100.\nAt x = 5.9 it is −10 and at x = 5.99 it is −100.\nThe outputs grow huge on one side and hugely negative on the other, which only happens beside a vertical asymptote. So the asymptote is x = 6."
+ },
+ "PC-4#6": {
+  "title": "Set the bottom to zero",
+  "text": "Use algebra instead of a table. The only place 1 ÷ (x − 3) can break is where the bottom is zero.\nx − 3 = 0 gives x = 3.\nThe top is 1 there, not 0, so nothing cancels and the break is a true runaway. That means the outputs explode toward infinity near 3, and x = 3 is a vertical asymptote."
+ },
+ "PC-4#7": {
+  "title": "Scan a table for zero",
+  "text": "Compute the fraction at a few inputs.\nx = 0 gives −2 ÷ 5 = −0.4.\nx = 1 gives −1 ÷ 6, about −0.17.\nx = 2 gives 0 ÷ 7 = 0.\nx = 3 gives 1 ÷ 8 = 0.125.\nThe outputs move from negative to positive and are exactly 0 at x = 2, so the graph meets the x-axis at x = 2."
+ },
+ "PC-4#8": {
+  "title": "Check by multiplying back",
+  "text": "Use multiplication to test each share.\nIf 8 friends each pay 15 dollars, they collect 8 × 15 = 120 dollars, the whole bill.\nIf 12 friends each pay 10 dollars, they collect 12 × 10 = 120 dollars as well.\nBoth shares rebuild the bill exactly, so 15 dollars and 10 dollars are right."
+ },
+ "PC-4#9": {
+  "title": "Divide top and bottom by x",
+  "text": "Divide the top and the bottom of 3x ÷ (x² + 1) by x. The value does not change, and the fraction becomes 3 ÷ (x + 1 ÷ x).\nFor huge x, the piece 1 ÷ x is almost nothing, so the bottom is about x.\nThe function then behaves like 3 ÷ x, a fixed number over a growing one, which shrinks toward 0. The graph approaches y = 0."
+ },
+ "PC-4#10": {
+  "title": "Divide everything by x²",
+  "text": "Divide the top and the bottom by x². The fraction becomes (3 + 1 ÷ x²) ÷ (1 − 4 ÷ x²).\nWhen x is huge, 1 ÷ x² and 4 ÷ x² are both nearly 0.\nSo the top is close to 3 and the bottom is close to 1, and the whole fraction is close to 3 ÷ 1 = 3. The horizontal asymptote is y = 3."
+ },
+ "PC-4#11": {
+  "title": "Shrink every term",
+  "text": "Divide the top and the bottom of (2x + 1) ÷ (x² + 5) by x². The fraction becomes (2 ÷ x + 1 ÷ x²) ÷ (1 + 5 ÷ x²).\nFor huge x, every piece with x underneath fades to 0.\nThe top fades to 0 while the bottom settles at 1, so the fraction heads to 0 ÷ 1 = 0. The horizontal asymptote is y = 0."
+ },
+ "PC-4#12": {
+  "title": "A table over time",
+  "text": "Tabulate the level hour by hour.\nt = 1: 20 ÷ 5 = 4.\nt = 2: 40 ÷ 8 = 5.\nt = 4: 80 ÷ 20 = 4.\nt = 10: 200 ÷ 104, about 1.9.\nt = 50: 1000 ÷ 2504, about 0.4.\nThe row for t = 2 confirms 5 mg per liter, and the later rows keep falling, so the level drifts toward 0."
+ },
+ "PC-5#1": {
+  "title": "Two allowance plans",
+  "text": "Plan A pays 5 dollars more each week: 5, 10, 15, 20, 25, 30.\nPlan B doubles each week: 1, 2, 4, 8, 16, 32.\nPlan A is ahead for five weeks, then Plan B passes it in week 6 and never looks back. In week 10, Plan A pays 50 dollars and Plan B pays 512 dollars."
+ },
+ "PC-5#2": {
+  "title": "Read them off a table",
+  "text": "Suppose a table reads 3, 12, 48, 192 for x = 0, 1, 2, 3.\nThe value at x = 0 is the start, so a = 3.\nDivide any entry by the one before it: 12 ÷ 3 = 4 and 48 ÷ 12 = 4, so b = 4.\nThe rule is y = 3 · 4^x. Two glances at a table are enough to find both numbers."
+ },
+ "PC-5#3": {
+  "title": "The shape on a graph",
+  "text": "Picture the two graphs.\nWith b = 2 the heights 1, 2, 4, 8, 16 make a curve that starts nearly flat and then climbs steeply.\nWith b = 0.5 the heights 16, 8, 4, 2, 1 make a curve that drops quickly and then levels off just above the x-axis.\nWith b = 1 the heights never change. One is the dividing line between the two shapes."
+ },
+ "PC-5#4": {
+  "title": "Count on a hundred grid",
+  "text": "Shade a 10 by 10 grid to stand for what you have: 100 squares.\nUp 8% adds 8 more squares, so you hold 108 squares, which is 1.08 grids.\nDown 20% erases 20 squares, so you hold 80 squares, which is 0.80 of a grid.\nThe factor is just the number of squares you end with, divided by 100."
+ },
+ "PC-5#5": {
+  "title": "Double step by step",
+  "text": "Start at x = 0, where y = 4 · 1 = 4.\nEach step up in x multiplies by 2.\nx = 1 gives 8, x = 2 gives 16, x = 3 gives 32.\nThree doublings from 4 land on 32, the same value as working out 2³ = 8 first and then multiplying by 4."
+ },
+ "PC-5#6": {
+  "title": "Read them off a table",
+  "text": "Make a table and let the numbers show each job.\nx = 0 gives 200, x = 1 gives 300, x = 2 gives 450.\nThe value at x = 0 is the start, so a = 200.\nDivide neighbors: 300 ÷ 200 = 1.5 and 450 ÷ 300 = 1.5, so the factor is b = 1.5."
+ },
+ "PC-5#7": {
+  "title": "Double twice, then twice more",
+  "text": "Group the four doublings in pairs. Two doublings in a row multiply by 4.\nAfter the first 2 hours: 50 × 4 = 200 bacteria.\nAfter the next 2 hours: 200 × 4 = 800 bacteria.\nPairing the hours gives the same 800 as computing 50 × 16 in one go."
+ },
+ "PC-5#8": {
+  "title": "Find the interest first",
+  "text": "Work with the money instead of the factor.\nOne percent of 500 dollars is 5 dollars, so 8 percent is 8 × 5 = 40 dollars.\nThe balance after a year is 500 + 40 = 540 dollars.\nNow divide new by old: 540 ÷ 500 = 1.08. The factor is b = 1.08, found from the result instead of from the percent."
+ },
+ "PC-5#9": {
+  "title": "One factor for both years",
+  "text": "Combine the two years into one multiplication.\nKeeping three quarters twice means keeping 3/4 × 3/4 = 9/16 of the value.\nOne sixteenth of 600 dollars is 37.50 dollars, and nine of those make 9 × 37.50 = 337.50 dollars.\nThe single fraction 9/16 gives the same worth as taking 75% two times in a row."
+ },
+ "PC-5#10": {
+  "title": "Use the formula",
+  "text": "Write the rule y = 200 · 1.1^x, with start 200 and factor 1.1 for a 10% rise.\nFor two weeks, x = 2, so the growth is 1.1² = 1.21.\nThen 200 × 1.21 = 242 followers.\nThe extra 0.01 in 1.21 is the growth on the first week's growth: 10% of the 20 new followers is the 2 extra followers."
+ },
+ "PC-5#11": {
+  "title": "Walk the clock",
+  "text": "List the colony at each doubling time.\nHour 0: 100 cells.\nHour 3: 200 cells.\nHour 6: 400 cells.\nHour 9: 800 cells.\nHour 12: 1600 cells.\nThe list never uses an exponent, and it reaches the same 1600 cells after four rows of doubling."
+ },
+ "PC-5#12": {
+  "title": "Subtract a fifth each hour",
+  "text": "Twenty percent is one fifth, so remove a fifth of the current amount each hour.\nHour 1: a fifth of 100 is 20, leaving 80 mg.\nHour 2: a fifth of 80 is 16, leaving 64 mg.\nHour 3: a fifth of 64 is 12.8, leaving 51.2 mg.\nThe amounts removed get smaller each hour because each is a fifth of a smaller amount. The factor is 0.8 either way."
+ },
+ "PC-6#1": {
+  "title": "Count the multiplications",
+  "text": "Start at 1 and count how many times you multiply by the base to reach the number.\nTo reach 8 with base 2: 1, 2, 4, 8. That is three multiplications, so the log base 2 of 8 is 3.\nTo reach 1000 with base 10: 1, 10, 100, 1000. Three again, so the log of 1000 is 3.\nA log is a step counter for repeated multiplying."
+ },
+ "PC-6#2": {
+  "title": "One table, read two ways",
+  "text": "Write a table of powers of 2: 1 gives 2, 2 gives 4, 3 gives 8, 4 gives 16, 5 gives 32.\nRead it left to right and you are raising 2 to a power: the 5 becomes 32.\nRead the same table right to left and you are taking a log: the 32 becomes 5.\nThere is only one table. The direction you read it decides which operation you are doing."
+ },
+ "PC-6#3": {
+  "title": "Count the zeros",
+  "text": "Use base 10, where a log just counts zeros.\n100 has 2 zeros and 1000 has 3 zeros. Multiply them: 100 × 1000 = 100,000, which has 5 zeros, and 5 = 2 + 3.\nDivide instead: 1000 ÷ 100 = 10, which has 1 zero, and 1 = 3 − 2.\nMultiplying numbers adds their zero counts, and dividing subtracts them."
+ },
+ "PC-6#4": {
+  "title": "Count the zeros again",
+  "text": "Try it in base 10. The log of 100 is 2, because 100 has two zeros.\nNow cube it: 100³ = 100 × 100 × 100 = 1,000,000, which has six zeros, so its log is 6.\nSix is 3 × 2: three copies of 100 bring three lots of two zeros.\nRaising the number to the power n makes n copies, so the log is multiplied by n."
+ },
+ "PC-6#5": {
+  "title": "Halve down to 1",
+  "text": "Run the question backwards. Divide 32 by 2 again and again until you reach 1, and count the divisions.\n32, 16, 8, 4, 2, 1.\nThat took five halvings. Each halving removes one factor of 2, so 32 contains five factors of 2 and the log base 2 of 32 is 5."
+ },
+ "PC-6#6": {
+  "title": "Use a square you know",
+  "text": "Split 81 into a product you recognize: 81 = 9 × 9.\nEach 9 is 3 × 3, which is 3 to the power 2.\nSo 81 is two factors of 3 times two more factors of 3, four factors in all.\nThe product rule says the same thing: log base 3 of 9 is 2, and 2 + 2 = 4. The log base 3 of 81 is 4."
+ },
+ "PC-6#7": {
+  "title": "Divide by ten until 1",
+  "text": "Go backwards from 1000, dividing by 10 each time and counting the steps.\n1000 ÷ 10 = 100.\n100 ÷ 10 = 10.\n10 ÷ 10 = 1.\nThree divisions bring 1000 down to 1, so 1000 holds three factors of 10 and its log is 3. This matches the three zeros you can see in the number."
+ },
+ "PC-6#8": {
+  "title": "Turn the logs back into powers",
+  "text": "Read each given value as an exponent on 10. Saying log 2 = 0.301 means 10 to the 0.301 is 2, and log 5 = 0.699 means 10 to the 0.699 is 5.\nMultiply the two: 2 × 5 = 10. Multiplying powers of 10 adds their exponents, so 10 equals 10 to the power 0.301 + 0.699, which is 10 to the power 1.\nThe exponent is 1, so log 10 = 1."
+ },
+ "PC-6#9": {
+  "title": "Jump using 32 × 32",
+  "text": "Count only the first five folds: 2, 4, 8, 16, 32. Five folds give 32 layers.\nFive more folds multiply the layers by 32 again, and 32 × 32 = 1024.\nSo 5 + 5 = 10 folds reach 1024 layers.\nSplitting the job into two equal halves saves writing all ten doublings."
+ },
+ "PC-6#10": {
+  "title": "Rewrite 8 as a power of 2",
+  "text": "Change the base of the inside number. Since 8 = 2 × 2 × 2, one 8 holds three factors of 2.\nThen 8³ is three 8s multiplied together, which holds 3 + 3 + 3 = 9 factors of 2.\nSo 8³ is 2 to the power 9, and the log base 2 of it is 9. No large multiplication is needed."
+ },
+ "PC-6#11": {
+  "title": "Write both as powers of ten",
+  "text": "Think of the shaking at magnitude 4 as 10 to the power 4 units, and at magnitude 7 as 10 to the power 7 units.\nThat is 10,000 against 10,000,000.\nDivide the larger by the smaller: 10,000,000 ÷ 10,000 = 1000.\nThe magnitude 7 quake is 1000 times stronger, the same as three steps of times 10."
+ },
+ "PC-6#12": {
+  "title": "Add ten per factor of ten",
+  "text": "Build the million one factor of 10 at a time. Each time the intensity is multiplied by 10, the log goes up by 1, so the loudness goes up by 10 decibels.\n10 times: 10 dB. 100 times: 20 dB. 1000 times: 30 dB. 10,000 times: 40 dB. 100,000 times: 50 dB. 1,000,000 times: 60 dB.\nThe concert is 60 decibels louder."
+ },
+ "PC-7#1": {
+  "title": "A table with no repeats",
+  "text": "List the powers of 3: 3, 9, 27, 81, 243. Every entry is bigger than the one before, so no value ever appears twice.\nIf someone tells you 3 to some power is 81, there is only one row it can be: the fourth.\nThat is all the same-base method does. It finds the one row of the table where the value sits."
+ },
+ "PC-7#2": {
+  "title": "A scale with three equal boxes",
+  "text": "Picture a balance scale. One side holds 3 identical boxes and the other side holds 96 marbles.\nThe scale stays level if you split each side into 3 equal piles and keep one pile from each: 1 box balances 32 marbles.\nThe box is 2^x. Only now can you ask what is inside it, and since 32 is five doublings from 1, x = 5."
+ },
+ "PC-7#3": {
+  "title": "Trap the answer between two powers",
+  "text": "See why a log is needed with 2^x = 10.\n2³ = 8 is too small and 2⁴ = 16 is too big, so x is between 3 and 4 and is not a whole number.\nNo list of doublings will land on 10. The log measures how far between: log 10 ÷ log 2 is about 3.32, a little past 3, which fits because 10 is a little past 8."
+ },
+ "PC-7#4": {
+  "title": "Try it in base ten",
+  "text": "Use a base where the answer is easy to see. Suppose the log base 10 of x is 2.\nA base 10 log counts zeros after the 1, so x must be 100. Written as a power, that is 10² = 100.\nThe same move works for any base: the base is raised to the number on the other side. For log base 4 of x = 3, that is 4 × 4 × 4 = 64."
+ },
+ "PC-7#5": {
+  "title": "Halve the right side",
+  "text": "Work on 32 instead of on the exponent. Divide by 2 until nothing but 1 is left.\n32, 16, 8, 4, 2, 1.\nThat is five divisions, so 32 is made of five factors of 2.\nThe left side 2^x is made of x factors of 2, so the two sides match only when x = 5."
+ },
+ "PC-7#6": {
+  "title": "Guess and check powers",
+  "text": "Try whole number exponents and watch the outputs.\n5² = 25, far too small.\n5³ = 125, still too small.\n5⁴ = 625, exactly right.\n5⁵ = 3125, too big.\nThe outputs only go up, so the single match is x = 4."
+ },
+ "PC-7#7": {
+  "title": "Test candidates in the log",
+  "text": "Try values of x and see which one gives a log of 3.\nx = 4 gives log base 4 of 4 = 1.\nx = 16 gives 2, because 4 × 4 = 16.\nx = 64 gives 3, because 4 × 4 × 4 = 64.\nEach time x is multiplied by 4, the log rises by 1, so x = 64 is the value that reaches 3."
+ },
+ "PC-7#8": {
+  "title": "Build a table of outputs",
+  "text": "Leave the equation alone and compute 3 · 2^x for several values of x.\nx = 3 gives 3 × 8 = 24.\nx = 4 gives 3 × 16 = 48.\nx = 5 gives 3 × 32 = 96.\nx = 6 gives 3 × 64 = 192.\nThe outputs double with each row and hit the target 96 exactly once, at x = 5."
+ },
+ "PC-7#9": {
+  "title": "List the balance by year",
+  "text": "Write the balance at each doubling instead of using a ratio.\nYear 0: 2000 dollars.\nYear 7: 4000 dollars.\nYear 14: 8000 dollars.\nYear 21: 16,000 dollars.\nThe target shows up in the fourth row, after three doublings, so the wait is 21 years."
+ },
+ "PC-7#10": {
+  "title": "Solve with exponents",
+  "text": "Write the rival price in month n as 5 · 2^(n − 1) and set it equal to 80.\nDivide both sides by 5: 2^(n − 1) = 16.\nSince 16 = 2⁴, the exponents match when n − 1 = 4.\nAdd 1 to get n = 5. The algebra agrees with the list: the plans match in month 5."
+ },
+ "PC-7#11": {
+  "title": "Fill in a clock table",
+  "text": "Track the dose every 4 hours.\nHour 0: 400 mg.\nHour 4: 200 mg.\nHour 8: 100 mg.\nHour 12: 50 mg.\nHour 16: 25 mg.\nThe table reaches 25 mg in the row for hour 16, so no division or powers of 2 are needed to see the answer is 16 hours."
+ },
+ "PC-7#12": {
+  "title": "Work backwards by halving",
+  "text": "Start from the target and halve, stepping 10 years back each time.\n10,000 people, then 5000 ten years earlier, then 2500 ten years before that, then 1250 another ten years back.\nThree halvings return to the starting size of 1250, so the town needs three doublings going forward. Three steps of 10 years make 30 years."
+ },
+ "PC-8#1": {
+  "title": "Stand in the corner",
+  "text": "Imagine standing in the corner of your chosen angle inside a triangular room.\nThe wall you face across the room is the opposite side. The two walls meeting at your corner both touch you: the slanted one facing the square corner is the hypotenuse, and the other is the adjacent side.\nWalk to the other sharp corner and the opposite and adjacent walls swap, but the hypotenuse stays put."
+ },
+ "PC-8#2": {
+  "title": "Three questions about a ramp",
+  "text": "Think of the angle as the tilt of a ramp.\nSine answers: for each metre along the ramp, how much do I rise?\nCosine answers: for each metre along the ramp, how far forward do I go?\nTangent answers: for each metre forward, how much do I rise? That is the slope.\nOn a 3-4-5 ramp these are 0.6, 0.8 and 0.75."
+ },
+ "PC-8#3": {
+  "title": "Check them with decimals",
+  "text": "Test each special triangle with the Pythagorean theorem.\n3-4-5: 9 + 16 = 25.\n45-45-90 with legs 1 and 1: the hypotenuse is about 1.414, and 1 + 1 = 2 matches 1.414².\n30-60-90 with hypotenuse 2 and short leg 1: the long leg is about 1.732, and 1 + 3 = 4 = 2².\nSo sin 30° = 1 ÷ 2 = 0.5 and tan 45° = 1 ÷ 1 = 1."
+ },
+ "PC-8#4": {
+  "title": "Look it up backwards",
+  "text": "Picture a table with angles on the left and sines on the right: 30° gives 0.5, 45° gives about 0.707, 60° gives about 0.866.\nSine reads the table left to right. Inverse sine reads the same table right to left: 0.5 gives 30°.\nFor a ratio between entries, such as 0.6, the angle is between 30° and 45°, and a calculator gives about 36.9°."
+ },
+ "PC-8#5": {
+  "title": "Test each side with Pythagoras",
+  "text": "Try each side as the hypotenuse and see which one makes the Pythagorean theorem work.\nIf 3 were the hypotenuse: 4² + 5² = 41, not 9.\nIf 4 were the hypotenuse: 3² + 5² = 34, not 16.\nIf 5 is the hypotenuse: 3² + 4² = 25, which equals 5².\nOnly 5 passes the test, so the hypotenuse is 5."
+ },
+ "PC-8#6": {
+  "title": "Scale to a hypotenuse of 1",
+  "text": "Shrink the triangle until the hypotenuse is 1 by dividing every side by 5.\nThe sides become 3 ÷ 5 = 0.6, 4 ÷ 5 = 0.8 and 5 ÷ 5 = 1.\nWith a hypotenuse of 1, the opposite side is the sine and the adjacent side is the cosine, with no more dividing to do.\nSo the sine is 0.6 and the cosine is 0.8."
+ },
+ "PC-8#7": {
+  "title": "Sine divided by cosine",
+  "text": "Find the tangent from the other two ratios.\nSine is opposite over hypotenuse: 6 ÷ 10 = 0.6.\nCosine is adjacent over hypotenuse: 8 ÷ 10 = 0.8.\nTangent equals sine divided by cosine, because the hypotenuse cancels: 0.6 ÷ 0.8 = 0.75.\nThis route uses the hypotenuse twice and still lands on 0.75."
+ },
+ "PC-8#8": {
+  "title": "Half of a square",
+  "text": "The wall, the ground and the ladder make half of a square. The ground piece and the wall piece are both 5 m, and they meet at a right angle, like two sides of a 5 by 5 square.\nThe ladder is the diagonal of that square.\nA diagonal splits the 90° corner of a square into two equal angles, so the ladder meets the ground at 90° ÷ 2 = 45°."
+ },
+ "PC-8#9": {
+  "title": "Double the triangle",
+  "text": "Flip a copy of the ramp triangle over the ground line and join the two.\nThe angle at the bottom of the ramp doubles to 60°, and the two slanted sides are both 10 ft, so the joined shape is an equilateral triangle with all sides 10 ft.\nIts third side is the height counted twice. So 2h = 10 and h = 5 ft."
+ },
+ "PC-8#10": {
+  "title": "Compare with a short stick",
+  "text": "Stand a 1 ft stick upright next to the tree. With the sun at 45°, the stick's shadow is as long as the stick is tall: 1 ft.\nThe tree and the stick are lit at the same angle, so they make similar triangles.\nThe tree's shadow is 20 times the stick's shadow, so the tree is 20 times the stick's height: 20 ft."
+ },
+ "PC-8#11": {
+  "title": "Check with Pythagoras and cosine",
+  "text": "Find the third side. The ground distance is √(40² − 20²) = √1200, about 34.6 m.\nNow use a different ratio: cosine is adjacent over hypotenuse, 34.6 ÷ 40, about 0.866.\nThe angle with cosine 0.866 is 30°.\nA second ratio built from a different side points to the same angle, so 30° is confirmed."
+ },
+ "PC-8#12": {
+  "title": "The two sharp angles share 90°",
+  "text": "Use the shortcut for right triangles. The right angle already uses 90° of the 180°, so the other two angles must add up to the remaining 90°.\nOne of them is 55°, so the other is 90° − 55° = 35°.\nA single subtraction does the job, and the check 55 + 35 = 90 takes one second."
+ },
+ "PC-9#1": {
+  "title": "Points that pass the test",
+  "text": "A point is on the unit circle when its distance from the centre is 1, which means across² + up² = 1.\n(1, 0) passes: 1 + 0 = 1.\n(0.6, 0.8) passes: 0.36 + 0.64 = 1.\n(0.5, 0.5) fails: 0.25 + 0.25 = 0.5, so it is inside the circle.\nEach point that passes belongs to exactly one direction from the centre, which is its angle."
+ },
+ "PC-9#2": {
+  "title": "Read them at the easy angles",
+  "text": "Check the idea at four angles where the tip is easy to find.\n0°: the tip is at (1, 0), so cosine is 1 and sine is 0.\n90°: the tip is at (0, 1), so cosine is 0 and sine is 1.\n180°: the tip is at (−1, 0), so cosine is −1 and sine is 0.\n270°: the tip is at (0, −1), so cosine is 0 and sine is −1."
+ },
+ "PC-9#3": {
+  "title": "Lay the radius along the rim",
+  "text": "Cut a piece of string as long as the radius and lay it along the rim. The angle it covers is 1 radian, about 57°.\nA little over three strings, 3.14 of them, reach halfway round, so a half turn is π radians. About 6.28 strings go all the way round.\nRadians count how many radius lengths you have walked along the edge."
+ },
+ "PC-9#4": {
+  "title": "A compass for signs",
+  "text": "Think of a map with the centre as home. East is positive across, west is negative across, north is positive up, south is negative up.\nHeading northeast, both are positive. Northwest: across negative, up positive. Southwest: both negative. Southeast: across positive, up negative.\nFor example, 200° points southwest, so cosine and sine are both negative there."
+ },
+ "PC-9#5": {
+  "title": "Squash a triangle flat",
+  "text": "Picture a right triangle with hypotenuse 1 and a very small angle, such as 1°. Its opposite side is tiny, about 0.017, and its adjacent side is almost the full 1.\nShrink the angle to 0° and the triangle goes flat: the opposite side becomes 0 and the adjacent side lies on top of the hypotenuse, length 1.\nSo sin 0° = 0 and cos 0° = 1."
+ },
+ "PC-9#6": {
+  "title": "Use the circle equation",
+  "text": "Every point on the unit circle satisfies across² + up² = 1.\nAt 90° the hand points straight along the y-axis, and every point on the y-axis has across = 0.\nSo 0² + up² = 1, which makes up equal to 1 or −1. The hand points up, not down, so up = 1.\nThat gives cosine 0 and sine 1."
+ },
+ "PC-9#7": {
+  "title": "A quarter of the face",
+  "text": "Look at the clock face as four equal quarters, marked by the 12, the 3, the 6 and the 9.\nMoving from the 12 to the 3 covers exactly one of those quarters.\nA whole turn is 360°, so a quarter turn is 360° ÷ 4 = 90°.\nYou can see it too: a hand at 12 and a hand at 3 make a square corner."
+ },
+ "PC-9#8": {
+  "title": "Use a fraction of a full turn",
+  "text": "A full turn is 2π radians, so find what fraction of a full turn π/3 is.\n(π/3) ÷ (2π) = 1/6, so the angle is one sixth of a full turn.\nIn degrees a full turn is 360°, and one sixth of 360° is 60°.\nThe fraction of a turn is the same in both units, so π/3 radians is 60°."
+ },
+ "PC-9#9": {
+  "title": "Add up four quarter turns",
+  "text": "Build the full turn from quarter turns. A quarter turn is 90°, and since 180° is π radians, 90° is π/2 radians.\nA full turn is four quarter turns: 4 × π/2 = 2π radians.\nAs a decimal that is about 6.28, which means the valve travels a little more than 6 radius lengths around the rim in one roll."
+ },
+ "PC-9#10": {
+  "title": "Picture the wheel",
+  "text": "Skip the sine and follow the seat. It starts at the far right, level with the centre, so it is 20 m up.\nA 90° turn is a quarter of the way round, which carries the seat from the far right to the very top.\nThe top of a wheel is one radius above the centre: 20 + 15 = 35 m."
+ },
+ "PC-9#11": {
+  "title": "Mirror across the x-axis",
+  "text": "Use the unit circle. Mark the tip at 30° above the x-axis and the tip at 30° below it. They are mirror images, so the line joining them is vertical and has length 2 × sin 30°.\nThe two hands and that line form a triangle with a 60° angle between two sides of length 1, which makes it equilateral.\nSo the vertical side is 1, and sin 30° = 1 ÷ 2."
+ },
+ "PC-9#12": {
+  "title": "Count through the quadrants",
+  "text": "Count forward through the quadrant boundaries: 0° to 90° is Quadrant 1, 90° to 180° is Quadrant 2, 180° to 270° is Quadrant 3, and 270° to 360° is Quadrant 4.\n300° is past 270° and short of 360°, so it is in Quadrant 4.\nThat corner is right of centre and below it, so cosine is positive and sine is negative."
+ },
+ "PC-10#1": {
+  "title": "A table that repeats",
+  "text": "Write the sine at every 90°: 0° gives 0, 90° gives 1, 180° gives 0, 270° gives −1, 360° gives 0.\nKeep going: 450° gives 1, 540° gives 0, 630° gives −1, 720° gives 0.\nThe list 0, 1, 0, −1 repeats without end. Plot those values and join them smoothly, and the repeating list becomes the repeating wave."
+ },
+ "PC-10#2": {
+  "title": "Swings and volume knobs",
+  "text": "Think of a playground swing. Its resting position is the middle, and the amplitude is how far it travels from rest to its highest point on one side.\nA harder push gives a bigger swing, but each back and forth still takes the same time.\nNumbers: a wave that peaks at 9 and bottoms out at 1 has amplitude (9 − 1) ÷ 2 = 4."
+ },
+ "PC-10#3": {
+  "title": "Daily temperature",
+  "text": "Suppose the temperature over a day rises to 30 degrees in the afternoon and falls to 20 degrees at night, in a smooth wave.\nThe level it wiggles around is halfway between: (30 + 20) ÷ 2 = 25 degrees.\nThat 25 is the midline. A model for it would end in + 25, and the wave spends equal time above and below that level."
+ },
+ "PC-10#4": {
+  "title": "Count waves, then start late",
+  "text": "Period with numbers: for y = sin(3x), the inside reaches 360° when x is only 120°, so three full waves fit between 0° and 360° and each is 120° wide. Check: 360° ÷ 3 = 120°.\nPhase shift as a story: a tide that normally starts rising at noon but runs 2 hours late does everything 2 hours later. In the same way, y = sin(x − 30°) starts rising at 30° instead of 0°."
+ },
+ "PC-10#5": {
+  "title": "Compare two tables",
+  "text": "Evaluate both waves at the same angles.\nsin(x) at 0°, 90°, 180°, 270° gives 0, 1, 0, −1.\n4 sin(x) at those angles gives 0, 4, 0, −4.\nEach height is 4 times as far from the middle. The farthest the new wave gets from its middle level of 0 is 4, so the amplitude is 4."
+ },
+ "PC-10#6": {
+  "title": "Read it from a table",
+  "text": "Evaluate y = sin(x) + 7 at the quarter turns.\n0° gives 7, 90° gives 8, 180° gives 7, 270° gives 6, 360° gives 7.\nThe values go 7, 8, 7, 6, 7. The wave keeps coming back to 7 and moves 1 above and 1 below it.\nThe level it returns to is the midline, y = 7."
+ },
+ "PC-10#7": {
+  "title": "Plug in the extreme sine values",
+  "text": "The sine part can only run from −1 to 1, so test the two ends directly.\nWhen sin(x) = 1, which happens at 90°: h = 18 × 1 + 22 = 40 m.\nWhen sin(x) = −1, which happens at 270°: h = 18 × (−1) + 22 = 4 m.\nNo other value of sine is larger or smaller, so the seat stays between 4 m and 40 m."
+ },
+ "PC-10#8": {
+  "title": "Count waves in a table",
+  "text": "Evaluate y = sin(2x) every 45°.\n0° gives sin 0° = 0.\n45° gives sin 90° = 1.\n90° gives sin 180° = 0.\n135° gives sin 270° = −1.\n180° gives sin 360° = 0.\nThe values 0, 1, 0, −1, 0 are one complete wave, and it finished at x = 180°. So the period is 180°, half of the usual 360°."
+ },
+ "PC-10#9": {
+  "title": "Follow the inside to 360",
+  "text": "A sine wave finishes one cycle when its inside reaches 360°. Here the inside is 6x.\nSolve 6x = 360 to get x = 60.\nCheck with values: at x = 15° the inside is 90° and y = 3, the peak. At x = 45° the inside is 270° and y = −3, the trough. At x = 60° the trace is back at 0 and rising, so one beat is 60° wide."
+ },
+ "PC-10#10": {
+  "title": "Solve two small equations",
+  "text": "Write what the extremes mean. High tide is midline plus amplitude: k + A = 9. Low tide is midline minus amplitude: k − A = 3.\nAdd the two equations: 2k = 12, so k = 6.\nSubtract them: 2A = 6, so A = 3.\nThe same numbers come out as from averaging, this time by algebra: amplitude 3 and midline 6."
+ },
+ "PC-10#11": {
+  "title": "Track the peak in a table",
+  "text": "Find where the new wave peaks. Plain sine peaks at 90°, where its value is 1.\nTry y = sin(x − 30°) at a few inputs: x = 90° gives sin 60°, about 0.87. x = 120° gives sin 90° = 1. x = 150° gives sin 120°, about 0.87.\nThe peak has moved from 90° to 120°, which is 30° to the right."
+ },
+ "PC-11#1": {
+  "title": "Use the distance formula",
+  "text": "The distance from the centre (0, 0) to a point (x, y) is √(x² + y²).\nEvery point on the unit circle is exactly 1 away from the centre, so x² + y² = 1.\nThe point for angle θ is called (cos θ, sin θ). Swap those names in and you get cos²θ + sin²θ = 1.\nA concrete case: the point (0.6, 0.8) gives 0.36 + 0.64 = 1."
+ },
+ "PC-11#2": {
+  "title": "A pie cut in two",
+  "text": "Think of the number 1 as a whole pie cut into two slices, a sin² slice and a cos² slice.\nIf the sin² slice is 0.3 of the pie, the cos² slice has to be 0.7. If the sin² slice grows to 0.9, the cos² slice shrinks to 0.1.\nKnowing one slice always tells you the other: it is whatever is left of the pie."
+ },
+ "PC-11#3": {
+  "title": "Go back to the triangle",
+  "text": "Use SOH-CAH-TOA on any right triangle. Sine is opposite ÷ hypotenuse and cosine is adjacent ÷ hypotenuse.\nDivide sine by cosine and the hypotenuse cancels, leaving opposite ÷ adjacent, which is tangent.\nNumbers: in a 3-4-5 triangle, sine is 0.6 and cosine is 0.8, and 0.6 ÷ 0.8 = 0.75, the same as 3 ÷ 4."
+ },
+ "PC-11#4": {
+  "title": "Look at a table of values",
+  "text": "List the sine every 30° through half a turn: 0° gives 0, 30° gives 0.5, 60° gives about 0.87, 90° gives 1, 120° gives about 0.87, 150° gives 0.5, 180° gives 0.\nThe list reads the same forwards and backwards. Each value except the peak appears twice, at angles that add to 180°, such as 30° and 150°, or 60° and 120°."
+ },
+ "PC-11#5": {
+  "title": "Check with a 3-4-5 triangle",
+  "text": "Use an angle from a triangle instead of the unit circle. In a 3-4-5 right triangle, the angle opposite the 3 has sine 3/5 and cosine 4/5.\nSquare them: 9/25 and 16/25.\nAdd: 9/25 + 16/25 = 25/25 = 1.\nThe total is 1 because 9 + 16 = 25, which is just the Pythagorean theorem for this triangle."
+ },
+ "PC-11#6": {
+  "title": "Spot the 3-4-5 triangle",
+  "text": "A cosine of 0.6 is 3/5, so picture a right triangle with adjacent side 3 and hypotenuse 5.\nThe missing side satisfies 3² + opposite² = 5², so opposite² = 25 − 9 = 16 and the opposite side is 4.\nSine is opposite over hypotenuse: 4 ÷ 5 = 0.8.\nThe triangle gives the same positive value without subtracting decimals."
+ },
+ "PC-11#7": {
+  "title": "Find the point on the circle",
+  "text": "The facing direction is a point on the unit circle with across value 0.6. Points on that circle satisfy across² + up² = 1.\nTwo points have across 0.6: (0.6, 0.8) above the axis and (0.6, −0.8) below it. Check: 0.36 + 0.64 = 1 for both.\nQuadrant 1 is the upper right, so the sprite uses the upper point and sin θ = 0.8."
+ },
+ "PC-11#8": {
+  "title": "Test it with an angle",
+  "text": "Check the simplified form with a real angle, θ = 60°.\nsin 60° is about 0.866, so sin² is 0.75 and the top is 1 − 0.75 = 0.25.\ncos 60° is 0.5, so the fraction is 0.25 ÷ 0.5 = 0.5.\nThe result 0.5 is exactly cos 60°, which agrees with the answer cos θ. One more test, θ = 0°: (1 − 0) ÷ 1 = 1 = cos 0°."
+ },
+ "PC-11#9": {
+  "title": "Use a triangle with equal legs",
+  "text": "Draw a right triangle with a 45° angle. Its other sharp angle is 90° − 45° = 45° too, so the two legs are equal. Call each leg 1.\nTangent is opposite over adjacent, which is 1 ÷ 1 = 1.\nThe legs could be 5 and 5 or 12 and 12 and the ratio would still be 1, so tan 45° = 1 exactly."
+ },
+ "PC-11#10": {
+  "title": "Use a 30-60-90 triangle",
+  "text": "A height of 0.5 on a circle of radius 1 makes a right triangle whose opposite side is half its hypotenuse. That is the 30-60-90 triangle, so the angle at the centre is 30°.\nThe triangle can lean to the right, giving θ = 30°, or lean to the left, where its 30° is measured back from 180°, giving θ = 180° − 30° = 150°."
+ },
+ "PC-11#11": {
+  "title": "Test angles in a table",
+  "text": "List the sine every 30°: 0° gives 0, 30° gives 0.5, 60° gives 0.87, 90° gives 1, 120° gives 0.87, 150° gives 0.5, 180° gives 0.\nFrom 210° to 330° every sine is negative, so none of those can equal 0.5.\nThe value 0.5 appears in the table exactly twice, at 30° and at 150°."
+ },
+ "PC-11#12": {
+  "title": "Draw a line across the circle",
+  "text": "Draw the unit circle and a horizontal line at height 0.5. The line cuts the circle at two points, one on the right and one on the left, at the same height.\nBy the circle equation their across values are √(1 − 0.25), about 0.87 and −0.87.\nThe right point is at 30°. The left point is its mirror image, 30° short of 180°, which is 150°."
+ },
+ "PC-12#1": {
+  "title": "A crooked triangle in the wild",
+  "text": "Picture surveying a triangular field with sides 50 m and 70 m meeting at 80°. There is no square corner, so SOH-CAH-TOA has nothing to hold on to.\nYou could still measure the third side with a tape. The two laws let you calculate it instead, about 79 m, and they give the same result a tape would for any triangle you can draw."
+ },
+ "PC-12#2": {
+  "title": "Test it on a known triangle",
+  "text": "Check the law on a 30-60-90 triangle with sides 1, √3 and 2.\nSide 1 faces 30°: 1 ÷ 0.5 = 2.\nSide √3, about 1.732, faces 60°: 1.732 ÷ 0.866 = 2.\nSide 2 faces 90°: 2 ÷ 1 = 2.\nAll three partners give the same number, 2. If you know that number from one pair, you can find any other side or angle."
+ },
+ "PC-12#3": {
+  "title": "A door swinging open",
+  "text": "Hold two sticks of fixed lengths joined at a hinge, like a door and its frame. The distance between the free ends is side c.\nClose the hinge and the ends nearly touch. Open it to 90° and Pythagoras gives the gap. Open it wider and the gap keeps growing.\nThe term −2ab × cos C is the dial that tracks the hinge: it subtracts when the angle is narrow and adds when it is wide."
+ },
+ "PC-12#4": {
+  "title": "Sort four example triangles",
+  "text": "Try sorting.\nAngles 40° and 60° with a side of 9 facing the 40°: a side and its facing angle are both known, so use the Law of Sines.\nSides 6 and 9 with 50° between them: no facing pair, so use the Law of Cosines.\nSides 4, 5 and 6: no angles at all, so Law of Cosines.\nSides 7 and 10 with an angle facing the 10: a pair again, so Law of Sines."
+ },
+ "PC-12#5": {
+  "title": "Use SOH-CAH-TOA",
+  "text": "Angle B is 90°, so this is a right triangle and the side facing B, length 10, is the hypotenuse.\nSide a is opposite the 30° angle, so sine applies: sin 30° = a ÷ 10.\nSince sin 30° = 0.5, a = 10 × 0.5 = 5.\nThe Law of Sines gives the same answer because, for a right triangle, it turns into SOH."
+ },
+ "PC-12#6": {
+  "title": "Drop a height",
+  "text": "Split the triangle into two right triangles. From the far end of the side of 3, drop a perpendicular onto the side of 8.\nIts foot is 3 × cos 60° = 1.5 from the corner, and its height is 3 × sin 60°, about 2.6, so height² = 6.75.\nThe rest of the base is 8 − 1.5 = 6.5.\nPythagoras: c² = 6.5² + 6.75 = 42.25 + 6.75 = 49, so c = 7."
+ },
+ "PC-12#7": {
+  "title": "It is a right triangle",
+  "text": "The angle at the drone is 90°, so the 100 m line between the friends is the hypotenuse of a right triangle.\nThe side from B to the drone touches B's 60° angle, so it is adjacent to it: cos 60° = distance ÷ 100.\nSince cos 60° = 0.5, the distance is 100 × 0.5 = 50 m. No Law of Sines is needed when a right angle appears."
+ },
+ "PC-12#8": {
+  "title": "Plot it on a grid",
+  "text": "Put the turning point at (0, 0) and the start at (5, 0). The second leg leaves the turning point at 120° from the first, so it ends at (16 × cos 120°, 16 × sin 120°) = (−8, about 13.86).\nFrom start to finish the boat is 5 + 8 = 13 across and 13.86 up.\nDistance² = 13² + 13.86² = 169 + 192 = 361, so the distance is 19 km."
+ },
+ "PC-12#9": {
+  "title": "Shrink it to 3 and 8",
+  "text": "Divide both paths by 10 to get a small triangle with sides 3 and 8 and the same 60° corner.\nFor the small triangle: c² = 9 + 64 − 2 × 3 × 8 × 0.5 = 73 − 24 = 49, so c = 7.\nScale back up by 10: the far ends are 7 × 10 = 70 m apart.\nSame shape, smaller numbers, same answer."
+ },
+ "PC-12#10": {
+  "title": "Check by running it forward",
+  "text": "Test the answer by starting from the angle. Take sides 3 and 5 with 120° between them and compute the third side.\nc² = 9 + 25 − 2 × 3 × 5 × cos 120° = 34 − 30 × (−0.5) = 34 + 15 = 49.\nSo c = 7, which is exactly the third side given. Only one angle between 0° and 180° can produce this, so the corner facing 7 is 120°."
+ },
+ "PC-12#11": {
+  "title": "Use coordinates",
+  "text": "Put the corner at (0, 0) and the end of the 90 ft edge at (90, 0). The 150 ft edge points at 120°, so its end is at (150 × cos 120°, 150 × sin 120°) = (−75, about 129.9).\nThe ends are 90 + 75 = 165 apart across and 129.9 apart up.\nDistance² = 165² + 129.9² = 27,225 + 16,875 = 44,100, and √44,100 = 210 ft."
+ },
+ "PC-12#12": {
+  "title": "Compare with sharp and wide",
+  "text": "See what other long sides would mean for the legs 5 and 12, where 25 + 144 = 169.\nIf the long side were 12.5, its square is 156.25, less than 169, and the corner would be sharp.\nIf it were 14, its square is 196, more than 169, and the corner would be wide.\nAt 13 the square is exactly 169, the balance point, so the corner is exactly 90°."
+ },
+ "PC-13#1": {
+  "title": "Positions and values",
+  "text": "Think of a sequence as a table with a position column and a value column: position 1 holds 3, position 2 holds 7, position 3 holds 11, position 4 holds 15.\nA rule connects the columns. Here each value is 4 times its position, minus 1, so position 100 holds 4 × 100 − 1 = 399.\nShuffle the list to 7, 15, 3, 11 and that rule no longer fits, so it is a different sequence."
+ },
+ "PC-13#2": {
+  "title": "Points on a line",
+  "text": "Plot the terms 3, 7, 11, 15 as points: (1, 3), (2, 7), (3, 11), (4, 15). They lie on a straight line that rises 4 for each step right.\nAn arithmetic sequence is a line sampled at whole numbers, and d is its slope.\nThe line here is y = 4x − 1, which is the same as 3 + (x − 1) × 4, so the formula is just the equation of that line."
+ },
+ "PC-13#3": {
+  "title": "Folding paper",
+  "text": "Fold a sheet of paper in half again and again. The layers go 1, 2, 4, 8, 16: each fold multiplies by 2, so this is geometric with r = 2.\nAfter 10 folds there are 1 × 2¹⁰ = 1024 layers.\nCompare with stacking one extra sheet each time, which gives 1, 2, 3, 4, 5 and only 11 sheets after ten steps."
+ },
+ "PC-13#4": {
+  "title": "Average times count",
+  "text": "Another way to see the shortcut: replace every term by the average.\nFor 2, 4, 6, 8, 10 the average is the middle value, 6, which is also (2 + 10) ÷ 2.\nFive terms that average 6 add to 5 × 6 = 30, and adding directly gives 2 + 4 + 6 + 8 + 10 = 30.\nSo the sum is the number of terms times the average of the first and last."
+ },
+ "PC-13#5": {
+  "title": "Find a formula for position",
+  "text": "Compare each term with its position. Positions 1, 2, 3, 4 hold 3, 7, 11, 15.\nFour times the position gives 4, 8, 12, 16, and each term is 1 less than that.\nSo term n is 4n − 1.\nFor position 5: 4 × 5 − 1 = 19. The formula reaches the next term without looking at the term before it."
+ },
+ "PC-13#6": {
+  "title": "Factor each term",
+  "text": "Break each term into prime factors and look at what changes.\n2 = 2.\n6 = 2 × 3.\n18 = 2 × 3 × 3.\n54 = 2 × 3 × 3 × 3.\nEach term keeps the single 2 and picks up one more 3 than the term before. The next term has four 3s: 2 × 81 = 162."
+ },
+ "PC-13#7": {
+  "title": "Count extra seats past row 1",
+  "text": "Think of every row as row 1 plus some extra seats.\nRow 2 has 3 extra, row 3 has 6 extra, row 4 has 9 extra. The extras are 3 times the number of rows you have moved back.\nRow 20 is 19 rows behind row 1, so it has 19 × 3 = 57 extra seats.\n12 + 57 = 69 seats."
+ },
+ "PC-13#8": {
+  "title": "Average times count",
+  "text": "Find the average of the numbers and multiply by how many there are.\nThe numbers 1 to 100 are evenly spaced, so their average is halfway between the ends: (1 + 100) ÷ 2 = 50.5.\nOne hundred numbers that average 50.5 add up to 100 × 50.5 = 5050.\nThis is Gauss's pairing seen another way: each pair of 101 averages 50.5."
+ },
+ "PC-13#9": {
+  "title": "Add rows in blocks of ten",
+  "text": "Split the pyramid into its bottom ten rows and top ten rows.\nThe top ten rows are 1 + 2 + … + 10 = 55 cans.\nEach of the bottom ten rows, 11 to 20, is 10 more than a matching top row, so they hold 55 + 10 × 10 = 155 cans.\nTogether: 55 + 155 = 210 cans."
+ },
+ "PC-13#10": {
+  "title": "Factor out the 5",
+  "text": "Every weekly amount is a multiple of 5: the list is 5 × 1, 5 × 2, 5 × 3, up to 5 × 12.\nSo the total is 5 × (1 + 2 + … + 12).\nThe sum of 1 to 12 is 12 × 13 ÷ 2 = 78.\n5 × 78 = 390 dollars. This route never needs the amount saved in week 12."
+ },
+ "PC-13#11": {
+  "title": "Work backwards from row 20",
+  "text": "Check the answer by walking from row 20 back to the front.\nIf row 20 has 69 seats, each row forward has 3 fewer: 66, 63, 60, and so on.\nGoing from row 20 to row 1 is 19 steps, which removes 19 × 3 = 57 seats.\n69 − 57 = 12, which is exactly the size of row 1, so 69 seats is correct."
+ },
+ "PC-13#12": {
+  "title": "Pair the rows instead",
+  "text": "Leave the single pyramid alone and pair its own rows.\nBottom row with top row: 20 + 1 = 21. Next pair: 19 + 2 = 21. Then 18 + 3 = 21, and so on.\nTwenty rows make 10 pairs, each holding 21 cans.\n10 × 21 = 210 cans, the same as half of the 420 can rectangle."
+ },
+ "PC-14#1": {
+  "title": "A table of approach",
+  "text": "Take f(x) = x² and let x approach 3.\nFrom below: 2.9 gives 8.41, 2.99 gives 8.9401, 2.999 gives 8.994001.\nFrom above: 3.1 gives 9.61, 3.01 gives 9.0601.\nThe outputs close in on 9 from both sides, so the limit is 9. You would say the same thing even if someone erased the single point at x = 3 from the graph."
+ },
+ "PC-14#2": {
+  "title": "Trace it with a pencil",
+  "text": "Picture drawing the graph without lifting your pencil. If you can trace through x = 2 in one stroke, the pencil is heading for exactly the point it is about to draw.\nFor y = x² near x = 2, the pencil passes heights 3.61 at 1.9 and 3.9601 at 1.99 and arrives at 4, which is 2².\nNo lift means no surprise, so plugging in is enough."
+ },
+ "PC-14#3": {
+  "title": "Watch the numbers near the hole",
+  "text": "Try (x² − 4) ÷ (x − 2) near x = 2 with a calculator.\nx = 1.9 gives −0.39 ÷ −0.1 = 3.9.\nx = 1.99 gives 3.99.\nx = 2.01 gives 4.01.\nx = 2.1 gives 0.41 ÷ 0.1 = 4.1.\nAt x = 2 itself the calculator shows an error, yet every neighbor points at 4. The 0 ÷ 0 marks a missing dot at height 4, not a missing answer."
+ },
+ "PC-14#4": {
+  "title": "Shrink the window with numbers",
+  "text": "A ball's distance is d = 5t² metres. Find its speed at t = 1 by shrinking the time window.\nFrom t = 1 to 2: (20 − 5) ÷ 1 = 15 m/s.\nFrom 1 to 1.1: (6.05 − 5) ÷ 0.1 = 10.5 m/s.\nFrom 1 to 1.01: (5.1005 − 5) ÷ 0.01 = 10.05 m/s.\nThe averages settle toward 10 m/s, the speed at that instant."
+ },
+ "PC-14#5": {
+  "title": "Sneak up with a table",
+  "text": "Ignore the shortcut and watch the outputs.\nFrom below: x = 1.9 gives 6.7, x = 1.99 gives 6.97, x = 1.999 gives 6.997.\nFrom above: x = 2.1 gives 7.3, x = 2.01 gives 7.03, x = 2.001 gives 7.003.\nEach output is 3 times as far from 7 as x is from 2, so as x closes in on 2 the outputs close in on 7."
+ },
+ "PC-14#6": {
+  "title": "Spot the rule behind the table",
+  "text": "Look for a pattern in the four readings: 1.9 gives 3.9, 1.99 gives 3.99, 2.01 gives 4.01, 2.1 gives 4.1.\nEvery output is its input plus 2. So away from x = 2 the function behaves like x + 2, a straight line with one point removed.\nThat line passes through height 2 + 2 = 4 at the gap, so the limit is 4."
+ },
+ "PC-14#7": {
+  "title": "Sneak up with a table",
+  "text": "Leave the algebra and compute the fraction at inputs close to 3.\nx = 2.9: (8.41 − 9) ÷ (−0.1) = 5.9.\nx = 2.99: (8.9401 − 9) ÷ (−0.01) = 5.99.\nx = 3.01: (9.0601 − 9) ÷ 0.01 = 6.01.\nx = 3.1: (9.61 − 9) ÷ 0.1 = 6.1.\nBoth sides squeeze toward 6, the same value the cancelling gave, even though x = 3 itself cannot be used."
+ },
+ "PC-14#8": {
+  "title": "Read it as a slope",
+  "text": "Plot the car's readings as points: (1, 30) and (3, 150). The line through them rises 120 km over a run of 2 hours, a slope of 60, so the average speed is 60 km/h.\nCheck by running forward: 30 + 60 × 2 = 150.\nFor the runner, the points (15, 100) and (75, 400) give slope 300 ÷ 60 = 5 m/s, and 100 + 5 × 60 = 400."
+ },
+ "PC-14#9": {
+  "title": "Factor instead of a table",
+  "text": "The average rate from 3 to x is (x² − 9) ÷ (x − 3). Factor the top as (x − 3)(x + 3) and cancel, which leaves x + 3 for any x other than 3.\nSo the rates are 3.1 + 3 = 6.1, then 3.01 + 3 = 6.01, then 3.001 + 3 = 6.001.\nAs x slides to 3, x + 3 slides to 6."
+ },
+ "PC-14#10": {
+  "title": "Use a table of steps",
+  "text": "Pick actual step sizes and compute the average rate for each.\nh = 1: (16 − 9) ÷ 1 = 7.\nh = 0.5: (12.25 − 9) ÷ 0.5 = 6.5.\nh = 0.1: (9.61 − 9) ÷ 0.1 = 6.1.\nh = 0.01: (9.0601 − 9) ÷ 0.01 = 6.01.\nEach result is 6 plus the step, so as the step shrinks to nothing the rate settles at 6."
+ },
+ "PC-14#11": {
+  "title": "Ask how close it gets",
+  "text": "Measure the gap between the temperature and 18. The gap is exactly 6 ÷ t.\nTo be within 1 degree of 18 you need t past 6 hours. Within 0.1 degree, past 60 hours. Within 0.01 degree, past 600 hours.\nAny closeness you name is reached by waiting long enough, and the gap never turns negative. That is what it means for the limit to be 18 degrees."
  }
 }

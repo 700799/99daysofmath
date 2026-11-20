@@ -32,17 +32,19 @@
   ],
   "alternativeExplanations": [
     {
-      "title": "From the highest and lowest points",
+      "title": "From highest and lowest points",
       "steps": [
-        "Plain sin(x) rides between −1 and 1. Multiplying by 4 stretches it to between −4 and 4.",
-        "Amplitude is HALF the gap: (4 − (−4)) ÷ 2 = 8 ÷ 2 = 4."
+        "The plain wave $\\sin(x)$ moves between $-1$ and $1$, so multiplying by $4$ makes it move between $-4$ and $4$.",
+        "Amplitude is half the distance from the lowest point to the highest point.",
+        "That distance is $4 - (-4) = 8$, and half of $8$ is $4$, so the amplitude is $4$."
       ]
     },
     {
       "title": "The jump-rope picture",
       "steps": [
-        "Imagine a jump rope shaken up and down. The middle of the rope is the midline.",
-        "The amplitude is how far your hand lifts the rope above that middle — here, 4 units."
+        "Picture a jump rope being shaken up and down, with its resting position as the midline.",
+        "The amplitude is how far the rope rises above that resting position at the top of a swing.",
+        "For $y = 4\\sin(x)$ the top of the swing is at $y = 4$ and the rest position is $y = 0$, so the amplitude is $4$."
       ]
     }
   ],

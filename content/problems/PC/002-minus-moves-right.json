@@ -34,9 +34,9 @@
     {
       "title": "Ask where the bottom lands",
       "steps": [
-        "The bottom of a parabola happens where the squared part equals $0$.",
-        "For $y = (x - 6)^2$ that needs $x - 6 = 0$, so $x = 6$.",
-        "The bottom moved from $x = 0$ to $x = 6$ — that is 6 units to the RIGHT."
+        "The lowest point of a parabola is where the squared part equals $0$, because a square can never be less than $0$.",
+        "For $y = (x - 6)^2$ the squared part is zero when $x - 6 = 0$, which means $x = 6$.",
+        "The bottom moved from $x = 0$ to $x = 6$, so the whole graph slid $6$ units to the RIGHT."
       ]
     }
   ],

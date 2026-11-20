@@ -39,9 +39,9 @@
     {
       "title": "Guess and check forward",
       "steps": [
-        "Try $\\$100$: $0.8 \\times 100 = 80$ euros.",
-        "Then $150 \\times 80 = 12000$ yen — exactly the amount your friend has.",
-        "So the starting amount was $\\$100$."
+        "Pick a round starting amount and run it forward: $100$ dollars becomes $0.8 \\times 100 = 80$ euros.",
+        "Send those euros through the second machine: $150 \\times 80 = 12000$ yen, which is exactly what the friend has.",
+        "The guess landed on the target with nothing left to adjust, so the starting amount was $100$ dollars."
       ]
     }
   ],

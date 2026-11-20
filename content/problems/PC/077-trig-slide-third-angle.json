@@ -34,17 +34,17 @@
     {
       "title": "Subtract from 180 all at once",
       "steps": [
-        "Add what you know: $90 + 55 = 145$.",
-        "Subtract from the total: $180 - 145 = 35$.",
-        "The third angle is $35^\\circ$."
+        "Add the two angles you already know: $90 + 55 = 145$ degrees.",
+        "All three angles of a triangle total $180^\\circ$, so take the known part away: $180 - 145 = 35$.",
+        "The third angle of the slide triangle is $35^\\circ$."
       ]
     },
     {
       "title": "Picture the slide tipping",
       "steps": [
-        "A very steep slide meets the ground near $90^\\circ$ and leaves almost nothing at the top.",
-        "A gentle slide meets the ground near $0^\\circ$ and leaves almost $90^\\circ$ at the top.",
-        "At $55^\\circ$ the leftover is $90 - 55 = 35^\\circ$."
+        "A very steep slide meets the ground at nearly $90^\\circ$ and leaves almost no angle at the top.",
+        "A very flat slide meets the ground at nearly $0^\\circ$ and leaves almost $90^\\circ$ at the top, so the two angles always share $90^\\circ$.",
+        "When the ground angle is $55^\\circ$, the top angle gets the rest, $90 - 55 = 35$ degrees."
       ]
     }
   ],

@@ -32,11 +32,11 @@
   ],
   "alternativeExplanations": [
     {
-      "title": "Use a power you already know",
+      "title": "Double in two chunks",
       "steps": [
-        "You may remember $2^{10} = 1024$ from computers — a kilobyte.",
-        "That instantly answers $2^x = 1024$.",
-        "So $x = 10$ folds."
+        "Count the first five folds by hand: $2, 4, 8, 16, 32$, so five folds make $32$ layers.",
+        "Five more folds multiply by $32$ again, and $32 \\times 32 = 1024$.",
+        "That is $5 + 5 = 10$ folds in total, which matches the known fact $2^{10} = 1024$."
       ]
     }
   ],

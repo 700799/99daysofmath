@@ -34,17 +34,17 @@
     {
       "title": "Cut a triangle in half",
       "steps": [
-        "Take an equilateral triangle with all sides $12$ and slice it straight down the middle.",
-        "Each half is a $30$-$60$-$90$ triangle, and the bottom edge of $12$ got cut into two $6$s.",
-        "That $6$ is the short leg."
+        "Start with an equilateral triangle whose sides are all $12$, and slice it straight down the middle.",
+        "Each half is a $30$-$60$-$90$ triangle with hypotenuse $12$, and the bottom edge of $12$ is cut into two equal parts.",
+        "Each part is $12 \\div 2 = 6$, and that part is the leg opposite the $30^\\circ$ angle, so the short leg is $6$."
       ]
     },
     {
       "title": "Use the memorized ratio",
       "steps": [
-        "A $30$-$60$-$90$ triangle has sides in the ratio $1 : \\sqrt{3} : 2$.",
-        "The hypotenuse matches the $2$, so $2$ parts $= 12$ and $1$ part $= 6$.",
-        "The short leg is $1$ part, so it is $6$."
+        "The sides of every $30$-$60$-$90$ triangle are in the ratio $1 : \\sqrt{3} : 2$, from shortest to longest.",
+        "The hypotenuse matches the $2$, so two parts equal $12$ and one part equals $6$.",
+        "The short leg is one part, so its length is $6$."
       ]
     }
   ],

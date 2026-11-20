@@ -32,19 +32,19 @@
   ],
   "alternativeExplanations": [
     {
-      "title": "Arithmetic or geometric? A quick test",
+      "title": "Subtract, then divide",
       "steps": [
-        "Subtract first: 6 − 2 = 4 but 18 − 6 = 12. The gaps disagree, so it is NOT arithmetic.",
-        "Now divide: 6 ÷ 2 = 3 and 18 ÷ 6 = 3. The ratios agree, so it IS geometric.",
-        "Once the ratio is 3, the next term is 54 × 3 = 162."
+        "Test for a common difference first: $6 - 2 = 4$ but $18 - 6 = 12$, so the gaps do not match.",
+        "Test for a common ratio next: $6 \\div 2 = 3$, $18 \\div 6 = 3$ and $54 \\div 18 = 3$, so the ratios do match.",
+        "The sequence multiplies by $3$ each time, so the next term is $54 \\times 3 = 162$."
       ]
     },
     {
-      "title": "Write each term as powers of 3",
+      "title": "Write terms as powers of 3",
       "steps": [
-        "2, then 2 × 3, then 2 × 3 × 3, then 2 × 3 × 3 × 3 — that is 2, 6, 18, 54.",
-        "Each new term just glues on one more factor of 3.",
-        "The fifth term glues on one more: 2 × 3⁴ = 2 × 81 = 162."
+        "Rewrite each term using the first term and threes: $2$, $2 \\times 3$, $2 \\times 3^2$, $2 \\times 3^3$.",
+        "Each new term has one more factor of $3$ than the one before it.",
+        "The fifth term has four factors of $3$, so it is $2 \\times 3^4 = 2 \\times 81 = 162$."
       ]
     }
   ],

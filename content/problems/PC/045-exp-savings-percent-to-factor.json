@@ -32,11 +32,11 @@
   ],
   "alternativeExplanations": [
     {
-      "title": "Try it on \\$100",
+      "title": "Try it on a real amount",
       "steps": [
-        "Put $\\$100$ in. Eight percent of $\\$100$ is $\\$8$.",
-        "Now you have $\\$108$.",
-        "$108 \\div 100 = 1.08$ — that is the factor."
+        "Test the growth on a deposit of $100$ dollars, because percents of $100$ are easy to read.",
+        "Eight percent of $100$ is $8$ dollars, so after one year the account holds $108$ dollars.",
+        "Divide new by old to find the multiplier: $108 \\div 100 = 1.08$, so the growth factor is $1.08$."
       ]
     }
   ],

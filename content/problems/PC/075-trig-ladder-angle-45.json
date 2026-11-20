@@ -34,17 +34,17 @@
     {
       "title": "Spot the 45-45-90 triangle",
       "steps": [
-        "Both legs are $5$, so the triangle is isosceles.",
-        "The two non-right angles must be equal and add to $90^\\circ$.",
-        "$90 \\div 2 = 45$, so the ladder meets the ground at $45^\\circ$."
+        "Both legs are $5$ m, so the triangle is isosceles and its two non-right angles are equal.",
+        "Those two angles share the $90^\\circ$ that is left after the right angle is counted.",
+        "Splitting evenly gives $90 \\div 2 = 45$, so the ladder meets the ground at $45^\\circ$."
       ]
     },
     {
-      "title": "Draw and sanity-check",
+      "title": "Think of a square's diagonal",
       "steps": [
-        "Sketch it: the ladder goes up exactly as much as it goes out.",
-        "That slant is a perfect diagonal, halfway between flat and straight up.",
-        "Halfway between $0^\\circ$ and $90^\\circ$ is $45^\\circ$."
+        "The ladder goes up exactly as far as it goes out, so it is the diagonal of a $5$ by $5$ square.",
+        "The diagonal of a square cuts its $90^\\circ$ corner into two equal parts.",
+        "Half of $90^\\circ$ is $45^\\circ$, so the angle with the ground is $45$ degrees."
       ]
     }
   ],

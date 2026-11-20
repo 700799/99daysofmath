@@ -34,9 +34,9 @@
     {
       "title": "Check it the direct way",
       "steps": [
-        "A log asks: $10$ to what power gives $10$?",
-        "$10^1 = 10$, so $\\log(10) = 1$.",
-        "The rule agrees, which is exactly why the rule is trustworthy."
+        "Forget the given decimals for a moment and ask what $\\log(10)$ means: $10$ to what power gives $10$?",
+        "Since $10^1 = 10$, the direct answer from the definition is $\\log(10) = 1$.",
+        "The sum $0.301 + 0.699$ also equals $1$, so the product rule and the definition agree on the answer $1$."
       ]
     }
   ],

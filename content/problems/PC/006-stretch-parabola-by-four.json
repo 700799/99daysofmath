@@ -34,9 +34,9 @@
     {
       "title": "A table of heights",
       "steps": [
-        "On $y = x^2$: $x = 1 \\to y = 1$, $x = 2 \\to y = 4$.",
-        "On $y = 4x^2$: $x = 1 \\to y = 4$, $x = 2 \\to y = 16$.",
-        "Every height is exactly 4 times taller — the sticker got stretched, not slid."
+        "Make a small table for the old graph $y = x^2$: at $x = 1$ the height is $1$, and at $x = 2$ the height is $4$.",
+        "Fill in the same inputs for $y = 4x^2$: at $x = 1$ the height is $4 \\times 1 = 4$, and at $x = 2$ it is $4 \\times 4 = 16$.",
+        "Each new height is $4$ times the old one, so the row for $x = 1$ gives the answer $y = 4$."
       ]
     }
   ],

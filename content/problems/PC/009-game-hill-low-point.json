@@ -37,11 +37,11 @@
   ],
   "alternativeExplanations": [
     {
-      "title": "Test two screen positions",
+      "title": "Test several screen positions",
       "steps": [
-        "Try $x = 0$: $y = (0 + 4)^2 - 6 = 16 - 6 = 10$. That is high up.",
-        "Try $x = -4$: $y = (0)^2 - 6 = -6$. That is much lower.",
-        "The dip in the hill is at $x = -4$ — the sprite path slid LEFT."
+        "Try a few inputs and compare heights, starting with $x = 0$: $y = (0 + 4)^2 - 6 = 16 - 6 = 10$.",
+        "Move left to $x = -3$, $x = -4$ and $x = -5$: the heights are $1 - 6 = -5$, then $0 - 6 = -6$, then $1 - 6 = -5$.",
+        "The heights drop to $-6$ and then climb again, so the lowest point of the hill is at $x = -4$."
       ]
     }
   ],

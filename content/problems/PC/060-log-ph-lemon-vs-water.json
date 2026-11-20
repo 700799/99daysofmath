@@ -39,17 +39,17 @@
     {
       "title": "Walk down the scale",
       "steps": [
-        "pH $7$ to $6$: $10$ times. To $5$: $100$ times. To $4$: $1000$ times.",
-        "To $3$: $10{,}000$ times. To $2$: $100{,}000$ times.",
-        "Five steps, five zeros."
+        "Step down from water one pH at a time: at pH $6$ the acidity is $10$ times greater, at pH $5$ it is $100$ times, and at pH $4$ it is $1000$ times.",
+        "Two more steps finish the walk: pH $3$ is $10{,}000$ times and pH $2$ is $100{,}000$ times.",
+        "Five steps down give five zeros, so lemon juice is $100000$ times more acidic than water."
       ]
     },
     {
-      "title": "Write it as one subtraction",
+      "title": "Write it as one power",
       "steps": [
-        "Acidity compares as $10^{7-2}$.",
-        "The exponent is $7 - 2 = 5$.",
-        "$10^5 = 100000$."
+        "Each pH step is one factor of $10$, so the comparison is $10$ raised to the number of steps.",
+        "The number of steps is the difference of the two pH values, $7 - 2 = 5$.",
+        "So the acidity ratio between lemon juice and water is $10^5 = 100000$."
       ]
     }
   ],

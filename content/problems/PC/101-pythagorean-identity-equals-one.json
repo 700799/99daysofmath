@@ -34,15 +34,17 @@
     {
       "title": "Test it with real numbers",
       "steps": [
-        "Take θ = 30°: sin 30° = 0.5 and cos 30° ≈ 0.866.",
-        "0.5² + 0.866² = 0.25 + 0.75 = 1. Try θ = 0°: 0² + 1² = 1. It always lands on 1."
+        "Pick a test angle such as $\\theta = 30^\\circ$, where $\\sin 30^\\circ = 0.5$ and $\\cos 30^\\circ \\approx 0.866$.",
+        "Square each value and add the results: $0.5^2 + 0.866^2 \\approx 0.25 + 0.75 = 1$.",
+        "Try $\\theta = 0^\\circ$ as well: $0^2 + 1^2 = 1$, so the sum comes out as $1$ each time."
       ]
     },
     {
-      "title": "It IS the Pythagorean theorem",
+      "title": "Use the circle's equation",
       "steps": [
-        "You already know a² + b² = c² for right triangles.",
-        "On the unit circle the two legs are named cos θ and sin θ, and the hypotenuse is always 1. Same theorem, new names, and c² = 1."
+        "Every point on the unit circle is exactly $1$ unit from the centre, so its coordinates satisfy $x^2 + y^2 = 1$.",
+        "The point for angle $\\theta$ has coordinates $x = \\cos\\theta$ and $y = \\sin\\theta$.",
+        "Putting those names into the circle's equation gives $\\cos^2\\theta + \\sin^2\\theta = 1$ for every angle."
       ]
     }
   ],

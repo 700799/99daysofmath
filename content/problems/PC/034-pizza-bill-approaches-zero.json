@@ -34,9 +34,9 @@
     {
       "title": "A shrinking table",
       "steps": [
-        "12 friends: $\\$10$ each. 120 friends: $\\$1$ each.",
-        "1200 friends: 10 cents each. 12000 friends: 1 cent each.",
-        "The share keeps halving and halving toward 0, but someone always pays a little."
+        "Make a table of bigger and bigger groups: $12$ friends pay $10$ dollars each, and $120$ friends pay $1$ dollar each.",
+        "Keep going: $1200$ friends pay $0.10$ dollars each, and $12000$ friends pay only $0.01$ dollars each.",
+        "Each row is ten times smaller than the last, so the cost per person is heading toward $0$."
       ]
     }
   ],

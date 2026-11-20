@@ -37,19 +37,19 @@
   ],
   "alternativeExplanations": [
     {
-      "title": "Check both answers in the original",
+      "title": "Check both candidates",
       "steps": [
-        "Try $x = 8$: $\\log_2(8) + \\log_2(2) = 3 + 1 = 4$. It works.",
-        "Try $x = -2$: the very first term is $\\log_2(-2)$, and no power of $2$ is negative.",
-        "So $x = -2$ is thrown out and $x = 8$ stands."
+        "The algebra gives two candidates, $8$ and $-2$, so test each one in the ORIGINAL equation.",
+        "With $x = 8$ the left side is $\\log_2(8) + \\log_2(2) = 3 + 1 = 4$, which works.",
+        "With $x = -2$ the first term is $\\log_2(-2)$, and no power of $2$ is negative, so only $x = 8$ survives."
       ]
     },
     {
-      "title": "Fence off the illegal values first",
+      "title": "Fence off illegal values first",
       "steps": [
-        "Before solving, note $x > 0$ AND $x - 6 > 0$, so $x$ must be bigger than $6$.",
-        "Now solve $x(x-6) = 16$ to get $x = 8$ or $x = -2$.",
-        "Only $x = 8$ is inside the fence."
+        "Before solving, note that each log needs a positive input: $x > 0$ and $x - 6 > 0$, so $x$ must be greater than $6$.",
+        "Now try whole numbers above $6$ in $x(x - 6) = 16$: $7 \\times 1 = 7$ is too small, and $8 \\times 2 = 16$ fits.",
+        "The product keeps growing past $8$, so the only answer inside the fence is $x = 8$."
       ]
     }
   ],

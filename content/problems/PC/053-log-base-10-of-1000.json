@@ -34,9 +34,9 @@
     {
       "title": "Count the zeros",
       "steps": [
-        "With base $10$, the answer is simply the number of zeros.",
-        "$1000$ has three zeros.",
-        "So $\\log_{10}(1000) = 3$. Check: $100$ has two zeros and $\\log_{10}(100) = 2$."
+        "Each time you multiply by $10$, one more zero is added to the end: $10$, $100$, $1000$.",
+        "So for a $1$ followed by zeros, the base $10$ log equals the number of zeros, and $1000$ has three.",
+        "That gives $\\log_{10}(1000) = 3$, and the smaller case $\\log_{10}(100) = 2$ fits the same pattern."
       ]
     }
   ],

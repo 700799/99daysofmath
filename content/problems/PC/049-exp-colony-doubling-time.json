@@ -39,17 +39,17 @@
     {
       "title": "Walk the clock",
       "steps": [
-        "Hour 0: $100$. Hour 3: $200$. Hour 6: $400$.",
-        "Hour 9: $800$. Hour 12: $1600$.",
-        "Only the doubling moments matter, not every single hour."
+        "Only the doubling moments matter, so list the count every $3$ hours: hour $0$ has $100$, hour $3$ has $200$, hour $6$ has $400$.",
+        "Keep doubling at each $3$-hour mark: hour $9$ has $800$ and hour $12$ has $1600$.",
+        "The list reaches hour $12$ with $1600$ cells, after four doublings in all."
       ]
     },
     {
       "title": "Write the formula first",
       "steps": [
-        "With doubling time $3$, the rule is $y = 100 \\cdot 2^{t/3}$.",
-        "Put in $t = 12$: the exponent is $12/3 = 4$.",
-        "$100 \\cdot 2^4 = 100 \\times 16 = 1600$."
+        "With a doubling time of $3$ hours, the rule for the count after $t$ hours is $y = 100 \\cdot 2^{t/3}$.",
+        "Put in $t = 12$, and the exponent becomes $12 \\div 3 = 4$, the number of doublings.",
+        "The rule then gives $y = 100 \\cdot 2^4 = 100 \\times 16 = 1600$ cells after $12$ hours."
       ]
     }
   ],

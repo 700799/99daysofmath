@@ -39,17 +39,17 @@
     {
       "title": "Break 96 into friendly pieces",
       "steps": [
-        "$96 = 32 \\times 3$, so $\\log_2(96) = \\log_2(32) + \\log_2(3)$.",
-        "Now subtract $\\log_2(3)$ from both sides — it cancels out.",
-        "What is left is $\\log_2(32) = 5$."
+        "Factor the larger number so a $3$ appears: $96 = 32 \\times 3$.",
+        "The product rule splits the first log into $\\log_2(32) + \\log_2(3)$, and subtracting $\\log_2(3)$ cancels the second piece.",
+        "What is left is $\\log_2(32)$, and since $2^5 = 32$ the answer is $5$."
       ]
     },
     {
-      "title": "Undo twins",
+      "title": "Estimate, then confirm",
       "steps": [
-        "Logs turn multiplying into adding, and dividing into subtracting.",
-        "So a subtraction outside must be a division inside: $96 \\div 3 = 32$.",
-        "Count doublings to $32$: $2, 4, 8, 16, 32$ — five of them."
+        "Estimate each log: $96$ lies between $64 = 2^6$ and $128 = 2^7$, so $\\log_2(96) \\approx 6.58$, and $\\log_2(3) \\approx 1.58$.",
+        "Subtracting the estimates gives about $6.58 - 1.58 = 5$, which suggests a whole-number answer.",
+        "Confirm it exactly: $2^5 \\times 3 = 32 \\times 3 = 96$, so the two logs really do differ by $5$."
       ]
     }
   ],

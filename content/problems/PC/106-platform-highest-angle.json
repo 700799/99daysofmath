@@ -34,15 +34,17 @@
     {
       "title": "Make a small table",
       "steps": [
-        "θ = 0°: h = 5. θ = 45°: h ≈ 8.5. θ = 90°: h = 10. θ = 135°: h ≈ 8.5. θ = 180°: h = 5.",
-        "The numbers climb to 10 at 90° and then fall back, so 90° is the peak."
+        "Compute the height at a few angles: at $0^\\circ$ it is $5$, at $45^\\circ$ about $8.5$, and at $90^\\circ$ it is $10$.",
+        "Carry on around: at $135^\\circ$ it is about $8.5$, at $180^\\circ$ it is $5$, and at $270^\\circ$ it is $0$.",
+        "The heights climb to $10$ at $90^\\circ$ and fall afterwards, so the robot is highest at $90$ degrees."
       ]
     },
     {
       "title": "Picture the unit circle",
       "steps": [
-        "Sine is the HEIGHT UP of the point on the circle.",
-        "The highest point on any circle is straight up from the centre, and that direction is 90°."
+        "The sine of an angle is the height of its point on the unit circle.",
+        "The highest point of any circle is straight above its centre, and that direction is the $90^\\circ$ direction.",
+        "So $\\sin\\theta$, and with it the robot's height, is greatest at $\\theta = 90$ degrees."
       ]
     }
   ],

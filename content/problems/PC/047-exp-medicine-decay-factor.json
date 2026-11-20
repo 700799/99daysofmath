@@ -34,9 +34,9 @@
     {
       "title": "Try it on 100 mg",
       "steps": [
-        "Start with $100$ mg. Twenty percent of $100$ is $20$ mg, which leaves.",
-        "What remains is $80$ mg.",
-        "$80 \\div 100 = 0.8$ — that is the factor."
+        "Imagine a dose of $100$ mg, so that percents turn straight into milligrams.",
+        "Twenty percent of $100$ is $20$ mg, which leaves the blood, so $100 - 20 = 80$ mg remains after one hour.",
+        "Divide what remains by what you started with: $80 \\div 100 = 0.8$, so the decay factor is $0.8$."
       ]
     }
   ],

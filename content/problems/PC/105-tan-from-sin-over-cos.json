@@ -34,15 +34,17 @@
     {
       "title": "Turn it into a fraction",
       "steps": [
-        "0.6/0.8 is the same as 6/8 after multiplying top and bottom by 10.",
-        "Simplify 6/8 to 3/4, which is 0.75."
+        "Write the division $0.6 \\div 0.8$ as a fraction and multiply top and bottom by $10$ to clear the decimals: $\\frac{6}{8}$.",
+        "Simplify by dividing top and bottom by $2$, which gives $\\frac{3}{4}$.",
+        "Three quarters as a decimal is $0.75$, so $\\tan\\theta = 0.75$."
       ]
     },
     {
       "title": "Read it as slope",
       "steps": [
-        "tan θ is rise over run for the line from the centre to the point (0.8, 0.6).",
-        "It rises 0.6 while it runs 0.8, so the slope is 0.6 ÷ 0.8 = 0.75 — a gentle uphill."
+        "The angle's point on the unit circle is $(0.8, 0.6)$, and $\\tan\\theta$ is the slope of the line from the centre to that point.",
+        "That line rises $0.6$ while it runs $0.8$.",
+        "Rise over run is $0.6 \\div 0.8 = 0.75$, a gentle uphill, so $\\tan\\theta = 0.75$."
       ]
     }
   ],

@@ -32,11 +32,11 @@
   ],
   "alternativeExplanations": [
     {
-      "title": "One receipt at a time",
+      "title": "One receipt line at a time",
       "steps": [
-        "Sticker price: $\\$80$. The coupon takes off $\\$20$ (a quarter of 80).",
-        "New price on the register: $\\$60$.",
-        "The tax line adds $\\$6$, so the total you hand over is $\\$66$."
+        "Write the receipt in dollar amounts: the sticker price is $80$ dollars, and a quarter of $80$ is $20$ dollars off.",
+        "The price after the coupon is $80 - 20 = 60$ dollars, and this is the line the tax is charged on.",
+        "One tenth of $60$ is $6$ dollars of tax, so the total on the receipt is $60 + 6 = 66$ dollars."
       ]
     }
   ],

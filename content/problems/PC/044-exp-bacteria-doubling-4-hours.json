@@ -34,9 +34,9 @@
     {
       "title": "Make an hour-by-hour table",
       "steps": [
-        "Hour 0: $50$. Hour 1: $100$. Hour 2: $200$.",
-        "Hour 3: $400$. Hour 4: $800$.",
-        "Doubling four times gets you to $800$."
+        "List the count at each hour, doubling as you go: hour $0$ has $50$, hour $1$ has $100$, and hour $2$ has $200$.",
+        "Continue the same doubling for two more rows: hour $3$ has $400$ and hour $4$ has $800$.",
+        "The row for hour $4$ shows the answer, so there are $800$ bacteria after $4$ hours."
       ]
     }
   ],

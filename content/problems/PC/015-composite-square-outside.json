@@ -32,11 +32,11 @@
   ],
   "alternativeExplanations": [
     {
-      "title": "A quick table",
+      "title": "Draw a machine chain",
       "steps": [
-        "Input 5 goes into machine g: output 4.",
-        "Output 4 becomes the input for machine f: output 16.",
-        "Written as a chain: $5 \\to 4 \\to 16$."
+        "Draw two machines in a row, with $g$ first because it is on the inside, and feed in the number $5$.",
+        "Machine $g$ subtracts $1$, so $5$ comes out as $4$, and that $4$ travels on into machine $f$.",
+        "Machine $f$ squares its input, so the chain reads $5 \\to 4 \\to 16$ and the answer is $16$."
       ]
     }
   ],

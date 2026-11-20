@@ -32,11 +32,11 @@
   ],
   "alternativeExplanations": [
     {
-      "title": "Why the biggest one wins",
+      "title": "Why the biggest power wins",
       "steps": [
-        "Plug in a huge number like $x = 100$.",
-        "$4x^3$ is 4 million, while $-2x$ is only $-200$.",
-        "The biggest exponent bosses the whole graph around, so it names the degree."
+        "Plug in a large input such as $x = 100$ to see which term matters most.",
+        "The term $4x^3$ becomes $4{,}000{,}000$, while $-2x$ is only $-200$ and the $7$ stays at $7$.",
+        "The $x^3$ term controls the size of the polynomial, and its power is the degree, so the degree is $3$."
       ]
     }
   ],

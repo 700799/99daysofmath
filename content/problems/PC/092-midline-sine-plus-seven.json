@@ -32,17 +32,19 @@
   ],
   "alternativeExplanations": [
     {
-      "title": "Average the peak and the trough",
+      "title": "Average the peak and trough",
       "steps": [
-        "sin(x) + 7 rises to 8 at its peak and falls to 6 at its trough.",
-        "The middle is the average: (8 + 6) ÷ 2 = 7."
+        "The wave $\\sin(x)$ peaks at $1$ and bottoms out at $-1$, so $\\sin(x) + 7$ peaks at $8$ and bottoms out at $6$.",
+        "The midline lies exactly halfway between the peak and the trough.",
+        "Averaging them gives $\\frac{8 + 6}{2} = 7$, so the midline is $y = 7$."
       ]
     },
     {
-      "title": "The heartbeat-monitor picture",
+      "title": "The heart-monitor picture",
       "steps": [
-        "On a heart monitor there is a flat resting line, and the trace bounces above and below it.",
-        "The + 7 tells you where that resting line sits: 7 units up."
+        "On a heart monitor there is a flat resting line, and the trace bounces evenly above and below it.",
+        "For plain $\\sin(x)$ that resting line is $y = 0$, and adding $7$ lifts the whole picture $7$ units.",
+        "The resting line moves from $0$ up to $7$, so the midline is $y = 7$."
       ]
     }
   ],

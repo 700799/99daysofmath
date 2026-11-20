@@ -34,9 +34,9 @@
     {
       "title": "Test giant numbers",
       "steps": [
-        "At $x = 10$: $-2(10000) + 30 = -19970$. Way below zero.",
-        "At $x = -10$: $-2(10000) - 30 = -20030$. Also way below zero.",
-        "Both far ends dive down, so no arm points up."
+        "Check the right arm with a big input such as $x = 10$: $-2(10000) + 30 = -19970$, far below zero.",
+        "Check the left arm with $x = -10$: $-2(10000) - 30 = -20030$, which is also far below zero.",
+        "Both far ends of the graph dive downward, so the number of arms pointing up is $0$."
       ]
     }
   ],

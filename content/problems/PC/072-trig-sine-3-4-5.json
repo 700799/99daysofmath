@@ -32,19 +32,19 @@
   ],
   "alternativeExplanations": [
     {
-      "title": "Say the ritual out loud",
+      "title": "Label the sides first",
       "steps": [
-        "Point at the angle. The side touching it (not the slant) is ADJACENT.",
-        "The side across the triangle from it is OPPOSITE, and the slant is the HYPOTENUSE.",
-        "Sine wants opposite over hypotenuse: $3$ over $5$, which is $0.6$."
+        "Point at the angle: the leg touching it is the adjacent side, and the leg across the triangle is the opposite side.",
+        "The slanted side facing the right angle is the hypotenuse, which here is $5$.",
+        "Sine compares the opposite side with the hypotenuse, so it is $\\frac{3}{5} = 0.6$."
       ]
     },
     {
       "title": "Think in fractions of the slant",
       "steps": [
-        "Sine asks: how tall is the triangle compared with its slanted side?",
+        "Sine answers the question of how tall the triangle is compared with its slanted side.",
         "The height is $3$ and the slant is $5$, so the height is $\\frac{3}{5}$ of the slant.",
-        "$\\frac{3}{5} = 0.6$."
+        "Turn the fraction into a decimal by doubling top and bottom: $\\frac{3}{5} = \\frac{6}{10} = 0.6$."
       ]
     }
   ],

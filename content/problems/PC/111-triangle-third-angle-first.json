@@ -34,17 +34,17 @@
     {
       "title": "Tear the corners off",
       "steps": [
-        "Cut a paper triangle and tear off all three corners.",
-        "Slide the three torn corners together and they form a perfectly straight line — and a straight line is 180°.",
-        "So the missing corner is whatever is left over: 180 − 115 = 65°."
+        "Imagine tearing the three corners off a paper triangle and placing them side by side.",
+        "The three corners always fit together into a straight line, and a straight line measures $180^\\circ$.",
+        "The corners of $40^\\circ$ and $75^\\circ$ fill $115^\\circ$ of that line, so the missing corner is $180 - 115 = 65$ degrees."
       ]
     },
     {
-      "title": "Work backwards",
+      "title": "Subtract one angle at a time",
       "steps": [
-        "Start at the full 180° and take away the pieces you already have.",
-        "180 − 40 = 140. Then 140 − 75 = 65.",
-        "Same answer, one subtraction at a time — handy when the numbers are messy."
+        "Start with the full $180^\\circ$ and take away the first known angle: $180 - 40 = 140$.",
+        "Take away the second known angle from what is left: $140 - 75 = 65$.",
+        "Nothing else remains to subtract, so the third angle is $65^\\circ$."
       ]
     }
   ],

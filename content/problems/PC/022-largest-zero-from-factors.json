@@ -32,11 +32,11 @@
   ],
   "alternativeExplanations": [
     {
-      "title": "Read the sign backwards",
+      "title": "Mark a number line",
       "steps": [
-        "A factor $(x - 5)$ hides the zero $+5$ — the sign flips.",
-        "A factor $(x + 2)$ hides the zero $-2$.",
-        "On a number line those sit at $-2$ and $5$, and 5 is farther right."
+        "Each factor is zero at the number that cancels it, so $(x - 5)$ is zero at $x = 5$ and $(x + 2)$ is zero at $x = -2$.",
+        "Check by substituting: $p(5) = (0)(7) = 0$ and $p(-2) = (-7)(0) = 0$, so both are real zeros.",
+        "Mark $-2$ and $5$ on a number line, and the point farther to the right is $5$, so the larger zero is $5$."
       ]
     }
   ],

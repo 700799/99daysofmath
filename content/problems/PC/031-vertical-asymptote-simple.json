@@ -34,9 +34,9 @@
     {
       "title": "Sneak up on 6",
       "steps": [
-        "At $x = 7$: $\\frac{1}{1} = 1$.",
-        "At $x = 6.1$: $\\frac{1}{0.1} = 10$.",
-        "At $x = 6.01$: $\\frac{1}{0.01} = 100$. The values blast upward — the graph is fleeing the line $x = 6$."
+        "Compute the function at inputs that creep toward $6$, starting with $x = 7$: $\\frac{1}{7 - 6} = 1$.",
+        "Move closer: at $x = 6.1$ the value is $\\frac{1}{0.1} = 10$, and at $x = 6.01$ it is $\\frac{1}{0.01} = 100$.",
+        "The outputs blow up as the input nears $6$, which is what a vertical asymptote looks like, so it is at $x = 6$."
       ]
     }
   ],

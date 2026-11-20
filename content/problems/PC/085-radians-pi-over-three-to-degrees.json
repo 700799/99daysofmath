@@ -32,17 +32,19 @@
   ],
   "alternativeExplanations": [
     {
-      "title": "Swap π for 180 and simplify",
+      "title": "Swap pi for 180",
       "steps": [
-        "Wherever you see π, write 180° instead. So π/3 becomes 180°/3.",
-        "180 ÷ 3 = 60. The answer is 60°."
+        "Since $\\pi$ radians is the same turn as $180^\\circ$, replace the $\\pi$ in the angle with $180^\\circ$.",
+        "The angle $\\frac{\\pi}{3}$ becomes $\\frac{180^\\circ}{3}$, which is a plain division.",
+        "Dividing gives $180 \\div 3 = 60$, so the angle is $60^\\circ$."
       ]
     },
     {
       "title": "Build a quick table",
       "steps": [
-        "π = 180°, so π/2 = 90°, π/3 = 60°, π/4 = 45°, π/6 = 30°.",
-        "The bigger the number under π, the smaller the slice. π/3 sits at 60° — one of the exact-value angles."
+        "List the common slices of a half turn: $\\pi = 180^\\circ$, $\\frac{\\pi}{2} = 90^\\circ$, $\\frac{\\pi}{3} = 60^\\circ$, $\\frac{\\pi}{4} = 45^\\circ$, $\\frac{\\pi}{6} = 30^\\circ$.",
+        "A larger number under $\\pi$ means the half turn is cut into more pieces, so each piece is smaller.",
+        "The row for $\\frac{\\pi}{3}$ reads $60^\\circ$, and three such pieces rebuild the half turn: $3 \\times 60 = 180$."
       ]
     }
   ],

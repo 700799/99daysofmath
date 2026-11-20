@@ -39,9 +39,9 @@
     {
       "title": "Try numbers on both sides",
       "steps": [
-        "At $x = -2$: $y = -2 + 7 = 5$.",
-        "At $x = 0$: $y = 0 + 7 = 7$.",
-        "At $x = 3$: $y = -3 + 7 = 4$. The values climb to 7 and then fall — 7 is the peak."
+        "Test an input on the left, such as $x = -2$: $y = -|-2| + 7 = -2 + 7 = 5$.",
+        "Test the middle and the right: at $x = 0$ the value is $0 + 7 = 7$, and at $x = 3$ it is $-3 + 7 = 4$.",
+        "The values rise to $7$ at $x = 0$ and fall on both sides, because $-|x|$ can only take away, so the greatest $y$-value is $7$."
       ]
     }
   ],

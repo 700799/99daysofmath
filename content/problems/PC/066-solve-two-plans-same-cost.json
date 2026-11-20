@@ -32,19 +32,19 @@
   ],
   "alternativeExplanations": [
     {
-      "title": "Just list the months",
+      "title": "List the months",
       "steps": [
-        "Month 1: $\\$5$. Month 2: $\\$10$. Month 3: $\\$20$.",
-        "Month 4: $\\$40$. Month 5: $\\$80$.",
-        "Month $5$ is the match."
+        "Write the rival price month by month, doubling each time: month $1$ is $5$ dollars, month $2$ is $10$, and month $3$ is $20$.",
+        "Keep doubling: month $4$ costs $40$ dollars and month $5$ costs $80$ dollars.",
+        "The list matches the top plan in month $5$."
       ]
     },
     {
       "title": "Count the doublings",
       "steps": [
-        "Going from $\\$5$ to $\\$80$ means multiplying by $16$.",
-        "$16 = 2^4$, so that is $4$ doublings.",
-        "Four doublings after month $1$ lands on month $5$."
+        "Going from $5$ dollars to $80$ dollars means multiplying by $80 \\div 5 = 16$.",
+        "Since $16 = 2^4$, that growth takes exactly $4$ doublings.",
+        "The first doubling happens going into month $2$, so four doublings after month $1$ land on month $5$."
       ]
     }
   ],

@@ -34,9 +34,9 @@
     {
       "title": "Follow one point",
       "steps": [
-        "On $y = x^2$ the bottom point is $(0, 0)$.",
-        "On $y = x^2 + 5$, plug in $x = 0$: $y = 0 + 5 = 5$.",
-        "That bottom point moved from $(0, 0)$ to $(0, 5)$ — up 5."
+        "Pick an easy point to watch: the bottom of $y = x^2$ sits at $(0, 0)$.",
+        "Put the same input $x = 0$ into the new rule to see where that point goes: $y = 0^2 + 5 = 5$.",
+        "The bottom point moved from $(0, 0)$ to $(0, 5)$, and every other point rises the same way, so the graph slides UP $5$ units."
       ]
     }
   ],
