@@ -34,9 +34,17 @@
     {
       "title": "It is just $a^2 + b^2 = c^2$ in disguise",
       "steps": [
-        "In a right triangle with hypotenuse $1$, the legs are $\\sin\\theta$ and $\\cos\\theta$.",
+        "Draw a right triangle with hypotenuse $1$ and angle $\\theta$; its legs are $\\sin\\theta$ (opposite) and $\\cos\\theta$ (adjacent).",
         "The Pythagorean theorem says leg squared plus leg squared equals hypotenuse squared.",
-        "With hypotenuse $1$, that reads $\\sin^2\\theta + \\cos^2\\theta = 1$."
+        "With a hypotenuse of length $1$, that statement reads $\\sin^2\\theta + \\cos^2\\theta = 1^2 = 1$."
+      ]
+    },
+    {
+      "title": "Test a few angles",
+      "steps": [
+        "At $0^\\circ$ the sine is $0$ and the cosine is $1$, so the sum of squares is $0 + 1 = 1$.",
+        "At $30^\\circ$ the values are $\\frac{1}{2}$ and $\\frac{\\sqrt{3}}{2}$, and $\\frac{1}{4} + \\frac{3}{4} = 1$ again.",
+        "At $45^\\circ$ both values are $\\frac{\\sqrt{2}}{2}$, giving $\\frac{1}{2} + \\frac{1}{2} = 1$, so the pattern points to $1$ every time."
       ]
     }
   ],

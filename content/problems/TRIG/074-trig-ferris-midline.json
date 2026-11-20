@@ -34,8 +34,9 @@
     {
       "title": "Average the top and the bottom",
       "steps": [
-        "Highest point: $20 + 18 = 38$ m. Lowest point: $20 - 18 = 2$ m.",
-        "The centre is halfway between: $\\frac{38 + 2}{2} = 20$ m."
+        "The highest point is where the sine equals $1$, giving $20 + 18 = 38$ m, and the lowest is where it equals $-1$, giving $20 - 18 = 2$ m.",
+        "The centre of a wheel is halfway between its top and its bottom.",
+        "Halfway is the average, $\\frac{38 + 2}{2} = 20$ m, so the centre is $20$ m above the ground."
       ]
     }
   ],

@@ -39,9 +39,9 @@
     {
       "title": "Pythagoras the long way",
       "steps": [
-        "$d^2 = 7^2 + 7^2 = 49 + 49 = 98$.",
-        "$d = \\sqrt{98} = \\sqrt{49 \\times 2} = 7\\sqrt{2}$.",
-        "The shortcut and the theorem agree, as they must."
+        "The diagonal $d$ is the hypotenuse of a right triangle with two legs of $7$, so $d^2 = 7^2 + 7^2 = 49 + 49 = 98$.",
+        "Take the square root and pull out the perfect square: $d = \\sqrt{98} = \\sqrt{49 \\times 2} = 7\\sqrt{2}$.",
+        "The theorem gives $7\\sqrt{2}$ inches, the same length as the $45$-$45$-$90$ shortcut."
       ]
     }
   ],

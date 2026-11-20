@@ -38,9 +38,9 @@
     {
       "title": "Draw the triangle",
       "steps": [
-        "$\\tan\\theta = \\frac{4}{3}$ means opposite $4$, adjacent $3$, so the hypotenuse is $5$ — the $3$-$4$-$5$ triangle again.",
-        "$\\cos\\theta = \\frac{3}{5}$, and secant is its reciprocal.",
-        "$\\sec\\theta = \\frac{5}{3}$."
+        "The ratio $\\tan\\theta = \\frac{4}{3}$ means opposite $4$ and adjacent $3$, so the hypotenuse is $\\sqrt{16 + 9} = 5$.",
+        "Then $\\cos\\theta = \\frac{3}{5}$, adjacent over hypotenuse, and it is positive in the first quadrant.",
+        "Secant is the reciprocal of cosine, so $\\sec\\theta = \\frac{5}{3}$."
       ]
     }
   ],

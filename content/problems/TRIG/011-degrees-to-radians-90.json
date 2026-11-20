@@ -39,8 +39,9 @@
     {
       "title": "Reason from the quarter turn",
       "steps": [
-        "A whole circle is $2\\pi$ radians.",
-        "$90^\\circ$ is a quarter of a circle, so it is a quarter of $2\\pi$, which is $\\frac{\\pi}{2}$."
+        "A whole circle is $360^\\circ$, which is the same turn as $2\\pi$ radians.",
+        "The angle $90^\\circ$ is one quarter of a full circle, because $4 \\times 90 = 360$.",
+        "One quarter of $2\\pi$ is $\\frac{2\\pi}{4} = \\frac{\\pi}{2}$ radians, so the answer is pi/2."
       ]
     }
   ],

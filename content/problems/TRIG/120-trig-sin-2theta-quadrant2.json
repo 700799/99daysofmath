@@ -42,17 +42,17 @@
     {
       "title": "Check with the actual angle",
       "steps": [
-        "$\\arcsin\\left(\\frac{5}{13}\\right) \\approx 22.6^\\circ$, so the quadrant-II angle is $\\theta \\approx 157.4^\\circ$.",
-        "Then $2\\theta \\approx 314.8^\\circ$, which lands in quadrant IV where sine is negative.",
-        "$\\sin 314.8^\\circ \\approx -0.710$, matching $-\\frac{120}{169} \\approx -0.710$ ✓"
+        "A calculator gives $\\arcsin\\left(\\frac{5}{13}\\right) \\approx 22.6^\\circ$, so the Quadrant II angle is $\\theta \\approx 180^\\circ - 22.6^\\circ = 157.4^\\circ$.",
+        "Then $2\\theta \\approx 314.8^\\circ$, which lands in Quadrant IV where sine is negative.",
+        "The calculator then gives $\\sin 314.8^\\circ \\approx -0.710$, which matches $-\\frac{120}{169} \\approx -0.710$."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
         "The trap is answering $+\\frac{120}{169}$ by taking $\\cos\\theta = \\frac{12}{13}$ from the $5$-$12$-$13$ triangle and ignoring the quadrant.",
-        "Side lengths in a triangle are always positive, but trig VALUES carry signs that depend on the quadrant. In quadrant II only sine stays positive.",
-        "The habit that protects you: the moment you take a square root, stop and write down which quadrant you are in and what sign that forces. The answer is $-\\frac{120}{169}$."
+        "Side lengths are always positive, but trig values carry signs, and in Quadrant II only sine stays positive.",
+        "So the cosine is $\\cos\\theta = -\\frac{12}{13}$, and the product $2 \\cdot \\frac{5}{13} \\cdot \\left(-\\frac{12}{13}\\right)$ is $-\\frac{120}{169}$."
       ]
     }
   ],

@@ -34,9 +34,9 @@
     {
       "title": "Straight from the unit circle",
       "steps": [
-        "Find the point on the unit circle whose $x$-coordinate is $-\\frac{1}{2}$ in the upper half.",
+        "Arccosine returns angles from $0^\\circ$ to $180^\\circ$, so look on the upper half of the unit circle for the point whose $x$-coordinate is $-\\frac{1}{2}$.",
         "That point is $\\left(-\\frac{1}{2}, \\frac{\\sqrt{3}}{2}\\right)$, which sits at $120^\\circ$.",
-        "Check: $\\cos 120^\\circ = -\\frac{1}{2}$ ✓"
+        "Checking, $\\cos 120^\\circ = -\\frac{1}{2}$ is true, so the value of $\\arccos\\left(-\\frac{1}{2}\\right)$ is $120$ degrees."
       ]
     }
   ],

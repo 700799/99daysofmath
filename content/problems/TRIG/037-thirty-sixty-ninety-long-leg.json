@@ -39,8 +39,9 @@
     {
       "title": "Check with the theorem",
       "steps": [
-        "The hypotenuse is twice the short leg: $10$ cm.",
-        "Then $b^2 = 10^2 - 5^2 = 100 - 25 = 75$, so $b = \\sqrt{75} = 5\\sqrt{3}$."
+        "In a $30$-$60$-$90$ triangle the hypotenuse is twice the shorter leg, so here it is $2 \\times 5 = 10$ cm.",
+        "The Pythagorean theorem then gives the longer leg $b$: $b^2 = 10^2 - 5^2 = 100 - 25 = 75$.",
+        "So $b = \\sqrt{75} = \\sqrt{25 \\times 3} = 5\\sqrt{3}$ cm, which matches the ratio method."
       ]
     }
   ],

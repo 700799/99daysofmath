@@ -34,9 +34,9 @@
     {
       "title": "Sanity-check with the angles",
       "steps": [
-        "Angle $B = 45^\\circ$ is bigger than angle $A = 30^\\circ$.",
-        "In any triangle, the bigger angle sits opposite the longer side.",
-        "So $b$ must be longer than $a = 10$, and $14.14$ is — the answer is believable."
+        "Angle $B = 45^\\circ$ is bigger than angle $A = 30^\\circ$, and the bigger angle always faces the longer side, so $b$ must be more than $10$.",
+        "For a closer estimate, sides scale like the sines of their opposite angles, and $\\sin 45^\\circ \\approx 0.707$ is about $1.414$ times $\\sin 30^\\circ = 0.5$.",
+        "So $b \\approx 1.414 \\times 10 = 14.14$, which agrees with the Law of Sines answer."
       ]
     }
   ],

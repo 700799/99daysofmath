@@ -39,16 +39,17 @@
     {
       "title": "Straight from the coordinates",
       "steps": [
-        "The unit-circle point at $315^\\circ$ is $\\left(\\frac{\\sqrt{2}}{2},\\ -\\frac{\\sqrt{2}}{2}\\right)$.",
-        "Tangent is $\\frac{y}{x} = \\frac{-\\sqrt{2}/2}{\\sqrt{2}/2}$.",
-        "The identical magnitudes cancel and only the minus sign survives: $-1$."
+        "The unit-circle point at $315^\\circ$ is $\\left(\\frac{\\sqrt{2}}{2},\\ -\\frac{\\sqrt{2}}{2}\\right)$, the $45^\\circ$ point reflected below the $x$-axis.",
+        "Tangent is $y$ divided by $x$, so the value wanted is $\\tan 315^\\circ = \\frac{-\\sqrt{2}/2}{\\sqrt{2}/2}$.",
+        "The two coordinates have the same size, so they cancel and only the minus sign is left: $\\tan 315^\\circ = -1$."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "The trap answer is $+1$ — you found the reference angle correctly, got $\\tan 45^\\circ = 1$, and then forgot the sign step.",
-        "Make it a two-part habit: reference angle gives the SIZE, quadrant gives the SIGN. Quadrant IV keeps only cosine positive (ASTC), so tangent there must be negative: $-1$."
+        "The trap answer is $+1$: the reference angle is found correctly, $\\tan 45^\\circ = 1$, and then the sign step is forgotten.",
+        "Make it a habit in two parts: the reference angle gives the size, and the quadrant gives the sign.",
+        "In Quadrant IV only cosine is positive, so tangent must be negative there and the answer is $-1$."
       ]
     }
   ],

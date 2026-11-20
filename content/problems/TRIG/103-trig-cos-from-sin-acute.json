@@ -37,9 +37,9 @@
     {
       "title": "Spot the 3-4-5 triangle",
       "steps": [
-        "$\\sin\\theta = \\frac{3}{5}$ means opposite $3$, hypotenuse $5$.",
-        "That is the famous $3$-$4$-$5$ right triangle, so the adjacent side is $4$ with no calculation at all.",
-        "$\\cos\\theta = \\frac{4}{5} = 0.8$."
+        "The ratio $\\sin\\theta = \\frac{3}{5}$ describes a right triangle with opposite side $3$ and hypotenuse $5$.",
+        "That is the well-known $3$-$4$-$5$ right triangle, so the adjacent side is $4$ (check: $9 + 16 = 25$).",
+        "Cosine is adjacent over hypotenuse, so $\\cos\\theta = \\frac{4}{5} = 0.8$."
       ]
     }
   ],

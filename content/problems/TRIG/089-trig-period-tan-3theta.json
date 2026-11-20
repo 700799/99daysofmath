@@ -39,17 +39,17 @@
     {
       "title": "Track the asymptotes",
       "steps": [
-        "$\\tan(3\\theta)$ is undefined when $3\\theta = 90^\\circ$, so $\\theta = 30^\\circ$.",
-        "The next one is at $3\\theta = 270^\\circ$, so $\\theta = 90^\\circ$.",
-        "Consecutive asymptotes are $60^\\circ$ apart, and one full branch fits between them — the period is $60^\\circ$."
+        "The function $\\tan(3\\theta)$ is undefined when $3\\theta = 90^\\circ$, which happens at $\\theta = 30^\\circ$.",
+        "The next break comes when $3\\theta = 270^\\circ$, which happens at $\\theta = 90^\\circ$.",
+        "Neighbouring asymptotes are $90^\\circ - 30^\\circ = 60^\\circ$ apart and one full branch fits between them, so the period is $60^\\circ$."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
         "The trap is answering $120^\\circ$ by computing $\\frac{360^\\circ}{3}$ out of habit.",
-        "That formula belongs to sine and cosine. Tangent starts from $180^\\circ$, not $360^\\circ$.",
-        "Before dividing by $B$, always ask which function you are in: sine and cosine start at $360^\\circ$, tangent and cotangent start at $180^\\circ$."
+        "That formula belongs to sine and cosine; tangent already repeats every $180^\\circ$, not every $360^\\circ$.",
+        "Ask which function you have before dividing by $B$: for tangent the period is $\\frac{180^\\circ}{3} = 60^\\circ$."
       ]
     }
   ],

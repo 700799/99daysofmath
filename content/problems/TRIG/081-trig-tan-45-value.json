@@ -34,9 +34,9 @@
     {
       "title": "From a right triangle",
       "steps": [
-        "A $45^\\circ$-$45^\\circ$-$90^\\circ$ triangle has two equal legs.",
-        "Tangent is opposite over adjacent, and here those two legs are equal, so the ratio is $1$.",
-        "This is why a $45^\\circ$ ramp rises exactly as much as it runs."
+        "Draw a $45$-$45$-$90$ triangle; its two acute angles are equal, so its two legs are equal.",
+        "Tangent is opposite over adjacent, and for the $45^\\circ$ angle those are the two equal legs.",
+        "A length divided by an equal length is $1$, so $\\tan 45^\\circ = 1$, which is why a $45^\\circ$ ramp rises exactly as much as it runs."
       ]
     }
   ],

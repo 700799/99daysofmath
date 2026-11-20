@@ -56,9 +56,9 @@
     {
       "title": "Why the tempting answers fail",
       "steps": [
-        "Try $\\theta = 30^\\circ$: $\\sin 60^\\circ \\approx 0.866$.",
-        "Choice B gives $2\\sin 30^\\circ = 1$, and choice D gives the same thing — both wrong.",
-        "Choice A gives $2(0.5)(0.866) = 0.866$ ✓. Trig functions do not distribute over multiplication: $\\sin(2\\theta)$ is never just $2\\sin\\theta$."
+        "Test $\\theta = 30^\\circ$, where the target value is $\\sin 60^\\circ \\approx 0.866$.",
+        "Choices B and D both give $2\\sin 30^\\circ = 1$, and choice C gives $\\sin^2 30^\\circ = 0.25$, so all three are wrong.",
+        "Choice A gives $2(0.5)(0.866) = 0.866$, which matches the target, so $\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta$."
       ]
     }
   ],

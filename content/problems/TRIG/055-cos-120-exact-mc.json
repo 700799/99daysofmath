@@ -56,8 +56,9 @@
     {
       "title": "Read it off the circle",
       "steps": [
-        "The unit-circle point at $120^\\circ$ is $\\left(-\\frac{1}{2},\\ \\frac{\\sqrt{3}}{2}\\right)$.",
-        "Cosine is the first coordinate, which is $-\\frac{1}{2}$. (The $\\frac{\\sqrt{3}}{2}$ is the sine.)"
+        "Picture the unit circle: the point at $120^\\circ$ is the mirror image of the $60^\\circ$ point across the $y$-axis, so it is $\\left(-\\frac{1}{2},\\ \\frac{\\sqrt{3}}{2}\\right)$.",
+        "Cosine is the first coordinate of that point, while the second coordinate $\\frac{\\sqrt{3}}{2}$ is the sine.",
+        "The first coordinate is $-\\frac{1}{2}$, so $\\cos 120^\\circ = -\\frac{1}{2}$, which is choice A."
       ]
     }
   ],

@@ -5926,5 +5926,509 @@
  "STAT-14#11": {
   "title": "Check with the t statistic",
   "text": "Test the slope directly and compare. The statistic is t = −0.85 ÷ 0.30 ≈ −2.83, so the slope is 2.83 standard errors below zero. A 90% interval with 10 degrees of freedom reaches only 1.812 standard errors each way, so zero must lie outside it. The ends are −0.85 − 1.812 × 0.30 ≈ −1.39 and −0.85 + 1.812 × 0.30 ≈ −0.31. The interval (−1.39, −0.31) is entirely negative, and 0 is not a plausible slope."
+ },
+ "TRIG-1#1": {
+  "title": "Try it with a pencil",
+  "text": "Lay a pencil along the positive x-axis with its eraser at the origin. Swing the tip counterclockwise through a quarter turn and half of another: that is +135°, and the pencil ends in the upper left. Start again and swing the tip clockwise by the same amount: that is −135°, and it ends in the lower left. Same start and same size of turn, but opposite directions, so the sign is what tells the two angles apart."
+ },
+ "TRIG-1#2": {
+  "title": "Name quadrants by coordinate signs",
+  "text": "Pick any point on the terminal side and look at the signs of its coordinates. Right and up (+, +) is Quadrant I. Left and up (−, +) is Quadrant II. Left and down (−, −) is Quadrant III. Right and down (+, −) is Quadrant IV. An angle of 245° points left and down, so both coordinates are negative and it lies in Quadrant III."
+ },
+ "TRIG-1#3": {
+  "title": "A spinning skater",
+  "text": "A skater who spins once and stops is facing the same way as before the spin. Someone who walks in afterwards cannot tell whether the skater turned 30° or one whole spin plus 30°. Only the leftover part of the turn shows in the final direction. That is why 30° and 390° are coterminal: the extra 360° is a complete spin that leaves no trace."
+ },
+ "TRIG-1#4": {
+  "title": "Count the quarter turns",
+  "text": "Divide by 90 to count quarter turns: 245 ÷ 90 is 2 with 65 left over. Two whole quarter turns carry the terminal side through Quadrants I and II and onto the negative x-axis. The extra 65° is less than one more quarter turn, so the side stops inside the next quadrant, which is Quadrant III."
+ },
+ "TRIG-1#5": {
+  "title": "Go round the other way",
+  "text": "Picture the circle. Turning 60° clockwise leaves the terminal side 60° below the positive x-axis. To reach that same side going counterclockwise, you must travel the rest of the circle, which is 360° − 60° = 300°. The clockwise route and the counterclockwise route together make exactly one full turn, and that is why the positive answer is 300°."
+ },
+ "TRIG-1#6": {
+  "title": "Use the nearest full-turn mark",
+  "text": "Whole turns land on 360°, 720°, 1080° and so on. The angle 780° sits between 720° and 1080°, and it is 60° past the 720° mark. Since 720° is two whole turns that bring the side back to the start, 780° ends exactly where 60° ends. That is between 0° and 90°, so it is in Quadrant I."
+ },
+ "TRIG-1#7": {
+  "title": "Work in quarter turns",
+  "text": "A quarter turn is 90°, and 780 ÷ 90 is 8 with 60 left over. Every 4 quarter turns make one full turn, so 8 quarter turns are 2 full turns and change nothing. What remains is 60°, the same answer as before. Check by building back up: 60 + 360 + 360 = 780."
+ },
+ "TRIG-1#8": {
+  "title": "Follow the clockwise turn",
+  "text": "Turn clockwise through 500°. The first 360° is one full clockwise turn back to the start, leaving 140° more to go clockwise. A clockwise turn of 140° ends at the same place as a counterclockwise turn of 360° − 140° = 220°. That is past 180° but short of 270°, so the terminal side is in Quadrant III."
+ },
+ "TRIG-1#9": {
+  "title": "Step round the wheel",
+  "text": "Each quarter turn is 90°, and 450 ÷ 90 = 5, so the car makes five quarter turns. Follow them counterclockwise from 3 o'clock: top, 9 o'clock, bottom, 3 o'clock, then top again. The fifth quarter turn leaves the car at the top of the wheel, which is the 90° position."
+ },
+ "TRIG-2#1": {
+  "title": "Measure with a piece of string",
+  "text": "Cut a string as long as the radius and lay it along the edge of the circle. The angle it covers at the center is 1 radian, about 57.3°. Lay the string end to end and you need a little more than 3 lengths, exactly π of them, to get halfway round. So half a turn is π radians, and 180 ÷ π ≈ 57.3 confirms the size of one radian."
+ },
+ "TRIG-2#2": {
+  "title": "Start from the degree formula",
+  "text": "In degrees, an arc is the fraction θ/360 of the circumference 2πr. In radians the fraction is θ/(2π), so the arc is θ/(2π) × 2πr. The 2π cancels and only rθ is left. Example: a radius of 5 and an angle of 2 radians give an arc of 10, because the angle holds two radius-lengths of 5 each."
+ },
+ "TRIG-2#3": {
+  "title": "A sector is nearly a triangle",
+  "text": "Think of a thin sector as a triangle whose base is the arc and whose height is the radius. The arc is rθ, so half of base times height is ½ × rθ × r = ½r²θ. Cutting any sector into many thin slices and adding these triangles gives the same total. Example: r = 4 and θ = 0.5 give ½ × 16 × 0.5 = 4."
+ },
+ "TRIG-2#4": {
+  "title": "Add two angles you know",
+  "text": "Split 135° into 90° + 45°. A quarter turn of 90° is π/2 radians, and half of that, 45°, is π/4 radians. Adding them with a common denominator gives 2π/4 + π/4 = 3π/4. No multiplying by π/180 is needed when the angle is built from familiar pieces."
+ },
+ "TRIG-2#5": {
+  "title": "Step back from a half turn",
+  "text": "The fraction 5π/6 is one sixth of π short of a whole π, because 6π/6 − π/6 = 5π/6. A whole π is a half turn of 180°, and one sixth of 180° is 30°. So the angle is 180° − 30° = 150°, which agrees with the conversion."
+ },
+ "TRIG-2#6": {
+  "title": "Lay radii along the arc",
+  "text": "An angle of 2.5 radians means the arc is 2.5 radius-lengths long. Lay them down one at a time: the first radius covers 8, the second brings the total to 16, and the last half radius adds 4 more. The arc is 8 + 8 + 4 = 20, the same as the formula gives."
+ },
+ "TRIG-2#7": {
+  "title": "Subtract from a half turn",
+  "text": "The angle 135° is 45° short of a straight angle: 180° − 45° = 135°. In radians a straight angle is π and 45° is π/4. So 135° is π − π/4, and with a common denominator that is 4π/4 − π/4 = 3π/4. Building up by multiples and stepping back from π give the same result."
+ },
+ "TRIG-2#8": {
+  "title": "Half of arc times radius",
+  "text": "Find the arc first: s = rθ = 6 × π/3 = 2π. A sector behaves like a triangle with the arc as its base and the radius as its height, so its area is ½ × arc × radius. That gives ½ × 2π × 6 = 6π, about 18.85, matching both the formula and the one-sixth-of-the-circle check."
+ },
+ "TRIG-2#9": {
+  "title": "Count the turns of the wheel",
+  "text": "One full turn is 2π ≈ 6.28 radians, so 10 radians is 10 ÷ 6.28 ≈ 1.59 turns. In one turn the bike rolls one circumference, 2π × 0.35 ≈ 2.2 m. So the distance is about 1.59 × 2.2 ≈ 3.5 m, the same as multiplying the radius by the angle directly."
+ },
+ "TRIG-3#1": {
+  "title": "Read the ratios as rates",
+  "text": "Think of walking up a straight ramp tilted at angle θ. The sine tells you how much height you gain for each metre walked along the ramp. The cosine tells you how much ground you cover for each metre walked. The tangent tells you how much height you gain for each metre of ground. On a ramp with sin θ = 0.6, walking 10 m lifts you 6 m."
+ },
+ "TRIG-3#2": {
+  "title": "A ladder shows all three cases",
+  "text": "A ladder leans on a wall at 70° to the ground. If you know the ladder's length and want the height it reaches, you have hypotenuse and opposite, so use sine. If you want how far its foot is from the wall, you have hypotenuse and adjacent, so use cosine. If you know the foot distance and want the height, no hypotenuse is involved, so use tangent."
+ },
+ "TRIG-3#3": {
+  "title": "Read the table backwards",
+  "text": "Picture a table with angles in one column and their sines in the other: 10° gives 0.174, 20° gives 0.342, 30° gives 0.5, 40° gives 0.643. Sine reads the table from left to right. Inverse sine reads it from right to left: find 0.643 in the ratio column and report the angle beside it, 40°."
+ },
+ "TRIG-3#4": {
+  "title": "Use the other acute angle",
+  "text": "The other acute angle is 90° − 40° = 50°, and the side of length 12 lies next to it. So cos 50° = 12 ÷ h, which gives h = 12 ÷ cos 50° = 12 ÷ 0.6428 ≈ 18.7. The same number appears because cos 50° and sin 40° are equal: the two angles are complementary."
+ },
+ "TRIG-3#5": {
+  "title": "Find the third side first",
+  "text": "Pythagoras gives the opposite side: √(10² − 7²) = √51 ≈ 7.14. Now use sine in place of cosine: sin θ = 7.14 ÷ 10 = 0.714, and the inverse sine of 0.714 is about 45.6°. A quick sense check: the two legs, 7 and 7.14, are almost equal, so the angle should be just over 45°."
+ },
+ "TRIG-3#6": {
+  "title": "Bracket it with known angles",
+  "text": "A 30° string would put the kite at 100 × ½ = 50 m, and a 45° string would put it at 100 × 0.707 ≈ 70.7 m. An angle of 35° is one third of the way from 30° to 45°, so expect a height about one third of the way from 50 to 70.7, close to 57 m. That agrees with 57.4 m."
+ },
+ "TRIG-3#7": {
+  "title": "Tangent skips the hypotenuse",
+  "text": "Tangent links the two legs directly: tan 40° = 12 ÷ a. So a = 12 ÷ tan 40° = 12 ÷ 0.8391 ≈ 14.3. This route uses only the numbers given in the problem, so a rounding slip in 18.7 cannot spoil it, and it matches the Pythagoras answer."
+ },
+ "TRIG-3#8": {
+  "title": "Use the angle at the top",
+  "text": "At the keeper, the line of sight makes 90° − 12° = 78° with the lighthouse wall. Seen from that angle, the distance d is the opposite side and the 30 m height is adjacent, so tan 78° = d ÷ 30. Then d = 30 × tan 78° ≈ 30 × 4.705 ≈ 141 m. It is the same answer, found by multiplying this time."
+ },
+ "TRIG-3#9": {
+  "title": "Estimate with a small angle",
+  "text": "For small angles, the tangent is almost equal to the angle measured in radians. So the ramp angle is about 0.12 radians. One radian is about 57.3°, so 0.12 × 57.3 ≈ 6.9°. The true angle is slightly smaller than this estimate, which fits the calculator value of 6.8°."
+ },
+ "TRIG-4#1": {
+  "title": "Try it with real lengths",
+  "text": "Give each leg a length of 5. Pythagoras says the hypotenuse squared is 25 + 25 = 50, so the hypotenuse is √50 = 5√2, about 7.07. With legs of 10 it is √200 = 10√2, about 14.14. Each time the hypotenuse is about 1.414 times a leg, roughly 41% longer, whatever the size of the triangle."
+ },
+ "TRIG-4#2": {
+  "title": "Start from a hypotenuse of 10",
+  "text": "Take a 30-60-90 triangle with hypotenuse 10. The short leg faces the 30° angle and is half the hypotenuse, 5. The long leg is √(100 − 25) = √75 ≈ 8.66, which is 5√3. Dividing 5, 8.66 and 10 by 5 gives 1, 1.732 and 2. The smallest side faces the smallest angle and the longest side faces the right angle."
+ },
+ "TRIG-4#3": {
+  "title": "One row, read both ways",
+  "text": "In decimals the sines of 30°, 45° and 60° are 0.5, 0.707 and 0.866. The cosines are the same three numbers in reverse order, because the cosine of an angle is the sine of its complement: cos 30° = sin 60° = 0.866. So only one row has to be learned. Each tangent is the sine entry divided by the cosine entry."
+ },
+ "TRIG-4#4": {
+  "title": "Get it from cos 60°",
+  "text": "The short leg of the 30-60-90 triangle is half the hypotenuse, so cos 60° = ½. The Pythagorean identity says sine squared plus cosine squared is 1, so sine squared is 1 − ¼ = ¾. Taking the positive root, because 60° is acute, gives sin 60° = √3 ÷ 2, about 0.866."
+ },
+ "TRIG-4#5": {
+  "title": "Pythagoras with equal legs",
+  "text": "Call each leg x. The two legs are equal, so the Pythagorean theorem reads x² + x² = 10², which is 2x² = 100. Then x² = 50 and x = √50. Since 50 = 25 × 2, the root simplifies to 5√2, about 7.07. Check: 7.07² + 7.07² is about 100."
+ },
+ "TRIG-4#6": {
+  "title": "Use tangent and cosine of 30°",
+  "text": "The long leg lies next to the 30° angle. Tangent gives the short leg: 9 × tan 30° = 9 × √3/3 = 3√3. Cosine gives the hypotenuse: 9 ÷ cos 30° = 9 ÷ (√3/2) = 18/√3 = 6√3. Check with Pythagoras: (3√3)² + 9² = 27 + 81 = 108, and (6√3)² is also 108."
+ },
+ "TRIG-4#7": {
+  "title": "Confirm each value from a triangle",
+  "text": "Check the pattern against the shapes. A flat triangle at 0° has no height, so the sine is 0. The triangle 1 : √3 : 2 gives sin 30° = 1/2 and sin 60° = √3/2. The triangle 1 : 1 : √2 gives sin 45° = 1/√2, which is √2/2. At 90° the opposite side is the hypotenuse, so the sine is 1. In decimals: 0, 0.5, 0.707, 0.866, 1."
+ },
+ "TRIG-4#8": {
+  "title": "Divide sine by cosine",
+  "text": "Tangent is sine divided by cosine. From the table, sin 30° = 1/2 and cos 30° = √3/2. Dividing, the halves cancel: (1/2) ÷ (√3/2) = 1/√3. Multiplying top and bottom by √3 gives √3/3, about 0.577. That is less than 1, as it should be for an angle below 45°."
+ },
+ "TRIG-4#9": {
+  "title": "Use cosine and sine directly",
+  "text": "The base is next to the 60° angle, so base = 6 × cos 60° = 6 × ½ = 3 m. The height is opposite it, so height = 6 × sin 60° = 6 × 0.866 ≈ 5.2 m, which is 3√3 exactly. Check with Pythagoras: 3² + (3√3)² = 9 + 27 = 36, which is 6², the square of the ladder length."
+ },
+ "TRIG-5#1": {
+  "title": "Shrink a bigger circle",
+  "text": "Take the point (4, 3), which is 5 units from the origin. Its triangle has cos θ = 4/5 and sin θ = 3/5. Now shrink everything by a factor of 5 so the point lands on the unit circle: it becomes (0.8, 0.6). The coordinates are now exactly the cosine and the sine, because the division by the hypotenuse has already been done."
+ },
+ "TRIG-5#2": {
+  "title": "Squash the triangle flat",
+  "text": "Imagine the triangle under the point as θ shrinks toward 0°. Its vertical leg shrinks to nothing and its horizontal leg grows to the full radius, so sin 0° = 0 and cos 0° = 1. As θ grows toward 90° the opposite happens, so cos 90° = 0 and sin 90° = 1. On a compass: east is (1, 0), north (0, 1), west (−1, 0), south (0, −1)."
+ },
+ "TRIG-5#3": {
+  "title": "Learn one point, know four",
+  "text": "The angles 30°, 150°, 210° and 330° all sit 30° away from the x-axis. Their points are (0.866, 0.5), (−0.866, 0.5), (−0.866, −0.5) and (0.866, −0.5). The same two numbers appear every time, and only the signs change to match the quadrant. So the 16 special points come from just three you memorize."
+ },
+ "TRIG-5#4": {
+  "title": "Rotate the 30° point",
+  "text": "Write 120° as 30° plus a quarter turn. A quarter turn counterclockwise sends any point (x, y) to (−y, x). The 30° point is (√3/2, 1/2), so after the quarter turn it is (−1/2, √3/2). Reading the coordinates gives cos 120° = −1/2 and sin 120° = √3/2."
+ },
+ "TRIG-5#5": {
+  "title": "Jump to the opposite point",
+  "text": "The angle 7π/6 is π/6 plus a half turn. A half turn carries every point straight through the center to the opposite side, turning (x, y) into (−x, −y). The point at π/6 is (√3/2, 1/2), so the point at 7π/6 is (−√3/2, −1/2). The sine is the second coordinate, −1/2."
+ },
+ "TRIG-5#6": {
+  "title": "Treat it as −45°",
+  "text": "The angle 315° is 45° short of a full turn, so it ends where −45° ends. Turning 45° clockwise gives the mirror image of the 45° point in the x-axis. A mirror in the x-axis flips only the height, so the x-coordinate stays the same: cos 315° = cos 45° = √2/2."
+ },
+ "TRIG-5#7": {
+  "title": "Use the line y = x",
+  "text": "The direction 5π/4, or 225°, points exactly halfway between the negative x-axis and the negative y-axis, along the line y = x. So the two coordinates are equal, and both are negative. On the unit circle x² + y² = 1 becomes 2x² = 1, so x = −√2/2 and y = −√2/2."
+ },
+ "TRIG-5#8": {
+  "title": "Tangent is the slope",
+  "text": "The tangent of θ is the slope of the radius drawn to the point. At 60° the radius climbs √3 for every 1 across, as in the 30-60-90 triangle with legs 1 and √3, so the slope is √3. At 90° the radius is vertical. A vertical line has no slope, which is another way to see that tan 90° is undefined."
+ },
+ "TRIG-5#9": {
+  "title": "Read it like a clock",
+  "text": "Each hour mark is 30°, so 240° is 8 hour marks counterclockwise from the 3. Counting back 2, 1, 12, 11, 10, 9, 8, 7 puts the tip at 7 o'clock, which is 30° to the left of straight down. So the tip is sin 30° = 1/2 to the left and cos 30° = √3/2 down: (−1/2, −√3/2)."
+ },
+ "TRIG-6#1": {
+  "title": "The shortest turn to the x-axis",
+  "text": "Ask how far the terminal side must turn to reach the nearest part of the x-axis. From 150° it is 30° to the 180° mark. From 200° it is 20° back to 180°. From 300° it is 60° on to 360°. As rules: in Quadrant II use 180° − θ, in Quadrant III use θ − 180°, and in Quadrant IV use 360° − θ."
+ },
+ "TRIG-6#2": {
+  "title": "See the signs in decimals",
+  "text": "Use a calculator on three angles that share the reference angle 30°. At 150°: sine 0.5, cosine −0.866, tangent −0.577, so only sine is positive. At 210°: sine −0.5, cosine −0.866, tangent 0.577, so only tangent is positive. At 330°: sine −0.5, cosine 0.866, tangent −0.577, so only cosine is positive. The sizes repeat; the signs follow A-S-T-C."
+ },
+ "TRIG-6#3": {
+  "title": "How far, then which way",
+  "text": "Giving directions takes two facts: how far to go and which way. The reference angle answers how far, and the quadrant answers which way. Try cos 240°. The reference angle is 60° and cos 60° = 1/2, so the size is 1/2. The angle 240° is in Quadrant III, to the left of the y-axis, so the cosine is −1/2."
+ },
+ "TRIG-6#4": {
+  "title": "Half a turn past 30°",
+  "text": "Write 210° as 30° + 180°. Adding a half turn sends a point straight through the center to the opposite side of the circle, so both coordinates change sign. The 30° point is (√3/2, 1/2), so the 210° point is (−√3/2, −1/2). Its height is the sine, −1/2."
+ },
+ "TRIG-6#5": {
+  "title": "Use the line y = −x",
+  "text": "The direction 135° points exactly halfway between the positive y-axis and the negative x-axis, along the line y = −x. So x and y have the same size, with x negative. On the unit circle x² + y² = 1 becomes 2x² = 1, which gives x = −1/√2 = −√2/2. That x-coordinate is cos 135°."
+ },
+ "TRIG-6#6": {
+  "title": "Divide the coordinates",
+  "text": "The point at 300° is the 60° point reflected below the x-axis: (1/2, −√3/2). Tangent is y divided by x, so tan 300° = (−√3/2) ÷ (1/2) = −√3. As a picture, the radius to that point slopes downhill, dropping √3 for every 1 across, and a downhill slope is negative."
+ },
+ "TRIG-6#7": {
+  "title": "Rotate the 45° point",
+  "text": "Start from the 45° point, (√2/2, √2/2), and turn it a further quarter turn to reach 135°. A quarter turn counterclockwise sends (x, y) to (−y, x), so the new point is (−√2/2, √2/2). Its x-coordinate is the cosine, so cos 135° = −√2/2, with the sign arriving automatically."
+ },
+ "TRIG-6#8": {
+  "title": "Switch to degrees",
+  "text": "Since π/3 is 60°, the angle 5π/3 is 5 × 60° = 300°. That is 60° short of a full turn, so it ends where −60° ends. The −60° point is the mirror image of the 60° point in the x-axis, and that mirror keeps the x-coordinate. So cos(5π/3) = cos 60° = 1/2."
+ },
+ "TRIG-6#9": {
+  "title": "Test one angle per quadrant",
+  "text": "Try a sample angle from each quadrant. At 30° the sine is positive, so Quadrant I fails. At 150° the sine is positive again, so Quadrant II fails. At 210° the sine is −0.5 and the tangent is 0.577, so both conditions hold. At 330° the sine is −0.5 but the tangent is −0.577, so Quadrant IV fails. Only Quadrant III passes."
+ },
+ "TRIG-7#1": {
+  "title": "One wave, worked through",
+  "text": "Take y = 3 sin(2x) + 1. The sine part swings between −1 and 1, so 3 sin(2x) swings between −3 and 3, and adding 1 moves that to between −2 and 4. The middle of that range is y = 1, and the wave reaches 3 above and below it. One cycle finishes when 2x reaches 2π, which is at x = π."
+ },
+ "TRIG-7#2": {
+  "title": "Cut the period into four",
+  "text": "The same recipe works for any sine wave. Split one period into four equal parts and mark the five x-values at the start, the quarters and the end. The heights go midline, maximum, midline, minimum, midline. For a wave with period 8 the marks are at x = 0, 2, 4, 6 and 8. Five dots and a smooth curve give the whole cycle."
+ },
+ "TRIG-7#3": {
+  "title": "Louder, but the same note",
+  "text": "Turning up the volume makes a sound wave taller without changing its pitch. Amplitude works the same way. In a table, sin x at x = 0, π/6 and π/2 is 0, 0.5 and 1, and 3 sin x is 0, 1.5 and 3. Each height is tripled, but 3 × 0 is still 0, so the crossings stay where they were."
+ },
+ "TRIG-7#4": {
+  "title": "Make a table of values",
+  "text": "Work out y = 4 cos x at the quarter points. At x = 0 it is 4, at π/2 it is 0, at π it is −4, at 3π/2 it is 0, and at 2π it is 4 again. The highest value is 4 and the lowest is −4, so the amplitude is 4. The values first return to the start at 2π, so the period is 2π."
+ },
+ "TRIG-7#5": {
+  "title": "Tabulate one cycle",
+  "text": "List x = 0, π/4, π/2, 3π/4 and π. Doubling each gives 2x = 0, π/2, π, 3π/2 and 2π, and the sines of those are 0, 1, 0, −1 and 0. That is one complete cycle of rise, fall and return, and it is finished by x = π. So the period is π."
+ },
+ "TRIG-7#6": {
+  "title": "Shift by π and compare",
+  "text": "A period is a shift that leaves the function unchanged. Replace x by x + π: sin(2(x + π)) = sin(2x + 2π), and adding 2π to a sine input changes nothing, so the result is sin(2x) again. A shift of only π/2 gives sin(2x + π), which is the opposite sign. So π is the smallest shift that works, and two cycles fit in 2π."
+ },
+ "TRIG-7#7": {
+  "title": "Halve the total height",
+  "text": "From trough to peak the wave covers 5 − 1 = 4 units. The amplitude is half of that full height, so it is 2. The midline is one amplitude above the trough, 1 + 2 = 3, or equally one amplitude below the peak, 5 − 2 = 3. Both routes agree: midline y = 3 and amplitude 2."
+ },
+ "TRIG-7#8": {
+  "title": "Add 2 to a table",
+  "text": "The key heights of sin x are 0, 1, 0, −1 and 0. Adding 2 to each gives 2, 3, 2, 1 and 2. The largest value is 3 and the smallest is 1, and the wave keeps returning to 2, which is the midline. The shape and the period are unchanged; every point has just been lifted 2 units."
+ },
+ "TRIG-7#9": {
+  "title": "Write the wave and test it",
+  "text": "Starting from the bottom, the height fits h = 25 − 20 cos(πt), with t in minutes. Test it: at t = 0 the height is 25 − 20 = 5 m. At t = 0.5 it is 25 m, level with the center. At t = 1 it is 25 + 20 = 45 m. At t = 2 it is back to 5 m. So the range is 5 m to 45 m and one cycle takes 2 minutes."
+ },
+ "TRIG-8#1": {
+  "title": "Follow one peak",
+  "text": "Compare y = 2 sin(x − π/4) + 3 with the plain wave y = 2 sin x. The plain wave has a peak at x = π/2 with height 2. The new wave peaks when x − π/4 = π/2, which is at x = 3π/4, and its height there is 2 + 3 = 5. That one peak has moved π/4 to the right and 3 up, and every other point on the graph moves in exactly the same way."
+ },
+ "TRIG-8#2": {
+  "title": "Think of a late timetable",
+  "text": "Treat x as the time on a clock and the graph as a timetable of events. A wave written with x − 2 looks up what the old timetable said two hours earlier, so every event now happens two hours late, and the graph sits further right. A wave written with x + 2 looks two hours ahead, so every event comes early and the graph sits further left."
+ },
+ "TRIG-8#3": {
+  "title": "Find where the cycles start",
+  "text": "Locate the starts of the cycles of sin(2x − π). A cycle starts when the inside is 0 or 2π, so 2x − π = 0 gives x = π/2 and 2x − π = 2π gives x = 3π/2. The plain wave sin(2x) starts its cycles at 0 and π. Each start has moved by π/2. As a rule of thumb, the shift is the number subtracted divided by B, here π ÷ 2."
+ },
+ "TRIG-8#4": {
+  "title": "Locate one peak and one trough",
+  "text": "A cosine peaks when its inside is 0, so x + π = 0 puts a peak at x = −π: the graph has moved π to the left. The peak height is 3 × 1 − 1 = 2 and the trough height is 3 × (−1) − 1 = −4. Halfway between is −1, the midline, so the graph is down 1 with amplitude 3. The coefficient of x is 1, so the period is still 2π."
+ },
+ "TRIG-8#5": {
+  "title": "Track a peak instead",
+  "text": "A sine wave peaks when its inside equals π/2. For sin(2x) that is 2x = π/2, so the peak is at x = π/4. For sin(2x − π) it is 2x − π = π/2, so 2x = 3π/2 and the peak is at x = 3π/4. The peak has moved from π/4 to 3π/4, a distance of π/2 to the right."
+ },
+ "TRIG-8#6": {
+  "title": "Check with four values",
+  "text": "Put the quarter points into y = 2 sin x + 1. At x = 0 the value is 2 × 0 + 1 = 1. At π/2 it is 2 × 1 + 1 = 3. At π it is 1 again. At 3π/2 it is 2 × (−1) + 1 = −1. The largest value is 3, the smallest is −1, and the wave keeps coming back to 1, the midline."
+ },
+ "TRIG-8#7": {
+  "title": "A quarter turn on the circle",
+  "text": "On the unit circle, a quarter turn counterclockwise sends the point (x, y) to (−y, x). So the height of the new point equals the old x-coordinate. Height is sine and x-coordinate is cosine, which says sin(θ + π/2) = cos θ. Test it at θ = 0: sin(π/2) = 1 and cos 0 = 1. At θ = π/2: sin π = 0 and cos(π/2) = 0."
+ },
+ "TRIG-8#8": {
+  "title": "Test the finished equation",
+  "text": "Put values into y = 2 cos(2x) + 4 and compare with the graph. At x = 0: 2 × 1 + 4 = 6, the peak. At x = π/2: 2 cos π + 4 = −2 + 4 = 2, the trough. At x = π: 2 cos 2π + 4 = 6, a peak again. The wave reaches 6 and 2 and repeats after π, so the equation fits all three facts."
+ },
+ "TRIG-8#9": {
+  "title": "Check the formula against the clock",
+  "text": "Test h = 4 cos(π/6 × (t − 3)) + 5 at the known times. At t = 3 the inside is 0, so h = 4 + 5 = 9 m, the high tide. At t = 9 the inside is π, so h = −4 + 5 = 1 m, the low tide. At t = 6 the inside is π/2, so h = 5 m, the middle. At t = 15 it is back to 9 m, twelve hours after the first high tide."
+ },
+ "TRIG-9#1": {
+  "title": "All six on one triangle",
+  "text": "Use a 3-4-5 right triangle and the angle opposite the side 3. The main three are sine 3/5, cosine 4/5 and tangent 3/4. Turn each fraction upside down for the others: cosecant 5/3, secant 5/4 and cotangent 4/3. Check the quotient rule too: (3/5) ÷ (4/5) = 3/4, which is the tangent."
+ },
+ "TRIG-9#2": {
+  "title": "Steeper and steeper lines",
+  "text": "Tangent is the slope of the terminal side. As the angle grows toward 90° the side tilts closer to vertical and its slope grows: about 5.7 at 80°, 57 at 89° and 573 at 89.9°. A vertical line has no slope at all, so the graph has a gap there. Cotangent is run over rise, so it breaks in the same way where the side is horizontal."
+ },
+ "TRIG-9#3": {
+  "title": "One line, two directions",
+  "text": "Tangent is the slope of the line through the origin at angle θ. A line points both ways, so the directions 40° and 220° lie on the very same line and share one slope: tan 40° and tan 220° are both about 0.839. That is why the values repeat every 180°, or π. For tan(2x), the inside reaches π when x is π/2, so the period is π/2."
+ },
+ "TRIG-9#4": {
+  "title": "Read it from the triangle",
+  "text": "In the 30-60-90 triangle with sides 1, √3 and 2, the side next to the 60° angle is the short leg, 1, and the hypotenuse is 2. Secant is cosine turned over, so it is hypotenuse over adjacent: 2 ÷ 1 = 2. No fraction inside a fraction is needed."
+ },
+ "TRIG-9#5": {
+  "title": "Adjacent over opposite",
+  "text": "The angle π/6 is 30°. In the triangle with sides 1, √3 and 2, the side opposite 30° is 1 and the side next to it is √3. Cotangent is tangent turned over, so it is adjacent over opposite: √3 ÷ 1 = √3, about 1.73. It also equals 1 ÷ tan 30° = 1 ÷ (1/√3)."
+ },
+ "TRIG-9#6": {
+  "title": "Plot some reciprocals",
+  "text": "Take a few sine values and flip them. At π/6 the sine is 0.5, so the cosecant is 2. At π/2 the sine is 1 and the cosecant is 1, where the graphs touch. At 5π/6 it is 2 again, making a U shape. Near 0 the sine is tiny, such as 0.01, so the cosecant is 100. At 3π/2 the sine is −1, and the cosecant is −1 in an upside-down U."
+ },
+ "TRIG-9#7": {
+  "title": "Reference angle, then sign",
+  "text": "The angle 135° is 45° away from the negative x-axis, so its reference angle is 45°, and tan 45° = 1 because the two legs are equal. That gives the size. For the sign, 135° is in Quadrant II, where x is negative and y is positive, so y ÷ x is negative. Together: tan 135° = −1."
+ },
+ "TRIG-9#8": {
+  "title": "Look at the top and bottom",
+  "text": "Cosine is the x-coordinate on the unit circle, so it is zero exactly where the point sits on the y-axis: at the very top and the very bottom. Those two points are half a turn apart. In degrees the breaks are at 90°, 270°, 450° and so on, always 180° apart, which is the same list as π/2 + kπ."
+ },
+ "TRIG-9#9": {
+  "title": "Put numbers in a table",
+  "text": "Work out the spot for several angles. At 45° it is 1 km along the shore. At 60° it is 1.73 km. At 80° it is 5.67 km, at 85° it is 11.4 km, and at 89° it is 57.3 km. At 89.9° it is 573 km. Each small step toward 90° throws the spot much further, and at 90° the beam runs parallel to the shore and never lands."
+ },
+ "TRIG-10#1": {
+  "title": "The horizontal line picture",
+  "text": "Draw the sine wave and the horizontal line y = 1/2. The line cuts the wave again and again, once for every angle whose sine is 1/2, so the question has many answers. Now keep only the part of the wave from −π/2 to π/2. It rises without ever turning back, so any horizontal line between −1 and 1 cuts it exactly once. One crossing means one answer."
+ },
+ "TRIG-10#2": {
+  "title": "Try a negative input",
+  "text": "Negative inputs show the difference. arcsin(−0.5) is −30°, not 210° or 330°, because its answers stay between −90° and 90°. arctan(−1) is −45°, not 135°, for the same reason. arccos(−0.5) is 120°, not 240°, because its answers stay between 0° and 180°. So arcsin and arctan give negative angles, while arccos gives obtuse ones."
+ },
+ "TRIG-10#3": {
+  "title": "Like squares and square roots",
+  "text": "Squaring and square roots behave the same way. The square root of 3² is 3, so the root undoes the square. But the square root of (−3)² is also 3, not −3, because the root only ever returns numbers that are zero or positive. In the same way arcsin only returns angles from −90° to 90°, so arcsin(sin 150°) comes back as 30°."
+ },
+ "TRIG-10#4": {
+  "title": "Draw the triangle",
+  "text": "A sine of √3/2 means opposite side √3 and hypotenuse 2. The third side is √(4 − 3) = 1, so this is the 30-60-90 triangle with sides 1, √3 and 2. The angle facing the long leg √3 is 60°, which is π/3 in radians. That is between −π/2 and π/2, so it is the answer arcsin gives."
+ },
+ "TRIG-10#5": {
+  "title": "Mirror the positive case",
+  "text": "Start with the easier value: arccos(1/2) is π/3, the point (1/2, √3/2). Changing the input to −1/2 moves the point to its mirror image across the y-axis, (−1/2, √3/2). That mirror point is as far from the negative x-axis as the first was from the positive one, so its angle is π − π/3 = 2π/3."
+ },
+ "TRIG-10#6": {
+  "title": "Think of a slope of −1",
+  "text": "Tangent is the slope of the terminal side. A slope of −1 means the line drops 1 for every 1 across, so it makes a 45° angle below the positive x-axis. Measured as a clockwise turn, that is −45°, or −π/4. The other end of the same line points at 135°, but that is outside arctan's range, so it is not the answer."
+ },
+ "TRIG-10#7": {
+  "title": "See why the other half fails",
+  "text": "Test the wrong halves. If arcsin used the top half, it could never return an angle with a negative sine, and 30° and 150° would both give 1/2. If arccos used the right half, cosine would only cover 0 to 1, and 60° and −60° would both give 1/2. So sine needs the right half, where heights run once from −1 to 1, and cosine needs the top half."
+ },
+ "TRIG-10#8": {
+  "title": "Match the heights on the circle",
+  "text": "On the unit circle, 150° and 30° are mirror images across the y-axis, so they sit at the same height, 1/2. Arcsin asks for the angle on the right half of the circle with that height, and that is 30°. The same idea works for any angle between 90° and 180°: arcsin(sin θ) = 180° − θ."
+ },
+ "TRIG-10#9": {
+  "title": "A small-angle shortcut",
+  "text": "For a small angle, the sine is almost the same as the angle measured in radians. So the ramp angle is about 1/12 of a radian, which is 0.0833. One radian is about 57.3°, and 0.0833 × 57.3 ≈ 4.8°. The shortcut agrees with the calculator, and it shows the ramp is gentle."
+ },
+ "TRIG-11#1": {
+  "title": "Check all three with 3-4-5",
+  "text": "Use the 3-4-5 triangle, where the sine is 0.6 and the cosine is 0.8. First identity: 0.36 + 0.64 = 1. The tangent is 0.75 and the secant is 1.25, and 1 + 0.5625 = 1.5625, which is 1.25 squared. The cotangent is 4/3 and the cosecant is 5/3, and 1 + 16/9 = 25/9. One triangle satisfies all three."
+ },
+ "TRIG-11#2": {
+  "title": "Watch it simplify a product",
+  "text": "Try simplifying sec θ × sin θ. Rewrite the secant as 1 over cos θ, and the product becomes sin θ over cos θ, which is tan θ. Check with the 3-4-5 triangle: the secant is 5/4 and the sine is 3/5, and (5/4) × (3/5) = 3/4, the tangent. Going back to sine and cosine made the answer appear."
+ },
+ "TRIG-11#3": {
+  "title": "Two angles share one sine",
+  "text": "Suppose sin θ = 0.6. Then the cosine squared is 1 − 0.36 = 0.64, so the cosine is 0.8 or −0.8. Both really happen. The angle 36.9° in Quadrant I has sine 0.6 and cosine 0.8. The angle 143.1° in Quadrant II also has sine 0.6, but its cosine is −0.8. The sine alone cannot tell them apart; the quadrant can."
+ },
+ "TRIG-11#4": {
+  "title": "Find the actual angle",
+  "text": "A calculator gives arcsin(3/5) ≈ 36.87°, the Quadrant I angle with that sine. The Quadrant II angle with the same sine is 180° − 36.87° = 143.13°. Its cosine is cos 143.13° ≈ −0.8, which is −4/5. The size and the sign both match the identity method."
+ },
+ "TRIG-11#5": {
+  "title": "Use triangle sides",
+  "text": "In a right triangle, the sine is opposite over hypotenuse and the cotangent is adjacent over opposite. Multiply them and the opposite side cancels, leaving adjacent over hypotenuse, which is the cosine. With a 3-4-5 triangle: (3/5) × (4/3) = 4/5, and 4/5 is the cosine of that angle."
+ },
+ "TRIG-11#6": {
+  "title": "Test it at 30°",
+  "text": "Put in θ = 30°. The cosine is √3/2, so the cosine squared is 3/4 and the top is 1 − 3/4 = 1/4. The bottom is sin 30° = 1/2. Dividing, (1/4) ÷ (1/2) = 1/2, which is exactly sin 30°. On the unit circle the same thing reads 1 − x² = y², and y² ÷ y = y."
+ },
+ "TRIG-11#7": {
+  "title": "Use a point and its distance",
+  "text": "Place the angle on a grid. A sine of 3/5 in Quadrant II fits the point (−4, 3), which is √(16 + 9) = 5 units from the origin. For any point, cosine is the x-coordinate divided by that distance, so cos θ = −4 ÷ 5 = −4/5. The minus sign comes with the coordinate, so there is no separate sign step."
+ },
+ "TRIG-11#8": {
+  "title": "Rewrite with sine and cosine",
+  "text": "Change both terms to sines and cosines. The secant squared is 1 over cos²θ, and the tangent squared is sin²θ over cos²θ. Subtracting gives (1 − sin²θ) over cos²θ. The top is cos²θ by the first Pythagorean identity, so the fraction is cos²θ over cos²θ, which is 1 wherever the cosine is not zero."
+ },
+ "TRIG-11#9": {
+  "title": "Expand the square",
+  "text": "Multiply out (sin θ + cos θ)². It gives sin²θ + 2 sin θ cos θ + cos²θ. The two squares add to 1, so the expression is 1 + 2 sin θ cos θ. That equals 1 only when sin θ or cos θ is zero, not for every angle. At 45° the extra part is 2 × ½ = 1, giving 2, so this is not an identity."
+ },
+ "TRIG-12#1": {
+  "title": "Test them at 60° and 30°",
+  "text": "Put A = 60° and B = 30°, so A + B = 90°. Sine: (√3/2)(√3/2) + (1/2)(1/2) = 3/4 + 1/4 = 1, and sin 90° is 1. Cosine: (1/2)(√3/2) − (√3/2)(1/2) = 0, and cos 90° is 0. Both formulas give the right values, and the minus in the cosine formula is what makes the two products cancel."
+ },
+ "TRIG-12#2": {
+  "title": "Try every version at 30°",
+  "text": "Let θ = 30°, so the double angle is 60°. Sine: 2 × (1/2) × (√3/2) = √3/2, which is sin 60°. Cosine, first version: 3/4 − 1/4 = 1/2. Second version: 2 × 3/4 − 1 = 1/2. Third version: 1 − 2 × 1/4 = 1/2. All three give cos 60° = 1/2, so you may use whichever matches what you know."
+ },
+ "TRIG-12#3": {
+  "title": "Other functions refuse too",
+  "text": "Sine is not alone in this. The square root of 9 + 16 is 5, but √9 + √16 is 7. The square of 2 + 3 is 25, but 2² + 3² is 13. Only multiplying by a number spreads over a sum. A second sine example: sin(90° + 90°) = sin 180° = 0, yet sin 90° + sin 90° = 2."
+ },
+ "TRIG-12#4": {
+  "title": "Split it as 120° − 45°",
+  "text": "Another split works too: 75° = 120° − 45°. The difference formula gives sin 120° cos 45° − cos 120° sin 45°. With cos 120° = −1/2, that is (√3/2)(√2/2) − (−1/2)(√2/2) = √6/4 + √2/4. The result is (√6 + √2)/4 again, about 0.966, so the answer does not depend on the split."
+ },
+ "TRIG-12#5": {
+  "title": "Split it as 60° − 45°",
+  "text": "Write 15° as 60° − 45° instead. The cosine difference formula gives cos 60° cos 45° + sin 60° sin 45°, which is (1/2)(√2/2) + (√3/2)(√2/2) = √2/4 + √6/4. That is (√6 + √2)/4 again, about 0.966. A value that close to 1 fits, since 15° is a small angle."
+ },
+ "TRIG-12#6": {
+  "title": "Go through cos 2θ",
+  "text": "Use a formula that needs only the sine: cos 2θ = 1 − 2 sin²θ = 1 − 2 × 9/25 = 7/25. Then sin²(2θ) = 1 − 49/625 = 576/625, so sin 2θ is 24/25 or −24/25. Since θ is about 36.9°, the angle 2θ is about 73.7°, still in Quadrant I, so the sine is positive: 24/25."
+ },
+ "TRIG-12#7": {
+  "title": "Use the difference formula",
+  "text": "Write 15° as 90° − 75° and apply the cosine difference formula: cos 90° cos 75° + sin 90° sin 75°. Since cos 90° = 0 and sin 90° = 1, only sin 75° is left. So cos 15° = sin 75° = (√6 + √2)/4. A calculator agrees: both are about 0.966."
+ },
+ "TRIG-12#8": {
+  "title": "Compare two areas",
+  "text": "Draw an isosceles triangle with two sides of length 1 and an angle of 2x between them. Its area is ½ × 1 × 1 × sin 2x. Now cut it down the middle into two right triangles, each with legs sin x and cos x. Their total area is 2 × ½ × sin x cos x = sin x cos x. Setting the two areas equal and doubling gives 2 sin x cos x = sin 2x."
+ },
+ "TRIG-12#9": {
+  "title": "Use the tangent version",
+  "text": "There is a double-angle formula that uses the tangent directly: cos 2θ = (1 − tan²θ) ÷ (1 + tan²θ). With tan θ = 3/4, tan²θ = 9/16, so the top is 7/16 and the bottom is 25/16. Dividing gives 7/25. As a check, θ is about 36.87°, and cos 73.74° ≈ 0.28, which is 7/25."
+ },
+ "TRIG-13#1": {
+  "title": "A short example, start to finish",
+  "text": "Solve 2 sin x + 1 = 2. Subtract 1 and divide by 2, just as for 2u + 1 = 2, to get sin x = 1/2. Now the algebra is over and the circle takes charge. Sine is height, and the height 1/2 is reached at 30° on the right and at 150° on the left. Those two mirror-image angles are the solutions in one turn."
+ },
+ "TRIG-13#2": {
+  "title": "List the solutions in order",
+  "text": "Write out the solutions of sin x = 1/2 in degrees: 30°, 150°, 390°, 510°, 750° and so on, and backwards −210°, −330°. They fall into two families, each stepping by 360°. For tan x = 1 the list is 45°, 225°, 405°, 585°: one family stepping by 180°. The formulas with k are just a short way to write these lists."
+ },
+ "TRIG-13#3": {
+  "title": "Watch a solution disappear",
+  "text": "Test x = π in 2sin²x − sin x = 0. Since sin π = 0, the left side is 0 − 0 = 0, so π is a solution. Now suppose you had divided by sin x to get 2 sin x − 1 = 0. At x = π that reads −1 = 0, which is false. The division threw away a true solution, and factoring keeps it."
+ },
+ "TRIG-13#4": {
+  "title": "Draw a vertical line",
+  "text": "Cosine is the x-coordinate on the unit circle, so cos x = √3/2 asks where the vertical line at 0.866 meets the circle. It meets it twice, at mirror-image points above and below the x-axis. The upper one is at π/6. The lower one is at −π/6, which as a positive angle is 2π − π/6 = 11π/6."
+ },
+ "TRIG-13#5": {
+  "title": "Draw the line y = −x",
+  "text": "Tangent is y ÷ x, so tan x = −1 means y = −x. That line passes through the origin and meets the unit circle at two opposite points. One is in Quadrant II, halfway between the axes, at 3π/4. The other is directly opposite in Quadrant IV, half a turn later, at 3π/4 + π = 7π/4."
+ },
+ "TRIG-13#6": {
+  "title": "Test each answer",
+  "text": "Put the four answers back in. At x = 0 and x = π the sine is 0, so the left side is 0 − 0 = 0. At x = π/6 and x = 5π/6 the sine is 1/2, so it is 2 × 1/4 − 1/2 = 0. All four work. Trying another angle such as π/2 gives 2 − 1 = 1, not 0, so nothing was missed there."
+ },
+ "TRIG-13#7": {
+  "title": "Use the symmetry of cosine",
+  "text": "Cosine gives the same value for an angle and its negative, because turning clockwise or counterclockwise by the same amount reaches the same x-coordinate. One solution is π/6, since cos(π/6) = √3/2. So −π/6 is another, and adding a full turn brings it into range: −π/6 + 2π = 11π/6. Both check: each has cosine about 0.87."
+ },
+ "TRIG-13#8": {
+  "title": "Count the peaks on the graph",
+  "text": "The wave y = sin 2x has period π, so it fits two full cycles between 0 and 2π. Each cycle has exactly one peak, where the value is 1. The first peak is a quarter of a period in, at x = π/4. The next is one period later, at π/4 + π = 5π/4. Two cycles, two peaks, two solutions."
+ },
+ "TRIG-13#9": {
+  "title": "Use the symmetry of the swing",
+  "text": "The wave 10 sin(πt) rises from 0 at t = 0 to its peak of 10 at t = 1/2, then falls back to 0 at t = 1. Going up, it passes 5 when πt = π/6, at t = 1/6. The arch is symmetric about t = 1/2, so coming down it passes 5 equally far from the end: t = 1 − 1/6 = 5/6."
+ },
+ "TRIG-14#1": {
+  "title": "Check it on a known triangle",
+  "text": "Try the 30-60-90 triangle with sides 1, √3 and 2. The side 1 faces 30°, and 1 ÷ sin 30° = 1 ÷ 0.5 = 2. The side √3 faces 60°, and √3 ÷ (√3/2) = 2. The side 2 faces 90°, and 2 ÷ 1 = 2. All three ratios equal 2, just as the law says."
+ },
+ "TRIG-14#2": {
+  "title": "Two sticks and a hinge",
+  "text": "Join sticks of length 3 and 4 with a hinge. The gap between their free ends is the third side. With the hinge at 90° the gap is 5, by Pythagoras. Close it to 60° and the law gives 25 − 24 × 0.5 = 13, so the gap shrinks to about 3.6. Open it to 120° and it gives 25 + 12 = 37, a gap of about 6.1."
+ },
+ "TRIG-14#3": {
+  "title": "Sort by what you are given",
+  "text": "Go through the cases. Two angles and any side: find the third angle, then use the Law of Sines. Two sides and an angle facing one of them: Law of Sines, watching for two answers. Two sides and the angle between them: Law of Cosines for the third side. Three sides: Law of Cosines for an angle. Given 5, 7 and an included 40°, no angle faces a known side, so it is cosines."
+ },
+ "TRIG-14#4": {
+  "title": "Drop a height from C",
+  "text": "Draw the height h from corner C down to side c. In the right triangle that contains angle B, the hypotenuse is a = 10, so h = 10 × sin 60° ≈ 8.66. In the right triangle that contains angle A, the hypotenuse is b, so h = b × sin 40°. Then b = 8.66 ÷ 0.6428 ≈ 13.5, with no formula to memorize."
+ },
+ "TRIG-14#5": {
+  "title": "Put the triangle on a grid",
+  "text": "Place C at the origin and B at (7, 0). Corner A is 9 units from C in the direction 50°, so it is at (9 cos 50°, 9 sin 50°) ≈ (5.79, 6.89). The distance from A to B is √((7 − 5.79)² + 6.89²) = √(1.47 + 47.53) = √49.0, which is about 7.0. The distance formula does the same job as the law."
+ },
+ "TRIG-14#6": {
+  "title": "Find the other two angles",
+  "text": "Use the law on the smaller angles and subtract. Opposite 5: cos A = (49 + 100 − 25) ÷ 140 ≈ 0.886, so A ≈ 27.7°. Opposite 7: cos B = (25 + 100 − 49) ÷ 100 = 0.76, so B ≈ 40.5°. The angles add to 180°, so C ≈ 180 − 27.7 − 40.5 = 111.8°. A quick sign check agrees: 10² = 100 is more than 25 + 49, so C is obtuse."
+ },
+ "TRIG-14#7": {
+  "title": "Check with three sides",
+  "text": "The same triangle has a third side of about 7.0, found earlier with the Law of Cosines. Heron's formula uses only the sides. Half the perimeter is (7 + 9 + 7) ÷ 2 = 11.5. The area is √(11.5 × 4.5 × 2.5 × 4.5) = √582.2 ≈ 24.1. It matches the sine formula, although no angle was used."
+ },
+ "TRIG-14#8": {
+  "title": "Compare a with the height",
+  "text": "Before any algebra, find the height from C to the base line: h = b sin A = 10 × 0.5 = 5. Side a = 6 swings from C like a compass arm. It is longer than 5, so it reaches the base line, and shorter than b = 10, so it reaches it in two places on the same side of A. Two crossing points mean two triangles, with B ≈ 56.4° or 123.6°."
+ },
+ "TRIG-14#9": {
+  "title": "Use coordinates for the lake",
+  "text": "Put C at the origin and A at (120, 0). Point B is 150 m away in the direction 70°, at (150 cos 70°, 150 sin 70°) ≈ (51.3, 141.0). The gap from A to B is 68.7 across and 141.0 up, so AB = √(68.7² + 141.0²) = √(4720 + 19881) ≈ √24601 ≈ 157 m, matching the Law of Cosines."
  }
 }

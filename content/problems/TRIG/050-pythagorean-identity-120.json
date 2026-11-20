@@ -39,16 +39,17 @@
     {
       "title": "It is the Pythagorean theorem in disguise",
       "steps": [
-        "The point $(x, y)$ on the unit circle is the tip of a right triangle with legs $|x|$ and $|y|$ and hypotenuse 1.",
-        "Pythagoras says $x^2 + y^2 = 1^2$, and $x = \\cos\\theta$, $y = \\sin\\theta$.",
-        "So $\\cos^2\\theta + \\sin^2\\theta = 1$ for every angle, no computation required."
+        "Drop a line from the unit-circle point $(x, y)$ to the $x$-axis to make a right triangle with legs $|x|$ and $|y|$ and hypotenuse $1$, the radius.",
+        "The Pythagorean theorem says $x^2 + y^2 = 1^2$, and on the unit circle $x = \\cos\\theta$ and $y = \\sin\\theta$.",
+        "So $(\\cos 120^\\circ)^2 + (\\sin 120^\\circ)^2 = 1$ with no arithmetic at all, and the same holds for every angle."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "The trap answer is $\\frac{1}{2}$, from writing $-\\frac{1}{4} + \\frac{3}{4}$ — carrying the minus sign through the squaring.",
-        "Squaring destroys a negative sign: $(-\\frac{1}{2}) \\times (-\\frac{1}{2}) = +\\frac{1}{4}$, because a negative times a negative is positive. Put parentheses around the whole value before you square it, and the sum comes out to 1."
+        "The trap answer is $\\frac{1}{2}$, which comes from writing $-\\frac{1}{4} + \\frac{3}{4}$ and so carrying the minus sign through the squaring.",
+        "Squaring removes a negative sign: $\\left(-\\frac{1}{2}\\right) \\times \\left(-\\frac{1}{2}\\right) = +\\frac{1}{4}$, because a negative times a negative is positive.",
+        "Put brackets around the whole value before squaring, and the sum is $\\frac{1}{4} + \\frac{3}{4} = 1$."
       ]
     }
   ],

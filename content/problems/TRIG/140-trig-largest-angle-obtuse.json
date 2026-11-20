@@ -39,17 +39,17 @@
     {
       "title": "You could predict the sign first",
       "steps": [
-        "Compare $c^2 = 400$ with $a^2 + b^2 = 64 + 225 = 289$.",
-        "Since $400 > 289$, the triangle is stretched past a right angle and the largest angle must be obtuse.",
-        "Knowing that in advance means you would immediately distrust any answer under $90^\\circ$."
+        "Compare $c^2 = 400$ with $a^2 + b^2 = 64 + 225 = 289$ before doing any trigonometry.",
+        "Since $400 > 289$, the triangle is stretched past a right angle, so the largest angle must be obtuse and its cosine negative.",
+        "That rules out any answer under $90^\\circ$ and agrees with $\\arccos(-0.4625) \\approx 117.5^\\circ$."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
         "The common wrong answer is $62.5^\\circ$, from dropping the minus sign and computing $\\arccos(0.4625)$.",
-        "Notice that $62.5^\\circ$ and $117.5^\\circ$ add to $180^\\circ$ — losing the sign hands you the supplement, the angle on the wrong side.",
-        "Keep the negative all the way into the arccosine. Unlike $\\arcsin$, $\\arccos$ is perfectly happy to return an obtuse angle, and a negative input is your signal that it should."
+        "Notice that $62.5^\\circ$ and $117.5^\\circ$ add to $180^\\circ$: losing the sign gives the supplement, the angle on the wrong side.",
+        "Keep the negative all the way into the arccosine, which is able to return an obtuse angle, and the result is $117.5^\\circ$."
       ]
     }
   ],

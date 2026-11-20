@@ -40,9 +40,9 @@
     {
       "title": "Test it with $\\theta = 60^\\circ$",
       "steps": [
-        "$\\cos 60^\\circ = 0.5$ and $\\tan 60^\\circ \\approx 1.732$.",
-        "Their product is $0.5 \\times 1.732 \\approx 0.866$.",
-        "And $\\sin 60^\\circ \\approx 0.866$ ✓ — the simplification checks out."
+        "At the test angle $\\theta = 60^\\circ$ the two values are $\\cos 60^\\circ = 0.5$ and $\\tan 60^\\circ \\approx 1.732$.",
+        "Multiply them as the expression says: their product is $0.5 \\times 1.732 \\approx 0.866$.",
+        "That is the value of $\\sin 60^\\circ \\approx 0.866$, which supports the answer $\\sin\\theta$, written sin(theta)."
       ]
     }
   ],

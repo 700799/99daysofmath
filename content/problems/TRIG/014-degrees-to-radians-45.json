@@ -39,8 +39,9 @@
     {
       "title": "Halve a familiar angle",
       "steps": [
-        "You already know $90^\\circ = \\frac{\\pi}{2}$.",
-        "$45^\\circ$ is half of that, and half of $\\frac{\\pi}{2}$ is $\\frac{\\pi}{4}$."
+        "Start from a fact worth knowing by heart: a quarter turn is $90^\\circ = \\frac{\\pi}{2}$ radians.",
+        "The angle $45^\\circ$ is half of $90^\\circ$, so its radian measure is half as big too.",
+        "Half of $\\frac{\\pi}{2}$ is $\\frac{\\pi}{4}$, so the angle $45^\\circ$ equals $\\frac{\\pi}{4}$ radians."
       ]
     }
   ],

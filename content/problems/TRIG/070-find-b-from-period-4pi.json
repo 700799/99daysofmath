@@ -42,16 +42,17 @@
     {
       "title": "Stretch or squeeze?",
       "steps": [
-        "The normal period is $2\\pi$, and this wave takes $4\\pi$ — twice as long — so the graph is STRETCHED horizontally.",
-        "Stretching requires an inside factor smaller than 1, which rules out any answer bigger than 1.",
-        "Halving the speed means $b = \\frac{1}{2}$."
+        "The normal period of sine is $2\\pi$, and this wave takes $4\\pi$, which is twice as long, so the graph is stretched horizontally.",
+        "A stretch needs an inside factor smaller than $1$, because a smaller $b$ makes the input run more slowly.",
+        "To take twice as long, the input must run at half speed, so $b = \\frac{1}{2}$."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "The trap answer is $b = 2$: the period doubled, so it feels like $b$ should double too. But $b$ sits in the DENOMINATOR of $\\frac{2\\pi}{b}$, so a bigger $b$ makes a shorter period, not a longer one.",
-        "Test the suspect answer before committing: $b = 2$ would give period $\\frac{2\\pi}{2} = \\pi$, far too short. $b = \\frac{1}{2}$ gives $\\frac{2\\pi}{1/2} = 4\\pi$. ✓"
+        "The trap answer is $b = 2$: the period doubled, so it feels as if $b$ should double too.",
+        "But $b$ is in the denominator of $\\frac{2\\pi}{b}$, so a bigger $b$ makes a shorter period, and $b = 2$ would give $\\frac{2\\pi}{2} = \\pi$.",
+        "Testing $b = \\frac{1}{2}$ gives $\\frac{2\\pi}{1/2} = 4\\pi$, the period asked for, so $b = \\frac{1}{2}$."
       ]
     }
   ],

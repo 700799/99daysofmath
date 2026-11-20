@@ -39,9 +39,9 @@
     {
       "title": "Flip the tangent",
       "steps": [
-        "$\\tan 30^\\circ = \\frac{1}{\\sqrt{3}}$, and cotangent is its reciprocal.",
-        "Flipping gives $\\cot 30^\\circ = \\sqrt{3} \\approx 1.732$.",
-        "That is bigger than $1$, which makes sense: a shallow $30^\\circ$ ramp runs much further than it rises."
+        "From the $30$-$60$-$90$ triangle, $\\tan 30^\\circ = \\frac{1}{\\sqrt{3}}$, which is opposite $1$ over adjacent $\\sqrt{3}$.",
+        "Cotangent is the reciprocal of tangent, so flip the fraction: $\\cot 30^\\circ = \\frac{\\sqrt{3}}{1}$.",
+        "That gives $\\cot 30^\\circ = \\sqrt{3} \\approx 1.732$, bigger than $1$ because a shallow $30^\\circ$ ramp runs further than it rises."
       ]
     }
   ],

@@ -56,9 +56,10 @@
     {
       "title": "Compare the three inverses",
       "steps": [
-        "$\\arcsin$ returns $-90^\\circ$ to $90^\\circ$ (quadrants IV and I).",
-        "$\\arccos$ returns $0^\\circ$ to $180^\\circ$ (quadrants I and II).",
-        "$\\arctan$ returns strictly between $-90^\\circ$ and $90^\\circ$ (quadrants IV and I). Only $\\arccos$ can hand back an obtuse angle."
+        "The function $\\arcsin$ returns angles from $-90^\\circ$ to $90^\\circ$, which covers Quadrants IV and I.",
+        "The function $\\arctan$ returns angles strictly between $-90^\\circ$ and $90^\\circ$, the same two quadrants.",
+        "Cosine is positive all through those quadrants, so $\\arccos$ needs a different piece: $0^\\circ$ to $180^\\circ$, where cosine runs from $1$ down to $-1$.",
+        "Only $\\arccos$ can return an obtuse angle, and its range is $0^\\circ$ to $180^\\circ$, choice A."
       ]
     }
   ],

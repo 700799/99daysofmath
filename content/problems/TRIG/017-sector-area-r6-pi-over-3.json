@@ -56,9 +56,9 @@
     {
       "title": "Fraction of the whole pizza",
       "steps": [
-        "$\\frac{\\pi}{3}$ radians is $60^\\circ$, which is $\\frac{1}{6}$ of the pizza.",
-        "The whole pizza has area $\\pi r^2 = 36\\pi$.",
-        "One sixth of $36\\pi$ is $6\\pi$ square inches — the same answer."
+        "A full turn is $2\\pi$ radians, so an angle of $\\frac{\\pi}{3}$ is $\\frac{\\pi/3}{2\\pi} = \\frac{1}{6}$ of the pizza, a $60^\\circ$ slice.",
+        "The whole pizza has area $\\pi r^2 = \\pi(6)^2 = 36\\pi$ square inches.",
+        "One sixth of $36\\pi$ is $6\\pi$ square inches, which is choice B."
       ]
     }
   ],

@@ -38,9 +38,17 @@
     {
       "title": "Check it numerically",
       "steps": [
-        "$\\sqrt{6} \\approx 2.449$ and $\\sqrt{2} \\approx 1.414$, so the answer is about $\\frac{3.863}{4} \\approx 0.966$.",
-        "A calculator gives $\\sin 75^\\circ \\approx 0.966$ ✓",
-        "That is close to $1$, which fits: $75^\\circ$ is not far from $90^\\circ$."
+        "Use $\\sqrt{6} \\approx 2.449$ and $\\sqrt{2} \\approx 1.414$, so the exact answer is about $\\frac{3.863}{4} \\approx 0.966$.",
+        "A calculator in degree mode gives $\\sin 75^\\circ \\approx 0.966$, the same number.",
+        "A value close to $1$ also makes sense because $75^\\circ$ is not far from $90^\\circ$, so $\\frac{\\sqrt{6} + \\sqrt{2}}{4}$ is confirmed."
+      ]
+    },
+    {
+      "title": "Split it another way",
+      "steps": [
+        "Write $75^\\circ = 120^\\circ - 45^\\circ$ and use the difference formula $\\sin(A - B) = \\sin A\\cos B - \\cos A\\sin B$.",
+        "Substituting the exact values for $120^\\circ$ and $45^\\circ$ gives $\\frac{\\sqrt{3}}{2}\\cdot\\frac{\\sqrt{2}}{2} - \\left(-\\frac{1}{2}\\right)\\cdot\\frac{\\sqrt{2}}{2} = \\frac{\\sqrt{6}}{4} + \\frac{\\sqrt{2}}{4}$.",
+        "The result is $\\frac{\\sqrt{6} + \\sqrt{2}}{4}$ again, so the choice of split does not matter."
       ]
     }
   ],

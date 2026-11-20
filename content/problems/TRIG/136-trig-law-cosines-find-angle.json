@@ -34,9 +34,9 @@
     {
       "title": "Is the triangle acute or obtuse?",
       "steps": [
-        "Compare $c^2 = 49$ with $a^2 + b^2 = 61$.",
-        "Since $49 < 61$, the angle is smaller than $90^\\circ$ — the triangle is acute.",
-        "That matches $78.5^\\circ$, and it is a quick check you can do before touching a calculator."
+        "Compare $c^2 = 49$ with $a^2 + b^2 = 25 + 36 = 61$; because $49 < 61$, the angle opposite $7$ is smaller than $90^\\circ$.",
+        "It is still the largest angle in the triangle, since it faces the longest side, so it must be more than $60^\\circ$.",
+        "An answer between $60^\\circ$ and $90^\\circ$ is expected, and $\\arccos(0.2) \\approx 78.5^\\circ$ fits that window."
       ]
     }
   ],
