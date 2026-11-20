@@ -30,6 +30,16 @@
     "Count up from $2.36$ to find the difference: $2.36 + 0.64 = 3.00$, and then $3.00 + 2.00 = 5.00$.",
     "The two jumps add to $0.64 + 2.00 = 2.64$, so $5 - 2.36 = 2.64$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Subtract from 4.99",
+      "steps": [
+        "Borrowing across zeros is messy, so think of $5$ as $4.99 + 0.01$.",
+        "Subtract from $4.99$ with no regrouping at all: $4.99 - 2.36 = 2.63$.",
+        "Put back the extra hundredth that was set aside: $2.63 + 0.01 = 2.64$."
+      ]
+    }
+  ],
   "tags": [
     "decimals",
     "subtraction"

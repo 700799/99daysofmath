@@ -36,9 +36,9 @@
     {
       "title": "Standard algorithm",
       "steps": [
-        "$25 \\times 9 = 225$.",
-        "$25 \\times 40 = 1000$.",
-        "$1000 + 225 = 1225$."
+        "Stack $25$ over $49$ and multiply by the ones digit first: $25 \\times 9 = 225$.",
+        "Next multiply by the tens digit, which stands for $40$: $25 \\times 40 = 1000$.",
+        "Add the two rows to get the full product: $1000 + 225 = 1225$."
       ]
     }
   ],

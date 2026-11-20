@@ -34,8 +34,9 @@
     {
       "title": "Use the other fraction",
       "steps": [
-        "If $\\frac{3}{8}$ brought lunch, then $\\frac{5}{8}$ did not.",
-        "$\\frac{5}{8} \\times 40 = 5 \\times 5 = 25$ — the same $25$ students."
+        "If $\\frac{3}{8}$ of the students brought lunch, the rest of the group is $\\frac{8}{8} - \\frac{3}{8} = \\frac{5}{8}$.",
+        "One eighth of $40$ students is $40 \\div 8 = 5$ students.",
+        "Five eighths is $5 \\times 5 = 25$, so $25$ students did not bring lunch from home."
       ]
     }
   ],

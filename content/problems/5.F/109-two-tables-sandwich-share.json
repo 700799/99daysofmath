@@ -40,16 +40,17 @@
     {
       "title": "Decimal check",
       "steps": [
-        "$\\frac{3}{4} = 0.75$ and $\\frac{5}{6} \\approx 0.833$.",
-        "The gap is about $0.083$, and $\\frac{1}{12} \\approx 0.083$ ✓"
+        "Each kid at Table A gets $3 \\div 4 = 0.75$ of a sandwich, and each kid at Table B gets $5 \\div 6$, about $0.833$.",
+        "The gap between the two shares is about $0.833 - 0.75 = 0.083$ of a sandwich.",
+        "Dividing $1 \\div 12$ also gives about $0.083$, so the difference is $\\frac{1}{12}$ of a sandwich."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "The most common wrong answer is $\\frac{2}{2} = 1$ or $\\frac{2}{12}$, from subtracting the sandwiches and the kids separately: $5 - 3 = 2$ and $6 - 4 = 2$.",
-        "You cannot subtract numerators and denominators like that — $\\frac{5}{6}$ and $\\frac{3}{4}$ are counting different-sized pieces.",
-        "Make the pieces the same size first ($\\frac{10}{12}$ and $\\frac{9}{12}$), then subtract only the numerators: $\\frac{1}{12}$."
+        "A common wrong answer is $\\frac{2}{2} = 1$, from subtracting the sandwiches and the kids separately: $5 - 3 = 2$ and $6 - 4 = 2$.",
+        "Fractions cannot be subtracted that way, because $\\frac{5}{6}$ and $\\frac{3}{4}$ count pieces of different sizes.",
+        "Make the pieces the same size first, $\\frac{10}{12}$ and $\\frac{9}{12}$, and then subtract only the numerators to get $\\frac{1}{12}$."
       ]
     }
   ],

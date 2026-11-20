@@ -36,8 +36,8 @@
     {
       "title": "Zero-counting shortcut",
       "steps": [
-        "A power of ten has as many zeros as its exponent.",
-        "Exponent $3$ → three zeros → $1000$."
+        "Every factor of $10$ puts one more zero on the end, so a power of ten is a $1$ followed by as many zeros as the exponent.",
+        "The exponent here is $3$, so write a $1$ with three zeros after it: $10^3 = 1000$."
       ]
     }
   ],

@@ -41,8 +41,9 @@
     {
       "title": "Friendly-number shortcut",
       "steps": [
-        "$3 \\times \\$5 = \\$15$, but that overcounts $3 \\times \\$0.25 = \\$0.75$.",
-        "Cost $= 15 - 0.75 = \\$14.25$; change $= \\$5.75$."
+        "Pretend each smoothie costs $5$ dollars, so three would cost $3 \\times 5 = 15$ dollars.",
+        "Each real price is $25$ cents lower, so that guess is too high by $3 \\times 0.25 = 0.75$ dollars. The real cost is $15 - 0.75 = 14.25$ dollars.",
+        "The change from $20$ dollars is $20 - 14.25 = 5.75$ dollars."
       ]
     }
   ],

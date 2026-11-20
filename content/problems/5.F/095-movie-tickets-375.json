@@ -38,9 +38,9 @@
     {
       "title": "Friendly-number shortcut",
       "steps": [
-        "$\\$3.75$ is $\\$4$ minus $25¢$.",
-        "$6 \\times \\$4 = \\$24$, and $6 \\times 25¢ = \\$1.50$.",
-        "$\\$24 - \\$1.50 = \\$22.50$ ✓"
+        "A ticket costs $25$ cents less than $4$ dollars, so pretend each ticket is $4$ dollars: $6 \\times 4 = 24$ dollars.",
+        "That is too much by $25$ cents for each of the $6$ friends, which is $6 \\times 0.25 = 1.50$ dollars.",
+        "Take the extra off: $24 - 1.50 = 22.50$ dollars altogether."
       ]
     }
   ],

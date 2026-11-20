@@ -38,8 +38,9 @@
     {
       "title": "Use the relationship",
       "steps": [
-        "Each $y$ is $3$ times its $x$ because Rule 2 adds $3$ for every $1$ Rule 1 adds.",
-        "The 6th $x$ is $5$, so $y = 3 \\times 5 = 15$, giving $(5, 15)$."
+        "Rule 2 adds $3$ every time Rule 1 adds $1$, and both start at $0$, so each $y$ is $3$ times its $x$.",
+        "The $x$-values are $0, 1, 2, 3, 4, 5$, so the 6th one is $5$ and not $6$.",
+        "Multiply to find its partner: $y = 3 \\times 5 = 15$, giving the pair $(5, 15)$."
       ]
     }
   ],

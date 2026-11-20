@@ -52,6 +52,16 @@
     "A point on the x-axis is zero units above it, so its $y$-coordinate must be $0$. Its $x$-coordinate can be any number.",
     "For example, $(5, 0)$ lies on the x-axis. So the true statement is that the $y$-coordinate is $0$, choice B."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Test some points",
+      "steps": [
+        "Name a few points that sit on the x-axis, such as $(1, 0)$, $(5, 0)$ and $(9, 0)$.",
+        "Their $x$-coordinates are all different, but none of them moved up at all, so every $y$-coordinate is $0$.",
+        "A point like $(0, 3)$ has $x = 0$ yet sits on the y-axis instead, so the true statement is choice B."
+      ]
+    }
+  ],
   "tags": [
     "coordinate-plane"
   ],

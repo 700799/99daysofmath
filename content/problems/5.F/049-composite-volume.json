@@ -39,8 +39,17 @@
     {
       "title": "Combine first",
       "steps": [
-        "Both boxes share a $5 \\times 4$ base.",
-        "Stack the heights: $3 + 2 = 5$, so $V = 5 \\times 4 \\times 5 = 100$."
+        "Both boxes have the same $5 \\times 4$ base, so one can be stacked exactly on top of the other.",
+        "The stack is a single box whose height is $3 + 2 = 5$ units.",
+        "Its volume is $5 \\times 4 \\times 5 = 100$ cubic units, and moving the boxes did not change the total."
+      ]
+    },
+    {
+      "title": "Count the layers",
+      "steps": [
+        "A layer with a $5 \\times 4$ base holds $20$ unit cubes.",
+        "The first box has $3$ such layers and the second box has $2$, which makes $5$ layers altogether.",
+        "Five layers of $20$ cubes give $5 \\times 20 = 100$ cubic units."
       ]
     }
   ],

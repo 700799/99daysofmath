@@ -33,6 +33,16 @@
     "Starting at the origin, moving $3$ right makes $x = 3$, and moving $4$ up makes $y = 4$.",
     "Put them in order to get the point $(3, 4)$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Read it like a map",
+      "steps": [
+        "Think of the grid as city streets, where the origin is your starting corner.",
+        "Walking $3$ blocks right puts you above the $3$ on the x-axis, and walking $4$ blocks up puts you level with the $4$ on the y-axis.",
+        "An ordered pair lists the across number first and the up number second, so you are standing at $(3, 4)$."
+      ]
+    }
+  ],
   "tags": [
     "coordinate-plane"
   ],

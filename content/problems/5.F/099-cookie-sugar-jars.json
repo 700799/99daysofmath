@@ -43,16 +43,17 @@
     {
       "title": "Fraction view",
       "steps": [
-        "$0.75 = \\frac{3}{4}$, so $4$ batches need $4 \\times \\frac{3}{4} = 3$ cups.",
-        "$3 \\div 6 = \\frac{3}{6} = \\frac{1}{2} = 0.5$ cup ✓"
+        "Write $0.75$ as $\\frac{3}{4}$, so $4$ batches need $4 \\times \\frac{3}{4} = 3$ cups of sugar.",
+        "Sharing $3$ cups among $6$ jars gives each jar $\\frac{3}{6}$ of a cup.",
+        "Simplify $\\frac{3}{6}$ to $\\frac{1}{2}$, which is $0.5$ cup in each jar."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "A common wrong answer is $3$ — the total sugar — because the sharing step gets skipped.",
-        "Another is dividing first, $0.75 \\div 6 = 0.125$, which answers a different question (one batch split six ways).",
-        "Follow the story in order: all $4$ batches are measured out **before** the jars are filled, so multiply first ($3$ cups) and divide second ($3 \\div 6 = 0.5$)."
+        "A common wrong answer is $3$, the total amount of sugar, because the sharing step gets skipped.",
+        "Another is dividing first, $0.75 \\div 6 = 0.125$, which shares only one batch among the jars.",
+        "Follow the story in order: all $4$ batches are measured before the jars are filled, so multiply first to get $3$ cups and then divide, $3 \\div 6 = 0.5$."
       ]
     }
   ],

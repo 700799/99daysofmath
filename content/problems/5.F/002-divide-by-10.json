@@ -30,6 +30,16 @@
     "In $6{,}000$ the $6$ is in the thousands place, so after dividing it lands in the hundreds place.",
     "That gives $6{,}000 \\div 10 = 600$, and the check $600 \\times 10 = 6{,}000$ agrees."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Count ten-dollar bills",
+      "steps": [
+        "Picture $6{,}000$ dollars paid only in ten-dollar bills, so the question becomes how many bills there are.",
+        "Every $100$ dollars takes $10$ bills, and $6{,}000$ dollars is $60$ hundreds, so there are $60 \\times 10 = 600$ bills.",
+        "The number of tens inside $6{,}000$ is $600$, so $6{,}000 \\div 10 = 600$."
+      ]
+    }
+  ],
   "tags": [
     "place-value",
     "powers-of-ten"

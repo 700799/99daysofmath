@@ -35,9 +35,9 @@
     {
       "title": "Check by multiplying",
       "steps": [
-        "Try $63 \\times 8$.",
-        "$60 \\times 8 = 480$ and $3 \\times 8 = 24$.",
-        "$480 + 24 = 504$ ✓"
+        "Division asks what number times $8$ makes $504$, so test a guess. Since $8 \\times 60 = 480$ is close, try a little more than $60$.",
+        "The gap is $504 - 480 = 24$, and $24$ is exactly $3$ more eights, so the guess is $63$.",
+        "Multiply to confirm the guess: $63 \\times 8 = 480 + 24 = 504$, so the quotient $504 \\div 8$ is $63$."
       ]
     }
   ],

@@ -37,9 +37,9 @@
     {
       "title": "Estimate to check",
       "steps": [
-        "$458 \\approx 450$ and $36 \\approx 40$.",
-        "$450 \\times 40 = 18{,}000$.",
-        "$16{,}488$ is close to that, so the answer is in the right neighborhood ✓"
+        "Round $458$ up to $460$ and multiply by $36$ in two parts: $460 \\times 36 = 13{,}800 + 2{,}760 = 16{,}560$.",
+        "Rounding added $2$ extra to each of the $36$ groups, so the estimate is $2 \\times 36 = 72$ too high.",
+        "Remove the extra: $16{,}560 - 72 = 16{,}488$, which agrees with the exact product."
       ]
     }
   ],

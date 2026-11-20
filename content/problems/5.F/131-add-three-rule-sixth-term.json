@@ -34,8 +34,9 @@
     {
       "title": "Skip counting",
       "steps": [
-        "Skip-count by $3$ on your fingers: $0, 3, 6, 9, 12, 15$.",
-        "The sixth finger lands on $15$."
+        "Skip-count by threes on your fingers, starting with $0$ on the first finger: $0, 3, 6, 9, 12, 15$.",
+        "The sixth finger lands on $15$, so the 6th number is $15$.",
+        "It is $5$ jumps of $3$ and not $6$, because the first finger is used for the starting number $0$."
       ]
     }
   ],

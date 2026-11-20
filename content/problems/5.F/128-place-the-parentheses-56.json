@@ -57,8 +57,9 @@
     {
       "title": "Estimate before testing",
       "steps": [
-        "To reach $56$ you need roughly $18 \\times 3$.",
-        "The only way to get $18$ out of these numbers is $24 - 6$, so start there."
+        "The target $56$ is $2$ more than $54$, and $54 = 18 \\times 3$, so look for a way to make $18 \\times 3 + 2$.",
+        "The numbers $24 - 6$ make $18$, so they are the part that should be grouped.",
+        "Check it by working the expression out: $(24 - 6) \\times 3 + 2 = 18 \\times 3 + 2 = 54 + 2 = 56$, which is choice A."
       ]
     }
   ],

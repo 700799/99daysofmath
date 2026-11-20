@@ -38,8 +38,9 @@
     {
       "title": "Order matters",
       "steps": [
-        "$(4, 12)$ means go $4$ right and $12$ up.",
-        "$(12, 4)$ would land somewhere completely different, so keeping A first matters."
+        "Count to the third spot in each list: Pattern A gives $0, 2, 4$ and Pattern B gives $0, 6, 12$.",
+        "Pattern A goes first, so the pair is $(4, 12)$, which means $4$ to the right and $12$ up.",
+        "Writing $(12, 4)$ would be a different point, $12$ to the right and only $4$ up, so the order must stay A then B."
       ]
     }
   ],

@@ -32,6 +32,16 @@
     "The movie also runs $15$ minutes beyond the three full hours, so those must be added on.",
     "Add them: $180 + 15 = 195$, so the movie lasts $195$ minutes."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Count quarter hours",
+      "steps": [
+        "Fifteen minutes is a quarter of an hour, and every full hour holds $4$ quarter hours.",
+        "Three hours is $3 \\times 4 = 12$ quarter hours, and the extra $15$ minutes makes $13$ quarter hours.",
+        "Each one lasts $15$ minutes, so the movie is $13 \\times 15 = 150 + 45 = 195$ minutes long."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "measurement",

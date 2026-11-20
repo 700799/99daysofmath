@@ -34,9 +34,9 @@
     {
       "title": "Peel it like an onion",
       "steps": [
-        "Innermost layer: $(9 - 5) = 4$.",
-        "Next layer: $[4 \\times 4] = 16$.",
-        "Outer layer: $16 + 12 = 28$."
+        "Start with the innermost layer, the round parentheses: $9 - 5 = 4$.",
+        "Move out to the square brackets, which now hold $4 \\times 4 = 16$.",
+        "Finish with the outside layer by adding $12$: $16 + 12 = 28$."
       ]
     }
   ],

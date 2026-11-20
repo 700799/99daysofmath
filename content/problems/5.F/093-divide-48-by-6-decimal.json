@@ -36,7 +36,9 @@
     {
       "title": "Check by multiplying back",
       "steps": [
-        "$0.8 \\times 6$: $8 \\times 6 = 48$, and one decimal place gives $4.8$ ✓"
+        "Guess the quotient from the fact $48 \\div 6 = 8$: since $4.8$ is ten times smaller than $48$, try $0.8$.",
+        "Test it: $0.8 \\times 6$ is $8$ tenths six times, which is $48$ tenths.",
+        "Forty-eight tenths is $4.8$, the starting number, so $4.8 \\div 6 = 0.8$."
       ]
     }
   ],

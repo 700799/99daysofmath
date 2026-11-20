@@ -35,8 +35,9 @@
     {
       "title": "Check it",
       "steps": [
-        "$12$ vans $\\times$ $12$ seats $= 144$ seats.",
-        "$144$ seats is enough for $138$ students, with $6$ seats empty ✓"
+        "Try $11$ vans first: $11 \\times 12 = 132$ seats, which leaves $6$ of the $138$ students without a ride.",
+        "Try $12$ vans: $12 \\times 12 = 144$ seats, enough for everyone with $6$ seats empty.",
+        "Eleven vans is too few and twelve works, so $12$ vans are needed."
       ]
     }
   ],

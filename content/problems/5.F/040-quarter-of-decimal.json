@@ -43,8 +43,17 @@
     {
       "title": "Money picture",
       "steps": [
-        "A quarter (\\$0.25) of \\$3.20 is like splitting \\$3.20 among 4 people.",
-        "Each gets \\$0.80."
+        "The decimal $0.25$ is one quarter, so $0.25 \\times 3.2$ means one fourth of $3.20$ dollars.",
+        "Split $3.20$ dollars evenly among $4$ people: half is $1.60$, and half of that is $0.80$.",
+        "Each person gets $0.80$ dollars, so the product $0.25 \\times 3.2$ is $0.8$."
+      ]
+    },
+    {
+      "title": "Double and halve twice",
+      "steps": [
+        "Doubling one factor and halving the other keeps a product the same, so $0.25 \\times 3.2 = 0.5 \\times 1.6$.",
+        "Do it once more to get $1 \\times 0.8$, which needs no work at all.",
+        "One group of $0.8$ is $0.8$, so the product is $0.8$."
       ]
     }
   ],

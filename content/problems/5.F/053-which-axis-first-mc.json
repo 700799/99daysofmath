@@ -52,6 +52,16 @@
     "The first number is the $x$-coordinate, which tells how far to go left or right along the x-axis.",
     "So in $(7, 2)$ the $7$ is a distance along the x-axis, which is choice A."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Plot it and see",
+      "steps": [
+        "Plot $(7, 2)$ by following the rule of across first and up second, the same order as $x$ then $y$ in the alphabet.",
+        "You slide $7$ units to the right along the bottom of the graph, then climb only $2$ units.",
+        "The $7$ was used for the left to right move, which is travel along the x-axis, so choice A is correct."
+      ]
+    }
+  ],
   "tags": [
     "coordinate-plane"
   ],

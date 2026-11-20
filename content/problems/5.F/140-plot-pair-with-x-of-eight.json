@@ -43,16 +43,17 @@
     {
       "title": "Use the times-3 rule",
       "steps": [
-        "Pattern B adds $6$ for every $2$ Pattern A adds, so B is always $3$ times A.",
-        "$3 \\times 8 = 24$, giving the pair $(8, 24)$."
+        "Pattern B adds $6$ each time Pattern A adds $2$, and both start at $0$, so every B term is $3$ times its A term.",
+        "The $x$-coordinate comes from Pattern A, so the A term is $8$.",
+        "Multiply to get the B term: $3 \\times 8 = 24$, which gives the pair $(8, 24)$."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "A frequent wrong answer is $(24, 8)$ — the right two numbers written backwards.",
-        "The $x$-coordinate always comes first, and the problem said the pairs are written as $(A, B)$, so the Pattern A number leads.",
-        "Escape it by saying it out loud as you write: \"over first, then up\" — over $8$, up $24$."
+        "A frequent wrong answer is $(24, 8)$, which has the right two numbers written backwards.",
+        "The $x$-coordinate always comes first, and the pairs are written as $(A, B)$, so the Pattern A number leads.",
+        "Say it as you write it, over first and then up: over $8$ and up $24$ gives $(8, 24)$."
       ]
     }
   ],

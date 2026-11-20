@@ -35,8 +35,9 @@
     {
       "title": "Work the formula backwards",
       "steps": [
-        "$V = l \\times w \\times h$ becomes $120 = 5 \\times 6 \\times h$.",
-        "$120 = 30 \\times h$, so $h = 120 \\div 30 = 4$."
+        "Put the known numbers into $V = l \\times w \\times h$ to get $120 = 5 \\times 6 \\times h$.",
+        "Multiply the base sides so the equation reads $120 = 30 \\times h$.",
+        "Ask what number times $30$ makes $120$: $h = 120 \\div 30 = 4$, so the box is $4$ inches tall."
       ]
     }
   ],

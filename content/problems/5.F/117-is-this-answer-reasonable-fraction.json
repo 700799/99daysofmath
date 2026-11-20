@@ -57,8 +57,9 @@
     {
       "title": "Estimate with a benchmark",
       "steps": [
-        "$\\frac{7}{8}$ is close to $1$, so the answer should be close to but below $24$.",
-        "Something like $21$ fits; $27$ does not."
+        "Compare $\\frac{7}{8}$ with the benchmark $1$. It is close to $1$ but a little less.",
+        "Taking a little less than all of $24$ must give a little less than $24$, something like $21$.",
+        "Ben's $27$ is more than $24$, so it is too big, and the answer is choice B."
       ]
     }
   ],

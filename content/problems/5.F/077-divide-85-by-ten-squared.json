@@ -36,8 +36,9 @@
     {
       "title": "Money check",
       "steps": [
-        "Think of $85$ pennies.",
-        "A penny is $\\frac{1}{100}$ of a dollar, so $85$ pennies is $\\$0.85$ ✓"
+        "Since $10^2 = 100$, think of $85$ pennies, where each penny is one hundredth of a dollar.",
+        "Dividing $85$ by $100$ asks how many dollars $85$ pennies are worth.",
+        "Eighty-five pennies is $85$ cents, written $0.85$ dollars, so $85 \\div 10^2 = 0.85$."
       ]
     }
   ],

@@ -40,17 +40,17 @@
     {
       "title": "Rewrite at every step",
       "steps": [
-        "$3 \\times [20 - (4 + 2 \\times 3)]$",
-        "$= 3 \\times [20 - (4 + 6)]$",
-        "$= 3 \\times [20 - 10] = 3 \\times 10 = 30$."
+        "Copy the whole line and change only one thing each time. First do the multiplication inside the parentheses: $3 \\times [20 - (4 + 6)]$.",
+        "Next add inside the parentheses to get $3 \\times [20 - 10]$, and then subtract inside the brackets to get $3 \\times 10$.",
+        "The last line has only one operation left, and $3 \\times 10 = 30$."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "The classic wrong answer is $6$: it comes from adding $4 + 2 = 6$ first, then $6 \\times 3 = 18$, then $20 - 18 = 2$ and $3 \\times 2 = 6$.",
-        "The problem is that left-to-right does not win inside parentheses — multiplication still goes before addition.",
-        "Escape it by circling $2 \\times 3$ before you touch the $4$, so the multiplication is finished first every time."
+        "The classic wrong answer is $6$, from adding $4 + 2 = 6$ first, then $6 \\times 3 = 18$, then $20 - 18 = 2$ and $3 \\times 2 = 6$.",
+        "Reading left to right does not win inside parentheses, because multiplication still comes before addition there.",
+        "Circle $2 \\times 3$ before you touch the $4$. Then the inside is $4 + 6 = 10$, the bracket is $20 - 10 = 10$, and $3 \\times 10 = 30$."
       ]
     }
   ],

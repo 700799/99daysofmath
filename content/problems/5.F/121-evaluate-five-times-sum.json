@@ -34,8 +34,9 @@
     {
       "title": "Spread the 5 out",
       "steps": [
-        "$5 \\times (7 + 3) = 5 \\times 7 + 5 \\times 3$.",
-        "$35 + 15 = 50$ — same answer."
+        "Five groups of $(7 + 3)$ hold five sevens and five threes, so $5 \\times (7 + 3) = 5 \\times 7 + 5 \\times 3$.",
+        "Work out each small product on its own: $5 \\times 7 = 35$ and $5 \\times 3 = 15$.",
+        "Add them to get $35 + 15 = 50$, the same value as adding first."
       ]
     }
   ],

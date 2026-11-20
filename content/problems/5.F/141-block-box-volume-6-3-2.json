@@ -34,8 +34,9 @@
     {
       "title": "Multiply in any order",
       "steps": [
-        "$3 \\times 2 = 6$, then $6 \\times 6 = 36$.",
-        "Volume comes out the same no matter which two sides you multiply first."
+        "Stand the box on its end so the base is the $3$ by $2$ face, which holds $3 \\times 2 = 6$ cubes.",
+        "Now the box is $6$ layers tall, so it holds $6 \\times 6 = 36$ cubes.",
+        "Turning the box does not change how much it holds, so the volume is $36$ cubic inches whichever sides you multiply first."
       ]
     }
   ],

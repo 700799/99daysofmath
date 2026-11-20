@@ -52,6 +52,16 @@
     "Kilometers measure distance, liters measure liquid volume and hours measure time, so none of those fit.",
     "An apple is light, about $200$ grams, so grams are the best unit. That is choice B."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Rule out the others",
+      "steps": [
+        "Ask what each unit measures: kilometers measure length, liters measure how much liquid fits, and hours measure time.",
+        "None of those three can tell you how heavy something is, so choices A, C and D are out.",
+        "Grams measure mass, and a small light object like an apple suits a small unit, so the answer is choice B."
+      ]
+    }
+  ],
   "tags": [
     "measurement",
     "units"

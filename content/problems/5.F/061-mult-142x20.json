@@ -37,9 +37,9 @@
     {
       "title": "Place-value split",
       "steps": [
-        "$142 = 100 + 40 + 2$.",
-        "$100 \\times 20 = 2000$, $40 \\times 20 = 800$, $2 \\times 20 = 40$.",
-        "$2000 + 800 + 40 = 2840$ ✓"
+        "Break $142$ into its three place-value parts, which are $100 + 40 + 2$.",
+        "Multiply each part by $20$ on its own: $100 \\times 20 = 2000$, $40 \\times 20 = 800$ and $2 \\times 20 = 40$.",
+        "Add the three partial products to get the answer: $2000 + 800 + 40 = 2840$."
       ]
     }
   ],

@@ -39,9 +39,9 @@
     {
       "title": "12-piece picture",
       "steps": [
-        "Cut the pan into 12 pieces.",
-        "Sam eats 3 pieces, Ava eats 4 — that is 7 gone.",
-        "$12 - 7 = 5$ pieces left → $\\frac{5}{12}$."
+        "Cut the pan into $12$ equal pieces, because $12$ can be split into fourths and into thirds.",
+        "Sam eats one fourth of them, which is $3$ pieces, and Ava eats one third, which is $4$ pieces, so $7$ pieces are gone.",
+        "That leaves $12 - 7 = 5$ pieces out of $12$, so $\\frac{5}{12}$ of the pan is left."
       ]
     }
   ],

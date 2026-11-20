@@ -42,16 +42,17 @@
     {
       "title": "Count the shifts",
       "steps": [
-        "Going from $640$ to $6{,}400$ to $64{,}000$ to $640{,}000$ takes three shifts.",
-        "Three shifts means $\\times 10 \\times 10 \\times 10 = 1{,}000$ ✓"
+        "Write both numbers out in full: $6.4 \\times 10^2 = 640$ and $6.4 \\times 10^5 = 640{,}000$.",
+        "Climb from the small one to the big one by tens: $640$ to $6{,}400$ to $64{,}000$ to $640{,}000$ takes three steps.",
+        "Three steps of times ten is $10 \\times 10 \\times 10 = 1{,}000$, so it is $1000$ times greater."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "The tempting wrong answer is $3$, because $5 - 2 = 3$.",
-        "But the $3$ counts how many **extra tens** there are, not how many times greater the number is.",
-        "Three extra tens multiply together: $10 \\times 10 \\times 10 = 1{,}000$, so the answer is $1{,}000$, not $3$."
+        "The tempting wrong answer is $3$, because the exponents differ by $5 - 2 = 3$.",
+        "That $3$ only counts how many **extra tens** are multiplied in, not how many times greater the number is.",
+        "The three extra tens multiply together: $10 \\times 10 \\times 10 = 1{,}000$, so the answer is $1{,}000$ and not $3$."
       ]
     }
   ],

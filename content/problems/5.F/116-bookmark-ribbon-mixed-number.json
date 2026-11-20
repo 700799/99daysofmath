@@ -38,9 +38,9 @@
     {
       "title": "Split the mixed number",
       "steps": [
-        "$6 \\times 1 = 6$ feet from the whole parts.",
-        "$6 \\times \\frac{1}{4} = \\frac{6}{4} = 1\\frac{1}{2}$ feet from the quarter parts.",
-        "$6 + 1\\frac{1}{2} = 7\\frac{1}{2}$ feet."
+        "Treat $1\\frac{1}{4}$ feet as $1$ foot plus $\\frac{1}{4}$ foot, and multiply each part by $6$.",
+        "The whole parts give $6 \\times 1 = 6$ feet, and the quarter parts give $6 \\times \\frac{1}{4} = \\frac{6}{4} = 1\\frac{1}{2}$ feet.",
+        "Add the two amounts: $6 + 1\\frac{1}{2} = 7\\frac{1}{2}$ feet of ribbon."
       ]
     }
   ],

@@ -38,6 +38,16 @@
     "The point is $5$ units up from the $x$-axis, and that is its $y$-coordinate.",
     "Write the across number first and the up number second: the point is $(2, 5)$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Walk there from the origin",
+      "steps": [
+        "Test the answer by starting at the origin and walking to the point along the grid lines.",
+        "It takes $2$ steps to the right to get under the point, and then $5$ steps up to reach it.",
+        "Steps across are written first and steps up second, so the point is $(2, 5)$."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "coordinate-plane"

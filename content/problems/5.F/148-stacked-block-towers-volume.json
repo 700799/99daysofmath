@@ -34,9 +34,9 @@
     {
       "title": "Count layers",
       "steps": [
-        "The bottom has $3$ layers of $12$ cubes: $36$.",
-        "The top has $3$ layers of $4$ cubes: $12$.",
-        "$36 + 12 = 48$ cubes in all."
+        "The bottom part has a $6$ by $2$ base, so each layer is $12$ cubes, and its $3$ layers hold $36$ cubes.",
+        "The top part has a $2$ by $2$ base, so each layer is $4$ cubes, and its $3$ layers hold $12$ cubes.",
+        "Count all the cubes together: $36 + 12 = 48$ cubic centimeters."
       ]
     }
   ],

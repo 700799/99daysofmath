@@ -37,7 +37,9 @@
     {
       "title": "Decimal check",
       "steps": [
-        "$0.4 + 0.5 = 0.9 = \\frac{9}{10}$ ✓"
+        "Both fractions turn into easy decimals: $\\frac{2}{5} = 0.4$ and $\\frac{1}{2} = 0.5$.",
+        "Add the tenths: $0.4 + 0.5 = 0.9$, which is nine tenths.",
+        "Nine tenths written as a fraction is $\\frac{9}{10}$, the same answer as before."
       ]
     }
   ],

@@ -40,16 +40,17 @@
     {
       "title": "Add the gains first",
       "steps": [
-        "Total gain: $1.35 + 0.90 = 2.25$ kg.",
-        "Starting weight plus total gain: $8.40 + 2.25 = 10.65$ kg ✓"
+        "Find how much the puppy gained in all: $1.35 + 0.90 = 2.25$ kg over the two months.",
+        "Add that total gain to the starting weight: $8.40 + 2.25 = 10.65$ kg.",
+        "Either order of adding gives the same weight, $10.65$ kilograms."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "The classic wrong answer is $9.84$, which happens when $0.9$ gets stacked under the hundredths column as if it were $0.09$.",
-        "$0.9$ is nine **tenths**, not nine hundredths — it belongs in the same column as the $4$ in $8.4$.",
-        "Writing it as $0.90$ before you add keeps the columns honest and gives $10.65$."
+        "The classic wrong answer is $9.84$, which happens when $0.9$ is stacked in the hundredths column as if it were $0.09$.",
+        "The number $0.9$ is nine **tenths**, so it belongs in the same column as the $4$ in $8.4$.",
+        "Write it as $0.90$ before adding so the columns line up, and the sum comes out to $10.65$."
       ]
     }
   ],

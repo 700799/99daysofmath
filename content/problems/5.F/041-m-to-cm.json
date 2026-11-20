@@ -32,6 +32,16 @@
     "Centimeters are smaller than meters, so it takes more of them. That means multiplying by $100$.",
     "Work it out: $3 \\times 100 = 300$, so $3$ meters is $300$ centimeters."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Lay down meter sticks",
+      "steps": [
+        "A meter stick is marked with $100$ centimeters from one end to the other.",
+        "Three meters is three sticks laid end to end, so add their centimeters: $100 + 100 + 100$.",
+        "The sum is $300$, so $3$ meters equals $300$ centimeters."
+      ]
+    }
+  ],
   "tags": [
     "measurement",
     "metric"

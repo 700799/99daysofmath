@@ -32,6 +32,16 @@
     "Rename the second fraction by doubling its top and bottom: $\\frac{3}{4} = \\frac{6}{8}$.",
     "Subtract eighths from eighths: $\\frac{7}{8} - \\frac{6}{8} = \\frac{1}{8}$, so the answer is $\\frac{1}{8}$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Jump on a number line",
+      "steps": [
+        "Draw a number line from $0$ to $1$ marked in eighths. The fraction $\\frac{3}{4}$ sits on the mark $\\frac{6}{8}$.",
+        "The fraction $\\frac{7}{8}$ is the very next mark, so the two numbers are one jump apart.",
+        "One jump on this line is one eighth long, so $\\frac{7}{8} - \\frac{3}{4} = \\frac{1}{8}$."
+      ]
+    }
+  ],
   "tags": [
     "fractions",
     "subtraction"

@@ -37,9 +37,9 @@
     {
       "title": "Think in quarter-kilos",
       "steps": [
-        "$250$ g is $\\frac{1}{4}$ kg.",
-        "Six quarter-kilos is $\\frac{6}{4} = 1\\frac{1}{2}$ kg.",
-        "Same answer: $1.5$ kilograms."
+        "A kilogram is $1000$ grams, so $250$ grams is one quarter of a kilogram.",
+        "Six loaves use six quarter-kilos, which is $\\frac{6}{4} = 1\\frac{1}{2}$ kilograms.",
+        "One and a half written as a decimal is $1.5$ kilograms of flour."
       ]
     }
   ],

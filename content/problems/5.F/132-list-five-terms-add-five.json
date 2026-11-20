@@ -37,8 +37,9 @@
     {
       "title": "It is your nickel count",
       "steps": [
-        "Counting nickels gives $5, 10, 15, 20$ cents.",
-        "Starting from an empty hand adds the $0$ at the front."
+        "Counting nickels is the same as adding $5$ each time: one nickel is $5$ cents, then $10$, $15$ and $20$ cents.",
+        "The pattern starts before you pick up any coin, so an empty hand puts $0$ at the front.",
+        "That gives the first five numbers: $0, 5, 10, 15, 20$."
       ]
     }
   ],

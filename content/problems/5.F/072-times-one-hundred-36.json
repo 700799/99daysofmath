@@ -34,8 +34,9 @@
     {
       "title": "Sanity check",
       "steps": [
-        "$3 \\times 100 = 300$ and $4 \\times 100 = 400$.",
-        "$3.6$ is between $3$ and $4$, so its answer should be between $300$ and $400$ — and $360$ is ✓"
+        "First trap the answer between two easy products: $3 \\times 100 = 300$ and $4 \\times 100 = 400$.",
+        "Now think of $3.6$ as $36$ tenths. Multiplying by $100$ gives $3{,}600$ tenths, and every $10$ tenths make one whole.",
+        "So the product is $3{,}600 \\div 10 = 360$, which sits between $300$ and $400$ as expected."
       ]
     }
   ],

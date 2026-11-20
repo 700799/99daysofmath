@@ -36,9 +36,9 @@
     {
       "title": "Split the 2.5",
       "steps": [
-        "$2$ L is $2000$ mL.",
-        "$0.5$ L is half of $1000$, which is $500$ mL.",
-        "$2000 + 500 = 2500$ mL."
+        "Break $2.5$ liters into $2$ full liters and half a liter.",
+        "Two liters is $2000$ mL, and half a liter is half of $1000$, which is $500$ mL.",
+        "Add the two parts back together to get $2000 + 500 = 2500$ milliliters."
       ]
     }
   ],

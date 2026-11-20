@@ -30,6 +30,16 @@
     "Now divide the two whole numbers: $36 \\div 9 = 4$.",
     "Check with multiplication: $4 \\times 0.9 = 3.6$, so the quotient is $4$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Count the jumps",
+      "steps": [
+        "Division asks how many groups of $0.9$ fit in $3.6$, so count up by $0.9$ until you reach $3.6$.",
+        "The jumps land on $0.9$, then $1.8$, then $2.7$, then $3.6$.",
+        "It took $4$ jumps to arrive exactly, so $3.6 \\div 0.9 = 4$."
+      ]
+    }
+  ],
   "tags": [
     "decimals",
     "division"

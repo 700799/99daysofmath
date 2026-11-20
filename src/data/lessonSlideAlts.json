@@ -1,4 +1,584 @@
 {
+ "5.F-1#1": {
+  "title": "Read it on a place-value chart",
+  "text": "Put 47,283 in a chart with columns for ten-thousands, thousands, hundreds, tens and ones. The chart reads 4, 7, 2, 8, 3. Now read each column as its own number: 40,000 and 7,000 and 200 and 80 and 3. Add them and you get 47,283 back. Move the 7 one column left and its part becomes 70,000, ten times as much. Move it one column right and it shrinks to 700."
+ },
+ "5.F-1#2": {
+  "title": "See it as a rectangle",
+  "text": "Draw a rectangle 38 units wide and 27 units tall. Its area is 38 × 27. Now draw a line across it so the top part is 20 tall and the bottom part is 7 tall. The top part has area 38 × 20 = 760 and the bottom part has area 38 × 7 = 266. The line did not add or remove any space, so the whole rectangle is 760 + 266 = 1,026."
+ },
+ "5.F-1#3": {
+  "title": "Check chunks by multiplying back",
+  "text": "Division and multiplication undo each other, so every chunk you peel off can be checked. For 432 ÷ 6, the answer 72 splits into 70 and 2. Multiply back: 70 × 6 = 420 and 2 × 6 = 12, and 420 + 12 = 432. The pieces rebuild the starting number exactly, with nothing missing and nothing left over. That is why the chunk sizes can be any friendly numbers you like."
+ },
+ "5.F-1#4": {
+  "title": "Use expanded form",
+  "text": "Write 4,562 as a sum with one part for each digit: 4,000 + 500 + 60 + 2. Each part shows what one digit is really worth. The part that came from the digit 5 is 500. Check by adding the four parts: they make 4,562 again, so the 5 is worth 500."
+ },
+ "5.F-1#5": {
+  "title": "Zero out the other digits",
+  "text": "Keep the 8 where it is in 28,514 and change every other digit to 0. The 2, the 5, the 1 and the 4 all become zeros, and what is left is 8,000. Those zeros hold the 8 in its seat, so 8,000 is what the 8 is worth. Check with a sum: 20,000 + 8,000 + 500 + 10 + 4 = 28,514."
+ },
+ "5.F-1#6": {
+  "title": "Count in tens",
+  "text": "Think of 40 as 4 tens. Then 60 × 40 means 60 groups of 4 tens, which is 240 tens, because 60 × 4 = 240. And 240 tens is 2,400. Another check: 60 × 40 is double 60 × 20. Since 60 × 20 = 1,200, doubling gives 2,400 again. Both ways agree on the same product."
+ },
+ "5.F-1#7": {
+  "title": "Use an easy nearby fact",
+  "text": "Start from 24 × 10 = 240, which only needs a zero. Thirteen groups is ten groups plus three more groups. Three more groups of 24 is 72. Add them: 240 + 72 = 312. You can also check with 25 × 13 = 325, then take away one group of 13, because 24 is one less than 25: 325 − 13 = 312."
+ },
+ "5.F-1#8": {
+  "title": "Split 432 into friendly parts",
+  "text": "Break 432 into two numbers that 6 divides easily: 360 and 72. Then 360 ÷ 6 = 60, because 36 ÷ 6 = 6. And 72 ÷ 6 = 12. Add the two answers: 60 + 12 = 72. The chunks are different from 420 and 12, but the total number of sixes is the same."
+ },
+ "5.F-1#9": {
+  "title": "Halve one, double the other",
+  "text": "A product stays the same if you halve one number and double the other. So 24 × 13 = 12 × 26. Do it again: 12 × 26 = 6 × 52. Now it is a small problem: 6 × 50 = 300 and 6 × 2 = 12, which makes 312. Three different ways of cutting up the numbers all give 312."
+ },
+ "5.F-2#1": {
+  "title": "Think of coins",
+  "text": "Suppose you have 1 quarter and 1 dime. You have 2 coins, but you do not have 2 quarters or 2 dimes, and the value is not 2 of anything. You must first turn both into cents: 25 cents and 10 cents make 35 cents. Fractions are the same. One half plus one third is not two of anything until both are renamed as the same kind of piece."
+ },
+ "5.F-2#2": {
+  "title": "Find the match with a list",
+  "text": "Count by each bottom number until the lists meet. Counting by 2 gives 2, 4, 6, 8. Counting by 3 gives 3, 6, 9. The first number in both lists is 6, so sixths work for both fractions. A clock shows the same idea: half an hour is 30 minutes and a third of an hour is 20 minutes. Minutes are a piece that fits both."
+ },
+ "5.F-2#3": {
+  "title": "Watch it on a ruler",
+  "text": "Look at a ruler marked in eighths of an inch. Put your finger on 3/8 and slide 2 more marks to the right. You land on 5/8. The marks did not change size while you slid. Only your count of marks changed, from 3 to 5. If the bottom number changed to 16, that would mean the marks got smaller, and they did not."
+ },
+ "5.F-2#4": {
+  "title": "Use quarters of a dollar",
+  "text": "One fourth of a dollar is a quarter, worth 25 cents. Two quarters are worth 25 + 25 = 50 cents. Fifty cents is half of a dollar. So 1/4 + 1/4 = 1/2, and you can see why 2/4 and 1/2 are the same amount."
+ },
+ "5.F-2#5": {
+  "title": "Count back on a number line",
+  "text": "Draw a line from 0 to 1 and mark it in eighths. Start at 5/8 and hop back one mark. You land on 4/8. Now look where 4/8 sits: there are 4 marks before it and 4 marks after it, so it is exactly the middle of the line. The middle of 0 to 1 is 1/2."
+ },
+ "5.F-2#6": {
+  "title": "Use an hour of time",
+  "text": "Think of one hour, which has 60 minutes. Half an hour is 30 minutes and a third of an hour is 20 minutes. Together that is 50 minutes. Fifty minutes out of 60 is 50/60. Divide top and bottom by 10 and you get 5/6 of an hour."
+ },
+ "5.F-2#7": {
+  "title": "Use money",
+  "text": "Three fourths of a dollar is 75 cents. One half of a dollar is 50 cents. Take 50 cents away from 75 cents and 25 cents are left. Twenty-five cents is one quarter of a dollar, so 3/4 − 1/2 = 1/4."
+ },
+ "5.F-2#8": {
+  "title": "Add minutes on a clock",
+  "text": "Use one hour as the whole. Two thirds of an hour is 40 minutes and three fourths of an hour is 45 minutes. Together that is 85 minutes, which is one full hour and 25 minutes more. Twenty-five minutes out of 60 is 25/60, which simplifies to 5/12. The sum is 1 5/12."
+ },
+ "5.F-2#9": {
+  "title": "Check with a clock",
+  "text": "One fourth of an hour is 15 minutes. One sixth of an hour is 10 minutes. Add them to get 25 minutes. Now write 25 minutes as a fraction of the 60 minutes in an hour: 25/60. Divide top and bottom by 5 to get 5/12. That matches the answer from listing multiples."
+ },
+ "5.F-3#1": {
+  "title": "Take a part of a part",
+  "text": "Start with numbers instead of a drawing. A day and a night are 24 hours. A quarter of that is 6 hours. Half of those 6 hours is 3 hours. Now ask what fraction 3 hours is of the full 24: it is 3/24, which is 1/8. So half of a quarter is an eighth, exactly what 1/2 × 1/4 gives when you multiply tops and bottoms."
+ },
+ "5.F-3#2": {
+  "title": "Read the times sign as groups",
+  "text": "The times sign already means groups of. 3 × 40 is 3 groups of 40, which is 120. 1 × 40 is 1 group of 40, which is 40. Keep shrinking the first number: 1/2 × 40 is half a group of 40, which is 20. So 3/5 × 40 is three fifths of a group of 40. One fifth of 40 is 8, and three of those is 24."
+ },
+ "5.F-3#3": {
+  "title": "Check by multiplying back",
+  "text": "Division can always be checked with multiplication. If 4 ÷ 1/3 = 12, then 12 pieces of size 1/3 must make 4. They do: 12 thirds is 12/3, which is 4. Try a smaller guess like 2: 2 thirds is less than one whole, nowhere near 4. You need many small pieces to build 4 wholes, so the answer has to be bigger than 4."
+ },
+ "5.F-3#4": {
+  "title": "Use an hour of minutes",
+  "text": "A quarter of an hour is 15 minutes. Half of that is 7 and a half minutes. How many of those fit in a full hour? Two fit in each quarter hour, and there are 4 quarter hours, so 8 fit. One piece is 1/8 of the hour."
+ },
+ "5.F-3#5": {
+  "title": "Try it with eggs",
+  "text": "A carton holds 12 eggs. Half of the carton is 6 eggs. A third of those 6 eggs is 2 eggs. Two eggs out of the full 12 is 2/12, which simplifies to 1/6. So a third of a half is a sixth."
+ },
+ "5.F-3#6": {
+  "title": "Take away the missing third",
+  "text": "Two thirds is the whole thing with one third removed. One third of 12 is 4. Take that away from 12 and you get 12 − 4 = 8. Check with groups: 12 counters in 3 equal rows gives rows of 4, and two rows hold 8 counters."
+ },
+ "5.F-3#7": {
+  "title": "Count up by halves",
+  "text": "Count by halves until you reach 6: 1/2, 1, 1 1/2, 2, 2 1/2, 3, 3 1/2, 4, 4 1/2, 5, 5 1/2, 6. That list has 12 numbers, so it takes 12 halves to make 6. It is the same as asking how many half-dollar coins make 6 dollars."
+ },
+ "5.F-3#8": {
+  "title": "Add quarters until you reach 3",
+  "text": "Count how many quarter steps it takes to walk from 0 to 3. Four steps get you to 1. Four more get you to 2, which is 8 steps so far. Four more get you to 3, which is 12 steps. A ruler shows it too: 3 inches has 12 quarter-inch marks."
+ },
+ "5.F-3#9": {
+  "title": "Add two thirds twelve times",
+  "text": "Two thirds of 12 is the same as 12 groups of 2/3. Every 3 groups make 2 wholes, because 2/3 + 2/3 + 2/3 = 6/3 = 2. Twelve groups is 4 sets of 3 groups. Each set makes 2 wholes, so the total is 4 × 2 = 8. Same answer, with no fraction work at the end."
+ },
+ "5.F-4#1": {
+  "title": "See what goes wrong otherwise",
+  "text": "Try adding 2.5 + 1.75 by pushing both numbers to the right edge, the way you do with whole numbers. The 5 tenths would sit over the 5 hundredths and you would get 2.00, which is silly because 2.5 alone is already bigger. Think of money instead: 2 dollars 50 cents plus 1 dollar 75 cents is 4 dollars 25 cents, or 4.25. Lining up the points gives that answer."
+ },
+ "5.F-4#2": {
+  "title": "Find them on a meter stick",
+  "text": "A meter stick has 100 centimeters. The decimal 0.5 of a meter is the mark halfway along, at 50 centimeters. The decimal 0.45 of a meter is the mark at 45 centimeters, which comes 5 centimeters earlier. So 0.5 is farther along the stick and is the bigger number. The longer decimal is not always the bigger one."
+ },
+ "5.F-4#3": {
+  "title": "Estimate where the point goes",
+  "text": "You can place the point by asking what size the answer should be. For 0.5 × 0.8, the digits give 40. The answer is half of 0.8, so it must be near 0.4. It cannot be 40 or 4, so it is 0.40. For 1.5 × 4, the digits give 60. One and a half fours is about 6, so the answer is 6.0 and not 60 or 0.6."
+ },
+ "5.F-4#4": {
+  "title": "Think in cents",
+  "text": "Read the numbers as money. 0.2 of a dollar is 2 dimes, which is 20 cents. 0.35 of a dollar is 35 cents. Together they make 20 + 35 = 55 cents. Fifty-five cents written in dollars is 0.55."
+ },
+ "5.F-4#5": {
+  "title": "Add tenths first",
+  "text": "Break 0.45 into 0.4 and 0.05. Add the tenths: 0.3 + 0.4 = 0.7. Then put the 0.05 back on: 0.7 + 0.05 = 0.75. It is like having 3 dimes, then getting 4 more dimes and a nickel. That is 75 cents."
+ },
+ "5.F-4#6": {
+  "title": "Count up to make change",
+  "text": "Count up from 0.85 to 2, the way a cashier gives change. From 0.85 to 1.00 is 0.15. From 1.00 to 2.00 is 1.00 more. Add the two jumps: 0.15 + 1.00 = 1.15. No borrowing is needed. The change from two dollars is 1 dollar and 15 cents."
+ },
+ "5.F-4#7": {
+  "title": "Take half of 0.8",
+  "text": "The decimal 0.5 is one half, so 0.5 × 0.8 means half of 0.8. Half of 8 tenths is 4 tenths, which is 0.4. In money, half of 80 cents is 40 cents. Fractions agree: 5/10 × 8/10 = 40/100, and that is 0.40."
+ },
+ "5.F-4#8": {
+  "title": "Add four times",
+  "text": "Multiplying by 4 means adding four copies: 1.5 + 1.5 + 1.5 + 1.5. The first two make 3 and the last two make 3, so the total is 6. Or double twice: 1.5 doubled is 3, and 3 doubled is 6."
+ },
+ "5.F-4#9": {
+  "title": "Shade a hundred grid",
+  "text": "Draw a square cut into 10 columns and 10 rows, which makes 100 small squares. Shade 3 columns to show 0.3. Now look only at 7 of the rows. The squares that are in the 3 shaded columns and also in those 7 rows number 3 × 7 = 21. Twenty-one squares out of 100 is 0.21."
+ },
+ "5.F-5#1": {
+  "title": "Count hours and minutes",
+  "text": "Try it with time. An hour is a big unit and a minute is a small one, and 1 hour holds 60 minutes. A 2-hour movie lasts 2 × 60 = 120 minutes. The movie did not get any longer. The number grew from 2 to 120 only because each minute is so much shorter than an hour."
+ },
+ "5.F-5#2": {
+  "title": "Bundle minutes into hours",
+  "text": "Suppose a trip takes 180 minutes. Every 60 minutes can be swapped for 1 hour. The first 60 make 1 hour, the next 60 make 2 hours, and the last 60 make 3 hours. That is 180 ÷ 60 = 3. The trip is just as long as before. The number shrank from 180 to 3 because hours are bigger than minutes."
+ },
+ "5.F-5#3": {
+  "title": "One fact works both ways",
+  "text": "Take the single fact 12 inches = 1 foot and see how much it gives you. Going to the small unit, 5 feet is 5 × 12 = 60 inches. Going to the big unit, 36 inches is 36 ÷ 12 = 3 feet. Half a foot is 6 inches. One anchor answers every feet and inches question, and the other four anchors do the same for their units."
+ },
+ "5.F-5#4": {
+  "title": "Build one with blocks",
+  "text": "Take 24 small blocks and build a box. Make a row of 3 blocks, then put a second row beside it. That floor has 6 blocks. Build three more floors on top, each with 6 blocks, so there are 4 floors: 6 + 6 + 6 + 6 = 24 blocks. Counting them all gives the same number as 3 × 2 × 4."
+ },
+ "5.F-5#5": {
+  "title": "Add one meter at a time",
+  "text": "One meter is 100 centimeters. Two meters is one meter and then another meter, so add 100 + 100 = 200 centimeters. Picture two meter sticks laid end to end: the second stick starts where the first one stops at 100 and ends at 200."
+ },
+ "5.F-5#6": {
+  "title": "Make a feet and inches table",
+  "text": "Build a table, adding 12 inches for each new foot. 1 foot is 12 inches, 2 feet is 24, 3 feet is 36, 4 feet is 48 and 5 feet is 60. The last row gives the answer, 60 inches. You can also split it: 5 × 10 = 50 and 5 × 2 = 10, and 50 + 10 = 60."
+ },
+ "5.F-5#7": {
+  "title": "Count up by hundreds",
+  "text": "Count meters as you count centimeters by hundreds. 100 centimeters is 1 meter, 200 is 2 meters, 300 is 3 meters and 400 is 4 meters. Four counts reach 400, so the length is 4 meters. Check the other way: 4 × 100 = 400."
+ },
+ "5.F-5#8": {
+  "title": "Turn the box on its side",
+  "text": "Rest the box on a different face. Now the floor is 2 wide and 4 long, so one layer holds 2 × 4 = 8 cubes. The box is 3 layers high this way, and 8 × 3 = 24. Turning a box does not change how many cubes fit inside, so the volume is still 24 cubic units."
+ },
+ "5.F-5#9": {
+  "title": "Count the cubes in slices",
+  "text": "Think of a puzzle cube that is 3 small cubes along every edge. Slice it like bread into 3 flat squares. Each slice is 3 by 3, so it has 9 small cubes. Three slices hold 9 + 9 + 9 = 27 small cubes. The volume is 27 cubic units."
+ },
+ "5.F-5#10": {
+  "title": "Split the box in half",
+  "text": "Cut the box into two smaller boxes by splitting the width of 4 into 2 and 2. Each small box is 5 long, 2 wide and 3 tall, so it holds 5 × 2 × 3 = 30 cubes. Put the two halves back together: 30 + 30 = 60 cubic units."
+ },
+ "5.F-6#1": {
+  "title": "Like a seat in a theater",
+  "text": "A theater ticket says something like seat 3 in row 2. You walk along to seat 3 first, then find row 2. Everyone reads the ticket the same way, so no two people fight over one seat. Try both orders on a grid: (3, 2) is 3 across and 2 up, but (2, 3) is 2 across and 3 up. They are different dots, so the order must never be swapped."
+ },
+ "5.F-6#2": {
+  "title": "Make a table of jumps",
+  "text": "Write the term number above each term of 0, 4, 8, 12, 16. Term 1 is 0, term 2 is 4, term 3 is 8, term 4 is 12 and term 5 is 16. Now divide each term by the jump of 4: you get 0, 1, 2, 3, 4. Each result is one less than the term number. So term 100 is 99 jumps of 4, which is 396."
+ },
+ "5.F-6#3": {
+  "title": "Turn the plot into a list",
+  "text": "A line plot is a short way to write a list. Suppose the pencils on a desk measure 1/2, 1/2, 3/4, 1/4 and 3/4 of a foot. Put one X above the right number for each pencil. You get one X above 1/4, two above 1/2 and two above 3/4. Five pencils, five Xs. Reading the plot backwards gives you the list again."
+ },
+ "5.F-6#4": {
+  "title": "Check by walking back",
+  "text": "Test the dot by undoing the directions. From the dot, go down 2 steps. You should land on the bottom line at 3. Then go left 3 steps and you should arrive at the corner, (0, 0). If you end anywhere else, the dot was in the wrong place. The dot at (3, 2) passes this test."
+ },
+ "5.F-6#5": {
+  "title": "Drop lines to the axes",
+  "text": "Draw a straight line from the dot down to the bottom axis. It hits the axis at 4, so x is 4. Draw another line from the dot across to the side axis. It hits at 2, so y is 2. Write the bottom number first: (4, 2)."
+ },
+ "5.F-6#6": {
+  "title": "Spot the five times table",
+  "text": "The terms 5, 10, 15 are 5 × 1, 5 × 2 and 5 × 3. So the next ones are 5 × 4 = 20, 5 × 5 = 25 and 5 × 6 = 30. It is the same as counting nickels: 5 cents, 10 cents, 15 cents, then 20, 25 and 30 cents. Both ways show the pattern jumps by 5 each time."
+ },
+ "5.F-6#7": {
+  "title": "Jump along a number line",
+  "text": "Draw a number line and put a dot on 0 for the 1st term. Jump 4 to land on 4, the 2nd term. Jump to 8 for the 3rd, to 12 for the 4th and to 16 for the 5th. You drew 5 dots but only 4 jumps, and the last dot is on 16."
+ },
+ "5.F-6#8": {
+  "title": "Make a tally table",
+  "text": "Copy the plot into a table with one row per amount. The stacks have 2, 3, 4 and 1 Xs. Add the rows: 2 + 3 is 5, then 5 + 4 is 9, then 9 + 1 is 10 bottles. The biggest row is the 4, and it belongs to 3/4 cup. A quick check: 3 + 1 is 4, 2 + 4 is 6, and 4 + 6 is 10."
+ },
+ "5.F-6#9": {
+  "title": "Use the four times table",
+  "text": "The pattern 0, 4, 8 is the four times table starting from 4 × 0. The 1st term is 4 × 0, the 2nd is 4 × 1, the 3rd is 4 × 2. Each time the multiplier is one less than the term number. So the 5th term is 4 × 4 = 16."
+ },
+ "5.F-7#1": {
+  "title": "Two piles of ten",
+  "text": "Here is a second way to split 20: think of it as 10 + 10. Ten copies of 142 is 1,420, because every digit moves up one place. Twenty copies is two of those piles, and 1,420 + 1,420 = 2,840. Multiplying by 2 and then by 10 gives 284 and then 2,840. Both splits use only easy steps and both land on the same number."
+ },
+ "5.F-7#2": {
+  "title": "Watch the pattern",
+  "text": "Look at a family of easy divisions. 8 ÷ 2 = 4. Make both numbers ten times bigger: 80 ÷ 20 = 4. Do it again: 800 ÷ 200 = 4. The answer never changes, because the amount and the group size grow together. Going the other way works too, so 960 ÷ 40 has the same answer as 96 ÷ 4. Check: 24 × 4 = 96 and 24 × 40 = 960."
+ },
+ "5.F-7#3": {
+  "title": "Trap the answer",
+  "text": "Another way to estimate is to trap the answer between two easy products. For 5,812 ÷ 29, try 29 × 100 = 2,900, which is too small. Try 29 × 1,000 = 29,000, which is far too big. So the answer is in the hundreds. Then 29 × 200 = 5,800 is almost exact. If your long division said 2,004 or 20, you would know right away that a digit slipped."
+ },
+ "5.F-7#4": {
+  "title": "Split 142 by its places",
+  "text": "Leave the 20 alone and break 142 into 100 + 40 + 2. Then 100 × 20 = 2,000, and 40 × 20 = 800, and 2 × 20 = 40. Add the three parts: 2,000 + 800 + 40 = 2,840. This is the same answer as doubling and then multiplying by 10. Splitting either number works, so pick the one that feels easier."
+ },
+ "5.F-7#5": {
+  "title": "Double one, halve the other",
+  "text": "Doubling one number and halving the other keeps a product the same. So 203 × 12 becomes 406 × 6. Now split 406 into 400 and 6: 400 × 6 = 2,400 and 6 × 6 = 36. Add them to get 2,436. This matches the area model, where the two parts were 2,030 and 406."
+ },
+ "5.F-7#6": {
+  "title": "Multiply by 3, then by 4",
+  "text": "Since 12 = 3 × 4, multiply 203 in two small steps. First 203 × 3 = 609. Then 609 × 4: 600 × 4 = 2,400 and 9 × 4 = 36, which makes 2,436. Three different ways of splitting the numbers all agree. So the product of 203 and 12 is 2,436 whichever way you cut it."
+ },
+ "5.F-7#7": {
+  "title": "Peel off groups of 40",
+  "text": "Take out groups of 40 in friendly chunks. Twenty groups use 40 × 20 = 800, and 960 − 800 leaves 160. Four more groups use 40 × 4 = 160, and nothing is left. That is 20 + 4 = 24 groups. Check by multiplying back: 24 groups of 40 is 960."
+ },
+ "5.F-7#8": {
+  "title": "Test round guesses",
+  "text": "Try a few round answers and multiply each by 30. A guess of 100 gives 3,000, which is much less than 5,812. A guess of 300 gives 9,000, which is much more. A guess of 200 gives 6,000, which is close. So the quotient is about 200."
+ },
+ "5.F-7#9": {
+  "title": "Use 25 rows instead",
+  "text": "Twenty-five rows of 36 is easy, because 25 is a quarter of 100. A hundred rows would hold 3,600 crayons, and a quarter of that is 900. The store has only 24 boxes, so take one box of 36 away: 900 − 36 = 864 crayons."
+ },
+ "5.F-8#1": {
+  "title": "A table of powers",
+  "text": "Make a small table. 10 to the power 1 is 10, which is ten. Power 2 is 100, one hundred. Power 3 is 1,000, one thousand. Power 6 is 1,000,000, one million. In every row, the exponent matches the number of zeros. Think of trading money: ten 1-dollar bills make a ten, ten tens make a hundred, ten hundreds make a thousand. Each trade is one more power of 10."
+ },
+ "5.F-8#2": {
+  "title": "Try it with money",
+  "text": "Suppose a ticket costs 3.60 dollars and you buy 10 of them. Ten lots of 3 dollars is 30 dollars. Ten lots of 60 cents is 600 cents, which is 6 dollars. The total is 36 dollars. The digits 3 and 6 are still there, side by side, but each one is now worth ten times more. Buy 100 tickets and the total is 360 dollars."
+ },
+ "5.F-8#3": {
+  "title": "A sharing story",
+  "text": "Ten friends share 450 dollars equally. Each one gets 45 dollars. The digits 4 and 5 are the same, but each sits one place lower than before. If ten people then share the 45 dollars, each gets 4.50 dollars, and the digits have dropped one more place. Sharing among 10 never changes the digits. It only makes each digit worth a tenth of what it was."
+ },
+ "5.F-8#4": {
+  "title": "Hundred times a thousand",
+  "text": "Split the five tens into a group of two and a group of three. Two tens multiplied make 100, and three tens multiplied make 1,000. Then 100 × 1,000 is a hundred thousands, which is 100,000. Count the zeros to check: 2 zeros and 3 zeros make 5 zeros."
+ },
+ "5.F-8#5": {
+  "title": "Split into wholes and tenths",
+  "text": "Break 3.6 into 3 and 0.6. One hundred groups of 3 is 300. One hundred groups of 0.6 is 60, because 100 lots of 6 tenths is 600 tenths, and 600 tenths make 60 wholes. Add the two parts: 300 + 60 = 360."
+ },
+ "5.F-8#6": {
+  "title": "Count the thousands",
+  "text": "Ask how many thousands are in 4,500. The 4,000 is 4 whole thousands. The 500 that is left is half of a thousand, and half is 0.5. So 4,500 is 4 and a half thousands, which is 4.5."
+ },
+ "5.F-8#7": {
+  "title": "Split 62 into 60 and 2",
+  "text": "The power 10⁴ is 10,000. Break 62 into 60 and 2. Sixty ten-thousands is 600,000. Two ten-thousands is 20,000. Add them: 600,000 + 20,000 = 620,000. Each part only needed zeros written after it, and the two parts fill different places, so adding them is easy."
+ },
+ "5.F-8#8": {
+  "title": "Use tenths as a fraction",
+  "text": "The decimal 0.7 is 7 tenths. One hundred groups of 7 tenths is 700 tenths. Every 10 tenths make 1 whole, so 700 tenths make 700 ÷ 10 = 70 wholes. In money, 100 lots of 70 cents is 7,000 cents, and that is 70 dollars."
+ },
+ "5.F-8#9": {
+  "title": "Count by thousands of pennies",
+  "text": "One thousand pennies is 10 dollars, because 10 groups of 100 pennies make 10 dollars. So 2,000 pennies is 20 dollars. The 500 pennies left over are 5 dollars. Add them: 20 + 5 = 25 dollars. This matches sliding the digits of 2,500 two places to the right."
+ },
+ "5.F-9#1": {
+  "title": "Switch to centimeters",
+  "text": "Measure two ribbons: 1.2 meters and 0.35 meters. In centimeters they are 120 and 35, and 120 + 35 = 155 centimeters, which is 1.55 meters. Now look at the decimal sum 1.20 + 0.35. With the points lined up, the 2 tenths sit over the 3 tenths and the columns give 1.55 as well. Lining up the points does the same job as changing everything to one small unit."
+ },
+ "5.F-9#2": {
+  "title": "Look at a ruler",
+  "text": "On a centimeter ruler, the mark for 7 can also be read as 7.0, because it is 7 centimeters and 0 extra millimeters. To find 7 − 0.4, start at that mark and step back 4 millimeter lines. You pass 6.9, 6.8, 6.7 and stop at 6.6. Writing 7 as 7.0 just names the same mark in tenths, so there are tenths to take away from."
+ },
+ "5.F-9#3": {
+  "title": "Hop past the whole number",
+  "text": "Put 0.4 + 0.7 on a number line marked in tenths. Start at 0.4. It takes 6 hops of a tenth to reach 1.0. You had 7 hops to make, so 1 hop is still left, and it lands on 1.1. The line does not stop at 0.9 and start over. It rolls on into the next whole number, and that roll is the carry."
+ },
+ "5.F-9#4": {
+  "title": "Make a whole number first",
+  "text": "The number 2.7 is only 0.3 away from 3. Borrow that 0.3 from 3.4, which turns 3.4 into 3.1 and turns 2.7 into 3. The total has not changed, and now the sum is easy: 3.1 + 3 = 6.1."
+ },
+ "5.F-9#5": {
+  "title": "Count up from 3.2",
+  "text": "Find the gap by counting up from 3.2 to 8.6. Add 5 whole ones to go from 3.2 to 8.2. Then add 0.4 more to go from 8.2 to 8.6. The two jumps together are 5 + 0.4 = 5.4."
+ },
+ "5.F-9#6": {
+  "title": "Round one price up",
+  "text": "The pretzel price of 2.75 is 25 cents short of 3 dollars. Move 25 cents over from the juice: the juice becomes 1.15 and the pretzel becomes 3.00. The total is the same, and 3.00 + 1.15 = 4.15 dollars."
+ },
+ "5.F-9#7": {
+  "title": "Subtract in tenths",
+  "text": "Write 7 as 7.0 and think in tenths. Seven wholes are 70 tenths, and 0.4 is 4 tenths. Subtract: 70 − 4 = 66 tenths. Sixty-six tenths is 6 wholes and 6 tenths, written 6.6. Counting up and subtracting in tenths give the same answer."
+ },
+ "5.F-9#8": {
+  "title": "Read them as money",
+  "text": "Think of 1.25 as 1 dollar and 25 cents, and 0.5 as 50 cents. Add the cents: 25 + 50 = 75 cents. With the 1 dollar, that is 1 dollar and 75 cents, written 1.75. Fifty cents is written 0.50, which is why the 5 lines up under the 2."
+ },
+ "5.F-9#9": {
+  "title": "Work in cents",
+  "text": "Change both amounts to cents so there are no decimal points. Five dollars is 500 cents and the snack is 365 cents. Subtract: 500 − 300 = 200, then 200 − 65 = 135 cents. As dollars, 135 cents is 1.35."
+ },
+ "5.F-10#1": {
+  "title": "Follow the shrinking pattern",
+  "text": "Start with 3 × 4 = 12. Make one factor ten times smaller: 0.3 × 4 is 0.3 + 0.3 + 0.3 + 0.3 = 1.2, so the answer is ten times smaller too. Make the other factor ten times smaller as well: 0.3 × 0.4 = 0.12. Each time a factor loses a place value, the answer moves one more place. Two decimal places in the problem means two in the answer."
+ },
+ "5.F-10#2": {
+  "title": "Try it with cents",
+  "text": "Think of one dollar. The decimal 0.4 of a dollar is 40 cents. Now take 0.3 of that 40 cents. One tenth of 40 cents is 4 cents, so three tenths is 12 cents. Twelve cents is 0.12 of a dollar. That is less than 40 cents and less than 30 cents, because you took only a part of an amount that was already a part."
+ },
+ "5.F-10#3": {
+  "title": "Cut a ribbon",
+  "text": "A ribbon is 4.8 meters long and must be cut into 6 equal pieces. In centimeters the ribbon is 480, and 480 ÷ 6 = 80 centimeters for each piece. Eighty centimeters is 0.8 of a meter. Check by laying the pieces end to end: 6 × 0.8 = 4.8 meters. The digits 48 ÷ 6 = 8 did the work, and the unit told you where the point goes."
+ },
+ "5.F-10#4": {
+  "title": "Count 60 cents seven times",
+  "text": "Read 0.6 as 60 cents. Seven lots of 60 cents is 420 cents, because 7 × 6 = 42 and there is a zero on the end. Four hundred twenty cents is 4 dollars and 20 cents, which is 4.20, or 4.2."
+ },
+ "5.F-10#5": {
+  "title": "Take three tenths of 0.4",
+  "text": "Multiplying by 0.3 means taking three tenths. One tenth of 0.4 is 0.04, because dividing by 10 moves each digit one place to the right. Three of those is 0.04 + 0.04 + 0.04 = 0.12."
+ },
+ "5.F-10#6": {
+  "title": "Halve it, then split in three",
+  "text": "Sharing among 6 can be done in two easy steps, because 6 = 2 × 3. First cut 4.8 in half to get 2.4. Then share 2.4 among 3: 24 tenths ÷ 3 = 8 tenths. Each share is 0.8. Check by multiplying back: 6 shares of 0.8 make 4.8."
+ },
+ "5.F-10#7": {
+  "title": "Split 1.5 into 1 and a half",
+  "text": "Think of 1.5 as one and a half. One group of 2.3 is 2.3. Half a group of 2.3 is 1.15. Add them: 2.3 + 1.15 = 3.45. This agrees with moving the point two places in 345."
+ },
+ "5.F-10#8": {
+  "title": "Trap it between two products",
+  "text": "Since 2.3 is between 2 and 3, the answer must be between 2 × 1.5 = 3 and 3 × 1.5 = 4.5. The number 3.45 fits in that gap. A misplaced point would give 34.5 or 0.345, and neither one is between 3 and 4.5. So 3.45 is sensible."
+ },
+ "5.F-10#9": {
+  "title": "Measure in centimeters",
+  "text": "A ribbon of 0.6 meters is 60 centimeters long. Five ribbons need 5 × 60 = 300 centimeters. One meter is 100 centimeters, so 300 centimeters is 3 meters. No decimal point is needed until the very end."
+ },
+ "5.F-11#1": {
+  "title": "Test it with easy numbers",
+  "text": "Check the idea with fractions you can work out in your head. 6/3 means 6 things in 3 shares, and 6 ÷ 3 = 2. 8/4 is 8 ÷ 4 = 2. 10/5 is 10 ÷ 5 = 2. Now try one that does not come out whole: 1/2 is 1 ÷ 2, and one cookie shared by two people is half a cookie each. The bar in a fraction works just like a division sign."
+ },
+ "5.F-11#2": {
+  "title": "Count quarters of a dollar",
+  "text": "Four quarters make one dollar, so a quarter is 1/4 of a dollar. If you have 9 quarters, you have 9/4 dollars. Four of them make the first dollar, four more make the second dollar, and 1 quarter is left. That is 2 dollars and 25 cents, clearly more than one dollar. Any time you hold more coins than it takes to make a dollar, you have more than one whole."
+ },
+ "5.F-11#3": {
+  "title": "Build it back up",
+  "text": "Check the mixed number by going the other way. Start with 3 2/5. Each whole is 5 fifths, so 3 wholes are 3 × 5 = 15 fifths. Add the 2 extra fifths to get 17 fifths, which is 17/5. Multiplying and adding took you from the mixed number to the improper fraction. Dividing and keeping the remainder is the same trip in reverse."
+ },
+ "5.F-11#4": {
+  "title": "Share three dollars",
+  "text": "Share 3 dollars equally among 4 people. Three dollars is 300 cents, and 300 ÷ 4 = 75 cents each. Seventy-five cents is three quarters of a dollar. So 3 ÷ 4 = 3/4, with the amount being shared on top."
+ },
+ "5.F-11#5": {
+  "title": "Check by giving it back",
+  "text": "If each kid gets 2/5 of a pizza, then 5 kids together should have the 2 pizzas. Add 2/5 five times: that is 10 fifths. Five fifths make one pizza, so 10 fifths make 2 pizzas. The shares rebuild both pizzas, so 2/5 each is right."
+ },
+ "5.F-11#6": {
+  "title": "Take away one whole at a time",
+  "text": "One whole is 5/5. Take it away from 17/5 and 12/5 is left. Take away another whole and 7/5 is left. Take away a third whole and 2/5 is left, which is too small to make another whole. You removed 3 wholes and have 2/5 left over: 3 2/5."
+ },
+ "5.F-11#7": {
+  "title": "Use a decimal",
+  "text": "Work out 17 ÷ 5 as a decimal. Five goes into 15 three times, and the 2 left over is 20 tenths, which gives 4 tenths more. So 17 ÷ 5 = 3.4. The 0.4 is 4/10, which simplifies to 2/5. That gives 3 2/5 again."
+ },
+ "5.F-11#8": {
+  "title": "Share seven pizzas",
+  "text": "Picture 7 pizzas shared by 8 people. There are fewer pizzas than people, so nobody can have a whole one. Each person gets 7/8 of a pizza, which is one slice short of a whole pizza cut in eighths. So 7 ÷ 8 is less than 1."
+ },
+ "5.F-11#9": {
+  "title": "Give out halves first",
+  "text": "Cut two of the sandwiches in half. That makes 4 halves, one for each friend. Cut the last sandwich into 4 quarters and give one to each friend. Everyone now has a half and a quarter. A half is 2 quarters, so each friend has 3 quarters: 3/4."
+ },
+ "5.F-12#1": {
+  "title": "Check both parts",
+  "text": "Split 15 into fifths and look at everything. One fifth is 3, so the fifths are 3, 3, 3, 3 and 3. Two of them make 6 and the other three make 9. Together 6 + 9 = 15, so nothing was lost. You can also multiply first: 2 × 15 = 30, and 30 ÷ 5 = 6. Dividing then multiplying, or multiplying then dividing, gives the same 6."
+ },
+ "5.F-12#2": {
+  "title": "Hop along a number line",
+  "text": "Draw a number line marked in thirds. Start at 0 and make a hop of 2/3 for each batch. The first hop lands on 2/3. The second lands on 4/3, which is 1 1/3. The third lands on 6/3, which is exactly 2. Three equal hops of 2/3 is what 3 × 2/3 means, and the line shows the total without any rule."
+ },
+ "5.F-12#3": {
+  "title": "Try another pair",
+  "text": "Estimate 7/8 + 1/10. Seven eighths is nearly a whole pizza, so call it 1. One tenth is a thin sliver, so call it 0. The estimate is 1 + 0 = 1. The exact sum is 0.875 + 0.1 = 0.975, so the estimate was very close. Benchmarks will not give the exact answer, but they tell you fast that an answer like 8/18 or 2 must be wrong."
+ },
+ "5.F-12#4": {
+  "title": "Start from full cups",
+  "text": "Two thirds of a cup is a full cup with 1/3 missing. Three full cups would be 3 cups. Each batch is 1/3 short, so three batches are 3 thirds short, and 3 thirds is 1 whole cup. Take it away: 3 − 1 = 2 cups."
+ },
+ "5.F-12#5": {
+  "title": "Use tenths",
+  "text": "Two fifths is the same as four tenths. One tenth of 15 dollars is 1.50 dollars, because dividing by 10 moves each digit one place. Four tenths is 4 × 1.50 = 6.00. Jordan saves 6 dollars."
+ },
+ "5.F-12#6": {
+  "title": "Half plus a quarter",
+  "text": "Three fourths is a half and a quarter put together. Half of 6 quarts is 3 quarts. A quarter of 6 quarts is half of that, which is 1.5 quarts. Add them: 3 + 1.5 = 4.5 quarts."
+ },
+ "5.F-12#7": {
+  "title": "Take off one fourth",
+  "text": "Three fourths of something is all of it with one fourth removed. One fourth of 6 is 1.5. Take that away from 6: 6 − 1.5 = 4.5. Multiplying first, dividing first and subtracting a fourth all give 4.5."
+ },
+ "5.F-12#8": {
+  "title": "Use decimals",
+  "text": "Turn each fraction into a decimal. 5/8 is 0.625 and 1/3 is about 0.333. Add them: about 0.958. That is just a little less than 1, so Ella ate about 1 whole bar. The exact sum, 23/24, agrees with that estimate."
+ },
+ "5.F-12#9": {
+  "title": "Four laps make a mile",
+  "text": "Each lap is a quarter of a mile, so 4 laps make 1 whole mile. Six laps is 4 laps and then 2 more. The 2 extra laps are 2 quarters, which is half a mile. Total: 1 mile and a half."
+ },
+ "5.F-13#1": {
+  "title": "A lunch bill",
+  "text": "You buy one sandwich for 5 dollars and 2 drinks at 3 dollars each. The bill is 5 + 2 × 3. The drinks cost 6 dollars, so you owe 5 + 6 = 11 dollars. Adding first would give 7 × 3 = 21 dollars, as if you had bought 7 drinks. Multiplying first matches what really happened. Parentheses are for the times when you truly do mean to add first."
+ },
+ "5.F-13#2": {
+  "title": "Try another sentence",
+  "text": "Take the words double the sum of 4 and 6. Say it with numbers: the sum is 10, and double 10 is 20. Now test two ways of writing it. 2 × (4 + 6) = 2 × 10 = 20, which matches. 2 × 4 + 6 = 8 + 6 = 14, which does not. Only the version with parentheses says what the words say."
+ },
+ "5.F-13#3": {
+  "title": "Check it with the numbers",
+  "text": "This one time, do the arithmetic to see that the shortcut is true. 245 + 17 = 262. Three times that is 3 × 262 = 786. Now divide: 786 ÷ 262 = 3. The big number really is 3 times the small one. Change 245 + 17 to any other sum and the same thing happens, so next time you can skip the arithmetic."
+ },
+ "5.F-13#4": {
+  "title": "Multiply each number by 5",
+  "text": "Five groups of 7 + 3 hold five 7s and five 3s. Five 7s are 35 and five 3s are 15. Add them: 35 + 15 = 50. This matches adding first and then multiplying 5 × 10. Spreading the 5 over both numbers never changes the value."
+ },
+ "5.F-13#5": {
+  "title": "Divide each number by 4",
+  "text": "Sharing 36 − 12 into 4 groups can be done one number at a time. 36 ÷ 4 = 9 and 12 ÷ 4 = 3. Then subtract: 9 − 3 = 6. This works here because both 36 and 12 divide evenly by 4. It is the same answer as subtracting first and then dividing 24 by 4."
+ },
+ "5.F-13#6": {
+  "title": "Test both orders",
+  "text": "Try both orders and see which makes sense. Subtracting first gives 17 × 4 = 68. That is bigger than 20, even though the expression takes something away from 20. Multiplying first gives 20 − 12 = 8. Check by adding back: 8 + 12 = 20."
+ },
+ "5.F-13#7": {
+  "title": "Add first, then triple",
+  "text": "Do the parentheses first: 8 + 5 = 13. Three times 13 is 13 + 13 + 13. Two of them make 26, and one more makes 39. The answer matches 24 + 15. Sharing out the 3 and adding first are two routes to the same value."
+ },
+ "5.F-13#8": {
+  "title": "Test it with the value",
+  "text": "Work out what the words mean: the sum of 8 and 5 is 13, and three times 13 is 39. Now test the expression 3 × (8 + 5). It gives 3 × 13 = 39, which matches. Without parentheses, 3 × 8 + 5 gives 29, so that one is wrong."
+ },
+ "5.F-13#9": {
+  "title": "Count each kind",
+  "text": "Count the stickers and pencils separately. Four bags with 6 stickers each is 24 stickers. Four bags with 2 pencils each is 8 pencils. Together that is 24 + 8 = 32 things. This is the same total as 4 bags of 8 things."
+ },
+ "5.F-14#1": {
+  "title": "Look at a calendar",
+  "text": "Pick the first day of a month and suppose it is a Monday. The next Monday is day 8, then day 15, then 22, then 29. The rule is add 7, because a week has 7 days. Start on a different day, say day 3, and the same rule gives 3, 10, 17, 24, 31. One rule can make many patterns. The starting number and the rule together decide every number."
+ },
+ "5.F-14#2": {
+  "title": "Fence posts and gaps",
+  "text": "Put 6 fence posts in a row and count the gaps between them. There are only 5 gaps, because the first post has no gap before it. If each gap is 3 feet wide, the last post is 5 × 3 = 15 feet from the first. The numbers in a pattern are the posts and the jumps are the gaps, so there is always one fewer jump than numbers."
+ },
+ "5.F-14#3": {
+  "title": "Check the pairs with a rule",
+  "text": "Look at the pairs (0, 0), (2, 4) and (4, 8) as numbers. In each one, the second number is double the first: 0 is double 0, 4 is double 2, and 8 is double 4. The next A number is 6 and the next B number is 12, and 12 is double 6 again. Every pair obeys the same doubling rule, and that shared rule is what lines the dots up."
+ },
+ "5.F-14#4": {
+  "title": "Use the three times table",
+  "text": "The pattern is the three times table starting from 3 × 0. The 1st number is 3 × 0, the 2nd is 3 × 1, and the 3rd is 3 × 2. The multiplier is always one less than the position. So the 6th number is 3 × 5 = 15."
+ },
+ "5.F-14#5": {
+  "title": "Read a clock face",
+  "text": "Look at the minute marks on a clock. The hand at the 12 means 0 minutes. At the 1 it means 5 minutes, at the 2 it means 10, at the 3 it means 15 and at the 4 it means 20. Those are five numbers made by adding 5 each time: 0, 5, 10, 15, 20."
+ },
+ "5.F-14#6": {
+  "title": "Subtract the matching numbers",
+  "text": "Take each A number away from its B number. 0 − 0 = 0, 4 − 2 = 2, 8 − 4 = 4 and 12 − 6 = 6. The differences 0, 2, 4, 6 are the A numbers again. So each B number is its A number plus the same amount once more, which makes B twice A."
+ },
+ "5.F-14#7": {
+  "title": "List some and check",
+  "text": "Write a few numbers to test the claim. A gives 0, 2, 4, 6, 8. B gives 0, 4, 8, 12, 16. Compare them in order: 4 is double 2, 8 is double 4, 12 is double 6 and 16 is double 8. The lists agree that B is 2 times A."
+ },
+ "5.F-14#8": {
+  "title": "Follow the steps on a graph",
+  "text": "Plot the pairs. From (0, 0) to (2, 6) you move 2 across and 6 up. From (2, 6) to (4, 12) you again move 2 across and 6 up. Every step climbs 6 for each 2 across, which is 3 up for each 1 across. So the B number is always 3 times the A number."
+ },
+ "5.F-14#9": {
+  "title": "Make a savings table",
+  "text": "Write both savings week by week. Maya has 3, 6, 9 and 12 dollars. Leo has 6, 12, 18 and 24 dollars. In every week Leo's number is double Maya's. It makes sense, because each week Leo puts in two 3-dollar amounts for every one of Maya's."
+ },
+ "5.F-15#1": {
+  "title": "Slice it three ways",
+  "text": "Take a box that is 6 long, 3 wide and 2 tall and count its cubes in three ways. Flat layers: 6 × 3 = 18 cubes in each, and 2 layers make 36. Slices from the front: 6 × 2 = 12 in each, and 3 slices make 36. Slices from the side: 3 × 2 = 6 in each, and 6 slices make 36. The cubes are the same however you slice, so the three lengths can be multiplied in any order."
+ },
+ "5.F-15#2": {
+  "title": "Build a table",
+  "text": "Write out feet and inches side by side. 1 foot is 12 inches, 2 feet is 24, 3 feet is 36, and so on up to 7 feet, which is 84. Read the table left to right and you are multiplying by 12. Read it right to left and you are dividing by 12, for example 36 inches back to 3 feet. The length never changes, only the count."
+ },
+ "5.F-15#3": {
+  "title": "Use the plot to find a total",
+  "text": "Suppose a plot of juice glasses has 2 Xs above 1/4 cup and 1 X above 1/2 cup. That is 3 glasses, because there are 3 Xs. The Xs can tell you more than a count. Two glasses of 1/4 cup hold 1/2 cup together, and the last glass holds another 1/2 cup. All the juice adds up to 1 whole cup."
+ },
+ "5.F-15#4": {
+  "title": "Start with the end face",
+  "text": "Look at the small end of the box, which is 3 inches wide and 2 inches tall. One slice there holds 3 × 2 = 6 cubes. The box is 6 inches long, so there are 6 slices. Six slices of 6 cubes make 36 cubic inches."
+ },
+ "5.F-15#5": {
+  "title": "Fill half-liter bottles",
+  "text": "A half-liter bottle holds 500 milliliters, because that is half of 1,000. To hold 2.5 liters you need 5 of those bottles, since two bottles make each liter and one more makes the half. Five bottles hold 5 × 500 = 2,500 milliliters."
+ },
+ "5.F-15#6": {
+  "title": "Skip-count by twelves",
+  "text": "Count one foot at a time, adding 12 inches for each. The count goes 12, 24, 36, 48, 60, 72, 84. That is seven numbers, one for each foot, and the last one is 84. The shelf is 84 inches tall."
+ },
+ "5.F-15#7": {
+  "title": "Slice from the end",
+  "text": "Cut the box into slices starting from one end. Each slice is 4 wide and 3 tall, so it holds 4 × 3 = 12 cubes. The box is 5 long, so there are 5 slices. Five slices of 12 cubes make 60 cubic units."
+ },
+ "5.F-15#8": {
+  "title": "Compare with a full cup",
+  "text": "Four bottles of 1/4 cup would fill exactly 1 cup. There are only 3 bottles, so the total is one quarter cup short of a full cup. One cup minus 1/4 cup is 3/4 cup."
+ },
+ "5.F-15#9": {
+  "title": "Count ten slices",
+  "text": "Look at the end of the tank, which is 5 cm wide and 4 cm tall. A slice 1 cm thick holds 5 × 4 = 20 cubes. The tank is 10 cm long, so it has 10 slices. Ten slices of 20 make 200 cubic centimeters."
+ },
+ "5.F-16#1": {
+  "title": "Hallway, then elevator",
+  "text": "Think of a building with a row of elevators. To reach a room you walk along the ground floor to the right elevator, then ride up to the right floor. You cannot ride up before you have walked across. For the point (5, 2), walk across to 5, then ride up 2. The point (2, 5) uses the same two numbers but takes a different elevator to a different floor."
+ },
+ "5.F-16#2": {
+  "title": "Find them around you",
+  "text": "Look for triangles in real things. A slice of pizza has two equal long sides and all small angles, so it is isosceles and acute. The corner of a book folded flat makes a right triangle. A yield sign has three equal sides, so it is equilateral. A coat hanger has one wide angle at the hook, so it is obtuse. Every triangle gets two names, one for angles and one for sides."
+ },
+ "5.F-16#3": {
+  "title": "Puppies and dogs",
+  "text": "Every puppy is a dog, but not every dog is a puppy. A puppy is a dog with one extra rule: it must be young. Shapes work the same way. A square is a rectangle with one extra rule: all four sides must be equal. So every square is a rectangle, but a rectangle that is 6 long and 2 wide is not a square."
+ },
+ "5.F-16#4": {
+  "title": "It sits on the x-axis",
+  "text": "With 0 steps up, the point never leaves the bottom line of the grid. It sits right on the x-axis at the mark for 6, so it is (6, 0). Compare it with (0, 6), which is 0 across and 6 up and sits on the y-axis instead."
+ },
+ "5.F-16#5": {
+  "title": "Put it in a table",
+  "text": "Suppose the walker goes 4 miles every hour. A table would read: 1 hour, 4 miles. 2 hours, 8 miles. 3 hours, 12 miles. The point (3, 12) is the third row of that table drawn as a dot. It says that after 3 hours, 12 miles have been covered."
+ },
+ "5.F-16#6": {
+  "title": "Fold a square corner to corner",
+  "text": "Fold a square piece of paper along its diagonal. Each half is a triangle. It keeps one corner of the square, which is 90°. The other two corners of the square were each cut in half, so they are 45° each. Two sides of the triangle are sides of the square, so they are equal. It is a right isosceles triangle."
+ },
+ "5.F-16#7": {
+  "title": "Sort them into hoops",
+  "text": "Lay a big hoop on the floor for rectangles and put a small hoop inside it for squares. Every shape in the small hoop is also inside the big hoop, so every square is a rectangle. A long door shape goes in the big hoop but outside the small one. So not every rectangle is a square."
+ },
+ "5.F-16#8": {
+  "title": "Tell each story",
+  "text": "Use hours across and miles up. The point (3, 12) says 12 miles after 3 hours, a steady walk. The point (12, 3) says only 3 miles after 12 hours, which is hardly moving. Two very different trips cannot be the same dot, so these are different points."
+ },
+ "5.F-16#9": {
+  "title": "Go north first",
+  "text": "Try the steps in the other order. Walk 3 steps north from the tree to reach (0, 3). Then walk 4 steps east and you arrive at (4, 3). It is the same spot as going east first. The walk can be done in either order, but the pair is still written with the east number first: (4, 3)."
+ },
  "6.EE-1#1": {
   "title": "Fold a sheet of paper",
   "text": "Fold a sheet of paper in half and it is 2 layers thick. Fold it again and each layer doubles, so there are 4. A third fold makes 8.\nEvery fold is one more \"times 2\", so three folds give 2 × 2 × 2 = 2³ = 8 layers. The exponent is the number of folds, and the base is what each fold multiplies by."

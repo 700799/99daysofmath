@@ -37,8 +37,9 @@
     {
       "title": "Count up by 12s",
       "steps": [
-        "$12, 24, 36, 48$ — that is 4 jumps.",
-        "So $48$ in $= 4$ ft."
+        "Every foot is $12$ inches, so count by twelves until you reach $48$: $12, 24, 36, 48$.",
+        "That took $4$ jumps, and each jump is one foot.",
+        "So $48$ inches is the same length as $4$ feet."
       ]
     }
   ],

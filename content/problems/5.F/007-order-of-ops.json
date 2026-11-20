@@ -34,8 +34,9 @@
     {
       "title": "Why parentheses matter",
       "steps": [
-        "Without parentheses, $3 \\times 8 + 4 - 6 = 24 + 4 - 6 = 22$ — a different answer!",
-        "Parentheses say: do this part first."
+        "Try it without the parentheses: $3 \\times 8 + 4 - 6 = 24 + 4 - 6 = 22$, because the $3$ only multiplies the $8$.",
+        "The parentheses say the $3$ must multiply the whole sum, so it multiplies the $4$ as well: $3 \\times 8 + 3 \\times 4 = 24 + 12 = 36$.",
+        "Now subtract the $6$ to finish: $36 - 6 = 30$, which is $8$ more than the answer without parentheses."
       ]
     }
   ],

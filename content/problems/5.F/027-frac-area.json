@@ -33,6 +33,16 @@
     "Multiply across: $\\frac{2 \\times 3}{3 \\times 2} = \\frac{6}{6}$, and six sixths make exactly one whole.",
     "The two side lengths are reciprocals, so their product is $1$. The area is $1$ square inch."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Use a decimal length",
+      "steps": [
+        "Write the longer side as a decimal: $\\frac{3}{2}$ inches is $1.5$ inches.",
+        "The area is $\\frac{2}{3}$ of $1.5$. One third of $1.5$ is $0.5$, so two thirds is $2 \\times 0.5 = 1$.",
+        "The sticker covers exactly $1$ square inch."
+      ]
+    }
+  ],
   "tags": [
     "fractions",
     "area"

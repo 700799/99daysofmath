@@ -42,16 +42,17 @@
     {
       "title": "Estimate first",
       "steps": [
-        "$128 \\times 24$ is roughly $130 \\times 25 = 3{,}250$.",
-        "$3{,}250 - 500 = 2{,}750$, so an answer near $2{,}572$ makes sense ✓"
+        "Round to friendly numbers: $128 \\times 24$ is roughly $130 \\times 25 = 3{,}250$ blocks for the whole wall.",
+        "Take off the $500$ blocks already placed: $3{,}250 - 500 = 2{,}750$, so the answer should be somewhat below $2{,}750$.",
+        "The exact work gives $128 \\times 24 = 3{,}072$ and $3{,}072 - 500 = 2{,}572$, which fits the estimate."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "The classic slip is answering $3{,}072$ — the total for the wall — and forgetting the $500$ blocks already placed.",
-        "Another slip is subtracting first: $128 - 500$ does not even make sense here.",
-        "Reread the last sentence: it asks how many **more** you need, so the subtraction has to come after the multiplication: $3{,}072 - 500 = 2{,}572$."
+        "A classic slip is answering $3{,}072$, which is the total for the wall and forgets the $500$ blocks already placed.",
+        "Another slip is subtracting first, but $128 - 500$ makes no sense because $500$ blocks is more than one layer.",
+        "The question asks how many **more** blocks you need, so multiply first and subtract second: $3{,}072 - 500 = 2{,}572$."
       ]
     }
   ],

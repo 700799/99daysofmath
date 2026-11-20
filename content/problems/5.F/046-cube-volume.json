@@ -30,6 +30,16 @@
     "Multiply the first two edges to get the bottom layer: $5 \\times 5 = 25$ cubes.",
     "There are $5$ layers, and $25 \\times 5 = 125$, so the volume is $125$ cubic inches."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Shrink a bigger cube",
+      "steps": [
+        "A cube with $10$-inch edges is easy: $10 \\times 10 \\times 10 = 1000$ cubic inches.",
+        "A $5$-inch cube is half as long, half as wide and half as tall, so $2 \\times 2 \\times 2 = 8$ of them fill the big cube.",
+        "One small cube is therefore $1000 \\div 8 = 125$ cubic inches."
+      ]
+    }
+  ],
   "tags": [
     "volume"
   ],
