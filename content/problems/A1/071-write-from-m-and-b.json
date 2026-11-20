@@ -38,16 +38,17 @@
     {
       "title": "Start-then-move story",
       "steps": [
-        "The intercept is where you START: height $1$ on the $y$-axis.",
-        "The slope is how you MOVE: up $5$ per step across.",
-        "Start $1$, move $5x$: $y = 5x + 1$."
+        "The $y$-intercept tells you where the line starts: at height $1$ on the $y$-axis.",
+        "The slope tells you how the line moves: up $5$ for every step across, which is $5x$ after $x$ steps.",
+        "Start plus movement gives $y = 1 + 5x$, written in the usual order as $y = 5x + 1$."
       ]
     },
     {
       "title": "Build the table first",
       "steps": [
-        "Start at $x = 0, y = 1$ and jump $5$ each step: $0 \\to 1$, $1 \\to 6$, $2 \\to 11$.",
-        "Jump $5$ means $5x$; the value at zero, $1$, is the $+b$: $y = 5x + 1$."
+        "Build a table from the two facts, starting at $y = 1$ when $x = 0$ and adding $5$ each step: $0 \\to 1$, $1 \\to 6$, $2 \\to 11$.",
+        "Each output is $5$ times the input plus the starting $1$, for example $5 \\times 2 + 1 = 11$.",
+        "Writing that pattern with letters gives the equation $y = 5x + 1$."
       ]
     }
   ],

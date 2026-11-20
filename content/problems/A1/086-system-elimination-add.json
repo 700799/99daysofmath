@@ -34,15 +34,17 @@
     {
       "title": "Sum and difference story",
       "steps": [
-        "Two numbers add to 10 and are 4 apart. The bigger one sits half the gap above the middle.",
-        "The middle of 10 is 5, and half of 4 is 2. Bigger number: 5 + 2 = 7. So x = 7."
+        "The equations describe two numbers that add to $10$ and are $4$ apart.",
+        "If the numbers were equal they would both be $5$, the middle of $10$.",
+        "Move the bigger one up by half the gap: $5 + 2 = 7$, so $x = 7$ and the smaller number is $y = 3$."
       ]
     },
     {
       "title": "Build a table",
       "steps": [
-        "List pairs that add to 10: (6, 4), (7, 3), (8, 2).",
-        "Which pair is 4 apart? 7 − 3 = 4. So x = 7 and y = 3."
+        "List some pairs that add to $10$, as the first equation requires: $(6, 4)$, $(7, 3)$ and $(8, 2)$.",
+        "Check each pair against the second equation, which says the difference is $4$.",
+        "Only the pair $(7, 3)$ works, because $7 - 3 = 4$, so $x = 7$."
       ]
     }
   ],

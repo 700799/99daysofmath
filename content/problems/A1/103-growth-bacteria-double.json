@@ -34,15 +34,17 @@
     {
       "title": "Hour-by-hour table",
       "steps": [
-        "Hour 0: 5. Hour 1: 10. Hour 2: 20. Hour 3: 40.",
-        "Each row doubles the last — after 3 hours, 40 bacteria."
+        "Make an hour-by-hour table, doubling the previous count each time.",
+        "From $5$ bacteria at hour $0$, the count is $10$ at hour $1$ and $20$ at hour $2$.",
+        "Doubling once more gives $40$ bacteria at hour $3$."
       ]
     },
     {
       "title": "Compare with adding",
       "steps": [
-        "If the dish ADDED 5 each hour (linear), 3 hours would give 5 + 15 = 20.",
-        "Doubling is faster: 5 × 8 = 40 — exponential growth pulls ahead."
+        "Compare with adding: if the dish gained $5$ bacteria each hour, three hours would give only $5 + 15 = 20$.",
+        "Doubling three times multiplies the count by $2 \\times 2 \\times 2 = 8$ instead.",
+        "So the dish holds $5 \\times 8 = 40$ bacteria, twice what steady adding would give."
       ]
     }
   ],

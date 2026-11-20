@@ -34,9 +34,9 @@
     {
       "title": "As a balance scale",
       "steps": [
-        "Left pan: 7 boxes with 4 grams removed. Right pan: 3 boxes plus 16 grams.",
-        "Lift 3 boxes off each pan, then add 4 grams to each pan: 4 boxes balance 20 grams.",
-        "Each box is 5 grams."
+        "Picture a scale: the left pan holds $7$ boxes with $4$ grams taken away, and the right pan holds $3$ boxes plus $16$ grams.",
+        "Lift $3$ boxes off each pan, then add $4$ grams to each pan, so $4$ boxes balance $20$ grams.",
+        "Sharing $20$ grams among $4$ boxes gives $5$ grams each, so $x = 5$."
       ]
     }
   ],

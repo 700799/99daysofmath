@@ -34,15 +34,17 @@
     {
       "title": "Double step by step",
       "steps": [
-        "Start at 3 and double 4 times: 3 → 6 → 12 → 24 → 48.",
-        "After 4 doublings, y = 48."
+        "Read the rule as \"start at $3$ and double once for every step of $x$\".",
+        "For $x = 4$ that means doubling four times in a row: $3 \\to 6 \\to 12 \\to 24 \\to 48$.",
+        "After the fourth doubling the value is $y = 48$."
       ]
     },
     {
       "title": "Table of x and y",
       "steps": [
-        "x = 0: y = 3. x = 1: y = 6. x = 2: y = 12. x = 3: y = 24. x = 4: y = 48.",
-        "Each row doubles, landing on 48 at x = 4."
+        "Build a table of $x$ and $y$: when $x = 0$, $y = 3$, and when $x = 1$, $y = 6$.",
+        "Each row doubles the row before, so $x = 2$ gives $12$ and $x = 3$ gives $24$.",
+        "The next row of the table is $x = 4$, where the doubled value is $y = 48$."
       ]
     }
   ],

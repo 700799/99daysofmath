@@ -39,15 +39,17 @@
     {
       "title": "Close the gap",
       "steps": [
-        "Hall B costs $\\$4$ more per guest, but hall A starts with a $\\$40$ fee.",
-        "Every guest closes the gap by $\\$4$, so it takes $40 \\div 4 = 10$ guests to tie."
+        "At zero guests Hall A is $40$ dollars more expensive, because of its rental fee.",
+        "Hall B charges $10 - 6 = 4$ dollars more for each guest, so every guest closes the gap by $4$ dollars.",
+        "A gap of $40$ dollars closing by $4$ dollars per guest is gone after $40 \\div 4 = 10$ guests."
       ]
     },
     {
       "title": "⚠️ Dodge the trap",
       "steps": [
-        "Giving Hall B a $40 fee too — writing 40 + 6g = 40 + 10g — makes the halls tie forever.",
-        "Each hall keeps its own rule: A is 40 + 6g, B is just 10g. Set THOSE equal, and g = 10 falls out."
+        "The trap is giving Hall B a fee as well and writing $40 + 6g = 40 + 10g$, which is only true when $g = 0$.",
+        "Each hall keeps its own rule: Hall A costs $40 + 6g$ and Hall B costs just $10g$.",
+        "Setting those two equal gives $40 = 4g$, so the halls cost the same at $g = 10$ guests."
       ]
     }
   ],

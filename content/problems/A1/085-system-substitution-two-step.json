@@ -34,15 +34,17 @@
     {
       "title": "Guess and check with a table",
       "steps": [
-        "Try x = 2: y = 3 and 3(2) + 3 = 9. Too small. Try x = 4: y = 7 and 12 + 7 = 19. Too big.",
-        "Try x = 3: y = 5 and 9 + 5 = 14. That is it — x = 3."
+        "Guess values of $x$, find $y$ from $y = 2x - 1$, and test the second equation.",
+        "With $x = 2$, $y = 3$ and $3(2) + 3 = 9$, which is too small; with $x = 4$, $y = 7$ and $12 + 7 = 19$, which is too big.",
+        "Try the value in between: $x = 3$ gives $y = 5$ and $9 + 5 = 14$, which fits, so $x = 3$."
       ]
     },
     {
       "title": "Picture the swap",
       "steps": [
-        "Think of y as a labeled box. The label says \"2x − 1 lives inside.\"",
-        "The second equation 3x + [box] = 14 becomes 3x + 2x − 1 = 14, which is 5 copies of x minus 1. Five copies make 15, so each copy is 3."
+        "Think of $y$ as a box with a label that says it contains $2x - 1$.",
+        "Open the box inside the second equation: $3x + y = 14$ becomes $3x + 2x - 1 = 14$, which is five copies of $x$ less $1$.",
+        "Five copies of $x$ must equal $15$, so each copy is $15 \\div 5 = 3$ and $x = 3$."
       ]
     }
   ],

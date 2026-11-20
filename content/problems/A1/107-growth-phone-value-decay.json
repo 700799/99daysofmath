@@ -34,15 +34,17 @@
     {
       "title": "Year-by-year table",
       "steps": [
-        "New: $500. After year 1: 500 × 0.8 = $400. After year 2: 400 × 0.8 = $320.",
-        "Notice it loses $100 the first year but only $80 the second — decay shrinks by a factor, not a fixed amount."
+        "Follow the value year by year, starting from $500$ dollars when the phone is new.",
+        "After year $1$ it is worth $500 \\times 0.8 = 400$ dollars, a loss of $100$ dollars.",
+        "After year $2$ it is worth $400 \\times 0.8 = 320$ dollars, a smaller loss of $80$ dollars because the factor works on a smaller value."
       ]
     },
     {
       "title": "Slice off a fifth twice",
       "steps": [
-        "Losing 20% = losing one fifth. One fifth of 500 is 100, leaving 400.",
-        "One fifth of 400 is 80, leaving 320. Value: $320."
+        "Losing $20\\%$ is the same as losing one fifth, and one fifth of $500$ is $100$, which leaves $400$ dollars.",
+        "In the second year, one fifth of $400$ is $80$.",
+        "Taking that away leaves $400 - 80 = 320$ dollars after two years."
       ]
     }
   ],

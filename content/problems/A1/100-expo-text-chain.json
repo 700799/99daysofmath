@@ -39,15 +39,17 @@
     {
       "title": "Keep doubling a list",
       "steps": [
-        "2, 4, 8, 16, 32, 64, 128, 256, 512, 1024.",
-        "The 10th number in the doubling list is 1024."
+        "Write a doubling list, starting with the $2$ friends in round one: $2, 4, 8, 16, 32$.",
+        "Keep doubling for rounds six to ten: $64, 128, 256, 512, 1024$.",
+        "The tenth number in the list is $1024$, so round ten reaches $1024$ people."
       ]
     },
     {
       "title": "Land on 1000 fast",
       "steps": [
-        "2¹⁰ = 2⁴ × 2⁶ = 16 × 64.",
-        "16 × 64 = 16 × 60 + 16 × 4 = 960 + 64 = 1024."
+        "Split the power a different way, using exponents that add to $10$: $2^{10} = 2^4 \\times 2^6 = 16 \\times 64$.",
+        "Break the multiplication into two easier parts: $16 \\times 60 = 960$ and $16 \\times 4 = 64$.",
+        "Add the parts to get $960 + 64 = 1024$ people."
       ]
     }
   ],

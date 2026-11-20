@@ -34,9 +34,9 @@
     {
       "title": "Level-by-level table",
       "steps": [
-        "Level 1: $50 + 20 = 70$. Level 2: $100 + 20 = 120$.",
-        "Level 3: $150 + 20 = 170$. Level 4: $200 + 20 = 220$.",
-        "Each level adds exactly 50 coins on top of the one-time bonus."
+        "Build a table from the story: level $1$ gives $50 + 20 = 70$ coins and level $2$ gives $100 + 20 = 120$ coins.",
+        "Each new level adds exactly $50$ coins, so level $3$ gives $170$ coins.",
+        "One more jump of $50$ reaches level $4$, so you have $170 + 50 = 220$ coins."
       ]
     }
   ],

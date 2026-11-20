@@ -34,15 +34,17 @@
     {
       "title": "Mirror twins on the U",
       "steps": [
-        "On the parabola, x = 4 and x = −4 sit at the same height, like mirror twins.",
-        "Since 4² = 16, the twin −4 also lands at y = 16."
+        "On the parabola, $x = 4$ and $x = -4$ are mirror images and sit at the same height.",
+        "The height at $x = 4$ is easy to find: $4^2 = 16$.",
+        "Its mirror twin $x = -4$ is at the same height, so $y = 16$."
       ]
     },
     {
       "title": "Table of values",
       "steps": [
-        "Fill a table: x = −4, −2, 0, 2, 4 gives y = 16, 4, 0, 4, 16.",
-        "The left side copies the right side — read off y = 16 at x = −4."
+        "Fill in a table for $y = x^2$: the inputs $-4, -2, 0, 2, 4$ give the outputs $16, 4, 0, 4, 16$.",
+        "The left half of the table repeats the right half, because squaring removes the sign.",
+        "Reading the first entry of the table, $y = 16$ when $x = -4$."
       ]
     }
   ],

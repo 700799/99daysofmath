@@ -34,15 +34,17 @@
     {
       "title": "Slope formula",
       "steps": [
-        "Take two rows as points: $(1, 9)$ and $(3, 17)$.",
-        "$m = \\frac{17 - 9}{3 - 1} = \\frac{8}{2} = 4$ — same answer as the jump."
+        "Use the slope formula on two rows of the table, written as the points $(1, 9)$ and $(3, 17)$.",
+        "The change in $y$ is $17 - 9 = 8$ and the change in $x$ is $3 - 1 = 2$.",
+        "Dividing gives $m = \\frac{8}{2} = 4$, the same as the jump between neighbouring rows."
       ]
     },
     {
       "title": "Rate story",
       "steps": [
-        "Read the table as pay: hour $1 \\to \\$9$, hour $2 \\to \\$13$, hour $3 \\to \\$17$.",
-        "You earn $\\$4$ more every hour — that per-hour rate is the slope, $4$."
+        "Read the table as pay: after $1$ hour you have $9$ dollars, after $2$ hours $13$ dollars, and after $3$ hours $17$ dollars.",
+        "Each extra hour adds $4$ dollars to the total, so the pay rate is $4$ dollars per hour.",
+        "A rate per one step of $x$ is the slope, so $m = 4$."
       ]
     }
   ],

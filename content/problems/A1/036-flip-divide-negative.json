@@ -38,9 +38,9 @@
     {
       "title": "See why the flip is real",
       "steps": [
-        "Start with a true fact: $2 < 6$.",
-        "Multiply both sides by $-1$: you get $-2$ and $-6$, and now $-2 > -6$.",
-        "Negatives reverse the order on the number line, so the sign MUST flip."
+        "Start with a true fact to see why the sign must flip: $2 < 6$.",
+        "Multiply both sides by $-1$ and the numbers become $-2$ and $-6$, but now $-2 > -6$, so negatives reverse the order.",
+        "Dividing $-3x > 12$ by $-3$ therefore turns $>$ into $<$, which gives $x < -4$."
       ]
     }
   ],

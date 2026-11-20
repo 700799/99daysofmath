@@ -39,15 +39,17 @@
     {
       "title": "Year-by-year table",
       "steps": [
-        "Start: 2000. Year 1 adds 10% of 2000 = 200 → 2200.",
-        "Year 2 adds 10% of 2200 = 220 → 2420. The add-on grows each year."
+        "Follow the town year by year: in year $1$ it gains $10\\%$ of $2000$, which is $200$, to reach $2200$.",
+        "In year $2$ it gains $10\\%$ of the new total, and $10\\%$ of $2200$ is $220$.",
+        "Adding gives $2200 + 220 = 2420$ people after two years."
       ]
     },
     {
       "title": "Interest on the interest",
       "steps": [
-        "Plain adding would give 2000 + 200 + 200 = 2400.",
-        "But the 200 newcomers from year 1 also grow 10% in year 2 — that extra 10% of 200 is 20 more, so 2400 + 20 = 2420."
+        "Plain adding of $200$ people a year would give $2000 + 200 + 200 = 2400$.",
+        "The $200$ newcomers from year $1$ also grow by $10\\%$ in year $2$, which adds $20$ more people.",
+        "So the true total is $2400 + 20 = 2420$ people."
       ]
     }
   ],

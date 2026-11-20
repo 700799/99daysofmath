@@ -36,15 +36,17 @@
     {
       "title": "Test with real numbers",
       "steps": [
-        "Let x = 2. Then 2⁸ = 256 and 2³ = 8, and 256 ÷ 8 = 32.",
-        "32 = 2⁵, so the exponents subtract: x⁵."
+        "Test the rule with a real number by letting $x = 2$, so $2^8 = 256$ and $2^3 = 8$.",
+        "Divide the first value by the second to find the quotient: $256 \\div 8 = 32$.",
+        "$32$ is $2^5$, so the exponents subtract and the answer is $x^5$."
       ]
     },
     {
       "title": "Undo a multiplication",
       "steps": [
-        "Division undoes multiplication. Ask: x³ times WHAT gives x⁸?",
-        "Multiplying adds exponents, so you need 3 + ? = 8. The missing power is x⁵."
+        "Division undoes multiplication, so ask which power times $x^3$ gives $x^8$.",
+        "Multiplying powers adds the exponents, so the missing exponent must satisfy $3 + \\,? = 8$.",
+        "The missing exponent is $5$, so the quotient is $x^8 \\div x^3 = x^5$."
       ]
     }
   ],

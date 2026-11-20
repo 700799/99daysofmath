@@ -36,15 +36,17 @@
     {
       "title": "Test with real numbers",
       "steps": [
-        "Let x = 2. Then 2³ = 8 and 2⁴ = 16, and 8 × 16 = 128.",
-        "128 is 2⁷, not 2¹². So the exponents add: x⁷."
+        "Test the rule with a real number by letting $x = 2$, so $2^3 = 8$ and $2^4 = 16$.",
+        "Multiply the two values together to find the product: $8 \\times 16 = 128$.",
+        "$128$ is $2^7$ and not $2^{12}$, so the exponents add and the answer is $x^7$."
       ]
     },
     {
       "title": "Two boxes of copies",
       "steps": [
-        "Picture a box holding 3 x-tiles and a box holding 4 x-tiles, all being multiplied together.",
-        "Dump both boxes into one: 3 + 4 = 7 tiles, which is x⁷."
+        "Picture one box holding $3$ tiles marked $x$ and another box holding $4$ tiles marked $x$, with every tile being multiplied.",
+        "Tip both boxes into one, and you have $3 + 4 = 7$ tiles in a single chain.",
+        "Seven copies of $x$ multiplied together is written $x^7$."
       ]
     }
   ],

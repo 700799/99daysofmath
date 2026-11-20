@@ -43,16 +43,17 @@
     {
       "title": "Un-multiply",
       "steps": [
-        "Ask: (x + 6) times WHAT gives x² + 9x + 18?",
-        "It must start with x (for the x²) and end with 18 ÷ 6 = 3.",
-        "Check: (x + 6)(x + 3) = x² + 9x + 18. Width: x + 3."
+        "Ask what $(x + 6)$ must be multiplied by to give $x^2 + 9x + 18$.",
+        "The width must start with $x$ to make $x^2$, and end with $18 \\div 6 = 3$ to make the $18$.",
+        "Check by expanding: $(x + 6)(x + 3) = x^2 + 9x + 18$, so the width is $x + 3$."
       ]
     },
     {
       "title": "Plug in a value",
       "steps": [
-        "Let x = 4: the area is 16 + 36 + 18 = 70 square meters and the length is 10 m.",
-        "Width = 70 ÷ 10 = 7 m, which is exactly x + 3 = 7."
+        "Plug in a value such as $x = 4$: the area is $16 + 36 + 18 = 70$ square meters and the length is $10$ m.",
+        "The width must be $70 \\div 10 = 7$ m for that garden.",
+        "Seven is $3$ more than $x = 4$, which fits a width of $x + 3$."
       ]
     }
   ],

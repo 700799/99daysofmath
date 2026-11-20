@@ -34,8 +34,9 @@
     {
       "title": "Spot the rule",
       "steps": [
-        "Each output is $5$ times its input: $1 \\to 5$, $3 \\to 15$.",
-        "So input $2$ gives $2 \\times 5 = 10$."
+        "Look for the rule behind the table: $1 \\to 5$ and $3 \\to 15$ both multiply the input by $5$.",
+        "If the rule is \"times $5$\", then input $2$ should give $2 \\times 5 = 10$.",
+        "The table row $2 \\to 10$ agrees with the rule, so the output is $10$."
       ]
     }
   ],

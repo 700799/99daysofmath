@@ -39,16 +39,17 @@
     {
       "title": "Area picture",
       "steps": [
-        "Draw a rectangle 2x tall and (3x + 4) wide, cut into two patches.",
-        "Left patch: 2x by 3x, area 6x². Right patch: 2x by 4, area 8x.",
-        "Total: 6x² + 8x."
+        "Draw a rectangle that is $2x$ tall and $3x + 4$ wide, and cut it into two patches.",
+        "The left patch is $2x$ by $3x$ with area $6x^2$, and the right patch is $2x$ by $4$ with area $8x$.",
+        "Adding the two patches gives the product $6x^2 + 8x$."
       ]
     },
     {
       "title": "Test a value",
       "steps": [
-        "Try x = 1: the original is 2(3 + 4) = 14.",
-        "The answer gives 6 + 8 = 14 — same number, so the distribution worked."
+        "Test a value such as $x = 1$ in the original expression: $2(3 + 4) = 14$.",
+        "Test the same value in the answer: $6 + 8 = 14$.",
+        "Both give $14$, which supports the product $6x^2 + 8x$."
       ]
     }
   ],

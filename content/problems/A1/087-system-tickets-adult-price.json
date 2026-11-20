@@ -34,15 +34,17 @@
     {
       "title": "Compare the two receipts",
       "steps": [
-        "The big order is the small order plus 2 extra adult tickets. The price difference is 41 − 23 = 18 dollars.",
-        "So 2 adult tickets cost $18, and one costs 18 ÷ 2 = 9 dollars."
+        "Compare the two orders: the big order is the small order with $2$ extra adult tickets.",
+        "The price difference is $41 - 23 = 18$ dollars, and it pays for exactly those $2$ extra tickets.",
+        "So one adult ticket costs $18 \\div 2 = 9$ dollars."
       ]
     },
     {
       "title": "Picture the ticket piles",
       "steps": [
-        "Draw both orders: [A A A K K] = 41 and [A K K] = 23.",
-        "Cross off one A and two Ks from each pile. What is left is [A A] = 18, so each A is 9."
+        "Draw the two orders as piles of tickets: the first pile has $3$ adult and $2$ kid tickets for $41$ dollars, and the second has $1$ adult and $2$ kid tickets for $23$ dollars.",
+        "Cross off one adult ticket and two kid tickets from each pile, and take $23$ dollars off each price.",
+        "The first pile has $2$ adult tickets left for $18$ dollars, so each adult ticket costs $9$ dollars."
       ]
     }
   ],

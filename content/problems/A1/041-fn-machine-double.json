@@ -34,8 +34,9 @@
     {
       "title": "As a table",
       "steps": [
-        "Build an input-output table: $1 \\to 2$, $2 \\to 4$, $3 \\to 6$.",
-        "Every output is twice its input, so $7 \\to 14$."
+        "Build an input and output table for the doubling machine: $1 \\to 2$, $2 \\to 4$ and $3 \\to 6$.",
+        "In every row the output is twice the input, so the table follows the rule \"times $2$\".",
+        "The row for input $7$ therefore shows the output $7 \\times 2 = 14$."
       ]
     }
   ],

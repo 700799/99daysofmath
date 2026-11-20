@@ -34,16 +34,17 @@
     {
       "title": "Test bag counts",
       "steps": [
-        "Could you make 12 bags? 12 divides 12, but 12 does not divide 6x evenly. No.",
-        "Could you make 6 bags? 6x ÷ 6 = x and 12 ÷ 6 = 2 — yes, each bag gets x + 2 tickets.",
-        "Nothing bigger works, so 6 is the greatest."
+        "Test some bag counts: $12$ bags fails, because $12$ divides the $12$ but does not divide $6x$ evenly for every $x$.",
+        "Six bags works, since $6x \\div 6 = x$ and $12 \\div 6 = 2$, so each bag gets $x + 2$ tickets.",
+        "No number larger than $6$ divides both terms, so the greatest number of bags is $6$."
       ]
     },
     {
       "title": "See it with a real x",
       "steps": [
-        "Suppose x = 5, so you have 30 + 12 = 42 tickets.",
-        "With 6 bags, each holds 7 tickets — exactly x + 2 = 7. The GCF plan works for any x."
+        "See it with a real value by supposing $x = 5$, which gives $30 + 12 = 42$ tickets.",
+        "With $6$ bags each one holds $42 \\div 6 = 7$ tickets, which is exactly $x + 2$.",
+        "The plan of $6$ bags with $x + 2$ tickets each works, so the answer is $6$."
       ]
     }
   ],

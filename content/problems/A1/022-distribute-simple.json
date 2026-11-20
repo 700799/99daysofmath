@@ -34,8 +34,9 @@
     {
       "title": "Divide first instead",
       "steps": [
-        "Both sides can be divided by 3 right away: $x + 2 = 7$.",
-        "Subtract 2: $x = 5$. Two roads, same answer."
+        "The whole bracket is multiplied by $3$, and $3$ goes into $21$ evenly, so divide both sides by $3$ first.",
+        "That leaves the simpler equation $x + 2 = 7$ with no bracket to expand.",
+        "Subtract $2$ from both sides to get $x = 5$, the same answer as distributing first."
       ]
     }
   ],

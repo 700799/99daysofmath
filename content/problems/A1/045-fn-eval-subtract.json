@@ -34,8 +34,9 @@
     {
       "title": "Countdown machine",
       "steps": [
-        "The machine starts at $10$ and takes away $2$ for every $1$ of input.",
-        "Input $3$: take away $2$ three times — $10 \\to 8 \\to 6 \\to 4$."
+        "Read the rule as a countdown that starts at $10$ and takes away $2$ for every $1$ of input.",
+        "An input of $3$ means taking away $2$ three times: $10 \\to 8 \\to 6 \\to 4$.",
+        "The countdown stops at $4$ after three steps, so $g(3) = 4$."
       ]
     }
   ],

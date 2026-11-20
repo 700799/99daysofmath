@@ -39,15 +39,17 @@
     {
       "title": "Test times around the peak",
       "steps": [
-        "t = 1: h = 9 − 1 = 8. t = 2: h = 9 − 0 = 9. t = 3: h = 9 − 1 = 8.",
-        "Heights rise to 9 and fall back — the vertex of the arc is 9 feet."
+        "Test times around the middle: $t = 1$ gives $h = 9 - 1 = 8$ and $t = 3$ gives $h = 9 - 1 = 8$.",
+        "Between them, $t = 2$ gives $h = 9 - 0 = 9$, which is higher than both.",
+        "The heights rise to $9$ and then fall, so the maximum height is $9$ feet."
       ]
     },
     {
       "title": "Read the vertex form",
       "steps": [
-        "h = 9 − (t − 2)² says: start at the peak height 9, then subtract a penalty for being away from t = 2.",
-        "Zero penalty at t = 2, so the highest point of the ball's flight is 9 feet."
+        "Read $h = 9 - (t - 2)^2$ as a top height of $9$ with a penalty taken off for being away from $t = 2$.",
+        "The penalty $(t - 2)^2$ is never negative, and it is zero only at $t = 2$.",
+        "With no penalty the ball is at its highest point, which is $9$ feet."
       ]
     }
   ],

@@ -41,15 +41,17 @@
     {
       "title": "One running count of copies",
       "steps": [
-        "Count copies of x from left to right: the square of x³ gives 6 copies, then +4 more makes 10.",
-        "Dividing by x⁵ erases 5 copies: 10 − 5 = 5 copies left, so x⁵."
+        "Keep one running count of the copies of $x$, reading from left to right.",
+        "$(x^3)^2$ is two groups of three copies, which is $6$ copies, and multiplying by $x^4$ brings in $4$ more for a total of $10$.",
+        "Dividing by $x^5$ cancels $5$ of them, leaving $10 - 5 = 5$ copies, so the answer is $x^5$."
       ]
     },
     {
       "title": "Test with real numbers",
       "steps": [
-        "Let x = 2. (2³)² = 64, times 2⁴ = 16 gives 1024. Divide by 2⁵ = 32: 1024 ÷ 32 = 32.",
-        "32 = 2⁵, so the simplified form is x⁵."
+        "Test with $x = 2$: $(2^3)^2 = 8^2 = 64$, and multiplying by $2^4 = 16$ gives $1024$.",
+        "Then divide that result by $2^5 = 32$, which gives $1024 \\div 32 = 32$.",
+        "Since $32 = 2^5$, the test number agrees that the simplified form is $x^5$."
       ]
     }
   ],

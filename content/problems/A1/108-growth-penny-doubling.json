@@ -39,15 +39,17 @@
     {
       "title": "List the doubles",
       "steps": [
-        "1 → 2 → 4 → 8 → 16 → 32 → 64 → 128 → 256 → 512 → 1024.",
-        "Ten arrows, ten doublings: 1024 cents."
+        "List the value after each doubling, starting from $1$ cent: $2, 4, 8, 16, 32$.",
+        "Continue the list for the next five doublings: $64, 128, 256, 512, 1024$.",
+        "The tenth entry is $1024$, so the penny is worth $1024$ cents."
       ]
     },
     {
       "title": "Compare with $5 a day",
       "steps": [
-        "Adding $5 a day for 10 days gives $50 — but that pace never speeds up.",
-        "The doubling penny hits $10.24 by day 10 and would pass $5,000,000 by day 30. Multiplying beats adding in the long run."
+        "Compare with adding: saving $5$ dollars a day for $10$ days gives $50$ dollars, and that pace never speeds up.",
+        "The doubling penny multiplies by $2$ ten times, which is $2^{10} = 1024$ cents, or $10.24$ dollars.",
+        "It is behind after $10$ days, but twenty more doublings would take it past $10$ million dollars, far ahead of adding."
       ]
     }
   ],

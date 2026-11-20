@@ -43,16 +43,17 @@
     {
       "title": "Sort the fruit",
       "steps": [
-        "Think of $x$-terms as apples and plain numbers as oranges.",
-        "You have 4 apples + 3 oranges + 2 apples.",
-        "Sort them: 6 apples and 3 oranges — that is $6x + 3$. You never mash apples and oranges together."
+        "Think of each $x$-term as apples and each plain number as oranges, so the pile is $4$ apples, $3$ oranges and $2$ more apples.",
+        "Sort the pile into baskets: the apples make $4 + 2 = 6$ apples, and the $3$ oranges stay in their own basket.",
+        "Apples and oranges are different kinds and cannot be mixed, so the answer is $6x + 3$."
       ]
     },
     {
       "title": "⚠️ Dodge the trap",
       "steps": [
-        "The tempting wrong answer is 9x — squishing the 3 into the x-team. But 9x means nine copies of x, and that 3 was never an x.",
-        "Only matching letters combine. Circle the x-terms first, add those, and let the plain number wait at the end: 6x + 3."
+        "The tempting wrong answer is $9x$, which comes from adding the $3$ to the $x$-terms.",
+        "Test it with $x = 10$: the original expression is $40 + 3 + 20 = 63$, but $9x$ would be $90$.",
+        "Only terms with the same letter part combine, so add $4x + 2x = 6x$ and leave the $3$ alone to get $6x + 3$."
       ]
     }
   ],

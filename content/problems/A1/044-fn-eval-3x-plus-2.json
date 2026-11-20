@@ -34,8 +34,9 @@
     {
       "title": "Two-step machine",
       "steps": [
-        "Picture the machine doing two moves: first \"times 3\", then \"plus 2\".",
-        "Input $4$: times $3$ gives $12$; plus $2$ gives $14$."
+        "Picture the machine doing two moves in order: first \"times $3$\", then \"plus $2$\".",
+        "Feed in $4$, and the first move turns it into $4 \\times 3 = 12$.",
+        "The second move adds $2$ to give $12 + 2 = 14$, so $f(4) = 14$."
       ]
     }
   ],

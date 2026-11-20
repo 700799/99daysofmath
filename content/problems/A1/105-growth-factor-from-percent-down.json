@@ -37,15 +37,17 @@
     {
       "title": "Test it on $100",
       "steps": [
-        "Start with $100. Losing 20% takes away $20, leaving $80.",
-        "80 ÷ 100 = 0.80, so the yearly factor is 0.80."
+        "Test the change on an easy amount by starting with $100$ dollars.",
+        "Losing $20\\%$ takes away $20$ dollars, so $80$ dollars are left.",
+        "The factor is the new amount divided by the old amount: $80 \\div 100 = 0.80$."
       ]
     },
     {
       "title": "Pizza picture",
       "steps": [
-        "Cut the amount into 5 equal slices. Losing 20% means one slice disappears.",
-        "Four of five slices remain: 4/5 = 0.80 of the amount each year."
+        "Cut the amount into $5$ equal slices, like a pizza, so each slice is $20\\%$.",
+        "Losing $20\\%$ means one slice disappears, and four of the five slices remain.",
+        "Four fifths as a decimal is $\\frac{4}{5} = 0.80$, so the yearly factor is $0.80$."
       ]
     }
   ],

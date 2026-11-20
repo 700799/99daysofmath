@@ -34,15 +34,17 @@
     {
       "title": "Fold-by-fold table",
       "steps": [
-        "Fold 1: 2 layers. Fold 2: 4. Fold 3: 8. Fold 4: 16. Fold 5: 32.",
-        "Each row doubles the one before, so 5 folds give 32 layers."
+        "Make a table of folds and layers: fold $1$ gives $2$ layers and fold $2$ gives $4$ layers.",
+        "Each row doubles the row before, so folds $3$ and $4$ give $8$ and $16$ layers.",
+        "One more doubling for fold $5$ gives $32$ layers."
       ]
     },
     {
       "title": "Pair the copies",
       "steps": [
-        "Group 2⁵ as (2 × 2) × (2 × 2) × 2 = 4 × 4 × 2.",
-        "4 × 4 = 16, and 16 × 2 = 32."
+        "Group the five factors of $2$ in pairs: $2^5 = (2 \\times 2) \\times (2 \\times 2) \\times 2 = 4 \\times 4 \\times 2$.",
+        "Multiply the pairs first to get $4 \\times 4 = 16$.",
+        "Then include the last factor: $16 \\times 2 = 32$ layers."
       ]
     }
   ],

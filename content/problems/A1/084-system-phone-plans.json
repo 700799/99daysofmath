@@ -34,15 +34,17 @@
     {
       "title": "Build a table",
       "steps": [
-        "Month 1: A = 25, B = 17. Month 3: A = 35, B = 31. B is catching up by $2 each month.",
-        "A starts $10 ahead and B gains $2 per month: 10 ÷ 2 = 5 months to tie."
+        "Build a table of totals: at month $1$ Plan A has cost $25$ dollars and Plan B $17$ dollars, a gap of $8$ dollars.",
+        "At month $3$ the totals are $35$ and $31$ dollars, so the gap has shrunk to $4$ dollars, which is $2$ dollars less each month.",
+        "Two more months close the gap, so at month $5$ both plans have cost $45$ dollars."
       ]
     },
     {
       "title": "As two racers",
       "steps": [
-        "Plan A starts 10 dollars ahead but walks 5 per month; B runs 7 per month.",
-        "B closes the 10-dollar gap at 2 per month → catches A after 5 months."
+        "Picture two racers: Plan A starts $10$ dollars ahead, since $20 - 10 = 10$, but moves only $5$ dollars a month.",
+        "Plan B moves $7$ dollars a month, so it gains $7 - 5 = 2$ dollars on Plan A every month.",
+        "Closing a gap of $10$ dollars at $2$ dollars a month takes $10 \\div 2 = 5$ months."
       ]
     }
   ],

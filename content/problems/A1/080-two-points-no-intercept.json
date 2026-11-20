@@ -45,15 +45,17 @@
     {
       "title": "Walk back to the start",
       "steps": [
-        "The slope is $3$, so stepping LEFT one unit drops $y$ by $3$.",
-        "From $(1, 5)$, step back to $x = 0$: $y = 5 - 3 = 2$. That start is $b$: $y = 3x + 2$."
+        "From $(1, 5)$ to $(3, 11)$ the line rises $6$ over $2$ steps, so the slope is $3$.",
+        "A slope of $3$ means stepping left one unit lowers $y$ by $3$, so from $(1, 5)$ you reach $(0, 2)$.",
+        "The value at $x = 0$ is the intercept $b = 2$, so the equation is $y = 3x + 2$."
       ]
     },
     {
       "title": "Table with a gap",
       "steps": [
-        "Rows: $x = 1 \\to 5$, $x = 2 \\to ?$, $x = 3 \\to 11$; the jump must be $3$, so the middle is $8$.",
-        "Extend back to $x = 0$: $5 - 3 = 2$. Jump $3$, start $2$: $y = 3x + 2$."
+        "Write the points as table rows with a gap: $x = 1 \\to 5$, $x = 2 \\to\\ ?$, $x = 3 \\to 11$.",
+        "Equal jumps mean the middle value is $8$, so the table climbs by $3$ each step.",
+        "Extend the table back one row to $x = 0$: $5 - 3 = 2$, so the start is $2$ and $y = 3x + 2$."
       ]
     }
   ],

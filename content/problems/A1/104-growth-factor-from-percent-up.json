@@ -36,15 +36,17 @@
     {
       "title": "Test it on $100",
       "steps": [
-        "Start with $100. Growing 10% adds $10, giving $110.",
-        "What times 100 gives 110? 110 ÷ 100 = 1.10 — that is the factor."
+        "Test the growth on an easy amount by starting with $100$ dollars.",
+        "Growing by $10\\%$ adds $10$ dollars, so the new amount is $110$ dollars.",
+        "The factor is the new amount divided by the old amount: $110 \\div 100 = 1.10$."
       ]
     },
     {
       "title": "Keep-plus-gain picture",
       "steps": [
-        "Picture the amount as a full bar (the 1) plus a small extra slice (the 0.10).",
-        "Keep + gain = 1 + 0.10 = 1.10 per year."
+        "Picture the amount as one full bar, which stands for the $1$ you keep.",
+        "Growth of $10\\%$ adds a small extra slice that is $0.10$ of the bar.",
+        "Together the bar and the slice make $1 + 0.10 = 1.10$, so the yearly factor is $1.10$."
       ]
     }
   ],

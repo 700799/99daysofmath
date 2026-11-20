@@ -35,15 +35,17 @@
     {
       "title": "Watch the arc in a table",
       "steps": [
-        "t = 0: h = 0 (launch). t = 1: h = 15. t = 2: h = 20 (top). t = 3: h = 15. t = 4: h = 0.",
-        "The water rises, peaks, and mirrors back down — landing at t = 4."
+        "Make a table of heights: $t = 0$ gives $0$, $t = 1$ gives $15$ and $t = 2$ gives $20$.",
+        "After the top the heights repeat in reverse: $t = 3$ gives $15$ and $t = 4$ gives $0$.",
+        "The height is back at zero when $t = 4$, so the water lands after $4$ seconds."
       ]
     },
     {
       "title": "Symmetry of the arc",
       "steps": [
-        "A parabola's arc is symmetric, like a rainbow: up-time equals down-time.",
-        "The peak is at t = 2, so the landing is the mirror of the launch: 2 + 2 = 4 seconds."
+        "A parabola is symmetric, so the water takes as long to come down as it took to go up.",
+        "Testing values shows that $t = 1$ and $t = 3$ both give a height of $15$, so the peak is halfway between them at $t = 2$.",
+        "The launch is $2$ seconds before the peak, so the landing is $2$ seconds after it, at $t = 4$."
       ]
     }
   ],

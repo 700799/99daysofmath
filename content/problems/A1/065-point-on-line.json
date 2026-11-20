@@ -34,8 +34,9 @@
     {
       "title": "Start, then climb",
       "steps": [
-        "Start at $b = 1$ on the $y$-axis.",
-        "Slope $2$ means climb $2$ per step across; four steps climb $8$: $1 + 8 = 9$."
+        "Use the graph idea: the line starts at height $1$ on the $y$-axis, because $b = 1$.",
+        "A slope of $2$ means the line climbs $2$ for every step across, so four steps climb $8$.",
+        "Add the climb to the starting height: $1 + 8 = 9$, so $y = 9$ when $x = 4$."
       ]
     }
   ],

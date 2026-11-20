@@ -34,8 +34,9 @@
     {
       "title": "Plug in x = 0",
       "steps": [
-        "The $y$-intercept is the $y$-value when $x = 0$.",
-        "$y = 3 \\times 0 - 4 = -4$."
+        "The $y$-intercept is the value of $y$ at the point where $x = 0$.",
+        "Substitute $x = 0$ into the equation of the line and work it out: $y = 3 \\times 0 - 4 = -4$.",
+        "So the line crosses the $y$-axis at $-4$, and the $y$-intercept is $-4$."
       ]
     }
   ],

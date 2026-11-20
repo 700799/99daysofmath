@@ -34,15 +34,17 @@
     {
       "title": "Picture a cube",
       "steps": [
-        "5³ counts the little blocks in a 5-by-5-by-5 cube.",
-        "One layer holds 5 × 5 = 25 blocks, and there are 5 layers: 25 × 5 = 125."
+        "Picture $5^3$ as the number of small blocks in a cube that is $5$ by $5$ by $5$.",
+        "One flat layer of the cube holds $5 \\times 5 = 25$ blocks.",
+        "The cube has $5$ of these layers, so it holds $25 \\times 5 = 125$ blocks."
       ]
     },
     {
       "title": "Break 25 apart",
       "steps": [
-        "25 × 5 is the same as (20 + 5) × 5.",
-        "20 × 5 = 100 and 5 × 5 = 25, so the total is 100 + 25 = 125."
+        "After $5 \\times 5 = 25$, the last multiplication is $25 \\times 5$, which is easier if you split $25$ into $20 + 5$.",
+        "Multiply each part by $5$ on its own, which gives $20 \\times 5 = 100$ and $5 \\times 5 = 25$.",
+        "Add the parts to get $100 + 25 = 125$, so $5^3 = 125$."
       ]
     }
   ],

@@ -34,8 +34,9 @@
     {
       "title": "Week by week",
       "steps": [
-        "Start $4$, then climb $3$ each week: $7, 10, 13, 16, 19$.",
-        "After week $5$ the plant is $19$ cm — same as $4 + 3 \\times 5$."
+        "Start at $4$ cm and add $3$ cm for each week instead of using the formula.",
+        "The heights after each week are $7$, $10$, $13$, $16$ and $19$ cm.",
+        "The fifth number is the height after $5$ weeks, so the plant is $19$ cm tall."
       ]
     }
   ],

@@ -39,8 +39,9 @@
     {
       "title": "Picture 3 mystery boxes",
       "steps": [
-        "$n$ is one mystery box.",
-        "\"3 times $n$\" is three identical boxes side by side: $n + n + n$, which is the same as $3n$."
+        "Picture $n$ as one mystery box that holds some unknown number of marbles.",
+        "\"$3$ times $n$\" means three identical boxes placed side by side, which is $n + n + n$.",
+        "Three equal groups of $n$ is written as a multiplication, so the expression is $3n$."
       ]
     }
   ],

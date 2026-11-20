@@ -34,15 +34,17 @@
     {
       "title": "Read it off a table",
       "steps": [
-        "Build a quick table for y = x²: x = 0, 1, 2, 3 gives y = 0, 1, 4, 9.",
-        "The y-values climb faster and faster — that is the U shape. At x = 3, y = 9."
+        "Build a quick table for $y = x^2$: the inputs $0, 1, 2, 3$ give the outputs $0, 1, 4, 9$.",
+        "The outputs climb by $1$, then $3$, then $5$, which is the curve of the U getting steeper.",
+        "Reading the last row of the table, $y = 9$ when $x = 3$."
       ]
     },
     {
       "title": "A square floor",
       "steps": [
-        "y = x² is the area of a square floor with side x.",
-        "A 3-by-3 floor holds 9 tiles, so y = 9."
+        "Think of $y = x^2$ as the area of a square floor with side length $x$.",
+        "A floor that is $3$ tiles by $3$ tiles has three rows of three tiles.",
+        "That is $9$ tiles in all, so $y = 9$."
       ]
     }
   ],

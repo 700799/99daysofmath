@@ -44,16 +44,17 @@
     {
       "title": "Sign detective",
       "steps": [
-        "Product negative → the two numbers have DIFFERENT signs.",
-        "Sum negative → the bigger-sized number wears the minus.",
-        "Pairs for 6: (1, 6) and (2, 3). Only −3 and +2 sum to −1."
+        "The product $-6$ is negative, so the two numbers have different signs.",
+        "The sum $-1$ is negative, so the number with the larger size must be the negative one.",
+        "From the pairs $1, 6$ and $2, 3$, only $-3$ and $+2$ add to $-1$, which gives $(x - 3)(x + 2)$."
       ]
     },
     {
       "title": "Check by expanding",
       "steps": [
-        "Expand (x − 3)(x + 2): x² + 2x − 3x − 6.",
-        "Combine: x² − x − 6. It matches the original, so the factoring is right."
+        "Check the factored form by expanding $(x - 3)(x + 2)$ into $x^2 + 2x - 3x - 6$.",
+        "Combine the middle terms: $2x - 3x = -x$, which gives $x^2 - x - 6$.",
+        "That matches the original expression, so $(x - 3)(x + 2)$ is correct."
       ]
     }
   ],

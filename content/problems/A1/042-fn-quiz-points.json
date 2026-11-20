@@ -34,8 +34,9 @@
     {
       "title": "Count it out",
       "steps": [
-        "Each question is worth $4$ points.",
-        "Three questions: $4 + 4 + 4 = 12$ points."
+        "Skip the notation and count the points, since each question is worth $4$ points.",
+        "Three questions earn $4 + 4 + 4$ points, one lot of $4$ for each question.",
+        "Adding the three lots gives $12$ points, so the function value is $f(3) = 12$."
       ]
     }
   ],

@@ -34,8 +34,9 @@
     {
       "title": "Table of photos",
       "steps": [
-        "Try a few inputs: brightness $10 \\to 25$, $20 \\to 35$, $30 \\to 45$.",
-        "Every output is $15$ more, so $40 \\to 55$."
+        "Try a few photos in a table: brightness $10 \\to 25$, $20 \\to 35$ and $30 \\to 45$.",
+        "Every output is $15$ more than its input, and each row is $10$ higher than the row before.",
+        "The next row is the photo with brightness $40$, and it comes out at $45 + 10 = 55$."
       ]
     }
   ],

@@ -40,16 +40,17 @@
     {
       "title": "Table of the bounce",
       "steps": [
-        "t = 0: h = 0. t = 1: h = 25. t = 2: h = 40. t = 3: h = 45. t = 4: h = 40.",
-        "The heights climb, peak at 45, then mirror back down — the max is 45 cm."
+        "Make a table of the bounce: $t = 0, 1, 2$ gives the heights $0, 25, 40$.",
+        "Continue the table: $t = 3$ gives $45$ and $t = 4$ gives $40$, so the heights have started to fall.",
+        "The largest height in the table is $45$, so the maximum is $45$ centimeters."
       ]
     },
     {
       "title": "Rainbow symmetry",
       "steps": [
-        "The bounce arc is a rainbow: up-time equals down-time.",
-        "In the air from t = 0 to t = 6, so the top is at t = 3.",
-        "Plug in t = 3: 90 − 45 = 45 cm at the very top."
+        "The arc is symmetric, so the time going up equals the time coming down.",
+        "The jumper leaves the mat at $t = 0$ and lands at $t = 6$, so the top of the arc is at $t = 3$.",
+        "Substituting $t = 3$ gives $90 - 45 = 45$, so the maximum height is $45$ centimeters."
       ]
     }
   ],

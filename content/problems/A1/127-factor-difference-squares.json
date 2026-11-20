@@ -38,16 +38,17 @@
     {
       "title": "Why the middle vanishes",
       "steps": [
-        "Expand (x + 5)(x − 5): the strips are +5x and −5x.",
-        "They are perfect opposites, so they cancel to zero.",
-        "Left over: x² − 25 — that is why the factored form has a plus AND a minus."
+        "Expand the answer $(x + 5)(x - 5)$ to see why it works: the four products are $x^2$, $-5x$, $+5x$ and $-25$.",
+        "The two middle terms are opposites, so they cancel to zero.",
+        "What remains is $x^2 - 25$, which is why the factors are $(x + 5)(x - 5)$ with one plus and one minus."
       ]
     },
     {
       "title": "Two-number hunt still works",
       "steps": [
-        "Think of x² − 25 as x² + 0x − 25: numbers multiplying to −25 and adding to 0.",
-        "That pair is 5 and −5, giving (x + 5)(x − 5)."
+        "Write $x^2 - 25$ as $x^2 + 0x - 25$ and hunt for two numbers that multiply to $-25$ and add to $0$.",
+        "The numbers must be opposites of each other, and $5 \\times (-5) = -25$.",
+        "The pair $5$ and $-5$ gives the factored form $(x + 5)(x - 5)$."
       ]
     }
   ],

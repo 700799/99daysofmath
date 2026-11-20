@@ -44,16 +44,17 @@
     {
       "title": "Two kinds of tiles",
       "steps": [
-        "Think of x²-tiles (big squares) and x-tiles (long strips) covering each floor.",
-        "Room one uses 1 big square and 6 strips; room two uses 2 big squares and 3 strips.",
-        "Together: 3 big squares and 9 strips — 3x² + 9x."
+        "Think of each floor as covered by big square tiles of area $x^2$ and long strip tiles of area $x$.",
+        "Room one uses $1$ big square and $6$ strips, and room two uses $2$ big squares and $3$ strips.",
+        "Together the rooms use $3$ big squares and $9$ strips, which is $3x^2 + 9x$ square feet."
       ]
     },
     {
       "title": "Check with x = 10",
       "steps": [
-        "Room one: 100 + 60 = 160 sq ft. Room two: 200 + 30 = 230 sq ft. Total: 390.",
-        "Formula check: 3(100) + 9(10) = 300 + 90 = 390. It matches."
+        "Check with $x = 10$: room one is $100 + 60 = 160$ square feet and room two is $200 + 30 = 230$ square feet, for a total of $390$.",
+        "With the same value of $x$, the answer formula gives $3(100) + 9(10) = 300 + 90 = 390$.",
+        "The totals match, so $3x^2 + 9x$ is the correct sum."
       ]
     }
   ],

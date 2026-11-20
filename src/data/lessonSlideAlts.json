@@ -2659,6 +2659,786 @@
   "title": "Pair the ends",
   "text": "Match the outside values: 10 + 50 = 60, and half of 60 is 30. Match the next two: 20 + 40 = 60, and half of 60 is 30. The value left in the center is 30.\nEvery pair averages 30 and so does the leftover value, so the mean is 30. Adding everything gives 150 ÷ 5 = 30 as well."
  },
+ "A1-1#1": {
+  "title": "A blank on a form",
+  "text": "Think of a form with a blank line: \"Tickets bought: ___\". The blank is ready before anyone fills it in, and the price rule \"8 dollars × blank\" already makes sense. A letter such as n is that blank. Write 8n once, and it covers the family that buys 2 tickets (16 dollars) and the family that buys 5 (40 dollars)."
+ },
+ "A1-1#2": {
+  "title": "Check a translation with numbers",
+  "text": "Pick a real number and see whether the words and the symbols agree. Let n = 10. \"3 more than n\" should be 13, and n + 3 gives 10 + 3 = 13. \"Twice n\" should be 20, and 2n gives 2 × 10 = 20. If the phrase and the expression give the same result for a test number, the translation is very likely right."
+ },
+ "A1-1#3": {
+  "title": "A sale price story",
+  "text": "A shop sells a shirt for 5 dollars less than twice its cost. If the cost is 8 dollars, twice the cost is 16, and the price is 16 − 5 = 11 dollars. Nobody would work out 5 − 16 = −11, because a price of −11 makes no sense. The story shows the order: double first, then take the 5 off, so 2n − 5."
+ },
+ "A1-1#4": {
+  "title": "A thermometer for the rule",
+  "text": "Use a thermometer. The temperature is t degrees and it rises 6 degrees, so the new reading is t + 6. If t = 10, the reading is 16. If t = −4, start four marks below zero and climb six marks to reach 2. The same expression works both times. The letter did not care that its value sat below zero."
+ },
+ "A1-1#5": {
+  "title": "Follow a pattern down",
+  "text": "Make a table of 3n + 2 and watch it step down.\nn = 1 gives 5, n = 0 gives 2, n = −1 gives −1, n = −2 gives −4.\nEach time n drops by 1, the value drops by 3. Keep going: n = −3 gives −7 and n = −4 gives −10. The pattern lands on −10, the same value substitution gave."
+ },
+ "A1-1#6": {
+  "title": "Steps on a number line",
+  "text": "Treat each x as one step of the same length. −5x means walk 5 steps backward, and +8x means walk 8 steps forward. After both walks you stand 3 steps ahead of the start, which is 3x. Check with x = 2: −5(2) + 8(2) = −10 + 16 = 6, and 3(2) = 6 as well."
+ },
+ "A1-1#7": {
+  "title": "Follow the pattern past zero",
+  "text": "List −2x for shrinking values of x and watch the answers.\nx = 2 gives −4, x = 1 gives −2, x = 0 gives 0.\nEach time x drops by 1, the answer rises by 2. Continue: x = −1 gives 2, x = −2 gives 4, and so on up to x = −6, which gives 12. The pattern confirms the positive answer 12."
+ },
+ "A1-1#8": {
+  "title": "A recipe card with a blank",
+  "text": "A taxi charges 3 dollars per mile plus a 2 dollar fee, written 3n + 2. The expression is a price list waiting for a trip length. A 4 mile trip costs 3 × 4 + 2 = 14 dollars, and a 10 mile trip costs 32 dollars. Evaluating means choosing the trip, putting its length in place of n, and working out the bill."
+ },
+ "A1-1#9": {
+  "title": "Try several bags",
+  "text": "Test the story with three different bags. A bag of 2 marbles becomes 5. A bag of 7 becomes 10. A bag of 20 becomes 23. Each time the total is the bag's count with 3 added on, never 3 times the count. Writing that pattern with a letter for the count gives b + 3, the same expression."
+ },
+ "A1-1#10": {
+  "title": "Count up level by level",
+  "text": "Skip the formula and count. Start with the 20 coin bonus, then add 50 for each level: 70, 120, 170, 220, 270, 320. Six jumps of 50 from 20 land on 320 coins. Six jumps of 50 is 50 × 6, and the starting 20 is the bonus, so the count matches 50L + 20 with L = 6."
+ },
+ "A1-1#11": {
+  "title": "Split the coins into piles",
+  "text": "Lay the coins out as piles. Four levels make four piles of 50 coins, and the bonus is one small pile of 20. Two piles of 50 are 100, so four piles are 200. Push the bonus pile in and you have 220 coins. The piles show why the 20 is added once and not once per level."
+ },
+ "A1-1#12": {
+  "title": "Check with a big number",
+  "text": "A second check is to try a level count that is easy to reason about. For 10 levels the story pays 10 × 50 = 500 coins plus the 20 bonus, so 520. The expression 50L + 20 gives 50(10) + 20 = 520 too. A wrong rule such as 70L would give 700, so the test separates the right rule, 50L + 20, from the tempting one."
+ },
+ "A1-1#13": {
+  "title": "Count the weeks on a list",
+  "text": "Write your money at the end of each week, starting from 15 dollars and adding 10 each time: 25, 35, 45, 55, 65, 75. The sixth number is 75, so you have 75 dollars after 6 weeks. The list climbs by 10 each week and starts from 15, which is exactly what 10w + 15 says."
+ },
+ "A1-1#14": {
+  "title": "Test a value for x",
+  "text": "Check the simplified form with a number. Let x = 5. The original expression gives 4(5) + 3 + 2(5) = 20 + 3 + 10 = 33. The answer 6x + 3 gives 30 + 3 = 33, which matches. The tempting wrong answer 9x would give 45, so it cannot be right. The test supports 6x + 3."
+ },
+ "A1-1#15": {
+  "title": "Use an area picture",
+  "text": "Draw strips that are each 1 unit tall and x units long. 4x is four strips and 2x is two more strips, so together they make a block of six strips with area 6x. The 3 is three small unit squares that do not fit the strip shape, so they sit beside the block. Total area: 6x + 3."
+ },
+ "A1-2#1": {
+  "title": "Two friends with equal money",
+  "text": "Mia and Jo have the same amount of money. If each earns 5 dollars, they still have the same amount. If each spends 3 dollars, still the same. But if only Mia earns 5, they are no longer equal. An equation is that promise of sameness, for example 12 = 12. Add 5 to both and 17 = 17 is true; add 5 to one side only and 17 = 12 is false."
+ },
+ "A1-2#2": {
+  "title": "Walk there and walk back",
+  "text": "On a number line, x + 9 = 15 says: start at x, walk 9 steps right, and arrive at 15. To find the start, stand on 15 and walk 9 steps left. You stop at 6. Every operation is a trip, and its opposite is the return trip along the same road, which brings you back to the number you began with."
+ },
+ "A1-2#3": {
+  "title": "Socks, then shoes",
+  "text": "In the morning you put on socks, then shoes. At night you cannot pull the socks off first; the shoes come off first. An equation is dressed the same way. In 8w + 20 = 68, w was multiplied by 8 (socks) and then 20 was added (shoes). Remove the 20: 8w = 48. Then remove the 8: w = 6."
+ },
+ "A1-2#4": {
+  "title": "Like trying a key",
+  "text": "A locksmith does not argue about whether a key is right. The key goes in the lock and either turns or does not. Your answer is a key and the original equation is the lock. Suppose you solved 3x + 2 = 14 and got x = 5 by mistake. Trying it gives 17, not 14, so the lock stays shut and you know to look again."
+ },
+ "A1-2#5": {
+  "title": "Ask the missing-number question",
+  "text": "Read the equation as a question: what number plus 9 makes 15? Count up from 9 to 15: 10, 11, 12, 13, 14, 15. That is 6 counts, so the missing number is 6. You could also test a few values: 5 + 9 = 14 is too small, 7 + 9 = 16 is too big, and 6 + 9 = 15 fits. So x = 6."
+ },
+ "A1-2#6": {
+  "title": "Share into four groups",
+  "text": "4x = 28 says four equal groups hold 28 in all. Deal 28 counters into four piles one at a time and each pile ends with 7. You can also skip count by 7: 7, 14, 21, 28 reaches the total in exactly four jumps. Either way one group holds 7, so x = 7."
+ },
+ "A1-2#7": {
+  "title": "Read it on a thermometer",
+  "text": "Think of a thermometer. Some temperature x rose 9 degrees and now reads 4. To find where it began, go 9 degrees back down from 4. Four degrees down reaches zero, and the remaining 5 degrees go below zero, to −5. A rise of 9 that ends as low as 4 must have started below zero, so x = −5."
+ },
+ "A1-2#8": {
+  "title": "Guess, check, and adjust",
+  "text": "Try values and watch the sign. If x = 5, then −4 × 5 = −20, which has the right size but the wrong sign. A positive x always gives a negative product here, so x must be negative. Try x = −5: −4 × (−5) = 20. That matches the right side, so x = −5."
+ },
+ "A1-2#9": {
+  "title": "Distance on the number line",
+  "text": "x − (−3) measures how far x sits to the right of −3 on the number line. The equation says that distance is 10. Start at −3 and walk 10 steps right: three steps reach 0, and seven more reach 7. So x = 7. The walk shows why subtracting −3 behaves like adding 3."
+ },
+ "A1-2#10": {
+  "title": "Fill in a savings table",
+  "text": "Track the savings week by week, starting at 20 dollars and adding 8 each time.\nWeek 1: 28. Week 2: 36. Week 3: 44. Week 4: 52. Week 5: 60. Week 6: 68.\nThe total first reaches the 68 dollar price in week 6, so w = 6 weeks, the same answer the equation gave."
+ },
+ "A1-2#11": {
+  "title": "Find the missing money first",
+  "text": "Use the story's numbers directly. The sneakers cost 68 dollars and you already hold 20, so you still need 68 − 20 = 48 dollars. Each week brings in 8 dollars. Count by eights until you reach 48: 8, 16, 24, 32, 40, 48. That is six eights, so w = 6."
+ },
+ "A1-2#12": {
+  "title": "Add up the four shares",
+  "text": "Each of the four friends put 7 dollars on the table. Add what is on the table: 7 + 7 + 7 + 7 = 28 dollars. That pile is the whole bill, so b = 28. A tape diagram shows the same thing: one long bar for the bill cut into four equal parts, each part labelled 7."
+ },
+ "A1-2#13": {
+  "title": "Estimate, then adjust",
+  "text": "Start with a guess. If a ticket cost 50 dollars, two tickets and the fee would be 100 + 6 = 106, which is 10 dollars too much. Two tickets share that extra 10, so each ticket should be 5 dollars cheaper. Try 45: two tickets cost 90, and 90 + 6 = 96. That is the right total, so t = 45."
+ },
+ "A1-2#14": {
+  "title": "Draw a tape diagram",
+  "text": "Draw one long bar labelled 96. Mark off a small piece of 6 at the end for the fee. What is left of the bar is 96 − 6 = 90, and it is made of two equal ticket pieces. Cut it in half: each piece is 45. The picture gives t = 45 without writing an equation."
+ },
+ "A1-3#1": {
+  "title": "Three identical gift bags",
+  "text": "Pack 3 identical gift bags. Each bag gets x stickers and 2 pencils. Altogether you need 3 lots of stickers and 3 lots of pencils: 3x stickers and 6 pencils. That is 3(x + 2) = 3x + 6. If you multiplied only the stickers, two bags would be missing their pencils. Repeated addition shows it too: (x + 2) + (x + 2) + (x + 2) = 3x + 6."
+ },
+ "A1-3#2": {
+  "title": "A bank account in one line",
+  "text": "Your account shows these changes: you earn 5x, pay a 5 dollar fee, then spend 2x. Nobody reads the list in that order. You net the earnings against the spending first: 5x − 2x = 3x, and the fee is still 5. The short statement 3x − 5 says the same thing as 5x − 5 − 2x, and it is much easier to work with."
+ },
+ "A1-3#3": {
+  "title": "Bags on both pans",
+  "text": "Picture a scale with 5 bags of marbles on the left, and 2 bags plus 12 loose marbles on the right. Every bag holds the same count. Take 2 bags off each pan and the scale stays level: 3 bags balance 12 marbles. Now the bags are all on one side, and each bag must hold 4 marbles."
+ },
+ "A1-3#4": {
+  "title": "One full run-through",
+  "text": "Follow one equation to the end: 2(x − 4) = 6. Distributing gives 2x − 8 = 6. There is nothing more to tidy, and x is already on one side only. Now it is the familiar two-step kind: add 8 to get 2x = 14, then divide by 2 to get x = 7. Check: 2(7 − 4) = 2 × 3 = 6."
+ },
+ "A1-3#5": {
+  "title": "Paying back twice",
+  "text": "Read −2(x − 5) as \"take away two copies of x − 5\". Each copy is x with 5 already removed. Taking away two copies removes 2x, but it also removes two of those 5s that were being subtracted, and cancelling a subtraction gives the amount back. So you get −2x and +10. It is like cancelling two 5 dollar charges: your balance goes up by 10."
+ },
+ "A1-3#6": {
+  "title": "Divide before you distribute",
+  "text": "Treat the bracket as one chunk. −2 times the chunk equals 4, so the chunk is 4 ÷ (−2) = −2. That means x − 5 = −2. Add 5 to both sides and x = 3. No distributing was needed, so there was no second sign to lose. Check: 3 − 5 = −2, and −2 × (−2) = 4."
+ },
+ "A1-3#7": {
+  "title": "Work backwards from 2",
+  "text": "Rewind the steps. A number was tripled, then 14 was added, and the result was 2. Before the 14 was added the value was 2 − 14 = −12. Before the tripling it was −12 ÷ 3 = −4. So x = −4. A quick sense check agrees: adding 14 gave only 2, so 3x had to be negative."
+ },
+ "A1-3#8": {
+  "title": "Test a few values",
+  "text": "Make a small table for 3(x + 2).\nx = 3 gives 3 × 5 = 15.\nx = 4 gives 3 × 6 = 18.\nx = 5 gives 3 × 7 = 21.\nEach step up in x adds 3 to the result, and the target 21 appears at x = 5. Larger values overshoot, so x = 5 is the only solution."
+ },
+ "A1-3#9": {
+  "title": "Three equal groups",
+  "text": "Read 3(x + 2) = 21 as three equal groups that hold 21 altogether. Split 21 into three equal groups and each group holds 7. A group is x + 2, so x and 2 together make 7. The number that joins 2 to make 7 is 5, so x = 5, as before."
+ },
+ "A1-3#10": {
+  "title": "Compare both sides in a table",
+  "text": "Work out each side for a few values of x.\nx = 3: left 17, right 25.\nx = 4: left 24, right 28.\nx = 5: left 31, right 31.\nThe left side starts 8 behind and gains 4 each step, because it grows by 7 while the right grows by 3. Two steps close the gap, and the sides meet at x = 5."
+ },
+ "A1-3#11": {
+  "title": "Table of the two bills",
+  "text": "Compare the bills at a few call lengths.\n20 minutes: plan A 14 dollars, plan B 6 dollars.\n40 minutes: plan A 16, plan B 12.\n60 minutes: plan A 18, plan B 18.\nPlan B starts cheaper but grows faster, and the two bills meet at 60 minutes. After that, plan B costs more."
+ },
+ "A1-3#12": {
+  "title": "Graph the two lines",
+  "text": "Graph cost against minutes. Plan A is a line that starts at 12 on the cost axis and rises gently, 1 dollar every 10 minutes. Plan B starts at 0 and rises 3 dollars every 10 minutes. The steeper line catches the other where they cross. At 60 minutes both lines are at 18 dollars, so the plans tie at 60 minutes."
+ },
+ "A1-3#13": {
+  "title": "Spend the budget in order",
+  "text": "Pay the room first. That takes 40 dollars out of the 100 dollar budget and leaves 60 dollars for guests. Each guest uses 6 dollars. Count guests until the money runs out: 6, 12, 18, 24, 30, 36, 42, 48, 54, 60. The tenth guest uses the last 6 dollars, so g = 10 guests."
+ },
+ "A1-3#14": {
+  "title": "Watch the gap close",
+  "text": "Compare the two sides for easy values of x. At x = 0 the left side is 5(−1) − 0 = −5 and the right side is 7, so the left is 12 behind. At x = 1 the left is −2 and the right is 9, so it is 11 behind. The gap shrinks by 1 for each step in x, so it closes after 12 steps: x = 12."
+ },
+ "A1-4#1": {
+  "title": "A height sign at a ride",
+  "text": "A ride has a sign: you must be taller than 120 cm. That rule does not name one height. A child of 121 cm may ride, and so may an adult of 190 cm. A child of exactly 120 cm may not. On a number line the answer is everything to the right of 120, drawn as an arrow with an open dot at 120."
+ },
+ "A1-4#2": {
+  "title": "Four signs, one number",
+  "text": "Use the number 10 for all four phrases and list what is allowed.\nAt least 10: 10, 11, 12 and up, so x ≥ 10.\nAt most 10: 10, 9, 8 and down, so x ≤ 10.\nMore than 10: 11 and up, but not 10, so x > 10.\nFewer than 10: 9 and down, but not 10, so x < 10."
+ },
+ "A1-4#3": {
+  "title": "Two friends and their ages",
+  "text": "Ana is 12 and Ben is 15, so Ana's age < Ben's age. In 3 years they are 15 and 18: still the same order. Two years ago they were 10 and 13: same order. Double both and you get 24 and 30: same order. But make both negative, −12 and −15, and now −12 is the larger. Only the negative multiplier changed who was ahead."
+ },
+ "A1-4#4": {
+  "title": "Debts turn the order around",
+  "text": "Think of money. Having 6 dollars is better than having 2 dollars, so 2 < 6. Now turn both into debts by multiplying by −1. Owing 6 dollars is worse than owing 2 dollars, so −6 < −2, which is the same as −2 > −6. The person who was ahead is now behind. A bigger amount becomes a bigger debt, so the sign has to turn around."
+ },
+ "A1-4#5": {
+  "title": "Find the boundary, then test",
+  "text": "First solve the matching equation: x + 5 = 9 when x = 4. That is the boundary. Now test one number on each side. Try x = 6: 6 + 5 = 11, and 11 > 9 is true. Try x = 0: 0 + 5 = 5, and 5 > 9 is false. The side with 6 is the winning side, so x > 4."
+ },
+ "A1-4#6": {
+  "title": "List some bus loads",
+  "text": "Write down some possible head counts and say whether the bus allows each one. 25 students: fine. 39: fine. 40: fine, the bus is full. 41: not allowed. 50: not allowed. The allowed numbers are 40 and everything below it. On a number line that is a closed dot at 40 with shading to the left, which is n ≤ 40."
+ },
+ "A1-4#7": {
+  "title": "Boundary and test points",
+  "text": "Solve the equation −3x = 12 first: x = −4 is the boundary. Now test a number on each side of −4 in the original inequality. x = −6 gives −3(−6) = 18, and 18 > 12 is true. x = 0 gives 0 > 12, which is false. The true side is the one below −4, so x < −4, with no flip rule needed."
+ },
+ "A1-4#8": {
+  "title": "Table of values",
+  "text": "Evaluate 5 − 2x at several values and compare with 11.\nx = −5 gives 15: too big.\nx = −4 gives 13: too big.\nx = −3 gives 11: allowed, because equal counts.\nx = −2 gives 9 and x = 0 gives 5: both allowed.\nThe value drops as x grows, so every x from −3 upward works: x ≥ −3."
+ },
+ "A1-4#9": {
+  "title": "Boundary first, then test",
+  "text": "Solve −2x + 3 = 11 as an equation: −2x = 8, so x = −4. That number is the boundary, and it is included because of the equals bar. Test one side: x = −6 gives 12 + 3 = 15, and 15 ≥ 11 is true. Test the other: x = 0 gives 3, which fails. The true side is below the boundary: x ≤ −4."
+ },
+ "A1-4#10": {
+  "title": "Move x to the other side",
+  "text": "Add x to both sides so its coefficient becomes positive: 5 < 9 + x. Adding never flips the sign. Now subtract 9 from both sides: −4 < x. Read from the x side, that says x is greater than −4, so x > −4. This route reaches the same answer without ever dividing by a negative number."
+ },
+ "A1-4#11": {
+  "title": "Count up the cost",
+  "text": "List the cost of each number of credits by counting in fours: 4, 8, 12, 16, 20, 24, 28. The sixth number, 24, is still within the 25 dollars you have. The seventh, 28, is too much. So you can afford 6 credits or fewer, c ≤ 6, and you would have 1 dollar left over."
+ },
+ "A1-4#12": {
+  "title": "Use the money still needed",
+  "text": "You need 50 dollars and have 18, so you are short by 50 − 18 = 32 dollars. Saving 8 dollars a week, the shortfall shrinks like this: 24, 16, 8, 0. It takes 4 weeks to reach zero. Any week after that also works, since you only have more money. So w ≥ 4."
+ },
+ "A1-4#13": {
+  "title": "Use a real-life rule",
+  "text": "Turn each inequality into a rule about ages. \"Older than 2\" is x > 2: a child who is exactly 2 does not qualify, so the dot at 2 stays open, like an empty seat. \"2 or older\" is x ≥ 2: the child who is exactly 2 does qualify, so the dot is filled in. In both cases older children qualify, so the shading goes right."
+ },
+ "A1-5#1": {
+  "title": "A table that never argues",
+  "text": "Look at a price list: 1 ticket costs 8 dollars, 2 cost 16, 3 cost 24. Each number of tickets has one price beside it. That list is a function. Now imagine a list where 2 tickets cost 16 on one line and 20 on another. You could not tell what to pay, so that list is not a function."
+ },
+ "A1-5#2": {
+  "title": "Compare it with a recipe name",
+  "text": "A recipe book has a recipe called Pancakes, and \"Pancakes for 4\" tells you how many people to cook for. Nobody multiplies the word Pancakes by 4. In the same way, if f(x) = x + 10, then f(3) means run the rule called f with 3 as the input: 3 + 10 = 13. Multiplying would need a number named f, and there is none."
+ },
+ "A1-5#3": {
+  "title": "A concrete rule with numbers",
+  "text": "A ride charges 2 dollars per ticket and sells 1 to 5 tickets per person. The rule is cost = 2 × tickets. The inputs that are allowed are 1, 2, 3, 4, 5: that list is the domain. Feeding each one in gives 2, 4, 6, 8, 10: that list is the range. The cost 7 is not in the range, because no allowed input produces it."
+ },
+ "A1-5#4": {
+  "title": "Check a table of pairs",
+  "text": "Test with tables. Table A lists (1, 5), (2, 7), (3, 7). Every input appears once, so A is a function, and it does not matter that two inputs share the output 7. Table B lists (1, 5), (1, 8), (2, 7). The input 1 is paired with both 5 and 8, so B is not a function. Repeated outputs are fine; repeated inputs with different outputs are not."
+ },
+ "A1-5#5": {
+  "title": "A temperature converter",
+  "text": "A weather app doubles a Celsius reading and adds 30 to estimate Fahrenheit: f(x) = 2x + 30. On a warm day, f(10) = 50. On a freezing day, f(−10) = 2(−10) + 30 = 10. The negative input went in the same way, and it gave a sensible answer. Notice that f(−10) is 10, not −50, so flipping the input does not simply flip the output."
+ },
+ "A1-5#6": {
+  "title": "Step down from known outputs",
+  "text": "Start with easy inputs and follow the pattern.\nf(0) = 2, f(−1) = −1, f(−2) = −4.\nEach step of 1 to the left lowers the output by 3, because the rule multiplies x by 3. Two more steps give f(−3) = −7 and f(−4) = −10. The pattern agrees with the substitution: f(−4) = −10."
+ },
+ "A1-5#7": {
+  "title": "Count down from the start",
+  "text": "Read the rule as a countdown. At x = 0 the output is 1. Each time x goes up by 1, the output goes down by 2. So the outputs run 1, −1, −3, −5, −7 for x = 0, 1, 2, 3, 4. The fifth value in the list belongs to x = 4, so f(4) = −7."
+ },
+ "A1-5#8": {
+  "title": "Doubling is adding twice",
+  "text": "Doubling a number is the same as adding it to itself. Feed in 7 and the machine gives 7 + 7 = 14. A short table shows the same habit: 5 goes to 10, 6 goes to 12, 7 goes to 14. The outputs climb by 2 each time the input climbs by 1, and the row for 7 reads 14."
+ },
+ "A1-5#9": {
+  "title": "Skip count by fives",
+  "text": "The rule multiplies the input by 5, so the outputs for inputs 1, 2, 3, ... are the multiples of 5. Count them off: 5, 10, 15, 20, 25, 30. The sixth multiple is 30, and the sixth one belongs to the input 6. So f(6) = 30, with no multiplying of f by anything."
+ },
+ "A1-5#10": {
+  "title": "Read it as a line",
+  "text": "Think of f(x) = 3x + 2 as a line. It starts at height 2 when x = 0 and climbs 3 for every step to the right. Four steps to the right climb 3 + 3 + 3 + 3 = 12. Add that climb to the starting height: 2 + 12 = 14. So the point above x = 4 is at height 14, and f(4) = 14."
+ },
+ "A1-5#11": {
+  "title": "Break 8 into easy parts",
+  "text": "Split the 8 questions into 5 and 3. Five questions earn 5 × 4 = 20 points. Three questions earn 3 × 4 = 12 points. Together that is 20 + 12 = 32 points. You could also double: 2 questions earn 8, 4 questions earn 16, and 8 questions earn 32. Both routes give 32 points."
+ },
+ "A1-5#12": {
+  "title": "Add in two friendly jumps",
+  "text": "Picture a brightness slider at 40. The filter pushes it 15 marks to the right. Split the push into 10 and 5: the first part takes the slider to 50, and the second part takes it to 55. Check by going back: 55 − 15 = 40, the brightness you began with. The output is 55."
+ },
+ "A1-5#13": {
+  "title": "Follow the jumps down the table",
+  "text": "Look only at the output column: 5, 10, 15. Each output is 5 more than the one before, while the input goes up by 1. The next input is 4, so make one more jump of 5 from 15 and reach 20. Adding 5 for each new row gives the same result as multiplying the input by 5."
+ },
+ "A1-5#14": {
+  "title": "Try inputs until one fits",
+  "text": "Run the machine forward on a few guesses.\nf(5) = 13, which is too small.\nf(10) = 23, which is too big.\nThe target 19 lies between them, so the input is between 5 and 10. Each extra 1 of input adds 2 to the output, and 19 is 6 more than 13, so go up 3 from 5: f(8) = 19. The input was 8."
+ },
+ "A1-6#1": {
+  "title": "Slope as a unit rate",
+  "text": "Think of a hiking trail instead of stairs. One trail climbs 6 metres while you walk 2 metres forward. Another climbs 12 metres while you walk 4 forward. Both gain 3 metres of height for every 1 metre forward, so they are equally steep. Slope is that \"per 1 step forward\" number: 6 ÷ 2 = 3 and 12 ÷ 4 = 3."
+ },
+ "A1-6#2": {
+  "title": "Tables that rise and fall",
+  "text": "Look at tables instead of pictures. In the table 0 → 1, 1 → 4, 2 → 7, the outputs grow by 3 each step, so the slope is 3, a positive number. In 0 → 9, 1 → 7, 2 → 5, they shrink by 2 each step, so the slope is −2. In 0 → 4, 1 → 4, 2 → 4, nothing changes, so the slope is 0."
+ },
+ "A1-6#3": {
+  "title": "Fill in the missing stairs",
+  "text": "Take the points (1, 2) and (3, 8) and list the points in between. From x = 1 to x = 3 is two steps, and y must travel from 2 to 8, a total of 6. Sharing 6 equally over 2 steps gives 3 per step: (1, 2), (2, 5), (3, 8). The formula does this sharing in one line: 6 ÷ 2 = 3."
+ },
+ "A1-6#4": {
+  "title": "One job, read as a graph",
+  "text": "You earn 9 dollars an hour. After 1 hour you have 9, after 2 hours 18, after 3 hours 27. Plot those as (1, 9), (2, 18), (3, 27). Each step of 1 hour to the right lifts the point 9 dollars higher, so the slope of the line is 9. The pay rate and the steepness of the graph are the same number."
+ },
+ "A1-6#5": {
+  "title": "Same two points, both orders",
+  "text": "Use the points (1, 2) and (4, 8). Going left to right, the rise is 8 − 2 = 6 and the run is 4 − 1 = 3, so the slope is 2. Now subtract the other way round: 2 − 8 = −6 and 1 − 4 = −3. The slope is −6 ÷ −3, which is still 2. A line has one steepness, whichever point you start from."
+ },
+ "A1-6#6": {
+  "title": "Count steps on the grid",
+  "text": "Walk from (−4, −1) to (−1, 5) on a grid. Going right, x passes −3, −2 and −1, which is 3 steps. Going up, y passes 0, 1, 2, 3, 4 and 5, which is 6 steps. Up 6 for 3 across is up 2 for each 1 across, so the slope is 2. Counting avoids the double minus signs completely."
+ },
+ "A1-6#7": {
+  "title": "Find the middle point",
+  "text": "The point halfway between (−2, 6) and (2, −2) is (0, 2), since 0 is halfway between −2 and 2, and 2 is halfway between 6 and −2. From (−2, 6) to (0, 2) the line goes 2 across and 4 down. That is 2 down for each 1 across, so the slope is −2."
+ },
+ "A1-6#8": {
+  "title": "Split into single steps",
+  "text": "Break the staircase into stairs that are each 1 unit across. A run of 2 makes two such stairs, and they share the rise of 6 equally, so each stair climbs 3. Slope means the climb for one unit across, so the slope is 3. A table shows it too: across 0, 1, 2 goes with heights 0, 3, 6."
+ },
+ "A1-6#9": {
+  "title": "Scale the ramp down",
+  "text": "Ask how far you must roll forward to gain 1 foot of height. The ramp gains 2 feet over 8 feet of run, so half the ramp gains 1 foot over 4 feet. One foot up for every four feet across is a slope of 1/4, or 0.25. That small number matches a gentle ramp."
+ },
+ "A1-6#10": {
+  "title": "Table between the points",
+  "text": "Put the two points in a table and fill the gap. x goes 1, 2, 3 and y must go from 2 to 8 in two equal jumps. The total change is 6, so each jump is 3 and the middle value is 5. The table 2, 5, 8 rises by 3 for each step of 1 in x, so the slope is 3."
+ },
+ "A1-6#11": {
+  "title": "Step down one at a time",
+  "text": "The line drops from height 10 to height 0 while x goes from 0 to 5. That is a fall of 10 shared over 5 steps, so each step loses 2. The points are (0, 10), (1, 8), (2, 6), (3, 4), (4, 2), (5, 0). Losing 2 for every step across is a slope of −2."
+ },
+ "A1-6#12": {
+  "title": "Hour by hour",
+  "text": "Split the two hours evenly. The battery lost 80 − 56 = 24 percentage points in total, so with a steady drain it lost 12 in each hour: 80, then 68, then 56. Dropping 12 points every hour is a rate of −12 percent per hour. The minus sign records that the level is going down."
+ },
+ "A1-6#13": {
+  "title": "Use the slope formula",
+  "text": "Treat the pay as points on a graph. Zero walks earn 0 dollars, so one point is (0, 0). Three walks earn 18 dollars, so another is (3, 18). The slope formula gives (18 − 0) ÷ (3 − 0) = 18 ÷ 3 = 6. The slope is 6 dollars per walk, the same as shrinking to one walk."
+ },
+ "A1-6#14": {
+  "title": "Subtract the coordinates",
+  "text": "Use the slope formula on (2, 1) and (6, 4). The change in y is 4 − 1 = 3. The change in x is 6 − 2 = 4. Slope is the change in y divided by the change in x, which is 3/4. That matches counting 3 squares up and 4 squares across on the grid."
+ },
+ "A1-7#1": {
+  "title": "The amount at time zero",
+  "text": "Think of a savings jar. You already have 20 dollars in it and add 5 dollars each week, so the total is y = 5x + 20. Before any week has passed, the jar holds 20 dollars. That opening amount is b. In a table it is the row for x = 0, and on the graph it is the point (0, 20) on the y-axis."
+ },
+ "A1-7#2": {
+  "title": "A taxi meter ticking",
+  "text": "A taxi meter shows 4 dollars when you get in and adds 3 dollars for each mile: y = 3x + 4. Watch the meter: 4, 7, 10, 13. Every mile, the display jumps by the same 3. That steady jump is m. If the meter went backwards by 2 each mile, like a gift card being used up, m would be −2."
+ },
+ "A1-7#3": {
+  "title": "Check by testing two inputs",
+  "text": "You can confirm what you read off y = 3x − 4 by trying two inputs. At x = 0, y = 3(0) − 4 = −4, so the line crosses the y-axis at −4. At x = 1, y = 3 − 4 = −1. Going from x = 0 to x = 1 lifted y from −4 to −1, a climb of 3. So b = −4 and m = 3, as read."
+ },
+ "A1-7#4": {
+  "title": "A flat phone bill",
+  "text": "A phone plan costs 30 dollars a month however many minutes you talk. Use 10 minutes, the bill is 30. Use 500 minutes, still 30. Plot the bills against minutes and the dots sit in a level row at height 30. The equation is y = 30, and the cost per extra minute, which is the slope, is 0."
+ },
+ "A1-7#5": {
+  "title": "A phone battery draining",
+  "text": "A game drains 2 percent of battery each minute from a start of 90 percent: y = −2x + 90. The readings go 90, 88, 86, 84. On a graph each dot is one step to the right and two lower than the last, so the line slants down. The negative sign on m is the word \"loses\" written in symbols."
+ },
+ "A1-7#6": {
+  "title": "Plot from a table",
+  "text": "Skip the stepping and substitute. At x = 0, y = −2(0) + 3 = 3. At x = 1, y = −2 + 3 = 1. At x = 2, y = −4 + 3 = −1. The points (0, 3), (1, 1), (2, −1) are the same ones found by stepping. The y-values fall by 2 each time, so m = −2, and the first one shows b = 3."
+ },
+ "A1-7#7": {
+  "title": "Check with a table",
+  "text": "Substitute a few inputs into y = −x − 4 and watch the outputs. At x = 0, y = −4. At x = 1, y = −1 − 4 = −5. At x = 2, y = −2 − 4 = −6. The outputs −4, −5, −6 drop by 1 for each step to the right, so the slope is −1, and the value at x = 0 gives b = −4."
+ },
+ "A1-7#8": {
+  "title": "Test two inputs",
+  "text": "Find the two numbers by plugging in. At x = 0, y = 5(0) + 2 = 2, so the line crosses the y-axis at 2 and b = 2. At x = 1, y = 5 + 2 = 7. Moving one step right raised y from 2 to 7, which is a rise of 5, so m = 5."
+ },
+ "A1-7#9": {
+  "title": "Use two far-apart points",
+  "text": "Choose two easy inputs and substitute. At x = 0, y = 2. At x = 3, y = 3(3) + 2 = 11. Plot (0, 2) and (3, 11) and join them with a ruler. Points that are far apart make the line easier to draw accurately. The line also passes through (1, 5) and (2, 8), so it is the same graph of y = 3x + 2."
+ },
+ "A1-7#10": {
+  "title": "Find where it crosses",
+  "text": "Put x = 0 into y = 3x − 4 to find the start: y = −4, so the line begins at (0, −4), below the x-axis. Now put in x = 2: y = 6 − 4 = 2. From (0, −4) to (2, 2) the line climbs 6 over 2 steps, which is 3 per step. So the slope is 3 and the start is (0, −4)."
+ },
+ "A1-7#11": {
+  "title": "Break the ride into chunks",
+  "text": "Work in blocks of 10 minutes. At 15 cents a minute, 10 minutes cost 150 cents, which is 1 dollar 50. A 20 minute ride is two such blocks, so the riding costs 3 dollars. Add the 2 dollar unlock fee, which is charged once, and the total is 5 dollars."
+ },
+ "A1-7#12": {
+  "title": "Grow it week by week",
+  "text": "List the heights instead of substituting. The plant begins at 4 cm and gains 3 cm each week: week 1 is 7, week 2 is 10, week 3 is 13, week 4 is 16, week 5 is 19. After five jumps of 3 from a start of 4, the plant is 19 cm tall."
+ },
+ "A1-7#13": {
+  "title": "Start and step instead",
+  "text": "Read the graph facts straight from y = 2x + 1. The intercept 1 puts the first dot at (0, 1). The slope 2 says each step right goes up 2, so the next dots are (1, 3) and (2, 5). These are the same three points the table gives, so the two methods check each other."
+ },
+ "A1-7#14": {
+  "title": "Substitute into the rule",
+  "text": "Use the equation directly. Week 6 means w = 6, so s = 15 + 5(6). Multiply first: 5 × 6 = 30 dollars saved over the six weeks. Then add the 15 dollars you began with: 15 + 30 = 45. The savings at week 6 are 45 dollars, the same as the sixth step of the walk."
+ },
+ "A1-8#1": {
+  "title": "A bank balance example",
+  "text": "Open an account with 50 dollars and put in 20 dollars every month. The balances are 50, 70, 90, 110. To describe every month at once you need only two facts: 50 to begin and 20 more each month. So the balance after x months is y = 20x + 50. A different account changes the two numbers but never the shape of the equation."
+ },
+ "A1-8#2": {
+  "title": "Try it on one table",
+  "text": "Take the table x = 1, 2, 3 with y = 7, 9, 11. The y-values rise by 2 each row, so m = 2. There is no row for x = 0, so go back one row from x = 1: 7 − 2 = 5, so b = 5. The equation is y = 2x + 5. Test the last row: 2(3) + 5 = 11, which matches."
+ },
+ "A1-8#3": {
+  "title": "Picture the two dots",
+  "text": "Mark two dots on grid paper, say (1, 5) and (2, 8). Only one straight ruler line passes through both. From the first dot to the second you go 1 right and 3 up, so the tilt is 3. Slide back 1 to the left along the same tilt and you drop 3, landing on the y-axis at height 2. The line is y = 3x + 2."
+ },
+ "A1-8#4": {
+  "title": "Two bills side by side",
+  "text": "Compare two bills for a bike hire that costs 5 dollars to unlock and 2 dollars per hour. For 1 hour you pay 7. For 4 hours you pay 13. The 5 appears once in each bill, however long the ride, so it is b. The 2 is paid again every hour, so it multiplies the hours and is m. The rule is cost = 2x + 5."
+ },
+ "A1-8#5": {
+  "title": "Step along the line",
+  "text": "Start at (0, 5), which is on the y-axis, so b = 5. To reach (4, −3) the line falls from 5 to −3, a drop of 8, over 4 steps. That is a drop of 2 per step: (1, 3), (2, 1), (3, −1), (4, −3). Falling 2 each step means m = −2, so the equation is y = −2x + 5."
+ },
+ "A1-8#6": {
+  "title": "Build a table of the points",
+  "text": "Put the points in a table and fill the gaps. From x = 0 to x = 3, y goes from −2 to 7, a climb of 9 over 3 steps, so 3 per step. The rows are 0 → −2, 1 → 1, 2 → 4, 3 → 7. The jump of 3 is the slope and the row for x = 0 gives b = −2, so y = 3x − 2."
+ },
+ "A1-8#7": {
+  "title": "Table of the tank",
+  "text": "Write the level each hour: 40, 34, 28, 22, 16, 10, 4. The level starts at 40 and falls by 6 every hour, so the rule is y = −6x + 40. After 6 hours 4 litres are left, and the next hour would need 6, so the tank empties during the seventh hour, about 6.7 hours after the start."
+ },
+ "A1-8#8": {
+  "title": "Build it from a table",
+  "text": "Use the two facts to make points. A y-intercept of 1 means the row 0 → 1. A slope of 5 means each row is 5 more: 1 → 6, 2 → 11, 3 → 16. Every output is 5 times the input, plus 1. Writing that pattern with x and y gives y = 5x + 1."
+ },
+ "A1-8#9": {
+  "title": "Slope formula on two rows",
+  "text": "Treat two rows as points: (0, 3) and (2, 13). The slope formula gives (13 − 3) ÷ (2 − 0) = 10 ÷ 2 = 5. The point (0, 3) is on the y-axis, so b = 3. The equation is y = 5x + 3. The middle row checks it: 5(1) + 3 = 8."
+ },
+ "A1-8#10": {
+  "title": "List the bills first",
+  "text": "Write what you have paid in total after each month. At month 0 you have paid the 25 dollar fee. Then 35, 45, 55 after months 1, 2 and 3. The totals go up by 10 each month from a start of 25. A start of 25 and a jump of 10 is the line y = 10x + 25. Check month 3: 30 + 25 = 55."
+ },
+ "A1-8#11": {
+  "title": "Two points from the story",
+  "text": "Turn the story into two points. At hour 0 the candle is 20 cm, giving (0, 20). After 1 hour it is 18 cm, giving (1, 18). The slope is (18 − 20) ÷ (1 − 0) = −2, and the point on the vertical axis gives b = 20. So h = −2t + 20, which is the same as h = 20 − 2t."
+ },
+ "A1-8#12": {
+  "title": "Fill in the middle row",
+  "text": "Make a table from the two points. At x = 0, y = 6, and at x = 2, y = 12. The value at x = 1 must be halfway, which is 9. So the rows are 6, 9, 12, rising by 3 each step from a start of 6. Jump 3 and start 6 give y = 3x + 6."
+ },
+ "A1-8#13": {
+  "title": "Solve for b with algebra",
+  "text": "Put what you know into y = mx + b. The slope is 3, so y = 3x + b. The line passes through (1, 5), so replace x with 1 and y with 5: 5 = 3(1) + b, which is 5 = 3 + b. Subtract 3 from both sides and b = 2. The equation is y = 3x + 2."
+ },
+ "A1-8#14": {
+  "title": "Read m and b from the words",
+  "text": "Pick the two numbers straight from the story. \"Starts at 55 degrees\" is the value when no hours have passed, so b = 55. \"Rises 3 degrees each hour\" is the change for each step of x, so m = 3. Put them in y = mx + b to get y = 3x + 55. Check hour 2: 6 + 55 = 61 degrees."
+ },
+ "A1-9#1": {
+  "title": "Two tables, one shared row",
+  "text": "Make a table for each rule. For y = 2x, the rows x = 0, 1, 2, 3 give y = 0, 2, 4, 6. For y = 6 − x, the same x-values give y = 6, 5, 4, 3. Compare row by row. Only at x = 2 do both tables show the same y, which is 4. That shared row, x = 2 and y = 4, is the solution of the system."
+ },
+ "A1-9#2": {
+  "title": "A price tag example",
+  "text": "A sandwich and a drink cost 9 dollars together, and the sandwich costs twice as much as the drink. Since the sandwich is worth two drinks, trade it for two drinks on the receipt. Now the receipt says three drinks cost 9 dollars, so a drink is 3 dollars and the sandwich is 6. Trading one thing for its equal value is substitution."
+ },
+ "A1-9#3": {
+  "title": "Two shopping baskets",
+  "text": "Two numbers have a sum of 10 and a difference of 4. Write x + y = 10 and x − y = 4. Put the two facts together: the sum plus the difference is the bigger number counted twice, because the smaller number is added once and taken away once. So twice the bigger number is 14, and it is 7. The smaller one is 3."
+ },
+ "A1-9#4": {
+  "title": "Draw the pets as bars",
+  "text": "Draw one bar for dogs and a longer bar for cats. The cat bar is the dog bar with an extra piece of 4. Together the bars make 12. Remove the extra 4 and two equal dog bars are left, totalling 8, so there are 4 dogs and 8 cats. The picture needed both facts: the total and the comparison."
+ },
+ "A1-9#5": {
+  "title": "Sum and difference reasoning",
+  "text": "Two numbers add to 1 and the first is 7 more than the second. If they were equal, each would be half of 1, which is 0.5. To make them 7 apart, move the first up by 3.5 and the second down by 3.5. That gives x = 4 and y = −3. Check: 4 + (−3) = 1 and 4 − (−3) = 7."
+ },
+ "A1-9#6": {
+  "title": "Subtract instead of adding",
+  "text": "Take the first equation away from the second. The 3x terms cancel: (3x + 2y) − (3x − 2y) = 4y, and 6 − 12 = −6. So 4y = −6 and y = −1.5. Put that into 3x + 2y = 6: 3x − 3 = 6, so 3x = 9 and x = 3. The solution is (3, −1.5), found by removing x first."
+ },
+ "A1-9#7": {
+  "title": "Consecutive number story",
+  "text": "The rule y = x + 1 says y is the next number after x. The other rule says the two add to 9. Look for two neighbouring whole numbers with a sum of 9. Half of 9 is 4.5, and the neighbours on either side of it are 4 and 5. So x = 4 and y = 5."
+ },
+ "A1-9#8": {
+  "title": "Table of guesses",
+  "text": "Use the first rule to make y, then test the second rule.\nx = 1: y = 1, and 3 + 1 = 4.\nx = 2: y = 3, and 6 + 3 = 9.\nx = 3: y = 5, and 9 + 5 = 14.\nThe total rises by 5 each row and reaches 14 at x = 3, so the solution is (3, 5)."
+ },
+ "A1-9#9": {
+  "title": "Halve the sum and the gap",
+  "text": "Two numbers add to 10 and differ by 4. If they were equal they would both be 5. Push the larger one up by half the gap and the smaller one down by the same amount: 5 + 2 = 7 and 5 − 2 = 3. So x = 7 and y = 3. Check: 7 + 3 = 10 and 7 − 3 = 4."
+ },
+ "A1-9#10": {
+  "title": "Substitute from the easy rule",
+  "text": "The rule x + y = 8 says that x is the same as 8 − y. Write that in place of x in the first equation: 2(8 − y) + 3y = 19. Distribute to get 16 − 2y + 3y = 19, so 16 + y = 19 and y = 3. Then x = 8 − 3 = 5. The solution (5, 3) matches the one found by elimination."
+ },
+ "A1-9#11": {
+  "title": "Month-by-month table",
+  "text": "List both totals each month.\nMonth 1: A 25, B 17.\nMonth 2: A 30, B 24.\nMonth 3: A 35, B 31.\nMonth 4: A 40, B 38.\nMonth 5: A 45, B 45.\nPlan B starts 10 dollars lower but gains 2 dollars on plan A every month. They are level at month 5, when both have cost 45 dollars."
+ },
+ "A1-9#12": {
+  "title": "Solve it as an equation",
+  "text": "Write each plan's total after m months: plan A is 20 + 5m and plan B is 10 + 7m. Set them equal: 20 + 5m = 10 + 7m. Subtract 5m from both sides to get 20 = 10 + 2m, then subtract 10 to get 10 = 2m. So m = 5 months. Both plans then total 45 dollars."
+ },
+ "A1-9#13": {
+  "title": "Solve with elimination",
+  "text": "Write the receipts as equations: 3a + 2k = 41 and a + 2k = 23. Both contain 2k, so subtract the second from the first. The kid tickets cancel and 2a = 18, so a = 9. Put 9 into the second equation: 9 + 2k = 23, so 2k = 14 and k = 7. Adult tickets cost 9 dollars and kid tickets 7 dollars."
+ },
+ "A1-10#1": {
+  "title": "Powers of ten you know",
+  "text": "Use powers of ten, where an exponent counts zeros. 10² is 100 and 10³ is 1000. Multiply them: 100 × 1000 = 100,000. That has five zeros, so it is 10⁵, and 2 + 3 = 5. The two zeros and the three zeros simply line up behind the 1. The same joining happens with any base: x² · x³ = x⁵."
+ },
+ "A1-10#2": {
+  "title": "Undoing a multiplication",
+  "text": "Division asks a multiplication question. x⁵ ÷ x² asks: x² times what gives x⁵? Multiplying adds exponents, so the missing power must add 3 to the 2. The answer is x³. With tens: 100,000 ÷ 100 = 1000. Crossing off two zeros from five leaves three, so 10⁵ ÷ 10² = 10³."
+ },
+ "A1-10#3": {
+  "title": "Rows of an egg tray",
+  "text": "Picture a tray with 3 rows and 2 eggs in each row. It holds 3 × 2 = 6 eggs. In (x²)³ each row is an x² with 2 copies of x, and there are 3 rows, so there are 6 copies: x⁶. With tens: (10²)³ = 100 × 100 × 100 = 1,000,000, which has six zeros, so it is 10⁶."
+ },
+ "A1-10#4": {
+  "title": "Walk down a staircase of powers",
+  "text": "List powers of 2 going down: 2³ = 8, 2² = 4, 2¹ = 2. Each step down divides by 2. Keep stepping: 2⁰ = 1, then 2⁻¹ = 1/2, 2⁻² = 1/4, 2⁻³ = 1/8. The pattern never jumps to negative numbers. It passes through 1 at the zero step and then gives smaller and smaller fractions."
+ },
+ "A1-10#6": {
+  "title": "Watch the sign alternate",
+  "text": "List the powers of −3 one at a time. (−3)¹ = −3. Multiply by −3 again and the sign turns positive: (−3)² = 9. Multiply once more and it turns negative: (−3)³ = −27. Each extra factor of −3 flips the sign, so even exponents give positive results and odd exponents give negative ones: 9 and −27."
+ },
+ "A1-10#7": {
+  "title": "Halve your way down",
+  "text": "Start from powers you know and step down, dividing by 2 each time. 2² = 4, 2¹ = 2, 2⁰ = 1. Three more steps reach the exponent −3: 2⁻¹ = 1/2, 2⁻² = 1/4, 2⁻³ = 1/8. The pattern of halving lands on 1/8, a small positive fraction, in agreement with 1 over 2³."
+ },
+ "A1-10#8": {
+  "title": "Test with tens",
+  "text": "Try the base 10, where the answer is easy to see. 10³ is 1000 and 10⁴ is 10,000. Their product is 10,000,000, a 1 followed by seven zeros, so it is 10⁷. Three zeros and four zeros joined to make seven. The exponents were added, not multiplied, so x³ · x⁴ = x⁷."
+ },
+ "A1-10#9": {
+  "title": "Ask the multiplication question",
+  "text": "Turn the division around: x³ times which power gives x⁸? Multiplying powers adds exponents, so you need 3 + ? = 8, and the missing exponent is 5. Check with x = 10: 100,000,000 ÷ 1000 = 100,000, which is 10⁵. Both the question and the number test give x⁵."
+ },
+ "A1-10#10": {
+  "title": "Square, then square again",
+  "text": "A fourth power is a square of a square, so do the work in two rounds. First square the group: (x²)² = x² · x² = x⁴. Then square that result: (x⁴)² = x⁴ · x⁴ = x⁸. Check with the number 2 in place of x: 2² = 4, and 4⁴ = 256, while 2⁸ = 256 as well. So (x²)⁴ = x⁸."
+ },
+ "A1-10#11": {
+  "title": "Group the factors",
+  "text": "Find the fifth power of 2 by grouping the five 2s in pairs instead of listing doubles: (2 × 2) × (2 × 2) × 2 = 4 × 4 × 2 = 16 × 2, which is 32 layers after 5 folds. For ten folds there are five pairs, and each pair is 4: 4 × 4 × 4 × 4 × 4 = 16 × 16 × 4 = 256 × 4, which is 1024 layers."
+ },
+ "A1-10#12": {
+  "title": "Pair up the threes",
+  "text": "Group the four 3s into two pairs: 3⁴ = (3 × 3) × (3 × 3). Each pair is 9, so the product is 9 × 9 = 81. In the story, this says two rounds turn 1 teller into 9 hearers, and two more rounds turn each of those 9 into 9 again. Round 4 reaches 81 people."
+ },
+ "A1-10#13": {
+  "title": "Write out every copy",
+  "text": "Skip the numbers and write the factors out. x³ is x · x · x and x⁴ is x · x · x · x. Put them side by side and count: three copies and then four more make seven copies in one chain, so the product is x⁷. Getting x¹² would need twelve copies, and there are only seven on the page."
+ },
+ "A1-10#14": {
+  "title": "Divide a number by itself",
+  "text": "Use the quotient rule on 4² ÷ 4². Subtracting the exponents gives 4²⁻² = 4⁰. Now work the same division with ordinary numbers: 16 ÷ 16 = 1, because anything divided by itself is 1. Both lines describe the same calculation, so 4⁰ = 1."
+ },
+ "A1-11#1": {
+  "title": "Stack paper or fold paper",
+  "text": "Take a sheet of paper. If you stack one more sheet on the pile each time, the layers go 1, 2, 3, 4, 5, 6. That is linear: one more every step. If you fold the pile in half each time instead, the layers go 1, 2, 4, 8, 16, 32. That is exponential. After five steps, stacking has reached 6 layers and folding has reached 32."
+ },
+ "A1-11#2": {
+  "title": "Read a and b from a table",
+  "text": "Look at the table x = 0, 1, 2, 3 with y = 2, 6, 18, 54. The value at x = 0 is 2, so the start a is 2. Each y is 3 times the one before it, so the factor b is 3. The rule is y = 2 · 3ˣ. Test the last row: 2 · 3³ = 2 · 27 = 54, which matches the table."
+ },
+ "A1-11#3": {
+  "title": "Ten blocks in a row",
+  "text": "Picture the original amount as a bar of 10 equal blocks. Each block is 10 percent. Going up 10 percent adds one block, so you have 11 blocks out of the original 10, which is 1.1 times as much. Going down 20 percent removes two blocks, so 8 of the original 10 remain, which is 0.8 times as much."
+ },
+ "A1-11#4": {
+  "title": "Take off a fifth each year",
+  "text": "Twenty percent is one fifth. One fifth of 600 is 120, so after the first year the phone is worth 600 − 120 = 480 dollars. One fifth of 480 is 96, so after the second year it is worth 480 − 96 = 384 dollars. The second loss is smaller because it is a fifth of a smaller value. The answer is 384 dollars."
+ },
+ "A1-11#5": {
+  "title": "A tripling pattern, rewound",
+  "text": "A pattern follows y = 81 · 3ˣ, tripling at each step. Going forward from 81 you get 243, then 729. Rewinding one step must undo a tripling, so the value before 81 was 27, and before that 9. The formula agrees: at x = −2, 3⁻² is 1/9, and 81 × 1/9 = 9. Going back makes the values small, but they stay above zero."
+ },
+ "A1-11#6": {
+  "title": "Two pay offers",
+  "text": "Job A pays 1000 dollars every day. Job B pays 1 cent on day 1 and doubles the pay each day. On day 11, job B pays only 10.24 dollars, and job A looks far better. On day 17, job B pays 655.36 dollars. On day 18 it pays 1310.72 dollars and passes job A, and on day 21 it pays over 10,000 dollars for one day."
+ },
+ "A1-11#7": {
+  "title": "Write a rule for each",
+  "text": "Try to describe each list with a rule. The list 3, 6, 12, 24 is 3 × 1, 3 × 2, 3 × 4, 3 × 8: a start of 3 times powers of 2, so it is exponential. The list 3, 6, 9, 12 is 3 × 1, 3 × 2, 3 × 3, 3 × 4: the multiples of 3, which is a straight line pattern, so it is linear."
+ },
+ "A1-11#8": {
+  "title": "Follow one bacterium",
+  "text": "Watch a single bacterium for 3 hours. It becomes 2, then 4, then 8. So after three doublings each starting bacterium has turned into a family of 8. The dish began with 5 bacteria, so there are 5 families of 8, which is 5 × 8 = 40 bacteria."
+ },
+ "A1-11#9": {
+  "title": "Use the fraction four fifths",
+  "text": "Keeping 80 percent is keeping 4/5. Two years means 4/5 of 4/5, which is 16/25 of the price. Divide 500 by 25 to get 20, then multiply by 16: 20 × 16 = 320. The phone is worth 320 dollars. As a check, 16/25 is 0.64, and 500 × 0.64 is also 320."
+ },
+ "A1-11#10": {
+  "title": "Double the start four times",
+  "text": "The rule says: begin at 3 and multiply by 2 once for each step of x. For x = 4 that is four doublings: 3 becomes 6, then 12, then 24, then 48. So y = 48. Doubling one step at a time also shows why the 3 is not multiplied by 2 before the power is taken."
+ },
+ "A1-11#11": {
+  "title": "Check by running forward",
+  "text": "Suppose the value at x = −2 is 20 and move forward. One step right doubles it to 40 at x = −1. One more step doubles it to 80 at x = 0. That is the starting value in y = 80 · 2ˣ, because 2⁰ = 1. Running forward from 20 lands on the known start, so y = 20 at x = −2 is correct."
+ },
+ "A1-11#12": {
+  "title": "Table from week 0",
+  "text": "List both accounts from the beginning.\nWeek 1: A 20, B 110.\nWeek 2: A 40, B 210.\nWeek 3: A 80, B 310.\nWeek 4: A 160, B 410.\nWeek 5: A 320, B 510.\nWeek 6: A 640, B 610.\nB leads for five weeks, and A is ahead for the first time in week 6."
+ },
+ "A1-11#13": {
+  "title": "Track the gap between them",
+  "text": "Record how far B is ahead of A each week. Week 1: 90. Week 2: 170. Week 3: 230. Week 4: 250. Week 5: 190. Week 6: −30. The lead grows more slowly, peaks at week 4, then shrinks quickly. The negative number in week 6 means A is now 30 ahead, so A takes the lead in week 6."
+ },
+ "A1-11#14": {
+  "title": "Add or subtract percents first",
+  "text": "Work with percents before turning them into decimals. The original amount is 100 percent. A rise of 10 percent makes 100 + 10 = 110 percent, and 110 percent written as a decimal is 1.10. A fall of 20 percent leaves 100 − 20 = 80 percent, which is 0.80. So the factors are 1.10 and 0.80."
+ },
+ "A1-12#1": {
+  "title": "Metres and square metres",
+  "text": "Units show the idea. 4 metres of rope and 3 metres of rope make 7 metres of rope. But 4 metres of rope and 3 square metres of carpet do not make 7 of anything, because a length and an area are different kinds of quantity. In the same way x measures a length and x² measures an area, so 4x + 3x² has to stay as two terms."
+ },
+ "A1-12#2": {
+  "title": "Two shopping lists",
+  "text": "One shopping list says 3 apples and 4 bananas. Another says 2 apples and 5 bananas. To shop for both, you add apples to apples and bananas to bananas: 5 apples and 9 bananas. Adding polynomials works the same way. Line the two up in columns, x-terms above x-terms and numbers above numbers, and add each column: 5x + 9."
+ },
+ "A1-12#3": {
+  "title": "Paying for two things",
+  "text": "You have 20 dollars and buy a sandwich for 5 and a drink for 2. The cost of the order is (5 + 2), so you have 20 − (5 + 2) = 13 dollars left. Paying item by item gives 20 − 5 − 2 = 13 as well. Both items were taken away. If you wrote 20 − 5 + 2 you would be claiming the drink earned you money."
+ },
+ "A1-12#4": {
+  "title": "Long multiplication does this",
+  "text": "You already use this rule with numbers. To work out 13 × 12, think of it as (10 + 3)(10 + 2). Multiply every part by every part: 10 × 10 = 100, 10 × 2 = 20, 3 × 10 = 30, 3 × 2 = 6. The total is 156, which is 13 × 12. Replace each 10 with x and the same four products give x² + 5x + 6."
+ },
+ "A1-12#5": {
+  "title": "Test with a number",
+  "text": "Check the result by choosing x = 2. The first bracket is 4(2) − 5 = 3 and the second is 7(2) − 2 = 12, so the difference is 3 − 12 = −9. The answer −3x − 3 gives −6 − 3 = −9 as well. A common slip, −3x − 7, would give −13, so the test confirms −3x − 3."
+ },
+ "A1-12#6": {
+  "title": "Try x = 10",
+  "text": "Check the expansion with x = 10. The brackets become 10 − 3 = 7 and 10 − 5 = 5, and 7 × 5 = 35. The answer x² − 8x + 15 gives 100 − 80 + 15 = 35, which matches. If the last term were −15, the value would be 5, so the test shows the corner really is +15."
+ },
+ "A1-12#7": {
+  "title": "Multiply, then take the opposite",
+  "text": "Leave the minus sign until the end. First multiply 3x(2x − 4): 3x times 2x is 6x², and 3x times −4 is −12x, so you have 6x² − 12x. The minus sign in front asks for the opposite of all of that, which flips both signs: −6x² + 12x. Check with x = 1: −3(−2) = 6, and −6 + 12 = 6."
+ },
+ "A1-12#8": {
+  "title": "Check with x = 10",
+  "text": "Put x = 10 into the original expression: 40 + 30 + 2 = 72. The answer 7x + 2 gives 70 + 2 = 72, so it agrees. The tempting wrong answer 9x would give 90, which does not. The 2 is worth 2 whatever x is, so it cannot be folded into the x-terms. The simplified form is 7x + 2."
+ },
+ "A1-12#9": {
+  "title": "Stack them in columns",
+  "text": "Write one polynomial under the other, the way you stack numbers to add them. Put 2x under 3x and 5 under 4. Add each column: 3x + 2x = 5x and 4 + 5 = 9, so the sum is 5x + 9. With x = 10 this is the sum 34 + 25 = 59, and 5(10) + 9 is 59 as well."
+ },
+ "A1-12#10": {
+  "title": "Check by adding back",
+  "text": "Subtraction can be checked with addition. If (5x + 7) − (2x + 3) really is 3x + 4, then adding 2x + 3 back to the answer must return the first polynomial. Add them: 3x + 2x = 5x and 4 + 3 = 7, giving 5x + 7. That is the polynomial you began with, so 3x + 4 is correct."
+ },
+ "A1-12#11": {
+  "title": "Subtract in columns",
+  "text": "Line up the like terms, with cost under revenue. In the x² column, 3 take away 1 leaves 2, so 2x². In the x column, 5 take away 2 leaves 3, so 3x. The profit is 2x² + 3x. Test x = 1: revenue is 8 dollars, cost is 3 dollars, profit is 5 dollars, and 2 + 3 = 5."
+ },
+ "A1-12#12": {
+  "title": "Distribute one bracket at a time",
+  "text": "Treat (x + 2) as a single block and hand it to each part of (x + 3). That gives x(x + 2) + 3(x + 2). The first piece is x² + 2x and the second is 3x + 6. Add them and combine the middle terms: x² + 2x + 3x + 6 = x² + 5x + 6 square meters."
+ },
+ "A1-12#13": {
+  "title": "Add the bracket twice",
+  "text": "2x times the bracket is the same as x times the bracket, taken twice. One copy is x(3x + 4) = 3x² + 4x. Two copies are 3x² + 4x + 3x² + 4x. Combine like terms: the squares make 6x² and the x-terms make 8x. The product is 6x² + 8x."
+ },
+ "A1-12#14": {
+  "title": "Set it out like long multiplication",
+  "text": "Multiply the way you would multiply two-digit numbers. First multiply (x + 3) by the 2: that row is 2x + 6. Next multiply (x + 3) by the x: that row is x² + 3x. Add the two rows, lining up like terms: x² + 3x + 2x + 6 = x² + 5x + 6. Each row handles one term of the second bracket, so nothing is skipped."
+ },
+ "A1-12#15": {
+  "title": "Try two more numbers",
+  "text": "One test can pass by luck, so try others. With x = 0 the brackets give 3 × 2 = 6, and the expanded form gives 0 + 0 + 6 = 6. With x = 10 the brackets give 13 × 12 = 156, and the expanded form gives 100 + 50 + 6 = 156. Both tests agree, just as 56 = 56 did for x = 5, so the expansion checks out."
+ },
+ "A1-13#1": {
+  "title": "Factoring numbers first",
+  "text": "You already factor numbers. Given the area 15, you look for the sides and find 3 and 5. Algebra does the same with letters. Let x = 10 in x² + 5x + 6 and the area is 156. Its sides are 12 and 13, which are 10 + 2 and 10 + 3. Factoring finds those sides for every x at once: (x + 2)(x + 3)."
+ },
+ "A1-13#2": {
+  "title": "A rectangle with height 6",
+  "text": "Draw a rectangle whose area is 6x + 12, made of a piece with area 6x beside a piece with area 12. Give both pieces the same height, 6. Then the first piece must be x wide and the second must be 2 wide. The whole rectangle is 6 tall and x + 2 wide, so 6x + 12 = 6(x + 2). A shorter height like 3 works too, but leaves 3(2x + 4), which can still be split."
+ },
+ "A1-13#3": {
+  "title": "See it in ordinary numbers",
+  "text": "Multiply 13 × 14 as (10 + 3)(10 + 4). The parts are 100, then 40 and 30, then 12. The middle parts total 70, which is 7 tens, because 3 + 4 = 7. The last part is 12 because 3 × 4 = 12. So 182 = 100 + 70 + 12. To go backwards from x² + 7x + 12 you need the pair that adds to 7 and multiplies to 12."
+ },
+ "A1-13#4": {
+  "title": "Cut and slide a square",
+  "text": "Draw a square with side x and cut a small square with side 5 out of one corner. The area left is x² − 25, and it has an L shape. Slice the L into two rectangles and slide one beside the other. They join into a single rectangle that is x + 5 long and x − 5 wide. Same paper, same area, so x² − 25 = (x + 5)(x − 5)."
+ },
+ "A1-13#5": {
+  "title": "Four cases side by side",
+  "text": "Compare four examples that all use 3 and 4.\nx² + 7x + 12 needs 3 and 4: product positive, sum positive.\nx² − 7x + 12 needs −3 and −4: product positive, sum negative.\nx² + x − 12 needs 4 and −3: product negative, the bigger one is positive.\nx² − x − 12 needs −4 and 3: product negative, the bigger one is negative."
+ },
+ "A1-13#6": {
+  "title": "Find the zeros by testing",
+  "text": "Try small values of x in x² − 7x + 12 and look for a result of zero. At x = 3 you get 9 − 21 + 12 = 0, so (x − 3) is a factor. At x = 4 you get 16 − 28 + 12 = 0, so (x − 4) is a factor. The factored form is (x − 3)(x − 4). Expanding confirms it: x² − 4x − 3x + 12 = x² − 7x + 12."
+ },
+ "A1-13#7": {
+  "title": "One zero gives one factor",
+  "text": "Test values in x² + 2x − 15. At x = 3 it is 9 + 6 − 15 = 0, so (x − 3) is one factor. The number parts of the two brackets must multiply to −15, and −15 ÷ (−3) = 5, so the other bracket is (x + 5). Check the middle term: 5x − 3x = 2x. The answer is (x + 5)(x − 3)."
+ },
+ "A1-13#8": {
+  "title": "Try smaller bag counts",
+  "text": "Test possible bag counts on 6x + 12. Two bags work: each gets 3x + 6. Three bags work: each gets 2x + 4. Six bags work: each gets x + 2. No larger number divides both 6x and 12 evenly. With 2 or 3 bags the contents could still be split further, but x + 2 cannot, so the complete factoring is 6(x + 2)."
+ },
+ "A1-13#9": {
+  "title": "Split the middle term",
+  "text": "Once you suspect the pair 2 and 3, rewrite 5x as 2x + 3x: x² + 2x + 3x + 6. Factor the first two terms and the last two terms separately: x(x + 2) + 3(x + 2). Both parts contain the block (x + 2), so pull it out: (x + 2)(x + 3)."
+ },
+ "A1-13#10": {
+  "title": "Measure real banners",
+  "text": "Give x a value and factor the number. If x = 2 the area is 4 + 14 + 12 = 30, which is 5 × 6. If x = 5 the area is 25 + 35 + 12 = 72, which is 8 × 9. Each time the sides are 3 more and 4 more than x. That pattern says the banner is (x + 3) ft by (x + 4) ft."
+ },
+ "A1-13#11": {
+  "title": "Check with real numbers",
+  "text": "Test the pattern with x = 10. Then x² − 25 is 100 − 25 = 75, and (x + 5)(x − 5) is 15 × 5 = 75. Try x = 6 as well: 36 − 25 = 11, and the brackets give 11 × 1 = 11. The two forms agree for both test numbers, which supports the factoring (x + 5)(x − 5)."
+ },
+ "A1-13#12": {
+  "title": "Hunt for the zeros",
+  "text": "Try values of x in x² − x − 6 and look for zero. At x = 3 you get 9 − 3 − 6 = 0, so (x − 3) is a factor. At x = −2 you get 4 + 2 − 6 = 0, so (x + 2) is a factor. That gives (x − 3)(x + 2). Expanding checks the signs: x² + 2x − 3x − 6 = x² − x − 6."
+ },
+ "A1-13#13": {
+  "title": "Start from the sum",
+  "text": "Search from the other side. List the pairs of whole numbers that add to 5: 1 and 4, 2 and 3. Now multiply each pair: 1 × 4 = 4 and 2 × 3 = 6. Only 2 and 3 give the 6 needed for the last term. So the edges of the box are x + 2 and x + 3, and the factoring is (x + 2)(x + 3)."
+ },
+ "A1-13#14": {
+  "title": "Arrange the tiles",
+  "text": "Picture one big x² tile, 7 long x strips and 12 small unit squares. Build a rectangle: put some strips along the right edge of the big tile and the rest along the bottom. The corner gap must be filled exactly by the 12 units. Splitting the strips 3 and 4 leaves a 3 by 4 gap, which holds 12. The sides are x + 3 and x + 4, so (x + 3)(x + 4)."
+ },
+ "A1-14#1": {
+  "title": "The area of a growing square",
+  "text": "Think of y = x² as the area of a square with side x. A side of 1 gives area 1, a side of 2 gives 4, a side of 3 gives 9, and a side of 10 gives 100. Each extra unit of side adds a longer border than the last one, so the area speeds up. Plotting side against area gives the right half of the U."
+ },
+ "A1-14#2": {
+  "title": "Distance from zero",
+  "text": "The equation x² = 25 asks which numbers land on 25 when squared. Think of the number line. Squaring cares only about how far a number is from zero, not which side it is on. The numbers 5 steps from zero are 5 on the right and −5 on the left. Both distances square to 25, so both are answers."
+ },
+ "A1-14#3": {
+  "title": "Try to make zero",
+  "text": "Try to get 0 by multiplying two numbers that are not 0. 2 × 3 = 6. 0.1 × 0.1 = 0.01. −4 × 5 = −20. However small the numbers, the product is never 0. Now use a zero: 0 × 8 = 0. So in (x − 3)(x + 5) = 0, one bracket must be the zero. At x = 3 the product is 0 × 8, and at x = −5 it is −8 × 0."
+ },
+ "A1-14#4": {
+  "title": "See it in a table",
+  "text": "Make a table for y = 4x − x².\nx = 0, 1, 2, 3, 4 gives y = 0, 3, 4, 3, 0.\nThe heights rise, reach 4, and come back down in the same steps. The two zeros are at x = 0 and x = 4, and the largest height sits at x = 2, halfway between them. That middle point (2, 4) is the vertex."
+ },
+ "A1-14#5": {
+  "title": "Test values in a table",
+  "text": "Evaluate x² + 3x − 10 for several inputs.\nx = 1 gives −6, x = 2 gives 0, x = 3 gives 8.\nOn the negative side, x = −4 gives −6, x = −5 gives 0, x = −6 gives 8.\nThe expression is zero at x = 2 and at x = −5. Those are the two roots: −5 and 2."
+ },
+ "A1-14#6": {
+  "title": "Reason about signs, then test",
+  "text": "If x is positive, all three terms of x² + 7x + 12 are positive, so the total cannot be 0. The roots must be negative. Test them: x = −2 gives 4 − 14 + 12 = 2. x = −3 gives 9 − 21 + 12 = 0. x = −4 gives 16 − 28 + 12 = 0. x = −5 gives 2 again. The roots are −3 and −4."
+ },
+ "A1-14#7": {
+  "title": "Two tables, mirror images",
+  "text": "Compare y = x² with y = −x² using a table. For x = −2, −1, 0, 1, 2, the first gives 4, 1, 0, 1, 4: a bowl with its lowest point at 0. The second gives −4, −1, 0, −1, −4: the same numbers flipped below the axis, an arch with its highest point at 0. The negative sign reflects the whole curve over the x-axis."
+ },
+ "A1-14#8": {
+  "title": "Factor as a difference of squares",
+  "text": "Move everything to one side: x² − 25 = 0. The left side is a square minus a square, so it factors as (x + 5)(x − 5) = 0. A product is zero only when one factor is zero. So x + 5 = 0, giving x = −5, or x − 5 = 0, giving x = 5. Factoring finds both answers: x = 5 or x = −5."
+ },
+ "A1-14#9": {
+  "title": "Expand and test values",
+  "text": "Multiply the brackets out to get x² + 2x − 15 = 0, then test numbers. x = 3 gives 9 + 6 − 15 = 0. x = −5 gives 25 − 10 − 15 = 0. Other values fail: x = 0 gives −15 and x = 4 gives 9. Only x = 3 and x = −5 work, the same values that make a bracket zero."
+ },
+ "A1-14#10": {
+  "title": "Turn it into a product puzzle",
+  "text": "Rearrange x² − 5x + 6 = 0 as 5x − x² = 6, which is x(5 − x) = 6. The two numbers x and 5 − x always add to 5, and here they must multiply to 6. Two numbers with sum 5 and product 6 are 2 and 3. So x is 2, with partner 3, or x is 3, with partner 2. The solutions are 2 and 3."
+ },
+ "A1-14#11": {
+  "title": "Table of the fall",
+  "text": "Work out the height second by second.\nt = 0: 45 metres.\nt = 1: 45 − 5 = 40.\nt = 2: 45 − 20 = 25.\nt = 3: 45 − 45 = 0.\nThe height reaches zero at t = 3, so the ball lands after 3 seconds. The drops between rows are 5, 15 and 25, which shows the ball speeding up as it falls."
+ },
+ "A1-14#12": {
+  "title": "Table of the jet",
+  "text": "Compute the height of the water at each second.\nt = 0: 0.\nt = 1: 20 − 5 = 15.\nt = 2: 40 − 20 = 20.\nt = 3: 60 − 45 = 15.\nt = 4: 80 − 80 = 0.\nThe water leaves the spout at height 0, rises to 20 metres, and is back at height 0 when t = 4 seconds."
+ },
+ "A1-14#13": {
+  "title": "Factor and split",
+  "text": "Look for two numbers that multiply to 6 and add to −5. They are −2 and −3, so the equation is (x − 2)(x − 3) = 0. A product is zero only when one factor is zero, so x − 2 = 0 or x − 3 = 0. That gives x = 2 or x = 3, the same inputs the table found."
+ },
+ "A1-14#14": {
+  "title": "Table around the peak",
+  "text": "List the heights each second: at t = 0, 1, 2, 3, 4 the height is 0, 15, 20, 15, 0 metres. The list reads the same forwards and backwards, and its largest entry is in the middle. Check half a second either side: t = 1.5 and t = 2.5 both give 18.75, which is lower. The peak is 20 meters, at t = 2."
+ },
  "GEO-1#1": {
   "title": "Everyday stand-ins",
   "text": "Use real objects as models. The tip of a sharp pencil pressed on paper marks a point. A string pulled tight between two nails is a segment, and you can measure it. A laser beam leaving a pointer is a ray: it has a start but no finish. A straight road imagined with no beginning and no end is a line, and a calm lake stretching forever in every direction is a plane. The real objects have thickness, but the ideas do not."

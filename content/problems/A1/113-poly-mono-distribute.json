@@ -39,15 +39,17 @@
     {
       "title": "Area picture",
       "steps": [
-        "Draw a rectangle x tall and (x + 5) wide, split into two patches: one x wide, one 5 wide.",
-        "The patches have areas x·x = x² and x·5 = 5x. Total area: x² + 5x."
+        "Draw a rectangle that is $x$ tall and $x + 5$ wide, and split its width into a piece $x$ wide and a piece $5$ wide.",
+        "The left patch has area $x \\cdot x = x^2$ and the right patch has area $x \\cdot 5 = 5x$.",
+        "The whole rectangle is the two patches together, so the product is $x^2 + 5x$."
       ]
     },
     {
       "title": "Test a value",
       "steps": [
-        "Try x = 2: the original is 2(2 + 5) = 2 × 7 = 14.",
-        "The answer form gives 2² + 5·2 = 4 + 10 = 14. Same value — the multiplication is correct."
+        "Test a value such as $x = 2$ in the original expression: $2(2 + 5) = 2 \\times 7 = 14$.",
+        "Test the same value in the answer: $2^2 + 5 \\cdot 2 = 4 + 10 = 14$.",
+        "Both give $14$, which supports the product $x^2 + 5x$."
       ]
     }
   ],

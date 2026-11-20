@@ -39,15 +39,17 @@
     {
       "title": "Money in pieces",
       "steps": [
-        "Ten minutes of riding costs $10 \\times \\$0.15 = \\$1.50$, so twenty minutes costs $\\$3$.",
-        "Add the $\\$2$ unlock fee at the start: $\\$5$ total."
+        "Work in blocks of ten minutes: ten minutes at $0.15$ dollars a minute costs $1.50$ dollars.",
+        "A ride of $20$ minutes is two of those blocks, so the riding costs $3$ dollars.",
+        "Add the unlock fee of $2$ dollars, which is paid once, to get $5$ dollars in total."
       ]
     },
     {
       "title": "⚠️ Dodge the trap",
       "steps": [
-        "Stopping at 0.15 × 20 = 3 forgets the $2 unlock fee that every ride pays.",
-        "The rule has two parts: 2 + 0.15(20) = 2 + 3 = $5. Fixed fee plus the per-minute part, always both."
+        "The trap is stopping at $0.15 \\times 20 = 3$, which leaves out the unlock fee that every ride pays.",
+        "The rule has two parts, a fixed fee of $2$ dollars and a charge for the minutes.",
+        "Use both parts: $2 + 0.15(20) = 2 + 3 = 5$, so the ride costs $5$ dollars."
       ]
     }
   ],

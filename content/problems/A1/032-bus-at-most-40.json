@@ -41,9 +41,9 @@
     {
       "title": "Test the boundary",
       "steps": [
-        "Can 40 students ride? Yes — \"at most 40\" allows exactly 40.",
-        "Can 41 ride? No.",
-        "An inequality that says yes to 40 and no to 41 must be $s \\le 40$."
+        "Test the boundary number first: $40$ students can ride, because \"at most $40$\" allows exactly $40$.",
+        "Test the next number up: $41$ students cannot ride, because that is more than the bus holds.",
+        "The inequality must be true for $40$ and false for $41$, and the one that does this is $s \\le 40$, typed as \"s <= 40\"."
       ]
     }
   ],

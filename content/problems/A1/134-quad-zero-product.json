@@ -34,16 +34,17 @@
     {
       "title": "Why zero is special",
       "steps": [
-        "Multiply any two nonzero numbers — you never get zero. Try it: 2 × 3, 0.5 × (−8)...",
-        "So if the product IS zero, at least one factor must secretly be zero.",
-        "Here that means x = 3 or x = −5; the positive one is 3."
+        "Multiply any two nonzero numbers, such as $2 \\times 3$ or $0.5 \\times (-8)$, and the result is never zero.",
+        "So when a product does equal zero, at least one of its factors must be zero.",
+        "Here that means $x - 3 = 0$ or $x + 5 = 0$, so $x = 3$ or $x = -5$, and the positive solution is $3$."
       ]
     },
     {
       "title": "Check by plugging in",
       "steps": [
-        "Try x = 3: (3 − 3)(3 + 5) = 0 × 8 = 0. Works.",
-        "Try x = −5: (−8)(0) = 0. Also works — but the positive answer asked for is 3."
+        "Check a candidate by substituting $x = 3$: $(3 - 3)(3 + 5) = 0 \\times 8 = 0$, so it works.",
+        "Check the other candidate $x = -5$: $(-8)(0) = 0$, so it also works.",
+        "Both are solutions, and the positive one that the question asks for is $3$."
       ]
     }
   ],
