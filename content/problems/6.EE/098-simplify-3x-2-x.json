@@ -38,6 +38,16 @@
     "Combine the like terms, remembering that $x$ means $1x$: $3x - x = 2x$.",
     "The $6$ stays as it is, so the answer is $2x + 6$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Write out the copies",
+      "steps": [
+        "Write the three groups in full: $(x + 2) + (x + 2) + (x + 2) - x$.",
+        "There are three $x$ here and one is taken away, which leaves $2x$.",
+        "The three twos add up to $6$, so the simplified expression is $2x + 6$."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "simplify"

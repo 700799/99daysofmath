@@ -30,6 +30,16 @@
     "Replace $y$ with its value $4$ to get $5 \\times 4$.",
     "The product is $20$, so $5y$ equals $20$ (not $54$)."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Add five copies",
+      "steps": [
+        "The term $5y$ means five copies of $y$ added together: $y + y + y + y + y$.",
+        "Each $y$ is worth $4$, so the sum is $4 + 4 + 4 + 4 + 4$.",
+        "Skip counting by $4$ five times gives $4, 8, 12, 16, 20$, so $5y = 20$."
+      ]
+    }
+  ],
   "tags": [
     "evaluate"
   ],

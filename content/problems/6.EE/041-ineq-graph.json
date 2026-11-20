@@ -32,6 +32,16 @@
     "Test the endpoint: $3 > 3$ is false, so $3$ is not a solution.",
     "A number that is left out is drawn with an empty circle, so the circle at $3$ is open."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Read the symbol",
+      "steps": [
+        "Look closely at the symbol $>$: it has no bar underneath, so there is no \"or equal to\" in it.",
+        "Think of a rule like \"older than $3$\": a child who is exactly $3$ does not qualify.",
+        "Since $3$ itself is left out, the circle drawn at $3$ is left empty, which is an open circle."
+      ]
+    }
+  ],
   "tags": [
     "inequality"
   ],

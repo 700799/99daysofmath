@@ -43,8 +43,9 @@
     {
       "title": "Rearrange first",
       "steps": [
-        "$7y - 2 + 3y + 5 = 7y + 3y - 2 + 5$.",
-        "$10y + 3$."
+        "Move the terms so that like terms sit next to each other, keeping each sign with its term: $7y + 3y - 2 + 5$.",
+        "The first pair is now easy to add: $7y + 3y = 10y$.",
+        "The second pair is $-2 + 5 = 3$, so the answer is $10y + 3$."
       ]
     }
   ],

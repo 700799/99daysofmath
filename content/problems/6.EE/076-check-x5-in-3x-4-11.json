@@ -33,6 +33,16 @@
     "Multiply first to get $15$, then subtract $4$ to get $11$.",
     "The left side equals the right side, $11$, so yes, $x = 5$ is a solution."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Solve the equation instead",
+      "steps": [
+        "Solve $3x - 4 = 11$ without using the suggested value: add $4$ to both sides to get $3x = 15$.",
+        "Divide both sides by $3$ to get $x = 5$.",
+        "The solution found is the same $5$ that was being tested, so the answer is yes."
+      ]
+    }
+  ],
   "tags": [
     "check-solution"
   ],

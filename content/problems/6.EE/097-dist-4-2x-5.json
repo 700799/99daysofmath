@@ -38,6 +38,16 @@
     "The second product is $4 \\cdot 5 = 20$, a plain number.",
     "Adding the two products gives the answer $8x + 20$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Double twice",
+      "steps": [
+        "Multiplying by $4$ is the same as doubling two times.",
+        "Double each term of $2x + 5$ once to get $4x + 10$.",
+        "Double that result to get $8x + 20$, which is the answer."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "distribute"

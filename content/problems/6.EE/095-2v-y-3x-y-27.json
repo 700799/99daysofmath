@@ -36,6 +36,16 @@
     "Working out the division on the left gives $x = 27 \\div 3 = 9$.",
     "Check: $3 \\times 9 = 27$ is true, so the answer is $x = 9$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Skip count to 27",
+      "steps": [
+        "The rule says $y$ is $x$ jumps of $3$, so count jumps of $3$ until you land on $27$.",
+        "Keeping a tally of the jumps, the count goes $3, 6, 9, 12, 15, 18, 21, 24, 27$.",
+        "It took $9$ jumps to land there, so $x = 9$."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "two-vars",

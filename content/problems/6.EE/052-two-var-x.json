@@ -31,6 +31,16 @@
     "The result of the subtraction is $x = 12 - 7 = 5$.",
     "Check: $5 + 7 = 12$ is true, so the answer is $x = 5$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Search a table",
+      "steps": [
+        "Make a small table of the rule $y = x + 7$ and look for the row where $y$ is $12$.",
+        "The rows of the table go $x = 3 \\to 10$, then $x = 4 \\to 11$, then $x = 5 \\to 12$.",
+        "The output $12$ appears beside $x = 5$, so the answer is $x = 5$."
+      ]
+    }
+  ],
   "tags": [
     "two-vars"
   ],

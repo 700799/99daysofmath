@@ -62,8 +62,9 @@
     {
       "title": "Test with $x = 1$",
       "steps": [
-        "$6(2 + 5) = 6 \\cdot 7 = 42$.",
-        "A: $17$. B: $42$ ✓. C: $19$. D: $36$."
+        "Put $x = 1$ into the original expression to find the target value: $6(2 + 5) = 6 \\times 7 = 42$.",
+        "Put $x = 1$ into each choice: A gives $17$, B gives $42$, C gives $19$ and D gives $36$.",
+        "Only choice B gives $42$, so $12x + 30$ is the equivalent expression."
       ]
     }
   ],

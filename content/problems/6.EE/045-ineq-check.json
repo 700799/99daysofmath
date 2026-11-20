@@ -43,6 +43,16 @@
     "A number is never greater than itself, and $>$ has no \"or equal to\" part.",
     "So $x = 4$ is not a solution, and the answer is No, choice B."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Picture the number line",
+      "steps": [
+        "Graph $x > 4$: draw an open circle at $4$ and shade everything to its right.",
+        "Find $x = 4$ on the graph: it sits exactly on the open circle, not in the shaded part.",
+        "An open circle marks a number that is left out, so $4$ is not a solution and the answer is No, choice B."
+      ]
+    }
+  ],
   "tags": [
     "inequality",
     "check"

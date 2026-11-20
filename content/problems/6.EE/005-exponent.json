@@ -21,9 +21,9 @@
     {
       "title": "Common cube",
       "steps": [
-        "$5^3$ is read \"five cubed\".",
-        "Think of a $5 \\times 5 \\times 5$ cube made of unit cubes.",
-        "Total cubes $= 5 \\times 5 \\times 5 = 125$."
+        "Read $5^3$ as \"five cubed\" and picture a cube built from small blocks, $5$ along each edge.",
+        "One flat layer is a $5$ by $5$ square, which holds $5 \\times 5 = 25$ blocks.",
+        "The cube has $5$ of these layers, so it holds $25 + 25 + 25 + 25 + 25 = 125$ blocks, and $5^3 = 125$."
       ]
     }
   ],

@@ -31,6 +31,16 @@
     "The difference is $0$, and zero is a perfectly good solution.",
     "Check: $0 + 12 = 12$ is true, so the solution is $x = 0$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Look at both pans",
+      "steps": [
+        "Picture a balance with $x$ and $12$ blocks on one pan and $12$ blocks on the other.",
+        "The two sets of $12$ blocks already balance each other without any help.",
+        "So $x$ adds no weight at all, which means $x = 0$."
+      ]
+    }
+  ],
   "tags": [
     "solve"
   ],

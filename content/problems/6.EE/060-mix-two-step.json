@@ -36,6 +36,16 @@
     "Undo the multiplication by dividing both sides by $2$: $x = 4$.",
     "Check: $2(4) + 3 = 11$ is true, so the solution is $x = 4$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Search a table",
+      "steps": [
+        "Make a table of $2x + 3$ and look for the row that gives $11$.",
+        "The rows go $x = 1 \\to 5$, then $x = 2 \\to 7$, then $x = 3 \\to 9$, then $x = 4 \\to 11$.",
+        "The value $11$ appears beside $x = 4$, so the solution is $x = 4$."
+      ]
+    }
+  ],
   "tags": [
     "CA",
     "solve"

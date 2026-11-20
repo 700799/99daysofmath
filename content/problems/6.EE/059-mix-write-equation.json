@@ -33,6 +33,16 @@
     "The word \"equals\" becomes the $=$ sign, and $20$ goes on the other side.",
     "Reading the sentence left to right gives the equation $n + 13 = 20$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Draw a tape diagram",
+      "steps": [
+        "Draw one long bar labelled $20$ for the total.",
+        "Split it into two pieces, one labelled $n$ for the number and one labelled $13$.",
+        "The two pieces together are the same length as the whole bar, which reads $n + 13 = 20$."
+      ]
+    }
+  ],
   "tags": [
     "translate"
   ],

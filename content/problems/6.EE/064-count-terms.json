@@ -31,18 +31,19 @@
     "None of these are like terms, so nothing can be combined.",
     "Counting them shows the expression has $3$ terms."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Name each kind",
+      "steps": [
+        "Sort the pieces by kind: one piece has $x$, one piece is a plain number, and one piece has $y$.",
+        "These three kinds are all different, so none of them can merge with another.",
+        "One piece of each kind means the expression has $3$ terms."
+      ]
+    }
+  ],
   "tags": [
     "expression",
     "parts"
   ],
-  "estimatedSeconds": 35,
-  "alternativeExplanations": [
-    {
-      "title": "Check the answer",
-      "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: 3 — verified."
-      ]
-    }
-  ]
+  "estimatedSeconds": 35
 }

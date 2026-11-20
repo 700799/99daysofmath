@@ -30,17 +30,18 @@
     "Replace $x$ with the given value $6$, which makes the rule $y = 4(6)$.",
     "Multiplying gives $24$, so the answer is $y = 24$ when $x = 6$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Skip count by 4",
+      "steps": [
+        "Four times $6$ is the sixth number you say when you skip count by $4$.",
+        "Saying the count out loud gives $4, 8, 12, 16, 20, 24$.",
+        "The sixth number in the count is $24$, so $y = 24$."
+      ]
+    }
+  ],
   "tags": [
     "two-vars"
   ],
-  "estimatedSeconds": 35,
-  "alternativeExplanations": [
-    {
-      "title": "Check the answer",
-      "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: 24 — verified."
-      ]
-    }
-  ]
+  "estimatedSeconds": 35
 }

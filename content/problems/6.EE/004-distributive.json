@@ -23,9 +23,9 @@
     {
       "title": "Area model",
       "steps": [
-        "Draw a rectangle with height $4$ and width split into $x$ and $3$.",
-        "Left part: area $= 4 \\cdot x = 4x$. Right part: area $= 4 \\cdot 3 = 12$.",
-        "Total area $= 4x + 12$, which equals $4(x + 3)$."
+        "Draw a rectangle that is $4$ tall, with its width split into a piece of length $x$ and a piece of length $3$.",
+        "The left piece has area $4 \\cdot x = 4x$ and the right piece has area $4 \\cdot 3 = 12$.",
+        "The whole rectangle is $4(x + 3)$, and it is also the two pieces added, so the answer is $4x + 12$."
       ]
     }
   ],

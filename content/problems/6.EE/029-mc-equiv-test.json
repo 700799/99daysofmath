@@ -53,6 +53,16 @@
     "Together they make $3x + 6$, which is choice C.",
     "Choice A forgot to multiply the $2$, which is the most common mistake here."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Test each choice",
+      "steps": [
+        "Pick an easy value, $x = 1$, and find the target: $3(1 + 2) = 3 \\times 3 = 9$.",
+        "Evaluate each choice at $x = 1$: A gives $5$, B gives $7$, C gives $9$ and D gives $8$.",
+        "Only choice C matches the target of $9$, so $3x + 6$ is the equivalent expression."
+      ]
+    }
+  ],
   "tags": [
     "distributive",
     "equivalent"

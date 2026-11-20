@@ -36,6 +36,16 @@
     "Addition and subtraction go left to right, so add first: $5 + 8 = 13$.",
     "Then subtract: $13 - 4 = 9$. The value of the expression is $9$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Subtract before you add",
+      "steps": [
+        "The power still comes first, because it is a single number in disguise: $2^3 = 8$.",
+        "In $5 + 8 - 4$ the adding and taking away can be done in a handier order, as long as the $4$ is still the number taken away: $5 - 4 = 1$.",
+        "Now add the $8$ to get $1 + 8 = 9$, which matches the left to right result."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "order-of-ops"

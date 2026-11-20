@@ -23,8 +23,9 @@
     {
       "title": "Think: \"what plus 7 is 15?\"",
       "steps": [
-        "The equation asks: some number plus $7$ equals $15$.",
-        "Count up: $8 + 7 = 15$. So $x = 8$."
+        "Read the equation as a question: what number plus $7$ makes $15$?",
+        "Count up from $7$ to $15$ in two hops: $3$ takes you to $10$, and $5$ more takes you to $15$.",
+        "The hops total $3 + 5 = 8$, so $x = 8$, and $8 + 7 = 15$ confirms it."
       ]
     }
   ],

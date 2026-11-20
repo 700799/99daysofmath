@@ -33,6 +33,16 @@
     "The $5$ multiplies both terms, and the subtraction stays: $5 \\cdot x - 5 \\cdot 2$.",
     "This gives $5x - 10$, which matches the first expression, so yes, they are equivalent."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Factor out the 5",
+      "steps": [
+        "Start from $5x - 10$ and look for a number that divides both terms.",
+        "Both are multiples of $5$, since $5x = 5 \\cdot x$ and $10 = 5 \\cdot 2$.",
+        "Pulling the $5$ out front gives $5(x - 2)$, the second expression, so the answer is yes."
+      ]
+    }
+  ],
   "tags": [
     "equivalent",
     "distribute"

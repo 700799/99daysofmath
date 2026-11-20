@@ -21,18 +21,17 @@
     {
       "title": "As a real-world story",
       "steps": [
-        "Imagine candy bars cost $\\$3$ each plus a fixed $\\$5$ shipping fee.",
-        "If you buy $x = 4$ candy bars, the cost is $3 \\times 4 + 5$.",
-        "That's $\\$12$ for the candy plus $\\$5$ shipping = $\\$17$ total."
+        "Picture candy bars that cost $3$ dollars each, with a fixed shipping fee of $5$ dollars on every order.",
+        "Buying $x = 4$ candy bars costs $3 \\times 4 = 12$ dollars for the candy alone.",
+        "Add the shipping fee once: $12 + 5 = 17$ dollars, so the expression is worth $17$."
       ]
     },
     {
       "title": "Build a function table",
       "steps": [
-        "Let's see the pattern: when $x = 1$, $3x + 5 = 3 + 5 = 8$.",
-        "When $x = 2$, $3x + 5 = 6 + 5 = 11$.",
-        "When $x = 3$, $3x + 5 = 9 + 5 = 14$.",
-        "When $x = 4$, $3x + 5 = 12 + 5 = 17$. The answer goes up by $3$ each time."
+        "Start the table at $x = 0$, where only the $5$ is left: $3(0) + 5 = 5$.",
+        "Each time $x$ goes up by $1$, one more $3$ is added, so the values run $5, 8, 11, 14, 17$.",
+        "The fifth entry belongs to $x = 4$, so the value of the expression there is $17$."
       ]
     }
   ],

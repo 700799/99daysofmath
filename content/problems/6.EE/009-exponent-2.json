@@ -30,6 +30,16 @@
     "Write the power out as a multiplication: $5^2 = 5 \\times 5$.",
     "The product is $25$, so $5^2$ equals $25$ (not $5 \\times 2 = 10$)."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Picture a square",
+      "steps": [
+        "Read $5^2$ as \"five squared\" and draw a square of dots with $5$ rows and $5$ dots in each row.",
+        "Count the dots one row at a time by skip counting: $5, 10, 15, 20, 25$.",
+        "The whole square holds $25$ dots, so the value of $5^2$ is $25$."
+      ]
+    }
+  ],
   "tags": [
     "exponent"
   ],

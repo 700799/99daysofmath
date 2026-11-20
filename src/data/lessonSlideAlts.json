@@ -1,4 +1,400 @@
 {
+ "6.EE-1#1": {
+  "title": "Fold a sheet of paper",
+  "text": "Fold a sheet of paper in half and it is 2 layers thick. Fold it again and each layer doubles, so there are 4. A third fold makes 8.\nEvery fold is one more \"times 2\", so three folds give 2 × 2 × 2 = 2³ = 8 layers. The exponent is the number of folds, and the base is what each fold multiplies by."
+ },
+ "6.EE-1#2": {
+  "title": "Rows of dots for 3²",
+  "text": "Draw 3 rows with 3 dots in each row. That square of dots is 3², and it holds 3 × 3 = 9 dots.\nNow draw only 2 rows of 3 dots. That is 3 × 2, and it holds 6 dots.\nThe two pictures are different sizes, so a power is not the base times the exponent. The exponent says how many times the base is used as a factor."
+ },
+ "6.EE-1#3": {
+  "title": "Walk the powers downward",
+  "text": "List the powers of 4 from big to small: 4³ = 64, then 4² = 16. Each step down removes one copy of 4, which divides the value by 4.\nTake one more step down: 16 ÷ 4 = 4, so 4¹ must be 4. A first power always lands on the base itself, because only one copy is left and there is nothing to multiply it by."
+ },
+ "6.EE-1#4": {
+  "title": "Skip count five fives",
+  "text": "Five squared means 5 groups of 5. Picture 5 rows of dots with 5 dots in each row.\nCount the rows by skip counting: 5, 10, 15, 20, 25.\nFive rows were counted and the last number said was 25, so 5² = 25. This is the same as 5 + 5 + 5 + 5 + 5."
+ },
+ "6.EE-1#5": {
+  "title": "Build a cube from layers",
+  "text": "Three cubed is the number of small blocks in a cube that is 3 blocks long, 3 wide and 3 tall.\nOne flat layer is a 3 by 3 square, which holds 9 blocks.\nThe cube is 3 layers tall, so it holds 9 + 9 + 9 = 27 blocks. That matches 3 × 3 × 3 = 27."
+ },
+ "6.EE-1#6": {
+  "title": "Count back through a family tree",
+  "text": "You have 2 parents. Each of them has 2 parents, so you have 4 grandparents. Go back again and there are 8 great-grandparents, and once more gives 16 great-great-grandparents.\nEach step back multiplies by 2, and there were four steps, so the count is 2 × 2 × 2 × 2 = 2⁴ = 16."
+ },
+ "6.EE-1#7": {
+  "title": "A big cube of small cubes",
+  "text": "Picture a large cube made of tiny cubes, 10 along each edge.\nA single row has 10 tiny cubes. A flat layer has 10 rows, so it holds 100. The whole cube has 10 layers, so it holds 10 hundreds, which is 1,000.\nRow, layer, cube: ten, hundred, thousand. So 10³ = 1,000."
+ },
+ "6.EE-1#8": {
+  "title": "Times 4 is doubling twice",
+  "text": "Multiplying by 4 is the same as doubling two times, so 4³ can be found with doubling alone.\nStart with one 4. Multiply by 4 by doubling twice: 8, then 16. That is 4².\nMultiply by 4 again by doubling twice more: 32, then 64.\nSo 4³ = 64, with no long multiplication."
+ },
+ "6.EE-1#9": {
+  "title": "See it as a square",
+  "text": "The two pairs make 4 × 4, and 4 × 4 is the number of small squares in a grid with 4 rows and 4 columns.\nCount the grid one row at a time: 4, 8, 12, 16.\nThe grid holds 16 squares, so 2⁴ = 16. This also shows that 2⁴ is the same number as 4²."
+ },
+ "6.EE-2#1": {
+  "title": "An older sister story",
+  "text": "Suppose your sister is 6 years older than you. When you are 1 she is 7. When you are 10 she is 16. When you are 40 she will be 46.\nOne short phrase covers every year of your lives: if your age is n, her age is n + 6. The letter n is your age, whatever it happens to be right now."
+ },
+ "6.EE-2#2": {
+  "title": "Test phrases with real numbers",
+  "text": "Not sure how to translate a phrase? Swap the letter for 10 and see what answer makes sense.\n\"6 more than 10\" is 16, which is 10 + 6. \"The product of 6 and 10\" is 60, which is 6 × 10. \"6 less than 10\" is 4, and only 10 − 6 gives 4, since 6 − 10 does not.\nNow put n back where the 10 was: n + 6, 6n and n − 6."
+ },
+ "6.EE-2#3": {
+  "title": "Like saying 2 dozen",
+  "text": "People already talk this way with units. \"2 dozen eggs\" means 2 × 12 = 24 eggs, and nobody says \"2 times a dozen\". \"3 feet\" means 3 × 12 inches.\nA variable works like the word dozen. If x stands for 12, then 2x is 24. If x stands for 4, then 2x is 8. The number in front says how many of that thing you have."
+ },
+ "6.EE-2#4": {
+  "title": "Packs first, then loose ones",
+  "text": "Think of 2x + 3 as 2 packs of gum with x pieces in each pack, plus 3 loose pieces.\nIf each pack holds 5 pieces, you would count the packs first: 5 + 5 = 10 pieces. Then you add the 3 loose pieces to get 13.\nNobody would add the loose pieces to the number of packs first. The story puts the multiplying before the adding, just as the order of operations does."
+ },
+ "6.EE-2#5": {
+  "title": "Hop on a number line",
+  "text": "Mark any spot on a number line and call it n. \"Six more\" means the number that is 6 hops to the right of that spot, and hopping right is adding, so it is n + 6.\nCheck with a real number: if n is 10, six more than 10 is 16, and 10 + 6 is 16 too."
+ },
+ "6.EE-2#6": {
+  "title": "Four groups of x",
+  "text": "The product of 4 and x means 4 groups that each hold x. Written as addition, that is x + x + x + x.\nFour copies of the same letter are written 4x for short.\nCheck with a number: if x is 3, the four groups hold 3 + 3 + 3 + 3 = 12, and 4 × 3 is also 12."
+ },
+ "6.EE-2#7": {
+  "title": "Make a ten",
+  "text": "After substituting, the sum is 6 + 9. The 9 is only 1 away from 10, so borrow 1 from the 6.\nThat turns 6 + 9 into 5 + 10, which is easy to see as 15.\nThe value of x + 9 when x is 6 is 15, the same as adding straight across."
+ },
+ "6.EE-2#8": {
+  "title": "Write 2x as x + x",
+  "text": "Two copies of x can be written as x + x, so the expression 2x + 5 is the same as x + x + 5.\nNow put 4 in for each x: 4 + 4 + 5.\nThere is only addition left, so no order rule is needed. 4 + 4 is 8, and 8 + 5 is 13."
+ },
+ "6.EE-2#9": {
+  "title": "Add three copies",
+  "text": "Multiplying by 3 means adding three copies of the bracket: (a − 2) + (a − 2) + (a − 2).\nWith a = 5, each copy is 5 − 2, which is 3.\nSo the expression is 3 + 3 + 3 = 9. Three equal copies of 3 give the same answer as 3 × 3."
+ },
+ "6.EE-2#10": {
+  "title": "Jumps on a number line",
+  "text": "With y = 2, the term 5y means 5 jumps of 2 along a number line starting from zero: 2, 4, 6, 8, 10.\nThe \"− 3\" means walk back 3 steps from where you landed: 9, 8, 7.\nYou finish on 7, so 5y − 3 is 7 when y is 2. The jumps come before the walk back, which is multiplying before subtracting."
+ },
+ "6.EE-2#11": {
+  "title": "Three friends at a shop",
+  "text": "Three friends each bring a = 5 dollars and each spend 2 dollars.\nCount by money: together they brought 3 × 5 = 15 dollars and together they spent 3 × 2 = 6 dollars, so 15 − 6 = 9 dollars are left. That is 3a − 6.\nCount by person instead: each has 3 dollars left, and 3 × 3 = 9. Both counts describe the same three friends, so both give 9."
+ },
+ "6.EE-3#1": {
+  "title": "Three lunch orders",
+  "text": "Three friends each order a burger that costs b dollars and a drink that costs c dollars.\nOne way to find the bill: each friend owes b + c, and there are 3 friends, so the bill is 3(b + c).\nAnother way: the kitchen made 3 burgers and 3 drinks, so the bill is 3b + 3c.\nIt is the same bill either way. Notice that the drinks are tripled too, not only the burgers."
+ },
+ "6.EE-3#2": {
+  "title": "Check it with numbers",
+  "text": "Let x be 10. Then 3x + 2x is 30 + 20 = 50, and 5x is also 50. Let x be 7 instead: 21 + 14 = 35, and 5 × 7 is 35 again.\nNow try to combine unlike terms. With x = 10, the expression 3x + 2 is 32, but 5x would be 50. They do not match, so a term with x and a plain number must stay separate."
+ },
+ "6.EE-3#3": {
+  "title": "Two names for one amount",
+  "text": "One dollar can be 4 quarters or 10 dimes. The coins look different, but the amount is identical every time. Equivalent expressions are like that: 3(x + 2) and 3x + 6 are two looks for one amount.\nExpressions that only look similar fail the test. At x = 1, 3(x + 2) is 9, but 3x + 2 is only 5, so those two are not equivalent."
+ },
+ "6.EE-3#4": {
+  "title": "Try two different values",
+  "text": "Pick x = 2. Then 4x + 5x is 8 + 10 = 18, and 9 × 2 is also 18.\nPick x = 10. Then 4x + 5x is 40 + 50 = 90, and 9 × 10 is also 90.\nBoth tests agree with 9x. They do not agree with a wrong answer such as 9x², which would give 36 and 900."
+ },
+ "6.EE-3#5": {
+  "title": "Write them out, cross two off",
+  "text": "Write 7a the long way: a + a + a + a + a + a + a.\nSubtracting 2a means crossing off two of those letters.\nCount what is left and you find five letters, a + a + a + a + a, which is written 5a. Nothing happened to the letter itself, only to how many there are."
+ },
+ "6.EE-3#6": {
+  "title": "Draw the area model",
+  "text": "Draw a rectangle 3 units tall. Make its width in two pieces, one of length x and one of length 2, so the full width is x + 2.\nThe left piece has area 3 times x, which is 3x. The right piece has area 3 times 2, which is 6.\nThe whole rectangle is 3(x + 2), and it is also the two pieces together, 3x + 6."
+ },
+ "6.EE-3#7": {
+  "title": "Test the expansion with numbers",
+  "text": "Check 5y + 15 against the original by choosing values for y.\nIf y = 1, then 5(y + 3) is 5 × 4 = 20, and 5y + 15 is 5 + 15 = 20.\nIf y = 10, then 5(y + 3) is 5 × 13 = 65, and 5y + 15 is 50 + 15 = 65.\nThe common slip 5y + 3 would give 8 and 53, which do not match."
+ },
+ "6.EE-3#8": {
+  "title": "Bags and loose marbles",
+  "text": "Let x be a bag of marbles, with the same unknown number in every bag.\nThe expression says: 2 bags, then 3 loose marbles, then 1 more bag.\nPush the bags together and you have 3 bags. The 3 loose marbles stay loose, because you cannot call them a bag.\nThree bags and 3 loose marbles is 3x + 3."
+ },
+ "6.EE-3#9": {
+  "title": "Write out every copy",
+  "text": "Two groups of (x + 4) can be written as (x + 4) + (x + 4), and 3x can be written as x + x + x.\nNow count what is on the page. There are five letters x in all, two from the groups and three from the end. There are two 4s, which add up to 8.\nFive x and 8 is 5x + 8."
+ },
+ "6.EE-3#10": {
+  "title": "Mental math with x = 10",
+  "text": "Let x be 10, so 3(x + 2) becomes 3 × 12. Most people find 3 × 12 in their heads by splitting it: 3 tens are 30, 3 twos are 6, and 30 + 6 = 36.\nThat mental trick is the same move with a number in place of x. The 30 is 3 times x and the 6 is 3 times 2, so with the letter back the result is 3x + 6."
+ },
+ "6.EE-4#1": {
+  "title": "Try it on a true sentence",
+  "text": "Start with a number fact that is clearly true: 5 + 7 = 12.\nSubtract 7 from both sides and you get 5 = 5, which is still true.\nSubtract 7 from the left side only and you get 5 = 12, which is false.\nThe same thing happens when a letter is in the equation. Changing both sides the same way keeps a true statement true."
+ },
+ "6.EE-4#2": {
+  "title": "There and back again",
+  "text": "Stand on 5 on a number line. Walk 7 steps right and you reach 12. Walk 7 steps left and you are back on 5.\nMultiplying works the same way. Triple 5 to get 15, then split 15 into 3 equal parts and you have 5 again.\nIn x + 7 = 12 someone has already walked the 7 steps for you. Walking back from 12 shows where they started."
+ },
+ "6.EE-4#3": {
+  "title": "A riddle and its answer",
+  "text": "The equation x + 3 = 8 is a riddle: \"I am thinking of a number. When I add 3 to it, I get 8.\"\nThe line x = 5 is the riddle answered: \"My number is 5.\"\nBoth say the same thing about x, but only the second one tells you outright. You can test the answer against the riddle: 5 + 3 is 8, so it fits."
+ },
+ "6.EE-4#4": {
+  "title": "Guess, check and adjust",
+  "text": "Try values for x and watch what x + 7 gives.\nIf x = 3, the left side is 10, which is too small.\nIf x = 4, the left side is 11, which is still 1 short.\nIf x = 5, the left side is 12, which matches the right side.\nSo x = 5. Each guess that was too low pointed toward a bigger number."
+ },
+ "6.EE-4#5": {
+  "title": "Give the stickers back",
+  "text": "Read x − 4 = 10 as a story. You had x stickers, gave 4 to a friend, and now you have 10.\nTo find what you started with, imagine your friend handing the 4 stickers back. Your pile of 10 grows to 14.\nSo you started with 14 stickers, and x = 14. Giving 4 away from 14 does leave 10."
+ },
+ "6.EE-4#6": {
+  "title": "Skip count by threes",
+  "text": "The equation 3x = 15 says that x jumps of 3 land on 15.\nCount the jumps on your fingers: 3, 6, 9, 12, 15.\nYou raised 5 fingers before reaching 15, so it takes 5 jumps and x = 5. Skip counting until you hit the target is division in slow motion."
+ },
+ "6.EE-4#7": {
+  "title": "Two halves make the whole",
+  "text": "Dividing by 2 is cutting something in half, so x ÷ 2 = 8 says that half of x is 8.\nThe other half must be 8 as well, because the two halves are equal.\nPut the halves back together: 8 + 8 = 16. So x = 16, and half of 16 is 8."
+ },
+ "6.EE-4#8": {
+  "title": "Count up through 10",
+  "text": "Ask how far it is from 9 up to 20, and travel through a friendly number on the way.\nFrom 9 to 10 is 1 step. From 10 to 20 is 10 more steps.\nThat is 1 + 10 = 11 steps in all, so 9 + 11 = 20 and x = 11."
+ },
+ "6.EE-4#9": {
+  "title": "Halve both sides twice",
+  "text": "Dividing by 4 can be done as two easy halvings.\nFour of x make 28, so two of x make half as much: 2x = 14.\nHalve again: one x is half of 14, so x = 7.\nEach halving was done to both sides, so the equation stayed balanced the whole way."
+ },
+ "6.EE-4#10": {
+  "title": "Shade a bar model",
+  "text": "Draw a bar made of 12 squares to stand for the right side of the equation.\nShade 7 of the squares to show the 7 that is added to x.\nThe squares left unshaded are x, because x and 7 together fill the whole bar. Count them and you find 5.\nSo x = 5."
+ },
+ "6.EE-5#1": {
+  "title": "Four signs you might see",
+  "text": "Each symbol matches a rule from daily life.\nA bridge sign says trucks must weigh less than 5 tons: w < 5. A free shipping offer needs more than 20 dollars: m > 20.\nA lift holds at most 8 people, and 8 is allowed: p ≤ 8. A film is for ages 13 and up, and 13 is allowed: a ≥ 13.\nAsk whether the limit itself is allowed. If it is, use the symbol with the line under it."
+ },
+ "6.EE-5#2": {
+  "title": "Compare with an equation",
+  "text": "The equation x + 2 = 5 is like a lock with one key. Only 3 opens it.\nThe inequality x > 3 is like a height rule at a fair: \"taller than 3 feet\". A child of 3.5 feet passes, and so does an adult of 6 feet. Nobody can list every height that passes.\nA child of exactly 3 feet does not pass, because that is not taller than 3 feet."
+ },
+ "6.EE-5#3": {
+  "title": "Two age rules",
+  "text": "A club says \"older than 12\". A 12 year old cannot join, so 12 is the edge but is left out. On a number line that is an open circle at 12, with shading to the right.\nAnother club says \"12 or older\". Now a 12 year old can join, so the circle at 12 is filled in.\nThe shading is the same for both clubs. Only the edge is different."
+ },
+ "6.EE-5#4": {
+  "title": "Count the tips",
+  "text": "Look at the shape of the symbol >. On its open side there are two tips. On its closed side there is one point.\nTwo is more than one, so the side with two tips goes next to the bigger number. In 9 > 4 the two tips are beside the 9.\nIn 4 < 9 the symbol is flipped, but the two tips are still beside the 9."
+ },
+ "6.EE-5#5": {
+  "title": "Place n on a number line",
+  "text": "Mark 7 on a number line. Numbers get bigger as you move right, so a number greater than 7 sits somewhere to the right of 7.\nPut n there. Reading left to right you see 7 and then n, which says 7 < n. Read from the n side and it says n > 7.\nBoth are the same fact, and n > 7 follows the order of the words."
+ },
+ "6.EE-5#6": {
+  "title": "List what is allowed",
+  "text": "Think of a lift with a sign: at most 10 people.\nTry some numbers of people. 8 is fine. 9 is fine. 10 is fine, because the lift is full but not over. 11 is not allowed.\nThe symbol has to accept 10 and reject 11. A plain < would reject 10, so the right one is ≤, and the inequality is n ≤ 10."
+ },
+ "6.EE-5#7": {
+  "title": "Test a row of numbers",
+  "text": "Test each whole number from 0 to 4 in x ≥ 2 and write yes or no.\n0 is no. 1 is no. 2 is yes, because 2 equals 2. 3 is yes. 4 is yes.\nThe yes answers begin exactly at 2 and carry on to the right. So the graph has a closed circle at 2 and is shaded to the right."
+ },
+ "6.EE-5#8": {
+  "title": "The express lane rule",
+  "text": "Imagine a shop lane with the rule \"fewer than 5 items\". That rule is x < 5.\nA shopper with 4 items may use the lane. A shopper with 5 items may not, because 5 items is not fewer than 5.\nSo 5 is not a solution. It is the first number that fails, which is why the graph has an open circle there."
+ },
+ "6.EE-5#9": {
+  "title": "Split ≤ into two questions",
+  "text": "The symbol ≤ asks two questions and only needs one yes.\nFirst question: is 4 less than 4? No.\nSecond question: is 4 equal to 4? Yes.\nOne yes is enough, so 4 is a solution of x ≤ 4. With the symbol < only the first question would be asked, and 4 would fail."
+ },
+ "6.EE-5#10": {
+  "title": "A two dollar snack",
+  "text": "Turn x ≥ 2 into a story. A snack costs 2 dollars, so you need at least 2 dollars to buy it.\nIf you have exactly 2 dollars, you can buy the snack. Exactly 2 counts as \"at least 2\".\nA number that counts is drawn as a filled dot, so the circle at 2 is closed."
+ },
+ "6.EE-6#1": {
+  "title": "Pencils at a school shop",
+  "text": "Pencils cost 2 dollars each. You walk in and decide how many to buy: 1, 3 or 10. Nobody tells you the cost first and makes you work out the pencils.\nThe number of pencils is your free choice, so it is the independent variable. A good test is to ask, \"Which number do I get to pick?\""
+ },
+ "6.EE-6#2": {
+  "title": "Say it with \"depends on\"",
+  "text": "Put the two quantities into the sentence \"___ depends on ___\" and see which order sounds right.\n\"The water in the bath depends on how long the tap runs\" makes sense. \"How long the tap runs depends on the water in the bath\" sounds backwards.\nThe quantity in the first blank is the dependent variable. It is the one you measure after the other has been set."
+ },
+ "6.EE-6#3": {
+  "title": "Rows the table left out",
+  "text": "A table for d = 50t might show only t = 1, 2 and 3. What about 7 hours, or 2.5 hours? The table has no row for those.\nThe equation still answers at once: 50 × 7 = 350 and 50 × 2.5 = 125.\nA table is a few snapshots. The equation is the recipe that makes every snapshot, including the ones nobody wrote down."
+ },
+ "6.EE-6#4": {
+  "title": "Three copies of 5",
+  "text": "The rule y = 3x says y is three copies of x, so y = x + x + x.\nWith x = 5 that is 5 + 5 + 5.\nSkip count the fives: 5, 10, 15. So y = 15, the same as 3 × 5. Multiplying by 3 is only a faster way to add three equal numbers."
+ },
+ "6.EE-6#5": {
+  "title": "Slide along the number line",
+  "text": "The rule y = x + 4 says to start at x on a number line and slide 4 places to the right.\nStart at 10 and count the slides: 11, 12, 13, 14.\nYou stop on 14, so y = 14. Any other starting number would also end up exactly 4 places to its right."
+ },
+ "6.EE-6#6": {
+  "title": "One mile every minute",
+  "text": "A speed of 60 miles in one hour is 60 miles in 60 minutes, which is 1 mile each minute.\nTwo hours last 120 minutes.\nAt 1 mile per minute, 120 minutes covers 120 miles. That agrees with 60 × 2 = 120 miles."
+ },
+ "6.EE-6#7": {
+  "title": "Double, then double again",
+  "text": "One ticket costs 5 dollars.\nTwo tickets cost double that, which is 10 dollars.\nFour tickets are two lots of two tickets, so double again to get 20 dollars.\nThe cost of 4 tickets is 20 dollars, the same as 5 × 4."
+ },
+ "6.EE-6#8": {
+  "title": "Add each x to itself",
+  "text": "Doubling a number is the same as adding it to itself, so y = 2x can be read as y = x + x.\nFor x = 1, 1 + 1 = 2. For x = 2, 2 + 2 = 4. For x = 3, 3 + 3 = 6. For x = 4, 4 + 4 = 8.\nThe y column is 2, 4, 6, 8, which are the even numbers in order."
+ },
+ "6.EE-6#9": {
+  "title": "Think in tens",
+  "text": "Sixty is 6 tens, so 60 × 2 is 6 tens taken twice.\nTwo lots of 6 tens make 12 tens, because 6 × 2 = 12.\nTwelve tens is 120, so the car travels 120 miles in 2 hours. A small fact, 6 × 2, did the work for the bigger one."
+ },
+ "6.EE-7#1": {
+  "title": "Cars on a train",
+  "text": "Picture an expression as a train. Each term is a car, and the + and − signs are the couplings between cars.\nIn 3x + 7y − 5 there are two couplings, so there are three cars: 3x, 7y and 5.\nThe 3 and the x ride in the same car, because nothing separates them. To count terms, count the cars."
+ },
+ "6.EE-7#2": {
+  "title": "Cups in a recipe",
+  "text": "A recipe says \"4 cups of flour\". The 4 tells you how many cups, just as the 4 in 4x tells you how many x.\nAnother line says \"a cup of milk\". No number is written, yet everyone knows it means 1 cup. A lone x works the same way and means 1x.\nThe coefficient is the \"how many\" that sits in front of the letter."
+ },
+ "6.EE-7#3": {
+  "title": "Shoe rental at the bowling alley",
+  "text": "Bowling costs 7 dollars to rent shoes and 3 dollars for each game, so x games cost 7 + 3x dollars.\nPlay 1 game or 5 games and the game charge changes, but you rent the shoes once and pay 7 dollars either way.\nThat fixed fee is the constant. It is the part of the bill that does not care how many games you play."
+ },
+ "6.EE-7#4": {
+  "title": "Sort your coins first",
+  "text": "You have 3 dimes in one pocket, 2 dimes in another and 4 pennies in your hand. How many kinds of coin is that?\nIt might look like three piles, but two of the piles are both dimes. Put them together and you have 5 dimes and 4 pennies, which is two kinds.\nIn the same way 3x + 2x + 4 becomes 5x + 4, with two terms."
+ },
+ "6.EE-7#5": {
+  "title": "Watch how the value grows",
+  "text": "Work out 4y for a few values of y. When y = 1 the value is 4. When y = 2 it is 8. When y = 3 it is 12.\nEach time y goes up by 1, the value goes up by 4.\nThat steady jump is the coefficient at work. It is 4, the number that multiplies y."
+ },
+ "6.EE-7#6": {
+  "title": "Set x to zero",
+  "text": "Choose x = 0, which wipes out every term that has an x in it.\nThe expression 7 + 3x becomes 7 + 0, which is 7.\nWhat is left when the variable part is gone is the constant. So the constant is 7. With x = 2 the value is 13, but the 7 inside it has not changed."
+ },
+ "6.EE-7#7": {
+  "title": "Tickets and a parking fee",
+  "text": "Let 5x + 8 be the cost of a trip: 5 tickets at x dollars each, plus 8 dollars for parking.\nThe bill has two separate charges, tickets and parking, so there are two terms.\nThe 5 is how many tickets you buy, so it is the coefficient. The 8 is paid once and stays the same whatever a ticket costs, so it is the constant."
+ },
+ "6.EE-7#8": {
+  "title": "Read the parts from a table",
+  "text": "Work out x + 9 for x = 0, 1, 2 and 3. The values are 9, 10, 11 and 12.\nThe value at x = 0 is 9. Nothing with a letter is left there, so 9 is the constant.\nEach time x goes up by 1 the value goes up by 1. That jump is the coefficient, so the coefficient of x is 1."
+ },
+ "6.EE-7#9": {
+  "title": "Check with x = 10",
+  "text": "Put x = 10 into 5x − 2 + 3. That gives 50 − 2 + 3, which is 51.\nFifty-one is 50 + 1, or five tens and one more. With x back in place of 10, that is 5x + 1.\nSo the three written chunks are worth the same as the two chunks 5x and 1, and the expression has 2 terms."
+ },
+ "6.EE-7#10": {
+  "title": "Follow the pattern down",
+  "text": "Look at a family of expressions: 3x + 9, then 2x + 9, then x + 9.\nThe coefficients are 3, then 2, and the pattern is going down by 1 each time. The next coefficient has to be 1.\nSo x + 9 is 1x + 9 with the 1 left unwritten. It cannot be 0, because 0x + 9 would have no x in it at all."
+ },
+ "6.EE-8#1": {
+  "title": "Count one picture two ways",
+  "text": "Draw 2 rows. In each row put x stars and then 3 circles.\nCount by rows: each row holds x + 3 shapes and there are 2 rows, so 2(x + 3).\nCount by shape: there are 2x stars and 6 circles, so 2x + 6.\nNobody added or removed a shape between the two counts. That is why the totals agree for every number of stars."
+ },
+ "6.EE-8#2": {
+  "title": "One test fails, one test fools",
+  "text": "Compare 2(x + 3) with 2x + 3 at x = 2. The first is 10 and the second is 7. They differ, so they are not equivalent, and no more work is needed.\nNow compare x + x with x × x at x = 2. Both are 4. But at x = 3 they are 6 and 9.\nA mismatch settles the question. A match only means \"keep checking\"."
+ },
+ "6.EE-8#3": {
+  "title": "The key that fits",
+  "text": "Think of x + 5 = 9 as a lock and each number as a key you can try.\nTry 3: the left side is 8, not 9, so the lock stays shut. Try 5: the left side is 10, so that fails too.\nTry 4: the left side is 9, which matches. The key that fits is called the solution."
+ },
+ "6.EE-8#4": {
+  "title": "Solve it, then compare",
+  "text": "Find the solution yourself and see whether it is 4.\nThe equation asks what number plus 5 makes 9. Take the 5 away from 9 and 4 is left.\nThe solution is 4, which is the value being tested. So yes, x = 4 is a solution."
+ },
+ "6.EE-8#5": {
+  "title": "Find the real solution",
+  "text": "Work out what x has to be, then compare it with 3.\nThe equation 2x = 8 says two equal groups make 8. Sharing 8 into two equal groups gives 4 in each group, so the true solution is 4.\nThe value being tested is 3, not 4. So no, x = 3 is not a solution."
+ },
+ "6.EE-8#6": {
+  "title": "Walk it on a number line",
+  "text": "Put your finger on 5 on a number line, because that is the value being tested for x.\nThe equation says to subtract 3, so hop left three times: 4, 3, 2.\nYou land on 2, which is the number on the right side of the equation. So yes, x = 5 is a solution of x − 3 = 2."
+ },
+ "6.EE-8#7": {
+  "title": "Pull out the common factor",
+  "text": "Work on the other expression this time. In 2x + 6, both terms are multiples of 2: 2x is 2 times x, and 6 is 2 times 3.\nTake the shared 2 out to the front and write what is left in a bracket: 2(x + 3).\nThat is the second expression exactly, so yes, the two are equivalent."
+ },
+ "6.EE-8#8": {
+  "title": "Three teams on a field",
+  "text": "Three teams arrive at a field. Each team has x players and 2 coaches.\nCount by team: each team brings x + 2 people, so there are 3(x + 2) people.\nCount by job: there are 3x players and 6 coaches, so there are 3x + 6 people.\nThe same crowd was counted both times, so yes, the expressions are equivalent whatever the team size."
+ },
+ "6.EE-8#9": {
+  "title": "Line the two expressions up",
+  "text": "Write 2x as x + x. Now the two expressions are x + x and x + 2.\nThey both start with an x. After that, one adds another x and the other adds 2.\nThose are the same only when x happens to be 2. For any other value they differ, so no, the expressions are not equivalent."
+ },
+ "6.EE-8#10": {
+  "title": "Same start, same step",
+  "text": "Look at how each expression grows.\nAt x = 0, 3(x + 2) is 3 × 2 = 6, and 3x + 6 is also 6. They start together.\nRaise x by 1 and the bracket grows by 1, so 3(x + 2) grows by 3. The term 3x also grows by 3.\nSame start and same step each time means they stay together for every whole number, so they are equivalent."
+ },
+ "6.EE-9#1": {
+  "title": "Like the key on a map",
+  "text": "A map uses small symbols, and the key in the corner says what each one means. Without the key, a blue dot could be a lake or a car park.\nA \"let\" statement is the key for your equation. Say Mia read some pages on Monday and 6 on Tuesday, 14 in all. Write \"let x = pages read on Monday\" and then x = 8 clearly means 8 pages on Monday."
+ },
+ "6.EE-9#2": {
+  "title": "A worked sentence",
+  "text": "Take the sentence \"The product of 4 and a number is 20.\"\nThe first phrase, \"the product of 4 and a number\", becomes 4x.\nThe word \"is\" becomes the equals sign.\nThe last part, \"20\", stays as 20.\nPut the pieces in order and you have 4x = 20. A quick check: 5 works, because the product of 4 and 5 is 20."
+ },
+ "6.EE-9#3": {
+  "title": "Stand on the starting number",
+  "text": "Use a number line. For \"n less than 12\", stand on 12 and walk n steps to the left. You began at 12, so 12 is written first: 12 − n.\nA thermometer works the same way. \"Today is 5 degrees less than yesterday\" means start at the temperature from yesterday and go down 5.\nThe number you start from is written first, wherever it appears in the sentence."
+ },
+ "6.EE-9#4": {
+  "title": "Rewind the story",
+  "text": "Say the story was: Ana had some stickers, got 6 more, and now has 14. That is x + 6 = 14.\nPlay the story backwards. Start with the 14 she has now and take away the 6 she was given. She is back to 8.\nPlay it forwards to check: 8 stickers, 6 more, 14 in all. The answer fits the story, so x = 8."
+ },
+ "6.EE-9#5": {
+  "title": "Spot the pattern in a table",
+  "text": "Write what Marcos has after each week.\nAfter 1 week he has 25 dollars. After 2 weeks he has 50. After 3 weeks he has 75.\nEach total is 25 times the week number: 25 × 1, 25 × 2, 25 × 3.\nFor week number w the same pattern gives 25 × w, which is written 25w."
+ },
+ "6.EE-9#6": {
+  "title": "Cookies on a plate",
+  "text": "A plate holds 12 cookies and n of them get eaten. The number left is \"n less than 12\".\nYou always begin with the 12 on the plate and take the eaten ones away, so the expression is 12 − n.\nIf 5 are eaten, 12 − 5 = 7 are left. Writing n − 12 would mean taking 12 cookies away from the 5, which makes no sense here."
+ },
+ "6.EE-9#7": {
+  "title": "Draw a tape diagram",
+  "text": "Draw a long bar and label its full length 14.\nCut the bar into two pieces. Label one piece x for the unknown number and label the other piece 6.\nThe two pieces laid end to end are exactly as long as the whole bar. Written in symbols, that picture says x + 6 = 14."
+ },
+ "6.EE-9#8": {
+  "title": "Count up from 6",
+  "text": "Ask how far it is from 6 up to 14, and stop at 10 on the way.\nFrom 6 to 10 is 4. From 10 to 14 is another 4.\nThat is 4 + 4 = 8 in all, so 6 + 8 = 14 and x = 8."
+ },
+ "6.EE-9#9": {
+  "title": "Deal the cards out",
+  "text": "Take the 21 cards and deal them into 3 piles, one card to each pile in turn.\nEach round of dealing uses 3 cards. The cards run out after 7 rounds, because 3 × 7 = 21.\nEvery pile got one card per round, so each pile has 7 cards. That gives p = 7 cards per pack."
+ },
+ "6.EE-9#10": {
+  "title": "Skip count to 21",
+  "text": "The equation 3x = 21 says x jumps of 3 land on 21.\nCount the jumps: 3, 6, 9, 12, 15, 18, 21.\nThat is seven numbers, so it takes 7 jumps and x = 7. This works even if you have forgotten the multiplication fact."
+ },
+ "6.EE-10#1": {
+  "title": "A price list never changes its mind",
+  "text": "Tickets cost 4 dollars each, so the cost is y = 4x for x tickets.\nBuy 3 tickets today and you pay 12 dollars. Buy 3 tickets tomorrow and you pay 12 dollars again. It would be strange if 3 tickets sometimes cost 12 and sometimes 15.\nEach number of tickets has one cost, and that is what one y for each x means."
+ },
+ "6.EE-10#2": {
+  "title": "Compare two tables",
+  "text": "Make a table for y = 4x with x = 1, 2, 3. The y values are 4, 8, 12, and they climb by 4.\nMake a table for y = x + 4 with the same inputs. The y values are 5, 6, 7, and they climb by 1.\nA step of 4 points to \"times 4\". A step of only 1 means x is not being multiplied, so look for a number being added."
+ },
+ "6.EE-10#3": {
+  "title": "Watch a wrong guess fail",
+  "text": "Take the pairs (1, 5), (2, 10) and (3, 15).\nGuess \"add 4\". It works on the first pair, since 1 + 4 = 5. On the second pair it gives 2 + 4 = 6, but y is 10. The guess is wrong.\nGuess \"times 5\". It gives 5, 10 and 15, right on all three pairs.\nOne pair can fit many rules. Only the rule that fits them all is kept."
+ },
+ "6.EE-10#4": {
+  "title": "Double it twice",
+  "text": "Multiplying by 4 is the same as doubling two times.\nDouble the input 6 to get 12.\nDouble 12 to get 24.\nSo y = 24 when x = 6, the same as 4 × 6. Two doublings make four copies of the input, which is what the rule asks for."
+ },
+ "6.EE-10#5": {
+  "title": "Find one, then count on",
+  "text": "Use the rule for the first row only: 1 + 3 = 4.\nIn this rule nothing is multiplied, so when x goes up by 1, y goes up by 1 as well.\nCount on from 4 for the next two rows: 5, then 6.\nThe y values are 4, 5 and 6."
+ },
+ "6.EE-10#6": {
+  "title": "Spot the 3 times table",
+  "text": "Read the y values in order: 3, 6, 9. Those are the first three numbers you say when you skip count by 3.\nThe x values 1, 2, 3 tell you the position in the count. The first number is 3, the second is 6 and the third is 9.\nSo y is the number in position x of the 3 times table, which is y = 3x."
+ },
+ "6.EE-10#7": {
+  "title": "Count it in nickels",
+  "text": "A nickel is worth 5 cents.\nOne nickel is 5 cents, two nickels are 10 cents and three nickels are 15 cents. Those are exactly the pairs (1, 5), (2, 10) and (3, 15).\nThe value in cents is always 5 times the number of nickels. With x for the nickels and y for the cents, the rule is y = 5x."
+ },
+ "6.EE-10#8": {
+  "title": "Climb the table from zero",
+  "text": "Start at x = 0. The 2x part is zero there, so y is just the 1.\nEach time x goes up by 1, the 2x part adds 2 to y.\nClimb four steps and write each value: 1, then 3, 5, 7, 9.\nThe fourth step up is x = 4, and the value there is y = 9."
+ },
+ "6.EE-10#9": {
+  "title": "Use the step size",
+  "text": "The y column reads 6, 12, 18. It climbs by 6 each time x goes up by 1.\nStep back one row to x = 0 and y would be 6 − 6 = 0, so nothing extra is added to the rule.\nA table that starts at 0 and climbs by 6 follows y = 6x. Check the row asked for: 6 × 3 = 18, so y = 18 when x = 3."
+ },
+ "6.EE-10#10": {
+  "title": "Step back to zero",
+  "text": "The table climbs by 3, so going back one row takes 3 away.\nThe row before x = 1 would be x = 0, and its y would be 3 − 3 = 0.\nA table that begins at 0 and adds 3 for each step of x is the 3 times table. So the rule is y = 3x, with no extra number added."
+ },
  "6.G-1#1": {
   "title": "Tile a bathroom floor",
   "text": "Think of a floor that is 7 feet by 3 feet, covered with tiles that are 1 foot on each side. You could count the tiles by columns: there are 7 columns with 3 tiles in each, and 3 counted seven times is 21. Counting by rows gives 21 as well. The number of tiles is the area, and it is the same whichever way you count."

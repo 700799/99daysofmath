@@ -22,9 +22,9 @@
     {
       "title": "Try a concrete value",
       "steps": [
-        "Let's check with $x = 5$: \"$8$ more than $5$\" should be $13$.",
-        "Plug $x = 5$ into $x + 8$: $5 + 8 = 13$. ✓",
-        "So the expression $x + 8$ matches the description."
+        "Pick a number for $x$, say $x = 5$. In plain words, \"$8$ more than $5$\" is $13$.",
+        "Put $x = 5$ into $x + 8$ and it gives $5 + 8 = 13$, the same number.",
+        "The wrong idea $8x$ would give $40$, so the expression that fits the words is $x + 8$."
       ]
     }
   ],

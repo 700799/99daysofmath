@@ -33,6 +33,16 @@
     "Test the endpoint: $5 \\geq 5$ is true, so $5$ is a solution.",
     "An included number is drawn with a filled circle, so the circle at $5$ is closed."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Tell a story",
+      "steps": [
+        "Read $x \\geq 5$ as a rule such as \"you must be at least $5$ years old to join\".",
+        "A child who is exactly $5$ is allowed in, so $5$ belongs to the solutions.",
+        "A number that belongs is shown with a filled dot, so the circle at $5$ is closed."
+      ]
+    }
+  ],
   "tags": [
     "inequality"
   ],

@@ -40,9 +40,9 @@
     {
       "title": "Check the table",
       "steps": [
-        "$x = 0 \\to y = 2$.",
-        "Each $+1$ in $x$ adds $5$ to $y$.",
-        "From $0$ to $4$ is $4 \\cdot 5 = 20$. $y = 2 + 20 = 22$."
+        "Start the table at $x = 0$, where the rule gives $y = 2$.",
+        "Each step of $1$ in $x$ adds $5$ to $y$, so the outputs run $2, 7, 12, 17, 22$.",
+        "The fifth entry belongs to $x = 4$, so $y = 22$."
       ]
     }
   ],

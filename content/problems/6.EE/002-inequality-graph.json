@@ -48,18 +48,19 @@
     {
       "title": "Test values",
       "steps": [
-        "Try $x = -1$: on the closed circle → **included**. So the inequality must accept $-1$ → rules out $-1 < x$.",
-        "Try $x = 2$: on the open circle → **not included**. Rules out $x \\le 2$.",
-        "Try $x = 0$: in the middle of the shaded segment → included ✓.",
-        "Only $-1 \\le x < 2$ matches all three checks."
+        "Try $x = -1$, which sits on the filled circle and so is included. Choices C and D say $-1 < x$, which rejects $-1$, so both are out.",
+        "Try $x = 2$, which sits on the open circle and so is left out. Choice C was already gone, and it would wrongly accept $2$.",
+        "Try $x = 5$, which is outside the shading. Choice A accepts it because $5 > 2$, so A is out as well.",
+        "Only $-1 \\le x < 2$ accepts $-1$, rejects $2$ and rejects $5$, so the answer is choice B."
       ]
     },
     {
       "title": "Compound-inequality shorthand",
       "steps": [
-        "A \"sandwich\" inequality $a \\le x < b$ packs two conditions: $a \\le x$ AND $x < b$.",
-        "Always read the **inner** symbol pointing toward $x$: it tells you the relation at that side.",
-        "Closed circle → $\\le$ or $\\ge$. Open → $<$ or $>$. Direction follows the shaded region."
+        "A joined inequality such as $a \\le x < b$ packs two facts into one line: $a \\le x$ **and** $x < b$.",
+        "The left end of the shading is a filled circle at $-1$, so the left fact is $-1 \\le x$.",
+        "The right end is an open circle at $2$, so the right fact is $x < 2$.",
+        "Writing both facts around one $x$ gives $-1 \\le x < 2$, which is choice B."
       ]
     }
   ],

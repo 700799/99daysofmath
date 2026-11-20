@@ -31,6 +31,16 @@
     "Subtract $7$ from both sides to undo the addition: $x = 20 - 7 = 13$.",
     "Mia had $13$ marbles before, and $13 + 7 = 20$ confirms it."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Count up from 7",
+      "steps": [
+        "The $20$ marbles are made of the $7$ from Tom and the ones Mia already had.",
+        "Count up from $7$ to $20$: $3$ more reaches $10$, and $10$ more reaches $20$.",
+        "That is $3 + 10 = 13$, so Mia had $13$ marbles before."
+      ]
+    }
+  ],
   "tags": [
     "CA",
     "word",

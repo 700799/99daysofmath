@@ -31,18 +31,19 @@
     "Then add $1$ to that product to get $10 + 1 = 11$.",
     "So the value of $y$ is $11$ when $x = 5$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Extend a table",
+      "steps": [
+        "Start a table at $x = 0$, where the rule gives $y = 2(0) + 1 = 1$.",
+        "Each step of $1$ in $x$ adds $2$ to $y$, so the outputs run $1, 3, 5, 7, 9, 11$.",
+        "The sixth entry belongs to $x = 5$, so $y = 11$."
+      ]
+    }
+  ],
   "tags": [
     "two-vars",
     "evaluate"
   ],
-  "estimatedSeconds": 40,
-  "alternativeExplanations": [
-    {
-      "title": "Check the answer",
-      "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: 11 — verified."
-      ]
-    }
-  ]
+  "estimatedSeconds": 40
 }

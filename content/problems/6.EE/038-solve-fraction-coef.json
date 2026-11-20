@@ -36,6 +36,16 @@
     "The right side becomes $10 \\times \\frac{3}{2} = \\frac{30}{2}$, which simplifies to $15$.",
     "Check: $\\frac{2}{3} \\times 15 = 10$ is true, so the solution is $x = 15$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Draw a tape diagram",
+      "steps": [
+        "Draw a bar for $x$ and cut it into $3$ equal parts, because the denominator is $3$.",
+        "Two of the parts together are worth $10$, so one part is worth $10 \\div 2 = 5$.",
+        "The whole bar is three parts, so $x = 5 + 5 + 5 = 15$."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "solve",

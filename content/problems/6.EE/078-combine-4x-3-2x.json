@@ -39,6 +39,16 @@
     "The constant $3$ has no variable, so it cannot join the $x$ terms.",
     "The simplified expression is $6x + 3$, with one $x$ term and one number."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Check with a number",
+      "steps": [
+        "Let $x = 2$ in the original expression and work it out: $4(2) + 3 + 2(2) = 8 + 3 + 4 = 15$.",
+        "Six twos make $12$, and $12 + 3 = 15$, so $6x + 3$ gives the same value.",
+        "The wrong answer $9x$ would give $18$, so the simplified expression is $6x + 3$."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "combine-like-terms"

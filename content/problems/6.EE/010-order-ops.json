@@ -31,6 +31,16 @@
     "Now the expression is $3 + 8$, and adding gives $11$.",
     "The value is $11$. Going left to right would give $20$, which is wrong."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Write the multiplication as addition",
+      "steps": [
+        "The part $2 \\times 4$ means two fours, so it can be written as $4 + 4$.",
+        "The whole expression is then $3 + 4 + 4$, which has only addition in it.",
+        "Adding in any order gives $3 + 4 + 4 = 11$, so the value is $11$."
+      ]
+    }
+  ],
   "tags": [
     "order-of-ops"
   ],

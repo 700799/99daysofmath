@@ -33,17 +33,18 @@
     "Substitute $4$ for $x$ on the left side: $4 + 5 = 9$.",
     "The left side equals the right side, $9$, so yes, $x = 4$ is a solution."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Solve it yourself",
+      "steps": [
+        "Ignore the suggested value for a moment and ask what number plus $5$ makes $9$.",
+        "Counting up from $5$ to $9$ takes $4$ steps, so the solution is $4$.",
+        "That matches the value being tested, so yes, $x = 4$ is a solution."
+      ]
+    }
+  ],
   "tags": [
     "check-solution"
   ],
-  "estimatedSeconds": 30,
-  "alternativeExplanations": [
-    {
-      "title": "Check the answer",
-      "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: yes — verified."
-      ]
-    }
-  ]
+  "estimatedSeconds": 30
 }

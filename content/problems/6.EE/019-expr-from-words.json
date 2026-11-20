@@ -41,27 +41,27 @@
     "Distribute the $3$ to remove the parentheses: $3x - 24 + x$.",
     "Combine the like terms $3x$ and $x$ to get $4x$, so the answer is $4x - 24$."
   ],
-  "tags": [
-    "translate",
-    "MAP-practice"
-  ],
-  "estimatedSeconds": 105,
   "alternativeExplanations": [
     {
       "title": "Check at $x=10$",
       "steps": [
-        "Words: \"$3$ times ($8$ less than $10$), plus $10$\" = $3 \\cdot 2 + 10 = 16$.",
-        "Test $4x - 24$ at $x=10$: $40 - 24 = 16$. ✓",
-        "Test $3(x-8) + x$ at $x=10$: $3(2) + 10 = 16$. ✓"
+        "Follow the words with $x = 10$: $8$ less than $10$ is $2$, three times that is $6$, and increased by $10$ it is $16$.",
+        "Put $x = 10$ into $4x - 24$ and it gives $40 - 24 = 16$, the same number.",
+        "A second test with $x = 8$ gives $0 + 8 = 8$ from the words and $32 - 24 = 8$ from the expression, so $4x - 24$ is right."
       ]
     },
     {
       "title": "Why \"less than\" flips the order",
       "steps": [
-        "\"$8$ less than $x$\" describes a number that is **$8$ smaller than $x$**.",
-        "If $x = 100$, \"$8$ less than $x$\" must equal $92$, not $-92$. So the expression is $x - 8$.",
-        "Same logic for \"more than\": \"$5$ more than $y$\" is $y + 5$, but addition is symmetric so it doesn't bite you. Subtraction does."
+        "\"$8$ less than $x$\" names a number that is $8$ smaller than $x$, so it must be written $x - 8$, not $8 - x$.",
+        "Three of these, written out, are $(x - 8) + (x - 8) + (x - 8)$, which is three $x$ with $24$ taken away.",
+        "\"Increased by $x$\" adds a fourth $x$, so the total is four $x$ with $24$ taken away: $4x - 24$."
       ]
     }
-  ]
+  ],
+  "tags": [
+    "translate",
+    "MAP-practice"
+  ],
+  "estimatedSeconds": 105
 }

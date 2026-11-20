@@ -33,18 +33,19 @@
     "Break up the product: $10 \\times 7 = 70$ and $2 \\times 7 = 14$, and $70 + 14 = 84$.",
     "The total cost of $7$ tickets is $84$ dollars."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Halve, then double",
+      "steps": [
+        "Twelve is double $6$, so $12 \\times 7$ is double $6 \\times 7$.",
+        "The easier fact to recall is $6 \\times 7 = 42$.",
+        "Doubling $42$ gives $84$, so the total cost is $c = 84$ dollars."
+      ]
+    }
+  ],
   "tags": [
     "two-vars",
     "word"
   ],
-  "estimatedSeconds": 45,
-  "alternativeExplanations": [
-    {
-      "title": "Check the answer",
-      "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: 84 — verified."
-      ]
-    }
-  ]
+  "estimatedSeconds": 45
 }

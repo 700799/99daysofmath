@@ -32,6 +32,16 @@
     "\"Less than $30$\" means $29$ or fewer, so $30$ is not allowed and the symbol is $<$.",
     "Writing the variable first gives the inequality $n < 30$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Test the edge",
+      "steps": [
+        "Check the numbers next to the limit: $29$ riders is less than $30$, so $29$ must be allowed.",
+        "Exactly $30$ riders is not less than $30$, so $30$ must be rejected.",
+        "The symbol $<$ accepts $29$ and rejects $30$, while $\\le$ would wrongly accept $30$, so the inequality is $n < 30$."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "inequality",

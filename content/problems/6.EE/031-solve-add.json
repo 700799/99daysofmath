@@ -31,6 +31,16 @@
     "This leaves $x = 12 - 5$ on its own, which works out to $x = 7$.",
     "Check: $7 + 5 = 12$ is true, so the solution is $x = 7$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Count up",
+      "steps": [
+        "Read the equation as a question: what must be added to $5$ to reach $12$?",
+        "Count up from $5$: it takes $5$ to reach $10$ and then $2$ more to reach $12$.",
+        "That is $5 + 2 = 7$ in all, so the solution is $x = 7$."
+      ]
+    }
+  ],
   "tags": [
     "solve"
   ],

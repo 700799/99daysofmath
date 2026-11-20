@@ -42,28 +42,28 @@
     "\"Decreased by $4$\" means $4$ is subtracted from that result, which gives $2(x+7) - 4$.",
     "The expression is $2(x+7)-4$. Distributing shows it also equals $2x + 10$."
   ],
-  "tags": [
-    "CA",
-    "translate",
-    "MAP-practice"
-  ],
-  "estimatedSeconds": 90,
   "alternativeExplanations": [
     {
       "title": "Substitute & check",
       "steps": [
-        "Pick $x = 3$. The words: \"twice the sum of $3$ and $7$, decreased by $4$\" = twice $10$, minus $4$ = $16$.",
-        "Test $2(x+7) - 4$ at $x=3$: $2(10) - 4 = 16$. ✓",
-        "Test $2x + 10$ at $x=3$: $6 + 10 = 16$. ✓ Both forms are equivalent."
+        "Pick $x = 3$ and follow the words: the sum of $3$ and $7$ is $10$, twice that is $20$, and decreased by $4$ it is $16$.",
+        "Put $x = 3$ into $2(x+7)-4$ and it gives $2(10) - 4 = 16$, the same number.",
+        "The tempting $2x + 7 - 4$ gives $6 + 7 - 4 = 9$ instead, so the expression that fits the words is $2(x+7)-4$."
       ]
     },
     {
       "title": "Common trap",
       "steps": [
-        "\"$2x + 7 - 4$\" is **wrong** — that means \"$7$ more than twice $x$, then subtract $4$\".",
-        "The word **sum** before $7$ is what forces the parentheses around $(x+7)$.",
-        "Whenever you see \"twice the sum…\", \"$3$ times the difference…\", etc., the next part belongs **inside** the grouping."
+        "The trap is to write $2x + 7 - 4$, which doubles only the $x$ and leaves the $7$ undoubled.",
+        "The words say \"twice the **sum**\", so the whole sum $x + 7$ must sit inside parentheses before it is doubled.",
+        "With the grouping in place and the $4$ taken off at the end, the expression is $2(x+7)-4$."
       ]
     }
-  ]
+  ],
+  "tags": [
+    "CA",
+    "translate",
+    "MAP-practice"
+  ],
+  "estimatedSeconds": 90
 }

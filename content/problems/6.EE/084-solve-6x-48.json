@@ -31,18 +31,19 @@
     "The right side becomes $48 \\div 6 = 8$, so the result is $x = 8$.",
     "Check: $6 \\times 8 = 48$ is true, so the solution is $x = 8$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Split 48 into easy parts",
+      "steps": [
+        "Break $48$ into two parts that are easy to divide by $6$: $48 = 30 + 18$.",
+        "Thirty holds $5$ sixes and eighteen holds $3$ sixes.",
+        "Together that is $5 + 3 = 8$ sixes, so the solution is $x = 8$."
+      ]
+    }
+  ],
   "tags": [
     "solve",
     "one-step"
   ],
-  "estimatedSeconds": 35,
-  "alternativeExplanations": [
-    {
-      "title": "Check the answer",
-      "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: 8 — verified."
-      ]
-    }
-  ]
+  "estimatedSeconds": 35
 }

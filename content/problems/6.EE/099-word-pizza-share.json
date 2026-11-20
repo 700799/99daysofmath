@@ -42,8 +42,9 @@
     {
       "title": "Eighths fit into a whole",
       "steps": [
-        "A whole pizza has $8$ eighths.",
-        "So $8$ friends each get one eighth."
+        "Cut one whole pizza into slices that are each $\\dfrac{1}{8}$ of the pizza.",
+        "It takes $8$ slices of that size to make up the whole pizza.",
+        "Each friend gets exactly one slice, so there are $p = 8$ friends."
       ]
     }
   ],

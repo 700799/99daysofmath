@@ -53,6 +53,16 @@
     "Only $4$ gives $10$, so the answer is $4$, choice B.",
     "Subtracting also works: $10 - 6 = 4$ gives the same value."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Draw a tape diagram",
+      "steps": [
+        "Draw a bar that is $10$ long and mark off a piece of length $6$ at one end.",
+        "The rest of the bar is the unknown piece $x$, because the two pieces together make $10$.",
+        "The leftover piece is $4$ long, since $6 + 4 = 10$, so the answer is $4$, choice B."
+      ]
+    }
+  ],
   "tags": [
     "check-solution"
   ],

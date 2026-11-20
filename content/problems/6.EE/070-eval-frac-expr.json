@@ -36,19 +36,20 @@
     "Now divide that sum by the bottom number: $12 \\div 2 = 6$.",
     "The value of the expression is $6$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Find the halfway point",
+      "steps": [
+        "Adding two numbers and halving the sum finds the number halfway between them.",
+        "With $x = 7$ the two numbers are $7$ and $5$, which sit two apart on a number line.",
+        "The number halfway between $5$ and $7$ is $6$, so the value is $6$."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "evaluate",
     "fraction"
   ],
-  "estimatedSeconds": 65,
-  "alternativeExplanations": [
-    {
-      "title": "Check the answer",
-      "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: 6 — verified."
-      ]
-    }
-  ]
+  "estimatedSeconds": 65
 }

@@ -39,27 +39,27 @@
     "Group the terms that match each other: $(8y - 5y) + (12 + 8) = 3y + 20$.",
     "The number in front of $y$ is $3$, so the coefficient of $y$ is $3$."
   ],
-  "tags": [
-    "vocabulary",
-    "MAP-practice"
-  ],
-  "estimatedSeconds": 90,
   "alternativeExplanations": [
     {
       "title": "Verify by plugging in",
       "steps": [
-        "Pick $y = 10$. Original: $4(20 + 3) - 50 + 8 = 4(23) - 42 = 92 - 42 = 50$.",
-        "Check $3y + 20$ at $y = 10$: $30 + 20 = 50$. ✓ The simplified form is correct.",
-        "Try $y = 0$: original = $4 \\cdot 3 + 8 = 20$. $3(0) + 20 = 20$. ✓"
+        "Find the value of the original expression at $y = 0$: $4(0 + 3) - 0 + 8 = 12 + 8 = 20$.",
+        "Find the value again with $y$ one bigger, at $y = 1$: $4(2 + 3) - 5 + 8 = 20 - 5 + 8 = 23$.",
+        "Raising $y$ by $1$ raised the value by $23 - 20 = 3$, and that growth per $1$ of $y$ is the coefficient, so it is $3$."
       ]
     },
     {
       "title": "Coefficient vs constant",
       "steps": [
-        "In $3y + 20$, $3$ is the **coefficient** of $y$ (number stuck to a variable).",
-        "$20$ is a **constant term** (no variable). It is NOT a coefficient.",
-        "Don't pick the bigger number — pick the one **next to $y$**."
+        "Count only the $y$ terms and ignore the plain numbers: $4(2y)$ gives $8y$, and then $5y$ is taken away.",
+        "That leaves $8y - 5y = 3y$, so the number attached to $y$ is $3$.",
+        "The plain numbers $12 + 8 = 20$ form the constant, which is not a coefficient, so the answer is $3$ and not $20$."
       ]
     }
-  ]
+  ],
+  "tags": [
+    "vocabulary",
+    "MAP-practice"
+  ],
+  "estimatedSeconds": 90
 }

@@ -33,6 +33,16 @@
     "Combine the plain numbers by adding them: $5 + 4 = 9$.",
     "An $x$ term and a number cannot be joined, so the answer is $5x + 9$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Bags and loose marbles",
+      "steps": [
+        "Think of $x$ as a bag of marbles and each plain number as loose marbles.",
+        "There are $2$ bags and then $3$ more bags, which is $5$ bags, or $5x$.",
+        "There are $5$ loose marbles and then $4$ more, which is $9$, so the total is $5x + 9$."
+      ]
+    }
+  ],
   "tags": [
     "CA",
     "combine-like"

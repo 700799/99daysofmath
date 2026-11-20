@@ -34,18 +34,19 @@
     "After $w$ weeks he has added $25$ a total of $w$ times, which is $25 \\times w$.",
     "A number times a variable is written side by side, so the expression is $25w$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Build a table",
+      "steps": [
+        "List the savings week by week: $25$ dollars after $1$ week, $50$ after $2$ weeks and $75$ after $3$ weeks.",
+        "In every row the total is $25$ times the number of weeks.",
+        "For $w$ weeks the same pattern gives $25 \\times w$, which is written $25w$."
+      ]
+    }
+  ],
   "tags": [
     "expression",
     "word"
   ],
-  "estimatedSeconds": 40,
-  "alternativeExplanations": [
-    {
-      "title": "Check the answer",
-      "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: 25w — verified."
-      ]
-    }
-  ]
+  "estimatedSeconds": 40
 }

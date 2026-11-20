@@ -36,6 +36,16 @@
     "The right side becomes $5 + 12 = 17$, so the result is $y = 17$.",
     "Check: $17 - 12 = 5$ is true, so the solution is $y = 17$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Tell a money story",
+      "steps": [
+        "Read the equation as a story: you had $y$ dollars, spent $12$, and have $5$ left.",
+        "The starting amount is what you spent plus what you still have.",
+        "That is $12 + 5 = 17$ dollars, so the solution is $y = 17$."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "solve"

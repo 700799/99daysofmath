@@ -31,6 +31,16 @@
     "Then add the $2$ that was waiting: $12 + 2 = 14$.",
     "The value of the expression is $14$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Add three fours",
+      "steps": [
+        "Write $3a$ as three copies of $a$, so the expression is $a + a + a + 2$.",
+        "With $a = 4$ in place of each letter, this becomes $4 + 4 + 4 + 2$.",
+        "Three fours make $12$, and $2$ more makes $14$."
+      ]
+    }
+  ],
   "tags": [
     "evaluate"
   ],
