@@ -44,16 +44,17 @@
     {
       "title": "Or use the Pythagorean identity",
       "steps": [
-        "$\\sin^2\\theta + \\cos^2\\theta = 1$, so $\\sin^2\\theta = 1 - \\left(\\tfrac{5}{13}\\right)^2 = 1 - \\tfrac{25}{169} = \\tfrac{144}{169}$.",
-        "$\\sin\\theta = \\tfrac{12}{13}$, taking the positive root since $\\theta$ is acute.",
-        "Sketching the triangle is usually faster and less error-prone, but the identity works when no triangle is described."
+        "For any angle the identity $\\sin^2\\theta + \\cos^2\\theta = 1$ holds, so here $\\sin^2\\theta = 1 - \\left(\\tfrac{5}{13}\\right)^2 = 1 - \\tfrac{25}{169} = \\tfrac{144}{169}$.",
+        "The angle is acute, so its sine is positive and $\\sin\\theta = \\tfrac{12}{13}$.",
+        "As a decimal, $12 \\div 13 \\approx 0.923$, which rounds to $0.92$ at the nearest hundredth."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "Re-entering 5/13 — the cosine you were given — or forming 5/12 are the two designed misses.",
-        "Sketch the triangle: adjacent 5, hypotenuse 13, so the missing opposite is 12 and sine is 12/13. The drawing keeps the three sides in their lanes."
+        "Entering $\\tfrac{5}{13} \\approx 0.38$ repeats the cosine, and $\\tfrac{5}{12} \\approx 0.42$ mixes up the sides.",
+        "Sketch the triangle with adjacent side $5$ and hypotenuse $13$, so the opposite side is $12$.",
+        "Sine is opposite over hypotenuse, $\\tfrac{12}{13}$, which rounds to $0.92$."
       ]
     }
   ],

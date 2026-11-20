@@ -36,9 +36,9 @@
     {
       "title": "Clear all denominators at once",
       "steps": [
-        "Multiply every term by the common denominator $4x$: $4 + 2x = 3x$.",
-        "Then $4 = x$.",
-        "This route generalizes to any rational equation, including ones where the reciprocal cannot be isolated so neatly."
+        "Multiply every term by the common denominator $4x$, which turns the equation into $4 + 2x = 3x$.",
+        "Subtract $2x$ from both sides to get $4 = x$.",
+        "The value $x = 4$ makes no denominator zero, and $\\tfrac{1}{4} + \\tfrac{1}{2} = \\tfrac{3}{4}$, so $x = 4$."
       ]
     }
   ],

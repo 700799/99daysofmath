@@ -63,16 +63,17 @@
     {
       "title": "Compute it and read the number",
       "steps": [
-        "Set $8.5x - 240 = 0$, so $x = \\dfrac{240}{8.5} \\approx 28.2$ items.",
-        "Selling 28 items still leaves a small loss; 29 turns the first profit.",
-        "A number like \"about 28 items\" only makes sense as a break-even count — the arithmetic itself rules the other choices out."
+        "Set the profit equal to zero and solve: $8.5x - 240 = 0$ gives $x = \\dfrac{240}{8.5} \\approx 28.2$.",
+        "Selling $28$ items gives $8.5(28) - 240 = -2$ dollars, a small loss, and $29$ items gives $6.50$ dollars, the first profit.",
+        "The intercept is the number of items at which profit passes through zero, so it is the break-even count, choice B."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "Choice A is a correct sentence about the y-intercept — the −240 — dressed up to claim the x-intercept's meaning.",
-        "Anchor on the definition before reading choices: x-intercept means output zero, and zero profit can only mean break-even."
+        "Choice A is a true statement about the $y$-intercept, since selling no items gives $P(0) = -240$, but the question asks about the $x$-intercept.",
+        "An $x$-intercept is where the output is zero, and here the output is profit, so it marks the point of zero profit.",
+        "Zero profit is breaking even, and the input there is a number of items, so the answer is B."
       ]
     }
   ],

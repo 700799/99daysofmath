@@ -59,9 +59,9 @@
     {
       "title": "Test with real numbers",
       "steps": [
-        "Take a triangle with $b = 4$ and $h = 5$. Then $A = \\tfrac{1}{2}(4)(5) = 10$.",
-        "Now check each choice at $A = 10$, $b = 4$ and keep the one returning $h = 5$.",
-        "B gives $\\dfrac{2(10)}{4} = 5$ ✓. A gives $10/8$, C gives $80$, D gives $0.2$ — all eliminated in one pass."
+        "Invent a triangle with base $b = 4$ and height $h = 5$, so its area is $A = \\tfrac{1}{2}(4)(5) = 10$.",
+        "Put $A = 10$ and $b = 4$ into each choice and keep the one that returns the height $5$.",
+        "Choice B gives $\\dfrac{2(10)}{4} = 5$, while A gives $1.25$, C gives $80$ and D gives $0.2$, so the answer is B."
       ]
     }
   ],

@@ -36,9 +36,9 @@
     {
       "title": "Use the standard-form slope formula",
       "steps": [
-        "For $Ax + By = C$, the slope is $-A/B$.",
-        "Here $A = 4$ and $B = -2$, so the slope is $-\\dfrac{4}{-2} = 2$.",
-        "One step instead of three, and no chance of a sign slip during the division."
+        "A line written as $Ax + By = C$ has slope $-\\dfrac{A}{B}$, which comes from solving the general equation for $y$ once.",
+        "In $4x - 2y = 10$ the coefficients are $A = 4$ and $B = -2$, with the minus sign kept on $B$.",
+        "The slope is $-\\dfrac{4}{-2} = 2$, reached in a single step."
       ]
     }
   ],

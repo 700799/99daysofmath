@@ -64,16 +64,17 @@
     {
       "title": "Skip solving and just substitute",
       "steps": [
-        "With only four numbers to check, plugging in is often faster than solving.",
-        "$x = -2$ gives $11$ ✓; $x = 0$ gives $7$ ✓; $x = 3$ gives $1 \\ge 1$ ✓; $x = 4$ gives $-1$ ✗.",
-        "This also sidesteps the sign-flip rule entirely — the single most common error on inequality questions."
+        "Put each choice into $7 - 2x$ and see whether the result is at least $1$.",
+        "The values $-2$, $0$ and $3$ give $11$, $7$ and $1$, and each of these is at least $1$.",
+        "The value $4$ gives $7 - 8 = -1$, which is less than $1$, so $4$ is not a solution and the answer is D."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "Solving perfectly and then choosing a value that IS a solution — the word NOT reverses the final selection.",
-        "Find the solution set first, write it down (x ≤ 3), then pick the choice OUTSIDE it. Two separate acts, in that order."
+        "The solution set is $x \\le 3$, and choices A, B and C all lie inside it, so picking one of them answers the opposite question.",
+        "The word **not** asks for the value that lies outside the solution set.",
+        "Only $4$ is greater than $3$, so the answer is choice D."
       ]
     }
   ],

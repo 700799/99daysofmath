@@ -3827,6 +3827,682 @@
   "title": "Ask how close it gets",
   "text": "Measure the gap between the temperature and 18. The gap is exactly 6 ÷ t.\nTo be within 1 degree of 18 you need t past 6 hours. Within 0.1 degree, past 60 hours. Within 0.01 degree, past 600 hours.\nAny closeness you name is reached by waiting long enough, and the gap never turns negative. That is what it means for the limit to be 18 degrees."
  },
+ "SAT-1#1": {
+  "title": "Run the number machine backwards",
+  "text": "Picture x going into a machine that multiplies by 3 and then adds 7, and 22 comes out. To find what went in, send 22 back through the machine in reverse. First take away the 7 to get 15, then divide by 3 to get 5. Every linear equation is a machine like this, and solving it means running each step backwards, last step first."
+ },
+ "SAT-1#2": {
+  "title": "Two lines on a graph",
+  "text": "Graph each side as its own line, y = ax + b and y = cx + d. A solution is an x where the lines meet. Lines with different steepness cross at exactly one point, so there is one solution. Lines with the same steepness and different heights are parallel and never meet, so there is none. If steepness and height both match, one line lies on top of the other and every x works."
+ },
+ "SAT-1#3": {
+  "title": "A higher or lower guessing game",
+  "text": "Take 5x − 4 = 31 with choices 3, 5, 7 and 9. Try 5 first: 5 × 5 − 4 is 21, which is too small, so the answer must be larger and 3 is ruled out as well. Try 7: 5 × 7 − 4 is 31, a match. Two quick multiplications replaced the algebra, the same way a higher or lower guessing game closes in on a hidden number."
+ },
+ "SAT-1#4": {
+  "title": "Cover up the unknown part",
+  "text": "Cover the 3x with your thumb. The equation reads: something plus 7 is 22, so the something is 15. Now uncover it: 3x is 15, which means three equal copies of x make 15, so each copy is 5. No balancing steps are written down, yet the two questions asked are the same two undo steps, and the answer is x = 5."
+ },
+ "SAT-1#5": {
+  "title": "Divide by 2 before distributing",
+  "text": "Every part of 4(x − 2) = 2x + 10 is even, so halve both sides first. The left side becomes 2(x − 2) and the right side becomes x + 5. Distribute the smaller number: 2x − 4 = x + 5. Subtract x from both sides to get x − 4 = 5, then add 4. The result is x = 9, reached with smaller numbers."
+ },
+ "SAT-1#6": {
+  "title": "Collect the x pieces as fractions",
+  "text": "Leave the fractions in and move x/3 to the right side: 2 = x/2 − x/3. Half of something minus a third of it is one sixth of it, because 3/6 − 2/6 = 1/6. So the equation says 2 = x/6. One sixth of x is 2, and x is six times that, which gives x = 12."
+ },
+ "SAT-1#7": {
+  "title": "Watch the gap close",
+  "text": "At x = 7 the left side is 20 and the right side is 24, so the left is behind by 4. Each time x goes up by 1 the left side gains 4 and the right side gains 2, so the gap shrinks by 2 per step. A gap of 4 closes in 4 ÷ 2 = 2 steps. Two steps past 7 is x = 9, with no further testing."
+ },
+ "SAT-1#8": {
+  "title": "Try a few values of x",
+  "text": "Plug numbers into both sides of 2(3x + 1) = 6x + 5. At x = 0 the sides are 2 and 5. At x = 1 they are 8 and 11. At x = 10 they are 62 and 65. The left side is always exactly 3 behind the right side, and the gap never shrinks, so the two sides can never be equal. There is no solution."
+ },
+ "SAT-1#9": {
+  "title": "Move the x-term to avoid a negative",
+  "text": "Add 3x to both sides of −3x + 4 = 19 so the coefficient of x becomes positive: 4 = 19 + 3x. Subtract 19 from both sides to get −15 = 3x. Now divide by positive 3, which gives −5 = x. The answer x = −5 is the same, and no division by a negative number was needed."
+ },
+ "SAT-2#1": {
+  "title": "Slope as a unit price",
+  "text": "Think of 4 pounds of apples costing 12 dollars. The price per pound is 12 ÷ 4 = 3 dollars. Slope is the same idea with y as the cost and x as the pounds: divide the change in y by the change in x to get the change in y for ONE unit of x. Between (2, 5) and (6, 17), 12 units of y are shared over 4 units of x, so each unit of x is worth 3."
+ },
+ "SAT-2#2": {
+  "title": "Let the units decide",
+  "text": "Every term in C(h) = 65h + 40 must come out in dollars, because the terms are added to make a cost. The 40 stands alone, so it is simply 40 dollars. The 65 is multiplied by hours, so to end up with dollars it must be dollars per hour: (dollars per hour) × hours = dollars. The units alone say which number is the rate."
+ },
+ "SAT-2#3": {
+  "title": "A savings jar and a square",
+  "text": "Start with 40 dollars and add 15 every week: 40, 55, 70, 85. Each jump is 15 because the same thing happens every week, and that steady jump is the slope. Compare the areas of squares with sides 1, 2, 3, 4: 1, 4, 9, 16. The jumps are 3, 5, 7, so they keep growing, and the pattern is not linear."
+ },
+ "SAT-2#4": {
+  "title": "Reverse the order, then walk it",
+  "text": "Take the points in the opposite order: (5 − 17) ÷ (2 − 6) = −12 ÷ −4 = 3. The two negatives cancel, so the order does not matter as long as it is the same on top and bottom. Now check by walking: start at y = 5 when x = 2 and add 3 for each step to x = 6. You get 8, 11, 14, 17, which lands on the second point."
+ },
+ "SAT-2#5": {
+  "title": "Itemize a three-hour bill",
+  "text": "Write out the bill for a 3-hour job as a list. There is one line for the visit, 40 dollars, and then one line for each hour: 65, 65, 65. The total is 40 + 195 = 235, which matches C(3). The 40 appears once no matter how long the job is, so it is a flat fee. The 65 appears once per hour, so it is the hourly rate."
+ },
+ "SAT-2#6": {
+  "title": "Turn each fact into an equation",
+  "text": "Write f(x) = mx + b and plug in each fact. From f(0) = 3 you get m × 0 + b = 3, so b = 3. From f(4) = 11 you get 4m + b = 11, which is now 4m + 3 = 11. Subtract 3 to get 4m = 8, so m = 2. The function is f(x) = 2x + 3, found without the slope formula."
+ },
+ "SAT-2#7": {
+  "title": "Halve the interval",
+  "text": "On a line, the value halfway between two inputs is the average of the two outputs. Halfway between x = 0 and x = 4 is x = 2, where f is the average of 3 and 11, which is 7. Halfway between x = 0 and x = 2 is x = 1, where f is the average of 3 and 7, which is 5. So one step from 0 to 1 adds 2, and f(x) = 2x + 3."
+ },
+ "SAT-2#8": {
+  "title": "Count down in a table",
+  "text": "List the amount left at easy times. The tank loses 200 liters every 10 minutes, so it holds 500 at the start, 300 after 10 minutes and 100 after 20 minutes. The last 100 liters drain at 20 liters a minute, which takes 5 more minutes. The tank is empty at t = 25 minutes. As one division this is 500 ÷ 20 = 25."
+ },
+ "SAT-2#9": {
+  "title": "Walk across the grid",
+  "text": "Start at (−1, 4) and move right to x = 3. That is 4 steps: 0, 1, 2, 3. Over those steps y drops from 4 to −8, a fall of 12. Sharing the fall equally gives 3 down per step. Check by walking: 4, 1, −2, −5, −8. The walk ends at −8 as it should, so the slope is −3."
+ },
+ "SAT-3#1": {
+  "title": "One line written three ways",
+  "text": "Take a taxi ride that costs 2 dollars per mile plus a 1 dollar start fee. Slope-intercept form says it directly: y = 2x + 1. If you only know that a 3 mile ride cost 7 dollars at 2 dollars per mile, point-slope writes y − 7 = 2(x − 3). Moving the letters to one side gives standard form, 2x − y = −1. All three describe the same rides."
+ },
+ "SAT-3#2": {
+  "title": "Spend it all on one item",
+  "text": "Read 4x + 5y = 20 as a budget: pens cost 4 dollars, notebooks cost 5 dollars and you spend exactly 20 dollars. If you buy only notebooks, x is 0 and 20 dollars buys 4 of them, the point (0, 4). If you buy only pens, y is 0 and 20 dollars buys 5 of them, the point (5, 0). The intercepts are the two all-of-one-thing purchases."
+ },
+ "SAT-3#3": {
+  "title": "Check both rules with numbers",
+  "text": "Parallel: at x = 0, 1 and 2 the line y = 2x + 1 gives 1, 3, 5 and y = 2x − 3 gives −3, −1, 1. The gap is always 4, so they never meet. Perpendicular: from (0, 0) go to (3, 2) along slope 2/3 and to (−2, 3) along slope −3/2. Each arm has squared length 13 and the far ends are 26 apart squared. Since 13 + 13 = 26, the corner is a right angle."
+ },
+ "SAT-3#4": {
+  "title": "Use the two intercepts",
+  "text": "Find two easy points on 3x + 2y = 12. With x = 0, 2y = 12, so the point is (0, 6). With y = 0, 3x = 12, so the point is (4, 0). Going from (0, 6) to (4, 0) the line falls 6 while it runs 4. The slope is −6/4, which simplifies to −3/2, with no rearranging needed."
+ },
+ "SAT-3#5": {
+  "title": "Walk back to the y-axis",
+  "text": "A slope of 4 means each step of 1 to the right raises y by 4, so each step to the left lowers y by 4. From (2, 7) take two steps left: (1, 3), then (0, −1). The line crosses the y-axis at −1, which is b. With slope 4 and intercept −1, the equation is y = 4x − 1."
+ },
+ "SAT-3#6": {
+  "title": "Trade x against y",
+  "text": "In 3x + 2y = 12 the total must stay 12. Raise x by 2 and the 3x part grows by 6, so the 2y part must shrink by 6, which means y falls by 3. A run of 2 with a rise of −3 is a slope of −3/2. In general, raising x by B adds AB to the total, and y must drop by A to cancel it, which gives −A/B."
+ },
+ "SAT-3#7": {
+  "title": "Swap tickets of equal value",
+  "text": "Two adult tickets cost 24 dollars and so do three child tickets. Start with the all-child sale, 60 child tickets and 0 adult. Swapping 3 child tickets for 2 adult tickets keeps the total at 480: (2, 57), (4, 54), and so on. Ten swaps reach (20, 30) and twenty swaps reach (40, 0). Every one of these mixes fits 12a + 8c = 480, so the equation is right."
+ },
+ "SAT-3#8": {
+  "title": "Turn the direction a quarter turn",
+  "text": "The given line moves right 3 and up 2. Turn that movement a quarter turn clockwise and it becomes right 2 and down 3, which is the perpendicular direction. Start at (0, −4) and move that way to reach (2, −7). The new line falls 3 for every 2 across, a slope of −3/2, and it starts on the y-axis at −4. So y = −(3/2)x − 4, and x = 2 gives −7 as expected."
+ },
+ "SAT-3#9": {
+  "title": "Step back to the y-axis",
+  "text": "From (1, 3) to (3, −1), x goes up 2 and y goes down 4, so each step of 1 to the right lowers y by 2. Step one unit LEFT from (1, 3) instead and y goes up by 2, landing on (0, 5). That point is the y-intercept. With slope −2 and intercept 5, the line is y = −2x + 5."
+ },
+ "SAT-4#1": {
+  "title": "A pen and a notebook",
+  "text": "A pen and a notebook cost 8 dollars together, and the notebook costs 2 dollars more than the pen. Replace the notebook by a pen plus 2 dollars. Now the purchase is two pens plus 2 dollars for 8 dollars, so two pens cost 6 and one pen costs 3. Describing one item in terms of the other left a single unknown price, and that is all substitution does."
+ },
+ "SAT-4#2": {
+  "title": "Compare two receipts",
+  "text": "One receipt shows 2 burgers and 1 drink for 11 dollars. Another shows 1 burger and 1 drink for 7 dollars. The only difference between the orders is one burger, and the only difference between the totals is 4 dollars, so a burger costs 4. Subtracting one receipt from the other removed the drink. Elimination does the same thing with equations."
+ },
+ "SAT-4#3": {
+  "title": "Two runners on a track",
+  "text": "Let each equation be a runner, with slope as speed and intercept as starting position. Runners at different speeds are level with each other at exactly one moment. Runners at the same speed with different starting positions keep the same gap forever and are never level. Runners with the same speed and the same start are side by side the whole time. Those are the one, none and infinitely many cases."
+ },
+ "SAT-4#4": {
+  "title": "Line up and subtract",
+  "text": "Rewrite y = 2x + 1 as −2x + y = 1 so both equations have the letters lined up. Subtract it from 3x + y = 16. The y terms cancel, 3x − (−2x) is 5x, and 16 − 1 is 15. So 5x = 15 and x = 3. Put that into 3x + y = 16 to get 9 + y = 16, so y = 7. The solution is (3, 7)."
+ },
+ "SAT-4#5": {
+  "title": "Substitute the whole 3y",
+  "text": "The first equation gives 3y = 12 − 2x. The second equation contains 3y as a block, so replace it: 4x − (12 − 2x) = 6. Removing the parentheses gives 6x − 12 = 6, so 6x = 18 and x = 3. Then 3y = 12 − 6 = 6, so y = 2. The solution (3, 2) is the same one that adding the equations gives."
+ },
+ "SAT-4#6": {
+  "title": "Sum and difference of two numbers",
+  "text": "Read the system in words: two numbers add to 10 and differ by 4. If they were equal, each would be 5. To make them differ by 4 without changing the sum, move one up 2 and the other down 2. That gives 7 and 3. The larger is x because x − y is positive, so the solution is (7, 3)."
+ },
+ "SAT-4#7": {
+  "title": "Substitute and watch x disappear",
+  "text": "Put y = 3x + 2 into 6x − 2y = 5. The left side becomes 6x − 2(3x + 2) = 6x − 6x − 4, which is −4 for every x. The equation then claims −4 = 5, which is false. Since the x terms cancelled and left a false statement, no value of x can work, so the system has no solution."
+ },
+ "SAT-4#8": {
+  "title": "Start from all notebooks",
+  "text": "Suppose all 9 items were notebooks. That would cost 9 × 5 = 45 dollars, which is 15 dollars too much. Each notebook traded for a pen saves 5 − 2 = 3 dollars. Saving 15 dollars takes 15 ÷ 3 = 5 trades, so there are 5 pens and 9 − 5 = 4 notebooks. Check: 10 dollars of pens plus 20 dollars of notebooks is 30."
+ },
+ "SAT-4#9": {
+  "title": "Substitute the shared 2y",
+  "text": "The second equation says 2y = 9 − x. The first equation contains the same 2y, so swap it out: 3x + (9 − x) = 17. Combine the x terms to get 2x + 9 = 17, then subtract 9 for 2x = 8 and divide by 2. The result is x = 4, and y was never needed on its own."
+ },
+ "SAT-5#1": {
+  "title": "The flip without dividing by negatives",
+  "text": "Solve −2x ≤ 8 using only safe moves. Add 2x to both sides: 0 ≤ 8 + 2x. Subtract 8: −8 ≤ 2x. Divide by positive 2: −4 ≤ x. Read from the x side, that says x ≥ −4. The sign ended up pointing the other way even though it was never flipped. The flip rule is a shortcut for moving the x term across."
+ },
+ "SAT-5#2": {
+  "title": "Signs you see every day",
+  "text": "A ride sign says you must be at least 48 inches tall, so height ≥ 48, and a rider of exactly 48 inches gets on. An elevator holds at most 10 people, so people ≤ 10. A ticket is given for driving more than 65, so speed > 65, and exactly 65 is fine. A child fare is for ages less than 12, so age < 12. Ask each time: is the limit itself allowed?"
+ },
+ "SAT-5#3": {
+  "title": "Check one column of points",
+  "text": "Stay on the vertical line x = 2, where y = x + 1 gives 3. Now test points in that column against y > x + 1. The point (2, 5) gives 5 > 3, true. The point (2, 4) gives 4 > 3, true. The point (2, 3) gives 3 > 3, false, so the line itself is out. The point (2, 0) gives 0 > 3, false. Every column behaves this way, so the whole region above the line is shaded."
+ },
+ "SAT-5#4": {
+  "title": "Make a table of values",
+  "text": "Compute 3x − 5 for a few values of x. At x = 4 it is 7, at x = 5 it is 10, at x = 6 it is 13 and at x = 7 it is 16. The value goes up by 3 each time, reaches exactly 10 at x = 5 and is above 10 for every larger x. So the inequality is true for x > 5, and 5 itself is not included."
+ },
+ "SAT-5#5": {
+  "title": "Keep the x-term positive",
+  "text": "Add 2x to both sides of −2x + 4 ≤ 12 so the x-term moves to the right: 4 ≤ 12 + 2x. Subtract 12 from both sides to get −8 ≤ 2x. Divide by positive 2, which changes nothing about the sign: −4 ≤ x. Reading from the x side gives x ≥ −4, the same answer with no flip to remember."
+ },
+ "SAT-5#6": {
+  "title": "Ask which way the expression moves",
+  "text": "The expression −2x + 4 gets smaller as x gets larger, because each extra 1 in x takes away 2. It equals 12 exactly when x = −4. Moving right from −4 makes the expression fall below 12, which keeps the inequality true. Moving left makes it rise above 12. So the solutions are −4 and everything to its right: x ≥ −4."
+ },
+ "SAT-5#7": {
+  "title": "Work with the leftover capacity",
+  "text": "The driver uses 180 of the 1,200 pounds before any box is loaded, which leaves 1,200 − 180 = 1,020 pounds for boxes. Each box takes 60 pounds, and 1,020 ÷ 60 = 17 exactly. So 17 boxes fill the van to the limit, and any whole number of boxes up to 17 fits. That is b ≤ 17."
+ },
+ "SAT-5#8": {
+  "title": "Look at the column x = 2",
+  "text": "Fix x = 2 and ask which heights y are allowed. The first inequality needs y above 2. The second needs y below 2 × 2 − 2, which is also 2. No number is both above 2 and below 2, so no point with x = 2 can be a solution at all. That rules out (2, 3) without even using its y-value twice."
+ },
+ "SAT-5#9": {
+  "title": "Set the bus money aside first",
+  "text": "Put the 10 dollars for the bus in a separate pocket. That leaves 100 − 10 = 90 dollars for tickets. Now count up by 15: 15, 30, 45, 60, 75, 90. The sixth ticket uses the last of the money and a seventh cannot be paid for. You can buy any number of tickets up to 6, so t ≤ 6."
+ },
+ "SAT-6#1": {
+  "title": "Test the rules with powers of 2",
+  "text": "Use real numbers to see each rule. Multiplying: 2³ × 2⁴ is 8 × 16 = 128, and 128 is 2⁷, so the exponents 3 and 4 were added. Dividing: 2⁵ ÷ 2² is 32 ÷ 4 = 8, which is 2³, so 2 was subtracted from 5. Power of a power: (2²)³ is 4³ = 64, which is 2⁶, so 2 and 3 were multiplied."
+ },
+ "SAT-6#2": {
+  "title": "Place value already uses them",
+  "text": "Look at the columns of a decimal number such as 345.6. The hundreds column is 10², the tens column is 10¹, and each column to the right is worth one tenth of the one before. So the ones column must be 10⁰ = 1, and the tenths column must be 10⁻¹ = 1/10. Zero and negative exponents simply continue the same columns past the ones place."
+ },
+ "SAT-6#3": {
+  "title": "Growth over half a year",
+  "text": "A colony grows to 4 times its size every year, so after t years it has been multiplied by 4 to the power t. What happens in half a year? Call that factor f. Two half years make a full year, so f × f = 4 and f is 2. That is why 4 to the power 1/2 is the square root of 4. A third of a year would need a factor that gives 4 when cubed, a cube root."
+ },
+ "SAT-6#4": {
+  "title": "Write out every factor",
+  "text": "Expand both pieces into single factors. The first is 2 · x · x · x and the second is 5 · x · x · x · x. Put them in one long product and count. There are two plain numbers, 2 and 5, which multiply to 10. There are 3 + 4 = 7 copies of x. So the product is 10 followed by seven factors of x, which is 10x⁷."
+ },
+ "SAT-6#5": {
+  "title": "Cancel before combining",
+  "text": "Write (x⁴)³ as three blocks: x⁴ · x⁴ · x⁴. The divisor x⁵ is one block x⁴ times one extra x. Cancel a whole x⁴ block from the top, which leaves x⁴ · x⁴ divided by x. The two blocks make 8 factors of x, and dividing by one x removes one of them. Seven factors remain, so the answer is x⁷."
+ },
+ "SAT-6#6": {
+  "title": "Peel off one factor at a time",
+  "text": "You do not have to spot 3x in one go. First take out the number: 6 and 9 share a 3, so 6x² + 9x = 3(2x² + 3x). Now look inside the parentheses: both terms still share an x, so 2x² + 3x = x(2x + 3). Put the two pieces together to get 3x(2x + 3). Nothing more is shared by 2x and 3, so the factoring is finished."
+ },
+ "SAT-6#7": {
+  "title": "Cut and rearrange a square",
+  "text": "Draw a square with side x and cut a 7 by 7 square out of one corner. The area left is x² − 49, in an L shape. Slice the L into two rectangles: one is x by (x − 7) and the other is 7 by (x − 7). Lay them end to end along the shared side of length x − 7. They form one rectangle that is (x − 7) wide and (x + 7) long, so x² − 49 = (x − 7)(x + 7)."
+ },
+ "SAT-6#8": {
+  "title": "Draw the square as four pieces",
+  "text": "A square with side x + 3 has area (x + 3)². Split each side into a piece of length x and a piece of length 3. The square breaks into four parts: an x by x square, two strips that are each x by 3, and a 3 by 3 corner. Their areas are x², 3x, 3x and 9. Adding them gives x² + 6x + 9, and the two strips are the 6x that the choice x² + 9 leaves out."
+ },
+ "SAT-6#9": {
+  "title": "Get it from a division",
+  "text": "Work out 2² ÷ 2⁵ in two ways. As plain numbers it is 4 ÷ 32, which simplifies to 1/8. With the rule for dividing powers, you subtract the exponents: 2 − 5 = −3, so the same division is 2⁻³. Both must be the same number, so 2⁻³ = 1/8. The exponent is negative because more twos sit in the bottom than in the top."
+ },
+ "SAT-7#1": {
+  "title": "What goes wrong without the zero",
+  "text": "Try x(x − 1) = 6 and split it the wrong way: say x = 6 or x − 1 = 6. Test x = 6: 6 × 5 is 30, not 6. The split fails because the factors of 6 could be anything. Now move the 6 over: x² − x − 6 = 0, which factors as (x − 3)(x + 2) = 0. Here the split is safe and gives x = 3 or x = −2. Check: 3 × 2 = 6 and (−2)(−3) = 6."
+ },
+ "SAT-7#2": {
+  "title": "List the factor pairs",
+  "text": "For x² − 5x + 6, write every pair of whole numbers that multiplies to 6 and note each sum. The pair 1 and 6 adds to 7. The pair 2 and 3 adds to 5. The pair −1 and −6 adds to −7. The pair −2 and −3 adds to −5. Only the last pair has the sum you need, so the factors are (x − 2)(x − 3). A short list like this always finds the pair if one exists."
+ },
+ "SAT-7#3": {
+  "title": "A center and a distance",
+  "text": "Split the formula into two parts: −b/2a, then plus or minus √(b² − 4ac)/2a. The first part is the middle of the parabola, its line of symmetry. The second part is how far each solution sits from that middle. For x² − 5x + 6 the middle is 5/2 = 2.5 and the distance is √1/2 = 0.5. Step 0.5 left and right of 2.5 to reach 2 and 3."
+ },
+ "SAT-7#4": {
+  "title": "Three tiny equations",
+  "text": "Compare x² = 4, x² = 0 and x² = −4. The first has two solutions, 2 and −2. The second has only one, 0. The third has none, because no real number squared is negative. Written as x² − 4 = 0, x² = 0 and x² + 4 = 0, their discriminants are 16, 0 and −16. Positive, zero and negative match the counts two, one and none."
+ },
+ "SAT-7#5": {
+  "title": "Test small whole numbers",
+  "text": "If a whole number solves x² − 5x + 6 = 0, it must divide the constant 6, so try 1, 2, 3 and 6. At x = 1 the left side is 1 − 5 + 6 = 2. At x = 2 it is 4 − 10 + 6 = 0, a solution. At x = 3 it is 9 − 15 + 6 = 0, another solution. A quadratic has at most two solutions, so the search is over: x = 2 and x = 3."
+ },
+ "SAT-7#6": {
+  "title": "Complete the square",
+  "text": "Move the constant: x² + 2x = 15. Half of 2 is 1 and 1 squared is 1, so add 1 to both sides: x² + 2x + 1 = 16. The left side is (x + 1)². A number whose square is 16 is 4 or −4, so x + 1 = 4 or x + 1 = −4. Subtract 1 from each to get x = 3 or x = −5, the same pair that factoring gives."
+ },
+ "SAT-7#7": {
+  "title": "Check with sum and product",
+  "text": "For x² + bx + c = 0 the two solutions must add to −b and multiply to c. Here they should add to 4 and multiply to −1. Add 2 + √5 and 2 − √5: the roots cancel and the sum is 4. Multiply them: this is a difference of squares, 2² − (√5)² = 4 − 5 = −1. Both tests pass, so x = 2 ± √5 is confirmed without redoing the formula."
+ },
+ "SAT-7#8": {
+  "title": "Trap each solution between integers",
+  "text": "Evaluate x² − 4x − 1 at whole numbers and watch the sign. At x = 4 it is −1 and at x = 5 it is 4, so one solution lies between 4 and 5. At x = −1 it is 4 and at x = 0 it is −1, so the other lies between −1 and 0. Since √5 is about 2.24, the answers 2 + √5 ≈ 4.24 and 2 − √5 ≈ −0.24 sit exactly in those gaps."
+ },
+ "SAT-7#9": {
+  "title": "Find the lowest point instead",
+  "text": "The parabola y = 2x² + 3x + 5 opens upward because 2 is positive, so its lowest point is the vertex. That is at x = −3/4. The height there is 2(9/16) − 9/4 + 5 = 1.125 − 2.25 + 5 = 3.875. The lowest the expression ever gets is 3.875, which is above zero. It can never equal 0, so there are 0 real solutions."
+ },
+ "SAT-7#10": {
+  "title": "Match a perfect square",
+  "text": "One solution means the quadratic is a perfect square, (x + k)². Expand that pattern: x² + 2kx + k². Compare with x² + 6x + c. The middle terms must agree, so 2k = 6 and k = 3. The last terms must agree too, so c = k² = 9. The equation is then (x + 3)² = 0, whose only solution is x = −3."
+ },
+ "SAT-7#11": {
+  "title": "List the factor pairs of 40",
+  "text": "If the sides are whole numbers, they are a pair that multiplies to 40: 1 and 40, 2 and 20, 4 and 10, or 5 and 8. The length must be exactly 3 more than the width. The differences are 39, 18, 6 and 3, so only 5 and 8 fit. The width is the smaller one, w = 5 cm, and the length is 8 cm."
+ },
+ "SAT-8#1": {
+  "title": "One parabola in three outfits",
+  "text": "Take y = x² − 4x + 3. In this standard form, x = 0 gives 3, the y-intercept. Complete the square and it becomes y = (x − 2)² − 1, which shows the lowest point (2, −1). Factor it and it becomes y = (x − 1)(x − 3), which shows the crossings at 1 and 3. Plug x = 5 into all three and each gives 8. The curve is the same, and only the feature on display changes."
+ },
+ "SAT-8#2": {
+  "title": "Flip the table of x²",
+  "text": "List y = x² for x from −2 to 2: 4, 1, 0, 1, 4. The values dip to 0 in the middle and rise on both sides, a cup with a lowest point. Now multiply every value by −1 to get y = −x²: −4, −1, 0, −1, −4. The same list is turned upside down, so the middle is now the highest point. A negative a flips the cup into a cap."
+ },
+ "SAT-8#3": {
+  "title": "The table is a mirror",
+  "text": "Make a table for y = x² − 2x − 8 from x = −2 to x = 4. The values are 0, −5, −8, −9, −8, −5, 0. Read the list from both ends: 0 and 0, −5 and −5, −8 and −8, with −9 alone in the middle at x = 1. Equal heights pair up around x = 1, so the turning point is there, exactly halfway between the zeros −2 and 4."
+ },
+ "SAT-8#4": {
+  "title": "Expand and use −b/2a",
+  "text": "Multiply out (x − 3)² + 5 to get x² − 6x + 9 + 5 = x² − 6x + 14. Now a = 1 and b = −6, so the vertex is at x = −b/2a = 6/2 = 3. Put x = 3 into the expanded form: 9 − 18 + 14 = 5. The vertex is (3, 5), the same point that vertex form shows directly, which confirms the sign reading."
+ },
+ "SAT-8#5": {
+  "title": "Expand, then complete the square",
+  "text": "Multiply out: (x + 2)(x − 6) = x² − 4x − 12. Half of −4 is −2, and its square is 4, so write x² − 4x + 4 − 4 − 12 = (x − 2)² − 16. The vertex is (2, −16). For the zeros, set (x − 2)² = 16, so x − 2 is 4 or −4, giving x = 6 or x = −2. Both features match the factored form."
+ },
+ "SAT-8#6": {
+  "title": "Find two points at equal height",
+  "text": "The curve y = x² − 8x + 10 has height 10 whenever x² − 8x = 0, which is x(x − 8) = 0. So (0, 10) and (8, 10) are at the same height. A parabola is symmetric, so the vertex is halfway between them at x = 4. Then y = 16 − 32 + 10 = −6. The vertex is (4, −6), found without the formula."
+ },
+ "SAT-8#7": {
+  "title": "Expand and use −b/2a",
+  "text": "Multiply out (x − 1)(x − 7): x² − 7x − x + 7 = x² − 8x + 7. With a = 1 and b = −8, the vertex is at x = −b/2a = 8/2 = 4. Substitute into the expanded form: 16 − 32 + 7 = −9. The vertex is (4, −9). This takes longer than averaging the zeros, but it works even when a quadratic is not factored."
+ },
+ "SAT-8#8": {
+  "title": "Tabulate each second",
+  "text": "Compute the height at whole seconds. At t = 0 it is 0. At t = 1 it is −16 + 64 = 48. At t = 2 it is −64 + 128 = 64. At t = 3 it is −144 + 192 = 48. At t = 4 it is −256 + 256 = 0. The heights 0, 48, 64, 48, 0 rise and fall evenly around t = 2, so the highest point is 64 feet."
+ },
+ "SAT-8#9": {
+  "title": "Locate the vertex from the zeros",
+  "text": "Factor first: x² + 6x + 5 = (x + 1)(x + 5), so the zeros are −1 and −5. The vertex is halfway between, at x = −3. Its height is (−3 + 1)(−3 + 5) = (−2)(2) = −4. The coefficient of x² is 1, so vertex form is 1 times (x − h)² plus k with h = −3 and k = −4. That gives y = (x + 3)² − 4."
+ },
+ "SAT-9#1": {
+  "title": "Slide a ruler up the page",
+  "text": "Draw y = x² and lay a ruler flat along y = −1. It sits below the curve and never touches it: no solutions. Slide it up to y = 0 and it just touches the bottom of the curve at one point. Slide it up to y = 4 and it cuts the curve at x = −2 and x = 2. Tilting the ruler changes nothing about the count: a straight edge meets the curve 0, 1 or 2 times."
+ },
+ "SAT-9#2": {
+  "title": "Same idea as whole numbers",
+  "text": "With whole numbers, 3 is a factor of 12 because the division leaves nothing over. Polynomials work the same way, and plugging in is the quick test for leftovers. Take p(x) = x³ − x. At x = 1 it gives 1 − 1 = 0, so (x − 1) should be a factor. It is: x³ − x = x(x − 1)(x + 1). Going the other way, any product containing (x − 1) is forced to be 0 at x = 1."
+ },
+ "SAT-9#3": {
+  "title": "Like 17 divided by 5",
+  "text": "Dividing 17 by 5 gives 3 with remainder 2, which means 17 = 5 × 3 + 2. Polynomials split the same way. Divide x² + 1 by x − 1: the result is x + 1 with 2 left over, because (x − 1)(x + 1) + 2 = x² − 1 + 2 = x² + 1. Now plug 1 into x² + 1 and you get 2, the same leftover. At x = 1 the divisor is zero, so only the remainder is left."
+ },
+ "SAT-9#4": {
+  "title": "Compare the two in a table",
+  "text": "List x² and x + 6 side by side for whole numbers. At x = −3 they are 9 and 3. At x = −2 they are 4 and 4, a match. At x = 0 they are 0 and 6. At x = 2 they are 4 and 8. At x = 3 they are 9 and 9, another match. A line meets a parabola at most twice, so the meeting points are (−2, 4) and (3, 9)."
+ },
+ "SAT-9#5": {
+  "title": "Divide it out piece by piece",
+  "text": "Build x³ − 4x² + x + 6 from multiples of (x − 2). Use x²(x − 2) = x³ − 2x², which leaves −2x² + x + 6. Use −2x(x − 2) = −2x² + 4x, which leaves −3x + 6. Use −3(x − 2) = −3x + 6, which leaves nothing. The polynomial is (x − 2)(x² − 2x − 3) with no remainder, so the answer is yes, (x − 2) is a factor."
+ },
+ "SAT-9#6": {
+  "title": "Do the division directly",
+  "text": "Take multiples of (x − 2) away from x² + 3x − 5. First x(x − 2) = x² − 2x, and subtracting it leaves 5x − 5. Next 5(x − 2) = 5x − 10, and subtracting it leaves 5. Nothing with an x remains, so the division stops. The quotient is x + 5 and the remainder is 5, the same number that plugging in 2 gives."
+ },
+ "SAT-9#7": {
+  "title": "Flip both fractions",
+  "text": "If two fractions are equal, their reciprocals are equal too. Turning both sides of 6/x = 3/(x − 2) upside down gives x/6 = (x − 2)/3. Multiply both sides by 6 to clear the denominators: x = 2(x − 2), so x = 2x − 4. Subtract x and add 4 to get x = 4. Neither original denominator is zero there, so the solution stands."
+ },
+ "SAT-9#8": {
+  "title": "Compare the numerators",
+  "text": "The top of the left fraction, 6, is twice the top of the right fraction, 3. For the two fractions to be equal, the bottom on the left must also be twice the bottom on the right. So x must be twice x − 2. Ask which number is double the number 2 less than itself: 4 is double 2. So x = 4, and 6/4 and 3/2 are both 1.5."
+ },
+ "SAT-9#9": {
+  "title": "Multiply out and test",
+  "text": "Take a = 1 and expand. First (x + 1)(x − 2) = x² − x − 2. Multiply that by (x − 5) to get x³ − 6x² + 3x + 10. Now test the three zeros in this expanded form. At −1: −1 − 6 − 3 + 10 = 0. At 2: 8 − 24 + 6 + 10 = 0. At 5: 125 − 150 + 15 + 10 = 0. All three work, so the product of factors is right."
+ },
+ "SAT-10#1": {
+  "title": "Folding a sheet of paper",
+  "text": "Fold one sheet of paper in half and it is 2 layers thick. Fold again for 4, then 8, then 16. Each fold multiplies the layers by 2, so after x folds there are 2 to the power x layers. Start with a stack of 3 sheets instead and the counts are 3, 6, 12, 24, which is 3 times 2 to the power x. The 3 is the start and the 2 is the factor per fold."
+ },
+ "SAT-10#2": {
+  "title": "Think of a price tag",
+  "text": "A 50 dollar jacket is 20% off. You could find the discount, 10 dollars, and subtract it. Or notice that you pay the other 80% of the price: 50 × 0.80 = 40 dollars in one step. A 6% tax works the other way. You pay the full price and 6% more, which is 106% of it, so multiply by 1.06. The factor is the percent of the old amount that you end up with."
+ },
+ "SAT-10#3": {
+  "title": "Walking halfway to a wall",
+  "text": "Stand 8 meters from a wall and walk half the remaining distance each time. After one walk you are 4 meters away, then 2, then 1, then half a meter. Each walk leaves the other half still in front of you, so there is always some distance left. You get as close as you like, yet no single step finishes the trip. Exponential decay approaches zero in the same way."
+ },
+ "SAT-10#4": {
+  "title": "Rule out the straight-line model",
+  "text": "Three percent of 2,000 is 60, so it is tempting to write 2000 + 60t. Test year 2. In year 1 the town grows to 2,060. In year 2 it grows by 3% of 2,060, which is 61.8, reaching 2,121.8. The straight-line guess gives only 2,120. The yearly gain keeps getting bigger because it is 3% of a bigger town, and only repeated multiplying by 1.03 captures that: P(t) = 2000(1.03)^t."
+ },
+ "SAT-10#5": {
+  "title": "Subtract the loss each year",
+  "text": "Follow the dollars year by year. In the first year the phone loses 20% of 900, which is 180, so it is worth 900 − 180 = 720. In the second year it loses 20% of 720, not of 900. That is 144, so it is worth 720 − 144 = 576 dollars. The second loss is smaller than the first because it is taken from a smaller value."
+ },
+ "SAT-10#6": {
+  "title": "Run the clock backwards",
+  "text": "Check the answer by undoing it. If there are 800 bacteria at hour 12, there were half as many 4 hours earlier: 400 at hour 8. Halve again for 200 at hour 4, and once more for 100 at hour 0. Three halvings cover 3 × 4 = 12 hours and land exactly on the starting amount, so 800 is correct."
+ },
+ "SAT-10#7": {
+  "title": "Take a bigger jump",
+  "text": "Two doublings in a row multiply by 4, so the bacteria quadruple every 8 hours. From hour 0 to hour 8 the count goes from 100 to 400. Only 4 hours are left to reach hour 12, which is one more doubling: 400 becomes 800. Grouping the doublings differently gives the same 800, because the total factor over 12 hours is 8 either way."
+ },
+ "SAT-10#8": {
+  "title": "Read 0.9 as 90 per 100",
+  "text": "The factor 0.9 is 90/100. So out of every 100 units of value, 90 are kept and 10 are gone at each step. Ten out of a hundred is a 10% decrease. Try a later step to see that the percent holds: from 45 the next value is 40.5, a drop of 4.5, and 4.5 is 10% of 45. The dollar drop changes but the percent does not."
+ },
+ "SAT-10#9": {
+  "title": "Each jump equals the term before",
+  "text": "Look at what is added each time: 3 is added to 3, then 6 is added to 6, then 12 is added to 12. Every term grows by its own size, and adding a number to itself is doubling. A linear pattern would add the same 3 each time and give 3, 6, 9, 12. So this one is exponential with factor 2, and the next term would be 24 + 24 = 48."
+ },
+ "SAT-11#1": {
+  "title": "Scaling a recipe",
+  "text": "A recipe uses 2 cups of flour for 3 eggs. To use 12 eggs you make 4 batches, so you need 4 × 2 = 8 cups. The proportion 2/3 = x/12 says the same thing: the bottom was multiplied by 4, so the top must be too. Cross-multiplying is a way to find x when the scale factor is not easy to see: 3x = 24, so x = 8."
+ },
+ "SAT-11#2": {
+  "title": "Trading dollars for quarters",
+  "text": "Three dollars can be traded for quarters at 4 quarters per dollar, which gives 12 quarters. You hold the same amount of money, but the count went from 3 to 12 because a quarter is a smaller unit. Unit conversion is that trade. Changing 3 feet to inches gives 36 for the same reason: inches are smaller, so more of them are needed. If the number moves the wrong way, the fraction is upside down."
+ },
+ "SAT-11#3": {
+  "title": "Turn the ratio into fractions",
+  "text": "In every group of 5 marbles, 2 are red and 3 are blue. So red is 2/5 of any bag mixed this way and blue is 3/5. For 40 marbles, 2/5 of 40 is 16 red and 3/5 of 40 is 24 blue. The ratio compares the parts to each other. The fractions 2/5 and 3/5 compare each part to the whole. Both describe the same bag."
+ },
+ "SAT-11#4": {
+  "title": "Set up a proportion",
+  "text": "Write miles over gallons on both sides: 210/6 = m/10. Cross-multiply to clear the fractions: 6 × m = 210 × 10, so 6m = 2,100. Divide by 6 to get m = 350 miles. The unit rate never has to be computed, although it is hidden inside the proportion, since both fractions equal 35 miles per gallon."
+ },
+ "SAT-11#5": {
+  "title": "Break 10 gallons into pieces",
+  "text": "Split 10 gallons into 6 + 4. Six gallons take the car 210 miles, which is given. Two gallons are a third of 6, so they take it a third of 210, which is 70 miles. Four gallons are twice that, 140 miles. Add the two pieces: 210 + 140 = 350 miles for 10 gallons."
+ },
+ "SAT-11#6": {
+  "title": "Change the fraction to a decimal",
+  "text": "The fraction 3/8 is 0.375, so x is 0.375 of 56. Work it in pieces. One quarter of 56 is 14, which covers 0.25. One eighth of 56 is 7, which covers the other 0.125. Add them: 14 + 7 = 21. So x = 21, and 21 ÷ 56 on a calculator gives 0.375 again."
+ },
+ "SAT-11#7": {
+  "title": "Shrink the hour step by step",
+  "text": "In one hour the car covers 90 km, which is 90,000 meters. An hour has 60 minutes, so in one minute it covers 90,000 ÷ 60 = 1,500 meters. A minute has 60 seconds, so in one second it covers 1,500 ÷ 60 = 25 meters. The speed is 25 meters per second, found by asking how far it goes in smaller and smaller pieces of time."
+ },
+ "SAT-11#8": {
+  "title": "Count up by groups of nine",
+  "text": "Seat the class in groups of 4 boys and 5 girls, 9 students per group. One group has 5 girls out of 9 students. Two groups have 10 girls out of 18. Three groups have 15 out of 27. Four groups have 20 out of 36, and 36 is the class size. So there are 20 girls, and the 16 boys make up the rest."
+ },
+ "SAT-11#9": {
+  "title": "Use 4 inches for 100 miles",
+  "text": "If 1 inch stands for 25 miles, then 4 inches stand for 100 miles, a rounder scale to think with. The towns are 3.2 inches apart, and 3.2 is 0.8 of 4, because 3.2 ÷ 4 = 0.8. So the real distance is 0.8 of 100 miles, which is 80 miles."
+ },
+ "SAT-12#1": {
+  "title": "Cut the whole into 100 slices",
+  "text": "Imagine 240 cut into 100 equal slices. Each slice is 240 ÷ 100 = 2.4, and that is what 1% of 240 looks like. Thirty-five percent is 35 of those slices, so it is 35 × 2.4 = 84. Any percent question can be done this way: find the size of one slice, then take as many slices as the percent says."
+ },
+ "SAT-12#2": {
+  "title": "A bar of twenty blocks",
+  "text": "Draw the original amount as a bar of 20 equal blocks, so each block is 5%. A 15% increase adds 3 more blocks. The new bar has 23 blocks out of the old 20, and 23/20 = 1.15. A 15% decrease removes 3 blocks and leaves 17 out of 20, which is 0.85. If the bar stands for 200 dollars, each block is 10 dollars, so the results are 230 and 170."
+ },
+ "SAT-12#3": {
+  "title": "A kitten and a large dog",
+  "text": "A 1 kg kitten and a 40 kg dog each gain 1 kg. The change is the same, but it means very different things. The kitten doubled, a 100% increase, since 1 ÷ 1 = 1. The dog barely changed, a 2.5% increase, since 1 ÷ 40 = 0.025. Percent change tells you how big the change is compared with what was there before, so the starting amount goes on the bottom."
+ },
+ "SAT-12#4": {
+  "title": "The loss follows a pattern",
+  "text": "Start at 100 and go up then down by the same percent. With 10% you get 110, then 99. With 20% you get 120, then 96. With 50% you get 150, then 75. You always finish below 100, because the drop is taken from the larger middle amount. Reversing the order gives the same result: down 20% is 80, then up 20% is 96. Multiplying 0.8 × 1.2 or 1.2 × 0.8 makes no difference."
+ },
+ "SAT-12#5": {
+  "title": "Use the fraction 7/20",
+  "text": "Write 35% as a fraction: 35/100 simplifies to 7/20. To take 7/20 of 240, first find one twentieth. 240 ÷ 20 is 12. Then take seven of them: 7 × 12 = 84. Working with a simple fraction avoids decimals, and it is quick whenever the whole divides evenly by the denominator."
+ },
+ "SAT-12#6": {
+  "title": "Count the one percents",
+  "text": "One percent of the starting price is 50 ÷ 100 = 0.50 dollars. The price rose by 12 dollars. How many chunks of 0.50 fit into 12? Since two chunks make a dollar, 12 dollars hold 24 chunks. Each chunk is 1% of the original, so the rise is 24%."
+ },
+ "SAT-12#7": {
+  "title": "Try 100 and scale up",
+  "text": "Guess an easy original price of 100 dollars. After 25% off it would cost 75 dollars. The real sale price is 90, which is 90 ÷ 75 = 1.2 times the guess result. Discounts scale with the price, so the real original is 1.2 times the guess as well: 1.2 × 100 = 120 dollars. Check: a quarter of 120 is 30, and 120 − 30 = 90."
+ },
+ "SAT-12#8": {
+  "title": "Draw the price in quarters",
+  "text": "Draw the original price as a bar cut into 4 equal parts. Taking 25% off removes one part and leaves three, and those three parts together are the 90 dollars paid. So one part is 90 ÷ 3 = 30 dollars. The full bar has four parts, 4 × 30 = 120 dollars. The picture gives the answer directly, so no choice needs testing."
+ },
+ "SAT-12#9": {
+  "title": "Use fractions instead of decimals",
+  "text": "Up 20% means multiplying by 6/5, since 120% is 120/100. Down 20% means multiplying by 4/5. Together they multiply the starting value by 6/5 × 4/5 = 24/25. The stock ends with 24 of every 25 dollars it started with, so 1 dollar in every 25 is lost. One twenty-fifth is 4%, so the result is a 4% loss overall."
+ },
+ "SAT-12#10": {
+  "title": "Build it from ten percent",
+  "text": "Ten percent of 72 is 7.2. Doubling that, 20% is 14.4, which is not yet 18. The gap is 18 − 14.4 = 3.6, and 3.6 is half of 7.2, so it is another 5%. Altogether 18 is 20% + 5% = 25% of 72. Check: a quarter of 72 is 18."
+ },
+ "SAT-13#1": {
+  "title": "A seesaw and a lineup",
+  "text": "Put weights at 1, 2 and 9 on a number line. The mean, 4, is where the line balances: the distances on the left, 3 and 2, add to 5, and the distance on the right is 5. For the median, think of people lined up by height. The person standing in the middle of the line is the median, however tall the people at the ends are. Here that is 2."
+ },
+ "SAT-13#2": {
+  "title": "A billionaire walks in",
+  "text": "Five people in a cafe each earn about 50 thousand dollars a year, so the mean and the median are both about 50 thousand. A billionaire walks in. The mean income in the room is now over 100 million dollars, although nobody there earns anything like that. Line the six up by income and the middle is still about 50 thousand. One person changed the mean completely and left the median almost untouched."
+ },
+ "SAT-13#3": {
+  "title": "Two small data sets",
+  "text": "Take 2, 3, 3, 4, 18. Most values are small and one sits far to the right. The median is 3, but the mean is 30 ÷ 5 = 6, pulled toward the 18. Now take the mirror image, 2, 16, 17, 17, 18, with one value far to the left. The median is 17 and the mean is 70 ÷ 5 = 14, pulled toward the 2. The mean moves toward the tail each time."
+ },
+ "SAT-13#4": {
+  "title": "Two archers, same aim",
+  "text": "Two archers both centre their arrows on the bullseye, so on average each is on target. The first archer's arrows land in a tight cluster. The second archer's arrows are scattered all over the target. The averages match, but the scatter does not. Standard deviation is a number for that scatter: small for the tight cluster, large for the scattered one."
+ },
+ "SAT-13#5": {
+  "title": "Check the balance, cross off pairs",
+  "text": "Test the mean of 10 by measuring each value from it: 3 is 7 below, 7 is 3 below, 8 is 2 below, 10 is level and 22 is 12 above. Below totals 7 + 3 + 2 = 12 and above totals 12, so 10 is the balance point. For the median, cross off the smallest and largest together: 3 with 22, then 7 with 10. The value left is 8."
+ },
+ "SAT-13#6": {
+  "title": "Share out the change",
+  "text": "Only one value changed, and it fell by 10. That takes 10 off the total, and the total is shared among 5 values, so the mean falls by 10 ÷ 5 = 2. It goes from 10 to 8 without adding the list again. For the median, ask whether the order changed. The new value 12 is still larger than 10, so it is still last and the middle value is still 8."
+ },
+ "SAT-13#7": {
+  "title": "Guess, then adjust",
+  "text": "Suppose the fifth score were 88. The total would be 340 + 88 = 428 and the average 428 ÷ 5 = 85.6, which is 2.4 short of 88. Each extra point on the fifth test raises the average by one fifth of a point, because it is shared among 5 tests. Closing a gap of 2.4 takes 2.4 × 5 = 12 extra points. The fifth score must be 88 + 12 = 100."
+ },
+ "SAT-13#8": {
+  "title": "Lift everyone by three",
+  "text": "If the fifth score were 85, the average would stay at 85. To raise the average of five tests from 85 to 88, every test needs 3 more points, 5 × 3 = 15 points in all. The first four scores are fixed, so the fifth test has to supply all 15 on its own. That makes the fifth score 85 + 15 = 100."
+ },
+ "SAT-13#9": {
+  "title": "Cross off from both ends",
+  "text": "You can find the middle without rewriting the list. Strike out the smallest and the largest together: 1 and 12. From what is left, 4, 9, 7, 6, strike out the smallest and largest again: 4 and 9. Two values remain, 7 and 6, and they are the middle pair. Their average is 13 ÷ 2 = 6.5, which is the median."
+ },
+ "SAT-13#10": {
+  "title": "Compare the reach on each side",
+  "text": "Measure how far values can sit from the median of 45. On the high side the plot reaches 150, which is 105 above the median. On the low side an income cannot go below 0, so no value is more than 45 below. The half above the median can be far more extreme than the half below, so the high values outweigh the low ones and the mean lands above 45."
+ },
+ "SAT-14#1": {
+  "title": "Study hours and test scores",
+  "text": "Suppose a class's line of best fit is score = 5 × hours + 60. For 3 hours of study it predicts 75. One student who studied 3 hours might score 70 and another 82, and the line is not wrong about either, because it describes the middle of the group. The slope 5 says that students who study one more hour score about 5 points higher on average."
+ },
+ "SAT-14#2": {
+  "title": "What happens in the long run",
+  "text": "Roll a fair die 600 times. Each of the six faces comes up about 100 times. The even faces 2, 4 and 6 together come up about 300 times out of 600, which is one half, matching 3 favorable faces out of 6. Now suppose you are told the roll was above 3. Only 4, 5 and 6 are possible, so the total is 3, and the chance of an even number becomes 2 out of 3."
+ },
+ "SAT-14#3": {
+  "title": "Sort everyone in the gym",
+  "text": "Picture all 200 students standing in a gym, juniors on the left side and seniors on the right. Within each side, students who play a sport stand at the front. Every student has exactly one spot. A question about all students looks at the whole gym. A question that says given the student is a junior sends you to the left side only, where 60 students stand, and the seniors no longer count."
+ },
+ "SAT-14#4": {
+  "title": "Two studies that overreach",
+  "text": "A survey taken at a basketball game finds that most students love school sports. The people asked chose to be at the game, so the result cannot speak for the whole school. Another study finds that students who eat breakfast get better grades. Those students chose breakfast themselves and may also sleep more or have calmer mornings. Only if a coin flip decides who gets breakfast can the grades be credited to breakfast."
+ },
+ "SAT-14#5": {
+  "title": "Climb the line in a table",
+  "text": "Build the predictions in steps of 2. At x = 0 the line gives 10. Each step of 2 in x adds 2 × 2.5 = 5 to the prediction. So x = 2 gives 15, x = 4 gives 20, x = 6 gives 25 and x = 8 gives 30. The table reaches the same predicted value of 30, and it shows the steady climb that the slope describes."
+ },
+ "SAT-14#6": {
+  "title": "Subtract from the whole",
+  "text": "Among the 60 juniors, 60 − 24 = 36 do not play a sport. The chance that a junior does not play is 36/60, which is 0.6. A junior either plays or does not, so the two chances add to 1. That makes the chance of playing 1 − 0.6 = 0.4, the same answer reached from the other side."
+ },
+ "SAT-14#7": {
+  "title": "Think in tenths of the juniors",
+  "text": "Ten percent of the 60 juniors is 6 students. The 24 juniors who play a sport are 4 groups of 6, so they are 4 tenths of the juniors. Four tenths is 0.4, or 40%. Put another way, 24 out of 60 is the same share as 4 out of 10, and no senior ever enters the count."
+ },
+ "SAT-14#8": {
+  "title": "Imagine many draws",
+  "text": "Draw a marble, note its colour, put it back and repeat 800 times. Each of the 8 marbles comes out about 100 times. The 5 red marbles together come out about 500 times, so red shows up in about 500 of 800 draws, which is 5/8. The other 300 or so draws are blue, 3/8 of them, and 5/8 + 3/8 = 1 as it should."
+ },
+ "SAT-14#9": {
+  "title": "Tasting a pot of soup",
+  "text": "A cook stirs a pot well and tastes one spoonful. The stirring is the random part, and it lets one spoonful stand for the whole pot. It says nothing about a different pot on the next burner. Here the pot is the 9th grade. The sample was stirred fairly, so it speaks for 9th graders, but the 10th, 11th and 12th grade pots were never tasted. The justified conclusion is that most 9th graders like pizza."
+ },
+ "SAT-14#10": {
+  "title": "Suppose the truth were 49%",
+  "text": "Imagine that true support is 49%, which is not a majority. A poll with a 4 point margin of error would then be expected to report anything from about 45% to 53%. A result of 52% fits comfortably inside that range. So the poll result is what you might see even when support is below half, and it cannot prove a majority. No, a majority is not certain."
+ },
+ "SAT-15#1": {
+  "title": "Open a pair of scissors",
+  "text": "Scissors are two straight lines crossing at the screw. Open the blades by 30° and the handles open by 30° as well, because each blade and its handle are one straight piece. The blade gap and the handle gap are the opposite angles, and they always match. The two side gaps match each other too, and each is what is left of a straight line: 180° − 30° = 150°."
+ },
+ "SAT-15#2": {
+  "title": "Fill in all eight angles",
+  "text": "Suppose a line crosses the top parallel line and makes a 70° angle. Its neighbor on the straight line is 110°, and the opposite angles copy these, so that crossing has 70°, 110°, 70°, 110°. The bottom line runs in the same direction, so its crossing looks identical: 70°, 110°, 70°, 110°. Eight angles in total, but only two different numbers, and 70 + 110 = 180."
+ },
+ "SAT-15#3": {
+  "title": "Draw a parallel through the corner",
+  "text": "At the corner with the exterior angle, draw a line parallel to the opposite side of the triangle. It cuts the exterior angle into two pieces. One piece is an alternate angle to one far corner, so it has the same size. The other piece is a corresponding angle to the other far corner, so it matches that one. The exterior angle is the two far angles placed side by side, which is why 55° and 75° make 130°."
+ },
+ "SAT-15#4": {
+  "title": "Measure both from a right angle",
+  "text": "A straight line is two right angles, 90° + 90°. The 115° angle is 25° more than a right angle, so it leans 25° past the upright. Its partner on the line must then be 25° less than a right angle, which is 90° − 25° = 65°. One angle's extra is exactly the other angle's shortfall."
+ },
+ "SAT-15#5": {
+  "title": "Round, subtract, then repair",
+  "text": "Round the known angles to easy numbers: 48° is about 50° and 67° is about 70°. Those use up 120° of the 180°, which would leave 60°. But the rounding added 2° and 3° that are not really there, 5° too much in total. Give those 5° back to the third angle: 60° + 5° = 65°."
+ },
+ "SAT-15#6": {
+  "title": "Use all three exterior angles",
+  "text": "The exterior angles of any triangle, one at each corner, add up to 360°. One of them is 130°. The corner with the 55° angle has an exterior angle of 180° − 55° = 125°. That leaves 360° − 130° − 125° = 105° for the exterior angle at the unknown corner. The interior angle there is 180° − 105° = 75°, the same answer as the theorem gives."
+ },
+ "SAT-15#7": {
+  "title": "Watch the 180s cancel",
+  "text": "Write both rules in one line before doing any arithmetic. The inside neighbor is 180 − 130, so the unknown is x = 180 − 55 − (180 − 130). Remove the parentheses: x = 180 − 55 − 180 + 130. The two 180s cancel and leave x = 130 − 55 = 75. The long route collapses into the theorem by itself, and the answer is still 75°."
+ },
+ "SAT-15#8": {
+  "title": "Add up the full turn",
+  "text": "The four angles around one crossing point make a full turn of 360°. The 72° angle and the angle opposite it are equal, so together they use 144°. The other two angles share the remaining 360° − 144° = 216°, and they are opposite each other, so each is 216° ÷ 2 = 108°. The second crossing has the same four angles, so every partner is 72° or 108°."
+ },
+ "SAT-15#9": {
+  "title": "Cut it down the middle",
+  "text": "Draw a line from the 40° vertex straight down to the middle of the base. By symmetry it splits the triangle into two identical right triangles. Each has a right angle at the base and half the vertex angle, 20°, at the top. The third angle of each right triangle is 180° − 90° − 20° = 70°, and that is the base angle of the original triangle."
+ },
+ "SAT-15#10": {
+  "title": "Notice the largest part is half",
+  "text": "In the ratio 1 : 2 : 3 the largest part equals the other two added together, because 3 = 1 + 2. So the largest angle is half of the whole 180°, which is 90°. The other two angles share the remaining 90° in the ratio 1 : 2, so one is a third of 90° and the other is two thirds: 30° and 60°. The angles are 30°, 60° and 90°."
+ },
+ "SAT-16#1": {
+  "title": "Count the squares",
+  "text": "Draw a 4 by 3 rectangle on grid paper and count: 12 squares, which is 4 × 3. Cut it corner to corner and each right triangle holds half, 6 squares, which is half of 4 × 3. For a circle of radius 1, draw the 2 by 2 square around it, with area 4, and the tilted square inside it, with area 2. The circle's area is in between, and it turns out to be about 3.14, which is π × 1²."
+ },
+ "SAT-16#2": {
+  "title": "A stack of coins",
+  "text": "A stack of 20 identical coins takes up 20 times the space of one coin, so its volume is the area of a coin face times the height of the stack. Push the stack so it leans and the volume is unchanged. With numbers: a cylinder with base area 12 and height 5 holds 12 × 5 = 60 cubic units. A cone with that same base and height holds one third as much, 20 cubic units."
+ },
+ "SAT-16#3": {
+  "title": "Double a rectangle and a box",
+  "text": "A 2 by 3 rectangle has area 6. Double every side to 4 by 6 and the area is 24, which is 4 times as much, not 2 times. A 1 by 2 by 3 box has volume 6. Double every edge to 2 by 4 by 6 and the volume is 48, which is 8 times as much. Doubling gave factors of 2, 4 and 8 for length, area and volume: 2, 2², 2³."
+ },
+ "SAT-16#4": {
+  "title": "Compare with the box around it",
+  "text": "The cylinder fits snugly inside a box that is 6 wide, 6 deep and 10 tall, since the diameter is 6. The box has volume 6 × 6 × 10 = 360. A circle fills π/4 of the square drawn around it, which is about 78.5%. So the cylinder holds about 0.785 × 360 ≈ 283. That agrees with 90π ≈ 282.7, so the answer 90π is the right size."
+ },
+ "SAT-16#5": {
+  "title": "Add up the rows",
+  "text": "Slice the 10 by 8 rectangle into 8 rows, each 10 units long and 1 unit tall. The hole is 3 units tall, so it cuts into 3 of the rows, and each of those keeps 10 − 4 = 6 square units. The other 5 rows are untouched and keep 10 each. The area left is 3 × 6 + 5 × 10 = 18 + 50 = 68."
+ },
+ "SAT-16#6": {
+  "title": "Try an actual triangle",
+  "text": "Pick a triangle with area 5, for example base 5 and height 2, since half of 5 × 2 is 5. Make every length 3 times as long: the base becomes 15 and the height becomes 6. The new area is half of 15 × 6, which is half of 90, or 45. The base and the height each tripled, so the area was multiplied by 3 twice."
+ },
+ "SAT-16#7": {
+  "title": "Put 3 into the area formula",
+  "text": "The area of the small triangle is half of base times height, and that equals 5. In the large triangle the base is 3 times as long and the height is 3 times as long. Its area is half of (3 × base) × (3 × height). Pull the two 3s to the front: 9 times half of base times height, which is 9 × 5 = 45."
+ },
+ "SAT-16#8": {
+  "title": "Compare sides inside one triangle",
+  "text": "Stay inside the small triangle first. Its side of 10 is 2.5 times its side of 4, because 10 ÷ 4 = 2.5. Similar triangles have the same shape, so the big triangle has the same relationship between its matching sides. The side matching 4 is 6, so the side matching 10 is 2.5 × 6 = 15."
+ },
+ "SAT-16#9": {
+  "title": "One formula, easiest order",
+  "text": "Use the cone formula from the reference sheet in a single line: one third × π × radius squared × height. That is one third × π × 9 × 4. Multiply in the easiest order: one third of 9 is 3, and 3 × 4 is 12, so the volume is 12π. As a size check, 12π is about 38, well under the 144 of the 6 by 6 by 4 box around the cone."
+ },
+ "SAT-17#1": {
+  "title": "Four triangles in a square",
+  "text": "Take four copies of a right triangle with legs a and b and hypotenuse c. Place them in the corners of a square with side a + b so the hypotenuses form a tilted square in the middle. The uncovered space is c². Now slide the triangles together into two rectangles. The uncovered space becomes two squares, a² and b². The triangles did not change size, so the uncovered areas are equal: a² + b² = c²."
+ },
+ "SAT-17#2": {
+  "title": "A carpenter's corner check",
+  "text": "Builders use 3-4-5 to test whether a corner is square. Mark 3 feet along one wall and 4 feet along the other. If the corner is a true right angle, the tape between the marks reads exactly 5 feet. For a bigger room they mark 6 and 8 and look for 10, or 30 and 40 and look for 50. Check the last one: 900 + 1,600 = 2,500, which is 50 squared."
+ },
+ "SAT-17#3": {
+  "title": "Put numbers on both shapes",
+  "text": "A square tile with side 10 cm has a diagonal of 10 × √2, about 14.1 cm, so the diagonal is roughly 41% longer than a side for any square. An equilateral triangle with side 10 cm, cut in half, gives a right triangle with short leg 5, hypotenuse 10 and height 5 × √3, about 8.7 cm. Check: 5² + 8.7² is about 100. The decimals 1.41 and 1.73 are worth remembering."
+ },
+ "SAT-17#4": {
+  "title": "Try it on a 3-4-5 triangle",
+  "text": "Stand at the angle across from the side of length 3. Opposite is 3, adjacent is 4 and the hypotenuse is 5. So sine is 3/5, cosine is 4/5 and tangent is 3/4. Double the triangle to 6-8-10 and the ratios are 6/10, 8/10 and 6/8, the same numbers. Now move to the other acute angle: opposite and adjacent swap, so its sine is 4/5 and its cosine is 3/5."
+ },
+ "SAT-17#5": {
+  "title": "Bound it, then test squares",
+  "text": "The hypotenuse is longer than the longer leg, 12, and shorter than the two legs laid end to end, 21. Its square must be 81 + 144 = 225. Try whole numbers just above 12: 13² is 169, 14² is 196 and 15² is 225. The third one fits, so c = 15, and it sits sensibly between 12 and 21."
+ },
+ "SAT-17#6": {
+  "title": "Factor the squares",
+  "text": "See why the triple shortcut works by factoring. Since 9 = 3 × 3 and 12 = 3 × 4, the sum 9² + 12² is 3² × 3² + 3² × 4². Take out the shared 3² to get 3² × (3² + 4²) = 9 × 25. The square root of 9 × 25 is 3 × 5 = 15. The common factor 3 passes straight through the theorem, so c = 15."
+ },
+ "SAT-17#7": {
+  "title": "Use a difference of squares",
+  "text": "The missing leg squared is 13² − 5². Instead of squaring both, factor it as (13 − 5)(13 + 5) = 8 × 18 = 144. The square root of 144 is 12, so b = 12. This trick turns two squarings and a subtraction into one small multiplication, and it helps most when the numbers are large."
+ },
+ "SAT-17#8": {
+  "title": "Rebuild the equilateral triangle",
+  "text": "Place a mirror image of the triangle against its long leg. The two 30° angles join to make 60°, so the doubled shape has three 60° angles and is equilateral, with every side equal to the hypotenuse, 10. The short leg is half of the bottom side, so it is 5. The long leg is the height: its square is 10² − 5² = 75, and √75 = 5√3. The legs are 5 and 5√3."
+ },
+ "SAT-17#9": {
+  "title": "Shrink the hypotenuse to 1",
+  "text": "Divide every side of the triangle by 17. The shape and the angle θ stay the same, but the hypotenuse is now 1 and the opposite side is 8/17, about 0.47. So sin θ is simply the height of the triangle when the hypotenuse is 1 unit long. The adjacent side becomes 15/17, and (8/17)² + (15/17)² = 64/289 + 225/289 = 1, as a right triangle with hypotenuse 1 requires."
+ },
+ "SAT-17#10": {
+  "title": "Look at values you know",
+  "text": "Recall some familiar values. The sine of 30° and the cosine of 60° are both 1/2. The sine of 60° and the cosine of 30° are both about 0.866. The sine of 45° and the cosine of 45° are both about 0.707. In every matching pair the two angles add to 90°. So the partner of 25° is 90° − 25° = 65°, and a calculator confirms both sin 65° and cos 25° are about 0.906."
+ },
+ "SAT-18#1": {
+  "title": "Start at the origin, then slide",
+  "text": "The circle x² + y² = 25 has center (0, 0) and radius 5. Check some points on it: (5, 0) gives 25 + 0, (3, 4) gives 9 + 16 and (0, −5) gives 0 + 25. Now slide the whole circle 2 right and 1 up. The point (3, 4) moves to (5, 5). To test it, undo the slide first: (5 − 2)² + (5 − 1)² = 9 + 16 = 25. That is why the equation becomes (x − 2)² + (y − 1)² = 25."
+ },
+ "SAT-18#2": {
+  "title": "Slice a pizza into six",
+  "text": "Cut a pizza of radius 6 into six equal slices from the center. Each slice has a 60° tip, since 360° ÷ 6 = 60°. Each slice gets one sixth of the crust and one sixth of the pizza. The whole crust is 2 × π × 6 = 12π long, so one slice has 2π of crust. The whole pizza is π × 6² = 36π in area, so one slice is 6π."
+ },
+ "SAT-18#3": {
+  "title": "Wrap the radius around the edge",
+  "text": "Cut a string as long as the radius of a circle and lay it along the edge. The angle it marks out at the center is 1 radian, about 57°. Keep laying strings end to end. Three of them do not quite reach halfway around, and it takes π of them, about 3.14, to cover exactly half the circle. That is why a half turn of 180° is π radians, and a full turn is 2π."
+ },
+ "SAT-18#4": {
+  "title": "Find the left and right edges",
+  "text": "Look along the horizontal line y = −5, where the y bracket is zero. The equation becomes (x − 2)² = 36, so x − 2 is 6 or −6, giving x = 8 or x = −4. Those are the right and left edges of the circle, at (8, −5) and (−4, −5). The center is halfway between them at (2, −5), and the radius is half of the 12 between them, which is 6."
+ },
+ "SAT-18#5": {
+  "title": "Test points in the original",
+  "text": "If the center is (−3, 2) and the radius is 5, then the point 5 to the right, (2, 2), must be on the circle. Put it into the original equation: 4 + 12 + 4 − 8 = 12, which is correct. Try the point 5 above the center, (−3, 7): 9 − 18 + 49 − 28 = 12, correct again. Two points at distance 5 both satisfy the equation, which confirms the center and radius."
+ },
+ "SAT-18#6": {
+  "title": "Check against the chord",
+  "text": "Join the ends of the 60° arc to the center and to each other. The triangle has two sides of 9 with a 60° angle between them, so it is equilateral and the straight chord is also 9. The arc bulges outward, so it must be a little longer than 9. The answer 3π is about 9.42, which fits. Six of these arcs make the circle: 6 × 3π = 18π, the full circumference."
+ },
+ "SAT-18#7": {
+  "title": "Take a third of the semicircle",
+  "text": "Half the circle is a turn of 180°, and its edge is half the circumference: π × 9 = 9π. The 60° angle is one third of 180°, so its arc is one third of the semicircle's edge. One third of 9π is 3π. Thinking in half turns keeps the numbers small, and no conversion formula is needed."
+ },
+ "SAT-18#8": {
+  "title": "Use the radian sector formula",
+  "text": "With the angle in radians, the area of a sector is one half × radius squared × angle. A 90° angle is π/2 radians. So the area is one half × 4² × π/2 = one half × 16 × π/2. Half of 16 is 8, and 8 × π/2 is 4π. The formula agrees with the quarter-circle picture."
+ },
+ "SAT-18#9": {
+  "title": "Split 135° into familiar pieces",
+  "text": "Break the angle into parts you already know in radians: 135° = 90° + 45°. A right angle is π/2 and half of a right angle is π/4. Add them with a common denominator: π/2 is 2π/4, and 2π/4 + π/4 = 3π/4. You could also start from a half turn and go back: π − π/4 is 3π/4 as well."
+ },
  "STAT-1#1": {
   "title": "Sort the columns of a spreadsheet",
   "text": "Picture a class spreadsheet with one row per student. In the \"shoe size\" column you could sort from smallest to largest and say who is 2 sizes bigger than whom, so it is quantitative. In the \"homeroom number\" column, room 204 is not twice room 102 and the gap between them means nothing. The room number only says which group a student belongs to, so it is categorical, just like the \"eye color\" column."

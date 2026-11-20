@@ -42,16 +42,17 @@
     {
       "title": "Write the equation",
       "steps": [
-        "With slope $-2.5$ and point $(2, 18)$: $h = -2.5(t - 2) + 18 = -2.5t + 23$.",
-        "The initial height is the $y$-intercept, which the equation now displays directly: $23$ cm.",
-        "The trap is answering $-2.5$ or $18$ — both appear in the setup, neither is the initial height."
+        "The rate is $\\dfrac{10.5 - 18}{5 - 2} = -2.5$ cm per hour, so through the point $(2, 18)$ the height is $h = -2.5(t - 2) + 18$.",
+        "Distribute and combine to put it in slope-intercept form: $h = -2.5t + 5 + 18 = -2.5t + 23$.",
+        "Before the candle was lit means $t = 0$, and the equation gives a height of $23$ cm there."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "Subtracting the burn instead of adding it gives 18 − 5 = 13 cm, and 18 itself is also offered — both are one misread away.",
-        "Before it was lit, the candle was TALLER. Decide the direction of the answer before touching the arithmetic, and 13 becomes impossible."
+        "Subtracting the two hours of burning gives $18 - 5 = 13$ cm, and stopping at the first reading gives $18$ cm, and both are wrong.",
+        "Before it was lit the candle had to be taller than at any later reading, so the answer must be more than $18$.",
+        "Adding back the $2 \\times 2.5 = 5$ cm burned in the first two hours gives $18 + 5 = 23$ cm."
       ]
     }
   ],

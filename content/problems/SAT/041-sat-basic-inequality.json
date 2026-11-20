@@ -58,9 +58,9 @@
     {
       "title": "Test a value to confirm the direction",
       "steps": [
-        "If you are unsure whether the answer is $x > 5$ or $x < 5$, test one number from each side.",
-        "$x = 6$ gives $13 > 10$ ✓, and $x = 4$ gives $7 > 10$ ✗.",
-        "One test settles the direction, and it takes five seconds."
+        "The boundary is where $3x - 5 = 10$, which is $x = 5$, so the answer is either $x > 5$ or $x < 5$.",
+        "Try a number above the boundary: $x = 6$ gives $3(6) - 5 = 13$, and $13 > 10$ is true.",
+        "Try a number below it: $x = 4$ gives $7$, and $7 > 10$ is false, so the solution is $x > 5$, choice A."
       ]
     }
   ],

@@ -36,9 +36,9 @@
     {
       "title": "Clear the fraction first",
       "steps": [
-        "Multiply every term by $3$ at the start: $x + 12 = 30$.",
-        "Subtract $12$: $x = 18$.",
-        "Multiplying through by the denominator is the general move — it works even when there are several different denominators."
+        "Multiply every term by $3$ at the start so the fraction disappears: $x + 12 = 30$.",
+        "Subtract $12$ from both sides to leave $x$ alone, which gives $x = 18$.",
+        "Check it in the original equation: $\\dfrac{18}{3} + 4 = 10$, so the value of $x$ is $18$."
       ]
     }
   ],

@@ -42,16 +42,17 @@
     {
       "title": "Read it as a perfect square",
       "steps": [
-        "One repeated root means the quadratic is a perfect square: $(x + k)^2 = x^2 + 2kx + k^2$.",
-        "Matching the constant: $k^2 = 9$, so $k = \\pm 3$.",
-        "Then $b = 2k = \\pm 6$, and the positivity condition selects $6$. The condition on $b$ exists precisely because both signs are otherwise valid."
+        "Touching the axis once means the quadratic is a perfect square, $(x + k)^2 = x^2 + 2kx + k^2$.",
+        "Matching the constant terms gives $k^2 = 9$, so $k = 3$ or $k = -3$.",
+        "Then $b = 2k$ is $6$ or $-6$, and since $b$ is positive, $b = 6$."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "b² = 36 tempts two errors: answering 36 itself, or forgetting the condition that picks between ±6.",
-        "Finish the square root, then apply the stated sign condition. The problem says b is positive precisely because both roots survive the algebra."
+        "The condition $b^2 = 36$ invites two mistakes: answering $36$, or forgetting that both $6$ and $-6$ satisfy it.",
+        "Take the square root to get $b = 6$ or $b = -6$, then use the statement that $b$ is positive.",
+        "That leaves $b = 6$, and $x^2 + 6x + 9 = (x + 3)^2$ confirms a single touching point."
       ]
     }
   ],

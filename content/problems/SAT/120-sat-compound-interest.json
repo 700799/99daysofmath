@@ -42,16 +42,17 @@
     {
       "title": "Compound versus simple",
       "steps": [
-        "Simple interest would pay $5\\%$ of the original $\\$2000$ each year: $\\$100 + \\$100 = \\$2200$.",
-        "Compound interest pays on the growing balance, so it reaches $\\$2205$.",
-        "The gap is small over two years and enormous over twenty — which is why the SAT tests that you know they are different."
+        "Simple interest would pay $5\\%$ of the original $2000$ dollars each year, which is $100 + 100 = 200$ dollars and a balance of $2200$.",
+        "Compound interest also pays $5\\%$ on the first year's $100$ dollars of interest, which adds $0.05 \\times 100 = 5$ dollars.",
+        "The compound balance is therefore $2200 + 5 = 2205$ dollars."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "2,200 is simple interest — 5% of the original both years — and it sits one choice away from the right answer.",
-        "Compound means the second year's 5% acts on 2,100, not 2,000. The extra $5 IS the compounding; its absence flags the wrong model."
+        "The value $2200$ comes from simple interest, which takes $5\\%$ of the original amount in both years.",
+        "Compounding means the second year's $5\\%$ is taken on $2100$ dollars, which is $105$ dollars and not $100$.",
+        "The balance is $2100 + 105 = 2205$ dollars, and the extra $5$ dollars is the effect of compounding."
       ]
     }
   ],

@@ -58,9 +58,9 @@
     {
       "title": "Avoid the flip entirely",
       "steps": [
-        "Add $2x$ to both sides instead: $0 \\ge 8 + 2x$.",
-        "Then subtract $8$: $-8 \\ge 2x$, and divide by the *positive* $2$: $-4 \\ge x$, which is $x \\le -4$.",
-        "Keeping the variable coefficient positive means you never have to remember the flip rule at all."
+        "Add $2x$ to both sides so the $x$-term becomes positive: $0 \\ge 8 + 2x$.",
+        "Subtract $8$ from both sides to get $-8 \\ge 2x$, then divide by positive $2$ to get $-4 \\ge x$.",
+        "Read from the side of $x$, this says $x \\le -4$, which is choice B."
       ]
     }
   ],

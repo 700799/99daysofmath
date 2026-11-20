@@ -64,16 +64,17 @@
     {
       "title": "Check the first year",
       "steps": [
-        "After one year the car should be worth $24000 - 0.12(24000) = 24000 - 2880 = \\$21{,}120$.",
-        "Choice C at $t = 1$: $24000(0.88) = 21120$ ✓",
-        "Building the expected first-year value before you look at the choices is the fastest way to handle every model-selection question."
+        "After one year the car loses $0.12 \\times 24000 = 2880$ dollars, so it should be worth $21120$ dollars.",
+        "Put $t = 1$ into each choice: A gives $2880$, B gives $26880$, C gives $21120$ and D gives $23999.88$.",
+        "Only choice C gives the expected first-year value, so the model is $24000(0.88)^t$."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "Choice A keeps 12% each year instead of losing it — a car worth $346 after two years should fail your sniff test.",
-        "Build the multiplier from what REMAINS: 1 − 0.12 = 0.88. Then sanity-check year one: 24,000 × 0.88 = 21,120, a plausible used-car value."
+        "Choice A multiplies by $0.12$, which keeps only $12\\%$ of the value each year and leaves about $346$ dollars after two years.",
+        "The multiplier must be the part that remains, which is $1 - 0.12 = 0.88$.",
+        "With that factor the first year gives $24000 \\times 0.88 = 21120$ dollars, a sensible value, so the answer is C."
       ]
     }
   ],

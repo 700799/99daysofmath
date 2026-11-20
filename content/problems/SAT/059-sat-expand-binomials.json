@@ -41,16 +41,17 @@
     {
       "title": "Target just the term you need",
       "steps": [
-        "The $x$ term comes only from the outer and inner products of FOIL.",
-        "Outer: $2x \\cdot 5 = 10x$. Inner: $-3 \\cdot x = -3x$. Sum: $7x$.",
-        "Skipping the first and last products saves time and removes two chances to make a sign error."
+        "Only two of the four products contain a single $x$: the outer product and the inner product.",
+        "The outer product is $2x \\cdot 5 = 10x$ and the inner product is $-3 \\cdot x = -3x$.",
+        "Their sum is $10x - 3x = 7x$, so the value of $b$ is $7$."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "Answering −15 gives c, and 10 gives only the outer product — b needs BOTH cross terms.",
-        "The x-coefficient is outer plus inner: 10x + (−3x) = 7x. Collect the pair before reporting."
+        "Reporting $-15$ gives the constant $c$, and reporting $10$ uses only the outer product, so both miss $b$.",
+        "The coefficient $b$ collects both cross terms, $10x$ and $-3x$.",
+        "Adding them gives $7x$, so the value of $b$ is $7$."
       ]
     }
   ],

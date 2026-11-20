@@ -36,9 +36,9 @@
     {
       "title": "Reason with the remaining capacity",
       "steps": [
-        "Of the $40$-pound limit, $7$ pounds is already used, leaving $33$ pounds.",
-        "$33 \\div 3 = 11$ boxes exactly.",
-        "When the division comes out even, the boundary value is achievable — \"no more than\" allows equality, so $11$ works rather than $10$."
+        "The equipment already uses $7$ of the $40$ pounds, so $40 - 7 = 33$ pounds are left for boxes.",
+        "Each box weighs $3$ pounds, and $33 \\div 3 = 11$ with nothing left over.",
+        "Eleven boxes bring the load to exactly $40$ pounds, which is allowed, so the greatest number is $11$."
       ]
     }
   ],

@@ -36,9 +36,9 @@
     {
       "title": "The triples worth memorizing",
       "steps": [
-        "$3$-$4$-$5$, $5$-$12$-$13$, $8$-$15$-$17$, $7$-$24$-$25$ — and every multiple of each.",
-        "$6$-$8$-$10$, $9$-$12$-$15$, and $10$-$24$-$26$ are all disguised versions of these.",
-        "Spotting one turns a square-root computation into instant recall, which matters most late in a module."
+        "Common right-triangle triples are $3$-$4$-$5$, $5$-$12$-$13$ and $8$-$15$-$17$, and any multiple of a triple is also a triple.",
+        "The legs $6$ and $8$ are $2 \\times 3$ and $2 \\times 4$, so this triangle is the $3$-$4$-$5$ triangle doubled.",
+        "The hypotenuse is therefore $2 \\times 5 = 10$, with no square root needed."
       ]
     }
   ],

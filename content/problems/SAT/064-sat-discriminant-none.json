@@ -59,9 +59,9 @@
     {
       "title": "Complete the square to see it",
       "steps": [
-        "$x^2 + 4x + 5 = (x^2 + 4x + 4) + 1 = (x + 2)^2 + 1$.",
-        "A squared quantity is never negative, so $(x + 2)^2 + 1$ is always at least $1$.",
-        "It can never equal zero — which is exactly what \"no real solutions\" means, made visible."
+        "Split the constant so a perfect square appears: $x^2 + 4x + 5 = (x^2 + 4x + 4) + 1 = (x + 2)^2 + 1$.",
+        "A square is never negative, so $(x + 2)^2 + 1$ is at least $1$ for every real $x$.",
+        "The expression can never equal $0$, so the equation has zero real solutions, choice A."
       ]
     }
   ],

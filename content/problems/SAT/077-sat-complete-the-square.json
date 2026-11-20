@@ -63,16 +63,17 @@
     {
       "title": "Verify by testing x = 0",
       "steps": [
-        "The original at $x = 0$ gives $1$.",
-        "Choice A: $(0 + 3)^2 - 8 = 9 - 8 = 1$ ✓. Choice B gives $10$, C gives $1$ ✓, D gives $1$ ✓.",
-        "Test a second value, $x = 1$: original gives $8$; A gives $16 - 8 = 8$ ✓, C gives $49 - 35 = 14$ ✗, D gives $4 - 8 = -4$ ✗. Two test values is almost always enough."
+        "At $x = 0$ the original equals $1$; choice B gives $10$ and is eliminated, while A, C and D all give $1$.",
+        "Use a second value, $x = 1$, where the original equals $1 + 6 + 1 = 8$.",
+        "Choice A gives $16 - 8 = 8$, C gives $49 - 35 = 14$ and D gives $4 - 8 = -4$, so only A matches."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "Choice B adds the 9 to build the square but never subtracts it back — the expression silently grew by 9.",
-        "Add and subtract in the same written step: +9 − 9. Then test x = 0 against the original as a five-second audit."
+        "Choice B adds $9$ to build $(x + 3)^2$ but never subtracts it again, so the expression has grown by $9$.",
+        "Adding and subtracting together keeps the value: $x^2 + 6x + 9 - 9 + 1 = (x + 3)^2 - 8$.",
+        "At $x = 0$ this gives $9 - 8 = 1$, matching the original, so the answer is A."
       ]
     }
   ],

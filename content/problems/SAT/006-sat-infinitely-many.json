@@ -37,9 +37,9 @@
     {
       "title": "The three-case rule",
       "steps": [
-        "Write both sides as $ax + b$ and $cx + d$.",
-        "Different $x$-coefficients → exactly one solution. Same coefficient, different constants → no solution. Same coefficient AND same constant → infinitely many.",
-        "Here the coefficients already match at $6$, so it is the constant that decides — this single rule handles every question of this type."
+        "Write both sides in the form $ax + b$: the left side is $6x + 3$ and the right side is $6x + c$.",
+        "Different $x$-coefficients give one solution, equal coefficients with different constants give none, and equal coefficients with equal constants give infinitely many.",
+        "The coefficients already match at $6$, so the constants must match too, which means $c = 3$."
       ]
     }
   ],

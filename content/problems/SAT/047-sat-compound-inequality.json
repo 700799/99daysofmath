@@ -41,16 +41,17 @@
     {
       "title": "Work only the end you need",
       "steps": [
-        "The question asks for the *greatest* $x$, which comes from the upper bound alone.",
-        "Solve just $2x + 1 \\le 13$: $2x \\le 12$, so $x \\le 6$.",
-        "Half the work when only one end is requested — but read carefully, because \"greatest\" and \"least\" look alike under time pressure."
+        "The greatest value of $x$ is controlled by the right-hand part alone, $2x + 1 \\le 13$.",
+        "Subtract $1$ and then divide by $2$ to get $2x \\le 12$ and $x \\le 6$.",
+        "The sign allows equality, so the greatest possible value is $x = 6$."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "The least value, 2, is offered for anyone who solves correctly and then reads the question's direction backwards.",
-        "Underline greatest or least before solving. The compound inequality hands you both ends; the question wants exactly one."
+        "Solving the whole inequality gives $2 \\le x \\le 6$, and the least value $2$ is waiting for anyone who misreads the question.",
+        "The question asks for the greatest value, which is the right-hand end of that interval.",
+        "Check that end: $x = 6$ gives $2(6) + 1 = 13$, which is allowed, so the answer is $6$."
       ]
     }
   ],

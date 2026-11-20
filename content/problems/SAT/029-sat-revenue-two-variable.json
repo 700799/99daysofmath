@@ -42,16 +42,17 @@
     {
       "title": "Track the money, not the equation",
       "steps": [
-        "Hot dogs brought in $40 \\times \\$3 = \\$120$.",
-        "Drinks must account for the remaining $\\$180 - \\$120 = \\$60$.",
-        "At $\\$2$ apiece that is $30$ drinks. On a word problem this simple, arithmetic beats setting up algebra."
+        "The $40$ hot dogs brought in $40 \\times 3 = 120$ dollars of the total.",
+        "The drinks must account for the rest of the money, which is $180 - 120 = 60$ dollars.",
+        "At $2$ dollars for each drink, that is $60 \\div 2 = 30$ drinks."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "Dividing 180 by the combined price 3 + 2 = 5 treats every sale as a hot-dog-plus-drink combo the problem never mentions.",
-        "Account for the known item's money first: hot dogs earned $120, so only $60 remains to explain with drinks."
+        "Dividing $180$ by the combined price $3 + 2 = 5$ gives $36$, but that assumes every hot dog was sold together with exactly one drink.",
+        "The problem gives the hot dog count separately, so remove their $120$ dollars first and leave $60$ dollars for drinks.",
+        "Then $60 \\div 2 = 30$ drinks, and the check $3(40) + 2(30) = 180$ confirms it."
       ]
     }
   ],

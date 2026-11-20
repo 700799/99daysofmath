@@ -36,9 +36,9 @@
     {
       "title": "Build the whole equation",
       "steps": [
-        "With slope $3$ and the point $(1, 8)$: $g(x) = 3(x - 1) + 8 = 3x + 5$.",
-        "Then $g(7) = 3(7) + 5 = 26$.",
-        "Building the equation costs one extra step but pays off if the question asks for several values."
+        "The slope is $\\dfrac{14 - 8}{3 - 1} = 3$, so starting from the point $(1, 8)$ the rule is $g(x) = 3(x - 1) + 8$.",
+        "Simplify the rule to $g(x) = 3x + 5$, and check it with the other fact: $g(3) = 9 + 5 = 14$.",
+        "Now substitute $x = 7$ into the rule to get $g(7) = 3(7) + 5 = 26$."
       ]
     }
   ],

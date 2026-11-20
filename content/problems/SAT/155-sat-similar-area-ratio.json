@@ -58,9 +58,9 @@
     {
       "title": "Verify with an actual pair",
       "steps": [
-        "Take a triangle with base $2$ and height $2$: area $2$. Scale by $3$ to base $6$, height $6$: area $18$.",
-        "$18 \\div 2 = 9$ ✓",
-        "Building a concrete example takes fifteen seconds and settles the rule permanently."
+        "Take a triangle with base $2$ and height $2$, whose area is $\\tfrac{1}{2}(2)(2) = 2$.",
+        "Multiply every length by $3$ to get base $6$ and height $6$, with area $\\tfrac{1}{2}(6)(6) = 18$.",
+        "The areas $2$ and $18$ are in the ratio $1 : 9$, which is choice C."
       ]
     }
   ],

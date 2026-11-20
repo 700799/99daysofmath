@@ -63,16 +63,17 @@
     {
       "title": "Check with a decimal",
       "steps": [
-        "$\\sqrt{50} \\approx 7.07$.",
-        "Evaluate the choices: A is about $35.4$, B is about $7.07$ ✓, C is about $4.47$, D is about $22.4$.",
-        "A quick decimal estimate is a reliable check on any radical-simplification question, and it needs no rules at all."
+        "Estimate the target first: $7^2 = 49$, so $\\sqrt{50}$ is just above $7$, about $7.07$.",
+        "Using $\\sqrt{2} \\approx 1.41$ and $\\sqrt{5} \\approx 2.24$, the choices are about $35.4$, $7.07$, $4.47$ and $22.4$.",
+        "Only choice B matches the estimate of $7.07$, which means that $\\sqrt{50} = 5\\sqrt{2}$."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "Choice A, 25√2, pulls the 25 out of the radical without square-rooting it.",
-        "Whatever leaves the radical must exit as its square root: √25 becomes 5 outside. Check by squaring back: (5√2)² = 50 ✓"
+        "Choice A, $25\\sqrt{2}$, moves the $25$ outside the radical without taking its square root.",
+        "A factor leaves the radical as its square root, so $\\sqrt{25 \\cdot 2}$ becomes $5\\sqrt{2}$.",
+        "Squaring back confirms it: $(5\\sqrt{2})^2 = 25 \\cdot 2 = 50$, so the answer is B."
       ]
     }
   ],

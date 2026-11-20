@@ -37,9 +37,9 @@
     {
       "title": "Graph both and click",
       "steps": [
-        "Enter $y = x^2$ and $y = x + 6$ in Desmos.",
-        "The curves cross at $(-2, 4)$ and $(3, 9)$, and Desmos labels both intersection points.",
-        "For any nonlinear system on the digital SAT this is the fastest reliable method, and it also tells you how many solutions exist at a glance."
+        "Enter $y = x^2$ and $y = x + 6$ in Desmos to see a parabola and a line.",
+        "The graphs cross twice, and clicking the crossings shows the points $(-2, 4)$ and $(3, 9)$.",
+        "The $x$-coordinates are $-2$ and $3$, so the greater one is $3$."
       ]
     }
   ],

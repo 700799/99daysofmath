@@ -41,16 +41,17 @@
     {
       "title": "Pull out the constant first if it helps",
       "steps": [
-        "You could also factor as $2(x^2 - 4x) = 2 \\cdot x(x - 4)$.",
-        "The constant $2$ can never be zero, so it contributes no solution — only the variable factors matter.",
-        "Recognizing that a numerical factor is irrelevant to the roots saves you from chasing it."
+        "Take out the number factor first, then the shared variable: $2x^2 - 8x = 2(x^2 - 4x) = 2 \\cdot x \\cdot (x - 4)$.",
+        "The factor $2$ is never zero, so the product is zero only when $x = 0$ or $x - 4 = 0$.",
+        "The solutions are $0$ and $4$, and the greatest one is $4$."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "Dividing both sides by x turns 2x² = 8x into 2x = 8 — the root x = 0 vanishes without a trace.",
-        "Factor a zero product instead of dividing: 2x(x − 4) = 0 keeps both roots, and then greatest-vs-least is a safe final read."
+        "Dividing both sides of $2x^2 = 8x$ by $x$ leaves $2x = 8$ and silently throws away the solution $x = 0$.",
+        "Factoring instead, $2x(x - 4) = 0$, keeps both solutions, $x = 0$ and $x = 4$.",
+        "Here the greatest solution is still $4$, but a question asking for the least one would have been missed."
       ]
     }
   ],

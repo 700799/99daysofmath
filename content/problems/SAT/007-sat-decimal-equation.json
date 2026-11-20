@@ -42,16 +42,17 @@
     {
       "title": "Clear decimals with Desmos, or by hand",
       "steps": [
-        "Multiply every term by $100$: $25x + 150 = 40x - 60$.",
-        "Then $210 = 15x$, so $x = 14$ — integers throughout.",
-        "Faster still: graph $y_1 = 0.25x + 1.5$ and $y_2 = 0.4x - 0.6$ in Desmos and click the intersection."
+        "By hand, multiply every term by $100$ so that only whole numbers remain: $25x + 150 = 40x - 60$.",
+        "Collect the terms to get $210 = 15x$, then divide by $15$ to find $x = 14$.",
+        "In Desmos, graph $y = 0.25x + 1.5$ and $y = 0.4x - 0.6$ and click the point where the lines cross, which is $(14, 5)$, so $x = 14$."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "Treat the −0.6 as +0.6 and you get 0.9 = 0.15x, so x = 6 — a clean-looking wrong answer built from one dropped sign.",
-        "Move both constants across in a single written step and then verify x = 14 in the original equation; the check costs ten seconds and catches exactly this slip."
+        "Treating $-0.6$ as $+0.6$ leads to $0.9 = 0.15x$ and the neat but wrong answer $x = 6$.",
+        "Test that value in the original equation: the left side is $0.25(6) + 1.5 = 3$ but the right side is $0.4(6) - 0.6 = 1.8$, so it fails.",
+        "Moving the constants with the correct signs gives $2.1 = 0.15x$, and $x = 14$ makes both sides equal $5$."
       ]
     }
   ],
