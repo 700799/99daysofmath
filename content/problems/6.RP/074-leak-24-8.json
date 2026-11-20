@@ -31,18 +31,19 @@
     "Use a multiplication fact to divide: because $8 \\times 3 = 24$, the quotient is $3$.",
     "The faucet leaks $3$ cups every hour."
   ],
-  "tags": [
-    "unit-rate",
-    "word"
-  ],
-  "estimatedSeconds": 45,
   "alternativeExplanations": [
     {
       "title": "Check the answer",
       "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: 3 — verified."
+        "Test a rate by multiplying it by the $8$ hours and comparing with $24$ cups.",
+        "A rate of $2$ cups per hour gives only $16$ cups, and $4$ cups per hour gives $32$ cups, so the rate is between them.",
+        "A rate of $3$ gives $3 \\times 8 = 24$ cups exactly, so the faucet leaks $3$ cups per hour."
       ]
     }
-  ]
+  ],
+  "tags": [
+    "unit-rate",
+    "word"
+  ],
+  "estimatedSeconds": 45
 }

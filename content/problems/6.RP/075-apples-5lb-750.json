@@ -34,6 +34,16 @@
     "Dividing gives $750 \\div 5 = 150$ cents, which is the same as $1.50$ dollars.",
     "The apples cost $1.50$ dollars per pound."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Split dollars and cents",
+      "steps": [
+        "Break the cost into $5$ dollars plus $2.50$ dollars, because each piece shares easily among $5$ pounds.",
+        "The $5$ dollars give $1$ dollar per pound, and the $2.50$ dollars give $0.50$ dollars per pound.",
+        "Add the two shares: $1 + 0.50 = 1.50$ dollars per pound."
+      ]
+    }
+  ],
   "tags": [
     "unit-rate",
     "price"

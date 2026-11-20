@@ -33,19 +33,20 @@
     "Multiplying by $100$ puts two zeros after the $5$, giving $500$.",
     "Five meters are the same length as $500$ centimeters."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Count along five meter sticks, where every stick adds another $100$ centimeters.",
+        "The count is $100$, $200$, $300$, $400$, $500$ after the fifth stick.",
+        "Check by dividing back: $500 \\div 100 = 5$ meters, so $5$ meters is $500$ centimeters."
+      ]
+    }
+  ],
   "tags": [
     "conversion",
     "metric",
     "length"
   ],
-  "estimatedSeconds": 35,
-  "alternativeExplanations": [
-    {
-      "title": "Check the answer",
-      "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: 500 — verified."
-      ]
-    }
-  ]
+  "estimatedSeconds": 35
 }

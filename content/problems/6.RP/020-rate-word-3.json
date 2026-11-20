@@ -42,8 +42,17 @@
     {
       "title": "Scale up the ratio",
       "steps": [
-        "$5$ pages : $20$ sec. Multiply both sides by $6$ (since $20 \\times 6 = 120$).",
-        "$5 \\times 6 = 30$ pages in $120$ sec."
+        "Write the rate as a pair, $5$ pages for $20$ seconds, and note that $2$ minutes is $120$ seconds.",
+        "The time grows from $20$ to $120$ seconds, which is $6$ times as long, so the pages must grow $6$ times too.",
+        "Multiply the pages by the same factor: $5 \\times 6 = 30$ pages in $2$ minutes."
+      ]
+    },
+    {
+      "title": "Find pages per minute",
+      "steps": [
+        "Three blocks of $20$ seconds make one minute, so in a minute the printer makes $3 \\times 5 = 15$ pages.",
+        "Two minutes is twice as long as one minute, so double the pages: $15 \\times 2 = 30$.",
+        "Working in minutes the whole time also gives $30$ pages."
       ]
     }
   ],

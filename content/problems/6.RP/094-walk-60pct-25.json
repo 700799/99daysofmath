@@ -37,8 +37,17 @@
     {
       "title": "Use $\\tfrac{3}{5}$",
       "steps": [
-        "$60\\% = \\tfrac{3}{5}$.",
-        "$\\tfrac{3}{5} \\times 25 = \\tfrac{75}{5} = 15$."
+        "Simplify $60\\%$ by writing $\\frac{60}{100}$ and dividing both numbers by $20$ to get $\\frac{3}{5}$.",
+        "Multiply the fraction by the class size: $\\frac{3}{5} \\times 25 = \\frac{75}{5}$.",
+        "Dividing gives $75 \\div 5 = 15$, so $15$ students walk to school."
+      ]
+    },
+    {
+      "title": "Scale the class to 100",
+      "steps": [
+        "Percent means out of $100$, and four classes of $25$ would make exactly $100$ students.",
+        "Among those $100$ students, $60$ would walk, because the percent is $60\\%$.",
+        "One class is a quarter of that group, so $60 \\div 4 = 15$ students walk."
       ]
     }
   ],

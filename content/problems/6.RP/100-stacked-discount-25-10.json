@@ -43,8 +43,17 @@
     {
       "title": "Multiply the factors",
       "steps": [
-        "Combined factor: $0.75 \\times 0.90 = 0.675$.",
-        "$100 \\times 0.675 = 67.50$."
+        "After $25\\%$ off you pay $75\\%$, a factor of $0.75$, and after $10\\%$ off that you pay $90\\%$, a factor of $0.90$.",
+        "Combine the two factors into one: $0.75 \\times 0.90 = 0.675$.",
+        "Multiply the original price by it: $100 \\times 0.675 = 67.50$ dollars."
+      ]
+    },
+    {
+      "title": "Follow each ten dollars",
+      "steps": [
+        "After the first discount the coat costs $75$ dollars, and the coupon keeps $9$ dollars out of every $10$.",
+        "Seven tens become $7 \\times 9 = 63$ dollars, and the last $5$ dollars become half of $9$, which is $4.50$ dollars.",
+        "Add them to get $63 + 4.50 = 67.50$ dollars as the final price."
       ]
     }
   ],

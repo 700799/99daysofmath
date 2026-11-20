@@ -53,6 +53,16 @@
     "The other choices simplify to $3 : 4$, $4 : 5$ and $1 : 2$, and none of those equals $2 : 3$.",
     "The ratio equivalent to $4 : 6$ is $6 : 9$, choice B."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Check with cross products",
+      "steps": [
+        "Two ratios $a : b$ and $c : d$ are equivalent exactly when $a \\times d$ equals $b \\times c$.",
+        "For choice B, $4 \\times 9 = 36$ and $6 \\times 6 = 36$, so the two products match.",
+        "The other choices give $16$ and $18$, $40$ and $48$, then $16$ and $12$, which never match, so the answer is $6 : 9$, choice B."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "ratio"

@@ -42,9 +42,17 @@
     {
       "title": "Break it up",
       "steps": [
-        "$100 \\times 4 = 400$.",
-        "$80 \\times 4 = 320$.",
-        "Sum: $400 + 320 = 720$."
+        "Split $180$ gallons into $100$ gallons and $80$ gallons, which are easier to multiply by $4$.",
+        "The $100$ gallons make $400$ quarts and the $80$ gallons make $320$ quarts.",
+        "Add the two parts to find the total: $400 + 320 = 720$ quarts."
+      ]
+    },
+    {
+      "title": "Double twice",
+      "steps": [
+        "Multiplying by $4$ is the same as doubling and then doubling again.",
+        "Double $180$ to get $360$, which is the number of half gallons.",
+        "Double $360$ to get $720$, so the pool holds $720$ quarts."
       ]
     }
   ],

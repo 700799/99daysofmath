@@ -31,6 +31,16 @@
     "The decimal method agrees with this result, since $0.30 \\times 90 = 27$.",
     "Both methods show that $30\\%$ of $90$ is $27$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Start from one half",
+      "steps": [
+        "$30\\%$ is $50\\%$ take away $20\\%$, and both of those are quick to find.",
+        "Half of $90$ is $45$, and $20\\%$ of $90$ is one fifth, $90 \\div 5 = 18$.",
+        "Subtract to leave $30\\%$: $45 - 18 = 27$, so $30\\%$ of $90$ is $27$."
+      ]
+    }
+  ],
   "tags": [
     "percent"
   ],

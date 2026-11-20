@@ -34,6 +34,16 @@
     "Multiplying the speed by the time gives $60 \\times 7 = 420$ miles.",
     "The train goes $420$ miles in $7$ hours."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Split the seven hours",
+      "steps": [
+        "Think of $7$ hours as $5$ hours plus $2$ more hours, because the distance for $5$ hours is known.",
+        "Dividing the known row by $5$ shows $60$ miles in $1$ hour, so $2$ hours add $120$ miles.",
+        "Add the two pieces of the trip: $300 + 120 = 420$ miles in $7$ hours."
+      ]
+    }
+  ],
   "tags": [
     "unit-rate",
     "speed"

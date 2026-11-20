@@ -34,6 +34,16 @@
     "Divide both parts by $10$ so the ratio stays equivalent: $20 \\div 10 = 2$ and $30 \\div 10 = 3$.",
     "In simplest form the ratio is $2 : 3$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Simplify in two steps",
+      "steps": [
+        "Both numbers are even, so start by halving each part: $20 : 30$ becomes $10 : 15$.",
+        "Both $10$ and $15$ are multiples of $5$, so divide each part by $5$ to get $2 : 3$.",
+        "No number bigger than $1$ goes into both $2$ and $3$, so the simplest form is $2 : 3$."
+      ]
+    }
+  ],
   "tags": [
     "equivalent",
     "simplify"

@@ -38,8 +38,17 @@
     {
       "title": "Simplify the fraction first",
       "steps": [
-        "$\\frac{12}{60} = \\frac{1}{5}$.",
-        "$\\frac{1}{5} = \\frac{20}{100} = 20\\%$."
+        "Write the part over the whole, $\\frac{12}{60}$, and divide both numbers by $12$ to get $\\frac{1}{5}$.",
+        "Change the bottom to $100$ by multiplying top and bottom by $20$: $\\frac{1}{5} = \\frac{20}{100}$.",
+        "Twenty out of one hundred is $20\\%$, so $12$ is $20\\%$ of $60$."
+      ]
+    },
+    {
+      "title": "Count 10% blocks",
+      "steps": [
+        "Ten percent of $60$ is $6$, which is found by dividing $60$ by $10$.",
+        "The part $12$ is two of those blocks, because $6 + 6 = 12$.",
+        "Two blocks of $10\\%$ make $20\\%$, so $12$ is $20\\%$ of $60$."
       ]
     }
   ],

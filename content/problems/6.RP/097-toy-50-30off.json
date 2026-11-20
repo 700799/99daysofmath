@@ -43,8 +43,17 @@
     {
       "title": "Pay 70% directly",
       "steps": [
-        "$30\\%$ off → pay $70\\%$.",
-        "$0.70 \\times 50 = 35$."
+        "A discount of $30\\%$ from the full $100\\%$ leaves $70\\%$ to pay.",
+        "Ten percent of $50$ dollars is $5$ dollars, so $70\\%$ is $7 \\times 5$ dollars.",
+        "That is $35$, so the sale price is $35$ dollars."
+      ]
+    },
+    {
+      "title": "Discount per ten dollars",
+      "steps": [
+        "Thirty percent off means $3$ dollars come off every $10$ dollars of the price.",
+        "So you pay $7$ dollars for each $10$ dollars, and the toy's price holds five tens.",
+        "Five lots of $7$ dollars make $35$ dollars, the sale price."
       ]
     }
   ],

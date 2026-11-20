@@ -40,8 +40,17 @@
     {
       "title": "Scale up from 10%",
       "steps": [
-        "If $30\\% = 18$, then $10\\% = 18 \\div 3 = 6$.",
-        "$100\\% = 6 \\times 10 = 60$."
+        "If $30\\%$ of the number is $18$, then $10\\%$ is a third of that: $18 \\div 3 = 6$.",
+        "The whole number is $100\\%$, which is ten lots of $10\\%$.",
+        "Ten lots of $6$ make $60$, so the number is $60$."
+      ]
+    },
+    {
+      "title": "Write an equation",
+      "steps": [
+        "Call the number $n$ and write the sentence as $0.3 \\times n = 18$.",
+        "Divide both sides by $0.3$, and note that $18 \\div 0.3$ equals $180 \\div 3$.",
+        "That gives $n = 60$, the same whole as before."
       ]
     }
   ],

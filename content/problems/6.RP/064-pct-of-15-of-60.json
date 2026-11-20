@@ -35,9 +35,17 @@
     {
       "title": "Build it from 10% and 5%",
       "steps": [
-        "$10\\%$ of $60 = 6$.",
-        "$5\\%$ is half of that: $3$.",
-        "$10\\% + 5\\% = 6 + 3 = 9$."
+        "Find $10\\%$ of $60$ by dividing by $10$, which gives $6$.",
+        "Five percent is half of ten percent, so take half of $6$ to get $3$.",
+        "Put the two pieces together for $15\\%$: $6 + 3 = 9$."
+      ]
+    },
+    {
+      "title": "Quarter minus a tenth",
+      "steps": [
+        "$15\\%$ is also $25\\% - 10\\%$, and both of those are benchmark percents.",
+        "A quarter of $60$ is $15$, and a tenth of $60$ is $6$.",
+        "Subtract to get $15 - 6 = 9$, so $15\\%$ of $60$ is $9$."
       ]
     }
   ],

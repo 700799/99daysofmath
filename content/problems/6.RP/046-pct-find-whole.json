@@ -35,8 +35,17 @@
     {
       "title": "Using an equation",
       "steps": [
-        "$0.10 \\cdot x = 20$.",
-        "Divide both sides by $0.10$: $x = 200$."
+        "Call the unknown number $x$ and write the sentence in symbols: $0.10 \\times x = 20$.",
+        "Undo the multiplication by dividing both sides by $0.10$, which is the same as multiplying by $10$.",
+        "That gives $x = 20 \\div 0.10 = 200$, so the number is $200$."
+      ]
+    },
+    {
+      "title": "Build a percent table",
+      "steps": [
+        "Make a table with percents on one side and amounts on the other, starting with $10\\% \\to 20$.",
+        "Doubling gives $20\\% \\to 40$, and five of those rows give $100\\% \\to 200$.",
+        "The whole, $100\\%$, is $200$, so $20$ is $10\\%$ of $200$."
       ]
     }
   ],

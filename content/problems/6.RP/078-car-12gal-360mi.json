@@ -33,6 +33,16 @@
     "Since $36 \\div 12 = 3$, making the top ten times bigger gives $360 \\div 12 = 30$.",
     "The car travels $30$ miles on each gallon."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Shrink the ratio in steps",
+      "steps": [
+        "Write the pair as $360$ miles for $12$ gallons and halve both numbers to get $180$ miles for $6$ gallons.",
+        "Halve again to get $90$ miles for $3$ gallons, then divide both by $3$.",
+        "The last row is $30$ miles for $1$ gallon, so the car gets $30$ miles per gallon."
+      ]
+    }
+  ],
   "tags": [
     "unit-rate",
     "mpg"

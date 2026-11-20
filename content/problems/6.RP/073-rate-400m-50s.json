@@ -33,18 +33,19 @@
     "Finish the easier division to get $40 \\div 5 = 8$.",
     "The runner covers $8$ meters every second."
   ],
-  "tags": [
-    "unit-rate",
-    "speed"
-  ],
-  "estimatedSeconds": 40,
   "alternativeExplanations": [
     {
       "title": "Check the answer",
       "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: 8 — verified."
+        "Think about what the runner does in $10$ seconds, which is one fifth of the $50$ seconds.",
+        "One fifth of $400$ meters is $80$ meters, so $10$ seconds covers $80$ meters and $1$ second covers $8$ meters.",
+        "Multiply back to check: $8 \\times 50 = 400$ meters, so the rate is $8$ meters per second."
       ]
     }
-  ]
+  ],
+  "tags": [
+    "unit-rate",
+    "speed"
+  ],
+  "estimatedSeconds": 40
 }

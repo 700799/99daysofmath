@@ -40,8 +40,17 @@
     {
       "title": "Use a proportion",
       "steps": [
-        "$\\dfrac{3}{2} = \\dfrac{12}{r}$.",
-        "$3r = 24$, so $r = 8$."
+        "Write peanuts over raisins both ways and set them equal: $\\frac{3}{2} = \\frac{12}{r}$.",
+        "Cross-multiply, because equal fractions have equal cross products: $3r = 2 \\times 12 = 24$.",
+        "Divide both sides by $3$ to find $r = 8$, so $8$ cups of raisins are needed."
+      ]
+    },
+    {
+      "title": "Build a ratio table",
+      "steps": [
+        "List batches by adding $3$ cups of peanuts and $2$ cups of raisins each time.",
+        "The rows are $3$ and $2$, then $6$ and $4$, then $9$ and $6$, then $12$ and $8$.",
+        "The row with $12$ cups of peanuts has $8$ cups of raisins."
       ]
     }
   ],

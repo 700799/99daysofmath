@@ -43,9 +43,9 @@
     {
       "title": "Compare as fractions",
       "steps": [
-        "Write $4 : 10$ as the fraction $\\frac{4}{10}$.",
-        "Simplify: $\\frac{4}{10} = \\frac{2}{5}$.",
-        "So the equivalent ratio is $2 : 5$."
+        "Write the ratio $4 : 10$ as the fraction $\\frac{4}{10}$, which is the decimal $0.4$.",
+        "Turn each choice into a decimal the same way: $\\frac{8}{15} \\approx 0.53$, $\\frac{2}{5} = 0.4$, $\\frac{4}{5} = 0.8$ and $\\frac{5}{10} = 0.5$.",
+        "Only $\\frac{2}{5}$ matches $0.4$, so the equivalent ratio is $2 : 5$, choice B."
       ]
     }
   ],

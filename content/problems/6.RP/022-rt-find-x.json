@@ -31,6 +31,16 @@
     "Use the rule on the new input: $8 \\times 5 = 40$.",
     "In this ratio table the input $8$ maps to $40$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Scale a row you know",
+      "steps": [
+        "Use the row $2 \\to 10$ and ask how to get from an input of $2$ to an input of $8$: multiply by $4$.",
+        "Rows of a ratio table scale together, so multiply the output by $4$ as well: $10 \\times 4 = 40$.",
+        "The row for $8$ is $8 \\to 40$, so the input $8$ maps to $40$."
+      ]
+    }
+  ],
   "tags": [
     "ratio-table"
   ],

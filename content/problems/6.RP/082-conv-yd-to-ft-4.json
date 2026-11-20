@@ -33,18 +33,19 @@
     "Four groups of three feet make $4 \\times 3 = 12$ feet.",
     "Four yards are the same length as $12$ feet."
   ],
-  "tags": [
-    "conversion",
-    "length"
-  ],
-  "estimatedSeconds": 30,
   "alternativeExplanations": [
     {
       "title": "Check the answer",
       "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: 12 — verified."
+        "Count up one yard at a time: $1$ yard is $3$ feet, $2$ yards is $6$ feet, $3$ yards is $9$ feet.",
+        "One more yard adds $3$ more feet, so $4$ yards is $12$ feet.",
+        "Check by dividing back: $12 \\div 3 = 4$ yards, which matches the question."
       ]
     }
-  ]
+  ],
+  "tags": [
+    "conversion",
+    "length"
+  ],
+  "estimatedSeconds": 30
 }

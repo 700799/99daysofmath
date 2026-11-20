@@ -23,9 +23,9 @@
     {
       "title": "Build a ratio table",
       "steps": [
-        "Start with $2 : 3$.",
-        "Double: $4 : 6$. Double again: $8 : 12$. Add another step: $12 : 18$.",
-        "Yogurt = $18$ cups."
+        "Start a table with the recipe row: $2$ cups of berries go with $3$ cups of yogurt.",
+        "Add the same row again and again: $4$ and $6$, then $6$ and $9$, $8$ and $12$, $10$ and $15$, $12$ and $18$.",
+        "The row with $12$ cups of berries shows $18$ cups of yogurt, so the chef needs $18$ cups."
       ]
     }
   ],

@@ -33,6 +33,16 @@
     "Three groups of four quarts make $3 \\times 4 = 12$ quarts.",
     "Three gallons are the same amount as $12$ quarts."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Count gallon by gallon",
+      "steps": [
+        "Pour one gallon at a time into quart jars, filling $4$ jars for each gallon.",
+        "After the first gallon there are $4$ jars, after the second $8$, and after the third $12$.",
+        "Three gallons fill $12$ quart jars, so the answer is $12$ quarts."
+      ]
+    }
+  ],
   "tags": [
     "conversion",
     "volume"

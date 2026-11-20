@@ -31,6 +31,16 @@
     "Dividing $250$ by $10$ removes the final zero and leaves $25$.",
     "This means $10\\%$ of $250$ is equal to $25$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Split the number",
+      "steps": [
+        "Break $250$ into $100 + 100 + 50$, because percents of $100$ are easy to see.",
+        "$10\\%$ of each $100$ is $10$, and $10\\%$ of $50$ is half of that, $5$.",
+        "Add the three pieces: $10 + 10 + 5 = 25$, so $10\\%$ of $250$ is $25$."
+      ]
+    }
+  ],
   "tags": [
     "percent"
   ],

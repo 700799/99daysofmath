@@ -35,6 +35,16 @@
     "Multiply the unit price by the number wanted: $7 \\times 0.50 = 3.50$.",
     "The cost of seven pencils is $3.50$ dollars."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Build up from three pencils",
+      "steps": [
+        "Double the known deal: $6$ pencils cost $2 \\times 1.50 = 3.00$ dollars.",
+        "One more pencil is needed, and one pencil is a third of the first deal: $1.50 \\div 3 = 0.50$ dollars.",
+        "Add the two amounts for $6 + 1 = 7$ pencils: $3.00 + 0.50 = 3.50$ dollars."
+      ]
+    }
+  ],
   "tags": [
     "ratio-table",
     "money"

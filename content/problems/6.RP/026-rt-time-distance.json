@@ -34,6 +34,16 @@
     "Multiply the time by the same factor: $20 \\times 3 = 60$.",
     "The bike needs $60$ minutes, which is one hour, to go $15$ miles."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Find minutes per mile",
+      "steps": [
+        "Divide the time by the distance to see how long one mile takes: $20 \\div 5 = 4$ minutes per mile.",
+        "Every mile takes the same $4$ minutes, so $15$ miles take $15 \\times 4$ minutes.",
+        "The product is $60$, so the bike needs $60$ minutes for $15$ miles."
+      ]
+    }
+  ],
   "tags": [
     "ratio-table",
     "unit-rate"

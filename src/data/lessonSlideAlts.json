@@ -1799,6 +1799,466 @@
   "title": "Use the subtraction rule",
   "text": "The points share x = 1, so the distance is the absolute value of the difference of the y-values.\n|7 − 2| = |5| = 5.\nNaming the points in the other order gives |2 − 7| = |−5|, which is also 5.\nBoth agree with the five steps counted on the grid."
  },
+ "6.RP-1#1": {
+  "title": "A recipe is a ratio",
+  "text": "A lemonade recipe uses 3 cups of water for every 2 scoops of mix. That is a ratio of 3 to 2. It does not say how much lemonade you make. It only says how the two amounts go together: whenever you pour 3 of one, you add 2 of the other. Written as 3:2, as 3 to 2 or as 3/2, it is still the same recipe."
+ },
+ "6.RP-1#2": {
+  "title": "Swap the numbers, change the drink",
+  "text": "Mix 3 cups of juice with 1 cup of water and the drink is strong. Mix 1 cup of juice with 3 cups of water and it is weak. Both drinks use the numbers 3 and 1, but they are not the same drink. Juice to water is 3:1 for the first and 1:3 for the second. The order of the numbers tells you which drink you get."
+ },
+ "6.RP-1#3": {
+  "title": "See it in a table",
+  "text": "Write 2:3 as a row, then keep adding the same row: 2 and 3, 4 and 6, 6 and 9, 8 and 12. In every row the second number is one and a half times the first. That never changes, because each row is only the first row counted again. Moving back up the table is dividing, which is what simplifying does."
+ },
+ "6.RP-1#4": {
+  "title": "Circle matching groups",
+  "text": "Draw 4 gray squares and 6 white squares. Circle them into 2 matching groups, each with 2 gray and 3 white. Now try to split one group into smaller matching groups. You cannot do it without cutting a square in pieces. That is the signal to stop. The simplest form, 2:3, is the smallest group that still uses whole things."
+ },
+ "6.RP-1#5": {
+  "title": "Draw it and count",
+  "text": "Draw 3 circles for the cats and 4 squares for the dogs. The question says cats to dogs, so count the circles first, 3, and then the squares, 4. The ratio is 3:4.\nNow try to share the drawing into equal smaller groups. Three cats cannot be split into 2 or 4 equal groups of whole cats, so the picture cannot shrink. The answer stays 3:4."
+ },
+ "6.RP-1#6": {
+  "title": "Share into two bowls",
+  "text": "Deal the fruit into 2 bowls so that both bowls get the same. Each bowl ends up with 2 apples and 3 oranges, and nothing is left over. One bowl has the same mix as the big bowl, only smaller, so 4:6 is the same comparison as 2:3. A bowl with 2 apples and 3 oranges cannot be shared evenly again, so the simplest form is 2:3."
+ },
+ "6.RP-1#7": {
+  "title": "Ask how many times bigger",
+  "text": "Compare the two counts directly. 10 is exactly twice 5, so there are 2 dogs for every 1 cat. Cats are named first in the question, so the ratio is 1:2.\nCheck by building back up: 5 groups, each with 1 cat and 2 dogs, make 5 cats and 10 dogs. That is the shelter, so 1:2 is right."
+ },
+ "6.RP-1#8": {
+  "title": "Label first, then fill blanks",
+  "text": "Write a label for each amount: flour 2, milk 3. Then copy the question's words as blanks: milk ___ to flour ___. Fill each blank from its label to get milk 3 to flour 2, which is 3:2.\nA quick check: the recipe has more milk than flour, and milk comes first, so the first number should be the bigger one. It is."
+ },
+ "6.RP-1#9": {
+  "title": "Treat it as a fraction",
+  "text": "Write blue to red as the fraction 6/9. Simplifying a ratio is the same job as simplifying a fraction. Both 6 and 9 are in the 3 times table, so 6/9 becomes 2/3. Turn it back into a ratio: 2:3.\nCheck: 3 handfuls, each with 2 blue and 3 red marbles, make 6 blue and 9 red."
+ },
+ "6.RP-1#10": {
+  "title": "Halve, then halve again",
+  "text": "You do not need the biggest factor right away. Both 8 and 12 are even, so halve them: 4:6. Both are still even, so halve again: 2:3. Now 3 is odd, so halving stops, and nothing else divides both 2 and 3.\nTwo halvings are the same as dividing by 4, so this reaches the same answer, 2:3."
+ },
+ "6.RP-1#11": {
+  "title": "Count up from the answer",
+  "text": "Check 2:3 by building it back up. List its equivalent ratios by adding 2 and 3 each time: 2:3, 4:6, 6:9, 8:12, 10:15, 12:18.\nThe sixth ratio in the list is 12:18. So 12:18 is six copies of 2:3, which is why dividing both parts by 6 gives 2:3. No smaller ratio comes before 2:3 in the list."
+ },
+ "6.RP-2#1": {
+  "title": "Rates you already know",
+  "text": "A tap that fills 6 cups in 2 minutes, a job that pays 30 dollars for 3 hours and a heart that beats 70 times in a minute are all rates. Each one joins two different kinds of measure, so both unit names are needed. On its own, 6 in 2 means nothing. Say cups and minutes, and it tells you how fast the sink fills."
+ },
+ "6.RP-2#2": {
+  "title": "The first row of the table",
+  "text": "Write a trip as a table: 2 hours and 100 miles, 3 hours and 150 miles, 4 hours and 200 miles. One row is missing at the top: 1 hour and 50 miles. That row is the unit rate. Every other row is that row multiplied by something, so once you know it you can fill in any row you like."
+ },
+ "6.RP-2#3": {
+  "title": "Equal jumps on a number line",
+  "text": "Draw a line from 0 to 150 miles and mark where the car is after each hour. Three equal jumps must land exactly on 150. Jumps of 50 work, because 50 + 50 + 50 = 150. The length of one jump is the distance for one hour, so the unit rate is 50 miles per hour. Division finds the jump length without the drawing."
+ },
+ "6.RP-2#4": {
+  "title": "Deal them out",
+  "text": "Put the 5 packs in a row and deal the stickers like cards. Round one puts 1 sticker in each pack and uses 5 stickers. Round two puts another sticker in each pack and uses the last 5. The stickers are gone after two rounds, so each pack holds 2 stickers. Dealing in rounds is what dividing by 5 means."
+ },
+ "6.RP-2#5": {
+  "title": "Guess and multiply",
+  "text": "Pick a speed and test it by multiplying by the 3 hours. Try 40 miles per hour: 40 × 3 = 120 miles, which is 30 miles short. The missing 30 miles spread over 3 hours is 10 more for each hour. Try 50 miles per hour: 50 × 3 = 150 miles. That matches the trip, so the car goes 50 miles in one hour."
+ },
+ "6.RP-2#6": {
+  "title": "Work in cents",
+  "text": "Change the money to cents so there is no decimal point: 9 dollars is 900 cents. Share 900 cents among 6 muffins. Since 6 × 100 = 600 and 6 × 50 = 300, and 600 + 300 = 900, each muffin gets 100 + 50 = 150 cents. Written in dollars, 150 cents is 1.50, so one muffin costs 1.50 dollars."
+ },
+ "6.RP-2#7": {
+  "title": "Halve the row twice",
+  "text": "Write the deal as a row: 4 notebooks, 10 dollars. Halve both numbers to get 2 notebooks for 5 dollars. Halve both again to get 1 notebook for 2.50 dollars. Halving twice is the same as dividing by 4, so this is the unit price. Check by doubling back: 2.50, then 5, then 10 dollars for 4 notebooks."
+ },
+ "6.RP-2#8": {
+  "title": "Count apples per dollar",
+  "text": "Turn the question around first. 8 apples for 4 dollars means each dollar buys 8 ÷ 4 = 2 apples. If one dollar is shared by 2 apples, each apple costs half a dollar. Half a dollar is 50 cents, written 0.50 dollars. The answer is less than 1, as it should be when one dollar buys more than one apple."
+ },
+ "6.RP-2#9": {
+  "title": "Shrink the pair in steps",
+  "text": "Write the run as a pair: 100 meters, 20 seconds. Divide both numbers by 10 to get 10 meters in 2 seconds. Halve both to get 5 meters in 1 second. The pair for 1 second is the unit rate, 5 meters per second.\nCheck by going forward: 5 meters each second for 20 seconds is 5 × 20 = 100 meters."
+ },
+ "6.RP-2#10": {
+  "title": "Check by building back up",
+  "text": "Test 1.50 dollars per muffin by rebuilding the table from the bottom. One muffin costs 1.50 dollars, so 2 muffins cost 3 dollars. Then 4 muffins cost 6 dollars, and 6 muffins cost 6 + 3 = 9 dollars. That is the price in the question, so 1.50 dollars per muffin is correct."
+ },
+ "6.RP-3#1": {
+  "title": "The same fraction every time",
+  "text": "Write each ratio as a fraction: 1/3, 2/6 and 3/9. All three simplify to 1/3, so they are one number written with different digits. That is what equivalent means. A ratio such as 2:5 does not belong with them, because 2/5 is not 1/3. Simplifying both ratios is a quick test of whether they match."
+ },
+ "6.RP-3#2": {
+  "title": "Three patterns in one table",
+  "text": "Fill a table for 2 cups making 10 cookies: 2 and 10, 4 and 20, 6 and 30, 8 and 40. Read down the cups column and it counts by 2s. Read down the cookies column and it counts by 10s. Read across any row and the cookies are 5 times the cups. A row that breaks any of these patterns has a mistake in it."
+ },
+ "6.RP-3#3": {
+  "title": "Why adding does not work",
+  "text": "Start with 2 cups for 10 cookies, which is 5 cookies from each cup. Suppose you add 2 to both numbers and write 4 cups for 12 cookies. Now each cup makes only 3 cookies, so the row is wrong. Multiply both by 2 instead: 4 cups for 20 cookies, still 5 from each cup. Adding the same number changes a ratio. Multiplying by the same number keeps it."
+ },
+ "6.RP-3#4": {
+  "title": "The rule is a straight line",
+  "text": "Plot the rows 1 and 3, 2 and 6, 3 and 9 as points on a grid. They sit on one straight line that starts at zero. The rule times 3 is how steep the line is: for every 1 across, it goes 3 up. Any new input lands on the same line, so the rule gives its output even when the input is far off the page."
+ },
+ "6.RP-3#5": {
+  "title": "Add two rows together",
+  "text": "The input 5 is the two known inputs added: 2 + 3 = 5. In a ratio table you can add rows, just as two orders can go in one bag. Add the outputs the same way: 6 + 9 = 15. So 5 turns into 15.\nThis agrees with the rule, because 5 × 3 is also 15."
+ },
+ "6.RP-3#6": {
+  "title": "Skip count down the column",
+  "text": "Each time the input goes up by 1, the output goes up by 4: the table shows 4, then 8. Keep counting by 4s, one step for each input: 12 for 3, 16 for 4, 20 for 5 and 24 for 6.\nThe sixth number in the count is 24, so the output for 6 is 24."
+ },
+ "6.RP-3#7": {
+  "title": "Price one pen first",
+  "text": "Find what a single pen costs. 3 dollars shared by 4 pens is 300 cents ÷ 4 = 75 cents each. Eight pens cost 8 × 75 cents. Since 4 × 75 is 300, 8 × 75 is 600 cents, which is 6 dollars.\nGoing through one pen gives the same answer as doubling the order."
+ },
+ "6.RP-3#8": {
+  "title": "Read across the row",
+  "text": "Look across the row instead of down. 10 cookies from 2 cups means the cookie number is 5 times the cup number, since 2 × 5 = 10. That rule holds for every row of the table. Use it on 6 cups: 6 × 5 = 30 cookies. The answer matches tripling the batch."
+ },
+ "6.RP-3#9": {
+  "title": "Follow the steps down",
+  "text": "Look at how the table moves from one row to the next. The input goes from 3 to 5, up by 2. The output goes from 12 to 20, up by 8. The next input, 7, is 2 more again, so the output goes up by 8 again: 20 + 8 = 28.\nEqual steps in one column give equal steps in the other."
+ },
+ "6.RP-3#10": {
+  "title": "Go through one",
+  "text": "Shrink the known row all the way down. 10 → 40 divided by 10 on both sides gives 1 → 4. Now build up to 5 by multiplying both sides by 5: 5 → 20.\nCheck by doubling the answer: 5 → 20 doubled is 10 → 40, the row you started from."
+ },
+ "6.RP-3#11": {
+  "title": "Stack up batches of two cups",
+  "text": "Skip the single cup and count whole batches instead. One batch is 2 cups and makes 10 cookies. Two batches are 4 cups and make 20 cookies. Three batches are 6 cups and make 30 cookies. The table reaches 6 cups on the third row, so 6 cups make 30 cookies."
+ },
+ "6.RP-4#1": {
+  "title": "Mixing needs only the parts",
+  "text": "Orange paint made from 3 cups of red and 2 cups of yellow has a part-to-part ratio of 3:2. Neither number is the 5 cups in the can. This kind of ratio is what you follow while mixing: each time you pour 3 cups of red, pour 2 of yellow. You can do that without ever knowing how much paint you will end up with."
+ },
+ "6.RP-4#2": {
+  "title": "A test score is part-to-whole",
+  "text": "A score of 8 out of 10 is a part-to-whole ratio. The 8 right answers are part of the 10 questions. The part-to-part ratio for the same quiz is 8 right to 2 wrong. The second number changed from 2 to 10 because it now counts every question, including the 8 that were already counted as right."
+ },
+ "6.RP-4#3": {
+  "title": "One bar shows it all",
+  "text": "Draw a bar made of 5 equal boxes. Shade 3 boxes for boys and leave 2 white for girls. The whole bar is the class. Three ratios can be read from this one picture: shaded to white is 3:2, shaded to the whole bar is 3:5, and white to the whole bar is 2:5. The bar is as long as the two parts joined end to end."
+ },
+ "6.RP-4#4": {
+  "title": "Line up and count",
+  "text": "Stand the children in one line: B B B G G. Count everyone in the line: 5. Count only the boys: 3. Boys to the whole group is 3:5.\nThe boys are counted twice, once as the part and again inside the total. That is correct, because the whole group includes them."
+ },
+ "6.RP-4#5": {
+  "title": "Think of a fraction",
+  "text": "Ask what fraction of the bowl is apples. There are 4 apples among 4 + 6 = 10 pieces, so apples are 4/10 of the fruit. Simplify 4/10 to 2/5. A fraction of 2/5 means 2 out of every 5 pieces are apples, and as a ratio of apples to all fruit that is 2:5."
+ },
+ "6.RP-4#6": {
+  "title": "Try real amounts",
+  "text": "Pick real amounts that fit the ratio. With 2 liters of red and 3 liters of blue there are 5 liters of paint, and red is 2/5 of it. Try a bigger batch: 4 liters of red and 6 of blue make 10 liters, and 4/10 simplifies to 2/5 again. Any batch size gives the same fraction, so 2/5 of the paint is red."
+ },
+ "6.RP-4#7": {
+  "title": "Draw ten jerseys",
+  "text": "Draw a row of 10 jerseys, one for each player. Mark 7 with an F for forwards and 3 with a D for defenders. Count the D jerseys, 3, and then every jersey, 10. Defenders to the whole team is 3:10.\nAs a check, forwards to the team is 7:10, and 7 + 3 gives back all 10 players."
+ },
+ "6.RP-4#8": {
+  "title": "Pair them up",
+  "text": "Match each red chip with a blue chip. All 5 red chips get a partner and no chip is left over. So the bag is made of two equal piles, one red and one blue. One pile out of two equal piles is one half, which means 1/2 of the chips are red. There was no need to count to 10."
+ },
+ "6.RP-4#9": {
+  "title": "Make three bunches",
+  "text": "Tie the flowers into 3 equal bunches. Each bunch gets 2 roses and 3 tulips, so it holds 5 flowers. Read both ratios from a single bunch. Roses to tulips is 2:3. Roses to all the flowers in the bunch is 2:5. Every bunch is the same, so these are the ratios for the whole garden, already in simplest form."
+ },
+ "6.RP-4#10": {
+  "title": "Check with a small table",
+  "text": "Make a table with two columns, apples and all fruit. The simplified ratio gives the first row: 2 apples, 5 pieces. Double it for the second row: 4 apples, 10 pieces. That second row is the real bowl, with 4 apples among 4 + 6 = 10 pieces. The bowl sits in the table for 2:5, so 2:5 is right."
+ },
+ "6.RP-5#1": {
+  "title": "Shade a hundred grid",
+  "text": "Picture a square cut into 100 small squares, 10 rows of 10. Shading 25 of them shades 25 percent of the square. That is two and a half rows. It is also one of four equal corner blocks, which is why 25% matches one quarter. Shade all 100 squares and you have 100%, the whole thing."
+ },
+ "6.RP-5#2": {
+  "title": "Find one percent first",
+  "text": "Here is 20% of 45 done slowly. Cut 45 into 100 equal bits. Each bit is 45 ÷ 100 = 0.45, and that is 1% of 45. Twenty of those bits make 20 × 0.45 = 9. Dividing by 100 and then multiplying by 20 is the same as multiplying by 0.20, so the decimal shortcut is these two steps done at once."
+ },
+ "6.RP-5#3": {
+  "title": "Benchmarks on a clock",
+  "text": "Try the benchmarks on an hour, which is 60 minutes. 100% is the full hour. 50% is half an hour, 30 minutes. 25% is a quarter of an hour, 15 minutes. 10% is 6 minutes. A clock face shows the first three as the full circle, half of it and a quarter of it. Other percents grow from these: 75% is 30 + 15 = 45 minutes."
+ },
+ "6.RP-5#4": {
+  "title": "Build it from 10%",
+  "text": "Skip the fraction and use tenths. 10% of 80 is 8, because the decimal point moves one place left. 50% is five lots of 10%, so multiply: 5 × 8 = 40.\nThis agrees with halving, since five tenths of a number is the same as half of it."
+ },
+ "6.RP-5#5": {
+  "title": "Find 1% first",
+  "text": "Start with the smallest slice. 1% of 250 is 250 ÷ 100 = 2.5. Ten percent is ten of those slices, so multiply: 10 × 2.5 = 25.\nDividing by 100 and then multiplying by 10 is the same as dividing by 10 once, so the answer matches the quick trick."
+ },
+ "6.RP-5#6": {
+  "title": "Halve it twice",
+  "text": "Use 50% as a stepping stone. 50% of 40 is half of 40, which is 20. 25% is half of 50%, so halve again: half of 20 is 10. Two halvings cut the number into quarters, so 25% of 40 is 10."
+ },
+ "6.RP-5#7": {
+  "title": "Double the 10% amount",
+  "text": "Find 10% of 45 by moving the decimal point one place left: 4.5. Twenty percent is two lots of 10%, so double it: 4.5 + 4.5 = 9. No decimal multiplying is needed, only one shift and one doubling, and the answer is still 9."
+ },
+ "6.RP-5#8": {
+  "title": "Scale the bottom to 100",
+  "text": "A percent is a fraction with 100 on the bottom, so change 3/4 into that form. Four goes into 100 exactly 25 times. Multiply the bottom by 25 to get 100, and multiply the top by 25 too: 3 × 25 = 75. So 3/4 = 75/100, which is 75%."
+ },
+ "6.RP-5#9": {
+  "title": "Half, minus a fifth",
+  "text": "Thirty percent is 50% take away 20%. Half of 60 is 30. Twenty percent of 60 is one fifth of it, 60 ÷ 5 = 12. Subtract: 30 − 12 = 18. So 30% of 60 is 18, the same as three lots of 10%."
+ },
+ "6.RP-5#10": {
+  "title": "Check with the other 80%",
+  "text": "Check 9 by finding the part that is left. If 20% of 45 is 9, the other 80% should be 45 − 9 = 36. Work out 80% on its own: 10% of 45 is 4.5, and eight of those is 36. The two parts, 9 and 36, add back to 45, so 9 is correct."
+ },
+ "6.RP-6#1": {
+  "title": "Write the fact as a table",
+  "text": "Put the inch fact in a ratio table. Feet: 1, 2, 3, 4. Inches: 12, 24, 36, 48. It looks just like a table for tickets that cost 12 dollars each. The inches are always 12 times the feet, and that fixed multiplier is the unit rate. Reading the table left to right converts feet to inches, and right to left converts back."
+ },
+ "6.RP-6#2": {
+  "title": "Trading dollars for quarters",
+  "text": "Change 3 dollars into quarters. Each dollar trades for 4 quarters, so you get 3 × 4 = 12 coins. The money is worth the same, but you hold more pieces because each piece is worth less. Feet to inches works the same way. Each foot trades for 12 inches, so 3 feet trade for 3 × 12 = 36 inches."
+ },
+ "6.RP-6#3": {
+  "title": "Packing eggs into cartons",
+  "text": "Think of 48 eggs and cartons that hold 12 each. To find the number of cartons, you ask how many 12s are in 48, and 48 ÷ 12 = 4. There are far fewer cartons than eggs, because each carton swallows 12 of them. Inches and feet behave like eggs and cartons: 48 inches fill 4 feet."
+ },
+ "6.RP-6#4": {
+  "title": "Catch a wrong answer",
+  "text": "Suppose someone converts 3 feet and writes 0.25 inches, because they divided by 12. Picture it. A 3-foot table is about as wide as a doorway, and a quarter of an inch is thinner than a pencil. Those cannot be the same length. Multiplying gives 36 inches, which fits a table. Imagining the real size catches the wrong operation."
+ },
+ "6.RP-6#5": {
+  "title": "Count up by twelves",
+  "text": "Lay three 1-foot rulers along the table and count the inches as you pass each one. The end of the first ruler is 12 inches. The end of the second is 24 inches. The end of the third is 36 inches. Three rulers reach the end of the table, so 3 feet is 36 inches."
+ },
+ "6.RP-6#6": {
+  "title": "Take away a foot at a time",
+  "text": "Cut 1-foot pieces off the shelf and keep count. 48 − 12 = 36 inches left after one piece. Then 24 after two pieces, 12 after three pieces and 0 after four pieces. Nothing is left over, and four pieces were cut, so 48 inches is 4 feet."
+ },
+ "6.RP-6#7": {
+  "title": "Double the fact",
+  "text": "The fact says 1 quart is 4 cups. The recipe needs twice as much milk as that, 2 quarts. Twice the quarts means twice the cups, so double 4 to get 8.\nAs a table: 1 quart and 4 cups, then 2 quarts and 8 cups. The recipe needs 8 cups."
+ },
+ "6.RP-6#8": {
+  "title": "Half of ten feet",
+  "text": "Ten feet is easy to convert: 10 × 12 = 120 inches. The post is 5 feet, which is half of 10 feet. So it is half of 120 inches, and half of 120 is 60.\nThe post is 60 inches tall, the same answer as splitting 12 into 10 and 2."
+ },
+ "6.RP-6#9": {
+  "title": "Count half meters",
+  "text": "Half a meter is 50 centimeters. A rope of 3.5 meters is 7 half meters, because every meter has two halves and 3.5 × 2 = 7. Seven pieces of 50 centimeters make 7 × 50 = 350 centimeters. Counting in halves avoids multiplying a decimal."
+ },
+ "6.RP-6#10": {
+  "title": "Skip count by fours",
+  "text": "Fill quart jars from the pot, 4 cups at a time, and count the cups used. One jar uses 4 cups. Two jars use 8 cups. Three jars use 12 cups, and the pot is empty. Three jars were filled, so 12 cups is 3 quarts."
+ },
+ "6.RP-6#11": {
+  "title": "Double, convert, then halve",
+  "text": "The decimal goes away if you double the rope first. Twice 3.5 meters is 7 meters, and 7 meters is 700 centimeters. That is two ropes, so halve it for one rope: 700 ÷ 2 = 350 centimeters. Doubling and halving cancel out, so the answer is the true length."
+ },
+ "6.RP-7#1": {
+  "title": "Two lines side by side",
+  "text": "Draw a line from 0 to 80. Under it draw a matching line from 0% to 100%. Halfway along, 40 sits above 50%. Halfway again, 20 sits above 25%. So 25% of 80 is 20, the same as 0.25 × 80. The pair of lines shows that a percent is a position between nothing and the whole amount."
+ },
+ "6.RP-7#2": {
+  "title": "Other chunks work too",
+  "text": "The same idea builds many percents. For 35% of 80, find 10%, which is 8. Then 30% is 24 and 5% is 4, so 35% is 28. For 90% of 80 it is quicker to subtract: the whole is 80, take away 10%, which is 8, and 72 is left. Choose the chunks that make the least work."
+ },
+ "6.RP-7#3": {
+  "title": "One price, both stories",
+  "text": "Take a game priced at 50 dollars, and 10% of it, which is 5 dollars. On sale at 10% off, you pay 50 − 5 = 45 dollars. With 10% tax instead, you pay 50 + 5 = 55 dollars. The 5 dollars was found the same way both times. Only one question is left: will you hand over less than the price tag says, or more?"
+ },
+ "6.RP-7#4": {
+  "title": "Use 10% blocks",
+  "text": "Find 10% of 80 first: 8. Then 25% is two and a half of those blocks. Two blocks are 16. Half a block is 4. Add them: 16 + 4 = 20.\nThis matches one quarter of 80, because 25 is two and a half tens."
+ },
+ "6.RP-7#5": {
+  "title": "Split 250 into pieces",
+  "text": "Break 250 into 200 and 50. Ten percent of 200 is 20, and ten percent of 50 is 5. Add the two results: 20 + 5 = 25. Taking 10% of each piece and adding gives the same total as taking 10% of the whole number."
+ },
+ "6.RP-7#6": {
+  "title": "A quarter minus a tenth",
+  "text": "Fifteen percent is also 25% take away 10%, and both are benchmark percents. A quarter of 60 is 60 ÷ 4 = 15. A tenth of 60 is 6. Subtract the tenth from the quarter: 15 − 6 = 9. Different chunks give the same answer as 10% plus 5%."
+ },
+ "6.RP-7#7": {
+  "title": "Start from half of 100",
+  "text": "Half of 100 is 50, and 86 is 14 less than 100. Taking half of something 14 smaller gives an answer 7 smaller, because half of 14 is 7. So half of 86 is 50 − 7 = 43.\nCheck by doubling: 43 + 43 = 86."
+ },
+ "6.RP-7#8": {
+  "title": "Discount on every ten dollars",
+  "text": "Thirty percent off means 3 dollars come off every 10 dollars of the price. So for each 10 dollars on the tag you pay 7 dollars. The shirt's price is four tens, so you pay 4 × 7 = 28 dollars. The discount is 4 × 3 = 12 dollars, and 28 + 12 gives back the 40 dollar tag."
+ },
+ "6.RP-7#9": {
+  "title": "Tip is one fifth",
+  "text": "Twenty percent is 20/100, which simplifies to one fifth. One fifth of the 35 dollar meal is 35 ÷ 5 = 7 dollars. That is the tip. Add it to the meal: 35 + 7 = 42 dollars in total.\nAnother view: you pay six fifths of the price, and 6 × 7 = 42."
+ },
+ "6.RP-7#10": {
+  "title": "Cross out boxes on a bar",
+  "text": "Draw a bar for the 40 dollar price and cut it into 10 equal boxes. Each box is 10% and is worth 4 dollars. A 30% discount crosses out 3 boxes. Seven boxes are left, and 7 × 4 = 28 dollars. The boxes that remain are the 70% you still pay."
+ },
+ "6.RP-8#1": {
+  "title": "One number answers every question",
+  "text": "A sign says 3 pounds of grapes cost 6 dollars. One shopper wants 5 pounds and another wants half a pound. Once you know that 1 pound costs 2 dollars, each question is a single multiplication: 5 pounds cost 10 dollars and half a pound costs 1 dollar. The unit rate is the one number that answers them all."
+ },
+ "6.RP-8#2": {
+  "title": "Shrink the row to one",
+  "text": "Write the trip as a row in a table: 180 miles, 3 hours. To make the hours say 1, divide that side by 3. A ratio table stays true only if both sides get the same treatment, so divide the miles by 3 as well: 60 miles, 1 hour. Finding a unit rate is scaling a row down until the second number is 1."
+ },
+ "6.RP-8#3": {
+  "title": "Or buy the same amount",
+  "text": "Another fair test is to make the amounts equal. Compare 3 bagels for 2 dollars with 5 bagels for 3 dollars. Both deals can reach 15 bagels. Five of the first deal cost 10 dollars. Three of the second deal cost 9 dollars. Same bagels, less money, so the second deal wins. A unit price does this with the shared amount set to 1."
+ },
+ "6.RP-8#4": {
+  "title": "Think in minutes",
+  "text": "Three hours is 3 × 60 = 180 minutes. The bus covers 180 miles in 180 minutes, so it goes 1 mile every minute. An hour has 60 minutes, so in one hour it covers 60 miles. That is 60 miles per hour, with no long division."
+ },
+ "6.RP-8#5": {
+  "title": "Halve the trip twice",
+  "text": "Write the trip as 240 miles in 4 hours. Half the trip is 120 miles in 2 hours. Half of that is 60 miles in 1 hour. Halving both numbers keeps the rate the same, and the row for 1 hour is the speed: 60 miles per hour."
+ },
+ "6.RP-8#6": {
+  "title": "Cookies for one dollar",
+  "text": "Ask what a single dollar buys. 12 cookies for 6 dollars is 12 ÷ 6 = 2 cookies for each dollar. Two cookies share that dollar equally, so each one costs half of it. Half a dollar is 0.50 dollars per cookie.\nCheck: 12 cookies at 50 cents is 600 cents, or 6 dollars."
+ },
+ "6.RP-8#7": {
+  "title": "Keep halving the bag",
+  "text": "Start with 8 oranges for 4 dollars. Half the bag is 4 oranges for 2 dollars. Half again is 2 oranges for 1 dollar. Half once more is 1 orange for half a dollar. So one orange costs 0.50 dollars. Three halvings are the same as dividing by 8."
+ },
+ "6.RP-8#8": {
+  "title": "Buy twelve pounds each way",
+  "text": "Make both deals the same size. Twelve pounds works, since 4 × 3 = 12 and 6 × 2 = 12. Three lots of Deal A are 12 pounds for 3 × 10 = 30 dollars. Two lots of Deal B are 12 pounds for 2 × 12 = 24 dollars. Deal B costs less for the same apples. Its price is 24 ÷ 12 = 2.00 dollars per pound."
+ },
+ "6.RP-8#9": {
+  "title": "Spend thirty dollars each way",
+  "text": "Make the money equal instead of the boxes. Thirty dollars works for both deals. With Deal A, 30 dollars is 6 lots of 5 boxes, which is 30 boxes. With Deal B, 30 dollars is 5 lots of 8 boxes, which is 40 boxes. Deal B gives more boxes for the same money, so it is the better buy, at 6 ÷ 8 = 0.75 dollars per box."
+ },
+ "6.RP-8#10": {
+  "title": "Buy 24 pens each way",
+  "text": "Make both deals the same number of pens. Both 6 and 8 go into 24. Four lots of 6 pens cost 4 × 3 = 12 dollars. Three lots of 8 pens cost 3 × 5 = 15 dollars. For the same 24 pens the first deal is cheaper, so 6 pens for 3 dollars is the better buy."
+ },
+ "6.RP-9#1": {
+  "title": "Anchors you can picture",
+  "text": "Tie each fact to something real. A school ruler is 1 foot long and marked with 12 inches. A yardstick is 3 rulers end to end. A meter stick shows 100 centimeters. A kilometer is 1000 meter sticks in a row, about a ten minute walk. A pound of butter is four sticks of 4 ounces, which is 16 ounces. Picture the object and the number comes back."
+ },
+ "6.RP-9#2": {
+  "title": "Weeks into days",
+  "text": "You already do this with time. Two weeks is 2 × 7 = 14 days, because a day is the smaller unit and every week holds 7 of them. Nobody would say 2 weeks is fewer than 2 days. Feet to inches is the same move with a different anchor: 2 feet is 2 × 12 = 24 inches."
+ },
+ "6.RP-9#3": {
+  "title": "Minutes into hours",
+  "text": "A film that runs 180 minutes is 180 ÷ 60 = 3 hours long. The hour is the bigger unit, so it takes fewer of them to cover the same film. Saying the film lasts 10,800 hours, by multiplying, would be silly. Inches to feet follows the same thinking: 36 inches is 36 ÷ 12 = 3 feet."
+ },
+ "6.RP-9#4": {
+  "title": "Read it on a meter stick",
+  "text": "Take a length of 2.35 meters. With meter sticks that is 2 full sticks, then 35 more centimeter marks. Two sticks are 200 centimeters, and 35 more makes 235 centimeters. The digits 2, 3 and 5 never changed. Only the point moved, from 2.35 to 235. Going back, 235 centimeters fills 2 sticks with 35 marks over, which is 2.35 meters."
+ },
+ "6.RP-9#5": {
+  "title": "Two rulers end to end",
+  "text": "A school ruler is 1 foot long and shows 12 inches. The jump rope is as long as two rulers laid end to end. Count the inches along both: 12 on the first ruler and 12 more on the second. 12 + 12 = 24, so 2 feet is 24 inches."
+ },
+ "6.RP-9#6": {
+  "title": "Double the fact twice",
+  "text": "Start with the anchor as a row: 1 yard, 3 feet. Double both numbers: 2 yards, 6 feet. Double both again: 4 yards, 12 feet. Two doublings turn 1 yard into 4 yards and 3 feet into 12 feet, so the pass travels 12 feet."
+ },
+ "6.RP-9#7": {
+  "title": "Count up in feet",
+  "text": "Measure the desk one foot at a time. After 1 foot you have covered 12 inches. After 2 feet you have covered 24 inches. After 3 feet you have covered 36 inches, which is the full width of the desk. Three steps of one foot each means 36 inches is 3 feet."
+ },
+ "6.RP-9#8": {
+  "title": "Split off the whole meters",
+  "text": "Break 250 centimeters into 200 and 50. The 200 centimeters make 2 full meters, since each meter is 100. The 50 left over is half of 100, so it is half a meter, 0.5. Put them together: 2 + 0.5 = 2.5 meters. The door is two and a half meter sticks tall."
+ },
+ "6.RP-9#9": {
+  "title": "Count by thousands",
+  "text": "Walk the trail one kilometer at a time and add 1000 meters for each. After 1 kilometer: 1000 meters. Then 2000, 3000, 4000 and, after the fifth kilometer, 5000 meters.\nCheck by going back: 5000 ÷ 1000 = 5 kilometers."
+ },
+ "6.RP-9#10": {
+  "title": "Shrink the division",
+  "text": "The division 48 ÷ 16 has the same answer when both numbers are halved. Halve them: 24 ÷ 8. Halve them again: 12 ÷ 4. That is an easy fact, 3. So 48 ounces is 3 pounds.\nCheck: 3 × 16 = 48."
+ },
+ "6.RP-9#11": {
+  "title": "Count half pounds",
+  "text": "Half a pound is 8 ounces, and the 8 times table is easier than counting by 16. 48 ÷ 8 = 6, so the flour is 6 half pounds. Two half pounds make one whole pound, so 6 half pounds are 6 ÷ 2 = 3 pounds."
+ },
+ "6.RP-10#1": {
+  "title": "Look inside each ratio",
+  "text": "Compare the two numbers inside each ratio. In 2:3 the second number is one and a half times the first. In 8:12 the second number, 12, is also one and a half times 8. The same link holds inside both, so they are equivalent. Try 8:10 and it fails: 10 is only one and a quarter times 8."
+ },
+ "6.RP-10#2": {
+  "title": "Go down, then up",
+  "text": "You can avoid the decimal by shrinking before you grow. From 4 servings, halve to get 2 servings, then triple to get 6. Do the same to an ingredient: 6 cups of flour halve to 3, then triple to 9. Halving and then tripling is the same as multiplying by 1.5, the scale factor that division gave."
+ },
+ "6.RP-10#3": {
+  "title": "Boxes of equal size",
+  "text": "Draw 3 boxes for dogs and 5 boxes for cats, all the same size. The 5 cat boxes hold 20 cats, so each box holds 4. The dog boxes are the same size, so 3 boxes hold 12 dogs. The whole drawing has 8 boxes, which is 32 animals. One picture gives every count."
+ },
+ "6.RP-10#4": {
+  "title": "New columns from old ones",
+  "text": "Start with 4 servings and 6 cups. Halve the pair: 2 servings and 3 cups. Add those two pairs: 6 servings and 9 cups. Double the first pair: 8 servings and 12 cups. Each new pair came from old ones by multiplying, dividing or adding two pairs. Every one of them still has 1.5 cups for each serving."
+ },
+ "6.RP-10#5": {
+  "title": "Simplify the bigger ratio",
+  "text": "Go the other way and shrink 8:12. Both numbers divide by 4, giving 8 ÷ 4 = 2 and 12 ÷ 4 = 3. So 8:12 simplifies to 2:3, which is exactly the first ratio. Two ratios with the same simplest form are equivalent, so the answer is yes."
+ },
+ "6.RP-10#6": {
+  "title": "Halve it and add it on",
+  "text": "Six servings is 4 servings plus 2 more. Two servings is half the recipe, so it needs half the flour: 3 cups. Add the full recipe and the half recipe: 6 + 3 = 9 cups of flour for 4 + 2 = 6 servings. No decimal scale factor is needed."
+ },
+ "6.RP-10#7": {
+  "title": "Cookies from one egg",
+  "text": "Find what a single egg does. 12 cookies from 3 eggs is 12 ÷ 3 = 4 cookies for each egg. To bake 36 cookies, count how many 4s are in 36: 36 ÷ 4 = 9. So 9 eggs are needed.\nCheck: 9 eggs × 4 cookies = 36 cookies."
+ },
+ "6.RP-10#8": {
+  "title": "List the ratio upward",
+  "text": "Write equivalent ratios of dogs to cats by adding 3 and 5 each time: 3:5, 6:10, 9:15, 12:20. Stop when the cats reach 20, the real count. That happens in the fourth ratio, 12:20. The dogs' number there is 12, so the shelter has 12 dogs."
+ },
+ "6.RP-10#9": {
+  "title": "Double, then take some back",
+  "text": "Double the deal: 10 packs cost 40 dollars. That is 2 packs too many. Two packs are a fifth of the 10 packs, so they cost a fifth of 40 dollars, which is 8 dollars. Take them off: 40 − 8 = 32 dollars for 8 packs."
+ },
+ "6.RP-10#10": {
+  "title": "Soda for one cup of juice",
+  "text": "Find the soda that goes with a single cup of juice. 5 parts soda for 2 parts juice is 5 ÷ 2 = 2.5 cups of soda for each cup of juice. There are 10 cups of juice, so multiply: 10 × 2.5 = 25 cups of soda."
+ },
+ "6.RP-10#11": {
+  "title": "Multiply first, then divide",
+  "text": "Avoid fractions by scaling up before scaling down. Multiply the deal by 8: 24 packs cost 48 dollars. Now 8 packs is one third of 24 packs, so take one third of the cost: 48 ÷ 3 = 16 dollars. Eight packs cost 16 dollars."
+ },
+ "6.RP-11#1": {
+  "title": "A table of the trip",
+  "text": "Follow a car going 60 miles per hour. After 1 hour it has gone 60 miles. After 2 hours, 120 miles. After 3 hours, 180 miles. After half an hour, 30 miles. Speed is the number that fills in this table: the miles are always 60 times the hours. A faster car has a bigger number in every row."
+ },
+ "6.RP-11#2": {
+  "title": "One fact family",
+  "text": "The three formulas are a fact family, like 3 × 4 = 12, 12 ÷ 3 = 4 and 12 ÷ 4 = 3. Walk at 4 miles per hour for 3 hours and you cover 12 miles. Know the 12 miles and the 3 hours, and dividing gives 4 miles per hour. Know the 12 miles and the speed, and dividing gives 3 hours. Learn the multiplication and both divisions come with it."
+ },
+ "6.RP-11#3": {
+  "title": "Spot the silly answer",
+  "text": "At 60 miles per hour for 30 minutes, multiplying 60 × 30 gives 1800 miles. That is like crossing a large country in half an hour. The true answer: a full hour gives 60 miles, so half an hour gives 30 miles. When an answer is wildly too big or too small, check that the time unit matches the unit after the word per."
+ },
+ "6.RP-11#4": {
+  "title": "Split the twelve",
+  "text": "Break the speed into 10 and 2. Riding 10 miles each hour for 3 hours covers 30 miles. The extra 2 miles each hour add 2 × 3 = 6 miles. Together that is 30 + 6 = 36 miles, the same as 12 × 3."
+ },
+ "6.RP-11#5": {
+  "title": "Guess and test",
+  "text": "Pick a speed and test it against the 4 hours. At 50 km each hour the train would cover 50 × 4 = 200 km, which is 40 km short. Forty more over 4 hours is 10 more each hour. Test 60: 60 × 4 = 240 km. That matches, so the speed is 60 km/h."
+ },
+ "6.RP-11#6": {
+  "title": "Count the hours",
+  "text": "Follow the trip hour by hour. After 1 hour the car has gone 50 miles. After 2 hours it has gone 100 miles. After 3 hours it has gone 150 miles, and the trip is done. It took 3 hours. Counting up in 50s is the same question as 150 ÷ 50."
+ },
+ "6.RP-11#7": {
+  "title": "Half the time, half the distance",
+  "text": "A speed of 60 mph means 60 miles in one full hour. Thirty minutes is half of an hour. At a steady speed, half the time covers half the distance, and half of 60 miles is 30 miles. No formula is needed when the time is a simple fraction of an hour."
+ },
+ "6.RP-11#8": {
+  "title": "Check by dividing back",
+  "text": "Test the answer of 40 km by turning it back into a speed. Distance divided by time should give the boat's rate: 40 ÷ 2 = 20 km each hour. That is the speed in the question, so 40 km is right. A smaller answer such as 22 km, from adding 20 and 2, would give only 11 km each hour."
+ },
+ "6.RP-11#9": {
+  "title": "Build up in ten-second blocks",
+  "text": "At 5 meters each second, 10 seconds cover 50 meters. One minute is six blocks of 10 seconds. Six blocks of 50 meters make 6 × 50 = 300 meters. Counting in blocks keeps the time in seconds the whole way, so the units always match."
+ },
+ "6.RP-11#10": {
+  "title": "Count ten-minute blocks",
+  "text": "Sixty miles in 60 minutes means 10 miles in every 10 minutes. Thirty minutes is three blocks of 10 minutes. Three blocks of 10 miles make 30 miles. The blocks do the unit change for you, and the answer agrees with 1 mile per minute for 30 minutes."
+ },
  "6.SP-1#1": {
   "title": "The balance point on a line",
   "text": "Mark the values 2, 3 and 10 on a number line and look for the spot where they balance. Try 5: the 2 is 3 below and the 3 is 2 below, a total of 5 below. The 10 is 5 above. The two sides match, so 5 is the mean.\nAdding and dividing agrees: 15 ÷ 3 = 5."

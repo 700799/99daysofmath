@@ -24,9 +24,9 @@
     {
       "title": "Simplify, then scale to 100",
       "steps": [
-        "$\\frac{18}{24} = \\frac{3}{4}$ after simplifying.",
-        "$\\frac{3}{4} = \\frac{75}{100}$.",
-        "$\\frac{75}{100} = 75\\%$."
+        "Divide the top and bottom of $\\frac{18}{24}$ by $6$ to get the simpler fraction $\\frac{3}{4}$.",
+        "A percent needs a bottom number of $100$, and $4 \\times 25 = 100$, so multiply the top by $25$ too: $\\frac{3}{4} = \\frac{75}{100}$.",
+        "Seventy-five out of one hundred is $75\\%$, so Lia got $75\\%$ correct."
       ]
     }
   ],

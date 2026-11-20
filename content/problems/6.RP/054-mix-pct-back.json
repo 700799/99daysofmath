@@ -38,6 +38,24 @@
     "The decimal method gives the same result: $0.40 \\times 30 = 12$.",
     "There are $12$ girls in the class."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Use the fraction $\\frac{2}{5}$",
+      "steps": [
+        "Write $40\\%$ as $\\frac{40}{100}$ and simplify by dividing top and bottom by $20$ to get $\\frac{2}{5}$.",
+        "One fifth of the class is $30 \\div 5 = 6$ students.",
+        "Two fifths is $2 \\times 6 = 12$, so there are $12$ girls."
+      ]
+    },
+    {
+      "title": "Half minus a tenth",
+      "steps": [
+        "$40\\%$ is $50\\%$ take away $10\\%$, and both are quick for $30$ students.",
+        "Half the class is $15$ students and one tenth of the class is $3$ students.",
+        "Subtract to get $15 - 3 = 12$, which again gives $12$ girls."
+      ]
+    }
+  ],
   "tags": [
     "percent",
     "word"

@@ -33,6 +33,16 @@
     "Scale the sugar by the same factor, because both parts of a ratio must change together: $3 \\times 3 = 9$.",
     "You need $9$ cups of sugar for $6$ cups of flour."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Build a ratio table",
+      "steps": [
+        "Write the recipe as the first row of a table: $2$ cups of flour with $3$ cups of sugar.",
+        "Add one more batch for each new row: $4$ flour with $6$ sugar, then $6$ flour with $9$ sugar.",
+        "The row with $6$ cups of flour has $9$ cups of sugar, so you need $9$ cups."
+      ]
+    }
+  ],
   "tags": [
     "CA",
     "ratio",

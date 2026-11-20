@@ -36,6 +36,16 @@
     "Apply that to the new top value: $7 \\times 6 = 42$.",
     "The bottom line shows $42$ where the top line shows $7$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Mark every tick",
+      "steps": [
+        "Share the known pair into $4$ equal steps: $24 \\div 4 = 6$, so the top mark $1$ sits above $6$.",
+        "Keep stepping along both lines together: $5$ sits above $30$, $6$ sits above $36$ and $7$ sits above $42$.",
+        "Reading down from $7$ on the top line gives $42$ on the bottom line."
+      ]
+    }
+  ],
   "tags": [
     "double-number-line"
   ],

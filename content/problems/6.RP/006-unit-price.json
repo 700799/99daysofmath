@@ -26,9 +26,17 @@
     {
       "title": "Convert to cents first",
       "steps": [
-        "$\\$4.20 = 420$ cents.",
-        "$420 \\div 6 = 70$ cents per pen.",
-        "$70$ cents $= \\$0.70$. Same answer."
+        "Cents avoid the decimal point, and $4.20$ dollars is the same as $420$ cents.",
+        "Share the cents among the pens: $42 \\div 6 = 7$, so $420 \\div 6 = 70$ cents each.",
+        "Seventy cents written in dollars is $0.70$, so the unit price is $0.70$ dollars per pen."
+      ]
+    },
+    {
+      "title": "Estimate, then check",
+      "steps": [
+        "A price of $1$ dollar per pen would make the box cost $6$ dollars, so each pen costs less than $1$ dollar.",
+        "Try $0.70$ dollars: $6 \\times 0.70 = 4.20$, which is exactly the price of the box.",
+        "The guess fits with nothing left over, so the unit price is $0.70$ dollars per pen."
       ]
     }
   ],

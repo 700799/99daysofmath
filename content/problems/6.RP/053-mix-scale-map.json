@@ -33,6 +33,16 @@
     "Three inches is $3 \\times 50 = 150$ miles and half an inch is $25$ miles, which total $175$.",
     "A map distance of $3.5$ inches represents $175$ miles."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Count half inches",
+      "steps": [
+        "If $1$ inch stands for $50$ miles, then half an inch stands for $25$ miles.",
+        "A length of $3.5$ inches is made of $7$ half inches, because $3.5 \\times 2 = 7$.",
+        "Seven half inches stand for $7 \\times 25 = 175$ miles."
+      ]
+    }
+  ],
   "tags": [
     "conversion",
     "scale"

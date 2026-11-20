@@ -43,8 +43,9 @@
     {
       "title": "Pay 75% directly",
       "steps": [
-        "$25\\%$ off means you pay $75\\%$.",
-        "$0.75 \\times 40 = 30$."
+        "Taking $25\\%$ off the full $100\\%$ leaves $75\\%$ of the price to pay.",
+        "$75\\%$ is three quarters, and one quarter of $40$ dollars is $10$ dollars.",
+        "Three quarters is $3 \\times 10 = 30$, so the sale price is $30$ dollars."
       ]
     }
   ],

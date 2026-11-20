@@ -34,6 +34,16 @@
     "The division gives $120 \\div 2 = 60$ for the top number.",
     "The car's rate is $60$ km per hour."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Halve the trip",
+      "steps": [
+        "The car needs $2$ hours for $120$ km, and $1$ hour is half of that time.",
+        "At a steady speed, half the time covers half the distance, and half of $120$ is $60$.",
+        "So the car covers $60$ km in one hour, a rate of $60$ km per hour."
+      ]
+    }
+  ],
   "tags": [
     "rate"
   ],

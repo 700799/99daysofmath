@@ -39,6 +39,24 @@
     "The quotient is $25$, and the check $25 \\times 4 = 100$ confirms it.",
     "The pump fills the tank in $25$ minutes."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Build a ratio table",
+      "steps": [
+        "Start with $4$ gallons in $1$ minute and multiply the row by $10$ to get $40$ gallons in $10$ minutes.",
+        "Double it for $80$ gallons in $20$ minutes, and halve the $40$-gallon row for $20$ gallons in $5$ minutes.",
+        "Add those two rows to fill the tank: $80 + 20 = 100$ gallons in $20 + 5 = 25$ minutes."
+      ]
+    },
+    {
+      "title": "Use a friendlier rate",
+      "steps": [
+        "Four gallons a minute means $4 \\times 25$ gallons in $25$ minutes, so test whether $25$ works.",
+        "Four quarters make a dollar, and in the same way four $25$s make $100$.",
+        "So $25$ minutes of pumping gives exactly $100$ gallons, and the tank is full in $25$ minutes."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "unit-rate",

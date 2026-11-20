@@ -33,6 +33,16 @@
     "Splitting eight cups into pairs gives $8 \\div 2 = 4$ pairs.",
     "Eight cups are the same amount as $4$ pints."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Build a ratio table",
+      "steps": [
+        "Write the fact as a row, $2$ cups for $1$ pint, then double it to get $4$ cups for $2$ pints.",
+        "Double once more to reach the amount in the question: $8$ cups for $4$ pints.",
+        "The row with $8$ cups shows $4$ pints."
+      ]
+    }
+  ],
   "tags": [
     "conversion",
     "volume"

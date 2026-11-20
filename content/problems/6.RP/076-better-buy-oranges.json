@@ -47,9 +47,17 @@
     {
       "title": "Compare oranges per dollar",
       "steps": [
-        "A: $6 / 3 = 2$ oranges per \\$.",
-        "B: $10 / 4 = 2.5$ oranges per \\$.",
-        "B gives more oranges per dollar → B."
+        "Turn the rate around and ask how many oranges each dollar buys.",
+        "Deal A gives $6 \\div 3 = 2$ oranges per dollar, and deal B gives $10 \\div 4 = 2.5$ oranges per dollar.",
+        "More oranges for each dollar is better, so deal B is the better buy."
+      ]
+    },
+    {
+      "title": "Buy thirty oranges",
+      "steps": [
+        "Pick a number of oranges both deals can make, such as $30$.",
+        "Five lots of deal A cost $5 \\times 3 = 15$ dollars, and three lots of deal B cost $3 \\times 4 = 12$ dollars.",
+        "The same $30$ oranges cost less with deal B, so B is the better buy."
       ]
     }
   ],

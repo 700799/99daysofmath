@@ -37,8 +37,17 @@
     {
       "title": "Scale the ratio",
       "steps": [
-        "$4$ servings : $6$ cups. Multiply both by $\\tfrac{10}{4} = 2.5$.",
-        "$6 \\times 2.5 = 15$ cups."
+        "Compare the servings to find the scale factor: $10 \\div 4 = 2.5$, so the new batch is $2.5$ times the recipe.",
+        "Multiply the flour by the same factor: $6 \\times 2.5$ is $6 \\times 2 = 12$ plus half of $6$, which is $3$.",
+        "That gives $12 + 3 = 15$ cups of flour for $10$ servings."
+      ]
+    },
+    {
+      "title": "Build a ratio table",
+      "steps": [
+        "Halve the recipe row to get $2$ servings for $3$ cups of flour.",
+        "Ten servings is five of those small batches, because $2 \\times 5 = 10$.",
+        "Multiply the flour by $5$ too: $3 \\times 5 = 15$ cups."
       ]
     }
   ],

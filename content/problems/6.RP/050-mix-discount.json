@@ -38,8 +38,9 @@
     {
       "title": "Pay percent shortcut",
       "steps": [
-        "Sale price is $75\\%$ of original.",
-        "$60 \\times 0.75 = 45$ dollars."
+        "The full price is $100\\%$, and taking $25\\%$ off leaves $75\\%$ still to pay.",
+        "$75\\%$ is three quarters, and one quarter of $60$ dollars is $15$ dollars.",
+        "Three quarters is $3 \\times 15 = 45$, so the sale price is $45$ dollars."
       ]
     }
   ],

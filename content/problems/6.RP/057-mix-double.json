@@ -38,6 +38,24 @@
     "Divide: $480 \\div 30 = 16$, which you can check with $16 \\times 30 = 480$.",
     "The $480$-mile trip needs $16$ gallons of gas."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Scale the ratio",
+      "steps": [
+        "Triple the pair $5$ gallons for $150$ miles to get $15$ gallons for $450$ miles.",
+        "The trip is $480 - 450 = 30$ miles longer, and $30$ miles is one fifth of $150$, so it takes $1$ more gallon.",
+        "The whole trip needs $15 + 1 = 16$ gallons of gas."
+      ]
+    },
+    {
+      "title": "Estimate, then check",
+      "steps": [
+        "Since $500$ miles would be a little over three lots of $150$ miles, expect a bit more than $15$ gallons.",
+        "Test $16$ gallons: each gallon covers $150 \\div 5 = 30$ miles, and $16 \\times 30 = 480$ miles.",
+        "That matches the trip exactly, so the answer is $16$ gallons."
+      ]
+    }
+  ],
   "tags": [
     "rate",
     "word"
