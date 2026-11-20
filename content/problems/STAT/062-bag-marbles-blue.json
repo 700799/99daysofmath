@@ -38,8 +38,8 @@
     {
       "title": "Use the complement",
       "steps": [
-        "Not blue means red or green: $3 + 2 = 5$ marbles, probability $\\frac{5}{10}$.",
-        "So blue is $1 - \\frac{5}{10} = \\frac{1}{2}$."
+        "Count the marbles that are not blue: $3$ red and $2$ green make $5$ of the $10$ marbles, a probability of $\\frac{5}{10}$.",
+        "Blue is everything else, so its probability is $1 - \\frac{5}{10} = \\frac{5}{10}$, which reduces to $\\frac{1}{2}$."
       ]
     }
   ],

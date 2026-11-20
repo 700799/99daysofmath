@@ -2786,5 +2786,649 @@
  "PC-14#11": {
   "title": "Ask how close it gets",
   "text": "Measure the gap between the temperature and 18. The gap is exactly 6 ÷ t.\nTo be within 1 degree of 18 you need t past 6 hours. Within 0.1 degree, past 60 hours. Within 0.01 degree, past 600 hours.\nAny closeness you name is reached by waiting long enough, and the gap never turns negative. That is what it means for the limit to be 18 degrees."
+ },
+ "STAT-1#1": {
+  "title": "Sort the columns of a spreadsheet",
+  "text": "Picture a class spreadsheet with one row per student. In the \"shoe size\" column you could sort from smallest to largest and say who is 2 sizes bigger than whom, so it is quantitative. In the \"homeroom number\" column, room 204 is not twice room 102 and the gap between them means nothing. The room number only says which group a student belongs to, so it is categorical, just like the \"eye color\" column."
+ },
+ "STAT-1#2": {
+  "title": "Scale the class to 100",
+  "text": "Imagine blowing the class of 20 up to exactly 100 students while keeping the same mix. Each real student now stands for 5 students, so the 8 pizza fans become 8 × 5 = 40 out of 100. That is what 40% says: out of every hundred, forty. Doing the same to tacos (6), salad (4) and other (2) gives 30, 20 and 10, and the four numbers fill the hundred exactly."
+ },
+ "STAT-1#3": {
+  "title": "Build the plot with students",
+  "text": "Ask the fifteen students to line up behind signs marked 0, 1, 2, 3 and 4 pets. Four stand behind 0, six behind 1, three behind 2, and one each behind 3 and 4. Seen from above, the lines are the dot plot. The longest line is at 1, the lines get shorter to the right, and every student can still find their own dot. A histogram does the same after grouping nearby values into bins."
+ },
+ "STAT-1#4": {
+  "title": "SOCS on a real data set",
+  "text": "Take commute times for a class. Shape: one peak at short times with a tail toward long ones, so skewed right and unimodal. Outliers: one student at 75 minutes stands far from the rest. Center: a typical commute is about 15 minutes. Spread: most times fall between 5 and 30 minutes. Four short sentences, each with the word \"minutes\" in it, and a reader who never saw the graph could now sketch it."
+ },
+ "STAT-1#5": {
+  "title": "A pay example",
+  "text": "Nine workers at a small shop earn 30 thousand dollars a year and the owner earns 300 thousand. On a number line the nine dots pile up on the left and one dot sits far out to the right, so the tail points right: skewed right. The median pay is 30 thousand, but the mean is 570 ÷ 10 = 57 thousand, more than nine of the ten people earn. The single tail value dragged the mean toward itself."
+ },
+ "STAT-1#6": {
+  "title": "Check with a second question",
+  "text": "Ask of each variable: does \"how much more?\" have an answer?\nSiblings: 4 siblings is 2 more than 2 siblings, a real difference, so quantitative.\nEye color: brown is not \"more\" than blue by any amount, so categorical.\nZip code: 90210 minus 10001 is 80209, but that number measures nothing about the two places, so categorical.\nThe result matches the averaging test: quantitative, categorical, categorical."
+ },
+ "STAT-1#7": {
+  "title": "Simplify, then scale to 100",
+  "text": "Write the pizza share as a fraction and reduce it: 8 out of 20 is 4 out of 10, which is 2 out of 5. Two fifths is the fraction. To turn it into a percent, scale the bottom to 100: 2 out of 5 is the same as 40 out of 100, so 40%. As a decimal that is 0.40, the same relative frequency as dividing 8 by 20 directly."
+ },
+ "STAT-1#8": {
+  "title": "Compare the mean with the median",
+  "text": "Check the shape with numbers. The median of 24 students is between the 12th and 13th values; the first bin holds 9 and the second reaches 16, so the median is in 10–20, about 14 minutes. Using bin midpoints, the mean is about (9×5 + 7×15 + 4×25 + 3×35 + 1×45) ÷ 24 = 400 ÷ 24 ≈ 16.7 minutes. A mean above the median is the sign of a right tail, so the shape is skewed right, with its one peak at 0–10 minutes."
+ },
+ "STAT-1#9": {
+  "title": "Cross off from both ends",
+  "text": "Line up the 15 values and cross off the smallest and largest together, pair by pair. Seven pairs go: the four 0s and three of the 1s leave from the low end while 4, 3, the three 2s and two of the 1s leave from the high end. The one value left standing is a 1, so the median is 1 pet. The high side had to reach all the way from 4 down to 1, which shows the long tail is on the right: skewed right."
+ },
+ "STAT-1#10": {
+  "title": "Count down from the top instead",
+  "text": "Check by counting from the largest values downward. The middle of 15 values is still position 8, whichever end you start from. Going down: 4 pets is position 1, 3 pets is position 2, the three 2-pet students take positions 3 to 5, and the six 1-pet students take positions 6 to 11. Position 8 falls inside the 1-pet group, so the median is 1 pet, the same answer as counting up."
+ },
+ "STAT-1#11": {
+  "title": "Scale each grade to 100 students",
+  "text": "Each grade has 25 students, and 25 × 4 = 100, so multiply every count by 4 to imagine 100 students per grade. In 11th grade, 18 online becomes 72 out of 100, which is 72%. In 10th grade, 12 online becomes 48 out of 100, which is 48%. No division is needed, and the comparison is clear: 72% of 11th graders against 48% of 10th graders, a gap of 24 percentage points."
+ },
+ "STAT-1#12": {
+  "title": "Estimate the mean and median",
+  "text": "Confirm the picture with numbers. The median of 24 scores lies between the 12th and 13th. Bins up to 80 hold 1 + 2 + 4 = 7 scores and the 80–90 bin reaches 16, so the median is in 80–90, near 86. With bin midpoints the mean is about (55 + 2×65 + 4×75 + 9×85 + 8×95) ÷ 24 = 2010 ÷ 24 ≈ 83.8. The mean is below the median, which is what a tail on the left produces: skewed left."
+ },
+ "STAT-2#1": {
+  "title": "Share out, or line up",
+  "text": "Seven students did 4, 6, 7, 8, 10, 12 and 16 minutes of homework. Mean: pool all 63 minutes and hand them back equally, 9 minutes each. That is what \"fair share\" means. Median: line the students up by minutes and tap the one in the middle, who did 8. Now change the 16 to 60. The pool grows, so the fair share jumps to 107 ÷ 7 ≈ 15.3, but the student in the middle of the line still did 8."
+ },
+ "STAT-2#2": {
+  "title": "Quartiles with real numbers",
+  "text": "Take 4, 6, 7, 8, 10, 12, 16. The median is 8. Below it sit 4, 6, 7, whose middle is 6, so Q1 = 6. Above it sit 10, 12, 16, whose middle is 12, so Q3 = 12. The IQR is 12 − 6 = 6. Now replace 16 with 160. The quartiles are still 6 and 12 and the IQR is still 6, while the range leaps from 12 to 156. The IQR only watches the middle of the data."
+ },
+ "STAT-2#3": {
+  "title": "Two quiz groups, same mean",
+  "text": "Group A scores 9, 10, 10, 10, 11 and group B scores 2, 6, 10, 14, 18. Both have mean 10. In A the distances from 10 are 1, 0, 0, 0, 1, and the recipe gives s = √(2 ÷ 4) ≈ 0.7. In B the distances are 8, 4, 0, 4, 8, and it gives s = √(160 ÷ 4) ≈ 6.3. The standard deviation is about nine times larger in B, matching what the eye sees: A huddles, B sprawls."
+ },
+ "STAT-2#4": {
+  "title": "Fences on real data",
+  "text": "Ages at a club: 12, 14, 15, 15, 16, 18, 20, 45. Here Q1 = 14.5 and Q3 = 19, so the box is 4.5 years wide. One and a half box-widths is 6.75 years, which puts the fences at 14.5 − 6.75 = 7.75 and 19 + 6.75 = 25.75. Everyone from 12 to 20 is inside the fences. The 45 is far outside, so it is drawn as a separate point and the right whisker stops at 20."
+ },
+ "STAT-2#5": {
+  "title": "Level the values to find the balance",
+  "text": "Guess a mean of 9 and check that it balances. Distances below 9: 5, 3, 2 and 1, total 11. Distances above 9: 1, 3 and 7, total 11. The two sides match, so the mean is 9. For the median, cross off the smallest and largest in pairs: 4 and 16, 6 and 12, 7 and 10. The value left is 8. The 16 alone supplies 7 of the 11 units on the high side, so it pulls the mean, not the median."
+ },
+ "STAT-2#6": {
+  "title": "Count positions on a number line",
+  "text": "Mark the seven values on a number line and count dots. One dot at each end gives min 4 and max 16. The 4th dot from either end is 8, the median. Cover that dot. Of the three dots to its left the middle one is 6, and of the three to its right the middle one is 12. Check: exactly one dot lies below Q1 and one above Q3, the same on both sides. The box runs from 6 to 12, so the IQR is 6."
+ },
+ "STAT-2#7": {
+  "title": "Use the shortcut formula",
+  "text": "Another route skips the deviations. Square each value and add: 9 + 25 + 25 + 64 + 81 = 204. Subtract n times the mean squared: 5 × 6² = 180, leaving 204 − 180 = 24, the same sum of squared deviations. Divide by n − 1 = 4 to get 6, then take the square root: s = √6 ≈ 2.45. As a sense check, the distances from the mean are 3, 1, 1, 2, 3, so a typical distance near 2.5 is reasonable."
+ },
+ "STAT-2#8": {
+  "title": "Compare the gaps",
+  "text": "Look at the gaps between neighbors in the sorted list: 2, 1, 0, 1, 2, 2, and then 25. The first seven ages span only 8 years in total, but the last jump alone is 25 years, about three times that whole span. The middle half of the data is only 4.5 years wide, and 45 sits 26 years above Q3. That is far more than the 6.75 years the rule allows, so 45 is beyond the fence of 25.75 and is an outlier."
+ },
+ "STAT-2#9": {
+  "title": "Find the largest non-outlier",
+  "text": "Turn the question around: how large could an age be without being flagged? The limit is Q3 plus 1.5 box-widths, which is 19 + 6.75 = 25.75, so anyone 25 or younger passes. A 45-year-old is nearly 20 years past that limit. Even if the rule used 3 box-widths, a stricter standard some books call an extreme outlier, the limit would be 19 + 13.5 = 32.5, and 45 would still be flagged. Outlier."
+ },
+ "STAT-2#10": {
+  "title": "Reason without recomputing",
+  "text": "Removing the 45 takes away a value 25.6 above the mean of 19.4. Those 25.6 extra years were being shared among the remaining ages, so the mean falls by about 25.6 ÷ 7 ≈ 3.7 years. The median only shifts half a position: from between the 4th and 5th ages (15.5) to the 4th age (15), a move of 0.5. It would move the same if the 45 had been 21 or 99. The median is the resistant one."
+ },
+ "STAT-2#11": {
+  "title": "Put numbers on each box",
+  "text": "Suppose each box is centered on its median. Class A's middle half then runs from about 73 to 83, and Class B's from about 75 to 95. B's box reaches 12 points higher at the top, yet its bottom edge is only 2 points above A's. So a typical B student scores higher (85 against 78), but B's middle students differ from each other by up to 20 points while A's differ by at most 10. B has the higher center, A the smaller spread."
+ },
+ "STAT-3#1": {
+  "title": "One bell, different rulers",
+  "text": "Draw one bell curve on a sheet of paper and leave the axis blank. Label the center 500 and mark every 100 points: the sheet now shows test scores, N(500, 100). Erase the labels, write 64.5 in the center and mark every 2.5 inches: the same drawing now shows women's heights, N(64.5, 2.5). Nothing about the curve was redrawn. Only the ruler under it changed, and a ruler needs just two facts: where its center is and how long one step is."
+ },
+ "STAT-3#2": {
+  "title": "Count 1,000 test takers",
+  "text": "Picture 1,000 students with scores that are N(500, 100). About 680 of them score between 400 and 600. About 950 score between 300 and 700, which leaves 50 outside: roughly 25 below 300 and 25 above 700. About 997 score between 200 and 800, so only 3 students in the thousand land farther out than that. Change the test to one with mean 20 and standard deviation 4 and the same head counts fall within 16 to 24, 12 to 28 and 8 to 32."
+ },
+ "STAT-3#3": {
+  "title": "Which score is better?",
+  "text": "Maya scores 82 on a history test where the class mean is 70 and the standard deviation is 8. She scores 75 on a chemistry test where the mean is 60 and the standard deviation is 5. History looks better, but count steps: 82 is 12 points above the mean, which is 12 ÷ 8 = 1.5 standard deviations. In chemistry, 75 is 15 points above, which is 15 ÷ 5 = 3 standard deviations. Compared with her classmates, chemistry was the stronger result."
+ },
+ "STAT-3#4": {
+  "title": "Read it as a percentile",
+  "text": "A left-area is a percentile. For scores that are N(500, 100), a 600 has z = 1 and the table says 0.8413, so 600 beats about 84 of every 100 scores. The other 16 scored higher: 1 − 0.8413 = 0.1587. A 400 has z = −1 with left-area 0.1587. The share of scores from 400 to 600 is everyone below 600 minus everyone below 400: 84 − 16 = 68 out of 100."
+ },
+ "STAT-3#5": {
+  "title": "Walk out from the mean",
+  "text": "Scores are N(500, 100) and a prize goes to the top 10%. Start at the mean, 500, where half the scores are below you. Walk right until 90% are below you. The table says that takes 1.28 steps, and each step is 100 points long, so you travel 128 points and stop at 628. For the bottom 10% you would walk the same distance left and stop at 500 − 128 = 372. The percent tells how many steps; σ tells how long each step is."
+ },
+ "STAT-3#6": {
+  "title": "Count the steps on a number line",
+  "text": "Mark the mean, 500, on a number line and put a tick every 100 points, one standard deviation each: 600, 700, and so on. The score 650 lies past the first tick at 600 and exactly halfway to the second at 700. That is one full step plus half a step above the mean, so z = 1.5. Check by reversing: 500 + 1.5 × 100 = 650."
+ },
+ "STAT-3#7": {
+  "title": "Count out of 1,000 scores",
+  "text": "Imagine 1,000 scores. The middle 680 lie within one standard deviation, between 400 and 600, so that is 68%. For the second part, 950 lie between 300 and 700, leaving 50 outside. Symmetry splits those evenly, 25 below 300 and 25 above 700. Twenty-five out of 1,000 is 2.5%. Another check: half the scores, 500, are above 500, and half of the 950, which is 475, lie between 500 and 700, so 500 − 475 = 25 are above 700."
+ },
+ "STAT-3#8": {
+  "title": "Bracket it with the empirical rule",
+  "text": "Estimate before using the table. Below 600 (one σ up) is 50% + 34% = 84%. Below 700 (two σ up) is 50% + 47.5% = 97.5%. Since 650 lies between 600 and 700, the answer must be between 0.84 and 0.975. The curve is taller near 600 than near 700, so more than half of that 13.5% band lies below 650, putting the answer above 0.91. The table value 0.9332 fits."
+ },
+ "STAT-3#9": {
+  "title": "Middle equals one minus two tails",
+  "text": "Use symmetry instead of two left-areas. The values 62 and 67 are each 2.5 inches, one standard deviation, from the mean of 64.5, so the two tails outside them are equal. The lower tail, below z = −1, has area 0.1587, and the upper tail matches it. Both tails together hold 2 × 0.1587 = 0.3174. The middle is what is left: 1 − 0.3174 = 0.6826."
+ },
+ "STAT-3#10": {
+  "title": "Count steps of 2.5 inches",
+  "text": "Skip the z-score formula and step along the height axis. One standard deviation is 2.5 inches, so from the mean of 64.5, one step down lands on 62 and one step up lands on 67. Those are exactly the two endpoints, so the question is asking for the share within one step of the mean. That share is always about 68% for a normal curve, which agrees with the table value 0.6826."
+ },
+ "STAT-3#11": {
+  "title": "Test nearby scores",
+  "text": "Work forward and check candidate cutoffs. Try 600: z = 1 and the area below is 0.8413, so 16% score higher. Too many, so move up. Try 650: z = 1.5 and the area below is 0.9332, leaving 6.7% above. Too few, so the cutoff is between 600 and 650. Try 628: z = 1.28 and the area below is 0.8997, leaving almost exactly 10% above. The cutoff is about 628."
+ },
+ "STAT-3#12": {
+  "title": "Flip to the right tail",
+  "text": "By symmetry, the share of bags more than 0.3 oz under the mean equals the share more than 0.3 oz over it. So count bags above 10.3 oz instead. That value has z = (10.3 − 10) ÷ 0.2 = 1.5, and the area to its left is 0.9332. The area to the right is 1 − 0.9332 = 0.0668. The lower tail matches, so 0.0668 of the bags, about 6.7%, are rejected."
+ },
+ "STAT-4#1": {
+  "title": "Describing one plot aloud",
+  "text": "Plot the age of ten used cars (x) against their price (y). The dots fall from upper left to lower right: older cars cost less, a negative direction. They follow a gentle curve that flattens, because cars lose value fastest when new, so the form is curved. The dots stay close to that curve, so it is fairly strong. One 30-year-old car priced far above the rest is a collector's model, an unusual point worth a comment."
+ },
+ "STAT-4#2": {
+  "title": "What different r values look like",
+  "text": "Think of four plots. Height in inches against height in centimeters: every point on one rising line, r = 1. Hours studied against test score: a tight rising band, r near 0.9. Shoe size against quiz score: a round cloud, r near 0. Car age against price: a falling band, r near −0.8. Measure the heights in feet instead, or put price on the x-axis, and each r stays the same, because r only reports how well the dots line up."
+ },
+ "STAT-4#3": {
+  "title": "Try a rival line",
+  "text": "For the study data (1, 60), (2, 65), (3, 75), (4, 80), (5, 90), compare two lines. The least-squares line 51.5 + 7.5x misses by 1, −1.5, 1, −1.5 and 1, so its squared misses total 7.5. A rival joining the first and last points, 52.5 + 7.5x, misses by 0, −2.5, 0, −2.5 and 0, for a total of 12.5. Every other line you try also scores worse than 7.5. The winner also passes through (3, 74), the point of means."
+ },
+ "STAT-4#4": {
+  "title": "Residuals for five students",
+  "text": "The line 51.5 + 7.5x predicts 59, 66.5, 74, 81.5 and 89 for 1 to 5 hours. The actual scores were 60, 65, 75, 80 and 90, so the residuals are 1, −1.5, 1, −1.5 and 1. Three students beat the prediction and two fell short, and the five residuals add to exactly 0. Their squares total only 7.5, while the scores vary around their mean by 570 in squared units, so the line leaves just 7.5 ÷ 570 ≈ 1.3% unexplained."
+ },
+ "STAT-4#5": {
+  "title": "Check the steps between points",
+  "text": "Use numbers instead of the eye. Each extra hour changes the score by 5, 10, 5 and 10 points. All four changes are increases, so the direction is positive. The changes do not grow steadily or shrink steadily, so nothing suggests a curve: the form is linear. They stay close to their average of 7.5 points per hour, so the points sit near one line and the relationship is strong."
+ },
+ "STAT-4#6": {
+  "title": "Slope from pairs of points",
+  "text": "Estimate the line a different way and compare. The first and last points give a slope of (90 − 60) ÷ (5 − 1) = 7.5, and the second and fourth give (80 − 65) ÷ (4 − 2) = 7.5 as well. A line with slope 7.5 through the point of means (3, 74) has intercept 74 − 22.5 = 51.5. That is ŷ = 51.5 + 7.5x, in agreement with the formula. With data this symmetric the shortcut matches exactly; in general only the formula is guaranteed."
+ },
+ "STAT-4#7": {
+  "title": "Build a small table",
+  "text": "Put the line into a table. At 0 hours it gives 51.5, at 1 hour 59, at 2 hours 66.5, at 3 hours 74. Each row is 7.5 higher than the one before, so the slope means +7.5 predicted points for each extra hour. The first row is the intercept: a predicted 51.5 for a student who does not study. Since no one in the data studied fewer than 1 hour, that first row is a starting value for the line, not a trusted prediction."
+ },
+ "STAT-4#8": {
+  "title": "Step from the point of means",
+  "text": "The line passes through (3, 74), so start there. For 3.5 hours, move half an hour right: half of 7.5 is 3.75, and 74 + 3.75 = 77.75. For the 2-hour student, move one hour left: 74 − 7.5 = 66.5 predicted. That student scored 65, which is 1.5 below the prediction, so the residual is −1.5. Both results match the substitution method."
+ },
+ "STAT-4#9": {
+  "title": "Check with z-scores",
+  "text": "Regression says a student one standard deviation above average in hours is predicted r standard deviations above average in score. Test it: 3 + 1.58 = 4.58 hours should predict 74 + 0.993 × 11.94 ≈ 85.9 points. The line gives 51.5 + 7.5 × 4.58 ≈ 85.9. They agree, so the slope 7.5 and intercept 51.5 are right: ŷ = 51.5 + 7.5x."
+ },
+ "STAT-4#10": {
+  "title": "Compare the misses directly",
+  "text": "Compute r² from prediction errors. Guessing the mean, 74, for every student misses by −14, −9, 1, 6 and 16, and those squares total 570. Using the line instead misses by 1, −1.5, 1, −1.5 and 1, and those squares total 7.5. The line removed 570 − 7.5 = 562.5 of the 570, and 562.5 ÷ 570 ≈ 0.987. So 98.7% of the variation in score is explained by hours studied."
+ },
+ "STAT-4#11": {
+  "title": "A reasonableness check",
+  "text": "Test the answer against what a score can be. If the test is out of 100, the line already predicts 51.5 + 7.5x = 100 at about 6.5 hours. Past that point every prediction is above the maximum, so the line must stop describing reality somewhere just beyond the data. At 20 hours it gives 201.5, more than double a perfect score. The arithmetic is right and the answer is impossible, which is the mark of extrapolation."
+ },
+ "STAT-5#1": {
+  "title": "Tasting the soup",
+  "text": "A cook wants to know how salty a whole pot of soup is. The pot is the population and its true saltiness is the parameter, a fixed fact nobody can measure without drinking it all. So the cook stirs and tastes one spoonful. The spoonful is the sample and its saltiness is the statistic. A second spoonful might taste slightly different, but the pot did not change. In the school survey, the 100 students are the spoonful and 62% is what it tasted like."
+ },
+ "STAT-5#2": {
+  "title": "Names in a hat",
+  "text": "Write each of the 40 students' names on identical slips, mix them in a hat and draw 5 without looking. Any five slips are as likely to come out together as any other five, which is exactly what an SRS requires. A random digit table is the same hat on paper: label students 01 to 40 and read two digits at a time. A pair like 73 is a slip with no name on it, and a repeated pair is a slip already drawn, so both are passed over."
+ },
+ "STAT-5#3": {
+  "title": "One school, three plans",
+  "text": "A school has 4 grades and 40 homerooms, and you want 80 students. Stratified: draw 20 at random from each grade, so freshmen and seniors are both sure to be heard. Cluster: draw 4 homerooms at random and survey all 20 students in each, with only four rooms to visit. Systematic: stand at the entrance, pick a random start from 1 to 15, then stop every 15th student who walks in. Same school, same sample size, three different ways of choosing."
+ },
+ "STAT-5#4": {
+  "title": "Four ways a gym poll goes wrong",
+  "text": "A town asks, \"Should we build a new gym?\" Voluntary response: a web poll draws mostly people with strong feelings. Convenience: asking people leaving the current gym finds mostly gym users. Undercoverage: calling only landlines misses most young adults, who never had a chance to be picked. Nonresponse: mailing 1,000 surveys and hearing back from 150 leaves 850 chosen voices missing. In every case you can guess which way the result leans before seeing a single answer."
+ },
+ "STAT-5#5": {
+  "title": "A scale that reads heavy",
+  "text": "A bathroom scale that jitters by a pound each time has variability: weigh yourself ten times, average, and the jitter mostly cancels. A scale that always reads 5 pounds heavy has bias: weigh yourself a thousand times and the average is a very steady number that is still 5 pounds too high. A leading question such as \"Do you agree that our hardworking teachers deserve a raise?\" is the second kind of scale. More respondents steady the answer without correcting it."
+ },
+ "STAT-5#6": {
+  "title": "Ask what would change",
+  "text": "Imagine the school repeats the survey with a different 100 students. The group of 1,200 stays the same, so that is the population. The 100 people asked would be new, so that is the sample. The 62% would probably come out a little different, perhaps 58% or 65%. A number that changes when the sample changes is a statistic. The true percent among all 1,200 would not move at all, and that fixed, unknown number is the parameter."
+ },
+ "STAT-5#7": {
+  "title": "Check the selection rules",
+  "text": "Verify the answer against the rules. The line read in pairs is 41, 05, 09, 20, 31, 06, 44, 90, 50, 59. Rule one: labels must be 01 to 40, which removes 41 at the start. Rule two: no repeats, and 05, 09, 20, 31, 06 are all different. Rule three: stop at five. Five valid labels are in hand after the sixth pair, so the sample is 05, 09, 20, 31, 06, and the last four pairs are never used."
+ },
+ "STAT-5#8": {
+  "title": "Ask who could be left out",
+  "text": "Look at which students can end up in each sample. Under Plan A, exactly 10 students come from every grade, so no grade can be missed, though most homerooms contribute only a student or two. Sampling some individuals from every group is stratified. Under Plan B, only 3 homerooms appear, and a whole grade could be absent if no chosen room belongs to it. Taking every individual from a few randomly chosen groups is cluster sampling."
+ },
+ "STAT-5#9": {
+  "title": "Invent numbers to see the push",
+  "text": "Suppose 1,000 readers see the poll and opinion is truly split: 500 think taxes are too high and 500 do not. If 30% of the upset readers bother to click, that is 150 yes votes. If only 4% of the content readers click, that is 20 no votes. The poll reports 150 out of 170, which is 88% yes, while the truth was 50%. Self-selection is voluntary response bias, and it overstates the yes share."
+ },
+ "STAT-5#10": {
+  "title": "Cross off as you go",
+  "text": "Write the numbers 1 to 40 on a sheet and circle each one the calculator gives. Circle 17. Circle 3. The next output is 3 again, already circled, so nothing new happens. Circle 28, then 40, which is on the sheet because the range includes both ends. Four circles so far, so one more is needed: circle 9. Five circled numbers means the sample is complete: students 17, 3, 28, 40 and 9."
+ },
+ "STAT-5#11": {
+  "title": "Flip the loaded word",
+  "text": "Test the question by loading it the other way: \"Do you agree that hardworking athletes should keep more of what they earn?\" Many people who said yes to the first version would say yes to this one too, even though the two answers contradict each other. When the answer follows the adjective instead of the issue, the wording is leading. Remove the adjective and ask plainly whether professional athletes should pay a higher tax rate."
+ },
+ "STAT-5#12": {
+  "title": "Cut the line into blocks",
+  "text": "Split the line of 500 into blocks of ten: shoppers 1–10, 11–20, and so on. That makes 500 ÷ 10 = 50 blocks, one for each person needed. Roll a ten-sided die once, say it shows 7, and take the 7th person in every block: 7, 17, 27, up to 497. Check the count: (497 − 7) ÷ 10 + 1 = 50 shoppers. Each shopper had a 1 in 10 chance, decided by that single roll."
+ },
+ "STAT-6#1": {
+  "title": "Does music help plants grow?",
+  "text": "Two ways to ask whether music helps plants. Observe: survey 200 gardeners, and those who play music report taller plants. But gardeners who play music may also water more carefully or own sunnier windows. Experiment: take 40 identical seedlings, flip a coin for each, and play music only to the heads group, with the same soil, light and water for all. If the music group grows taller now, the coin left nothing else to explain it."
+ },
+ "STAT-6#2": {
+  "title": "Draw the grid",
+  "text": "Make a grid with one factor down the side and the other across the top. Rows: fertilizer A, fertilizer B. Columns: daily water, weekly water. The grid has four boxes, and each box is one treatment: A-daily, A-weekly, B-daily, B-weekly. Every plant goes into exactly one box, and its growth is the response written inside. Add a third watering level and the grid becomes 2 rows by 3 columns, so there would be 6 treatments."
+ },
+ "STAT-6#3": {
+  "title": "Ice cream and sunburn",
+  "text": "On days when a beach kiosk sells more ice cream, the first-aid tent treats more sunburn. Does ice cream burn skin? Hot sunny weather raises both numbers at once. Ice cream sales and sunshine rise and fall on the same days, so from the daily records alone you cannot tell which one goes with the sunburn. That is confounding. To untangle them you would need sunny days with no ice cream, which only a planned design can supply."
+ },
+ "STAT-6#4": {
+  "title": "Break each principle in turn",
+  "text": "A coach tests a new stretching routine. No comparison: all 30 runners stretch and get faster, but the season was starting and they would have improved anyway. No random assignment: the coach lets keen runners choose the routine, so the stretching group was more motivated from the start. No replication: one runner stretches and one does not, and the faster one may simply have slept better. Fix all three with a coin flip for each of 30 runners and a comparison of the group averages."
+ },
+ "STAT-6#5": {
+  "title": "A headache study with numbers",
+  "text": "Give 100 people a sugar pill and about 35 report less pain: that is the placebo effect. Give another 100 the real pill and 60 improve. The drug deserves credit for the difference, 25, not for all 60. If doctors knew who had the real pill, they might nudge borderline ratings upward, so nobody learns the groups until the end. And if headaches differ by age, split into under-40 and over-40 blocks before flipping coins, so age cannot tip the result."
+ },
+ "STAT-6#6": {
+  "title": "Imagine the missing experiment",
+  "text": "Ask what it would take to prove coffee prevents heart disease. Researchers would have to take a few thousand volunteers, flip a coin for each, and make the heads group drink 3 cups a day for years while the tails group drinks none. Nothing like that happened here. Records were read after people chose their own habits, so this is an observational study. It can show that coffee and healthy hearts go together, an association, but not that one causes the other."
+ },
+ "STAT-6#7": {
+  "title": "Shuffle a deck of cards",
+  "text": "Randomize without a number generator. Take 40 index cards, write A on 20 and B on 20, and shuffle well. Walk along the plants and deal one card to each pot: the card says which fertilizer that plant gets. The groups are sure to be 20 and 20, and chance alone decided the split. Then give every pot the same light, water and soil, and after 8 weeks compare the mean height of the A plants with the mean height of the B plants."
+ },
+ "STAT-6#8": {
+  "title": "Fill in a two-by-two grid",
+  "text": "Draw a grid. The two things the researchers set go on the edges: fertilizer (A, B) down the side and watering (daily, weekly) across the top. Those are the 2 factors. What gets written inside the boxes is the measured growth, the response. Count the boxes: 2 rows by 2 columns gives 4, and each box is one treatment: A-daily, A-weekly, B-daily, B-weekly. So there are 2 factors and 4 treatments."
+ },
+ "STAT-6#9": {
+  "title": "Hold sleep fixed and look again",
+  "text": "Test whether sleep could be the real cause with a thought experiment. Look only at students who all sleep about 8 hours and compare breakfast eaters with skippers inside that group. If the grade gap shrinks or vanishes, sleep was doing the work. That can happen only because sleep differs between the breakfast groups and also affects grades by itself. A variable with both of those links is a confounder, and sleep fits."
+ },
+ "STAT-6#10": {
+  "title": "See what blocking prevents",
+  "text": "Suppose sun adds 10 cm of growth and fertilizer A adds 2 cm over B. With plain randomization, chance might put 13 sunny plants in group A and 7 in group B. Then A looks about 3 cm better from sunlight alone, and the real 2 cm effect is buried. Splitting each bench 10 and 10 makes that impossible: both fertilizers get exactly 10 sunny and 10 shady plants, so the sun cancels out of the comparison. That is a randomized block design."
+ },
+ "STAT-6#11": {
+  "title": "Put numbers on the placebo effect",
+  "text": "Suppose 60 of 100 people on the new pill say their headache eased. That sounds good, but if 40 of 100 on a sugar pill say the same, only the 20-person difference belongs to the drug. Without the sugar pill group there is no way to see this. If subjects knew their group, hope would raise the first number, and if doctors knew, their ratings could drift too. So the study needs a placebo control and must be double-blind."
+ },
+ "STAT-6#12": {
+  "title": "Compare the two designs with numbers",
+  "text": "Suppose soles wear between 1 mm and 5 mm depending on how much a person walks, and material X truly wears 0.3 mm less than Y. With 10 people per material, a group that happens to include more heavy walkers could differ by a full millimeter, hiding the 0.3. With both materials on one walker, a heavy walker shows 5.0 against 4.7 and a light one 1.3 against 1.0. Each pair shows the 0.3 directly. That is the strength of matched pairs."
+ },
+ "STAT-7#1": {
+  "title": "Three coin flips, counted out",
+  "text": "Flip a coin three times. The sample space has 8 equally likely outcomes: HHH, HHT, HTH, THH, HTT, THT, TTH, TTT, each with probability 1/8, and 8 × 1/8 = 1. What is the chance of at least one head? Counting directly, seven of the eight outcomes qualify. Counting the complement, only TTT has no heads, so the answer is 1 − 1/8 = 7/8. Both give the same number, but the second needed one outcome instead of seven."
+ },
+ "STAT-7#2": {
+  "title": "Hearts or kings in a deck",
+  "text": "Draw one card from 52. How likely is a heart or a king? There are 13 hearts and 4 kings, but 13 + 4 = 17 counts the king of hearts twice, once as a heart and once as a king. Only 16 different cards qualify, so the answer is (13 + 4 − 1)/52 = 16/52. Now ask for a heart or a spade: no card is both, so nothing is double counted and the answer is simply 13/52 + 13/52 = 26/52."
+ },
+ "STAT-7#3": {
+  "title": "A face-down card and a hint",
+  "text": "A card lies face down. The chance it is a king is 4/52, about 0.08. A friend peeks and says, \"It is a face card.\" Now only 12 cards are possible: 4 jacks, 4 queens, 4 kings. The chance of a king has become 4/12, about 0.33. The formula says the same: P(king and face card) is 4/52, P(face card) is 12/52, and dividing gives 4/12. New information threw away 40 cards and the 12 that remain became the whole deck."
+ },
+ "STAT-7#4": {
+  "title": "Count the late bus riders",
+  "text": "At a school of 200 students, 40% ride the bus, which is 80 students. Of those bus riders, 25% were late today, which is 20 students. So 20 out of 200, or 0.10, both ride the bus and were late. The multiplication rule gets there without head counts: 0.40 × 0.25 = 0.10. Notice that the 25% is a rate among bus riders only. That is the \"given A\" part of the rule."
+ },
+ "STAT-7#5": {
+  "title": "Test it with a deck of cards",
+  "text": "Draw one card. P(king) = 4/52 = 1/13. If you learn the card is a heart, the chance of a king is 1 of 13 hearts, still 1/13. Knowing the suit told you nothing, so king and heart are independent, and indeed (1/13)(1/4) = 1/52, the king of hearts. If you learn instead that the card is a queen, the chance of a king drops to 0. King and queen are mutually exclusive, and that makes them strongly dependent."
+ },
+ "STAT-7#6": {
+  "title": "Count the 36 outcomes in a grid",
+  "text": "Draw a 6 by 6 grid: rows for the first die, columns for the second. All 36 squares are equally likely. Shade the row where the first die is 6, six squares, and the column where the second die is 6, six more. The corner square (6, 6) was shaded twice, so the shaded region has 6 + 6 − 1 = 11 squares. The probability of at least one six is 11/36, about 0.306."
+ },
+ "STAT-7#7": {
+  "title": "Fill in the Venn diagram",
+  "text": "Sort the 100 students into regions. The overlap holds the 30 who do both. Sport only: 55 − 30 = 25. Music only: 50 − 30 = 20. Students in at least one circle: 25 + 30 + 20 = 75. So P(sport or music) = 75/100 = 0.75. As a check, the remaining 100 − 75 = 25 students do neither, and the four regions 25, 30, 20 and 25 add back to 100."
+ },
+ "STAT-7#8": {
+  "title": "Gather the athletes in the gym",
+  "text": "Send everyone who plays a sport to the gym. There are 55 students in the room, and the music players among them are exactly the 30 who do both. Pick one person in the gym at random: the chance of a musician is 30 out of 55. Reduce by dividing top and bottom by 5 to get 6/11, which is about 0.545. No probability formula was needed, only a count inside the smaller group."
+ },
+ "STAT-7#9": {
+  "title": "Compare with the count independence predicts",
+  "text": "If sport and music were independent, musicians would be just as common among athletes as in the whole school. Half of all students play music, so half of the 55 athletes, 27.5, would be expected to play music. The actual number is 30. Since 30 is not 27.5, the events are not independent. This is the same comparison as 30/55 ≈ 0.545 against 0.50: athletes are a little more likely than average to play music."
+ },
+ "STAT-7#10": {
+  "title": "Count ordered draws",
+  "text": "Name the marbles R1, R2, R3, B1, B2. There are 5 choices for the first draw and 4 for the second, so 20 equally likely ordered draws. Both red: 3 choices then 2, which is 6 draws, so 6/20 = 3/10. One of each: red then blue is 3 × 2 = 6 draws and blue then red is 2 × 3 = 6 draws, 12 in all, so 12/20 = 3/5. The last 2 draws are both blue, and 6 + 12 + 2 = 20."
+ },
+ "STAT-7#11": {
+  "title": "Count what stays in the bag",
+  "text": "Look at the three marbles left behind instead. Choosing 3 of 5 to stay can be done in 10 ways, matching the 10 pairs. Both drawn are red when the bag keeps 1 red and both blues: 3 ways, so 3/10. One of each is drawn when the bag keeps 2 reds and 1 blue: 3 × 2 = 6 ways, so 6/10 = 3/5. Both drawn are blue when all 3 reds stay: 1 way, so 1/10. The same three answers."
+ },
+ "STAT-7#12": {
+  "title": "Count 100 people",
+  "text": "Imagine 100 people. Ten have the condition, and 90% of them, 9 people, test positive. Ninety do not have it, and 20% of them, 18 people, test positive anyway. That makes 9 + 18 = 27 positive tests. Of those 27 people, only 9 really have the condition, and 9/27 = 1/3, about 0.333. Two out of every three positives are false alarms, because the healthy group is so much larger."
+ },
+ "STAT-8#1": {
+  "title": "Two coins, one table",
+  "text": "Flip two coins and let X be the number of heads. The outcomes HH, HT, TH, TT are words, but X turns them into the numbers 2, 1, 1, 0. Each outcome has probability 1/4, so the table reads: X = 0 with probability 1/4, X = 1 with probability 2/4, X = 2 with probability 1/4. The three probabilities add to 1 because the four outcomes were all used exactly once. If they added to less, some outcome would be missing."
+ },
+ "STAT-8#2": {
+  "title": "The balance point of the bars",
+  "text": "Draw the cars distribution as bars standing on a ruler: height 0.10 at 0, 0.40 at 1, 0.35 at 2 and 0.15 at 3. Slide a finger under the ruler until it balances. It balances at 1.55. On the left, 0.10 × 1.55 + 0.40 × 0.55 = 0.375. On the right, 0.35 × 0.45 + 0.15 × 1.45 = 0.375. The pulls match. No bar stands at 1.55, just as a seesaw balances at a spot where nobody sits."
+ },
+ "STAT-8#3": {
+  "title": "Two games with the same mean",
+  "text": "Game A: flip a coin, win 1 dollar or lose 1 dollar. Game B: flip a coin, win 10 dollars or lose 10 dollars. Both have mean 0, so the mean cannot tell them apart. In game A every result is 1 away from the mean, so the variance is 1² = 1 and σ = 1 dollar. In game B every result is 10 away, so the variance is 100 and σ = 10 dollars. The standard deviation reports the typical swing, in dollars."
+ },
+ "STAT-8#4": {
+  "title": "Three values, before and after",
+  "text": "Let X be 2, 4 or 6, equally likely: mean 4, with the outer values 2 away. Add 3 to get 5, 7, 9: the mean is 7, and the outer values are still 2 away. Now use Y = 3 + 2.5X to get 8, 13, 18: the mean is 13, which is 3 + 2.5 × 4, and the outer values are 5 away, which is 2.5 × 2. The shift moved the center only. The multiplier moved the center and stretched the distances."
+ },
+ "STAT-8#5": {
+  "title": "Two dice",
+  "text": "One die has mean 3.5 and variance about 2.92. For the sum of two dice the mean is 3.5 + 3.5 = 7 and the variance is 2.92 + 2.92 = 5.83, so the SD is about 2.42, not 1.71 + 1.71 = 3.42. For the difference, first die minus second, the mean is 3.5 − 3.5 = 0. But the difference runs from −5 to 5, just as wide as the sum runs from 2 to 12. Subtracting does not cancel spread, so its variance is 5.83 as well."
+ },
+ "STAT-8#6": {
+  "title": "Pair the faces",
+  "text": "Use symmetry instead of the weighted sum. Pair the smallest face with the largest, 1 and 4: their average is 2.5. Pair the two middle faces, 2 and 3: their average is also 2.5. All faces are equally likely, so the long-run average is 2.5 too. Check with 400 imagined rolls, 100 of each face: the total is 100 + 200 + 300 + 400 = 1,000, and 1,000 ÷ 400 = 2.5. No face shows 2.5, but the average of many rolls does."
+ },
+ "STAT-8#7": {
+  "title": "Use the shortcut formula",
+  "text": "Find the variance as the mean of the squares minus the square of the mean. The faces squared are 1, 4, 9 and 16, and their average is 30 ÷ 4 = 7.5. The mean squared is 2.5² = 6.25. So the variance is 7.5 − 6.25 = 1.25, with no deviations needed. The standard deviation is √1.25 ≈ 1.12. That is sensible: two faces are 0.5 from the mean and two are 1.5 away, so a typical distance is near 1."
+ },
+ "STAT-8#8": {
+  "title": "Buy every ticket",
+  "text": "Imagine buying all 100 tickets. You pay 100 × 2 = 200 dollars and you are certain to hold the winning ticket, so you collect 100 dollars. Overall you are down 100 dollars. Spread over the 100 tickets, that is a loss of 1 dollar per ticket. A single ticket is just one equal share of that whole deal, so its expected net gain is −1.00 dollars."
+ },
+ "STAT-8#9": {
+  "title": "Count 100 households",
+  "text": "Picture 100 households that match the table: 10 with no car, 40 with one, 35 with two, 15 with three. Cars in total: 0 + 40 + 70 + 45 = 155, so the mean is 1.55. Squared distances from 1.55 are 2.4025, 0.3025, 0.2025 and 2.1025. Multiplied by the head counts they give 24.025 + 12.1 + 7.0875 + 31.5375 = 74.75. Dividing by 100 gives a variance of 0.7475, and its square root is about 0.865 cars."
+ },
+ "STAT-8#10": {
+  "title": "Shift the values first",
+  "text": "Sliding every value by the same amount does not change the spread, so subtract 1 from each car count. The new values −1, 0, 1, 2 keep the probabilities 0.10, 0.40, 0.35, 0.15. Their mean is −0.10 + 0 + 0.35 + 0.30 = 0.55. The mean of their squares is 0.10 + 0 + 0.35 + 0.60 = 1.05. So the variance is 1.05 − 0.55² = 1.05 − 0.3025 = 0.7475, the same value with smaller numbers."
+ },
+ "STAT-8#11": {
+  "title": "Price three typical rides",
+  "text": "Work out the fare for an average ride and for rides one SD either side. A 6-mile ride costs 3 + 2.5 × 6 = 18 dollars. A 4-mile ride costs 3 + 10 = 13 dollars and an 8-mile ride costs 3 + 20 = 23 dollars. The fares 13, 18 and 23 are centered at 18 and step by 5. So the mean fare is 18 dollars and one standard deviation of fare is 5 dollars."
+ },
+ "STAT-8#12": {
+  "title": "Try a simple up-or-down model",
+  "text": "Simplify: say the morning is either 6 above or 6 below its mean, and the afternoon either 8 above or 8 below, each by a coin flip. The day total is then off by +14, −2, +2 or −14, all equally likely. Those average to 0, so the mean total is 40 + 50 = 90. Their squares, 196, 4, 4 and 196, average to 100, so the SD is √100 = 10. Half the time the two swings partly cancel, which is why it is not 14."
+ },
+ "STAT-9#1": {
+  "title": "Four settings that fail",
+  "text": "See each condition by breaking it. Roll a die 10 times and record the face: six outcomes, not two, so not Binary. Deal 5 cards and count aces: each card dealt changes what is left, so not Independent. Flip a coin until heads appears: the Number of flips is not fixed. Count the makes in 20 free throws as a shooter tires: the Success chance drifts. Count heads in 10 coin flips and all four hold, so that count is binomial."
+ },
+ "STAT-9#2": {
+  "title": "Two makes in three free throws",
+  "text": "A player makes 80% of free throws and takes 3. For exactly 2 makes, write out the ways: make-make-miss, make-miss-make, miss-make-make. The first has probability 0.8 × 0.8 × 0.2 = 0.128, and the other two contain the same three numbers in another order, so each is 0.128 too. Total: 3 × 0.128 = 0.384. The formula packs this up: C(3, 2) = 3 ways, 0.8² for the makes, 0.2 for the miss."
+ },
+ "STAT-9#3": {
+  "title": "Many batches of 50 parts",
+  "text": "Imagine 1,000 batches of 50 parts, each part defective 10% of the time. That is 50,000 parts with about 5,000 defects, or 5 per batch: np. Single batches vary, with most between about 3 and 7 defects, matching an SD of √(50 × 0.1 × 0.9) ≈ 2.1. Compare 50 coin flips: mean 25 and SD √(50 × 0.5 × 0.5) ≈ 3.5, the widest possible for n = 50. If p were 0, every batch would have 0 defects and no spread."
+ },
+ "STAT-9#4": {
+  "title": "Six hundred players rolling",
+  "text": "Have 600 people each roll a die until they get a six. On roll 1 about 100 succeed and sit down, so 500 remain. On roll 2 about one sixth of those, 83, succeed. On roll 3 about one sixth of the remaining 417, which is 69, succeed. As fractions of 600 these are 1/6, then (5/6)(1/6), then (5/6)²(1/6). Each round keeps 5/6 of the previous one. Averaged over everyone, the number of rolls taken comes to about 6."
+ },
+ "STAT-9#5": {
+  "title": "Big shipment, small shipment",
+  "text": "A shipment of 10,000 bulbs has 500 defective. The first bulb is defective with chance 500/10,000 = 0.0500. If it was, the next has chance 499/9,999 = 0.0499. The change is too small to matter. A box of 20 with 1 defective is different: 1/20 = 0.05 at first, then 0/19 = 0. For at least one defect in 3 bulbs at p = 0.05, skip the cases 1, 2 and 3: none has probability 0.95³ ≈ 0.857, so the answer is 0.143."
+ },
+ "STAT-9#6": {
+  "title": "Read it from Pascal's triangle",
+  "text": "Four flips of a fair coin give 2 × 2 × 2 × 2 = 16 equally likely sequences. The row of Pascal's triangle for 4 flips is 1, 4, 6, 4, 1. It says how many sequences have 0, 1, 2, 3 and 4 heads, and the entries add to 16. The middle entry is 6, so 6 of the 16 sequences have exactly 2 heads. The probability is 6/16 = 0.375."
+ },
+ "STAT-9#7": {
+  "title": "Count equally likely tickets",
+  "text": "Model each shot as drawing one of 5 tickets, 4 marked make and 1 marked miss. Five shots give 5 × 5 × 5 × 5 × 5 = 3,125 equally likely ticket sequences. For exactly 4 makes, choose which shot is the miss (5 ways), then the four makes can each be any of 4 tickets: 5 × 4 × 4 × 4 × 4 = 1,280 sequences. The probability is 1,280 ÷ 3,125 = 0.4096."
+ },
+ "STAT-9#8": {
+  "title": "Split on the first four shots",
+  "text": "Watch the first four shots, then the fifth. If all four go in, she already has at least 4: probability 0.8 × 0.8 × 0.8 × 0.8 = 0.4096. If exactly three of the four go in, she needs the fifth. Three of four has probability 4 × 0.512 × 0.2 = 0.4096, and making the fifth multiplies by 0.8, giving 0.32768. With two or fewer she cannot reach 4. Total: 0.4096 + 0.32768 = 0.73728, about 0.737."
+ },
+ "STAT-9#9": {
+  "title": "Count the good parts instead",
+  "text": "Check by counting good parts. Each part is good with probability 0.9, so a batch of 50 averages 50 × 0.9 = 45 good parts, leaving 50 − 45 = 5 defects. The good count has SD √(50 × 0.9 × 0.1) = √4.5 ≈ 2.12. Defects are just 50 minus the good count, and subtracting from a constant does not change spread, so defects also have SD 2.12. Expect 5 defects, give or take about 2."
+ },
+ "STAT-9#10": {
+  "title": "Go through the emails in order",
+  "text": "Follow the emails one at a time and stop at the first that gets through. Email 1 gets through with probability 0.2. If it is caught (0.8), email 2 gets through with probability 0.2: that is 0.8 × 0.2 = 0.16. If both are caught (0.64), email 3 gets through: 0.64 × 0.2 = 0.128. These three cases do not overlap, so add them: 0.2 + 0.16 + 0.128 = 0.488."
+ },
+ "STAT-9#11": {
+  "title": "Follow 216 players",
+  "text": "Let 216 people each roll until a six. On roll 1, one sixth succeed: 36 people, leaving 180. On roll 2, one sixth of 180 succeed: 30 people, leaving 150. On roll 3, one sixth of 150 succeed: 25 people. So 25 of the 216 get their first six on the third roll, and 25/216 ≈ 0.116. For the wait: over 600 rolls about 100 sixes appear, which is one six per 6 rolls on average."
+ },
+ "STAT-9#12": {
+  "title": "Build 0.95 to the 20th by squaring",
+  "text": "Get the probability without a power key. Two good bulbs: 0.95² = 0.9025. Four: 0.9025² ≈ 0.8145. Five: 0.8145 × 0.95 ≈ 0.7738. Ten: 0.7738² ≈ 0.5987. Twenty: 0.5987² ≈ 0.358. For the expected number, 5% is 1 bulb in 20, and the inspector tests 20, so about 1 defect is expected. Both fit together: one defect on average, yet no defects about 36% of the time."
+ },
+ "STAT-10#1": {
+  "title": "A jar of beads",
+  "text": "A jar holds 10,000 beads and exactly 40% are red. That 40% is the parameter: one fixed fact about the jar, unknown to anyone who has not counted every bead. Scoop out 50 beads and 18 are red, so the statistic is 0.36. Pour them back, scoop again, and get 23 red, 0.46. A third scoop gives 20 red, 0.40. The jar never changed, but the scoops did. In practice you get one scoop and must judge the jar from it."
+ },
+ "STAT-10#2": {
+  "title": "A thousand pollsters",
+  "text": "Suppose 60% of a city owns a bike and 1,000 pollsters each ask 100 random adults. Their results pile up around 0.60 in a bell shape, with about 950 of them landing between 0.50 and 0.70. If each had asked 400 adults instead, the pile would be half as wide, roughly 0.55 to 0.65. But if only 2% owned a bike and each asked 50 people, results could only be 0, 0.02, 0.04 and so on, bunched against zero. Expecting just 1 success fails Large Counts, and the bell is gone."
+ },
+ "STAT-10#3": {
+  "title": "Averaging dice",
+  "text": "One die has mean 3.5 and SD about 1.71, and a 6 comes up one time in six. Average 4 dice and the mean is still 3.5, but the SD drops to 1.71 ÷ 2 ≈ 0.85. An average of 6 now needs four sixes at once, a 1 in 1,296 event. Average 100 dice and the SD is 1.71 ÷ 10 ≈ 0.17, so nearly every average falls between 3 and 4. The center never moves, and four times the dice gives half the spread."
+ },
+ "STAT-10#4": {
+  "title": "From flat to bell with dice",
+  "text": "One die is as far from bell-shaped as it gets: six bars of equal height. Add two dice and the totals form a triangle peaked at 7, because there are six ways to make 7 and only one way to make 2 or 12. Add three and the corners round off. By 30 dice the histogram of averages is a smooth bell centered at 3.5. Nothing about a single die changed. Middle totals simply have far more combinations behind them than extreme totals."
+ },
+ "STAT-10#5": {
+  "title": "Go through the variance",
+  "text": "Work with variances, which follow a simple rule. One score has variance 12² = 144. The variance of a mean of 36 scores is the single-score variance divided by the sample size: 144 ÷ 36 = 4. Take the square root to return to points: √4 = 2. So the sample mean has standard deviation 2, the same answer as 12 ÷ 6, and the reason the divisor is 6 and not 36 is that the root comes last."
+ },
+ "STAT-10#6": {
+  "title": "Start from the count of owners",
+  "text": "Describe the number of bike owners first. In a sample of 100 the count is binomial with mean 100 × 0.6 = 60 and SD √(100 × 0.6 × 0.4) = √24 ≈ 4.9 owners. A proportion is the count divided by 100, so divide both: mean 0.60 and SD 0.049. With 60 expected owners and 40 expected non-owners, the binomial is close to bell-shaped, so the proportion is approximately normal with mean 0.6 and SD 0.049."
+ },
+ "STAT-10#7": {
+  "title": "Ask about the total instead",
+  "text": "A mean above 73 for 36 students is the same event as a total above 36 × 73 = 2,628 points. The total of 36 scores has mean 36 × 70 = 2,520 and SD 12 × √36 = 72. So 2,628 is 108 points above the expected total, and 108 ÷ 72 = 1.5 standard deviations. The area above z = 1.5 is 1 − 0.9332 = 0.0668, the same probability found using the mean."
+ },
+ "STAT-10#8": {
+  "title": "Work with the count of owners",
+  "text": "A sample proportion of 0.65 or more means 65 or more owners among 100. The count has mean 60 and SD √(100 × 0.6 × 0.4) ≈ 4.90. Sixty-five is 5 owners above the mean, and 5 ÷ 4.90 ≈ 1.02 standard deviations. With 60 and 40 expected, the normal curve fits, and the area above z = 1.02 is 1 − 0.8461 = 0.1539. About a 15% chance, or 0.154."
+ },
+ "STAT-10#9": {
+  "title": "Scale up from what you know",
+  "text": "Use the pattern instead of solving an equation. The SD of the mean must go from 2 to 1, which is half. Spread shrinks with the square root of the sample size, so halving it needs a sample 2² = 4 times as large: 4 × 36 = 144 students. Check: √144 = 12 and 12 ÷ 12 = 1. Had the goal been one third of the spread, the sample would need to be 9 times larger."
+ },
+ "STAT-10#10": {
+  "title": "Total minutes for 50 patients",
+  "text": "A mean wait above 5 minutes for 50 patients means their waits total more than 250 minutes. The total has mean 50 × 4 = 200 minutes and SD 3 × √50 ≈ 21.2 minutes, and with 50 waits added together its shape is close to normal. A total of 250 is 50 minutes above 200, and 50 ÷ 21.2 ≈ 2.36 standard deviations. The area above z = 2.36 is 1 − 0.9909 ≈ 0.009."
+ },
+ "STAT-11#1": {
+  "title": "A bike survey, piece by piece",
+  "text": "A survey finds 60 bike owners among 100 adults. Estimate: 0.60. Standard error: about 0.049, the usual miss for a sample this size. For 95% confidence the critical value is 1.96, so the margin is 1.96 × 0.049 ≈ 0.096 and the interval is 0.60 ± 0.096. Want 99% instead? Keep the 0.60 and the 0.049 and swap in 2.576: the margin grows to about 0.126. Want 90%? Use 1.645 and the margin shrinks to 0.081."
+ },
+ "STAT-11#2": {
+  "title": "Distance works both ways",
+  "text": "If you stand within 10 steps of a lamp post, the lamp post is within 10 steps of you. Sample proportions behave the same way. Say the true p is 0.60 and the SE is 0.05. About 95% of samples give a p̂ between 0.50 and 0.70, within 0.10 of the truth. A sample with p̂ = 0.66 draws the interval 0.56 to 0.76, which contains 0.60. A rare sample with p̂ = 0.72 draws 0.62 to 0.82, which misses. The interval catches p whenever p̂ landed close."
+ },
+ "STAT-11#3": {
+  "title": "Watch t* shrink as n grows",
+  "text": "Compare 95% critical values. With 5 measurements, df = 4 and t* = 2.776. With 16, df = 15 and t* = 2.131. With 30, df = 29 and t* = 2.045. With 1,000, t* is 1.962, nearly the normal value 1.960. Five measurements give a shaky estimate of the spread: s could easily be half or double the true σ, so the interval is stretched by 2.776 to stay honest. With a thousand measurements, s is almost exactly σ and no extra stretch is needed."
+ },
+ "STAT-11#4": {
+  "title": "One hundred classes, one hundred intervals",
+  "text": "Suppose 40% of all students at a huge school walk to school, and 100 statistics classes each survey their own random sample of 50 and build a 95% interval. About 95 classes get an interval that contains 0.40, like 0.29 to 0.56. About 5 classes are unlucky and get something like 0.44 to 0.72. No class can tell which kind it has, because nobody knows the 0.40. Each can only say: the recipe we followed works for about 95 classes in 100."
+ },
+ "STAT-11#5": {
+  "title": "Work in counts of people",
+  "text": "Build the interval for the number of owners in a sample of 100, then convert. The count is 60, with standard error √(100 × 0.6 × 0.4) = √24 ≈ 4.9 people. The margin is 1.96 × 4.9 ≈ 9.6 people, so the count interval is 50.4 to 69.6. Dividing by 100 gives 0.504 to 0.696. Quick check: near one half, the 95% margin is roughly 1 ÷ √n = 0.10, close to 0.096."
+ },
+ "STAT-11#6": {
+  "title": "Sort good sentences from bad",
+  "text": "Test each sentence against a checklist: confidence level, the parameter in context, the interval.\nGood: \"We are 95% confident that between 50.4% and 69.6% of all adults own a bike.\"\nBad: \"95% of adults own between 0.504 and 0.696 bikes.\" Wrong meaning.\nBad: \"95% of samples have p̂ in this interval.\" It is about p, not other samples.\nBad: \"60% of the sample owns a bike, give or take.\" The sample value is known exactly.\nOnly the first one says the interval (0.504, 0.696) captures the true proportion."
+ },
+ "STAT-11#7": {
+  "title": "Count supporters, then divide",
+  "text": "Work in voters. The sample has 100 supporters, and the standard error of that count is √(400 × 0.25 × 0.75) = √75 ≈ 8.66 voters. For 90% confidence the margin is 1.645 × 8.66 ≈ 14.2 voters, so the count interval is about 85.8 to 114.2 supporters per 400. Divide both ends by 400: 0.214 to 0.286. This matches 0.25 ± 0.036."
+ },
+ "STAT-11#8": {
+  "title": "Test candidate means",
+  "text": "The interval holds every mean that sits within t* = 2.131 standard errors of 50. The SE is 8 ÷ √16 = 2 oz. Try 46 oz: it is 4 oz away, which is 2.0 SEs, so it is inside. Try 45 oz: 5 oz away is 2.5 SEs, so it is outside. The edge is exactly 2.131 SEs away, 4.26 oz, on each side. That gives 50 − 4.26 = 45.74 and 50 + 4.26 = 54.26 oz."
+ },
+ "STAT-11#9": {
+  "title": "Solve two small equations",
+  "text": "Write what the endpoints mean. Lower end: p̂ − ME = 0.42. Upper end: p̂ + ME = 0.50. Add the two equations and the margins cancel: 2 × p̂ = 0.92, so p̂ = 0.46. Subtract the first from the second and the estimates cancel: 2 × ME = 0.08, so ME = 0.04. On a number line, 0.46 sits halfway between the ends and each end is 0.04 away."
+ },
+ "STAT-11#10": {
+  "title": "Estimate, then refine",
+  "text": "Rough version first. The standard error is 1.5 ÷ 5 = 0.3 hours, and for 95% the multiplier is a little over 2, so the margin is a little over 0.6. Expect an interval near 6.6 to 7.8 hours. Now refine: with 24 degrees of freedom the multiplier is 2.064, so the margin is 2.064 × 0.3 ≈ 0.62. The interval is 7.2 − 0.62 = 6.58 to 7.2 + 0.62 = 7.82 hours, slightly wider than the rough guess, as expected."
+ },
+ "STAT-11#11": {
+  "title": "Try sample sizes and watch the margin",
+  "text": "With p̂ = 0.5 the margin is 1.96 × 0.5 ÷ √n = 0.98 ÷ √n. Try n = 400: 0.98 ÷ 20 = 0.049, too wide. Try n = 1,000: 0.98 ÷ 31.62 ≈ 0.0310, still just over. Try n = 1,067: 0.98 ÷ 32.665 ≈ 0.030001, over by a hair. Try n = 1,068: 0.98 ÷ 32.680 ≈ 0.02999, finally at most 0.03. So 1,068 people are needed, and the near miss at 1,067 shows why rounding up matters."
+ },
+ "STAT-12#1": {
+  "title": "A friend's free-throw claim",
+  "text": "A friend says she makes 80% of her free throws. You have watched her and suspect it is lower. Before she shoots, write H0: p = 0.80 (her claim, the boring version) and Ha: p < 0.80 (your suspicion). Here p is her true long-run rate. Then she makes 13 of 20, so p̂ = 0.65. Writing \"H0: p̂ = 0.80\" would be silly, since everyone can see p̂ is 0.65. The open question is about the rate nobody can see."
+ },
+ "STAT-12#2": {
+  "title": "The same gap, two sample sizes",
+  "text": "Two coins each show 60% heads, a gap of 0.10 from fair. Coin A was flipped 20 times. Its standard error under H0 is √(0.5 × 0.5 ÷ 20) ≈ 0.112, so z = 0.10 ÷ 0.112 ≈ 0.9: twelve heads in twenty is ordinary. Coin B was flipped 1,000 times. Its standard error is about 0.0158, so z ≈ 6.3: six hundred heads in a thousand almost never happens with a fair coin. The gaps are equal, but the test statistics tell very different stories."
+ },
+ "STAT-12#3": {
+  "title": "A thousand fair coins",
+  "text": "You flip a coin 100 times and get 60 heads. Is that strange for a fair coin? Imagine 1,000 people who each flip a coin known to be fair 100 times. Most get between 45 and 55 heads. About 23 of them get 60 or more, and about 23 get 40 or fewer. So roughly 46 in 1,000 see a result at least as lopsided as yours, in either direction. That fraction, 0.046, is the two-sided p-value."
+ },
+ "STAT-12#4": {
+  "title": "Two studies, two verdicts",
+  "text": "Set α = 0.05 first. Study one: a new fertilizer, p-value 0.03. Since 0.03 ≤ 0.05, reject H0: there is convincing evidence that the fertilizer raises mean yield. Study two: a new study app, p-value 0.20. Since 0.20 > 0.05, fail to reject H0: the data do not give convincing evidence that the app raises mean scores. That is not proof the app does nothing. A jury says \"not guilty\", never \"innocent\", for the same reason."
+ },
+ "STAT-12#5": {
+  "title": "A spam filter's two mistakes",
+  "text": "A spam filter treats each email as legitimate (H0) unless the evidence says spam. Type I error: a real message from your teacher lands in the spam folder. Type II error: a scam reaches your inbox. Power is the share of real spam it catches. Make the filter stricter about calling anything spam and fewer good emails are lost, but more scams slip through. The only way to cut both errors at once is better evidence, which in statistics means more data."
+ },
+ "STAT-12#6": {
+  "title": "Count heads instead of proportions",
+  "text": "Run the test on the number of heads. If the coin is fair, 100 flips give a count with mean 50 and standard deviation √(100 × 0.5 × 0.5) = 5 heads. Sixty heads is 10 above the mean, which is 10 ÷ 5 = 2 standard deviations, the same z = 2.0. A result that far out in either direction has probability 2 × 0.0228 = 0.0456. Since 0.0456 < 0.05, reject H0: the coin does not appear fair."
+ },
+ "STAT-12#7": {
+  "title": "Count satisfied customers",
+  "text": "If the 80% claim is true, a sample of 200 should contain about 200 × 0.8 = 160 satisfied customers, with standard deviation √(200 × 0.8 × 0.2) = √32 ≈ 5.66 customers. The sample had 150, which is 10 fewer, and 10 ÷ 5.66 ≈ 1.77 standard deviations below. The chance of landing that low or lower is 0.0384. Since 0.0384 < 0.05, reject H0: there is evidence that satisfaction is below 80%."
+ },
+ "STAT-12#8": {
+  "title": "Find the cutoff in grams",
+  "text": "Decide before looking how low the sample mean must be. With 15 degrees of freedom and α = 0.05, the one-sided critical value is 1.753. The standard error is 8 ÷ 4 = 2 g, so the cutoff is 500 − 1.753 × 2 = 496.5 g: any sample mean below that is too low to blame on chance. The observed mean is 495 g, below the cutoff. This agrees with the p-value 0.012 < 0.05, so reject H0. The bags appear underfilled."
+ },
+ "STAT-12#9": {
+  "title": "Let a confidence interval decide",
+  "text": "Build a 95% interval for the true mean and see whether 10 g is inside. The standard error is 1.5 ÷ 5 = 0.3 g and t* for 24 degrees of freedom is 2.064, so the margin is 2.064 × 0.3 ≈ 0.62 g. The interval is 10.4 ± 0.62, or 9.78 to 11.02 g. The claimed 10 g lies inside, so it is a plausible value for the mean. Verdict at the 5% level: fail to reject H0."
+ },
+ "STAT-12#10": {
+  "title": "Mark the unusual head counts",
+  "text": "Work from the null side in counts. A fair coin flipped 100 times gives a mean of 50 heads with standard deviation 5. The middle 95% of fair-coin results runs from 50 − 1.96 × 5 = 40.2 to 50 + 1.96 × 5 = 59.8 heads, so counts of 41 to 59 are ordinary and anything at or beyond 40 or 60 is in the rejection region. Sixty heads falls just outside the ordinary range. Verdict: reject p = 0.5."
+ },
+ "STAT-12#11": {
+  "title": "Lay out the four cases",
+  "text": "Make a two-by-two table: truth (no fire, fire) against detector (silent, alarm). No fire and silent: correct. Fire and alarm: correct, and the chance of this is the power. No fire but alarm: Type I, burnt toast sets it off and you open a window. Fire but silent: Type II, the house burns while you sleep. The costs are not close, so Type II is worse. Designers accept more toast alarms, a larger α, to make silent fires rarer."
+ },
+ "STAT-13#1": {
+  "title": "Two shooters, one null rate",
+  "text": "Player 1 makes 40 of 50 free throws and player 2 makes 30 of 50. The gap is 0.80 − 0.60 = 0.20. If they are really equally good, the best guess at their shared rate uses all 100 shots: 70 ÷ 100 = 0.70. A gap between two 50-shot samples from 0.70 shooters has standard error √(0.7 × 0.3 × (1/50 + 1/50)) ≈ 0.092. So z = 0.20 ÷ 0.092 ≈ 2.2: the gap is about 2.2 times what chance alone usually produces."
+ },
+ "STAT-13#2": {
+  "title": "A right triangle of standard errors",
+  "text": "Picture a right triangle. One leg is the standard error of the first sample mean and the other leg is the standard error of the second. The standard error of the difference is the hypotenuse. If the legs are 3 and 4, the difference has standard error √(9 + 16) = 5, not 3 + 4 = 7. The hypotenuse is longer than either leg, so a difference is always less certain than either mean alone, but it is shorter than the two legs laid end to end."
+ },
+ "STAT-13#3": {
+  "title": "Four students, before and after",
+  "text": "Four students score 50, 70, 85, 95 before tutoring and 53, 74, 88, 97 after. As two separate groups, the means are 75 and 78, a 3-point gap buried in scores that range over 45 points. Nothing looks different. As pairs, the gains are 3, 4, 3 and 2: every student improved, the mean gain is 3, and the gains vary by less than 1 point. The same data, treated correctly, give clear evidence."
+ },
+ "STAT-13#4": {
+  "title": "The same gap, different surprise",
+  "text": "A die is rolled 60 times, so each face expects 10. If sixes come up 20 times, the gap is 10 and the contribution is 10² ÷ 10 = 10, a large surprise: twice as many sixes as expected. Now a huge survey expects 1,000 people in a category and sees 1,010. The gap is also 10, but the contribution is 100 ÷ 1,000 = 0.1, no surprise at all. Chi-square adds these contributions over all the cells into one total."
+ },
+ "STAT-13#5": {
+  "title": "Fill the table cell by cell",
+  "text": "Survey 200 people: 120 women, 80 men, and 100 of the 200 prefer tea. If tea preference has nothing to do with gender, half of each group should prefer tea: 60 women, which is 120 × 100 ÷ 200. Write 60 in that cell and the rest are forced: 60 women for coffee, then 40 and 40 for the men. One free cell means df = 1. For a bag of 200 candies claimed to be 40%, 30%, 20%, 10% by color, expect 80, 60, 40, 20, with df = 3."
+ },
+ "STAT-13#6": {
+  "title": "Chi-square on the two-by-two table",
+  "text": "Put the counts in a table: 60 and 40 for the drug, 45 and 55 for the placebo. If the drug does nothing, each group expects 52.5 improved and 47.5 not. Every cell is off by 7.5, so chi-square = 2 × 56.25 ÷ 52.5 + 2 × 56.25 ÷ 47.5 ≈ 4.51, and its square root is z ≈ 2.12. The chi-square p-value, 0.034, covers both directions. The data point the way Ha predicted, so halve it: 0.017 < 0.05, reject H0."
+ },
+ "STAT-13#7": {
+  "title": "Build an interval for the difference",
+  "text": "Estimate the difference in means with a 95% interval. The difference is 78 − 72 = 6 points and the standard error is √(4 + 4) ≈ 2.83. With 24 degrees of freedom t* = 2.064, so the margin is 2.064 × 2.83 ≈ 5.84. The interval is 6 ± 5.84, from 0.16 to 11.84 points. Zero is not inside, so \"no difference\" is not plausible at the 5% level, matching p ≈ 0.044 < 0.05: reject H0."
+ },
+ "STAT-13#8": {
+  "title": "How big a gain is needed?",
+  "text": "Set the bar before comparing. With 7 degrees of freedom, a one-sided test at α = 0.05 has critical value 1.895. The standard error of the mean gain is 4 ÷ √8 ≈ 1.41 points, so the mean gain must exceed 1.895 × 1.41 ≈ 2.68 points to count as convincing. The observed mean gain is 3.0, above the bar. That agrees with the p-value 0.036 < 0.05: reject H0, tutoring appears to help."
+ },
+ "STAT-13#9": {
+  "title": "Check each face against chance wobble",
+  "text": "A fair die rolled 60 times shows each face 10 times on average, with a standard deviation of √(60 × 1/6 × 5/6) ≈ 2.9. The observed counts differ from 10 by −2, 2, −1, 4, −3 and 0. The largest gap, 4, is only about 1.4 standard deviations, and the rest are smaller. Nothing here is beyond ordinary chance variation. That fits the small statistic 3.4 and the p-value near 0.64: fail to reject H0."
+ },
+ "STAT-13#10": {
+  "title": "The two-by-two shortcut",
+  "text": "A two-by-two table has a one-line formula: chi-square = n(ad − bc)² ÷ (product of the four row and column totals), where a, b, c, d are the cells. Here ad − bc = 30 × 30 − 20 × 20 = 500. So chi-square = 100 × 500² ÷ (50 × 50 × 50 × 50) = 25,000,000 ÷ 6,250,000 = 4.0. With df = 1 the cutoff is 3.841, and 4.0 is beyond it. Reject H0: there is evidence of an association between group and preference."
+ },
+ "STAT-13#11": {
+  "title": "Compare the two dog counts",
+  "text": "Work with counts of dog lovers. If both groups share a rate of 0.5, each group of 50 has a count with variance 50 × 0.5 × 0.5 = 12.5. The difference of two independent counts has variance 12.5 + 12.5 = 25, so a standard deviation of 5. The observed difference is 30 − 20 = 10 people, and 10 ÷ 5 gives z = 2.0. Squaring gives 4.0, the chi-square statistic, so the two tests agree."
+ },
+ "STAT-13#12": {
+  "title": "Match five situations",
+  "text": "Practice on cases.\nClicks out of 100 for ad 1 and out of 100 for ad 2: success rates in two groups, a two-proportion z-test.\nHours of sleep for 30 juniors and 30 seniors: measurements in two groups, a two-sample t-test.\nReaction time for the same 12 people before and after coffee: pairs, a t-test on the differences.\nColor counts in one bag against the company's claim: chi-square goodness of fit.\nGrade level by lunch choice in a table: chi-square for independence.\nThen check the conditions for the test you picked."
+ },
+ "STAT-14#1": {
+  "title": "Run the study again",
+  "text": "Suppose the truth for a whole school is that each extra hour of study raises the mean score by 2.5 points. You sample 20 students and fit a line: slope 2.40. A friend samples a different 20 and gets 2.95. A third sample gives 1.90. None of the three hit 2.5, but they scatter around it. If such slopes typically miss by about 0.6, that typical miss is the standard error of b. You see only your own 2.40 and must reason about the 2.5 behind it."
+ },
+ "STAT-14#2": {
+  "title": "Four questions, four places to look",
+  "text": "Treat the output like a lookup sheet. What score is predicted for 5 hours? Use the two Coef values: 12.5 + 2.40 × 5 = 24.5. Is the slope clearly different from zero? Look at T in the Hours row: 4.00, with a small P beside it. How far off is a typical prediction? Read S, in exam points. How much of the variation in scores does the line account for? Read R-Sq. Everything else on the printout can usually be ignored."
+ },
+ "STAT-14#3": {
+  "title": "Five ways data can break the rules",
+  "text": "Linear fails for the height of a thrown ball against time: the plot is an arch. Independent fails if the 20 points are one student measured on 20 days. Normal fails if most residuals are small and a few are huge on one side. Equal spread fails for income against age: the points fan out as age rises. Random fails if only volunteers from an honors class were used. A straight band of even width from a random sample passes all five."
+ },
+ "STAT-14#4": {
+  "title": "A small worked case",
+  "text": "Ten plants give a slope of b = 1.5 cm of growth per hour of light, with a standard error of 0.5. Test: t = 1.5 ÷ 0.5 = 3.0. Degrees of freedom: 10 − 2 = 8. The 95% critical value for 8 df is 2.306, and 3.0 is beyond it, so there is evidence that light and growth are linearly related. Interval: 1.5 ± 2.306 × 0.5, or 0.35 to 2.65 cm per hour. Zero is outside, telling the same story as the test."
+ },
+ "STAT-14#5": {
+  "title": "Like a court case",
+  "text": "A trial follows a fixed order, and so does an inference answer. State: the charge is read, here the parameter and hypotheses. Plan: the judge rules on which evidence is admissible, here naming the procedure and checking conditions. Do: the evidence is presented, here the statistic, df and p-value. Conclude: the verdict is given in plain words about the actual defendant, here a sentence about hours and scores at the chosen α. Skip a stage in court and the verdict does not stand."
+ },
+ "STAT-14#6": {
+  "title": "Make a table of predictions",
+  "text": "Use the line to fill a table. At 2 hours: 12.5 + 4.8 = 17.3. At 3 hours: 19.7. At 4 hours: 22.1. Each extra hour adds 2.40 points, which is the slope. Extend the pattern down to 0 hours and the table starts at 12.5, the intercept, though no student in the data studied that little. So the line is ŷ = 12.5 + 2.40x. Students with equal hours still differ in score, and r² says hours account for about 47% of the variation."
+ },
+ "STAT-14#7": {
+  "title": "How large must the slope be?",
+  "text": "Find the bar the slope has to clear. With 18 degrees of freedom, a two-sided test at α = 0.05 has critical value 2.101. The standard error is 0.60, so a sample slope farther than 2.101 × 0.60 ≈ 1.26 from zero is too large to blame on chance. The observed slope is 2.40, almost twice that distance. This agrees with p ≈ 0.001 < 0.05: reject H0, there is convincing evidence of a linear relationship."
+ },
+ "STAT-14#8": {
+  "title": "Test candidate slopes",
+  "text": "The interval is the set of slopes within 2.101 standard errors of 2.40. Try 1.0: it is 1.40 away, which is 1.40 ÷ 0.60 ≈ 2.33 SEs, so it is outside. Try 1.2: 1.20 away is 2.0 SEs, so it is inside. Try 3.5: 1.10 away is 1.83 SEs, inside. The edges sit exactly 2.101 × 0.60 ≈ 1.26 away: 2.40 − 1.26 = 1.14 and 2.40 + 1.26 = 3.66 points per hour."
+ },
+ "STAT-14#9": {
+  "title": "Measure the distance to zero",
+  "text": "Count standard errors on a number line. The estimate 2.40 is 2.40 ÷ 0.60 = 4 standard errors above 0. A 95% interval with 18 degrees of freedom only reaches 2.101 standard errors to either side of the estimate. Zero is nearly twice as far away as the interval stretches, so it cannot be inside. A slope of 0 is not plausible, and the verdict is to reject H0: β = 0."
+ },
+ "STAT-14#10": {
+  "title": "Ask which hours would predict 40",
+  "text": "Turn the line around. A score of 40 is predicted when 12.5 + 2.40x = 40, so x = 27.5 ÷ 2.40 ≈ 11.46 hours. This student reached 40 after only 10 hours, as if 1.46 extra hours had been studied. Each hour is worth 2.40 points, so the student is 1.46 × 2.40 ≈ 3.5 points ahead of the line. The prediction at 10 hours is therefore 40 − 3.5 = 36.5, and the residual is +3.5."
+ },
+ "STAT-14#11": {
+  "title": "Check with the t statistic",
+  "text": "Test the slope directly and compare. The statistic is t = −0.85 ÷ 0.30 ≈ −2.83, so the slope is 2.83 standard errors below zero. A 90% interval with 10 degrees of freedom reaches only 1.812 standard errors each way, so zero must lie outside it. The ends are −0.85 − 1.812 × 0.30 ≈ −1.39 and −0.85 + 1.812 × 0.30 ≈ −0.31. The interval (−1.39, −0.31) is entirely negative, and 0 is not a plausible slope."
  }
 }

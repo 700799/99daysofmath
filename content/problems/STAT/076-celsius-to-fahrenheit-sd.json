@@ -35,9 +35,9 @@
     {
       "title": "Follow two days",
       "steps": [
-        "Suppose two days are $20^\\circ$C and $22.5^\\circ$C — one SD apart.",
-        "In Fahrenheit: $1.8(20) + 32 = 68$ and $1.8(22.5) + 32 = 72.5$.",
-        "The gap went from $2.5$ to $4.5$, so the SD did too."
+        "Take two days that are one standard deviation apart in Celsius, such as $20^\\circ$C and $22.5^\\circ$C.",
+        "Convert both days with the given formula: $1.8(20) + 32 = 68$ and $1.8(22.5) + 32 = 72.5$ degrees Fahrenheit.",
+        "The gap grew from $2.5$ to $72.5 - 68 = 4.5$ degrees, so the standard deviation in Fahrenheit is $4.5$."
       ]
     }
   ],

@@ -34,9 +34,9 @@
     {
       "title": "Compare with a one-sample t",
       "steps": [
-        "A one-sample $t$-test estimates one thing (the mean), so df $= n - 1$.",
-        "A regression line estimates two things, so it loses two: df $= n - 2$.",
-        "With 20 farms, that is 18."
+        "A one-sample $t$-test estimates one quantity from the data, the mean, and its degrees of freedom are $n - 1$.",
+        "A regression line estimates two quantities, the intercept and the slope, so it gives up two degrees of freedom and uses $n - 2$.",
+        "With $20$ farms the slope test has $20 - 2 = 18$ degrees of freedom."
       ]
     }
   ],

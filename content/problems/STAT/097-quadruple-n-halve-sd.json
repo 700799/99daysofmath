@@ -34,9 +34,9 @@
     {
       "title": "Check with numbers",
       "steps": [
-        "Suppose $\\sigma = 10$ mL. With $n = 50$: $\\sigma_{\\bar{x}} = 10/\\sqrt{50} \\approx 1.41$.",
-        "With $n = 100$: $10/10 = 1.00$ — not yet half.",
-        "With $n = 200$: $10/\\sqrt{200} \\approx 0.71$, exactly half of $1.41$. ✓"
+        "Pick a convenient value such as $\\sigma = 10$ mL. With $n = 50$ the standard deviation of $\\bar{x}$ is $\\frac{10}{\\sqrt{50}} \\approx 1.41$.",
+        "Doubling to $n = 100$ gives $\\frac{10}{10} = 1.00$, which is smaller but not yet half of $1.41$.",
+        "With $n = 200$ it is $\\frac{10}{\\sqrt{200}} \\approx 0.71$, half of $1.41$, so she needs $200$ bottles."
       ]
     }
   ],

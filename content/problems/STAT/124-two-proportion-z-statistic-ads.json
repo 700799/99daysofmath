@@ -36,9 +36,9 @@
     {
       "title": "Why pool?",
       "steps": [
-        "$H_0$ says both ads have the SAME click rate. Our best single estimate of that common rate uses all 200 visitors: $105/200 = 0.525$.",
-        "Using one shared $\\hat{p}_c$ in the standard error keeps the test consistent with what it assumes.",
-        "That gives SE $\\approx 0.0706$ and $z \\approx 2.12$."
+        "The null hypothesis says both ads have the same click rate, and the best single estimate of that shared rate uses all $200$ visitors: $\\frac{105}{200} = 0.525$.",
+        "Using that one value in the standard error keeps the calculation consistent with $H_0$: $\\sqrt{(0.525)(0.475)(0.02)} \\approx 0.0706$.",
+        "The observed difference of $0.60 - 0.45 = 0.15$ is then $\\frac{0.15}{0.0706} \\approx 2.12$ standard errors from zero, so $z \\approx 2.12$."
       ]
     }
   ],

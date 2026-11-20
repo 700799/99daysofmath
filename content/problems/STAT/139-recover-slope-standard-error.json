@@ -40,9 +40,9 @@
     {
       "title": "Check it forwards",
       "steps": [
-        "Suppose $SE_b = 0.18$. Then $t = -0.45 / 0.18 = -2.5$. ✓",
-        "Reading output backwards like this is a common free-response move: the test always links $b$, $SE_b$ and $t$.",
-        "Any one of the three can be recovered from the other two."
+        "Test a candidate value in the forward direction, where $t = \\frac{b}{SE_b}$. A standard error must be positive, and $\\frac{0.45}{2.5} = 0.18$ is the natural candidate.",
+        "With $SE_b = 0.18$ the statistic would be $\\frac{-0.45}{0.18} = -2.5$, which matches the output exactly.",
+        "Since the three numbers $b$, $SE_b$ and $t$ fit together, the missing standard error is $0.18$."
       ]
     }
   ],

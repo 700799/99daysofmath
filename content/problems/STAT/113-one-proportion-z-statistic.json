@@ -35,9 +35,9 @@
     {
       "title": "In counts",
       "steps": [
-        "Under $H_0$, you expect 50 repeat buyers with SD $\\sqrt{100(0.5)(0.5)} = 5$.",
-        "You observed 56, which is 6 above 50.",
-        "$6/5 = 1.2$ standard deviations — the same $z$."
+        "Work with the number of repeat buyers instead of the proportion. If $H_0$ is true, the expected count is $100 \\times 0.5 = 50$ with standard deviation $\\sqrt{100(0.5)(0.5)} = 5$.",
+        "The sample had $56$ repeat buyers, which is $6$ more than expected.",
+        "Six buyers is $\\frac{6}{5} = 1.2$ standard deviations above expected, so $z = 1.2$."
       ]
     }
   ],

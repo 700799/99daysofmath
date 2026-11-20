@@ -35,9 +35,9 @@
     {
       "title": "Does it contain zero?",
       "steps": [
-        "The interval $(1.52, 4.88)$ lies entirely above 0.",
-        "That agrees with the $t$-test ($t = 4$, tiny $p$-value): zero is not a plausible slope.",
-        "A confidence interval and a two-sided test at matching levels always tell the same story."
+        "Estimate first with $t^* \\approx 2$: the margin is about $2 \\times 0.8 = 1.6$, so the lower end should be near $3.2 - 1.6 = 1.6$ and well above zero.",
+        "That fits the test statistic $t = \\frac{3.2}{0.8} = 4$, which is large enough to rule out a slope of zero, so an interval that excludes zero is expected.",
+        "Using the exact critical value, the lower endpoint is $3.2 - 2.101(0.8) = 3.2 - 1.6808 \\approx 1.52$."
       ]
     }
   ],

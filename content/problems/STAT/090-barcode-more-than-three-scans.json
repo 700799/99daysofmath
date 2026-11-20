@@ -40,9 +40,9 @@
     {
       "title": "Add up the first three and subtract",
       "steps": [
-        "$P(Y = 1) = 0.3$, $P(Y = 2) = 0.7(0.3) = 0.21$, $P(Y = 3) = 0.7^2(0.3) = 0.147$.",
-        "So $P(Y \\le 3) = 0.3 + 0.21 + 0.147 = 0.657$.",
-        "$P(Y > 3) = 1 - 0.657 = 0.343$. Same answer, more work — the \"all failures\" shortcut is faster."
+        "Find the chance that the first success comes on each early attempt: $P(Y = 1) = 0.3$, $P(Y = 2) = 0.7(0.3) = 0.21$ and $P(Y = 3) = 0.7^2(0.3) = 0.147$.",
+        "These add to $P(Y \\le 3) = 0.3 + 0.21 + 0.147 = 0.657$, the chance of success within three attempts.",
+        "Needing more than three attempts is the complement: $1 - 0.657 = 0.343$."
       ]
     }
   ],

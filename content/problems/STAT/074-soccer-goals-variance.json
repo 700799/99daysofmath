@@ -35,9 +35,9 @@
     {
       "title": "Use symmetry",
       "steps": [
-        "The distribution is symmetric around $1$ (0.3 on each side), so the mean is exactly $1$ with no arithmetic.",
-        "Only $X = 0$ and $X = 2$ are away from the mean, each 1 unit away, each with probability $0.3$.",
-        "Variance $= 1^2(0.3) + 1^2(0.3) = 0.6$."
+        "The probabilities are $0.3$, $0.4$, $0.3$, a pattern that is symmetric about $1$, so the mean is exactly $1$ goal with no arithmetic.",
+        "Only the outcomes $0$ and $2$ lie away from the mean, each exactly $1$ goal away and each with probability $0.3$.",
+        "The variance is the probability-weighted squared distance: $1^2(0.3) + 1^2(0.3) = 0.6$."
       ]
     }
   ],

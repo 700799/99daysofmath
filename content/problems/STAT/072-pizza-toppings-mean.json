@@ -35,9 +35,9 @@
     {
       "title": "Picture 10 customers",
       "steps": [
-        "Among 10 typical customers, 2 order one topping, 5 order two, 3 order three.",
-        "Total toppings: $2 + 10 + 9 = 21$.",
-        "Average: $21 \\div 10 = 2.1$ toppings per customer."
+        "Take $10$ customers who match the distribution exactly: $2$ order one topping, $5$ order two and $3$ order three.",
+        "Add up what those ten customers order: $2(1) + 5(2) + 3(3) = 2 + 10 + 9 = 21$ toppings in total.",
+        "The average is $21 \\div 10 = 2.1$ toppings per customer, which is the mean $\\mu_X$."
       ]
     }
   ],

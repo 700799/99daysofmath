@@ -56,9 +56,9 @@
     {
       "title": "The three levers",
       "steps": [
-        "Power goes UP with: larger $n$, larger $\\alpha$, larger true effect size.",
-        "B moves $\\alpha$ the wrong way; C moves the effect the wrong way; D is effectively a smaller $\\alpha$ in the direction that matters.",
-        "A moves $n$ the right way."
+        "Power goes up with three things: a larger sample size, a larger significance level and a larger true effect.",
+        "Choice B makes $\\alpha$ smaller, choice C makes the effect smaller, and choice D leaves less of $\\alpha$ in the tail where an increase would show up, so all three reduce power.",
+        "Only choice A pushes one of the levers the helpful way, by increasing $n$."
       ]
     }
   ],

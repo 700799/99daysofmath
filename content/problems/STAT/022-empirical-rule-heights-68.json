@@ -37,9 +37,9 @@
     {
       "title": "Symmetry check",
       "steps": [
-        "Half of the 68 percent, or 34 percent, sits between 70 and 73.",
-        "The other 34 percent sits between 67 and 70.",
-        "Together, $34 + 34 = 68$ percent."
+        "A normal curve is symmetric about its mean of $70$ inches, so split the interval there. About $34$ percent of men are between $70$ and $73$ inches, one SD above.",
+        "The mirror-image piece between $67$ and $70$ inches holds another $34$ percent.",
+        "Adding the two halves gives $34 + 34 = 68$ percent of men between $67$ and $73$ inches."
       ]
     }
   ],

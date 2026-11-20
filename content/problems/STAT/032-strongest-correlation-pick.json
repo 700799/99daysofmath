@@ -56,9 +56,9 @@
     {
       "title": "Picture each plot",
       "steps": [
-        "$r = 0.15$: a shapeless blob. $r = -0.40$: a loose downhill cloud.",
-        "$r = 0.85$: a fairly tight uphill band. $r = -0.92$: an even tighter downhill band.",
-        "Tightest band wins, regardless of up or down."
+        "Imagine the four clouds of points. With $r = 0.15$ the plot is a shapeless blob, and with $r = -0.40$ it is a loose downhill cloud.",
+        "With $r = 0.85$ the points form a fairly tight uphill band, and with $r = -0.92$ they form an even tighter downhill band.",
+        "Strength is about how tight the band is, not which way it tilts, so $r = -0.92$ is the strongest. That is choice B."
       ]
     }
   ],

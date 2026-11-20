@@ -34,9 +34,8 @@
     {
       "title": "Share equally",
       "steps": [
-        "120 rolls split evenly among 6 faces.",
-        "$120 \\div 6 = 20$.",
-        "Observed counts will wobble around 20; the chi-square statistic measures how much."
+        "A fair die has no favorite face, so in the long run the $120$ rolls should be shared equally among the $6$ faces.",
+        "Equal sharing gives $120 \\div 6 = 20$ rolls per face, which is the expected count."
       ]
     }
   ],

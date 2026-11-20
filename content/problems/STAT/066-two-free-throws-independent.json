@@ -37,9 +37,9 @@
     {
       "title": "Out of 100 trips to the line",
       "steps": [
-        "In about 80 of 100 trips she makes the first shot.",
-        "Of those 80 trips, she makes the second in about 80 percent, which is 64 trips.",
-        "64 out of 100 is $0.64$."
+        "Imagine $100$ trips to the line with two shots each. She makes the first shot on about $80$ of those trips.",
+        "Independence means she still makes $80$ percent of the second shots on those $80$ trips, which is $64$ trips.",
+        "Both shots go in on $64$ of $100$ trips, so the probability is $0.64$."
       ]
     }
   ],

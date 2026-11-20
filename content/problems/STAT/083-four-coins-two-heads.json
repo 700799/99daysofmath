@@ -38,9 +38,9 @@
     {
       "title": "List the sequences",
       "steps": [
-        "There are $2^4 = 16$ equally likely sequences of 4 flips.",
-        "The ones with exactly 2 heads: HHTT, HTHT, HTTH, THHT, THTH, TTHH — that is 6.",
-        "$\\frac{6}{16} = 0.375$."
+        "Four flips of a fair coin give $2^4 = 16$ sequences, and every one of them is equally likely.",
+        "The sequences with exactly two heads are HHTT, HTHT, HTTH, THHT, THTH and TTHH, which makes $6$ of them.",
+        "The probability is the favorable share of the list: $\\frac{6}{16} = 0.375$."
       ]
     }
   ],

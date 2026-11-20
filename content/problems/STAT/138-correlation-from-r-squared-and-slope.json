@@ -40,9 +40,9 @@
     {
       "title": "Why they share a sign",
       "steps": [
-        "The slope formula is $b = r \\cdot \\frac{s_y}{s_x}$, and both standard deviations are positive.",
-        "So $b$ is negative exactly when $r$ is negative.",
-        "With $b = -0.9$ and $|r| = 0.7$, $r = -0.7$."
+        "The slope and the correlation are linked by $b = r \\cdot \\frac{s_y}{s_x}$, and both standard deviations are positive numbers.",
+        "So $b$ can only be negative when $r$ is negative, and here $b = -0.9$.",
+        "The size of $r$ is $\\sqrt{0.49} = 0.7$, and with the negative sign attached the correlation is $r = -0.7$."
       ]
     }
   ],

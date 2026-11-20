@@ -40,9 +40,9 @@
     {
       "title": "Compare with a two-proportion z-test",
       "steps": [
-        "The same data as a $z$-test: $\\hat{p}_1 = 0.40$, $\\hat{p}_2 = 0.30$, pooled $0.35$, SE $= \\sqrt{0.35 \\times 0.65 \\times 0.02} \\approx 0.0674$, so $z \\approx 1.48$.",
-        "For a $2 \\times 2$ table, $\\chi^2 = z^2$: $1.48^2 \\approx 2.20$.",
-        "Both tests give the same two-sided $p$-value (about $0.14$)."
+        "Run the same data as a two-proportion $z$-test: $\\hat{p}_1 = 0.40$, $\\hat{p}_2 = 0.30$, the pooled proportion is $0.35$ and the standard error is $\\sqrt{0.35 \\times 0.65 \\times 0.02} \\approx 0.0674$.",
+        "Dividing the difference in proportions by that standard error gives $z = \\frac{0.10}{0.0674} \\approx 1.48$.",
+        "For a $2 \\times 2$ table the chi-square statistic equals $z^2$, and $1.483^2 \\approx 2.20$, which confirms the answer."
       ]
     }
   ],

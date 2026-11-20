@@ -42,16 +42,16 @@
     {
       "title": "Pick the cups one at a time",
       "steps": [
-        "First pick: $\\frac{4}{8}$ chance it is milk-first. Second: $\\frac{3}{7}$. Third: $\\frac{2}{6}$. Fourth: $\\frac{1}{5}$.",
-        "Multiply: $\\frac{4}{8} \\cdot \\frac{3}{7} \\cdot \\frac{2}{6} \\cdot \\frac{1}{5} = \\frac{24}{1680} = \\frac{1}{70}$."
+        "Imagine her choosing her four cups one after another by pure guessing. The first is milk-first with probability $\\frac{4}{8}$, then the second with $\\frac{3}{7}$, the third with $\\frac{2}{6}$ and the fourth with $\\frac{1}{5}$.",
+        "All four picks must be right, so multiply: $\\frac{4}{8} \\cdot \\frac{3}{7} \\cdot \\frac{2}{6} \\cdot \\frac{1}{5} = \\frac{24}{1680} = \\frac{1}{70}$."
       ]
     },
     {
       "title": "Why randomization was the key",
       "steps": [
-        "If the cups had been lined up in a pattern, the lady might have cracked the pattern instead of tasting.",
-        "Random order means the ONLY way to beat $\\frac{1}{70}$ reliably is real ability.",
-        "This is why every experiment randomizes: it makes chance the only alternative explanation, and chance can be computed."
+        "If the cups had been set out in a pattern, the lady might have worked out the pattern instead of tasting the tea.",
+        "Random order makes every set of $4$ cups equally likely for a guesser, and there are $\\binom{8}{4} = 70$ such sets with only one fully correct.",
+        "So chance alone succeeds with probability $\\frac{1}{70}$, and randomization is what makes that number trustworthy."
       ]
     }
   ],

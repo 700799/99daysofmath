@@ -35,9 +35,8 @@
     {
       "title": "A handy benchmark",
       "steps": [
-        "With $\\hat{p} = 0.5$, the SE is $0.5/\\sqrt{n}$.",
-        "$\\sqrt{100} = 10$, so $SE = 0.5/10 = 0.05$.",
-        "This is the largest SE possible for a given $n$; any other $\\hat{p}$ gives a smaller one."
+        "When $\\hat{p} = 0.5$, the top of the fraction is $0.5 \\times 0.5$, whose square root is $0.5$, so the standard error simplifies to $\\frac{0.5}{\\sqrt{n}}$.",
+        "Here $\\sqrt{100} = 10$, so the standard error is $\\frac{0.5}{10} = 0.05$."
       ]
     }
   ],

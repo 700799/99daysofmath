@@ -35,9 +35,9 @@
     {
       "title": "Start at the intercept and climb",
       "steps": [
-        "With 0 hours the model predicts $12.5$.",
-        "Each hour adds $3.2$; five hours add $16$.",
-        "$12.5 + 16 = 28.5$."
+        "With $0$ hours of study the model predicts the intercept, a score of $12.5$.",
+        "Each hour then adds $3.2$ points, so the predictions climb $15.7, 18.9, 22.1, 25.3$ and reach $28.5$ after the fifth hour.",
+        "The predicted score for $5$ hours of study is $28.5$."
       ]
     }
   ],

@@ -35,9 +35,9 @@
     {
       "title": "Build it from one customer",
       "steps": [
-        "One customer is a 0/1 variable with variance $p(1-p) = 0.21$.",
-        "100 independent customers: variances add, giving $100 \\times 0.21 = 21$.",
-        "SD $= \\sqrt{21} \\approx 4.58$. That is exactly where the formula $\\sqrt{np(1-p)}$ comes from."
+        "Treat one customer as a variable that is $1$ for a coupon and $0$ otherwise. Its variance is $p(1-p) = 0.3 \\times 0.7 = 0.21$.",
+        "The count $X$ is the sum of $100$ such independent variables, and variances of independent variables add: $100 \\times 0.21 = 21$.",
+        "The standard deviation is the square root of the variance, $\\sqrt{21} \\approx 4.58$ customers."
       ]
     }
   ],

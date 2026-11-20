@@ -35,9 +35,9 @@
     {
       "title": "Order matters",
       "steps": [
-        "If you had defined the parameter as $\\mu_B - \\mu_A$, the estimate would be $-3.5$.",
-        "Always subtract in the same order as the parameter you wrote down.",
-        "Here it is A minus B: $+3.5$."
+        "The estimate must follow the order written in the parameter, which is $\\mu_A - \\mu_B$, so Class A's sample mean comes first.",
+        "Subtracting the other way would estimate $\\mu_B - \\mu_A$ and give $78.9 - 82.4 = -3.5$, the same gap with the wrong sign.",
+        "In the stated order the point estimate is $82.4 - 78.9 = 3.5$ points."
       ]
     }
   ],

@@ -35,9 +35,9 @@
     {
       "title": "One sequence, then count the arrangements",
       "steps": [
-        "One specific way: seeds 1, 2, 3 germinate and 4, 5 do not. Probability: $0.6 \\cdot 0.6 \\cdot 0.6 \\cdot 0.4 \\cdot 0.4 = 0.03456$.",
-        "But WHICH 3 germinate can happen in $\\binom{5}{3} = 10$ ways, each with that same probability.",
-        "Total: $10 \\times 0.03456 = 0.3456$."
+        "Start with one specific outcome: seeds 1, 2 and 3 germinate and seeds 4 and 5 do not. Its probability is $0.6 \\cdot 0.6 \\cdot 0.6 \\cdot 0.4 \\cdot 0.4 = 0.03456$.",
+        "Any other choice of which three seeds germinate has the same probability, and there are $\\binom{5}{3} = 10$ such choices.",
+        "These ten outcomes cannot overlap, so the total is $10 \\times 0.03456 = 0.3456$."
       ]
     }
   ],

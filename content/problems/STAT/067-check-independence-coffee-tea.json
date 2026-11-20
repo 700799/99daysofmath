@@ -56,9 +56,9 @@
     {
       "title": "Check with conditional probability",
       "steps": [
-        "$P(\\text{pastry} \\mid \\text{coffee}) = \\frac{0.2}{0.4} = 0.5$.",
-        "That equals $P(\\text{pastry}) = 0.5$: knowing someone ordered coffee does not change the pastry chance.",
-        "Unchanged conditional probability is exactly what independence means."
+        "Look only at the coffee buyers and ask how many also buy a pastry: $P(\\text{pastry} \\mid \\text{coffee}) = \\frac{0.2}{0.4} = 0.5$.",
+        "That equals the overall pastry rate, $P(\\text{pastry}) = 0.5$, so knowing someone ordered coffee does not change the chance of a pastry.",
+        "An unchanged conditional probability is what independence means, so the events are independent, which is choice A."
       ]
     }
   ],

@@ -39,17 +39,17 @@
     {
       "title": "Move from the mean point",
       "steps": [
-        "$x = 12$ is 2 units above $\\bar{x} = 10$.",
-        "Each unit of $x$ adds 3 to the prediction, so 2 units add 6.",
-        "Start at $\\bar{y} = 50$ and add 6: 56. No intercept needed."
+        "The least-squares line always passes through $(\\bar{x}, \\bar{y}) = (10, 50)$, so start the prediction there instead of at the intercept.",
+        "The slope is $b = 0.75 \\times \\frac{8}{2} = 3$, and $x = 12$ is $2$ units above $\\bar{x}$, so the prediction rises by $2 \\times 3 = 6$.",
+        "Adding that rise to $\\bar{y}$ gives $50 + 6 = 56$ hundred dollars, with no intercept needed."
       ]
     },
     {
       "title": "The trap: forgetting $r$ in the slope",
       "steps": [
-        "Using $\\frac{s_y}{s_x} = 4$ as the slope gives $\\hat{y} = 10 + 4x$ and a prediction of 58.",
-        "But the slope must be scaled by $r = 0.75$: $b = 3$, not 4.",
-        "With the correct slope the prediction is 56."
+        "Using $\\frac{s_y}{s_x} = 4$ alone as the slope would give the line $\\hat{y} = 10 + 4x$ and a prediction of $58$.",
+        "That slope is too steep, because the correlation shrinks it: $b = r \\frac{s_y}{s_x} = 0.75 \\times 4 = 3$.",
+        "With the correct slope the line is $\\hat{y} = 20 + 3x$, and at $x = 12$ it predicts $20 + 36 = 56$."
       ]
     }
   ],

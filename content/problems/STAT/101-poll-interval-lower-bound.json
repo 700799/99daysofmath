@@ -37,9 +37,9 @@
     {
       "title": "In percentage points",
       "steps": [
-        "The poll says $62\\%$, give or take 4 points.",
-        "\"Give\" is $66\\%$; \"take\" is $58\\%$.",
-        "So the lower end is $58\\%$, or $0.58$."
+        "Read the poll in everyday words: $62$ percent, give or take $4$ percentage points.",
+        "Going up $4$ points gives $66$ percent and going down $4$ points gives $58$ percent, the two ends of the interval.",
+        "The lower end is $58$ percent, which is $0.58$ as a decimal."
       ]
     }
   ],

@@ -34,9 +34,9 @@
     {
       "title": "Why minus one",
       "steps": [
-        "Once you know the total and four of the five counts, the fifth count is forced.",
-        "Only four counts are \"free\" to vary.",
-        "So df $= 4$."
+        "Suppose the bag has $100$ candies and you are told the counts for four of the colors, say $18, 22, 20$ and $25$.",
+        "The fifth count is then forced to be $100 - 85 = 15$, so it is not free to vary.",
+        "Only four of the five counts are free, which is why the test has $5 - 1 = 4$ degrees of freedom."
       ]
     }
   ],

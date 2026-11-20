@@ -42,17 +42,17 @@
     {
       "title": "Think in distances",
       "steps": [
-        "The gap between the mean and 244 grams is 6 grams.",
-        "That gap is one SD wide, because 16 percent sits below it.",
-        "So one SD is 6 grams."
+        "Mark $244$ grams on the curve: it sits $250 - 244 = 6$ grams below the mean.",
+        "A left tail of $16$ percent is what remains below one SD under the mean, since $50 - 34 = 16$. So that gap of $6$ grams is exactly one SD wide.",
+        "One standard deviation is therefore $6$ grams."
       ]
     },
     {
       "title": "The trap: using 34 percent",
       "steps": [
-        "The 34 percent in the empirical rule is the area between the mean and one SD below, not the tail.",
-        "The TAIL below $z = -1$ is $50 - 34 = 16$ percent, and the problem gave 16 percent, so $z = -1$ is right.",
-        "Match the given area to the right picture before reading off $z$."
+        "The $34$ percent in the empirical rule is the area between the mean and one SD below it, not the area of the tail.",
+        "The tail below $z = -1$ is $50 - 34 = 16$ percent, which matches the $16$ percent in the problem, so $244$ grams really is at $z = -1$.",
+        "With the picture matched correctly, one SD equals the gap $250 - 244$, so the standard deviation is $6$ grams."
       ]
     }
   ],
