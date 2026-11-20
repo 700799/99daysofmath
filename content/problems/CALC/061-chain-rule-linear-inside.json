@@ -34,9 +34,9 @@
     {
       "title": "Why the extra factor of $3$?",
       "steps": [
-        "The inside $3x + 1$ moves three times as fast as $x$ does.",
-        "So any change in $x$ hits the outside function three times harder: slopes get multiplied by $3$.",
-        "A secant check: $\\frac{f(1.001) - f(1)}{0.001} = \\frac{4.003^4 - 256}{0.001} \\approx 768.9$, which matches $768$, not $256$."
+        "The inside $3x + 1$ moves three times as fast as $x$ does, because it is a line with slope $3$.",
+        "So any change in $x$ hits the outside power three times harder, and the slope $4(3x + 1)^3$ gets multiplied by $3$.",
+        "A secant check agrees: $\\frac{f(1.001) - f(1)}{0.001} = \\frac{4.003^4 - 256}{0.001} \\approx 768.9$, which matches $768$ and not $256$."
       ]
     }
   ],

@@ -39,9 +39,9 @@
     {
       "title": "Common trap",
       "steps": [
-        "Forgetting the product rule gives $f'(x) = \\frac{1}{x}$, which at $x = e$ is about $0.37$ — much too small.",
-        "Check with a secant: $\\frac{f(2.72) - f(2.71)}{0.01} = \\frac{2.72 \\ln 2.72 - 2.71 \\ln 2.71}{0.01} \\approx 2.0$.",
-        "The product rule answer $2$ is the one the numbers back up."
+        "Forgetting the product rule gives $f'(x) = \\frac{1}{x}$, which at $x = e$ is about $0.37$ and is much too small.",
+        "Check with a secant slope between two inputs near $e$: $\\frac{2.72 \\ln 2.72 - 2.71 \\ln 2.71}{0.01} \\approx \\frac{2.7217 - 2.7017}{0.01} \\approx 2.0$.",
+        "The numbers back the product rule result $\\ln e + 1 = 2$, so $f'(e) = 2$."
       ]
     }
   ],

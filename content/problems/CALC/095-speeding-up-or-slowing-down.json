@@ -56,9 +56,9 @@
     {
       "title": "Watch the speed directly",
       "steps": [
-        "$v(2.4) = 5.76 - 9.6 + 3 = -0.84$, speed $0.84$.",
-        "$v(2.6) = 6.76 - 10.4 + 3 = -0.64$, speed $0.64$.",
-        "The speed is dropping from $0.84$ toward $0.64$ while the velocity stays negative: moving left and slowing down."
+        "Compute the velocity just before the moment: $v(2.4) = 5.76 - 9.6 + 3 = -0.84$, so the speed is $0.84$ m/s.",
+        "Compute it just after: $v(2.6) = 6.76 - 10.4 + 3 = -0.64$, so the speed is $0.64$ m/s.",
+        "The velocity stays negative while the speed drops from $0.84$ to $0.64$, so the particle is moving left and slowing down, choice A."
       ]
     }
   ],

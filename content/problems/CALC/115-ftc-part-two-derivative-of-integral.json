@@ -34,9 +34,9 @@
     {
       "title": "The long way, to see why it works",
       "steps": [
-        "Actually integrate: $g(x) = \\left[\\frac{t^3}{3} + t\\right]_1^x = \\frac{x^3}{3} + x - \\frac{4}{3}$.",
-        "Differentiate: $g'(x) = x^2 + 1$. The constant $-\\frac{4}{3}$ from the lower limit vanishes.",
-        "$g'(2) = 5$. The FTC lets you skip straight to this."
+        "Actually carry out the integral with the power rule: $g(x) = \\left[\\frac{t^3}{3} + t\\right]_1^x = \\frac{x^3}{3} + x - \\frac{4}{3}$.",
+        "Differentiate that result: $g'(x) = x^2 + 1$. The constant $-\\frac{4}{3}$ from the lower limit disappears.",
+        "So $g'(2) = 4 + 1 = 5$. The Fundamental Theorem lets you skip straight to this by putting $x$ into the integrand."
       ]
     }
   ],

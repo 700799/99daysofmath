@@ -39,9 +39,17 @@
     {
       "title": "Calculator check (radians!)",
       "steps": [
-        "At $x = 0.1$: $\\sin(0.3) / 0.1 \\approx 0.2955 / 0.1 = 2.955$.",
-        "At $x = 0.01$: $\\sin(0.03) / 0.01 \\approx 0.029996 / 0.01 = 2.9996$.",
-        "The values climb toward $3$. In degree mode you would get nonsense — this limit only works in radians."
+        "Set the calculator to radians and try $x = 0.1$: $\\frac{\\sin(0.3)}{0.1} \\approx \\frac{0.2955}{0.1} = 2.955$.",
+        "Move closer to zero and use the smaller input $x = 0.01$: $\\frac{\\sin(0.03)}{0.01} \\approx \\frac{0.029996}{0.01} = 2.9996$.",
+        "The values climb toward $3$, so the limit is $3$. In degree mode the same keys give about $0.05$, because this limit only works in radians."
+      ]
+    },
+    {
+      "title": "Tiny angles act like lines",
+      "steps": [
+        "For a very small angle $u$ in radians, the sine curve hugs the line $y = u$, so $\\sin u \\approx u$.",
+        "Here the angle is $u = 3x$, which is small when $x$ is small, so $\\sin(3x) \\approx 3x$ near $0$.",
+        "The fraction is then close to $\\frac{3x}{x} = 3$, and the approximation becomes exact in the limit, giving $3$."
       ]
     }
   ],

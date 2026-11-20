@@ -39,9 +39,9 @@
     {
       "title": "See the minimum",
       "steps": [
-        "$h(0.5) = \\frac{e^{0.5}}{0.5} \\approx 3.30$, $h(1) = e \\approx 2.72$, $h(2) = \\frac{e^2}{2} \\approx 3.69$.",
-        "The value dips at $x = 1$ and rises on both sides: a valley.",
-        "At the bottom of a valley the tangent is flat, so $h'(1) = 0$ is exactly what the picture predicts."
+        "Compute three heights of the graph: $h(0.5) = \\frac{e^{0.5}}{0.5} \\approx 3.30$, $h(1) = e \\approx 2.72$ and $h(2) = \\frac{e^2}{2} \\approx 3.69$.",
+        "The value dips at $x = 1$ and is higher on both sides, so the graph has a valley there.",
+        "At the bottom of a smooth valley the tangent line is flat, so $h'(1) = 0$ is exactly what the picture predicts."
       ]
     }
   ],

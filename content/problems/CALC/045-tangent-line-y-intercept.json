@@ -34,9 +34,9 @@
     {
       "title": "Slide down the tangent",
       "steps": [
-        "Start at $(3, 10)$ on the tangent line. Each step of $1$ to the left drops the height by $6$.",
-        "Three steps left reach $x = 0$: $10 - 18 = -8$.",
-        "So the tangent crosses the $y$-axis at $-8$."
+        "Start at the point of tangency $(3, 10)$, where the tangent line has slope $6$.",
+        "On that line each step of $1$ to the left lowers the height by $6$, and reaching $x = 0$ takes three such steps.",
+        "The height at $x = 0$ is $10 - 3(6) = 10 - 18 = -8$, so the tangent line crosses the $y$-axis at $-8$."
       ]
     }
   ],

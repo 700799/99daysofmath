@@ -39,9 +39,17 @@
     {
       "title": "Vertex of the rate parabola",
       "steps": [
-        "$N'(t) = 3t^2 - 12t + 15$ is an upward-opening parabola in $t$.",
-        "Its vertex is at $t = -\\frac{b}{2a} = \\frac{12}{6} = 2$.",
-        "An upward parabola is lowest at its vertex, so the growth rate is smallest at $t = 2$. Same answer without a second derivative."
+        "The growth rate $N'(t) = 3t^2 - 12t + 15$ is a parabola in $t$ that opens upward.",
+        "Its vertex is at $t = -\\frac{b}{2a} = \\frac{12}{6} = 2$, which lies inside the interval from $0$ to $6$.",
+        "An upward parabola is lowest at its vertex, so the growth rate is smallest at $t = 2$ months, found without a second derivative."
+      ]
+    },
+    {
+      "title": "Complete the square",
+      "steps": [
+        "Rewrite the rate by completing the square: $N'(t) = 3(t^2 - 4t) + 15 = 3(t - 2)^2 + 3$.",
+        "The squared term is never negative and equals zero only at $t = 2$, so the rate can never drop below $3$.",
+        "The rate is always at least $3$ thousand per month, which shows the count always increases, and it grows most slowly at $t = 2$ months."
       ]
     }
   ],

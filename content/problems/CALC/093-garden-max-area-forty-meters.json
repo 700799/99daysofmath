@@ -34,9 +34,9 @@
     {
       "title": "Try some rectangles",
       "steps": [
-        "$5 \\times 15 = 75$. $8 \\times 12 = 96$. $10 \\times 10 = 100$. $12 \\times 8 = 96$.",
-        "The area peaks when the sides are equal.",
-        "For a fixed perimeter, the square always wins — calculus just proves what the table suggests."
+        "The two side lengths must add to $20$ m. Try a few pairs: $5 \\times 15 = 75$, $8 \\times 12 = 96$, $10 \\times 10 = 100$ and $12 \\times 8 = 96$.",
+        "The area climbs until the sides are equal and then falls again, so the table peaks at the square.",
+        "For a fixed perimeter the square always wins, giving $100$ square meters. Calculus proves what the table suggests."
       ]
     }
   ],

@@ -56,9 +56,9 @@
     {
       "title": "Check by differentiating",
       "steps": [
-        "Claim: $\\frac{d}{dx} \\sin(x^2) = \\cos(x^2) \\cdot 2x$ by the chain rule.",
-        "That is exactly the integrand, so $\\sin(x^2) + C$ is right.",
-        "The substitution $u = x^2$ is the chain rule read backwards."
+        "Substitution A leads to $\\sin(x^2) + C$, so test that result by taking its derivative.",
+        "By the chain rule, $\\frac{d}{dx} \\sin(x^2) = \\cos(x^2) \\cdot 2x$, which is exactly the integrand.",
+        "So $u = x^2$ works, and it is choice A. The substitution is the chain rule read backwards."
       ]
     }
   ],

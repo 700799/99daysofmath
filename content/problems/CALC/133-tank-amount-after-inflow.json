@@ -34,9 +34,9 @@
     {
       "title": "Triangle under the rate graph",
       "steps": [
-        "The rate graph $r = 2t$ is a line from $(0, 0)$ to $(10, 20)$.",
-        "The area under it is a triangle: $\\frac{1}{2} \\cdot 10 \\cdot 20 = 100$ liters.",
-        "Starting at $50$ and adding $100$ gives $150$ L."
+        "The rate graph $r = 2t$ is a straight line from $(0, 0)$ to $(10, 20)$.",
+        "The water added is the area under that line, a triangle with area $\\frac{1}{2} \\cdot 10 \\cdot 20 = 100$ liters.",
+        "Starting with $50$ liters and adding $100$ gives $150$ liters in the tank at $t = 10$."
       ]
     }
   ],

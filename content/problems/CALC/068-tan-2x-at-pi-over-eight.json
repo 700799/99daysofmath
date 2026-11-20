@@ -39,9 +39,10 @@
     {
       "title": "Derive $\\sec^2$ with the quotient rule",
       "steps": [
-        "$\\tan u = \\frac{\\sin u}{\\cos u}$, so $\\frac{d}{du}\\tan u = \\frac{\\cos u \\cdot \\cos u - \\sin u \\cdot (-\\sin u)}{\\cos^2 u} = \\frac{\\cos^2 u + \\sin^2 u}{\\cos^2 u} = \\frac{1}{\\cos^2 u}$.",
-        "With $u = 2x$ the chain rule adds a factor $2$: $f'(x) = \\frac{2}{\\cos^2(2x)}$.",
-        "At $x = \\frac{\\pi}{8}$: $\\frac{2}{\\cos^2(\\pi/4)} = \\frac{2}{1/2} = 4$. Check: $\\frac{f(\\pi/8 + 0.001) - f(\\pi/8)}{0.001} = \\frac{\\tan(\\pi/4 + 0.002) - 1}{0.001} \\approx 4.01$."
+        "Write $\\tan u = \\frac{\\sin u}{\\cos u}$ and use the quotient rule: $\\frac{\\cos u \\cdot \\cos u - \\sin u \\cdot (-\\sin u)}{\\cos^2 u} = \\frac{\\cos^2 u + \\sin^2 u}{\\cos^2 u} = \\frac{1}{\\cos^2 u}$.",
+        "With $u = 2x$ the chain rule adds a factor of $2$, so $f'(x) = \\frac{2}{\\cos^2(2x)}$.",
+        "At $x = \\frac{\\pi}{8}$ the angle is $\\frac{\\pi}{4}$ and $\\cos^2\\frac{\\pi}{4} = \\frac{1}{2}$, so the slope is $\\frac{2}{1/2} = 4$.",
+        "A secant check agrees: $\\frac{\\tan(\\pi/4 + 0.002) - 1}{0.001} \\approx 4.01$, close to $4$ and far from $2$."
       ]
     }
   ],

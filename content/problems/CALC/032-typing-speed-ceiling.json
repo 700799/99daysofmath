@@ -34,9 +34,9 @@
     {
       "title": "Check a few weeks",
       "steps": [
-        "Week 2: $W(2) = \\frac{330}{8} \\approx 41$ wpm. Week 10: $W(10) = \\frac{8010}{104} \\approx 77$ wpm.",
-        "Week 50: $W(50) = \\frac{200010}{2504} \\approx 79.9$ wpm.",
-        "The gains flatten out as she nears $80$ — the model says she can get as close as she likes, but never past it."
+        "Compute an early and a middle week: $W(2) = \\frac{330}{8} \\approx 41$ wpm and $W(10) = \\frac{8010}{104} \\approx 77$ wpm.",
+        "Compute a late week as well: $W(50) = \\frac{200010}{2504} \\approx 79.9$ wpm, which is barely below $80$.",
+        "The gains flatten out as she nears $80$ words per minute. The model lets her get as close as she likes but never past it."
       ]
     }
   ],

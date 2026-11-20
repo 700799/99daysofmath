@@ -39,9 +39,9 @@
     {
       "title": "Read the story in the numbers",
       "steps": [
-        "At stocking time, $P(0) = \\frac{300}{2} = 150$ fish.",
-        "After $2$ years: $P(2) = \\frac{2100}{8} \\approx 262$. After $20$ years: $P(20) = \\frac{18300}{62} \\approx 295$.",
-        "Growth slows as the pond fills, leveling off just under the asymptote $P = 300$."
+        "At stocking time the model gives $P(0) = \\frac{300}{2} = 150$ fish in the pond.",
+        "After $2$ years it gives $P(2) = \\frac{2100}{8} \\approx 262$ fish, and after $20$ years $P(20) = \\frac{18300}{62} \\approx 295$ fish.",
+        "After $200$ years it gives $\\frac{180300}{602} \\approx 299.5$. Growth slows as the pond fills and levels off just under $300$, the carrying capacity."
       ]
     }
   ],

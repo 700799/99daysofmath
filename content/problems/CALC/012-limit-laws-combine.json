@@ -34,9 +34,9 @@
     {
       "title": "Pretend they are numbers",
       "steps": [
-        "Near $x = a$, $f(x)$ behaves like $4$ and $g(x)$ behaves like $-2$.",
-        "So $3f(x) - g(x)$ behaves like $3(4) - (-2) = 12 + 2$.",
-        "That is $14$. The limit laws say this shortcut is legitimate."
+        "Near $x = a$ the outputs of $f$ are close to $4$ and the outputs of $g$ are close to $-2$.",
+        "So the combination $3f(x) - g(x)$ is close to $3(4) - (-2) = 12 + 2$ for those same inputs.",
+        "That value is $14$, and the limit laws guarantee that treating each function as its limiting number is legitimate here."
       ]
     }
   ],

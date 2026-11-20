@@ -34,9 +34,9 @@
     {
       "title": "Start plus displacement",
       "steps": [
-        "Displacement over $[0, 3]$ is $\\int_0^3 (6t + 2) \\, dt = [3t^2 + 2t]_0^3 = 27 + 6 = 33$ m.",
-        "Final position $=$ starting position $+$ displacement $= 5 + 33 = 38$ m.",
-        "This \"net change\" form of the FTC avoids solving for $C$."
+        "Integrate the velocity to get the displacement over $[0, 3]$: $\\int_0^3 (6t + 2)\\,dt = [3t^2 + 2t]_0^3 = 27 + 6 = 33$ m.",
+        "The final position is the starting position plus the displacement: $5 + 33 = 38$ m.",
+        "This net change form of the Fundamental Theorem reaches $38$ without ever solving for a constant $C$."
       ]
     }
   ],

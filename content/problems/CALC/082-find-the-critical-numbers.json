@@ -56,9 +56,9 @@
     {
       "title": "Check by substituting",
       "steps": [
-        "$f'(-1) = 6 + 6 - 12 = 0$ ✓ and $f'(2) = 24 - 12 - 12 = 0$ ✓.",
-        "$f'(1) = 6 - 6 - 12 = -12 \\neq 0$, so choice B fails.",
-        "Only choice A lists exactly the zeros of $f'$."
+        "The derivative is $f'(x) = 6x^2 - 6x - 12$. Test choice A: $f'(-1) = 6 + 6 - 12 = 0$ and $f'(2) = 24 - 12 - 12 = 0$.",
+        "Test the other choices: $f'(1) = 6 - 6 - 12 = -12$, $f'(0) = -12$ and $f'(\\frac{1}{2}) = -13.5$, so none of these is a zero.",
+        "Only choice A lists exactly the inputs where $f'$ equals zero, so the critical numbers are $x = -1$ and $x = 2$."
       ]
     }
   ],

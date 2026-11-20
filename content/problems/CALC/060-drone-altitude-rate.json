@@ -40,9 +40,9 @@
     {
       "title": "Check against a short time window",
       "steps": [
-        "$A(4) = 48 + 4 = 52$ m. $A(4.01) = 3(16.0801) + 2\\sqrt{4.01} \\approx 48.2403 + 4.0050 = 52.2453$ m.",
-        "Average rate over that hundredth of a second: $\\frac{0.2453}{0.01} \\approx 24.5$ m/s.",
-        "The derivative and the measured rate agree."
+        "Find two altitudes a hundredth of a second apart: $A(4) = 48 + 4 = 52$ m and $A(4.01) = 3(16.0801) + 2\\sqrt{4.01} \\approx 52.2453$ m.",
+        "The average climb rate over that short window is $\\frac{0.2453}{0.01} \\approx 24.5$ m/s.",
+        "The measured rate agrees with the derivative $A'(4) = 24 + \\frac{1}{2} = 24.5$ m/s."
       ]
     }
   ],

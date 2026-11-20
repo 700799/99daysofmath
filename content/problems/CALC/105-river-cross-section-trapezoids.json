@@ -34,9 +34,9 @@
     {
       "title": "The trapezoid-rule shortcut",
       "steps": [
-        "$T = \\frac{\\Delta x}{2}\\left(y_0 + 2y_1 + 2y_2 + 2y_3 + y_4\\right)$: the interior depths count twice because each belongs to two strips.",
-        "$= \\frac{5}{2}(0 + 6 + 10 + 8 + 0) = \\frac{5}{2} \\cdot 24 = 60$.",
-        "Same $60$ m², and quicker when there are many measurements."
+        "With equal widths the rule is $T = \\frac{\\Delta x}{2}\\left(y_0 + 2y_1 + 2y_2 + 2y_3 + y_4\\right)$. Interior depths count twice because each belongs to two strips.",
+        "Substitute the five measured depths and the spacing $\\Delta x = 5$: $T = \\frac{5}{2}(0 + 6 + 10 + 8 + 0) = \\frac{5}{2} \\cdot 24$.",
+        "That is $60$ square meters, the same estimate as adding four trapezoids, and it is quicker when there are many measurements."
       ]
     }
   ],

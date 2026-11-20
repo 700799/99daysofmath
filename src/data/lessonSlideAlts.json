@@ -3439,6 +3439,666 @@
   "title": "Table around the peak",
   "text": "List the heights each second: at t = 0, 1, 2, 3, 4 the height is 0, 15, 20, 15, 0 metres. The list reads the same forwards and backwards, and its largest entry is in the middle. Check half a second either side: t = 1.5 and t = 2.5 both give 18.75, which is lower. The peak is 20 meters, at t = 2."
  },
+ "CALC-1#1": {
+  "title": "Walking toward a door",
+  "text": "Watch someone walk down a hallway toward a door. You can tell which door they are heading for long before they reach it, and your answer stays the same if the door turns out to be locked or painted over. The limit is that door. For g, every step of the walk points at height 4. The value g(2) = 1 is a note pinned somewhere else on the wall, and it does not change the direction of the walk."
+ },
+ "CALC-1#2": {
+  "title": "Three functions, one limit",
+  "text": "Compare three functions. The first is x + 2 for every x. The second is x + 2 with x = 2 left out. The third is x + 2 except that its value at 2 is moved to 1. Their tables agree at 1.9, 1.99, 2.01 and 2.1: the outputs are 3.9, 3.99, 4.01 and 4.1 for all three. Since the nearby rows are identical, all three have limit 4 at x = 2. They differ only in the one row a limit never reads."
+ },
+ "CALC-1#3": {
+  "title": "A shipping price story",
+  "text": "A shop ships parcels lighter than 3 kg for 2 dollars per kg, and parcels of 3 kg or more for the weight plus 2 dollars. A parcel just under 3 kg costs just under 6 dollars, so the price approaches 6 from the left. A parcel just over 3 kg costs just over 5 dollars, so the price approaches 5 from the right. Each one-sided limit reports what customers on one side of the cutoff see."
+ },
+ "CALC-1#4": {
+  "title": "Check it with numbers",
+  "text": "Take x² on the left of 2 and 6 − x on the right. On the left, 1.9² = 3.61 and 1.99² = 3.9601. On the right, 6 − 2.1 = 3.9 and 6 − 2.01 = 3.99. All four outputs crowd around 4, so the limit is 4.\nNow replace the right piece by 7 − x. Its outputs are 4.9 and 4.99, crowding around 5 while the left side still crowds around 4. No single number works, so that limit is DNE."
+ },
+ "CALC-1#5": {
+  "title": "When a table can fool you",
+  "text": "A table is evidence, not proof. Try sin(π/x) as x → 0 with the inputs 0.1, 0.01 and 0.001. The outputs are sin(10π), sin(100π) and sin(1000π), which are all 0, so the table suggests a limit of 0. But at x = 2/5, 2/9, 2/13 the output is 1 every time. The function keeps swinging between −1 and 1 and has no limit. Tidy inputs can hide the swings, so use a table to guess and algebra to confirm."
+ },
+ "CALC-1#6": {
+  "title": "Factor instead of sampling",
+  "text": "The top is a difference of squares: x² − 4 = (x − 2)(x + 2). For every x other than 2 the factor x − 2 cancels, so f(x) = x + 2 there. The graph is the line y = x + 2 with the single point above x = 2 removed. A line heading into x = 2 reaches height 2 + 2 = 4, so the limit is 4, the same number the table closes in on."
+ },
+ "CALC-1#7": {
+  "title": "Move the dot anywhere",
+  "text": "Imagine picking up the lone dot and putting it at (2, 9), or at (2, −5), or erasing it. The curve on both sides of x = 2 has not moved, so anyone tracing it still heads for height 4. The limit is 4 in every version.\nWhat does change is the value: g(2) is whatever height the dot sits at. In the graph given, the dot is at (2, 1), so g(2) = 1."
+ },
+ "CALC-1#8": {
+  "title": "Sample both sides",
+  "text": "Use each rule on inputs close to 1. On the left, f(0.9) = 1.9 and f(0.99) = 1.99, creeping up to 2. On the right, f(1.1) = 2.9 and f(1.01) = 2.99, creeping up to 3. The two lists stay about 1 apart however close the inputs get to 1. With the left side heading to 2 and the right side heading to 3, there is no single target, so the limit does not exist."
+ },
+ "CALC-1#9": {
+  "title": "Factor to confirm",
+  "text": "The table suggests 6, and algebra can prove it. Factor the top: x² − 9 = (x − 3)(x + 3). For x ≠ 3 the factor x − 3 cancels and the fraction is just x + 3. That explains the table exactly: 2.9 + 3 = 5.9, 2.99 + 3 = 5.99, 3.1 + 3 = 6.1. As x → 3 the expression x + 3 heads to 6, so the limit is 6."
+ },
+ "CALC-1#10": {
+  "title": "Build a small table",
+  "text": "Sample each piece near the seam. Left of 2 the rule is x²: 1.9² = 3.61 and 1.99² = 3.9601, rising toward 4. Right of 2 the rule is 6 − x: 6 − 2.1 = 3.9 and 6 − 2.01 = 3.99, also rising toward 4. Both columns settle on the same height, so the limit as x → 2 is 4, even though two different formulas produced the numbers."
+ },
+ "CALC-1#11": {
+  "title": "Try actual numbers",
+  "text": "Pick inputs just left of 2 and compute. At x = 1.9 the top is |−0.1| = 0.1 and the bottom is −0.1, so the fraction is −1. At x = 1.99 the top is 0.01 and the bottom is −0.01, which again gives −1. The top is always the positive size of the bottom, and the bottom is negative, so every input left of 2 gives exactly −1. The left-hand limit is −1."
+ },
+ "CALC-1#12": {
+  "title": "Round the time up",
+  "text": "Write the rule as a formula: the cost is 3 times t rounded UP to a whole number of hours. For t = 0.9 or 0.999, rounding up gives 1, so the cost is 3. For t = 1.001 or 1.1, rounding up gives 2, so the cost is 6. From the left the cost stays at 3 and from the right it stays at 6. The one-sided limits are 3 and 6, and since they differ the two-sided limit does not exist."
+ },
+ "CALC-2#1": {
+  "title": "Try it on two lines",
+  "text": "Let f(x) = x and g(x) = 2x, and let x → 1, so f heads to 1 and g heads to 2. At x = 1.01 the values are 1.01 and 2.02. Their sum is 3.03, their difference is −1.01, their product is 2.0402 and their quotient is 0.5. Each result sits right beside 3, −1, 2 and ½, the numbers the laws predict. Move x closer to 1 and every one of them moves closer still."
+ },
+ "CALC-2#2": {
+  "title": "Substitution is the limit laws",
+  "text": "Build 2x² − x from simple parts and follow each part as x → 3. The input x heads to 3. By the product law x · x heads to 3 · 3 = 9, and 2x² heads to 2 · 9 = 18. By the difference law 2x² − x heads to 18 − 3 = 15. Those are the same sums you do when you plug in 3. Direct substitution is the limit laws applied to every piece at once."
+ },
+ "CALC-2#3": {
+  "title": "Four fractions, four answers",
+  "text": "Each of these gives 0/0 when you plug in x = 0, yet they behave differently. x/x equals 1 near 0, so its limit is 1. 2x/x equals 2, so its limit is 2. x²/x equals x, so its limit is 0. And x/x² equals 1/x, which blows up. The form 0/0 fits all four, so on its own it tells you nothing. You have to simplify to see which case you are in."
+ },
+ "CALC-2#4": {
+  "title": "A line with one dot missing",
+  "text": "Draw the graph of (x² − 25)/(x − 5). It is the straight line y = x + 5 with an open circle at (5, 10), because the fraction has no value there. Cancelling the factor simply draws the same line with the circle filled in. Slide a finger along either graph toward x = 5 and it arrives at height 10. The two pictures differ by one dot, and a limit never looks at that dot."
+ },
+ "CALC-2#5": {
+  "title": "A number check and a story",
+  "text": "Test the conjugate at x = 4.41, where √x = 2.1. The original fraction is 0.1/0.41 ≈ 0.2439, and the simplified form 1/(2.1 + 2) = 1/4.1 ≈ 0.2439 as well. Same value, but only the second form can take x = 4.\nFor the squeeze, picture walking between two friends who stay on either side of you. If both friends pass through the same doorway, you pass through it too, however much you zigzag between them."
+ },
+ "CALC-2#6": {
+  "title": "Factor and use the product law",
+  "text": "Write the polynomial as a product: 2x² − x = x(2x − 1). As x → 3 the first factor heads to 3 and the second heads to 2(3) − 1 = 5. The limit of a product is the product of the limits, so the limit is 3 · 5 = 15. A quick sample agrees: at x = 3.01 the value is 3.01 · 5.02 ≈ 15.11, just above 15."
+ },
+ "CALC-2#7": {
+  "title": "Step away by h",
+  "text": "Write x = 3 + h, where h is a small nonzero step, so x → 3 means h → 0. The top becomes (3 + h)² − 9 = 6h + h², and the bottom becomes h. Dividing gives 6 + h for every h ≠ 0. As h shrinks to 0, 6 + h heads to 6. This is the same limit found by factoring, and it shows the output is always exactly h away from 6."
+ },
+ "CALC-2#8": {
+  "title": "Check with nearby inputs",
+  "text": "Sample the original fraction on both sides of 2. At x = 2.01 the top is 4.0401 − 10.05 + 6 = −0.0099 and the bottom is 0.0401, giving about −0.247. At x = 1.99 the top is 3.9601 − 9.95 + 6 = 0.0099 and the bottom is −0.0399, giving about −0.248. Both values sit beside −0.25, which confirms the limit −1/4 found by factoring."
+ },
+ "CALC-2#9": {
+  "title": "Factor the bottom instead",
+  "text": "Treat x − 4 as a difference of squares built from √x: x − 4 = (√x − 2)(√x + 2). Now the factor √x − 2 appears on the top and on the bottom, and it cancels for x ≠ 4. What remains is 1/(√x + 2). Substituting x = 4 gives 1/(2 + 2) = 1/4. No multiplying by a conjugate was needed, because the bottom already contained the top as a factor."
+ },
+ "CALC-2#10": {
+  "title": "Measure the size directly",
+  "text": "Ignore the sign and ask how big the output can be. Since sin(1/x) is never larger than 1 in size, x² sin(1/x) is never larger than x² in size. At x = 0.1 the output is within 0.01 of zero. At x = 0.001 it is within 0.000001 of zero. The wiggling changes the sign over and over, but the size is crushed by x². Outputs that get this close to 0 can only have the limit 0."
+ },
+ "CALC-2#11": {
+  "title": "A table near −2",
+  "text": "Use the original fraction on both sides of −2. At x = −2.1 the top is 4.41 + 2.1 − 6 = 0.51 and the bottom is −0.1, so the value is −5.1. At x = −1.9 the top is 3.61 + 1.9 − 6 = −0.49 and the bottom is 0.1, so the value is −4.9. Moving to −2.01 and −1.99 gives −5.01 and −4.99. The outputs close in on −5 from both sides."
+ },
+ "CALC-2#12": {
+  "title": "Time shorter and shorter drops",
+  "text": "Compute the average speed over small windows that end or start at t = 1. From 1 to 1.1 seconds the ball falls 16(1.21) − 16 = 3.36 feet, an average of 33.6 ft/s. From 1 to 1.01 it falls 0.3216 feet, an average of 32.16 ft/s. From 0.99 to 1 the average is 31.84 ft/s. The averages from both sides close in on 32 ft/s, the speed at the instant t = 1."
+ },
+ "CALC-3#1": {
+  "title": "Building a bridge from both banks",
+  "text": "Two crews build a bridge from opposite banks toward the point above x = c. First, both halves must come in at the same height, which is the limit existing. Second, there must be a final plank at the join, which is f(c) existing. Third, the plank must sit at the height where the halves meet, not above or below it. Miss any one of the three and you cannot walk across. For the function shown, both halves arrive at height 3 and the plank f(2) = 3 is in place."
+ },
+ "CALC-3#2": {
+  "title": "One formula for each break",
+  "text": "Hole: (x² − 1)/(x − 1) acts like x + 1 near x = 1 and heads to 2, but it has no value at 1. Defining the value as 2 repairs it.\nJump: a parking fee of 3 dollars per started hour sits at 3 just before one hour and at 6 just after.\nInfinite: 1/x gives 100 at x = 0.01 and −100 at x = −0.01, and it only gets wilder closer to 0."
+ },
+ "CALC-3#3": {
+  "title": "Build big functions from small ones",
+  "text": "Sums, differences, products and compositions of continuous functions are continuous, so you rarely need to check from scratch. sin(x²) + eˣ is made from x², sine and eˣ, which never break, so it is continuous everywhere. A quotient adds one risk: (x + 1)/(x − 4) is fine except at x = 4, where the bottom is 0. And ln(x − 1) is fine wherever x − 1 is positive, so for x > 1. Look for the forbidden inputs, and everything else is safe."
+ },
+ "CALC-3#4": {
+  "title": "Try values of k",
+  "text": "Test a few values of k at the seam x = 3, where the right piece has height 9. With k = 2 the left piece reaches 3(2) + 1 = 7, which is 2 short. With k = 3 it reaches 10, which is 1 too high. So the right k lies between 2 and 3. Each increase of 1 in k raises the left height by 3, and we need to rise 2 from the k = 2 case, so add 2/3. That gives k = 2 + 2/3 = 8/3."
+ },
+ "CALC-3#5": {
+  "title": "A root you already know",
+  "text": "Take f(x) = x² − 2 on [1, 2]. It is continuous, f(1) = −1 and f(2) = 2, so somewhere between 1 and 2 it must equal 0. That input is √2 ≈ 1.414.\nContinuity is essential. The function 1/x has f(−1) = −1 and f(1) = 1, yet it is never 0, because its graph breaks at x = 0 and jumps over the axis."
+ },
+ "CALC-3#6": {
+  "title": "Look at the graph instead",
+  "text": "Because x² − 4 = (x − 2)(x + 2), the graph of f is the line y = x + 2 with one point removed. Nearby inputs behave well: f(1.99) = 3.99 and f(2.01) = 4.01. But a calculator gives an error at x = 2 itself. A pencil tracing the line has to skip over the open circle at (2, 4), so f is not continuous at 2. The break is a single missing point, which is a hole."
+ },
+ "CALC-3#7": {
+  "title": "Compare nearby heights",
+  "text": "Sample the function around the seam. Just left of 2 the rule x + 1 gives f(1.99) = 2.99 and f(1.999) = 2.999. Just right of 2 the rule 3x − 3 gives f(2.01) = 3.03 and f(2.001) = 3.003. At the seam itself, f(2) = 3. The heights on both sides close in on 3, and the point at x = 2 sits exactly at 3. With no gap and no misplaced dot, f is continuous at 2."
+ },
+ "CALC-3#8": {
+  "title": "Aim the line at a point",
+  "text": "Picture the left piece y = kx + 1. Every such line passes through (0, 1), and k is its slope. The right piece starts at the point (3, 9), since 3² = 9. For the graph to join up, the line from (0, 1) must be aimed at (3, 9). Its slope is the rise over the run: (9 − 1)/(3 − 0) = 8/3. So k = 8/3."
+ },
+ "CALC-3#9": {
+  "title": "Test both suspects with numbers",
+  "text": "Sample near each zero of the bottom. Near x = 1: g(0.99) = −0.01/−0.0199 ≈ 0.5025 and g(1.01) = 0.01/0.0201 ≈ 0.4975. The values stay calm near 0.5, so x = 1 is a hole.\nNear x = −1: g(−0.99) = −1.99/−0.0199 = 100 and g(−1.01) = −2.01/0.0201 = −100. The values explode with opposite signs, so x = −1 is a vertical asymptote."
+ },
+ "CALC-3#10": {
+  "title": "Ask the neighbors",
+  "text": "Without any factoring, compute g close to 4. At x = 3.99 the top is 15.9201 − 16 = −0.0799 and the bottom is −0.01, so g = 7.99. At x = 4.01 the top is 0.0801 and the bottom is 0.01, so g = 8.01. The neighbors on both sides point at height 8. The value that fills the hole is the one that agrees with them, so set g(4) = 8."
+ },
+ "CALC-3#11": {
+  "title": "Cut the interval in half",
+  "text": "The same sign check can also trap the root. At the midpoint, f(1.5) = 3.375 − 1.5 − 1 = 0.875, which is positive, while f(1) = −1 is negative. So a root lies in (1, 1.5). Halve again: f(1.25) ≈ 1.953 − 2.25 = −0.297, negative, so a root lies in (1.25, 1.5). Each step confirms a root exists in (1, 2) and narrows it down. The root is near 1.32."
+ },
+ "CALC-3#12": {
+  "title": "Suppose it skipped 60",
+  "text": "Argue by contradiction. Suppose the temperature was never exactly 60°F. At 6 am it was below 60 and at noon it was above 60, so at some moment it switched from below to above. Without ever equalling 60, that switch would be an instant leap from under 60 to over 60. Air temperature does not leap; it changes gradually. So the assumption is wrong, and there was a moment when it was exactly 60°F."
+ },
+ "CALC-4#1": {
+  "title": "Name a target, then beat it",
+  "text": "Turn the idea into a challenge. You name a tiny positive number, and I must make 1/x stay smaller than it. For 0.001, any x past 1000 works. For one millionth, any x past 1,000,000 works. With 1/x² the job is even easier: x past 1000 already gets under one millionth. However small the target, there is a point on the x-axis beyond which the fraction stays below it. That is what a limit of 0 at infinity means."
+ },
+ "CALC-4#2": {
+  "title": "Plug in a huge number",
+  "text": "See the rule happen with real inputs for (3x² + 5)/(x² − 1). At x = 100 it is 30,005/9,999 ≈ 3.0008. At x = 1000 it is 3,000,005/999,999 ≈ 3.000008. The + 5 and the − 1 barely register next to millions, so the fraction is almost 3x²/x² = 3. Dividing through by x² is the tidy way of saying the same thing: the small terms stop mattering."
+ },
+ "CALC-4#3": {
+  "title": "Three fractions at x = 1000",
+  "text": "Put x = 1000 into one fraction of each type. Top smaller: (x + 1)/x² = 1001/1,000,000 ≈ 0.001, already close to 0. Degrees equal: 6x²/(2x² + 1) = 6,000,000/2,000,001 ≈ 3, the ratio 6/2. Top bigger: x³/(x² + 1) ≈ 1000, and it grows by another factor of ten each time x does. The three behaviors of the degree rule show up after a single substitution."
+ },
+ "CALC-4#4": {
+  "title": "Running out of time",
+  "text": "You must cover 1 km and you have t hours left, so the speed you need is 1/t km per hour. With half an hour left you need 2 km/h. With one hundredth of an hour left you need 100 km/h. With one millionth of an hour left you need a million km/h. As the time left shrinks to zero the required speed passes every limit. That runaway growth is what a vertical asymptote records."
+ },
+ "CALC-4#5": {
+  "title": "Flip the bottom graph",
+  "text": "Sketch the bottom on its own, then take reciprocals. The line y = x − 2 crosses zero at x = 2, below the axis on the left and above it on the right. Its reciprocal keeps those signs, so 1/(x − 2) dives down on the left and shoots up on the right. The parabola y = (x − 2)² only touches zero at x = 2 and stays above the axis on both sides. Its reciprocal is positive on both sides, so both branches go up."
+ },
+ "CALC-4#6": {
+  "title": "Split off the whole part",
+  "text": "Rewrite the top so it contains the bottom: 3x² + 5 = 3(x² − 1) + 8. Then the fraction is 3 + 8/(x² − 1). The second piece has a fixed top over a bottom that grows without bound, so it shrinks to 0 as x → ∞. What remains is 3. This form also shows the graph sits a little above the line y = 3 for large x, since 8/(x² − 1) is positive there."
+ },
+ "CALC-4#7": {
+  "title": "Try two large inputs",
+  "text": "Substitute big values into (5x + 2)/(x² + 7). At x = 100 it is 502/10,007 ≈ 0.05. At x = 10,000 it is 50,002/100,000,007 ≈ 0.0005. Making x one hundred times larger made the fraction one hundred times smaller. That is because the fraction acts like 5x/x² = 5/x for large x, and 5/x shrinks to nothing. The limit is 0."
+ },
+ "CALC-4#8": {
+  "title": "Watch the values run away",
+  "text": "Compute a few heights of (x³ − 1)/(x + 2). At x = 10 it is 999/12 ≈ 83. At x = 100 it is 999,999/102 ≈ 9,800. At x = 1000 it is about 998,000. Each time x grows by a factor of 10, the output grows by a factor of about 100, just as x² would. Nothing levels off, so the limit is ∞ and the graph has no horizontal asymptote."
+ },
+ "CALC-4#9": {
+  "title": "Shift the graph of 1/x",
+  "text": "The graph of 1/(x − 2) is the graph of 1/x moved 2 units to the right. You already know 1/x: just left of 0 it plunges toward −∞, and just right of 0 it climbs toward +∞. Moving the picture 2 units right puts that same behavior at x = 2. So the left-hand limit at 2 is −∞ and the right-hand limit is +∞."
+ },
+ "CALC-4#10": {
+  "title": "Check with large inputs",
+  "text": "Substitute two big values. At x = 100 the top is √40,001 ≈ 200.0025 and the bottom is 103, giving about 1.942. At x = 10,000 the top is √400,000,001 ≈ 20,000 and the bottom is 10,003, giving about 1.9994. The values creep up toward 2. The + 3 on the bottom keeps them slightly under 2, and its effect fades as x grows, so the limit is 2."
+ },
+ "CALC-4#11": {
+  "title": "Test inputs beside 5",
+  "text": "Evaluate f on each side of the suspect input. At x = 5.01 the fraction is 6.01/0.01 = 601. At x = 4.99 it is 5.99/(−0.01) = −599. At 5.001 it is about 6001. The outputs explode, positive on the right and negative on the left, which is the signature of a vertical asymptote at x = 5. A hole would have given calm values instead."
+ },
+ "CALC-4#12": {
+  "title": "Tabulate a few years",
+  "text": "Put some times into the formula. At t = 0 the pond has 1000/10 = 100 fish. At t = 5, 9e^(−5) ≈ 0.061, so P ≈ 1000/1.061 ≈ 943 fish. At t = 10, 9e^(−10) ≈ 0.0004, so P ≈ 999.6 fish. The population climbs quickly and then flattens just under 1000. Since the bottom of the fraction can never drop below 1, P can never pass 1000, and it approaches 1000 fish."
+ },
+ "CALC-5#1": {
+  "title": "Average the unit steps",
+  "text": "For y = x², look at the trip from x = 1 to x = 3 one unit at a time. From 1 to 2 the output rises from 1 to 4, a gain of 3. From 2 to 3 it rises from 4 to 9, a gain of 5. The two gains are different, but together they make 8 over 2 units, which is 4 per unit. The average rate replaces the uneven gains 3 and 5 by the one steady gain that gives the same total."
+ },
+ "CALC-5#2": {
+  "title": "One formula for every secant",
+  "text": "For y = x², the secant from x = 1 to x = 1 + h has rise (1 + h)² − 1 = 2h + h² and run h, so its slope is exactly 2 + h. That one formula produces the whole list: h = 2 gives 4, h = 1 gives 3, h = 0.5 gives 2.5, and h = 0.01 gives 2.01. Every secant slope is 2 plus the leftover h. Shrinking h removes the leftover, and the instantaneous rate is 2."
+ },
+ "CALC-5#3": {
+  "title": "Start with a straight line",
+  "text": "Try the definition on f(x) = 3x + 1. The rise is 3(x + h) + 1 − (3x + 1) = 3h, and the run is h, so the quotient is 3 for every h. A line has the same slope between any two points, and the limit simply reports it: f′(x) = 3.\nFor a curve such as x², the quotient is 2x + h, which still depends on h. The limit is the step that removes that dependence and leaves the slope at one point."
+ },
+ "CALC-5#4": {
+  "title": "The line that fits best nearby",
+  "text": "Compare y = x² with the line y = 4x − 4 close to x = 2. At x = 2.1 the curve is 4.41 and the line is 4.4. At x = 2.01 the curve is 4.0401 and the line is 4.04. At x = 1.99 the curve is 3.9601 and the line is 3.96. The gap shrinks much faster than the distance from 2. No other line through (2, 4) hugs the curve this closely, and that is what makes it the tangent."
+ },
+ "CALC-5#5": {
+  "title": "Zoom in on the graph",
+  "text": "Zoom in on a smooth curve such as y = x² and it looks more and more like a straight line. That line is the tangent, and its slope is the derivative. Now zoom in on the corner of y = |x| at 0. It is still a V at every magnification, so there is no single line to read a slope from. Zoom in on a vertical tangent and you see a vertical line, which has no slope. Zoom in on a break and you see a gap."
+ },
+ "CALC-5#6": {
+  "title": "Compute a few secant slopes",
+  "text": "Skip the algebra and measure. From x = 1 to 1.1 the slope is (1.21 − 1)/0.1 = 2.1. From 1 to 1.01 it is (1.0201 − 1)/0.01 = 2.01. From the other side, 0.9 to 1 gives (1 − 0.81)/0.1 = 1.9. Slopes from the right sit just above 2 and slopes from the left sit just below it. They close in on 2, so f′(1) = 2."
+ },
+ "CALC-5#7": {
+  "title": "Use the other form",
+  "text": "Use the alternate definition with a fixed point a: the slope between x and a is (x² − a²)/(x − a). The top is a difference of squares, (x − a)(x + a), so the fraction is x + a for x ≠ a. As x → a this heads to a + a = 2a. So the slope at any point a is 2a, and renaming a as x gives f′(x) = 2x, with no expanding of (x + h)² needed."
+ },
+ "CALC-5#8": {
+  "title": "The alternate form at a point",
+  "text": "Fix a point a and take the slope between x and a: (1/x − 1/a)/(x − a). Combine the top into (a − x)/(xa). Dividing by x − a leaves −1/(xa), because a − x is the opposite of x − a. As x → a this heads to −1/a², so f′(x) = −1/x².\nA number check at x = 2: (1/2.01 − 1/2)/0.01 ≈ −0.249, close to −1/4."
+ },
+ "CALC-5#9": {
+  "title": "Slope-intercept, then a check",
+  "text": "The slope at x = 2 is 4, so the tangent has the form y = 4x + b. It must pass through (2, 4), so 4 = 4(2) + b and b = −4. The line is y = 4x − 4.\nCheck that it only touches the parabola: x² = 4x − 4 becomes x² − 4x + 4 = 0, or (x − 2)² = 0. The only solution is x = 2, counted twice, which is how a tangent meets a parabola."
+ },
+ "CALC-5#10": {
+  "title": "Measure secant slopes",
+  "text": "Estimate the slope of √x at 4 with a calculator. From 4 to 4.1 the slope is (2.02485 − 2)/0.1 ≈ 0.2485. From 4 to 4.01 it is (2.002498 − 2)/0.01 ≈ 0.2498. From 3.99 to 4 it is (2 − 1.997498)/0.01 ≈ 0.2502. The slopes from the right are a little under 0.25 and the slope from the left is a little over it. They close in on 0.25, so f′(4) = 1/4."
+ },
+ "CALC-5#11": {
+  "title": "Split the function in two",
+  "text": "Find the average rate of each part separately. For x², the change from 1 to 3 is 9 − 1 = 8 over a run of 2, which is 4. For 3x, a line with slope 3, the average rate is 3 on every interval. Rates of a sum add, so the average rate of x² + 3x on [1, 3] is 4 + 3 = 7. This matches (18 − 4)/2 = 7."
+ },
+ "CALC-5#12": {
+  "title": "Shrink the time window",
+  "text": "The average on [1, 2] is one chord: the ball rises from 48 to 64 feet in 1 second, so 16 ft/s.\nFor the instant t = 1, use shorter chords. h(1.1) = 70.4 − 19.36 = 51.04, so the average on [1, 1.1] is 3.04/0.1 = 30.4 ft/s. h(1.01) = 48.3184, so the average on [1, 1.01] is 31.84 ft/s. The averages climb toward 32 ft/s, the instantaneous velocity."
+ },
+ "CALC-6#1": {
+  "title": "Grow a cube",
+  "text": "Picture a cube with side x, so its volume is x³. Lengthen each side by a tiny amount h. The cube gains three thin slabs, one on each of three faces, and each slab is x by x by h. Together they add about 3x²h of volume. A few slivers along the edges are far smaller. So the volume grows about 3x² times as fast as the side does, which is the power rule for n = 3. A square of side x gains two strips of size x by h, giving 2x."
+ },
+ "CALC-6#2": {
+  "title": "Three walkers on a path",
+  "text": "Ann walks so that her position is p(t). Ben starts 7 meters ahead and copies her: his position is p(t) + 7, and his speed equals hers, because a head start adds no speed. Cara covers 3 times Ann's distance at every moment: her position is 3p(t), so her speed is 3 times Ann's. Stand on a moving walkway and your speed over the ground is your walking speed plus the walkway's. Constants vanish, multiples scale and sums add."
+ },
+ "CALC-6#3": {
+  "title": "Hours times wage",
+  "text": "You work 40 hours at 20 dollars an hour and earn 800 dollars. Next week you work 1 more hour and get a raise of 0.50 dollars. The new pay is 41 × 20.5 = 840.50, a gain of 40.50. Where did it come from? The extra hour at the old wage gives 20. The raise on the old 40 hours gives 20. The extra hour times the raise gives only 0.50. Two main parts, each with one factor changed, make up almost all the gain."
+ },
+ "CALC-6#4": {
+  "title": "Test it on a known answer",
+  "text": "Try the rule on x³/x, which is really x² with derivative 2x. Top-prime times bottom is 3x² · x = 3x³. Top times bottom-prime is x³ · 1 = x³. Subtract and divide by the bottom squared: (3x³ − x³)/x² = 2x. Correct.\nNow swap the order of the subtraction: (x³ − 3x³)/x² = −2x, the wrong sign. A test on a simple fraction like this is a quick way to recall which term comes first."
+ },
+ "CALC-6#5": {
+  "title": "Measure the slopes",
+  "text": "Check both facts with a calculator. For eˣ at x = 0: (e^0.001 − 1)/0.001 ≈ 1.0005, and the height there is 1. At x = 1: (e^1.001 − e)/0.001 ≈ 2.720, and the height is e ≈ 2.718. Slope and height match each time.\nFor ln x at x = 2: (ln 2.001 − ln 2)/0.001 ≈ 0.4999, which is 1/2. At x = 10 the same test gives about 0.1, which is 1/10."
+ },
+ "CALC-6#6": {
+  "title": "Check with a secant slope",
+  "text": "Test the answer at one point. The formula gives f′(1) = 12 − 2 = 10. Now measure: f(1) = 3 − 2 + 7 = 8, and f(1.001) = 3(1.004006) − 2.002 + 7 ≈ 8.010018. The secant slope is 0.010018/0.001 ≈ 10.02, very close to 10. A wrong derivative, such as one that kept the 7 or forgot the 4, would miss this check by a wide margin."
+ },
+ "CALC-6#7": {
+  "title": "Use the product rule backwards",
+  "text": "Start from √x · √x = x and differentiate both sides. The product rule gives 2√x times the derivative of √x on the left, and 1 on the right. So the derivative of √x is 1/(2√x).\nThe same idea works for 1/x². Since x² · (1/x²) = 1, the product rule gives 2x · (1/x²) + x² · D = 0, where D is the derivative we want. Then x² · D = −2/x, so D = −2/x³."
+ },
+ "CALC-6#8": {
+  "title": "Check the slope at x = 1",
+  "text": "The answer predicts a slope of 2e + e = 3e ≈ 8.155 at x = 1. Measure it: y(1) = e ≈ 2.71828 and y(1.001) = 1.002001 × e^1.001 ≈ 2.72645. The secant slope is about 0.00816/0.001 = 8.16, which agrees.\nThe tempting wrong answer, multiplying the two derivatives to get 2x · eˣ, predicts 2e ≈ 5.44 at x = 1. The measurement rules it out."
+ },
+ "CALC-6#9": {
+  "title": "Check against the graph",
+  "text": "Use values of y = x/(x² + 1) to test the derivative. Near x = 0 the bottom is almost 1, so y ≈ x and the slope should be 1. The formula gives (1 − 0)/1 = 1.\nThe formula is 0 at x = 1, so the graph should peak there. It does: y(0.9) ≈ 0.4972, y(1) = 0.5 and y(1.1) ≈ 0.4977. Past x = 1 the top 1 − x² is negative, and the graph does fall."
+ },
+ "CALC-6#10": {
+  "title": "Reflect the tangent of eˣ",
+  "text": "The curve y = eˣ passes through (0, 1) with slope 1, so its tangent there is y = x + 1. The graph of ln x is the mirror image of eˣ across the line y = x, and mirror images swap the roles of x and y. Swap them in the tangent line: x = y + 1. Solving for y gives y = x − 1. That is the tangent to ln x at the mirrored point (1, 0)."
+ },
+ "CALC-6#11": {
+  "title": "Product rule with a negative power",
+  "text": "Write h(x) = (2x + 1) · x⁻¹ and use the product rule. The derivative of 2x + 1 is 2, and the derivative of x⁻¹ is −x⁻². So h′(x) = 2 · x⁻¹ + (2x + 1)(−x⁻²). At x = 1 that is 2 − 3 = −1.\nA quick measurement agrees: h(1) = 3 and h(1.01) = 3.02/1.01 ≈ 2.9901, a slope of about −0.99."
+ },
+ "CALC-6#12": {
+  "title": "Multiply out first",
+  "text": "Expand the revenue before differentiating: R = (20 − t)(100 + 10t) = 2000 + 200t − 100t − 10t² = 2000 + 100t − 10t². Now the power rule is enough: R′(t) = 100 − 20t. On day 2 this is 100 − 40 = 60 dollars per day.\nThe expanded form also shows that R′ = 0 at t = 5, so revenue stops growing on day 5."
+ },
+ "CALC-7#1": {
+  "title": "Socks, then shoes",
+  "text": "Getting dressed is a composite: socks first, shoes second. The shoes are the outer layer because they go on last, and they are the first thing you deal with when undressing. Functions work the same way. For e^(x²) with x = 3, you square first to get 9 and then raise e to that power, so the exponential is the outer layer and x² is inside. For √(5x − 1) you compute 5x − 1 first and take the root last, so the root is outer."
+ },
+ "CALC-7#2": {
+  "title": "Check with a function you can expand",
+  "text": "Take y = (3x)². Multiplied out it is 9x², so its derivative is certainly 18x.\nNow use layers. The outer square has derivative 2 · (inside) = 2(3x) = 6x. That alone is three times too small. The inner 3x has derivative 3, and 6x · 3 = 18x, the right answer. The outer derivative on its own misses how fast the inside is changing, and multiplying by the inner derivative fixes it."
+ },
+ "CALC-7#3": {
+  "title": "Test each pattern on an easy case",
+  "text": "Power: (2x + 1)² expands to 4x² + 4x + 1, with derivative 8x + 4. The rule gives 2(2x + 1) · 2 = 8x + 4.\nExponential: e^(2x) is eˣ · eˣ, and the product rule gives 2eˣ · eˣ = 2e^(2x). The rule gives e^(2x) · 2.\nLog: ln(5x) = ln 5 + ln x, with derivative 1/x. The rule gives 5/(5x) = 1/x.\nIn every case the extra factor u′ is needed to match."
+ },
+ "CALC-7#4": {
+  "title": "A point going round the circle",
+  "text": "A point moves around the unit circle at speed 1, so at angle t it is at (cos t, sin t). Its motion is always at right angles to the radius, which makes its velocity (−sin t, cos t). Read off the parts. The height sin t changes at rate cos t. The horizontal position cos t changes at rate −sin t. The minus sign is visible: in the first quadrant the point moves up and to the LEFT, so cosine is decreasing while sine increases."
+ },
+ "CALC-7#5": {
+  "title": "Check with an identity",
+  "text": "The identity sin²θ = (1 − cos 2θ)/2 turns the three-layer function into a two-layer one: sin²(3x) = (1 − cos 6x)/2. Its derivative is (6 sin 6x)/2 = 3 sin 6x.\nCompare with the peeled answer 2 sin(3x) · cos(3x) · 3. Since 2 sin θ cos θ = sin 2θ, that equals 3 sin 6x as well. Both routes agree, which confirms that every layer must supply its own factor."
+ },
+ "CALC-7#6": {
+  "title": "Expand the cube first",
+  "text": "Multiply out the bracket: (2x + 1)³ = 8x³ + 12x² + 6x + 1. Differentiate term by term with the power rule: 24x² + 24x + 6. Factor out 6 to get 6(4x² + 4x + 1) = 6(2x + 1)². This matches the chain rule answer, including the factor 2 from the inside. Expanding works here, but it would be painful for a power like 10, which is why the chain rule is worth learning."
+ },
+ "CALC-7#7": {
+  "title": "Two quick checks",
+  "text": "Check the slope at x = 0. The secant from 0 to 0.001 has slope sin(0.003)/0.001 ≈ 3.000. The answer 3 cos(3x) gives 3 there, while a plain cos(3x) would give only 1.\nCheck a peak. sin(3x) reaches its top value 1 when 3x = π/2, at x = π/6, so the slope there must be 0. The answer gives 3 cos(π/2) = 0. Both checks agree with y′ = 3 cos(3x)."
+ },
+ "CALC-7#8": {
+  "title": "Check the shape and a slope",
+  "text": "Since x² is the same for x and −x, the graph of e^(x²) is symmetric and has its lowest point at x = 0, so the slope there must be 0. The answer 2x · e^(x²) gives 0 at x = 0. Leaving out the 2x would give a slope of 1, which is wrong.\nAt x = 1 the answer gives 2e ≈ 5.44. A measurement agrees: (e^1.002001 − e)/0.001 ≈ 5.44."
+ },
+ "CALC-7#9": {
+  "title": "Measure the slope at x = 1",
+  "text": "The answer predicts a slope of 2(1)/(1 + 1) = 1 at x = 1. Measure it with a secant: y(1) = ln 2 and y(1.001) = ln(2.002001). The difference is ln(2.002001/2) = ln(1.0010005) ≈ 0.0010000, and dividing by 0.001 gives about 1.000.\nWithout the inner factor 2x the prediction would be 1/2, half the measured slope. The shape also fits: the slope is 0 at x = 0, the bottom of the curve."
+ },
+ "CALC-7#10": {
+  "title": "Treat it as a product",
+  "text": "Write cos²x as cos x · cos x and use the product rule. Each factor has derivative −sin x, so y′ = (−sin x)(cos x) + (cos x)(−sin x) = −2 sin x cos x. The two equal terms are where the 2 comes from.\nAn identity gives a third route: cos²x = (1 + cos 2x)/2, whose derivative is −sin 2x. Since sin 2x = 2 sin x cos x, all three answers are the same."
+ },
+ "CALC-7#11": {
+  "title": "Square twice",
+  "text": "A fourth power is a square of a square: y = ((x² + 3)²)². The inner square is x⁴ + 6x² + 9, so y = (x⁴ + 6x² + 9)². Now y′ = 2(x⁴ + 6x² + 9)(4x³ + 12x). At x = 1 the first bracket is 16 and the second is 16, so y′(1) = 2 · 16 · 16 = 512.\nA secant slope from x = 1 to x = 1.001 agrees with this value: (4.002001⁴ − 256)/0.001 ≈ 512.6."
+ },
+ "CALC-7#12": {
+  "title": "Sine of a small angle",
+  "text": "Near t = 0 the angle u = πt/6 is tiny, and for tiny angles in radians sin u is almost equal to u. So just after the start, h(t) ≈ 10 + 8(πt/6) = 10 + (4π/3)t. That is a straight line with slope 4π/3 ≈ 4.19, so the seat is rising at about 4.19 meters per minute.\nA direct check: h(0.01) = 10 + 8 sin(0.005236) ≈ 10.0419, a rise of 0.0419 m in 0.01 min."
+ },
+ "CALC-8#1": {
+  "title": "Test the tag on a known curve",
+  "text": "Suppose we secretly know y = x². Then y² = x⁴, and its derivative with respect to x is 4x³. Now use the implicit rule: the derivative of y² is 2y · dy/dx = 2(x²)(2x) = 4x³. It matches.\nLeave the tag off and you get 2y = 2x², which is wrong. The factor dy/dx is what accounts for y itself changing as x changes."
+ },
+ "CALC-8#2": {
+  "title": "Put the numbers in first",
+  "text": "Give the slope a short name, m. For the circle x² + y² = 25, differentiating gives 2x + 2y · m = 0. At the point (3, 4) this reads 6 + 8m = 0, an equation from a first algebra course, and m = −3/4.\nSolving with letters is the same two moves done once for all points: 2y · m = −2x, so m = −x/y. Then (3, 4) gives −3/4 again, and any other point works as easily."
+ },
+ "CALC-8#3": {
+  "title": "A growing square",
+  "text": "A square has side s = 5 cm and the side grows at 2 cm/s. Its area is A = s². After 0.01 seconds the side is 5.02 and the area is 25.2004, so the area grew by 0.2004 in 0.01 seconds, about 20 cm² per second.\nThe rule gives the same: dA/dt = 2s · ds/dt = 2(5)(2) = 20. The area's rate depends on the side's rate and on the current size of the square."
+ },
+ "CALC-8#4": {
+  "title": "Plugging in early goes wrong",
+  "text": "A 10 ft ladder satisfies x² + y² = 100. Suppose you put in x = 6 before differentiating. The equation becomes 36 + y² = 100, and its derivative is 2y · dy/dt = 0, which says the top is not moving. That is plainly false while the base slides.\nKeep the letters instead: 2x · dx/dt + 2y · dy/dt = 0. Then plug in. The units agree too: feet times feet per second in both terms."
+ },
+ "CALC-8#5": {
+  "title": "Solve for y and compare",
+  "text": "For a circle of radius r centered at the origin, the top half is y = √(r² − x²). The chain rule gives dy/dx = −2x/(2√(r² − x²)) = −x/√(r² − x²). The root on the bottom is just y, so dy/dx = −x/y.\nOn the bottom half y = −√(r² − x²) and the derivative is +x/√(r² − x²), which is again −x/y because y is negative. One implicit formula covers both halves."
+ },
+ "CALC-8#6": {
+  "title": "Step to a nearby point",
+  "text": "Move a little along the circle and measure. At x = 3.01 the top half gives y = √(25 − 9.0601) = √15.9399 ≈ 3.99248. From (3, 4) to this point the rise is −0.00752 and the run is 0.01, so the slope is about −0.752. A smaller step brings it closer to −0.75. That matches the implicit answer −3/4."
+ },
+ "CALC-8#7": {
+  "title": "Think in percentages",
+  "text": "The product xy stays at 12. If x grows by 1 percent, y must shrink by about 1 percent to keep the product fixed. In symbols, the small changes satisfy dy/y = −dx/x. Rearranging gives dy/dx = −y/x.\nAt (3, 4): a 1 percent rise in x is 0.03 and a 1 percent drop in y is 0.04, so the slope is −0.04/0.03 = −4/3."
+ },
+ "CALC-8#8": {
+  "title": "Two nearby points on the curve",
+  "text": "Check the slope with points on xy = 12 near x = 3. At x = 3.01, y = 12/3.01 ≈ 3.98671, so the slope from (3, 4) is −0.01329/0.01 ≈ −1.329. At x = 2.99, y ≈ 4.01338, so the slope is about −1.338. The true slope lies between them. Their average is about −1.333, which is −4/3, the value both methods gave."
+ },
+ "CALC-8#9": {
+  "title": "Paint on a thin shell",
+  "text": "When r = 5 the balloon's surface area is 4π(5)² = 100π cm². In a short time dt the radius grows by 2 · dt, so the balloon gains a thin shell of that thickness all over its surface. The shell's volume is about area times thickness: 100π · 2 · dt = 200π · dt. Dividing by dt, the volume grows at 200π ≈ 628.3 cm³ per second."
+ },
+ "CALC-8#10": {
+  "title": "Move the base and re-measure",
+  "text": "Let 0.01 seconds pass. The base moves from 6 ft to 6.01 ft. The top was at √(100 − 36) = 8 ft and is now at √(100 − 36.1201) = √63.8799 ≈ 7.99249 ft. It dropped about 0.00751 ft in 0.01 seconds, a rate of about −0.751 ft/s. With a shorter time step the rate settles at −0.75, so the top slides down at 3/4 ft/s."
+ },
+ "CALC-8#11": {
+  "title": "Spread the water over the surface",
+  "text": "At a depth of 4 ft the water surface is a circle of radius 4/2 = 2 ft, with area π(2)² = 4π square feet. New water arrives at 3 cubic feet per minute and spreads as a thin layer over that surface. The thickness added per minute is volume divided by area: 3/(4π) ≈ 0.24 ft/min. The level rises more slowly later, because the surface gets wider as the cone fills."
+ },
+ "CALC-9#1": {
+  "title": "The hiker and the altimeter",
+  "text": "A hiker gains 600 meters of height in 3 hours, an average of 200 meters per hour. Could her climbing rate have been below 200 the whole time? No, she would have gained less than 600. Above 200 the whole time? No, she would have gained more. So the rate was sometimes at or below 200 and sometimes at or above it, and a smoothly changing rate must then equal exactly 200 at some moment. That moment is the c in the theorem."
+ },
+ "CALC-9#2": {
+  "title": "Compare heights near each point",
+  "text": "For f(x) = x³ − 3x, look near the critical point x = 1: f(0.9) = −1.971, f(1) = −2 and f(1.1) = −1.969. Both neighbors are higher, so x = 1 is a valley.\nNow a point that is not critical, x = 2, where f′ = 9: f(1.9) = 1.159, f(2) = 2 and f(2.1) = 2.961. One neighbor is lower and one is higher, so there is no peak or valley. With a nonzero slope that always happens."
+ },
+ "CALC-9#3": {
+  "title": "Three small test cases",
+  "text": "Each of these has a critical point at x = 0.\nFor x², f′ = 2x is negative on the left and positive on the right, and the graph has a minimum at 0.\nFor −x², f′ = −2x is positive then negative, and the graph has a maximum at 0.\nFor x³, f′ = 3x² is positive on both sides. The graph flattens at 0 and keeps rising, so there is no max or min."
+ },
+ "CALC-9#4": {
+  "title": "Watch a list of slopes",
+  "text": "For y = x² the slopes at x = −1, 0, 1 are −2, 0, 2. They increase from left to right, so the graph turns upward like a cup, and f″ = 2 is positive.\nFor y = x³ the slopes 3x² at x = −2, −1, 0, 1, 2 are 12, 3, 0, 3, 12. They fall until x = 0 and rise after it. Falling slopes mean concave down, rising slopes mean concave up, and the switch at 0 is the inflection point."
+ },
+ "CALC-9#5": {
+  "title": "The highest point on a trail",
+  "text": "You hike a trail from one gate to another. Where is the highest point of your walk? Either on a summit somewhere along the way, where the path levels off, or at one of the two gates if the trail was still climbing when it ended.\nA simple case shows why the ends matter: f(x) = x on [0, 3] has no critical points at all, yet it has a maximum of 3 and a minimum of 0, both at endpoints."
+ },
+ "CALC-9#6": {
+  "title": "The midpoint shortcut for parabolas",
+  "text": "For f(x) = x² the average rate on any interval [a, b] is (b² − a²)/(b − a) = a + b, after factoring the top. The instant rate at c is 2c. Setting 2c = a + b gives c = (a + b)/2, the midpoint. Here c = (1 + 4)/2 = 2.5.\nCheck: the secant slope is 1 + 4 = 5 and f′(2.5) = 5."
+ },
+ "CALC-9#7": {
+  "title": "Use the roots and the shape",
+  "text": "Factor f(x) = x(x² − 3). The graph crosses the x-axis at −√3 ≈ −1.73, at 0 and at √3 ≈ 1.73. A cubic with a positive leading term comes up from the far left and ends rising to the right. To cross at −1.73 and come back down to cross at 0, it needs a peak in between, and x = −1 is the critical point there: f(−1) = 2. Between 0 and 1.73 it needs a valley, at x = 1: f(1) = −2."
+ },
+ "CALC-9#8": {
+  "title": "Follow the graph across the interval",
+  "text": "Use the sign of f′(x) = 3(x − 1)(x + 1) on [0, 3]. For 0 ≤ x < 1 it is negative, so the graph falls from f(0) = 0 down to f(1) = −2. For 1 < x ≤ 3 it is positive, so the graph climbs from −2 up to f(3) = 18.\nA fall followed by a climb puts the lowest point at the turn: the minimum is −2 at x = 1. The highest point is the higher end: the maximum is 18 at x = 3."
+ },
+ "CALC-9#9": {
+  "title": "Use the symmetry of the graph",
+  "text": "The function is odd: f(−x) = −x³ + 3x = −f(x). So the graph looks the same after a half turn about the origin. A half turn changes a concave-up arc into a concave-down arc, so the part of the graph on one side of the origin bends the opposite way from the part on the other side. The switch has to happen at the center of the symmetry, the point (0, 0). It is also halfway between the turning points at x = −1 and x = 1."
+ },
+ "CALC-9#10": {
+  "title": "Track the slopes directly",
+  "text": "Concave up means the slopes are increasing. List f′(x) = 4x³ − 12x at a few inputs: f′(−2) = −8, f′(−1) = 8, f′(0) = 0, f′(1) = −8 and f′(2) = 8.\nFrom −2 to −1 the slope rises from −8 to 8. From −1 to 1 it falls from 8 to −8. From 1 to 2 it rises again. The slopes increase to the left of −1 and to the right of 1, so those are the concave-up intervals."
+ },
+ "CALC-9#11": {
+  "title": "Compare with close neighbors",
+  "text": "Check each critical point against values right beside it. At x = −1, f = 2. Nearby, f(−1.1) = −1.331 + 3.3 = 1.969 and f(−0.9) = −0.729 + 2.7 = 1.971. Both are lower, so x = −1 is a local maximum.\nAt x = 1, f = −2. Nearby, f(0.9) = −1.971 and f(1.1) = −1.969. Both are higher, so x = 1 is a local minimum."
+ },
+ "CALC-9#12": {
+  "title": "Add up the most they could drive",
+  "text": "Suppose the driver never went over 70 mph. Then in each hour the car covered at most 70 miles, and in 2 hours at most 140 miles. But the car covered 150 miles. That is impossible, so the speed was above 70 at some time. The claim is false. The Mean Value Theorem adds a sharper fact: the average was 150/2 = 75 mph, so at some moment the speedometer read exactly 75."
+ },
+ "CALC-10#1": {
+  "title": "The parabola shortcut",
+  "text": "Once the area is written with one variable, A = x(200 − x), you can see the answer without calculus. The graph is a parabola opening downward that is 0 at x = 0 and at x = 200. A parabola is symmetric, so its top is halfway between, at x = 100. Then y = 100 and the area is 10,000 square meters.\nSetting A′ = 200 − 2x = 0 gives the same x = 100, and the derivative method still works when the graph is not a parabola."
+ },
+ "CALC-10#2": {
+  "title": "Try the candidates",
+  "text": "For the box, cut squares of side x from a 12 inch sheet, so V = x(12 − 2x)². Compute a few: x = 1 gives 100, x = 2 gives 128, x = 3 gives 108, and x = 6 gives 0. The flat spot at x = 6 is the worst choice, not the best.\nEndpoints can win too. If the pen with A = x(200 − x) must have x ≤ 60, the peak at x = 100 is out of reach, and the best allowed value is the endpoint x = 60, with area 8400."
+ },
+ "CALC-10#3": {
+  "title": "One particle, two moments",
+  "text": "Let s(t) = t² − 4t, so v(t) = 2t − 4 and a(t) = 2.\nAt t = 1: s = −3, so the particle is 3 units left of the origin. v = −2, so it is moving left, and its speed is 2.\nAt t = 3: s = −3 again, but v = 2, so now it is moving right at speed 2.\nSame place and same speed, opposite directions. The acceleration of 2 is what turned the velocity from −2 into 2."
+ },
+ "CALC-10#4": {
+  "title": "A car in reverse",
+  "text": "Think of a car and count forward as positive. Driving forward at 6 m/s with a forward push of 2 m/s² takes you to 8 m/s: faster. Now put the car in reverse at −6 m/s and apply the same forward push. One second later the velocity is −4 m/s. The car is still going backward, but more slowly, so that positive acceleration worked as a brake. To speed up in reverse you need a backward push: −6 becomes −8, and the speed rises from 6 to 8."
+ },
+ "CALC-10#5": {
+  "title": "Odometer versus map",
+  "text": "You drive 4 km from home to a shop, realize you forgot your wallet, drive 4 km back home, and then drive 4 km to the shop again. The odometer has gone up by 12 km. That is distance, and it never runs backward. A map pin shows you 4 km from where you started. That is displacement, and it only compares the end with the start. The two numbers agree only on a trip with no turning around."
+ },
+ "CALC-10#6": {
+  "title": "Compare a few pens",
+  "text": "The two side lengths must add to 200 m, so try some pairs and compute the area. A 50 by 150 pen has 7,500 m². An 80 by 120 pen has 9,600 m². A 100 by 100 pen has 10,000 m². A 120 by 80 pen is back down to 9,600 m². The area climbs as the sides get closer to equal and falls once they pass each other, so the square pen, 100 m by 100 m with area 10,000 m², is the best."
+ },
+ "CALC-10#7": {
+  "title": "Mirror the pen in the river",
+  "text": "Imagine a mirror image of the pen on the other side of the river bank. Pen plus image form one full rectangle fenced on all four sides, using 240 m of fence in total. The best four-sided rectangle is a square, so that big rectangle is 60 m by 60 m with area 3,600 m². The real pen is half of it: 30 m out from the river and 60 m along it, with area 1,800 m²."
+ },
+ "CALC-10#8": {
+  "title": "Balance three numbers",
+  "text": "Look at the three numbers 4x, 12 − 2x and 12 − 2x. Their sum is always 24, whatever x is. When a sum is fixed, a product is largest when the numbers are equal. So set 4x = 12 − 2x, which gives x = 2. Their product is 4x(12 − 2x)², which is 4 times the volume, so the volume peaks there too: V = 2 · 8² = 128 cubic inches. Nearby cuts confirm it: x = 1.5 gives 121.5 and x = 2.5 gives 122.5."
+ },
+ "CALC-10#9": {
+  "title": "Complete the square",
+  "text": "Rewrite the area so the best x is visible: A = 200x − x² = 10,000 − (x² − 200x + 10,000) = 10,000 − (x − 100)². A square is never negative, so the area is 10,000 minus something that is zero or more. The area is largest when nothing is taken away, which happens only at x = 100. So the maximum is A = 10,000 m², matching both the vertex formula and the derivative."
+ },
+ "CALC-10#10": {
+  "title": "Watch the position turn around",
+  "text": "Make a table of positions. s(0) = 0, s(1) = 4, s(2) = 2, s(3) = 0 and s(4) = 4. The particle moves out to 4, comes back to 0, then heads out again. It reverses direction near t = 1 and near t = 3, and a particle must stop for an instant to reverse.\nThe quadratic formula confirms the exact times: 3t² − 12t + 9 = 0 gives t = (12 ± 6)/6, so t = 1 or t = 3."
+ },
+ "CALC-10#11": {
+  "title": "Compare speeds just before and after",
+  "text": "Compute the velocity on each side of t = 4 using v(t) = 3t² − 12t + 9. At t = 3.9, v = 45.63 − 46.8 + 9 = 7.83. At t = 4, v = 9. At t = 4.1, v = 50.43 − 49.2 + 9 = 10.23. The velocity is positive throughout, and its size grows from 7.83 to 9 to 10.23. The speed is increasing, so the particle is speeding up at t = 4."
+ },
+ "CALC-10#12": {
+  "title": "Displacement plus the doubled-back part",
+  "text": "Start from the displacement: s(4) − s(0) = 4 − 0 = 4. That number misses the backtracking. Between t = 1 and t = 3 the particle moves back from position 4 to position 0, a stretch of 4 units. That stretch is covered once going back and then again going forward, so it adds 2 · 4 = 8 to the travel. Distance = 4 + 8 = 12, while the displacement stays 4."
+ },
+ "CALC-11#1": {
+  "title": "Counting squares on a map",
+  "text": "To estimate the area of a lake on a map, lay a grid over it and count the squares that cover it. With large squares the edge of the lake cuts through many of them and the count is rough. With a finer grid the squares follow the shoreline better and the count improves. Riemann strips do the same job for the region under a curve: simple shapes with known areas stand in for a curved one, and smaller pieces give a better fit."
+ },
+ "CALC-11#2": {
+  "title": "Try all three on a line",
+  "text": "Use y = x on [0, 1] with two strips of width 0.5. The true area is a triangle of area 0.5.\nLeft heights are 0 and 0.5, so the left sum is 0.25: too small.\nRight heights are 0.5 and 1, so the right sum is 0.75: too big.\nMidpoint heights are 0.25 and 0.75, so the midpoint sum is 0.5: exactly right. For a straight line the overshoot and undershoot in each strip cancel completely."
+ },
+ "CALC-11#3": {
+  "title": "Polygons closing in on a circle",
+  "text": "Archimedes found the area of a circle the same way. Draw a regular polygon inside a circle of radius 1 and compute its area. With 6 sides it is 2.598. With 12 sides it is 3.000. With 24 sides it is 3.106, and with 96 sides it is 3.139. The areas never reach π, but they close in on it, and π is their limit. A definite integral is defined the same way: it is the number the rectangle sums close in on as the strips get thinner."
+ },
+ "CALC-11#4": {
+  "title": "Deposits and withdrawals",
+  "text": "Think of the graph as money flowing into an account, in dollars per day. When the graph is above the axis money is coming in, and when it is below the axis money is going out. For x − 1 on [0, 3], the first day takes out 0.50 and the next two days put in 2.00. The account ends up 1.50 higher. The total amount of money that moved is 2.50, but the integral reports the net result, 1.50."
+ },
+ "CALC-11#5": {
+  "title": "Read each rule as a trip",
+  "text": "Let f be your speed, so the integral is the distance covered.\nOver no time at all you cover no distance: the integral from a to a is 0.\nPlay the film of the trip backward and the distance counts the other way: swapping limits flips the sign.\nDrive twice as fast the whole time and you cover twice the distance: constants pull out.\nThe first hour's distance plus the second hour's distance is the two-hour distance: intervals join."
+ },
+ "CALC-11#6": {
+  "title": "Find each rectangle on its own",
+  "text": "Work out the four rectangles one at a time, each 0.5 wide. The first has height f(0) = 0, so its area is 0. The second has height 0.25 and area 0.125. The third has height 1 and area 0.5. The fourth has height 2.25 and area 1.125. Adding them: 0 + 0.125 + 0.5 + 1.125 = 1.75. Every rectangle sits under the rising curve, which is why 1.75 is an underestimate."
+ },
+ "CALC-11#7": {
+  "title": "Shift the left sum",
+  "text": "The right sum uses almost the same heights as the left sum. It drops the first height, f(0) = 0, and gains a new last one, f(2) = 4. So R₄ = L₄ + (f(2) − f(0)) · Δx = 1.75 + (4 − 0)(0.5) = 1.75 + 2 = 3.75. No new squaring is needed. The gap of 2 between the two sums is the room in which the true area, 8/3, must lie."
+ },
+ "CALC-11#8": {
+  "title": "Work in quarters",
+  "text": "Fractions make the arithmetic cleaner. The midpoints are 1/4, 3/4, 5/4 and 7/4, so the heights are 1/16, 9/16, 25/16 and 49/16. Their sum is 84/16 = 5.25. Multiply by the width 1/2 to get M₄ = 2.625.\nThe exact area is 8/3 ≈ 2.667, so the midpoint sum is off by only about 0.04, far closer than the left sum 1.75 or the right sum 3.75."
+ },
+ "CALC-11#9": {
+  "title": "Add four trapezoids one by one",
+  "text": "Find each trapezoid as the average of its two sides times the width 0.5.\nStrip 1: (0 + 0.25)/2 × 0.5 = 0.0625.\nStrip 2: (0.25 + 1)/2 × 0.5 = 0.3125.\nStrip 3: (1 + 2.25)/2 × 0.5 = 0.8125.\nStrip 4: (2.25 + 4)/2 × 0.5 = 1.5625.\nThe total is 2.75, the same as the formula gives. The formula is this sum with the shared sides collected."
+ },
+ "CALC-11#10": {
+  "title": "Go halfway from left to right",
+  "text": "The right sum is 2 more than the left sum: 3.75 − 1.75 = 2. Each trapezoid's slanted top sits halfway between the left and right rectangle tops, so the trapezoid sum is the left sum plus half the gap: 1.75 + 1 = 2.75.\nA further check uses the midpoint sum 2.625: the weighted mix (2 × 2.625 + 2.75)/3 equals 8/3, the exact area."
+ },
+ "CALC-11#11": {
+  "title": "Use an average speed",
+  "text": "A left sum uses the readings at the start of each 2-second interval: 10, 14 and 20 m/s. Their average is (10 + 14 + 20)/3 = 44/3 ≈ 14.67 m/s. The whole trip lasts 6 seconds, and distance is average speed times time: (44/3) × 6 = 88 m. The car was speeding up, so each starting reading is a little low and 88 m is an underestimate. The right sum, 112 m, is an overestimate."
+ },
+ "CALC-11#12": {
+  "title": "Split the integrand instead",
+  "text": "Break x − 1 into two familiar shapes. The integral of x from 0 to 3 is a triangle with base 3 and height 3, so it is 4.5. The integral of the constant 1 from 0 to 3 is a rectangle 3 wide and 1 tall, so it is 3. Integrals subtract term by term, so the answer is 4.5 − 3 = 1.5, the same as adding the two signed triangles."
+ },
+ "CALC-12#1": {
+  "title": "Knowing the speed is not enough",
+  "text": "Suppose you know a car's speed at every moment of a trip. You can work out how far it moved, but not where it is, because you were never told where it started. Two cars with identical speed records stay a fixed distance apart for the whole trip. Position is an antiderivative of speed, and the unknown starting point is the constant C. One extra fact, such as the position at time 0, picks out a single member of the family."
+ },
+ "CALC-12#2": {
+  "title": "Check it with areas you know",
+  "text": "The rule can be tested with geometry. The area under y = 1 from 0 to x is a rectangle of area x, and the rule turns x⁰ into x¹/1 = x. The area under y = x from 0 to x is a triangle with base x and height x, so its area is x²/2, and the rule turns x¹ into x²/2. In both cases adding one to the power and dividing by the new power gives the area that geometry gives."
+ },
+ "CALC-12#3": {
+  "title": "Test two rows with numbers",
+  "text": "Check the 1/x row. Estimate the area under 1/x from 1 to 2 with two midpoint rectangles: 0.5 × (1/1.25 + 1/1.75) ≈ 0.686. The table says ln 2 − ln 1 ≈ 0.693. Close.\nCheck the sign in the sine row. The area under sin x from 0 to π is clearly positive. With −cos x the calculation is −cos π + cos 0 = 1 + 1 = 2. Without the minus sign it would be −2, which is impossible for a region above the axis."
+ },
+ "CALC-12#4": {
+  "title": "Read the odometer twice",
+  "text": "How far did a car travel between 2 pm and 5 pm? Read the odometer at 5 pm and subtract the reading at 2 pm. You do not need the speed at every moment. The odometer is an antiderivative of speed: its rate of change is the speed. A trip meter that was reset to zero last week gives a different pair of readings but the same difference, which is why any antiderivative works and the constant does not matter."
+ },
+ "CALC-12#5": {
+  "title": "A case solved with a triangle",
+  "text": "Take f(t) = 2t and let g(x) be the area under it from 0 to x. That region is a triangle with base x and height 2x, so g(x) = ½ · x · 2x = x². Now differentiate: g′(x) = 2x, which is the original function evaluated at x. Accumulating area and then differentiating returned what we started with.\nRead as net change: if 2t is a speed, then x² is the distance covered by time x."
+ },
+ "CALC-12#6": {
+  "title": "Recall derivatives that match",
+  "text": "Search your memory for functions whose derivatives are the two terms. Which power differentiates to 3x²? That is x³. Which power differentiates to 2x? That is x². Derivatives add, so x³ + x² differentiates to 3x² + 2x. Any constant can be added without changing the derivative, so the full answer is x³ + x² + C. This is the same result as the reverse power rule, found by recognizing two familiar derivatives."
+ },
+ "CALC-12#7": {
+  "title": "A pyramid with the same integral",
+  "text": "Build a pyramid with its tip at 0, a height of 2 and a square base 2 by 2. The slice at distance x from the tip is a square of side x, with area x². So the pyramid's volume is the same integral, x² added up from 0 to 2. Geometry gives that volume directly: one third of base area times height, (1/3)(4)(2) = 8/3. The integral is 8/3."
+ },
+ "CALC-12#8": {
+  "title": "Estimate with rectangles",
+  "text": "Check the answer without logarithms. The interval from 1 to e has width about 1.718. Use two midpoint rectangles, each about 0.859 wide, with midpoints near 1.430 and 2.289. The heights 1/x are about 0.699 and 0.437. The estimate is 0.859 × (0.699 + 0.437) ≈ 0.976. Midpoint rectangles run slightly low for this curve, so a true value of 1 fits well."
+ },
+ "CALC-12#9": {
+  "title": "Bound it, then estimate it",
+  "text": "The region under cos x on [0, π/2] has width about 1.571 and height 1 at the left end. It fits inside the rectangle of area 1.571 and contains the triangle of area 0.785, so the answer is between those.\nTwo midpoint rectangles do better: the width is about 0.785 and the heights are cos(π/8) ≈ 0.924 and cos(3π/8) ≈ 0.383, giving 0.785 × 1.307 ≈ 1.03. An exact value of 1 fits."
+ },
+ "CALC-12#10": {
+  "title": "Start value plus net change",
+  "text": "Skip the constant. The value at x equals the known value at 1 plus the change from 1 to x, and that change is the integral of f′. The integral of 2t + 1 from 1 to x is (x² + x) − (1 + 1) = x² + x − 2. So f(x) = 4 + x² + x − 2 = x² + x + 2.\nCheck: f(1) = 1 + 1 + 2 = 4, and the derivative is 2x + 1."
+ },
+ "CALC-12#11": {
+  "title": "Use the average flow rate",
+  "text": "The rate 4t rises steadily from 0 litres per minute at the start to 20 litres per minute at t = 5. For a rate that changes in a straight line, the average is halfway between the start and end values: (0 + 20)/2 = 10 litres per minute. Ten litres per minute for 5 minutes is 50 litres. A tap running at a constant 10 would have delivered the same amount."
+ },
+ "CALC-13#1": {
+  "title": "Spot a derivative you just made",
+  "text": "Differentiate sin(x²) with the chain rule and you get cos(x²) · 2x. So if someone hands you the integral of 2x cos(x²), you can recognize it as the result of that chain rule and answer sin(x²) + C. The clue is the pair: an inside function, x², and its derivative, 2x, sitting beside it as a factor. Substitution with u = x² is a tidy way of doing this recognition when the pattern is harder to see."
+ },
+ "CALC-13#2": {
+  "title": "Three integrals side by side",
+  "text": "First: 2x(x² + 1)³. With u = x² + 1, the leftover 2x dx is exactly du. Substitution works.\nSecond: x(x² + 1)³. The leftover x dx is half of du. A constant is missing, which is fine.\nThird: x²(x² + 1)³. The leftover x² dx is (x/2) du, and that extra x cannot be written as a constant. Substitution fails here, and you would multiply out the cube instead."
+ },
+ "CALC-13#3": {
+  "title": "Differentiate to see the half",
+  "text": "Check the answer by differentiating it. The derivative of ½e^(x²) is ½ · e^(x²) · 2x by the chain rule, and ½ · 2 = 1, so the result is x · e^(x²), the integrand. The chain rule always produces the factor 2 from the inside, and the ½ is there to cancel it. Without the ½ the derivative would be 2x · e^(x²), twice what was asked for."
+ },
+ "CALC-13#4": {
+  "title": "The mistake in numbers",
+  "text": "Try ∫₀¹ 2x(x² + 1)³ dx three ways. Correct, with new limits: u⁴/4 from u = 1 to u = 2 is 16/4 − 1/4 = 15/4. Correct, switching back: (x² + 1)⁴/4 from x = 0 to x = 1 is also 15/4. Wrong, mixing them: u⁴/4 from 0 to 1 is only 1/4.\nThe limits 0 and 1 are x-values. Using them on a formula written in u is like reading a distance in miles off a kilometre scale."
+ },
+ "CALC-13#5": {
+  "title": "Subtract one area from another",
+  "text": "Find the area between y = 4 and y = x². They cross at x = −2 and x = 2. The area under the line y = 4 over that stretch is a rectangle 4 wide and 4 tall: 16. The area under the parabola there is 16/3. The region between the curves is what is left when the lower area is removed: 16 − 16/3 = 32/3. Integrating 4 − x² from −2 to 2 does the same subtraction strip by strip."
+ },
+ "CALC-13#6": {
+  "title": "Multiply out and compare",
+  "text": "Expand first: (x² + 1)³ = x⁶ + 3x⁴ + 3x² + 1, so the integrand is 2x⁷ + 6x⁵ + 6x³ + 2x. Integrate term by term: x⁸/4 + x⁶ + 3x⁴/2 + x² + C.\nNow expand the substitution answer: (x² + 1)⁴/4 = x⁸/4 + x⁶ + 3x⁴/2 + x² + 1/4. The two differ only by the constant 1/4, which C absorbs, so they are the same family."
+ },
+ "CALC-13#7": {
+  "title": "Guess, differentiate, adjust",
+  "text": "Make a first guess: e^(x²). Differentiate it with the chain rule to see how close it is: e^(x²) · 2x. That is twice the integrand x · e^(x²). A result that is too big by a constant factor is fixed by dividing the guess by that factor, so the antiderivative is ½e^(x²) + C. Guessing and adjusting works whenever the miss is a constant, which is the same condition substitution needs."
+ },
+ "CALC-13#8": {
+  "title": "Expand and integrate each term",
+  "text": "Multiply out the integrand: 2x(x² + 1)³ = 2x⁷ + 6x⁵ + 6x³ + 2x. Integrate from 0 to 1 term by term. The antiderivative is x⁸/4 + x⁶ + 3x⁴/2 + x², and at x = 1 it equals 1/4 + 1 + 3/2 + 1 = 15/4. At x = 0 it is 0. The integral is 15/4 = 3.75, with no substitution and no change of limits."
+ },
+ "CALC-13#9": {
+  "title": "A different substitution",
+  "text": "Choose the simpler inside w = x² instead of x² + 1. Then dw = 2x dx, and the limits become w = 0 and w = 1. The integral turns into (w + 1)³ dw from 0 to 1. Its antiderivative is (w + 1)⁴/4, which gives 2⁴/4 − 1⁴/4 = 16/4 − 1/4 = 15/4. Different choices of u can both work, and they must agree on the value."
+ },
+ "CALC-13#10": {
+  "title": "Squeeze the cosine graph",
+  "text": "The graph of cos(3x) is the graph of cos x squeezed horizontally to one third of its width. Squeezing every region to a third of its width cuts every area to a third. So the area under cos(3x) from 0 to x is one third of the area under cos u from 0 to 3x, which is sin(3x). That gives ⅓ sin(3x) + C. Check: the derivative is ⅓ · cos(3x) · 3 = cos(3x)."
+ },
+ "CALC-13#11": {
+  "title": "Triangle minus the parabola region",
+  "text": "Find each area separately. Under y = x from 0 to 1 is a triangle with base 1 and height 1, so its area is 1/2. Under y = x² from 0 to 1 the area is x³/3 at 1, which is 1/3. The line is above the parabola on this interval, so the region between them is the triangle with the lower region removed: 1/2 − 1/3 = 1/6."
+ },
+ "CALC-13#12": {
+  "title": "Slide the region to start at zero",
+  "text": "The height of a strip is x + 2 − x² = (x + 1)(2 − x). Let u = x + 1, which slides the region so it runs from u = 0 to u = 3. The height becomes u(3 − u) = 3u − u². Integrate: 3u²/2 − u³/3 at u = 3 is 27/2 − 9 = 9/2, and at u = 0 it is 0. The area is 9/2, with no negative limits to handle."
+ },
+ "CALC-14#1": {
+  "title": "A loaf of sliced bread",
+  "text": "A loaf of bread is already cut into slices. Each slice is almost flat, so its volume is the area of its face times its thickness. Slices near the ends have smaller faces and slices in the middle have larger ones, so you cannot multiply one area by the length. Add the slices instead.\nCheck on a box: every face has area 6 and the length is 5, so the sum is 6 × 5 = 30, the usual volume formula."
+ },
+ "CALC-14#2": {
+  "title": "A shape you already know",
+  "text": "Test the disc idea on a flat curve. Revolve y = 2 on [0, 5] about the x-axis. Every slice is a disc of radius 2 and area 4π, and adding that constant area along a length of 5 gives 20π. The solid is a cylinder of radius 2 and height 5, and πr²h = π(4)(5) = 20π as well. For a curve that is not flat the radius changes from slice to slice, and the integral does the adding."
+ },
+ "CALC-14#3": {
+  "title": "A ring with real numbers",
+  "text": "Take a washer with outer radius 3 and inner radius 2. Its area is the big disc minus the hole: 9π − 4π = 5π ≈ 15.7.\nSubtracting first gives a radius of 1 and an area of π ≈ 3.14, five times too small. A band 1 unit wide wrapped around a hole of radius 2 is long, about as long as a circle of radius 2.5, so it holds far more area than a small disc of radius 1."
+ },
+ "CALC-14#4": {
+  "title": "One strip, three shapes",
+  "text": "Suppose the strip across the base at some x has length 2. A square standing on it has area 2² = 4. A semicircle with that strip as diameter has radius 1 and area π/2 ≈ 1.57. An equilateral triangle on it has area (√3/4)(2²) ≈ 1.73. Same base strip, three different slice areas, and so three different volumes.\nIf the strip stayed 2 long for a length of 5, the square version would be a 2 by 2 by 5 box of volume 20."
+ },
+ "CALC-14#5": {
+  "title": "A bank statement",
+  "text": "You open the month with 20 dollars in an account. During the month your deposits add up to 27 dollars. The statement line \"total deposits: 27\" is the integral of the rate at which money came in. It is not your balance. The balance is the opening amount plus the deposits: 20 + 27 = 47 dollars. Forgetting the starting amount is the most common slip in accumulation questions."
+ },
+ "CALC-14#6": {
+  "title": "Stack four thick discs",
+  "text": "Estimate the solid with four discs, each 1 unit thick, measured at the middle of each slice. At x = 0.5, 1.5, 2.5 and 3.5 the radius is √x, so the disc areas are π · x: 0.5π, 1.5π, 2.5π and 3.5π. Their volumes add to (0.5 + 1.5 + 2.5 + 3.5)π = 8π. Because the disc area πx grows in a straight line, the midpoint estimate is exact here, and V = 8π ≈ 25.13."
+ },
+ "CALC-14#7": {
+  "title": "Approximate with a few discs",
+  "text": "Estimate the cone with real discs. Use 3 discs of thickness 1 with radii 0.5, 1.5 and 2.5, read at the middle of each slice: π(0.25 + 2.25 + 6.25) = 8.75π. Use 6 discs of thickness 0.5 with radii 0.25, 0.75, and so on up to 2.75: the squares add to 17.875, giving 8.9375π. The estimates climb toward 9π as the discs get thinner, the value that the integral and the cone formula both give."
+ },
+ "CALC-14#8": {
+  "title": "Big solid minus the scooped-out part",
+  "text": "Treat the washer solid as one solid with another removed. Spinning the region under y = x gives a cone with radius 1 and height 1: volume π/3. Spinning the region under y = x² gives a smaller solid inside it: π times the integral of x⁴ from 0 to 1, which is π/5. Removing the inner solid leaves π/3 − π/5 = 5π/15 − 3π/15 = 2π/15 ≈ 0.419."
+ },
+ "CALC-14#9": {
+  "title": "Average slice times length",
+  "text": "The slice area is A(x) = x, which grows in a straight line from 0 at the left end to 4 at the right end. For a straight-line quantity the average is halfway between the ends, so the average slice area is 2. The solid is 4 units long. Volume = average area × length = 2 × 4 = 8. The solid has the same volume as a box whose cross-section is 2 square units all along."
+ },
+ "CALC-14#10": {
+  "title": "Count minute by minute",
+  "text": "The rate 6t rises steadily, so in each minute the water added equals the rate at the middle of that minute. Minute 1: rate 3 at t = 0.5, so 3 L. Minute 2: rate 9 at t = 1.5, so 9 L. Minute 3: rate 15 at t = 2.5, so 15 L. That is 3 + 9 + 15 = 27 L added. The question asks for the amount in the tank, so add the starting 20 L: 47 L."
+ },
+ "CALC-14#11": {
+  "title": "Average many sample heights",
+  "text": "An average value is what you get by sampling the function evenly and averaging. Take three samples at x = 0.5, 1.5 and 2.5: the heights 0.25, 2.25 and 6.25 average to about 2.92. Take six samples at 0.25, 0.75, and so on up to 2.75: the heights add to 17.875 and average to about 2.98. More samples push the average toward 3, the value given by the integral divided by the width."
+ },
  "GEO-1#1": {
   "title": "Everyday stand-ins",
   "text": "Use real objects as models. The tip of a sharp pencil pressed on paper marks a point. A string pulled tight between two nails is a segment, and you can measure it. A laser beam leaving a pointer is a ray: it has a start but no finish. A straight road imagined with no beginning and no end is a line, and a calm lake stretching forever in every direction is a plane. The real objects have thickness, but the ideas do not."

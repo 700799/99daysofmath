@@ -34,9 +34,9 @@
     {
       "title": "Nudge the concentration",
       "steps": [
-        "At $c = 4.99$: $\\frac{24.9001 - 25}{-0.01} = 9.99$.",
-        "At $c = 5.01$: $\\frac{25.1001 - 25}{0.01} = 10.01$.",
-        "A chemist would simply report the rate at $c = 5$ as $10$ — the hole is an artifact of the formula, not of the chemistry."
+        "Try a concentration slightly below $5$. At $c = 4.99$ the rate is $\\frac{24.9001 - 25}{-0.01} = 9.99$ grams per second.",
+        "Try one slightly above $5$. At $c = 5.01$ the rate is $\\frac{25.1001 - 25}{0.01} = 10.01$ grams per second.",
+        "Both readings sit right beside $10$, so the rate approaches $10$. The hole at $c = 5$ comes from the formula, not from the chemistry."
       ]
     }
   ],

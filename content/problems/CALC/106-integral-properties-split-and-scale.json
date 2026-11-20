@@ -34,9 +34,9 @@
     {
       "title": "Think in areas",
       "steps": [
-        "Doubling $f$ doubles the area over $[3, 5]$: $10$.",
-        "Adding $1$ lifts the graph by $1$ over an interval of width $2$, adding a $2 \\times 1$ rectangle of area $2$.",
-        "$10 + 2 = 12$."
+        "The area under $f$ over $[3, 5]$ is what is left of $8$ after removing the part over $[1, 3]$: $8 - 3 = 5$.",
+        "Doubling $f$ doubles that area to $10$. Adding $1$ lifts the graph by $1$ over a width of $2$, which adds a $2 \\times 1$ rectangle of area $2$.",
+        "The total area is $10 + 2 = 12$, the value of the integral."
       ]
     }
   ],

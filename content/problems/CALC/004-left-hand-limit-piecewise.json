@@ -34,9 +34,9 @@
     {
       "title": "Plug in from the left",
       "steps": [
-        "$f(0.9) = 3.9$, $f(0.99) = 3.99$, $f(0.999) = 3.999$.",
-        "The values climb toward $4$.",
-        "That is the left-hand limit, even though $f(1)$ itself equals $6 - 1 = 5$."
+        "Choose inputs just below $1$, where the rule is $x + 3$: $f(0.9) = 3.9$, $f(0.99) = 3.99$ and $f(0.999) = 3.999$.",
+        "Each output is closer to $4$ than the one before, and the gap shrinks ten times at every step.",
+        "So the left-hand limit is $4$, even though the value $f(1)$ comes from the other piece and equals $6 - 1 = 5$."
       ]
     }
   ],

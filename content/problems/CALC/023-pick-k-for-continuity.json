@@ -34,9 +34,9 @@
     {
       "title": "Check the seam",
       "steps": [
-        "With $k = 3$, the left piece is $2x + 3$, which equals $9$ at $x = 3$.",
-        "The parabola also equals $9$ at $x = 3$.",
-        "The line and the parabola meet exactly at $(3, 9)$ — no gap, so $f$ is continuous there."
+        "Try $k = 3$, so the left piece becomes $2x + 3$, which reaches height $2(3) + 3 = 9$ at $x = 3$.",
+        "The parabola on the right side has height $3^2 = 9$ at the same input $x = 3$.",
+        "The line and the parabola meet exactly at $(3, 9)$ with no gap, so $k = 3$ makes $f$ continuous. Any other $k$ shifts the line up or down and opens a jump."
       ]
     }
   ],

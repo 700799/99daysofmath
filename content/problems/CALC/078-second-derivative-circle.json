@@ -41,9 +41,17 @@
     {
       "title": "Use the explicit formula",
       "steps": [
-        "Near $(3, 4)$ the circle is $y = \\sqrt{25 - x^2}$. Then $y' = \\frac{-x}{\\sqrt{25 - x^2}}$.",
-        "Quotient rule again gives $y'' = \\frac{-25}{(25 - x^2)^{3/2}}$.",
-        "At $x = 3$: $25 - 9 = 16$, $16^{3/2} = 64$, so $y'' = -\\frac{25}{64}$. Same answer, more algebra."
+        "Near $(3, 4)$ the circle is the upper half $y = \\sqrt{25 - x^2}$, so the chain rule gives $y' = \\frac{-x}{\\sqrt{25 - x^2}}$.",
+        "Differentiating again with the quotient rule and simplifying gives $y'' = \\frac{-25}{(25 - x^2)^{3/2}}$.",
+        "At $x = 3$ the inside is $25 - 9 = 16$ and $16^{3/2} = 64$, so $y'' = -\\frac{25}{64}$. It is the same answer with more algebra."
+      ]
+    },
+    {
+      "title": "Differentiate the slope formula",
+      "steps": [
+        "Implicit differentiation gives $y' = -\\frac{x}{y}$, which at $(3, 4)$ is $-\\frac{3}{4}$. Keep that number ready.",
+        "Differentiate $-\\frac{x}{y}$ with the quotient rule, remembering that $y$ depends on $x$: $y'' = -\\frac{y - x y'}{y^2}$.",
+        "Substitute the numbers instead of simplifying with letters: $y'' = -\\frac{4 - 3(-\\frac{3}{4})}{16} = -\\frac{25/4}{16} = -\\frac{25}{64}$."
       ]
     }
   ],

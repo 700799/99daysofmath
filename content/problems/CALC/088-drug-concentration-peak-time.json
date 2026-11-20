@@ -39,9 +39,17 @@
     {
       "title": "Numerical sanity check",
       "steps": [
-        "$C(1) = 5e^{-0.5} \\approx 3.03$, $C(2) = 10e^{-1} \\approx 3.68$, $C(3) = 15e^{-1.5} \\approx 3.35$.",
-        "The values rise to $t = 2$ and fall after it.",
-        "The calculus located the peak exactly; the numbers confirm it is a peak and not a dip."
+        "Compute the concentration at three times: $C(1) = 5e^{-0.5} \\approx 3.03$, $C(2) = 10e^{-1} \\approx 3.68$ and $C(3) = 15e^{-1.5} \\approx 3.35$ mg/L.",
+        "The values rise up to $t = 2$ and fall after it, so the highest reading in the list is at two hours.",
+        "Calculus locates the peak exactly at $t = 2$, and the numbers confirm that it is a peak and not a dip."
+      ]
+    },
+    {
+      "title": "Second derivative test",
+      "steps": [
+        "The product rule gives $C'(t) = 5e^{-0.5t}(1 - 0.5t)$, which is zero only when $t = 2$.",
+        "Differentiate once more: $C''(t) = 5e^{-0.5t}(0.25t - 1)$, and at $t = 2$ this is $-2.5e^{-1} < 0$.",
+        "A flat tangent with negative concavity is a local maximum, and it is the only critical point, so the concentration is highest at $t = 2$ hours."
       ]
     }
   ],

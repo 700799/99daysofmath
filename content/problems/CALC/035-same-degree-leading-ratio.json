@@ -34,9 +34,9 @@
     {
       "title": "Big-number check",
       "steps": [
-        "At $x = 100$: $\\frac{40000 - 100}{20000 + 7} = \\frac{39900}{20007} \\approx 1.994$.",
-        "At $x = 10000$: $\\frac{399{,}990{,}000}{200{,}000{,}007} \\approx 1.99995$.",
-        "Creeping up on $2$ from below, exactly as the leading-coefficient rule predicts."
+        "Substitute a large input such as $x = 100$ and simplify the fraction: $\\frac{40000 - 100}{20000 + 7} = \\frac{39900}{20007} \\approx 1.994$.",
+        "Substitute a far larger input, $x = 10000$, to see the trend: $\\frac{399{,}990{,}000}{200{,}000{,}007} \\approx 1.99995$.",
+        "The values creep up on $2$ from below, exactly as the ratio of leading coefficients $\\frac{4}{2}$ predicts, so the limit is $2$."
       ]
     }
   ],

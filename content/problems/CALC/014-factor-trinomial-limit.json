@@ -34,9 +34,9 @@
     {
       "title": "Sneak up with a table",
       "steps": [
-        "$x = -2.1$: top is $4.41 - 10.5 + 6 = -0.09$, bottom is $-0.1$, ratio $0.9$.",
-        "$x = -1.9$: top is $3.61 - 9.5 + 6 = 0.11$, bottom is $0.1$, ratio $1.1$.",
-        "Closer in, the ratios tighten around $1$."
+        "Take $x = -2.1$, just left of $-2$: the top is $4.41 - 10.5 + 6 = -0.09$ and the bottom is $-0.1$, so the ratio is $0.9$.",
+        "Take $x = -1.9$, just right of $-2$: the top is $3.61 - 9.5 + 6 = 0.11$ and the bottom is $0.1$, so the ratio is $1.1$.",
+        "Moving closer, $x = -2.01$ gives $0.99$ and $x = -1.99$ gives $1.01$. The ratios tighten around $1$, so the limit is $1$."
       ]
     }
   ],

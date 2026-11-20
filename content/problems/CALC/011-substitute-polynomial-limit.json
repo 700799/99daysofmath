@@ -34,9 +34,9 @@
     {
       "title": "Use the limit laws one at a time",
       "steps": [
-        "The limit of a sum is the sum of the limits: $\\lim x^2 + \\lim 3x - \\lim 1$.",
-        "Each piece: $\\lim_{x \\to 2} x^2 = 4$, $\\lim_{x \\to 2} 3x = 6$, $\\lim_{x \\to 2} 1 = 1$.",
-        "$4 + 6 - 1 = 9$. The laws are exactly why substitution is allowed."
+        "The limit of a sum or difference is the sum or difference of the limits, so split it into $\\lim x^2 + \\lim 3x - \\lim 1$.",
+        "Find each small limit as $x \\to 2$ on its own: $x^2 \\to 4$, then $3x \\to 6$, and the constant $1$ stays $1$.",
+        "Put the pieces back together: $4 + 6 - 1 = 9$. These laws are exactly why plain substitution is allowed for a polynomial."
       ]
     }
   ],

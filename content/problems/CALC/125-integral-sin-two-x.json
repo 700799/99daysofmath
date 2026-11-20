@@ -34,9 +34,9 @@
     {
       "title": "Guess and adjust",
       "steps": [
-        "A first guess for the antiderivative is $-\\cos(2x)$. Differentiating gives $2\\sin(2x)$ — twice too big.",
-        "So the antiderivative is $-\\frac{1}{2}\\cos(2x)$.",
-        "Evaluate: $-\\frac{1}{2}\\cos \\pi + \\frac{1}{2}\\cos 0 = \\frac{1}{2} + \\frac{1}{2} = 1$."
+        "A first guess for the antiderivative is $-\\cos(2x)$. Differentiating it gives $2\\sin(2x)$, which is twice too big.",
+        "Halve the guess to fix that, so the antiderivative is $-\\frac{1}{2}\\cos(2x)$.",
+        "Evaluate the adjusted antiderivative from $0$ to $\\frac{\\pi}{2}$: $-\\frac{1}{2}\\cos \\pi + \\frac{1}{2}\\cos 0 = \\frac{1}{2} + \\frac{1}{2} = 1$."
       ]
     }
   ],

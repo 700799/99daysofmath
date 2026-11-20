@@ -39,9 +39,17 @@
     {
       "title": "Average rate on each stretch",
       "steps": [
-        "A trapezoid is the same as assuming the rate was the AVERAGE of its two endpoint readings for the whole stretch.",
-        "Average rates: $12, 16, 19, 18$ L/min over $3, 3, 4, 2$ minutes.",
-        "$12 \\cdot 3 + 16 \\cdot 3 + 19 \\cdot 4 + 18 \\cdot 2 = 36 + 48 + 76 + 36 = 196$ L."
+        "A trapezoid is the same as assuming the rate was the **average** of its two endpoint readings for the whole stretch.",
+        "The average rates are $12$, $16$, $19$ and $18$ liters per minute, lasting $3$, $3$, $4$ and $2$ minutes.",
+        "Multiply each rate by its time and add: $12 \\cdot 3 + 16 \\cdot 3 + 19 \\cdot 4 + 18 \\cdot 2 = 36 + 48 + 76 + 36 = 196$ liters."
+      ]
+    },
+    {
+      "title": "Bracket it with rectangles",
+      "steps": [
+        "A left-endpoint sum uses the reading at the start of each stretch: $10 \\cdot 3 + 14 \\cdot 3 + 18 \\cdot 4 + 20 \\cdot 2 = 184$ liters.",
+        "A right-endpoint sum uses the reading at the end of each stretch: $14 \\cdot 3 + 18 \\cdot 3 + 20 \\cdot 4 + 16 \\cdot 2 = 208$ liters.",
+        "The trapezoidal sum is always the average of these two: $\\frac{184 + 208}{2} = 196$ liters."
       ]
     }
   ],

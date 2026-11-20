@@ -36,9 +36,9 @@
     {
       "title": "Plug in the point first",
       "steps": [
-        "After differentiating you have $y + x y' + 2y y' = 0$. Substitute $x = 1$, $y = 2$ right away: $2 + y' + 4y' = 0$.",
-        "That is $2 + 5y' = 0$, so $y' = -\\frac{2}{5}$.",
-        "Substituting early avoids algebra with letters — a good habit when you only need one point."
+        "After differentiating you have $y + x y' + 2y y' = 0$. Substitute $x = 1$ and $y = 2$ right away to get $2 + y' + 4y' = 0$.",
+        "Collect the two slope terms and solve the small equation: $2 + 5y' = 0$, so $y' = -\\frac{2}{5}$.",
+        "Substituting early avoids algebra with letters, which is a good habit when the slope is needed at only one point."
       ]
     }
   ],

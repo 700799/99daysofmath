@@ -38,9 +38,9 @@
     {
       "title": "Factor the bottom instead",
       "steps": [
-        "Think of $x - 9$ as a difference of squares: $(\\sqrt{x})^2 - 3^2 = (\\sqrt{x} - 3)(\\sqrt{x} + 3)$.",
-        "Then $\\frac{\\sqrt{x} - 3}{(\\sqrt{x} - 3)(\\sqrt{x} + 3)} = \\frac{1}{\\sqrt{x} + 3}$.",
-        "Same answer, $\\frac{1}{6}$, with no conjugate trick needed."
+        "Treat the bottom $x - 9$ as a difference of squares: $(\\sqrt{x})^2 - 3^2 = (\\sqrt{x} - 3)(\\sqrt{x} + 3)$.",
+        "The factor $\\sqrt{x} - 3$ now appears on top and bottom, so it cancels and leaves $\\frac{1}{\\sqrt{x} + 3}$ for $x \\ne 9$.",
+        "Substitute $x = 9$ into what is left: $\\frac{1}{3 + 3} = \\frac{1}{6}$. This is the same answer with no conjugate needed."
       ]
     }
   ],

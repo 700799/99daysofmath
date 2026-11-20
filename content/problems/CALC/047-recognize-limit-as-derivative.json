@@ -56,9 +56,9 @@
     {
       "title": "Rule out the impostors",
       "steps": [
-        "B: $a = 0$ would give $\\frac{h^3 - 0}{h}$, no $5$ anywhere.",
-        "C: $5^x$ at $a = 3$ would give $\\frac{5^{3 + h} - 125}{h}$ — the $125$ matches but the $h$ sits in the exponent, not the base.",
-        "D: $x^5$ at $3$ would give $(3 + h)^5 - 243$. Only A reproduces the limit exactly."
+        "Write out what choice B would produce: with $a = 0$ the quotient is $\\frac{h^3 - 0}{h}$, and no $5$ appears anywhere.",
+        "Choice C gives $\\frac{5^{3 + h} - 125}{h}$. The $125$ matches, but the $h$ sits in the exponent and not in the base.",
+        "Choice D gives $\\frac{(3 + h)^5 - 243}{h}$, which has the wrong numbers. Only choice A, $x^3$ at $a = 5$, reproduces $\\frac{(5 + h)^3 - 125}{h}$ exactly."
       ]
     }
   ],

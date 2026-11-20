@@ -34,9 +34,9 @@
     {
       "title": "Compare with the disc version",
       "steps": [
-        "Rotating the same base about the $x$-axis gives discs of area $\\pi x$ and volume $8\\pi$.",
-        "A square of side $s$ has area $s^2$, while a disc of radius $s$ has area $\\pi s^2$ — so the square-slice solid is exactly $\\frac{1}{\\pi}$ of the disc solid.",
-        "$\\frac{8\\pi}{\\pi} = 8$."
+        "Rotating the same base about the $x$-axis gives discs of area $\\pi(\\sqrt{x})^2 = \\pi x$, and that solid has volume $\\pi\\int_0^4 x\\,dx = 8\\pi$.",
+        "A square of side $s$ has area $s^2$ while a disc of radius $s$ has area $\\pi s^2$, so every square slice is $\\frac{1}{\\pi}$ of the matching disc.",
+        "The square-slice solid is therefore $\\frac{1}{\\pi}$ of the disc solid: $\\frac{8\\pi}{\\pi} = 8$ cubic units."
       ]
     }
   ],

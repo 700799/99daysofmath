@@ -34,9 +34,9 @@
     {
       "title": "See the hole",
       "steps": [
-        "Factor: $\\frac{(x - 1)(x + 1)}{x - 1} = x + 1$ for $x \\ne 1$.",
-        "So the graph is the line $y = x + 1$ with one point punched out, at $(1, 2)$.",
-        "The limit at $1$ is $2$, but the value is missing — a removable discontinuity."
+        "Factor the top and cancel the shared factor: $\\frac{(x - 1)(x + 1)}{x - 1} = x + 1$ for every $x \\ne 1$.",
+        "So the graph is the straight line $y = x + 1$ with one point punched out at $(1, 2)$.",
+        "A line has no other breaks, so $f$ fails to be continuous only at $x = 1$, where the limit is $2$ but the value is missing."
       ]
     }
   ],
