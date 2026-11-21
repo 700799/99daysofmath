@@ -36,6 +36,16 @@
     "As a fraction $\\frac{4}{8} = \\frac{1}{2}$, and one half of a dollar is $0.5$ dollars.",
     "Each apple costs $0.5$ dollars, which is $50$ cents."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Halve in a ratio table",
+      "steps": [
+        "Start with the row $8$ apples for $4$ dollars and halve both numbers to get $4$ apples for $2$ dollars.",
+        "Halve again to get $2$ apples for $1$ dollar, and once more to get $1$ apple for half a dollar.",
+        "Half a dollar is $0.5$ dollars, so the price is $0.5$ dollars per apple."
+      ]
+    }
+  ],
   "tags": [
     "unit-rate",
     "money"

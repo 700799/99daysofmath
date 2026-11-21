@@ -35,17 +35,17 @@
     {
       "title": "A short table, then a leap",
       "steps": [
-        "Row 1: 12. Row 2: 15. Row 3: 18. Row 4: 21.",
-        "Look at row 4: it is 12 + 3(3), and the 3 is one less than the row number.",
-        "So row 20 is 12 + 19(3) = 69. The table finds the pattern; the formula does the leap."
+        "Write the first few rows: row $1$ has $12$ seats, row $2$ has $15$, row $3$ has $18$ and row $4$ has $21$.",
+        "Row $4$ is $12 + 3 \\times 3$, so the number of threes added is one less than the row number.",
+        "Row $20$ therefore adds $19$ threes to the first row: $12 + 19 \\times 3 = 12 + 57 = 69$ seats."
       ]
     },
     {
       "title": "Work backwards to check",
       "steps": [
-        "If row 20 really holds 69 seats, walk backwards 19 rows of 3.",
-        "19 × 3 = 57, and 69 − 57 = 12.",
-        "That is exactly row 1, so the answer checks out."
+        "Suppose row $20$ holds $69$ seats, and walk back toward the front, losing $3$ seats per row.",
+        "There are $19$ steps back to row $1$, which removes $19 \\times 3 = 57$ seats.",
+        "That leaves $69 - 57 = 12$ seats, exactly the size of row $1$, so $69$ is correct."
       ]
     }
   ],

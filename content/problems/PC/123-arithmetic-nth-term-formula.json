@@ -33,19 +33,19 @@
   ],
   "alternativeExplanations": [
     {
-      "title": "Count the jumps on your fingers",
+      "title": "Count the jumps",
       "steps": [
-        "Term 1 is 5 with no jumps yet. Term 2 is 9 after one jump. Term 3 is 13 after two jumps.",
-        "Notice the pattern: the jump count is always one less than the term number.",
-        "Term 10 means 9 jumps: 5 + 9(4) = 41."
+        "Term $1$ is $5$ with no jumps, term $2$ is $9$ after one jump, and term $3$ is $13$ after two jumps.",
+        "The number of jumps is always one less than the term number, so term $10$ takes $9$ jumps.",
+        "Nine jumps of $4$ add $36$, so the tenth term is $5 + 36 = 41$."
       ]
     },
     {
-      "title": "List it out to check",
+      "title": "List it out",
       "steps": [
-        "5, 9, 13, 17, 21, 25, 29, 33, 37, 41.",
-        "Count the numbers you wrote: exactly ten of them.",
-        "The tenth is 41 — the formula and the list agree, and the list is a great safety net for small n."
+        "Write the terms by adding $4$ each time: $5, 9, 13, 17, 21, 25, 29, 33, 37, 41$.",
+        "Count the entries to be sure the list stops at the right place, and there are exactly ten.",
+        "The tenth entry in the list is $41$, so $a_{10} = 41$."
       ]
     }
   ],

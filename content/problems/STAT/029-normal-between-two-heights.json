@@ -44,17 +44,17 @@
     {
       "title": "Empirical rule shortcut",
       "steps": [
-        "From $z = -1$ to $0$ is half of 68 percent: 34 percent.",
-        "From $z = 0$ to $2$ is half of 95 percent: 47.5 percent.",
-        "Total $34 + 47.5 = 81.5$ percent, close to the table's 81.9 percent (the rule rounds)."
+        "The interval runs from $z = -1$ to $z = 2$. The piece from $z = -1$ up to the mean is half of the $68$ percent band, about $34$ percent.",
+        "The piece from the mean up to $z = 2$ is half of the $95$ percent band, about $47.5$ percent.",
+        "Together that is about $81.5$ percent, a rough estimate that confirms the size of the answer. The table values refine it to $0.9772 - 0.1587 = 0.8185$, or about $0.819$."
       ]
     },
     {
       "title": "The trap: adding instead of subtracting",
       "steps": [
-        "Adding $0.9772 + 0.1587 = 1.136$ is impossible — a proportion cannot exceed 1.",
-        "The region between two $z$-values is the big left area with the small left area cut away.",
-        "Subtract: $0.9772 - 0.1587 = 0.8185$."
+        "Adding the two table areas gives $0.9772 + 0.1587 = 1.136$, which is impossible because a proportion can never be larger than $1$.",
+        "Both table areas start from the far left, so the region between the two $z$-values is the big left area with the small left area cut away.",
+        "Subtracting gives $0.9772 - 0.1587 = 0.8185$, so about $0.819$ of men are between $65$ and $74$ inches."
       ]
     }
   ],

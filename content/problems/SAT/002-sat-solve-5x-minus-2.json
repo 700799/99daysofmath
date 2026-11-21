@@ -36,9 +36,9 @@
     {
       "title": "Distribute first",
       "steps": [
-        "$5(x - 2) = 5x - 10$, so the equation is $5x - 10 = 35$.",
-        "Add $10$: $5x = 45$. Divide by $5$: $x = 9$.",
-        "Same answer, one extra step — dividing by the outside factor first is the shortcut worth building as a habit."
+        "Multiply the $5$ through the parentheses first, which turns the equation into $5x - 10 = 35$.",
+        "Add $10$ to both sides to undo the subtraction, giving $5x = 45$.",
+        "Divide both sides by $5$ to find $x = 9$, the same value the main method gives."
       ]
     }
   ],

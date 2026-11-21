@@ -39,16 +39,17 @@
     {
       "title": "Distribute twice",
       "steps": [
-        "Hand (x + 2) to each part of (x + 3): x(x + 2) + 3(x + 2).",
-        "That gives x² + 2x + 3x + 6.",
-        "Combine: x² + 5x + 6."
+        "Use the distributive property twice by handing $(x + 2)$ to each part of $(x + 3)$: $x(x + 2) + 3(x + 2)$.",
+        "Multiply out each part to get $x^2 + 2x$ and $3x + 6$.",
+        "Combine the like terms $2x + 3x = 5x$, so the area is $x^2 + 5x + 6$."
       ]
     },
     {
       "title": "Check with a real garden",
       "steps": [
-        "Let x = 5. Then the garden is 8 m by 7 m, area 56 square meters.",
-        "The formula: 5² + 5·5 + 6 = 25 + 25 + 6 = 56. The expanded form is correct."
+        "Check with a real garden by letting $x = 5$, so it is $8$ m long and $7$ m wide with area $56$ square meters.",
+        "With the same value of $x$, the expanded form gives $5^2 + 5 \\cdot 5 + 6 = 25 + 25 + 6 = 56$.",
+        "The two areas match, so $x^2 + 5x + 6$ is the correct expansion."
       ]
     }
   ],

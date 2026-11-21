@@ -35,8 +35,9 @@
     {
       "title": "Check by adding back",
       "steps": [
-        "$5.63 + 4.37$: hundredths $3 + 7 = 10$, tenths $6 + 3 + 1 = 10$, ones $5 + 4 + 1 = 10$.",
-        "That rebuilds $10.00$ exactly ✓"
+        "If $5.63$ is the difference, then $5.63 + 4.37$ must rebuild $10$.",
+        "Add by columns: hundredths $3 + 7 = 10$, tenths $6 + 3 + 1 = 10$, and ones $5 + 4 + 1 = 10$.",
+        "Every column regroups and the total is exactly $10.00$, so $10 - 4.37 = 5.63$."
       ]
     }
   ],

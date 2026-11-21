@@ -39,6 +39,24 @@
     "Work it in pieces: $14 \\times 2 = 28$ and $14 \\times 0.50 = 7$, and $28 + 7 = 35$.",
     "The cost of fourteen tickets is $35$ dollars."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Build a ratio table",
+      "steps": [
+        "Start with $4$ tickets for $10$ dollars and triple the row to get $12$ tickets for $30$ dollars.",
+        "Halve the first row to get $2$ tickets for $5$ dollars.",
+        "Add those two rows to reach $14$ tickets: $30 + 5 = 35$ dollars."
+      ]
+    },
+    {
+      "title": "Count groups of four",
+      "steps": [
+        "Tickets are sold $4$ for $10$ dollars, and $14 \\div 4 = 3.5$, so you need three and a half groups.",
+        "Three groups cost $30$ dollars and half a group costs half of $10$, which is $5$ dollars.",
+        "Together that is $30 + 5 = 35$ dollars for $14$ tickets."
+      ]
+    }
+  ],
   "tags": [
     "CA",
     "rate"

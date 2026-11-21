@@ -34,9 +34,9 @@
     {
       "title": "Watch the values run away",
       "steps": [
-        "$\\tan 89^\\circ \\approx 57.3$ and $\\tan 89.9^\\circ \\approx 573$.",
-        "The closer $\\theta$ creeps to $90^\\circ$, the larger the output, with no limit.",
-        "At exactly $90^\\circ$ there is no number left to report — the function is undefined."
+        "Try angles close to $90^\\circ$ on a calculator: $\\tan 89^\\circ \\approx 57.3$ and $\\tan 89.9^\\circ \\approx 573$.",
+        "The closer $\\theta$ gets to $90^\\circ$, the larger the output becomes, with no upper limit.",
+        "At exactly $90^\\circ$ there is no number left to report, so the function is undefined and the program crashes at $90$ degrees."
       ]
     }
   ],

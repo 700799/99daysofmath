@@ -32,6 +32,16 @@
     "\"More than\" matches the greater-than symbol $>$, and $5$ itself is not included.",
     "Writing it in the same order as the sentence gives $x > 5$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Test some numbers",
+      "steps": [
+        "Six is more than $5$, so the inequality should accept $6$, and $6 > 5$ is true.",
+        "Five is not more than itself, so it should be rejected, and $5 > 5$ is false.",
+        "The symbol $>$ gives the right result on both tests, so the inequality is $x > 5$."
+      ]
+    }
+  ],
   "tags": [
     "inequality",
     "word"

@@ -35,8 +35,9 @@
     {
       "title": "Estimate to check",
       "steps": [
-        "$3.4$ is about $3$ and $2.7$ is about $3$.",
-        "$3 + 3 = 6$, and $6.1$ is right there ✓"
+        "Round both numbers to $3$, so the sum should be close to $3 + 3 = 6$.",
+        "Now fix the rounding: $3.4$ is $0.4$ above $3$, and $2.7$ is $0.3$ below $3$.",
+        "Adjust the estimate by both amounts: $6 + 0.4 - 0.3 = 6.1$."
       ]
     }
   ],

@@ -39,9 +39,17 @@
     {
       "title": "Compare nearby boxes",
       "steps": [
-        "$x = 3$: $h = \\frac{32}{9} \\approx 3.56$, $S = 9 + \\frac{128}{3} \\approx 51.7$.",
-        "$x = 4$: $S = 16 + 32 = 48$. $x = 5$: $S = 25 + 25.6 = 50.6$.",
-        "Both neighbors use more material than $x = 4$, confirming the minimum. Notice the optimal box is exactly twice as wide as it is tall."
+        "Try $x = 3$: the height is $h = \\frac{32}{9} \\approx 3.56$ and the material is $S = 9 + \\frac{128}{3} \\approx 51.7$ square feet.",
+        "Try $x = 4$ and $x = 5$: the material is $S = 16 + 32 = 48$ and $S = 25 + 25.6 = 50.6$ square feet.",
+        "Both neighbors use more material than $x = 4$, confirming the minimum at $x = 4$ feet. The best box is exactly twice as wide as it is tall."
+      ]
+    },
+    {
+      "title": "Balance the two costs",
+      "steps": [
+        "The material is $S = x^2 + \\frac{128}{x}$. Split the wall term into two equal halves: $S = x^2 + \\frac{64}{x} + \\frac{64}{x}$.",
+        "The product of these three terms is $64 \\cdot 64 = 4096$ no matter what $x$ is. A sum with a fixed product is smallest when the terms are equal.",
+        "Setting $x^2 = \\frac{64}{x}$ gives $x^3 = 64$, so $x = 4$ feet and $S = 16 + 16 + 16 = 48$ square feet."
       ]
     }
   ],

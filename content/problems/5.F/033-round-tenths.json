@@ -30,6 +30,16 @@
     "Look at the hundredths digit, $6$. It is $5$ or more, so the number is closer to the higher tenth.",
     "Round the tenths digit up from $8$ to $9$, which gives $3.86 \\approx 3.9$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Find it on a number line",
+      "steps": [
+        "The number $3.86$ lies between the tenths $3.8$ and $3.9$, so those are the only two possible answers.",
+        "It is $0.06$ away from $3.8$ but only $0.04$ away from $3.9$.",
+        "The nearer tenth wins, so $3.86$ rounds to $3.9$."
+      ]
+    }
+  ],
   "tags": [
     "decimals",
     "rounding"

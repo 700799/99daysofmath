@@ -35,6 +35,16 @@
     "Double it to keep the ratio $1 : 2$, which gives $4 \\times 2 = 8$.",
     "The next pair on the graph is $(4, 8)$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Follow the steps on the graph",
+      "steps": [
+        "Look at how the points move: from $(1, 2)$ to $(2, 4)$ is $1$ to the right and $2$ up.",
+        "The same move takes $(2, 4)$ to $(3, 6)$, so the points climb like equal stairs.",
+        "One more stair from $(3, 6)$ lands on $(3 + 1, 6 + 2)$, which is $(4, 8)$."
+      ]
+    }
+  ],
   "tags": [
     "ratio",
     "graph"

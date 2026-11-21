@@ -43,8 +43,17 @@
     {
       "title": "Proportion",
       "steps": [
-        "$\\dfrac{240}{8} = \\dfrac{x}{15}$.",
-        "$8x = 240 \\cdot 15 = 3600$, so $x = 450$."
+        "Set the two rates equal with miles on top and gallons below: $\\frac{240}{8} = \\frac{x}{15}$.",
+        "Cross-multiply so the unknown stands on one side: $8x = 240 \\times 15 = 3600$.",
+        "Divide by $8$ to find $x = 450$, so the car can go $450$ miles."
+      ]
+    },
+    {
+      "title": "Almost double the gas",
+      "steps": [
+        "Doubling the known pair gives $16$ gallons for $480$ miles, which is one gallon too many.",
+        "One gallon is an eighth of the first pair, so it is worth $240 \\div 8 = 30$ miles.",
+        "Take that gallon away: $480 - 30 = 450$ miles on $15$ gallons."
       ]
     }
   ],

@@ -37,8 +37,9 @@
     {
       "title": "Solve for $y$ instead",
       "steps": [
-        "$4y + 1 = 10 \\to 4y = 9 \\to y = 9/4 = 2.25$.",
-        "The true solution is $2.25$, not $2$. So $y = 2$ is not a solution."
+        "Solve $4y + 1 = 10$ directly: subtract $1$ from both sides to get $4y = 9$.",
+        "Divide both sides by $4$ to get $y = \\frac{9}{4} = 2.25$.",
+        "The true solution is $2.25$, which is not $2$, so no, $y = 2$ is not a solution."
       ]
     }
   ],

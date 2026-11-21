@@ -37,8 +37,8 @@
     {
       "title": "Think in 10 days",
       "steps": [
-        "Out of 10 days like tomorrow, about 3 would be rainy.",
-        "The other 7 would be dry: $\\frac{7}{10} = 0.7$."
+        "A probability of $0.3$ means that out of $10$ days like tomorrow, about $3$ would be rainy.",
+        "The other $7$ of those $10$ days would be dry, so the probability of no rain is $\\frac{7}{10} = 0.7$."
       ]
     }
   ],

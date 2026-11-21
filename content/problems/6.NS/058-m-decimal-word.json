@@ -38,6 +38,17 @@
     "The distributive property lets you add the two partial products: $6 + 1.47 = 7.47$.",
     "The total cost of the three items is $7.47$ dollars."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Round up, then fix",
+      "steps": [
+        "Each price is only one cent under $2.50$ dollars, so first pretend each item costs $2.50$.",
+        "Three items at $2.50$ each would cost $3 \\times 2.50 = 7.50$ dollars.",
+        "That counted $1$ extra cent for each of the $3$ items, so take away $3$ cents: $7.50 - 0.03 = 7.47$.",
+        "The total for the three items is $7.47$ dollars."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "decimal",

@@ -35,9 +35,9 @@
     {
       "title": "Compare two students",
       "steps": [
-        "A student who studies 4 hours: $\\hat{y} = 12.5 + 3.2(4) = 25.3$.",
-        "A student who studies 5 hours: $\\hat{y} = 12.5 + 3.2(5) = 28.5$.",
-        "One more hour raised the prediction by $28.5 - 25.3 = 3.2$ points."
+        "Use the fitted line on two students one hour apart. A student who studies $4$ hours is predicted to score $12.5 + 3.2(4) = 25.3$.",
+        "A student who studies $5$ hours is predicted to score $12.5 + 3.2(5) = 28.5$.",
+        "The extra hour raised the prediction by $28.5 - 25.3 = 3.2$ points, which is the Hours coefficient."
       ]
     }
   ],

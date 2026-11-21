@@ -37,19 +37,19 @@
   ],
   "alternativeExplanations": [
     {
-      "title": "Think about the pieces",
+      "title": "Picture halving a rope",
       "steps": [
-        "Imagine cutting a rope in half, then halving the piece you keep, again and again.",
-        "There is always some rope left, but it becomes too small to see.",
-        "The amount heads toward $0$ and never gets there — that is the asymptote."
+        "Imagine a rope $12$ units long that is cut in half, and then the kept piece is halved again and again.",
+        "There is always some rope left, because half of a positive length is still positive, but the piece becomes too small to see.",
+        "The length heads toward $0$ without reaching it, so the line the graph hugs is $y = 0$."
       ]
     },
     {
       "title": "Read the formula",
       "steps": [
-        "$y = 12 \\cdot \\left(\\frac{1}{2}\\right)^x$ is a start times a positive factor.",
-        "A positive number times a positive number is always positive, so $y$ is never $0$ or negative.",
-        "Since nothing is added on the end, the values crowd down to $y = 0$."
+        "The rule $y = 12 \\cdot \\left(\\frac{1}{2}\\right)^x$ is a positive start multiplied by a positive factor again and again.",
+        "A positive number times a positive number stays positive, so $y$ can never equal $0$ or go below it.",
+        "Nothing is added at the end to lift the graph, so the shrinking values crowd down toward the line $y = 0$."
       ]
     }
   ],

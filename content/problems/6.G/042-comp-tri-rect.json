@@ -31,6 +31,16 @@
     "The triangle's area is half of base times height: $\\frac{1}{2} \\times 6 \\times 3 = 9$.",
     "Add the two parts to get the whole shape: $24 + 9 = 33$ square units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Flatten the triangle",
+      "steps": [
+        "A triangle with base $6$ and height $3$ covers the same area as a rectangle that is $6$ wide and half as tall, $1.5$.",
+        "Swap the triangle for that rectangle, and the whole shape becomes one rectangle $6$ wide and $4 + 1.5 = 5.5$ tall.",
+        "Its area is $6 \\times 5.5 = 33$, so the total area is $33$ square units."
+      ]
+    }
+  ],
   "tags": [
     "CA",
     "composite",

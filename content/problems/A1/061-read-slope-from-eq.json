@@ -34,8 +34,9 @@
     {
       "title": "Test two inputs",
       "steps": [
-        "At $x = 0$, $y = 2$; at $x = 1$, $y = 7$.",
-        "One step across made $y$ jump by $5$ — that jump is the slope."
+        "Test two inputs that are one step apart: at $x = 0$, $y = 2$, and at $x = 1$, $y = 7$.",
+        "One step across made $y$ rise from $2$ to $7$, which is a rise of $5$.",
+        "Slope is the rise for one step across, so the slope is $5$."
       ]
     }
   ],

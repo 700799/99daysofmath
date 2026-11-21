@@ -40,15 +40,17 @@
     {
       "title": "Machine story",
       "steps": [
-        "Think of a machine: input $x$, and the output starts at $3$ then adds $5$ per input step.",
-        "\"Times 5, plus 3\" in machine language is $y = 5x + 3$."
+        "Think of the table as a machine whose output is $3$ when the input is $0$.",
+        "Each extra $1$ of input adds $5$ to the output, so after $x$ steps the machine has added $5x$.",
+        "\"Times $5$, plus $3$\" written as an equation is $y = 5x + 3$."
       ]
     },
     {
       "title": "Slope formula on two rows",
       "steps": [
-        "Points $(0, 3)$ and $(2, 13)$: $m = \\frac{13 - 3}{2 - 0} = 5$.",
-        "The row $(0, 3)$ hands you $b = 3$ directly: $y = 5x + 3$."
+        "Take two rows as points, $(0, 3)$ and $(2, 13)$, and use the slope formula: $m = \\frac{13 - 3}{2 - 0} = 5$.",
+        "The row $(0, 3)$ has $x = 0$, so it gives the intercept $b = 3$ directly.",
+        "Putting the two values into $y = mx + b$ gives $y = 5x + 3$."
       ]
     }
   ],

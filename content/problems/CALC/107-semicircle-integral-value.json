@@ -56,9 +56,9 @@
     {
       "title": "Estimate to rule out impostors",
       "steps": [
-        "The region fits inside a $6 \\times 3$ rectangle (area $18$) and contains the triangle with vertices $(-3, 0)$, $(3, 0)$, $(0, 3)$ (area $9$).",
-        "So the answer is between $9$ and $18$. $\\frac{9\\pi}{2} \\approx 14.1$ fits; $9\\pi \\approx 28.3$ and $\\frac{9}{2}$ do not; $3\\pi \\approx 9.4$ is barely above the triangle, too small for a bulging semicircle.",
-        "Only A survives."
+        "The region fits inside a $6 \\times 3$ rectangle of area $18$ and contains the triangle with vertices $(-3, 0)$, $(3, 0)$ and $(0, 3)$, which has area $9$.",
+        "So the answer lies between $9$ and $18$. That rules out $9\\pi \\approx 28.3$ and $\\frac{9}{2}$, and $3\\pi \\approx 9.4$ is barely above the triangle, too small for a bulging semicircle.",
+        "Only $\\frac{9\\pi}{2} \\approx 14.1$ fits comfortably, so the answer is choice A."
       ]
     }
   ],

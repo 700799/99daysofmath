@@ -41,11 +41,11 @@
   ],
   "alternativeExplanations": [
     {
-      "title": "Test your answer",
+      "title": "Test the answer",
       "steps": [
-        "Plug in $x = 4$: $(4 - 4)(4 + 3) = 0 \\times 7 = 0$. Good.",
-        "Plug in $x = -3$: $(-3 - 4)(-3 + 3) = -7 \\times 0 = 0$. Good.",
-        "Both zeros work, and no other $x$ makes it zero."
+        "Try the product $(x - 4)(x + 3)$ and plug in $x = 4$: $(4 - 4)(4 + 3) = 0 \\times 7 = 0$.",
+        "Plug in $x = -3$ as well: $(-3 - 4)(-3 + 3) = -7 \\times 0 = 0$, so both required zeros work.",
+        "Multiplying out gives $x^2 - x - 12$, which starts with $1x^2$, so $(x - 4)(x + 3)$ fits every condition."
       ]
     }
   ],

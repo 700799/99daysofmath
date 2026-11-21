@@ -33,6 +33,16 @@
     "Then add the deposit to that amount: $60 + 25 = 85$.",
     "So the final balance in the account is $85$ dollars."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Find the net change first",
+      "steps": [
+        "Combine the two transactions before touching the balance: taking out $40$ and putting in $25$.",
+        "More money went out than came in, by $40 - 25 = 15$ dollars, so the net change is $-15$.",
+        "Apply that one change to the starting balance: $100 - 15 = 85$, so the final balance is $85$ dollars."
+      ]
+    }
+  ],
   "tags": [
     "integer",
     "word",

@@ -34,8 +34,9 @@
     {
       "title": "Check both angles",
       "steps": [
-        "Plug $x = 15$ into each expression: $5(15) - 20 = 55$ and $3(15) + 10 = 55$.",
-        "They match, which is exactly what corresponding angles on parallel lines must do."
+        "Compare the two expressions in a short table: at $x = 10$ they give $30^\\circ$ and $40^\\circ$, so the first angle is $10^\\circ$ behind.",
+        "Each step of $1$ in $x$ adds $5^\\circ$ to the first angle but only $3^\\circ$ to the second, so the first one catches up by $2^\\circ$ per step and needs $5$ more steps.",
+        "At $x = 15$ both angles are $55^\\circ$, which is what corresponding angles on parallel rails must do, so $x = 15$."
       ]
     }
   ],

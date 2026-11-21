@@ -38,16 +38,17 @@
     {
       "title": "Take away stickers",
       "steps": [
-        "Start with 5 x-stickers and 7 dot-stickers.",
-        "Peel off 2 x-stickers and 3 dot-stickers — take BOTH kinds away.",
-        "You are left with 3 x-stickers and 4 dots: 3x + 4."
+        "Start with a pile of $5$ stickers marked $x$ and $7$ dot stickers.",
+        "Subtracting $(2x + 3)$ means peeling off $2$ of the $x$ stickers and also $3$ of the dot stickers.",
+        "That leaves $3$ of the $x$ stickers and $4$ dots, which is $3x + 4$."
       ]
     },
     {
       "title": "Check with a value",
       "steps": [
-        "Try x = 10: (50 + 7) − (20 + 3) = 57 − 23 = 34.",
-        "And 3x + 4 at x = 10 is 30 + 4 = 34. The forms match, so 3x + 4 is right."
+        "Check with a value such as $x = 10$: the original is $(50 + 7) - (20 + 3) = 57 - 23 = 34$.",
+        "Now test the answer: at $x = 10$ the expression $3x + 4$ is worth $30 + 4 = 34$.",
+        "The two values match, which supports the answer $3x + 4$."
       ]
     }
   ],

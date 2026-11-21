@@ -39,8 +39,9 @@
     {
       "title": "Deviation method",
       "steps": [
-        "Each number's deviation from $12$: $-2, +2, -3$. Net: $-3$.",
-        "Fourth must be $+3$ to balance: $12 + 3 = 15$."
+        "Compare each known number with the mean $12$: $10$ is $2$ below, $14$ is $2$ above and $9$ is $3$ below.",
+        "The $2$ below and the $2$ above cancel, so the three numbers together are $3$ below the mean.",
+        "The fourth number must be $3$ above the mean to balance them: $12 + 3 = 15$."
       ]
     }
   ],

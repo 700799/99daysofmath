@@ -39,28 +39,30 @@
     "From least to greatest the temperatures are $-18, -12, -5, 4$, which belong to Chicago, Anchorage, Buffalo and Denver.",
     "Using first letters, coldest to warmest is $C,A,B,D$."
   ],
-  "tags": [
-    "integer",
-    "compare",
-    "MAP-practice"
-  ],
-  "estimatedSeconds": 100,
   "alternativeExplanations": [
     {
       "title": "Watch the absolute-value trap",
       "steps": [
-        "$|-18| = 18$ and $|-5| = 5$. The number with the **bigger** absolute value is **smaller** (when both are negative).",
-        "So $-18 < -5$, NOT the other way around — even though $18 > 5$.",
-        "For negatives, bigger digits = colder."
+        "The sizes of the three negative temperatures are $|-18| = 18$, $|-12| = 12$ and $|-5| = 5$, but a bigger size below zero means a **colder** day.",
+        "So the order of the negatives is turned around: $-18$ is the coldest, then $-12$, then $-5$.",
+        "Denver's $4$ is the only temperature above zero, so it is the warmest and comes last.",
+        "Matching each temperature to its city gives Chicago, Anchorage, Buffalo, Denver, which is $C,A,B,D$."
       ]
     },
     {
       "title": "Inequality chain",
       "steps": [
-        "Compare pairwise: $-18 < -12$ (deeper negative), $-12 < -5$, $-5 < 4$.",
-        "Chain: $-18 < -12 < -5 < 4$.",
-        "Cities in that order: Chicago, Anchorage, Buffalo, Denver."
+        "Compare the temperatures two at a time: $-18 < -12$ because $-18$ is further below zero, and in the same way $-12 < -5$.",
+        "Every negative number is less than every positive number, so $-5 < 4$.",
+        "Link the comparisons into one chain: $-18 < -12 < -5 < 4$.",
+        "Read off the cities in that order, Chicago, Anchorage, Buffalo, Denver, to get $C,A,B,D$."
       ]
     }
-  ]
+  ],
+  "tags": [
+    "integer",
+    "compare",
+    "MAP-practice"
+  ],
+  "estimatedSeconds": 100
 }

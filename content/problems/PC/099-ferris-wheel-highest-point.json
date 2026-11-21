@@ -39,15 +39,17 @@
     {
       "title": "Picture the wheel",
       "steps": [
-        "The centre of the wheel is 22 m above the ground and the radius is 18 m.",
-        "The very top of a wheel is one radius above its centre: 22 + 18 = 40 m."
+        "The midline $22$ is the height of the wheel's centre, and the amplitude $18$ is its radius.",
+        "The highest seat position is at the very top of the wheel, one radius above the centre.",
+        "So the greatest height is $22 + 18 = 40$ metres."
       ]
     },
     {
       "title": "Make a small table",
       "steps": [
-        "x = 0°: h = 0 + 22 = 22. x = 45°: h ≈ 12.7 + 22 ≈ 34.7. x = 90°: h = 18 + 22 = 40.",
-        "x = 135°: back down to about 34.7. The peak is at 90°, giving 40 m."
+        "Try a few angles: at $x = 0^\\circ$ the height is $0 + 22 = 22$, and at $x = 45^\\circ$ it is about $12.7 + 22 = 34.7$.",
+        "At $x = 90^\\circ$ the height is $18 + 22 = 40$, and at $x = 135^\\circ$ it falls back to about $34.7$.",
+        "The table climbs to $40$ and then drops, so the highest height is $40$ metres."
       ]
     }
   ],

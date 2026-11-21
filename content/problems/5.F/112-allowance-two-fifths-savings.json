@@ -38,8 +38,9 @@
     {
       "title": "Multiply straight across",
       "steps": [
-        "$\\frac{2}{5} \\times \\frac{15}{1} = \\frac{30}{5}$.",
-        "$30 \\div 5 = 6$, the same $\\$6$."
+        "Write the allowance as a fraction and multiply the tops: $\\frac{2}{5} \\times \\frac{15}{1} = \\frac{30}{5}$.",
+        "The fraction bar means divide, and $30 \\div 5 = 6$.",
+        "So $6$ dollars go into savings each week, which is a little less than half of the $15$ dollars."
       ]
     }
   ],

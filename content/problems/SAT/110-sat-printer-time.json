@@ -44,16 +44,17 @@
     {
       "title": "Let the units place the division",
       "steps": [
-        "Pages ÷ (pages/minute) = pages × (minutes/page) = minutes ✓",
-        "Multiplying instead would give pages², which is meaningless — and that is how you know it is wrong.",
-        "Dimensional analysis is not just for physics; it settles every rate question on the SAT."
+        "Dividing pages by pages per minute leaves minutes, the unit the question asks for, so compute $693 \\div 18$.",
+        "Multiplying instead would give a unit of pages squared per minute, which does not measure time.",
+        "Halving both numbers gives $346.5 \\div 9 = 38.5$, so the job takes $38.5$ minutes."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "Multiplying pages by rate gives 12,474 — units of pages² per minute, which is meaningless, and that is how you know.",
-        "Divide pages by pages-per-minute so the units collapse to minutes. Dimensional analysis is the five-second referee here."
+        "Multiplying $693$ by $18$ gives $12474$, a number far too large to be the minutes for this job.",
+        "A quick estimate shows the scale: $18$ pages a minute is about $700$ pages in $40$ minutes.",
+        "Dividing gives $693 \\div 18 = 38.5$ minutes, which is close to that estimate."
       ]
     }
   ],

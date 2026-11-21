@@ -34,9 +34,9 @@
     {
       "title": "Use a sampling rate",
       "steps": [
-        "The overall rate is $\\frac{60}{1500} = \\frac{1}{25}$: one employee in every 25.",
-        "Apply it to the full-time stratum: $\\frac{900}{25} = 36$.",
-        "Check the part-timers: $\\frac{600}{25} = 24$, and $36 + 24 = 60$."
+        "The sample takes $60$ of $1{,}500$ employees, a rate of $\\frac{60}{1500} = \\frac{1}{25}$, or one employee in every $25$.",
+        "A proportional sample applies that same rate inside each stratum, so the full-time group gives $\\frac{900}{25} = 36$ employees.",
+        "As a check, the part-time group gives $\\frac{600}{25} = 24$, and $36 + 24 = 60$, so $36$ full-time employees is right."
       ]
     }
   ],

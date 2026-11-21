@@ -30,18 +30,19 @@
     "The **coefficient** is the number part that multiplies the variable.",
     "Here that number is $4$, so the coefficient of $y$ is $4$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Write it as addition",
+      "steps": [
+        "Write the term $4y$ as repeated addition: $y + y + y + y$.",
+        "Count how many copies of $y$ were written, and there are four of them.",
+        "The coefficient is that count of copies, so the coefficient of $y$ is $4$."
+      ]
+    }
+  ],
   "tags": [
     "expression",
     "parts"
   ],
-  "estimatedSeconds": 25,
-  "alternativeExplanations": [
-    {
-      "title": "Check the answer",
-      "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: 4 — verified."
-      ]
-    }
-  ]
+  "estimatedSeconds": 25
 }

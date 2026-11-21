@@ -34,8 +34,8 @@
     {
       "title": "Sort first",
       "steps": [
-        "In order: $58, 60, 63, 66, 69, 71, 74$.",
-        "The ends are 58 and 74, so the range is $74 - 58 = 16$."
+        "Put the seven temperatures in order so the extremes sit at the two ends: $58, 60, 63, 66, 69, 71, 74$.",
+        "The first value is the minimum and the last is the maximum, so the range is $74 - 58 = 16$ degrees."
       ]
     }
   ],

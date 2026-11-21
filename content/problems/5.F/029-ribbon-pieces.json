@@ -39,8 +39,9 @@
     {
       "title": "Count by chunks",
       "steps": [
-        "$4$ pieces use $3$ feet of ribbon.",
-        "$6$ feet is two of those chunks: $2 \\times 4 = 8$ pieces."
+        "Cut four pieces first. Four pieces of $\\frac{3}{4}$ foot use $4 \\times \\frac{3}{4} = 3$ feet of ribbon.",
+        "The ribbon is $6$ feet long, which is two of those $3$-foot chunks.",
+        "Each chunk gives $4$ pieces, so there are $2 \\times 4 = 8$ pieces in all."
       ]
     }
   ],

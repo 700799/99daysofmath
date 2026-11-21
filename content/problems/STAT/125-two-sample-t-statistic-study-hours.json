@@ -35,9 +35,9 @@
     {
       "title": "Variances add",
       "steps": [
-        "The SD of $\\bar{x}_1$ is $3/6 = 0.5$; the SD of $\\bar{x}_2$ is $4/8 = 0.5$.",
-        "For independent samples, the variance of the difference is $0.5^2 + 0.5^2 = 0.5$, so its SD is $\\sqrt{0.5} \\approx 0.707$.",
-        "A $1.5$-hour gap divided by $0.707$ gives $t \\approx 2.12$."
+        "Treat each sample mean separately. The standard deviation of $\\bar{x}_1$ is about $\\frac{3}{\\sqrt{36}} = 0.5$ and that of $\\bar{x}_2$ is about $\\frac{4}{\\sqrt{64}} = 0.5$.",
+        "For independent samples the variances add, so the difference has variance $0.5^2 + 0.5^2 = 0.5$ and standard deviation $\\sqrt{0.5} \\approx 0.707$.",
+        "The gap of $1.5$ hours divided by $0.707$ gives $t \\approx 2.12$."
       ]
     }
   ],

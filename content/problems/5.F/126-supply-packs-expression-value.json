@@ -34,9 +34,9 @@
     {
       "title": "Count each kind separately",
       "steps": [
-        "Markers: $4 \\times 6 = 24$.",
-        "Pencils: $4 \\times 3 = 12$.",
-        "$24 + 12 = 36$ items — the same total."
+        "Count the markers alone: $4$ packs with $6$ markers each is $4 \\times 6 = 24$ markers.",
+        "Count the pencils alone: $4$ packs with $3$ pencils each is $4 \\times 3 = 12$ pencils.",
+        "Add the two kinds: $24 + 12 = 36$ items, the same total the expression gives."
       ]
     }
   ],

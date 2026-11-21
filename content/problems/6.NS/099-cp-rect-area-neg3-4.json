@@ -38,6 +38,17 @@
     "The area of a rectangle is width times height: $7 \\times 4$.",
     "$7 \\times 4 = 28$, so the area is $28$ square units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Split at the y-axis",
+      "steps": [
+        "The $y$-axis cuts this rectangle into a left piece and a right piece, and both pieces are $5 - 1 = 4$ units tall.",
+        "The left piece runs from $x = -3$ to $x = 0$, so it is $3$ wide and has area $3 \\times 4 = 12$.",
+        "The right piece runs from $x = 0$ to $x = 4$, so it is $4$ wide and has area $4 \\times 4 = 16$.",
+        "Add the two pieces: $12 + 16 = 28$, so the area is $28$ square units."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "coordinate-plane",

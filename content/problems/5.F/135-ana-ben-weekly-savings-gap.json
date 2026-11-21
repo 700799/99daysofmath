@@ -37,8 +37,9 @@
     {
       "title": "Track the gap instead",
       "steps": [
-        "Ben pulls ahead by $\\$2$ every single week.",
-        "After $5$ weeks the gap is $5 \\times 2 = \\$10$."
+        "Each week Ben saves $6 - 4 = 2$ dollars more than Ana, so he pulls ahead by $2$ dollars every week.",
+        "They start even at $0$ dollars, so the gap is just those weekly leads added up.",
+        "After $5$ weeks the gap is $5 \\times 2 = 10$ dollars."
       ]
     }
   ],

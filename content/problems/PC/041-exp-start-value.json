@@ -34,9 +34,9 @@
     {
       "title": "Plug in zero",
       "steps": [
-        "The start happens at $x = 0$ — zero steps taken.",
-        "$y = 5 \\cdot 3^0$, and anything to the zero power is $1$.",
-        "So $y = 5 \\times 1 = 5$."
+        "The start is the value before any steps are taken, which means $x = 0$.",
+        "Put $x = 0$ into the rule: $y = 5 \\cdot 3^0$, and any nonzero number to the power $0$ equals $1$.",
+        "That leaves $y = 5 \\times 1 = 5$, so the start value is $5$."
       ]
     }
   ],

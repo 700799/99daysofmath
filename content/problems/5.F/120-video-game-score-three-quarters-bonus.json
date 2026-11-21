@@ -40,17 +40,17 @@
     {
       "title": "Take away the missing fourth",
       "steps": [
-        "$\\frac{3}{4}$ of $240$ is all of $240$ minus one fourth of it.",
-        "$240 \\div 4 = 60$, so $240 - 60 = 180$.",
-        "$180 + 35 = 215$ points."
+        "Three fourths of Leo's score is all of it with one fourth removed.",
+        "One fourth of $240$ is $240 \\div 4 = 60$, so Mia's game score is $240 - 60 = 180$.",
+        "Add the bonus points to finish: $180 + 35 = 215$ points."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "The usual wrong answer is $180$ — the right fraction work, but the $35$ bonus points never get added.",
-        "Another trap is adding first: $240 + 35 = 275$, then $\\frac{3}{4}$ of that, which wrongly shrinks the bonus too.",
-        "Escape both by underlining the two steps in the question before you compute: \"scored $\\frac{3}{4}$ as many\" happens first, \"and then earned $35$ bonus\" happens second."
+        "The usual wrong answer is $180$, where the fraction work is right but the $35$ bonus points are never added.",
+        "Another mistake is adding first, $240 + 35 = 275$, and then taking $\\frac{3}{4}$ of that, which wrongly shrinks the bonus too.",
+        "The story has two steps in order: first $\\frac{3}{4}$ of $240$ is $180$, and then the bonus makes $180 + 35 = 215$."
       ]
     }
   ],

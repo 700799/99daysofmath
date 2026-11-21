@@ -37,9 +37,9 @@
     {
       "title": "Area model",
       "steps": [
-        "Draw a box split into $30 + 8$ across and $20 + 7$ down.",
-        "The four parts: $600, 160, 210, 56$.",
-        "$600 + 160 + 210 + 56 = 1026$."
+        "Draw a rectangle that is $38$ wide and $27$ tall, then split the sides into $30 + 8$ and $20 + 7$ to make four smaller boxes.",
+        "Find the area of each box: $30 \\times 20 = 600$, $8 \\times 20 = 160$, $30 \\times 7 = 210$ and $8 \\times 7 = 56$.",
+        "The four boxes fill the whole rectangle, so add them: $600 + 160 + 210 + 56 = 1026$."
       ]
     }
   ],

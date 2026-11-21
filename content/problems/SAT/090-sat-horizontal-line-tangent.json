@@ -41,16 +41,17 @@
     {
       "title": "Or force the discriminant to zero",
       "steps": [
-        "Set $x^2 - 6x + 5 = k$, so $x^2 - 6x + (5 - k) = 0$.",
-        "One solution means $36 - 4(5 - k) = 0$, giving $36 - 20 + 4k = 0$ and $k = -4$.",
-        "Both routes work; recognizing the vertex is faster, but the discriminant route generalizes to non-horizontal lines."
+        "Set the two expressions equal and move $k$ over: $x^2 - 6x + (5 - k) = 0$.",
+        "Exactly one intersection means exactly one solution, so the discriminant $36 - 4(5 - k)$ must be zero.",
+        "That condition gives $36 - 20 + 4k = 0$, so $4k = -16$ and the value of $k$ is $-4$."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "x = 3, the vertex's input, is the classic wrong entry — the line y = k is horizontal, so k is a HEIGHT.",
-        "k must equal the vertex's y-value: f(3) = −4. Say which coordinate the question's object carries before answering."
+        "The vertex is at $x = 3$, and entering $3$ is the common mistake, because $3$ is an input and not a height.",
+        "The line $y = k$ is horizontal, so $k$ is the $y$-value of the vertex.",
+        "That height is $3^2 - 6(3) + 5 = -4$, so the value of $k$ is $-4$."
       ]
     }
   ],

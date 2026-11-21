@@ -35,17 +35,17 @@
     {
       "title": "Sneak up with a table",
       "steps": [
-        "Try x = 1.9: 3(1.9) + 1 = 6.7. Try x = 1.99: 6.97. Try x = 1.999: 6.997.",
-        "Now from above: x = 2.1 gives 7.3, and x = 2.01 gives 7.03.",
-        "Both sides are squeezing toward the same number, 7. That is the limit."
+        "Try inputs just below $2$: at $x = 1.9$ the value is $6.7$, at $x = 1.99$ it is $6.97$, and at $x = 1.999$ it is $6.997$.",
+        "Try inputs just above $2$: at $x = 2.1$ the value is $7.3$, and at $x = 2.01$ it is $7.03$.",
+        "From both sides the values squeeze toward the same number, so the limit is $7$."
       ]
     },
     {
       "title": "Read it off the line",
       "steps": [
-        "y = 3x + 1 is a straight line with no gaps anywhere.",
-        "Walk your finger along the line toward x = 2 and watch the height.",
-        "The height arrives exactly at 7 — for an unbroken graph, \"heading toward\" and \"lands on\" are the same thing."
+        "The graph of $y = 3x + 1$ is a straight line with slope $3$ that crosses the $y$-axis at $1$.",
+        "Moving $2$ units right from the $y$-axis raises the line by $3 \\times 2 = 6$ units.",
+        "The line reaches height $1 + 6 = 7$ with no gap there, so the expression approaches $7$."
       ]
     }
   ],

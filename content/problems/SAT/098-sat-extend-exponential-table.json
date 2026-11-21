@@ -41,16 +41,17 @@
     {
       "title": "Just keep doubling",
       "steps": [
-        "$f(3) = 40$, so $f(4) = 80$ and $f(5) = 160$.",
-        "For a small number of steps this beats building the formula.",
-        "The trap answer is $80$ — stopping one step short. Count your steps on scratch paper rather than in your head."
+        "Each value is twice the one before it, since $5$, $10$, $20$, $40$ doubles every time.",
+        "Continue from $f(3) = 40$: one more doubling gives $f(4) = 80$.",
+        "A second doubling takes the value to $f(5) = 160$, which is the answer."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "80 — one doubling short — is the most-picked wrong answer on questions like this.",
-        "Count steps on paper: from f(3) to f(5) is TWO doublings, 40 → 80 → 160. The exponent gap, not the destination index, sets how many."
+        "The value $80$ is $f(4)$, one doubling short, and it is the most common wrong answer.",
+        "From $f(3)$ to $f(5)$ the input rises by $2$, so two doublings are needed, not one.",
+        "Write them out as $40 \\to 80 \\to 160$ to see that $f(5) = 160$."
       ]
     }
   ],

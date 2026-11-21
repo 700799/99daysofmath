@@ -56,8 +56,9 @@
     {
       "title": "Count backwards from a full turn",
       "steps": [
-        "$300^\\circ$ is $60^\\circ$ short of a full $360^\\circ$ turn.",
-        "So the point sits $60^\\circ$ below the starting ray — down and to the right, which is Quadrant IV."
+        "The angle $300^\\circ$ is $60^\\circ$ short of a full $360^\\circ$ turn, so it ends where $-60^\\circ$ ends.",
+        "Turning $60^\\circ$ clockwise from the positive $x$-axis puts the point to the right of the $y$-axis and below the $x$-axis.",
+        "Right and down means $x > 0$ and $y < 0$, which is Quadrant IV, choice D."
       ]
     }
   ],

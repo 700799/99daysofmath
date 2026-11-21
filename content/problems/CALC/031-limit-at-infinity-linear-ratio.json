@@ -34,9 +34,9 @@
     {
       "title": "Plug in a big number",
       "steps": [
-        "At $x = 1000$: $\\frac{3001}{998} \\approx 3.007$.",
-        "At $x = 1{,}000{,}000$: $\\frac{3{,}000{,}001}{999{,}998} \\approx 3.000007$.",
-        "The constants are being drowned out, and the ratio settles at $3$ — the horizontal asymptote $y = 3$."
+        "Evaluate the fraction at a large input such as $x = 1000$: $\\frac{3001}{998} \\approx 3.007$.",
+        "Go much larger and use an input of one million, $x = 1{,}000{,}000$: $\\frac{3{,}000{,}001}{999{,}998} \\approx 3.000007$.",
+        "The constants $1$ and $-2$ are being drowned out, and the ratio settles at $3$, the height of the horizontal asymptote."
       ]
     }
   ],

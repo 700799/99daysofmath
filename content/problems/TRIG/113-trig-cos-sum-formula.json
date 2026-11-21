@@ -56,9 +56,9 @@
     {
       "title": "Test with numbers you already know",
       "steps": [
-        "Take $A = B = 45^\\circ$, so $\\cos(90^\\circ) = 0$.",
-        "Choice A gives $\\frac{\\sqrt{2}}{2}\\cdot\\frac{\\sqrt{2}}{2} - \\frac{\\sqrt{2}}{2}\\cdot\\frac{\\sqrt{2}}{2} = \\frac{1}{2} - \\frac{1}{2} = 0$ ✓",
-        "Choice B would give $1$, and choice C would give $\\sqrt{2}$ — both wrong."
+        "Take $A = B = 45^\\circ$, so the left side is $\\cos 90^\\circ = 0$.",
+        "Choice A gives $\\frac{\\sqrt{2}}{2}\\cdot\\frac{\\sqrt{2}}{2} - \\frac{\\sqrt{2}}{2}\\cdot\\frac{\\sqrt{2}}{2} = \\frac{1}{2} - \\frac{1}{2} = 0$, which matches the left side.",
+        "Choices B and D both give $\\frac{1}{2} + \\frac{1}{2} = 1$ and choice C gives $\\sqrt{2}$, so only choice A works."
       ]
     }
   ],

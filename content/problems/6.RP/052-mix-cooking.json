@@ -33,6 +33,16 @@
     "Multiplying half a cup by ten gives $0.5 \\times 10 = 5$ cups.",
     "Ten servings need $5$ cups of milk."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Build a ratio table",
+      "steps": [
+        "Start with $4$ servings for $2$ cups, then halve the row to get $2$ servings for $1$ cup.",
+        "Double the first row to get $8$ servings for $4$ cups.",
+        "Add the rows for $8$ and $2$ servings to make $10$ servings: $4 + 1 = 5$ cups of milk."
+      ]
+    }
+  ],
   "tags": [
     "CA",
     "recipe",

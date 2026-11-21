@@ -34,9 +34,9 @@
     {
       "title": "Plug in a giant number",
       "steps": [
-        "Try $x = 100$: top is $30001$, bottom is $9996$.",
-        "Divide: about $3.0$.",
-        "Try $x = 1000$ and it is even closer to 3. The graph flattens out toward the line $y = 3$."
+        "Try a large input such as $x = 100$: the top is $30001$ and the bottom is $9996$.",
+        "Dividing gives about $3.001$, and with $x = 1000$ the result is about $3.00001$, even closer to $3$.",
+        "The $+1$ and $-4$ stop mattering for huge inputs, so the graph levels off at $y = 3$."
       ]
     }
   ],

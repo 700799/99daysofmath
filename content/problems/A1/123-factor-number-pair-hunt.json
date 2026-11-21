@@ -34,15 +34,17 @@
     {
       "title": "Why this hunt matters",
       "steps": [
-        "This is the exact search you use to factor x² + 7x + 12.",
-        "The pair 3 and 4 becomes (x + 3)(x + 4) — the number hunt IS factoring practice."
+        "This search is the same one used to factor $x^2 + 7x + 12$ into two brackets.",
+        "Try $(x + 3)(x + 4)$: it expands to $x^2 + 7x + 12$, because $3 + 4 = 7$ and $3 \\times 4 = 12$.",
+        "So the two numbers are $3$ and $4$, and the larger one is $4$."
       ]
     },
     {
       "title": "Split 7 and test",
       "steps": [
-        "Break 7 into pairs: 1 + 6, 2 + 5, 3 + 4.",
-        "Multiply each: 6, 10, 12. Only 3 × 4 hits 12, so the numbers are 3 and 4."
+        "Start from the sum instead and break $7$ into pairs: $1 + 6$, $2 + 5$ and $3 + 4$.",
+        "Multiply each pair to get the products $6$, $10$ and $12$.",
+        "Only $3 \\times 4$ gives $12$, so the numbers are $3$ and $4$ and the larger is $4$."
       ]
     }
   ],

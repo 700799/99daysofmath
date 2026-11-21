@@ -30,6 +30,16 @@
     "On a vertical line the distance is the difference of the $y$-values: $|7 - 0|$.",
     "That difference is $7$, so the point $(0, 7)$ is $7$ units from the origin."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Count up the axis",
+      "steps": [
+        "Both points are on the $y$-axis, so start at the origin and step straight up one unit at a time.",
+        "The steps land on $y = 1, 2, 3, 4, 5, 6, 7$, and the last one is the point $(0, 7)$.",
+        "That is $7$ steps of one unit each, so the distance is $7$ units."
+      ]
+    }
+  ],
   "tags": [
     "coordinate",
     "distance"

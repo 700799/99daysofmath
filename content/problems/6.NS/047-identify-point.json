@@ -40,27 +40,29 @@
     "Both points lie on the vertical line $x = -4$, so the distance is just the gap between their $y$-values.",
     "That gap is $|2 - (-2)| = |2 + 2| = 4$ units, so the answer is $(-4,-2);4$."
   ],
-  "tags": [
-    "coordinate",
-    "MAP-practice"
-  ],
-  "estimatedSeconds": 100,
   "alternativeExplanations": [
     {
       "title": "Picture on the coordinate plane",
       "steps": [
-        "Plot $M$ at $(-4, 2)$ (Quadrant II) and $N$ at $(-4, -2)$ (Quadrant III).",
-        "Both sit on the vertical line $x = -4$, mirror images across the $x$-axis.",
-        "Count grid squares: from $y = 2$ down to $y = -2$ is $4$ steps."
+        "Plot $M$ at $(-4, 2)$ by going $4$ left and $2$ up. For $N$, keep the same $4$ left but go $2$ **down** instead, which gives $N = (-4, -2)$.",
+        "The two points sit on the vertical line $x = -4$ and are mirror images of each other across the $x$-axis.",
+        "Count grid squares between them: $2$ squares from $M$ down to the $x$-axis and $2$ more down to $N$, so $4$ in all.",
+        "Writing the point and then the distance gives the answer $(-4,-2);4$."
       ]
     },
     {
       "title": "Why $|y_1 - y_2|$ always works",
       "steps": [
-        "Distance is never negative — use absolute value.",
-        "$|2 - (-2)| = |4| = 4$ and $|-2 - 2| = |-4| = 4$. The order doesn't matter.",
-        "For points on the **same vertical line**, only the $y$-gap counts; for the **same horizontal line**, only the $x$-gap."
+        "Changing only the sign of $y$ gives $N = (-4, -2)$, so $M$ and $N$ share an $x$-coordinate and only the $y$-gap matters.",
+        "The gap between the $y$-values is $|2 - (-2)| = |4| = 4$.",
+        "Naming the points in the other order gives $|-2 - 2| = |-4| = 4$, the same distance, because absolute value removes the sign.",
+        "Either way the points are $4$ units apart, so the answer is $(-4,-2);4$."
       ]
     }
-  ]
+  ],
+  "tags": [
+    "coordinate",
+    "MAP-practice"
+  ],
+  "estimatedSeconds": 100
 }

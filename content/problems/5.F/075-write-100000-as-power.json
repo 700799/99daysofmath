@@ -36,8 +36,9 @@
     {
       "title": "Say it out loud",
       "steps": [
-        "$100{,}000$ is \"one hundred thousand.\"",
-        "Hundred is $10^2$ and thousand is $10^3$, and $2 + 3 = 5$ factors of ten in all ✓"
+        "Read the number aloud: $100{,}000$ is one hundred thousand, which means a hundred times a thousand.",
+        "A hundred is two tens multiplied, $10 \\times 10 = 10^2$, and a thousand is three tens multiplied, $10 \\times 10 \\times 10 = 10^3$.",
+        "Together that is $2 + 3 = 5$ factors of ten, so $100{,}000 = 10^5$."
       ]
     }
   ],

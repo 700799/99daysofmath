@@ -48,6 +48,16 @@
     "For the second deal, $1.80 \\div 10 = 0.18$ dollars, or $18$ cents per pencil.",
     "Since $18$ cents is less than $20$ cents, the $10$-pencil deal (choice B) has the lower price per pencil."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Compare thirty pencils",
+      "steps": [
+        "Choose a number of pencils both packs can make, such as $30$, since $6 \\times 5 = 30$ and $10 \\times 3 = 30$.",
+        "Five of the $6$-packs cost $5 \\times 1.20 = 6.00$ dollars, and three of the $10$-packs cost $3 \\times 1.80 = 5.40$ dollars.",
+        "The same $30$ pencils cost less with the $10$-packs, so choice B has the lower price per pencil."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "unit-price"

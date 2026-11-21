@@ -30,20 +30,21 @@
     "$-12$ is $12$ units to the left of $0$, so its opposite is $12$ units to the right.",
     "That number is $12$, so the opposite of $-12$ is $12$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Opposites cancel each other when they are added, so add the answer to the starting number.",
+        "The sum is $-12 + 12 = 0$, just as owing $12$ dollars and then earning $12$ dollars leaves you with nothing.",
+        "Because the total is zero, the opposite of $-12$ is confirmed to be $12$."
+      ]
+    }
+  ],
   "tags": [
     "integer",
     "opposite"
   ],
   "estimatedSeconds": 25,
-  "alternativeExplanations": [
-    {
-      "title": "Check the answer",
-      "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: 12 — verified."
-      ]
-    }
-  ],
   "diagram": {
     "kind": "inline-svg",
     "alt": "Number line marking -12 and its opposite",

@@ -43,6 +43,16 @@
     "Both parts were multiplied by the same number, $3$, so the ratio did not change.",
     "Yes, $3 : 4$ is equivalent to $9 : 12$, which is choice A."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Simplify the bigger ratio",
+      "steps": [
+        "Try to shrink $9 : 12$ by dividing both parts by a common factor, and $3$ goes into both.",
+        "Dividing gives $9 \\div 3 = 3$ and $12 \\div 3 = 4$, so $9 : 12$ simplifies to $3 : 4$.",
+        "That is exactly the first ratio, so yes, they are equivalent (choice A)."
+      ]
+    }
+  ],
   "tags": [
     "ratio",
     "equivalent"

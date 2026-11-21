@@ -53,6 +53,16 @@
     "For Bottle B, do the same division: $4 \\div 20 = 0.20$ dollars per ounce.",
     "Because $0.20$ is less than $0.25$, Bottle B (choice B) is the better buy."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Compare equal amounts",
+      "steps": [
+        "Pick an amount both sizes divide into, such as $60$ ounces, since $12 \\times 5 = 60$ and $20 \\times 3 = 60$.",
+        "Five of Bottle A cost $5 \\times 3 = 15$ dollars, and three of Bottle B cost $3 \\times 4 = 12$ dollars.",
+        "For the same $60$ ounces Bottle B costs less, so Bottle B (choice B) is the better buy."
+      ]
+    }
+  ],
   "tags": [
     "CA",
     "MAP-practice",

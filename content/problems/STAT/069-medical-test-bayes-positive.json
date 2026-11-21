@@ -45,17 +45,17 @@
     {
       "title": "Count 1,000 people",
       "steps": [
-        "20 have the disease; 18 of them test positive. 980 do not; $0.05 \\times 980 = 49$ of them test positive anyway.",
-        "Positives: $18 + 49 = 67$ people, of whom 18 are truly sick.",
-        "$\\frac{18}{67} \\approx 0.269$."
+        "Imagine $1{,}000$ people. About $20$ have the disease and $18$ of them test positive, while $980$ are healthy and $0.05 \\times 980 = 49$ of them test positive anyway.",
+        "That makes $18 + 49 = 67$ positive tests, and only $18$ of those people are truly sick.",
+        "The chance that a positive person has the disease is $\\frac{18}{67} \\approx 0.269$."
       ]
     },
     {
       "title": "The trap: answering 0.90",
       "steps": [
-        "$0.90$ is $P(\\text{positive} \\mid \\text{disease})$: the chance a sick person tests positive.",
-        "The question flips the condition: $P(\\text{disease} \\mid \\text{positive})$. These are different, and here very different.",
-        "Always write down which event is the condition before computing."
+        "The value $0.90$ is $P(\\text{positive} \\mid \\text{disease})$, the chance that a sick person tests positive.",
+        "The question reverses the condition and asks for $P(\\text{disease} \\mid \\text{positive})$, which must count the many healthy people who also test positive.",
+        "Dividing true positives by all positives gives $\\frac{0.018}{0.018 + 0.049} = \\frac{0.018}{0.067} \\approx 0.269$, far below $0.90$."
       ]
     }
   ],

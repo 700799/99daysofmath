@@ -34,9 +34,9 @@
     {
       "title": "Count up in groups",
       "steps": [
-        "$40 \\times 20 = 800$, leaving $960 - 800 = 160$.",
-        "$40 \\times 4 = 160$, leaving $0$.",
-        "So the answer is $20 + 4 = 24$."
+        "Take out a big batch of forties first: $40 \\times 20 = 800$, which leaves $960 - 800 = 160$.",
+        "The $160$ that remains is exactly $40 \\times 4$, so nothing is left over.",
+        "Altogether that is $20 + 4 = 24$ groups of $40$, so $960 \\div 40 = 24$."
       ]
     }
   ],

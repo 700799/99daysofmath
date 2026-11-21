@@ -34,6 +34,16 @@
     "The diver is still $45 - 20 = 25$ ft below the surface, so $-45 + 20 = -25$.",
     "The new position is $-25$ ft, which is $25$ ft below sea level."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Work with the depth",
+      "steps": [
+        "Use the diver's depth as a positive amount: a position of $-45$ ft means a depth of $45$ ft.",
+        "Rising $20$ ft makes the depth smaller, so the new depth is $45 - 20 = 25$ ft.",
+        "A depth of $25$ ft is below sea level, so the position is written with a minus sign as $-25$ ft."
+      ]
+    }
+  ],
   "tags": [
     "integer",
     "word"

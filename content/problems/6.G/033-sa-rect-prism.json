@@ -32,6 +32,17 @@
     "Each face has a twin on the opposite side, so double the sum: $2 \\times 26 = 52$.",
     "The surface area of the prism is $52$ square units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Wrap a label around",
+      "steps": [
+        "Set the prism on its $4$ by $3$ face and wrap a label around the four sides, like the label on a can.",
+        "The label is as long as the distance around the base, $4 + 3 + 4 + 3 = 14$, and as tall as the prism, $2$, so its area is $14 \\times 2 = 28$.",
+        "The top and the bottom are each $4 \\times 3 = 12$, which adds $24$.",
+        "The total surface area is $28 + 24 = 52$ square units."
+      ]
+    }
+  ],
   "tags": [
     "surface-area",
     "prism"

@@ -42,15 +42,17 @@
     {
       "title": "Decimal check",
       "steps": [
-        "$\\frac{\\sqrt{3}}{2} \\approx 0.866$, so the product is about $0.866 \\times 0.866 \\approx 0.75$.",
-        "$0.75 = \\frac{3}{4}$, which confirms the exact answer."
+        "As a decimal $\\frac{\\sqrt{3}}{2} \\approx 0.866$, and both $\\sin 60^\\circ$ and $\\cos 30^\\circ$ have this value.",
+        "Multiplying the two decimals, the product is therefore about $0.866 \\times 0.866 \\approx 0.750$.",
+        "Since $0.75 = \\frac{3}{4}$, the decimal agrees with the exact answer $\\frac{3}{4}$."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "The trap answer is $\\frac{\\sqrt{3}}{4}$ — multiplying the denominators but leaving one $\\sqrt{3}$ untouched in the numerator, as if $\\sqrt{3} \\times \\sqrt{3} = \\sqrt{3}$.",
-        "Remember what a square root is: $\\sqrt{3}$ is the number that gives 3 when multiplied by itself. So $\\sqrt{3} \\times \\sqrt{3} = 3$ every time, and the radical disappears: $\\frac{3}{4}$."
+        "The trap answer is $\\frac{\\sqrt{3}}{4}$, which comes from multiplying the denominators but treating $\\sqrt{3} \\times \\sqrt{3}$ as if it were still $\\sqrt{3}$.",
+        "By definition $\\sqrt{3}$ is the number that gives $3$ when multiplied by itself, so $\\sqrt{3} \\times \\sqrt{3} = 3$ every time.",
+        "The radical disappears from the numerator and the product is $\\frac{3}{4}$."
       ]
     }
   ],

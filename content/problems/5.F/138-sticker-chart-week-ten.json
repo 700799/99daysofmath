@@ -35,8 +35,9 @@
     {
       "title": "Just keep counting",
       "steps": [
-        "Write the weeks out: $5, 12, 19, 26, 33, 40, 47, 54, 61, 68$.",
-        "Count the entries — the tenth one is $68$."
+        "Write one number for each week, adding $7$ every time: $5, 12, 19, 26, 33$ for weeks $1$ to $5$.",
+        "Keep going the same way for weeks $6$ to $10$: $40, 47, 54, 61, 68$.",
+        "The tenth entry in the list is $68$, so the chart has $68$ stickers in week $10$."
       ]
     }
   ],

@@ -38,6 +38,16 @@
     "Multiply two numbers first, $5 \\times 3 = 15$, and then multiply by the third: $15 \\times 2 = 30$.",
     "The tank holds $30$ cubic feet of water."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Make a ten first",
+      "steps": [
+        "The three numbers can be multiplied in any order, so pick the pair that makes a round number.",
+        "Multiply the length and the height first: $5 \\times 2 = 10$.",
+        "Then multiply by the width: $10 \\times 3 = 30$, so the tank holds $30$ cubic feet of water."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "volume",

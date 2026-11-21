@@ -37,10 +37,10 @@
     {
       "title": "List all 6 faces",
       "steps": [
-        "Two $2 \\times 3 = 6$ faces → $12$.",
-        "Two $2 \\times 4 = 8$ faces → $16$.",
-        "Two $3 \\times 4 = 12$ faces → $24$.",
-        "Sum: $12 + 16 + 24 = 52$."
+        "The top and bottom are each $2 \\times 3 = 6$, so that pair covers $12$.",
+        "The front and back are each $2 \\times 4 = 8$, so that pair covers $16$.",
+        "The left and right faces are each $3 \\times 4 = 12$, so that pair covers $24$.",
+        "Adding the three pairs gives $12 + 16 + 24 = 52$ square units."
       ]
     }
   ],

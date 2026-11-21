@@ -53,6 +53,17 @@
     "That means $-5$ is greater than $-10$, and the two numbers are certainly not equal.",
     "The true statement is $-5 > -10$, which is choice B."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Test each statement with debts",
+      "steps": [
+        "Read $-10$ as owing $10$ dollars and $-5$ as owing $5$ dollars, then test each statement in turn.",
+        "Choice A says owing $10$ is better than owing $5$, which is false, and choice C says the two debts are equal, which is also false.",
+        "Choice B says owing $5$ leaves you with more than owing $10$, and that is true.",
+        "So the true statement is $-5 > -10$, which is choice B."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "integer",

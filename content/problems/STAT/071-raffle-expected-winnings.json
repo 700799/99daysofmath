@@ -34,9 +34,9 @@
     {
       "title": "Imagine 100 tickets",
       "steps": [
-        "Out of 100 tickets, about 10 pay $\\$10$ and 90 pay nothing.",
-        "Total paid out: $10 \\times 10 = \\$100$.",
-        "Spread over 100 tickets that is $\\$1$ per ticket — the expected value."
+        "Picture $100$ tickets that follow the probabilities exactly: about $10$ of them pay $10$ dollars each and $90$ pay nothing.",
+        "The total paid out is $10 \\times 10 = 100$ dollars across all the tickets.",
+        "Sharing $100$ dollars over $100$ tickets gives $1$ dollar per ticket, which is the expected value."
       ]
     }
   ],

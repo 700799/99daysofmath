@@ -34,9 +34,9 @@
     {
       "title": "Why divide by the square root?",
       "steps": [
-        "The mean of 36 scores is their sum divided by 36. The sum of 36 independent scores has variance $36 \\sigma^2$.",
-        "Dividing by 36 divides the variance by $36^2$, leaving $\\sigma^2 / 36$.",
-        "Square-root: SD $= \\sigma / 6 = 2$."
+        "Build the mean from a sum. The sum of $36$ independent scores has variance $36\\sigma^2$, because variances of independent values add.",
+        "The mean is that sum divided by $36$, and dividing a variable by $36$ divides its variance by $36^2$, leaving $\\frac{\\sigma^2}{36}$.",
+        "Taking the square root gives a standard deviation of $\\frac{\\sigma}{6} = \\frac{12}{6} = 2$ points."
       ]
     }
   ],

@@ -59,9 +59,9 @@
     {
       "title": "Test each candidate with the Factor Theorem",
       "steps": [
-        "$(x - a)$ is a factor exactly when $p(a) = 0$.",
-        "Test $a = 2$: $p(2) = 8 - 8 = 0$ ✓ — so $x - 2$ is a factor.",
-        "Test $a = 4$: $p(4) = 64 - 16 = 48 \\neq 0$ ✗. Substituting is often faster than factoring when the choices are handed to you."
+        "The Factor Theorem says $x - a$ is a factor of $p(x)$ exactly when $p(a) = 0$.",
+        "For choice B test $a = 2$: $p(2) = 8 - 8 = 0$, so $x - 2$ is a factor.",
+        "For A and C, $p(4) = 48$ and $p(-4) = -48$ are not zero, and D would produce $+4x$ instead of $-4x$, so the answer is B."
       ]
     }
   ],

@@ -24,9 +24,9 @@
     {
       "title": "Net unfolding",
       "steps": [
-        "Imagine unfolding the cube flat — you'd see $6$ squares connected like a plus-sign pattern.",
-        "Each square is $3 \\times 3 = 9$ sq in.",
-        "Add them up: $9 \\times 6 = 54$ sq in."
+        "Imagine cutting the cube along some edges and unfolding it flat into a cross made of $6$ squares.",
+        "Each square in this net is a face of the cube, with area $3 \\times 3 = 9$ square inches.",
+        "The net covers the cube exactly, so add the six squares: $6 \\times 9 = 54$ square inches of surface area."
       ]
     }
   ],

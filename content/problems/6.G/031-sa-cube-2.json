@@ -31,6 +31,17 @@
     "A cube has $6$ equal faces, so the total is $6 \\times 4 = 24$.",
     "The surface area of the cube is $24$ square units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Wrap a band around",
+      "steps": [
+        "The four side faces join into one long strip that wraps around the cube, $2 + 2 + 2 + 2 = 8$ long and $2$ tall.",
+        "The strip has an area of $8 \\times 2 = 16$ square units.",
+        "The top and the bottom are each $2 \\times 2 = 4$, which adds $8$ more.",
+        "Altogether the surface area is $16 + 8 = 24$ square units."
+      ]
+    }
+  ],
   "tags": [
     "surface-area",
     "cube"

@@ -38,8 +38,9 @@
     {
       "title": "Count up by wholes",
       "steps": [
-        "$\\frac{5}{5} = 1$, $\\frac{10}{5} = 2$, $\\frac{15}{5} = 3$.",
-        "From $\\frac{15}{5}$ to $\\frac{17}{5}$ is $2$ more fifths, giving $3\\frac{2}{5}$ ✓"
+        "Count whole numbers in fifths: $\\frac{5}{5} = 1$, $\\frac{10}{5} = 2$ and $\\frac{15}{5} = 3$.",
+        "The next whole would need $\\frac{20}{5}$, which is too many, so $\\frac{17}{5}$ holds $3$ wholes.",
+        "From $\\frac{15}{5}$ up to $\\frac{17}{5}$ is $2$ more fifths, so the mixed number is $3\\frac{2}{5}$."
       ]
     }
   ],

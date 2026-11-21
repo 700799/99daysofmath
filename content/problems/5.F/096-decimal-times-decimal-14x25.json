@@ -37,9 +37,9 @@
     {
       "title": "Split the 2.5",
       "steps": [
-        "$1.4 \\times 2 = 2.8$.",
-        "$1.4 \\times 0.5$ is half of $1.4$, which is $0.7$.",
-        "$2.8 + 0.7 = 3.5$ ✓"
+        "Break $2.5$ into $2$ and $0.5$, then multiply $1.4$ by each part.",
+        "Twice $1.4$ is $2.8$, and $1.4 \\times 0.5$ is half of $1.4$, which is $0.7$.",
+        "Add the two parts to get the whole product: $2.8 + 0.7 = 3.5$."
       ]
     }
   ],

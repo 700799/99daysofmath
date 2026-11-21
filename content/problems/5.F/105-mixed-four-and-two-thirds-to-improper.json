@@ -35,9 +35,9 @@
     {
       "title": "The shortcut, and why it works",
       "steps": [
-        "Multiply the whole number by the denominator, then add the numerator: $4 \\times 3 + 2 = 14$.",
-        "Keep the same denominator: $\\frac{14}{3}$.",
-        "That is exactly the counting-thirds argument, done in one line ✓"
+        "Multiply the whole number by the denominator and add the numerator: $4 \\times 3 + 2 = 14$.",
+        "Keep the same denominator, because the pieces are still thirds: $\\frac{14}{3}$.",
+        "It works because each of the $4$ wholes is $3$ thirds, which makes $12$ thirds, and the fraction part brings $2$ more."
       ]
     }
   ],

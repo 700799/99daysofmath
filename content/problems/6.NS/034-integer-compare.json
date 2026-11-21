@@ -32,6 +32,16 @@
     "$-3$ is $3$ units left of $0$ and $-8$ is $8$ units left of $0$, which puts $-3$ to the right of $-8$.",
     "So $-3 > -8$, and the greater number is $-3$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Think about money owed",
+      "steps": [
+        "Read each number as a bank balance: $-3$ means you owe $3$ dollars and $-8$ means you owe $8$ dollars.",
+        "Owing $3$ dollars leaves you better off than owing $8$ dollars, because the debt is smaller.",
+        "The better balance is the greater number, so $-3$ is greater than $-8$."
+      ]
+    }
+  ],
   "tags": [
     "integer",
     "compare"

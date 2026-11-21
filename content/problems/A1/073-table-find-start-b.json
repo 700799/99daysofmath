@@ -34,15 +34,17 @@
     {
       "title": "On the graph",
       "steps": [
-        "Plot the pairs: $(0,7)$, $(1,10)$, $(2,13)$.",
-        "The point on the $y$-axis is $(0, 7)$ — the line starts at height $7$."
+        "Plot the three pairs from the table as points: $(0, 7)$, $(1, 10)$ and $(2, 13)$.",
+        "The point $(0, 7)$ has $x = 0$, so it sits on the $y$-axis itself.",
+        "The line meets the $y$-axis at height $7$, so the starting value is $b = 7$."
       ]
     },
     {
       "title": "Walk the pattern backward",
       "steps": [
-        "The $y$-values climb by $3$: $7, 10, 13$.",
-        "Step back from $x = 1$: $10 - 3 = 7$ at $x = 0$ — the start is $7$."
+        "The $y$-values $7$, $10$, $13$ climb by $3$ each time $x$ goes up by $1$.",
+        "Check the start by stepping back one row from $x = 1$: $10 - 3 = 7$ when $x = 0$.",
+        "That matches the first row of the table, so the starting value is $b = 7$."
       ]
     }
   ],

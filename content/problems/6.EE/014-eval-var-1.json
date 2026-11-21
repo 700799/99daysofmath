@@ -30,6 +30,16 @@
     "The expression $x + 4$ becomes the plain sum $6 + 4$.",
     "Adding gives $10$, so the value of $x + 4$ is $10$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Hop along a number line",
+      "steps": [
+        "Mark the value of $x$, which is $6$, on a number line.",
+        "Adding $4$ means hopping $4$ places to the right: $7, 8, 9, 10$.",
+        "You land on $10$, so $x + 4$ equals $10$ when $x = 6$."
+      ]
+    }
+  ],
   "tags": [
     "evaluate"
   ],

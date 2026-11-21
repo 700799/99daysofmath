@@ -35,6 +35,16 @@
     "For the point $(-2, 4)$, the value $x = -2$ becomes $2$ and $y$ stays $4$.",
     "So the reflected point has coordinates $(2, 4)$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Measure to the mirror",
+      "steps": [
+        "The $y$-axis is the mirror line, and the point $(-2, 4)$ is $2$ units to the left of it.",
+        "The image is the same distance from the mirror on the other side, so it is $2$ units to the right, at $x = 2$.",
+        "The height does not change in a left-right flip, so $y$ stays $4$ and the image is $(2, 4)$."
+      ]
+    }
+  ],
   "tags": [
     "coordinate-plane",
     "reflection"

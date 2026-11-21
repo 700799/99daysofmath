@@ -33,17 +33,18 @@
     "This question is about all the students in a class, and different students have different heights.",
     "Because the data would vary, yes, it is a statistical question."
   ],
-  "tags": [
-    "statistical-question"
-  ],
-  "estimatedSeconds": 35,
   "alternativeExplanations": [
     {
       "title": "Check the answer",
       "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: yes — verified."
+        "Test the answer by imagining the data you would collect for this question.",
+        "Measuring each classmate gives a list such as $140$ cm, $152$ cm and $147$ cm, with many different values.",
+        "A dot plot of those heights would spread along the number line, which confirms the answer yes."
       ]
     }
-  ]
+  ],
+  "tags": [
+    "statistical-question"
+  ],
+  "estimatedSeconds": 35
 }

@@ -35,8 +35,9 @@
     {
       "title": "Check by measuring",
       "steps": [
-        "Plug $x = 34$ back in: $2(34) + 10 = 78$ and $3(34) = 102$.",
-        "Those two angles do lie along a straight rail, since $78 + 102 = 180$."
+        "Test a value against the straight rail: with $x = 30$ the angles are $70^\\circ$ and $90^\\circ$, which total $160^\\circ$ and leave the rail $20^\\circ$ short.",
+        "Raising $x$ by $1$ adds $2^\\circ$ to one angle and $3^\\circ$ to the other, so each step adds $5^\\circ$ and four more steps close the $20^\\circ$ gap.",
+        "At $x = 34$ the angles measure $78^\\circ$ and $102^\\circ$, and $78 + 102 = 180$ fills the straight rail, so $x = 34$."
       ]
     }
   ],

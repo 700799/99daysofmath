@@ -34,8 +34,9 @@
     {
       "title": "Check the pieces",
       "steps": [
-        "With $x = 5$: $AB = 2(5) = 10$ and $BC = 5 + 5 = 10$.",
-        "$10 + 10 = 20$, exactly the length of the beam. The value works."
+        "Try a value and build the beam from its pieces: with $x = 4$ the pieces are $8$ and $9$, which total only $17$, so the beam comes out too short.",
+        "Each extra $1$ in $x$ adds $2$ to $AB$ and $1$ to $BC$, so the total grows by $3$, and the missing $3$ means $x$ must go up by exactly one.",
+        "With $x = 5$ the pieces are $AB = 10$ and $BC = 10$, and $10 + 10 = 20$ matches the beam, so $x = 5$."
       ]
     }
   ],

@@ -38,6 +38,24 @@
     "Two fifths is twice as much, so $2 \\times 4 = 8$.",
     "There are $8$ marbles that are not red, and the other $12$ are red."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Count the red ones first",
+      "steps": [
+        "Find one fifth of the bag, $20 \\div 5 = 4$, so three fifths is $3 \\times 4 = 12$ red marbles.",
+        "Every marble is either red or not red, so take the red ones away from the total.",
+        "That leaves $20 - 12 = 8$ marbles that are not red."
+      ]
+    },
+    {
+      "title": "Draw a tape diagram",
+      "steps": [
+        "Draw a bar for the $20$ marbles and cut it into $5$ equal boxes, so each box holds $4$ marbles.",
+        "Shade $3$ boxes for red, which leaves $2$ boxes unshaded for the other colors.",
+        "The two unshaded boxes hold $2 \\times 4 = 8$ marbles that are not red."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "fraction",

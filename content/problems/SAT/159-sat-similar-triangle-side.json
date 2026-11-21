@@ -41,16 +41,17 @@
     {
       "title": "Set up a proportion instead",
       "steps": [
-        "$\\dfrac{AB}{DE} = \\dfrac{BC}{EF}$, so $\\dfrac{6}{15} = \\dfrac{8}{EF}$.",
-        "Cross-multiply: $6 \\cdot EF = 120$, so $EF = 20$.",
-        "Whichever route you take, keep the two triangles in a consistent order on both sides of the equation — mixing them up is how this question is usually lost."
+        "Match corresponding sides in the same order on both sides: $\\dfrac{AB}{DE} = \\dfrac{BC}{EF}$, so $\\dfrac{6}{15} = \\dfrac{8}{EF}$.",
+        "Cross-multiply to clear the fractions, which gives $6 \\cdot EF = 15 \\cdot 8 = 120$.",
+        "Divide by $6$ to find that side $EF$ has length $20$."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "Inverting the scale factor gives 8 × (6/15) = 3.2 — shrinking a triangle the problem says grew.",
-        "Decide direction first: DEF is the larger triangle, so its sides must come out LARGER. An answer smaller than 8 refutes itself."
+        "Using the scale factor upside down gives $8 \\times \\dfrac{6}{15} = 3.2$, which makes the larger triangle's side shorter.",
+        "Triangle $DEF$ is the larger one because $15 > 6$, so $EF$ must be longer than $8$.",
+        "The correct factor is $\\dfrac{15}{6} = 2.5$, and $8 \\times 2.5 = 20$ is the length of $EF$."
       ]
     }
   ],

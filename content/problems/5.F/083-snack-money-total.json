@@ -37,9 +37,9 @@
     {
       "title": "Dollars and cents separately",
       "steps": [
-        "Dollars: $\\$2 + \\$1 = \\$3$.",
-        "Cents: $75¢ + 40¢ = 115¢ = \\$1.15$.",
-        "$\\$3 + \\$1.15 = \\$4.15$ ✓"
+        "Add the whole dollars first: $2 + 1 = 3$ dollars.",
+        "Then add the cents: $75 + 40 = 115$ cents, which is $1$ dollar and $15$ cents.",
+        "Put them together: $3$ dollars plus $1.15$ dollars is $4.15$ dollars in all."
       ]
     }
   ],

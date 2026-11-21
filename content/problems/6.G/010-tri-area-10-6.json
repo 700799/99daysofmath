@@ -31,6 +31,16 @@
     "An easy order is to halve the base first, $\\frac{1}{2} \\times 10 = 5$, and then multiply by the height: $5 \\times 6 = 30$.",
     "The area of the triangle is $30$ square units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Box the triangle in",
+      "steps": [
+        "Draw a rectangle around the triangle that is $10$ wide and $6$ tall, the same as its base and height.",
+        "The rectangle covers $10 \\times 6 = 60$ square units, and the triangle takes up exactly half of that space.",
+        "Half of $60$ is $30$, so the area of the triangle is $30$ square units."
+      ]
+    }
+  ],
   "tags": [
     "area",
     "triangle"

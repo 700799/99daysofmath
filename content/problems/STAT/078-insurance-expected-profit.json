@@ -39,17 +39,17 @@
     {
       "title": "Premium minus expected payout",
       "steps": [
-        "The premium is certain: $\\$500$ in.",
-        "The payout is a random variable with expected value $0.02 \\times 20{,}000 = \\$400$ out.",
-        "Expected profit $= 500 - 400 = \\$100$. Linearity of expectation lets you subtract expected values directly."
+        "Split the profit into money in and money out. The premium is certain, so the company takes in $500$ dollars on every policy.",
+        "The payout is random, with expected value $0.02 \\times 20{,}000 = 400$ dollars per policy.",
+        "Expected values can be subtracted directly, so the expected profit is $500 - 400 = 100$ dollars."
       ]
     },
     {
       "title": "A thousand policies",
       "steps": [
-        "Sell 1,000 policies: income $= 1000 \\times 500 = \\$500{,}000$.",
-        "About $2\\%$, or 20 customers, file claims: payout $= 20 \\times 20{,}000 = \\$400{,}000$.",
-        "Net $\\$100{,}000$ over 1,000 policies is $\\$100$ each."
+        "Imagine the company sells $1{,}000$ policies, which brings in $1000 \\times 500 = 500{,}000$ dollars.",
+        "About $2$ percent of customers, or $20$ people, file claims, costing $20 \\times 20{,}000 = 400{,}000$ dollars.",
+        "The net of $100{,}000$ dollars spread over $1{,}000$ policies is $100$ dollars of profit per policy."
       ]
     }
   ],

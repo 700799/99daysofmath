@@ -35,8 +35,17 @@
     {
       "title": "Use the fraction $\\tfrac{1}{4}$",
       "steps": [
-        "$25\\% = \\tfrac{1}{4}$. So one quarter of $N$ is $15$.",
-        "The whole $N$ is $15 \\times 4 = 60$."
+        "Since $25\\%$ is $\\frac{1}{4}$, the number $15$ is one of four equal parts of the unknown number.",
+        "Picture a bar cut into four boxes with $15$ in each box.",
+        "The whole bar is $15 + 15 + 15 + 15 = 60$, so the number is $60$."
+      ]
+    },
+    {
+      "title": "Double the percent twice",
+      "steps": [
+        "Start with the pair $25\\% \\to 15$ and double both to get $50\\% \\to 30$.",
+        "Double both again to reach the whole: $100\\% \\to 60$.",
+        "The whole amount is $60$, so $15$ is $25\\%$ of $60$."
       ]
     }
   ],

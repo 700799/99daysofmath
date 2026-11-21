@@ -39,9 +39,17 @@
     {
       "title": "Count arrivals and departures",
       "steps": [
-        "Arrivals from $0$ to $6$: $\\int_0^6 (48 - 4t) \\, dt = 288 - 72 = 216$ cars.",
-        "Departures from $0$ to $6$: $\\int_0^6 4t \\, dt = 72$ cars.",
-        "$200 + 216 - 72 = 344$ cars. Same peak, computed one flow at a time."
+        "The lot fills while cars enter faster than they leave, and $48 - 4t = 4t$ at $t = 6$, so the peak is at hour $6$.",
+        "Arrivals from $0$ to $6$ total $\\int_0^6 (48 - 4t)\\,dt = 288 - 72 = 216$ cars, and departures total $\\int_0^6 4t\\,dt = 72$ cars.",
+        "The count at the peak is $200 + 216 - 72 = 344$ cars, the same maximum computed one flow at a time."
+      ]
+    },
+    {
+      "title": "Area of a triangle",
+      "steps": [
+        "The net rate $E(t) - L(t) = 48 - 8t$ is a line that starts at $48$ cars per hour and reaches $0$ at $t = 6$.",
+        "While the net rate is positive the lot gains cars, and the gain is the triangle under that line: $\\frac{1}{2} \\cdot 6 \\cdot 48 = 144$ cars.",
+        "After $t = 6$ the net rate is negative and the count falls, so the maximum is $200 + 144 = 344$ cars."
       ]
     }
   ],

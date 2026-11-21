@@ -36,9 +36,9 @@
     {
       "title": "Geometry check",
       "steps": [
-        "The radius from the center $(0, 0)$ to $(3, 4)$ has slope $\\frac{4}{3}$.",
-        "A tangent to a circle is perpendicular to the radius, so its slope is the negative reciprocal: $-\\frac{3}{4}$.",
-        "Implicit differentiation and geometry agree."
+        "Draw the radius from the center $(0, 0)$ to the point $(3, 4)$. Its slope is rise over run, $\\frac{4}{3}$.",
+        "A tangent line to a circle is perpendicular to the radius at the point where it touches.",
+        "Perpendicular slopes are negative reciprocals, so the tangent slope is $-\\frac{3}{4}$, the same value implicit differentiation gives."
       ]
     }
   ],

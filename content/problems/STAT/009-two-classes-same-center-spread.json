@@ -61,17 +61,17 @@
     {
       "title": "Distances from the center",
       "steps": [
-        "Class A distances from 80: $10, 5, 0, 5, 10$ — average distance 6.",
-        "Class B distances from 80: $20, 2, 0, 2, 20$ — average distance 8.8.",
-        "Bigger typical distance means more variability, so Class B is more spread out."
+        "Both classes are centered at $80$, so measure how far each score sits from $80$. For Class A the distances are $10, 5, 0, 5, 10$, an average of $6$ points.",
+        "For Class B the distances are $20, 2, 0, 2, 20$, an average of $8.8$ points.",
+        "A bigger typical distance from the same center means more variability, so the classes match in mean and median but Class B is more spread out. That is choice B."
       ]
     },
     {
       "title": "Why choice D is a trap",
       "steps": [
-        "Evenly spaced scores look \"orderly\", but spread is about how far values are from the center, not about a pattern.",
-        "Class A's farthest scores are 10 points from the middle; Class B's are 20 points away.",
-        "So Class B, not A, has the greater spread."
+        "Class A's scores step up by $5$ each time, which looks orderly, but spread measures how far values sit from the center, not whether they follow a pattern.",
+        "Class A's farthest scores are only $10$ points from the middle value $80$, while Class B's farthest scores are $20$ points away.",
+        "So Class B, not Class A, has the greater spread. With equal means and medians of $80$, the correct comparison is choice B."
       ]
     }
   ],

@@ -38,6 +38,16 @@
     "Then multiply by the remaining side: $1 \\times 1 = 1$.",
     "The volume of the box is $1$ cubic meter."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Cut and restack",
+      "steps": [
+        "Picture the tall box and cut it across the middle into two pieces that are each $1$ m tall.",
+        "Each piece is $\\frac{1}{2}$ m wide and $1$ m long, so the two pieces fit side by side to make a width of $\\frac{1}{2} + \\frac{1}{2} = 1$ m.",
+        "The pieces now form a cube that is $1$ m on every edge, so the volume of the box is $1$ cubic meter."
+      ]
+    }
+  ],
   "tags": [
     "volume",
     "fraction"

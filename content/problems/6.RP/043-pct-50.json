@@ -31,6 +31,16 @@
     "Half of $40$ is $20$ and half of $2$ is $1$, so $42 \\div 2 = 21$.",
     "Half of $42$ is $21$, so $50\\%$ of $42$ equals $21$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Build from 10%",
+      "steps": [
+        "Find $10\\%$ of $42$ by moving the decimal point one place left, which gives $4.2$.",
+        "$50\\%$ is five lots of $10\\%$, so multiply: $5 \\times 4.2 = 21$.",
+        "Five tenths of $42$ is $21$, so $50\\%$ of $42$ is $21$."
+      ]
+    }
+  ],
   "tags": [
     "percent"
   ],

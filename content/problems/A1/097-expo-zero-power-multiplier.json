@@ -34,15 +34,17 @@
     {
       "title": "Walk down the staircase",
       "steps": [
-        "4³ = 64, 4² = 16, 4¹ = 4. Each step DOWN divides by 4.",
-        "One more step: 4⁰ = 4 ÷ 4 = 1."
+        "Write the powers of $4$ going down: $4^3 = 64$, $4^2 = 16$ and $4^1 = 4$.",
+        "Each step down in the exponent divides the value by $4$.",
+        "One more step down gives $4^0 = 4 \\div 4 = 1$, so the power-up multiplies your score by $1$."
       ]
     },
     {
       "title": "Use the quotient rule",
       "steps": [
-        "4⁰ is the same as 4² ÷ 4², since 2 − 2 = 0.",
-        "But any number divided by itself is 1, so 4⁰ = 1."
+        "Use the quotient rule: $4^2 \\div 4^2 = 4^{2-2} = 4^0$, because dividing powers subtracts the exponents.",
+        "Work out the same division with numbers: $16 \\div 16 = 1$, since any number divided by itself is $1$.",
+        "Both lines describe one calculation, so $4^0 = 1$."
       ]
     }
   ],

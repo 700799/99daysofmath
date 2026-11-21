@@ -33,18 +33,19 @@
     "So $-3$ is left of $0$ and $1$ is right of $0$, which puts $1$ farther right.",
     "A positive number is always greater than a negative one, so $1 > -3$ and the answer is $1$."
   ],
-  "tags": [
-    "integer",
-    "compare"
-  ],
-  "estimatedSeconds": 30,
   "alternativeExplanations": [
     {
       "title": "Check the answer",
       "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: 1 — verified."
+        "Test the answer with a thermometer, where a higher reading is always a greater number.",
+        "A reading of $1$ degree is above the zero mark, and a reading of $-3$ degrees is below it.",
+        "The reading above zero is the higher one, so the check agrees that $1$ is greater than $-3$."
       ]
     }
-  ]
+  ],
+  "tags": [
+    "integer",
+    "compare"
+  ],
+  "estimatedSeconds": 30
 }

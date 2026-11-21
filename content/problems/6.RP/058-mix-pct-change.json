@@ -39,6 +39,24 @@
     "Simplify to $\\frac{1}{4}$, which is $0.25$, and multiply by $100$ to get a percent.",
     "The price of the book increased by $25\\%$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Compare new with old",
+      "steps": [
+        "Write the new price over the old price: $\\frac{25}{20} = \\frac{5}{4} = 1.25$.",
+        "As a percent that is $125\\%$, so the new price is $125\\%$ of the old price.",
+        "The old price was $100\\%$, so the increase is $125\\% - 100\\% = 25\\%$."
+      ]
+    },
+    {
+      "title": "Use 10% blocks",
+      "steps": [
+        "Ten percent of the old price of $20$ dollars is $2$ dollars, and $5\\%$ is $1$ dollar.",
+        "The price rose by $5$ dollars, which is two blocks of $2$ dollars and one block of $1$ dollar.",
+        "That is $10\\% + 10\\% + 5\\% = 25\\%$, so the percent increase is $25\\%$."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "percent-change"

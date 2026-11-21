@@ -40,9 +40,9 @@
     {
       "title": "Check it with a triangle",
       "steps": [
-        "With hypotenuse $h$, $\\sin\\theta = \\frac{\\text{opp}}{h}$ and $\\cos\\theta = \\frac{\\text{adj}}{h}$.",
-        "Dividing them, the $h$ cancels: $\\frac{\\text{opp}/h}{\\text{adj}/h} = \\frac{\\text{opp}}{\\text{adj}}$.",
-        "Opposite over adjacent is the definition of tangent."
+        "Use a concrete $3$-$4$-$5$ right triangle with $\\theta$ opposite the side $3$, so $\\sin\\theta = \\frac{3}{5}$ and $\\cos\\theta = \\frac{4}{5}$.",
+        "Dividing the sine by the cosine, the fifths cancel: $\\frac{3/5}{4/5} = \\frac{3}{4}$.",
+        "And $\\frac{3}{4}$ is opposite over adjacent, the tangent of that angle, so $\\frac{\\sin\\theta}{\\cos\\theta} = \\tan\\theta$, written tan(theta)."
       ]
     }
   ],

@@ -37,8 +37,9 @@
     {
       "title": "Fraction view",
       "steps": [
-        "$0.3 = \\frac{3}{10}$ and $0.4 = \\frac{4}{10}$.",
-        "$\\frac{3}{10} \\times \\frac{4}{10} = \\frac{12}{100} = 0.12$ ✓ — the hundredths explain the two decimal places."
+        "Write the decimals as fractions: $0.3 = \\frac{3}{10}$ and $0.4 = \\frac{4}{10}$.",
+        "Multiply the tops together and the bottoms together: $\\frac{3}{10} \\times \\frac{4}{10} = \\frac{12}{100}$.",
+        "Twelve hundredths is $0.12$, and the hundredths explain why the answer has two decimal places."
       ]
     }
   ],

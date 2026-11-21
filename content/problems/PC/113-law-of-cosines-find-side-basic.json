@@ -35,17 +35,17 @@
     {
       "title": "Pythagoras plus a correction",
       "steps": [
-        "Pretend for a second the corner is a right angle. Then c² would be 9 + 64 = 73.",
-        "But the corner is only 60°, which is narrower than 90°, so the far side is pulled in shorter.",
-        "The correction term −24 does exactly that pulling: 73 − 24 = 49, so c = 7."
+        "Pretend the corner were a right angle, and then $c^2$ would be $9 + 64 = 73$.",
+        "The real corner is $60^\\circ$, narrower than $90^\\circ$, so the far side must be shorter than that.",
+        "The correction $2(3)(8)\\cos 60^\\circ = 24$ is subtracted, giving $c^2 = 73 - 24 = 49$ and $c = 7$."
       ]
     },
     {
-      "title": "Three pieces in a table",
+      "title": "Drop a height",
       "steps": [
-        "Piece 1: a² = 9. Piece 2: b² = 64. Piece 3: 2ab·cos C = 24.",
-        "The formula is just piece 1 + piece 2 − piece 3.",
-        "9 + 64 − 24 = 49, and √49 = 7. Filling a tiny table keeps you from losing a piece."
+        "Drop a perpendicular from the far end of side $a = 3$ onto side $b$, which makes a $30$-$60$-$90$ triangle with hypotenuse $3$.",
+        "Its base is $3\\cos 60^\\circ = 1.5$ and its height is $3\\sin 60^\\circ \\approx 2.598$, leaving $8 - 1.5 = 6.5$ of side $b$.",
+        "Pythagoras on the other right triangle gives $c^2 = 6.5^2 + 2.598^2 = 42.25 + 6.75 = 49$, so $c = 7$."
       ]
     }
   ],

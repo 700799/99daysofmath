@@ -32,6 +32,16 @@
     "Several very tall bins side by side mean that a lot of the data is bunched in that region.",
     "A place where data values bunch together is called a cluster."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Rule out the other words",
+      "steps": [
+        "The words used for features of a display are gap, outlier and cluster, so check each one.",
+        "A gap is an empty region with no bars, and an outlier is one value far from the rest.",
+        "Very tall bins mean many values packed into one region, which fits only the word cluster."
+      ]
+    }
+  ],
   "tags": [
     "shape",
     "vocabulary"

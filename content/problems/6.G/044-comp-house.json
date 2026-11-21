@@ -36,6 +36,16 @@
     "The triangle has area $\\frac{1}{2} \\times 8 \\times 4 = 16$, because a triangle is half of base times height.",
     "Add the parts together: $40 + 16 = 56$, so the total area is $56$ square units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Turn the roof into a rectangle",
+      "steps": [
+        "A triangle with base $8$ and height $4$ has the same area as a rectangle $8$ wide and $2$ tall, because halving the height halves the area.",
+        "Stack that $8$ by $2$ rectangle on the $8$ by $5$ walls to get one rectangle $8$ wide and $5 + 2 = 7$ tall.",
+        "The area of that rectangle is $8 \\times 7 = 56$, so the house shape covers $56$ square units."
+      ]
+    }
+  ],
   "tags": [
     "composite",
     "word"

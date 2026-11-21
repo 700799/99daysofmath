@@ -56,9 +56,9 @@
     {
       "title": "A quick numerical check at $x = 1$",
       "steps": [
-        "Choice A at $x = 1$ gives $3e \\approx 8.15$. Choice B gives $2e \\approx 5.44$.",
-        "Secant slope of $x^2 e^x$ from $1$ to $1.001$: $\\frac{(1.001)^2 e^{1.001} - e}{0.001} \\approx 8.16$.",
-        "Only A matches — the product rule, not the product of derivatives."
+        "Evaluate two of the choices at $x = 1$: choice A gives $3e \\approx 8.15$ and choice B gives $2e \\approx 5.44$.",
+        "Estimate the true slope with a secant from $1$ to $1.001$: $\\frac{(1.001)^2 e^{1.001} - e}{0.001} \\approx 8.16$.",
+        "Only choice A matches that slope. The product rule is correct here, and multiplying the two derivatives is not."
       ]
     }
   ],

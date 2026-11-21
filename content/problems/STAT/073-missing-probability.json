@@ -37,9 +37,9 @@
     {
       "title": "Think in percents",
       "steps": [
-        "The known outcomes cover $15\\% + 35\\% + 10\\% = 60\\%$ of all cases.",
-        "The other $40\\%$ of cases must be $X = 2$.",
-        "So $P(X = 2) = 0.40$."
+        "Imagine $100$ equally likely cases. The known outcomes use up $15 + 35 + 10 = 60$ of them.",
+        "The remaining $40$ cases can only be the outcome $X = 2$, because no other value is possible.",
+        "Forty cases out of $100$ means the missing probability is $P(X = 2) = 0.40$."
       ]
     }
   ],

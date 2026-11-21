@@ -43,8 +43,17 @@
     {
       "title": "Compare sale to original",
       "steps": [
-        "Sale is $\\tfrac{160}{200} = 80\\%$ of original.",
-        "So the discount is $100\\% - 80\\% = 20\\%$."
+        "Write the sale price over the original price: $\\frac{160}{200}$, which simplifies to $\\frac{80}{100}$.",
+        "So the sale price is $80\\%$ of the original price.",
+        "The part taken off is $100\\% - 80\\% = 20\\%$, so the bike is $20\\%$ off."
+      ]
+    },
+    {
+      "title": "Use 10% blocks",
+      "steps": [
+        "Ten percent of the original $200$ dollars is $20$ dollars.",
+        "The price dropped by $200 - 160 = 40$ dollars, which is two of those blocks.",
+        "Two blocks of $10\\%$ make $20\\%$, so the bike is $20\\%$ off."
       ]
     }
   ],

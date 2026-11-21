@@ -30,6 +30,16 @@
     "For a vertical side, the length is how far apart the $y$-coordinates are: $|7 - 1|$.",
     "Subtracting gives $7 - 1 = 6$, so the side is $6$ units long."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Count steps on the grid",
+      "steps": [
+        "Plot both points: they sit on the vertical grid line $x = 2$, one above the other.",
+        "Start at $y = 1$ and climb one unit at a time to $2$, $3$, $4$, $5$, $6$ and $7$.",
+        "That climb takes $6$ steps, so the side is $6$ units long."
+      ]
+    }
+  ],
   "tags": [
     "coord",
     "side"

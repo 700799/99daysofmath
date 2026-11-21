@@ -34,17 +34,17 @@
     {
       "title": "Check with Pythagoras",
       "steps": [
-        "The two shorter sides are the legs: $3^2 + 4^2 = 9 + 16 = 25$.",
-        "The hypotenuse squared must be $25$, so the hypotenuse is $\\sqrt{25} = 5$.",
-        "The $3$-$4$-$5$ triangle is worth memorizing."
+        "If $5$ is the hypotenuse, then the squares of the two shorter sides must add up to its square.",
+        "Test it with the numbers: $3^2 + 4^2 = 9 + 16 = 25$, and $5^2 = 25$ as well.",
+        "The equation balances only with $5$ as the side across from the right angle, so the hypotenuse is $5$."
       ]
     },
     {
       "title": "Draw it and look",
       "steps": [
-        "Sketch a right angle with legs $3$ across and $4$ up.",
-        "The slanted side connecting the ends is the hypotenuse.",
-        "That slant stretches farther than either leg, so it is the $5$."
+        "Sketch a right angle with one leg of $3$ going across and one leg of $4$ going up.",
+        "The slanted side joining the two free ends is the hypotenuse, since it faces the right angle.",
+        "That slant has to reach farther than either leg alone, so it must be the side of length $5$."
       ]
     }
   ],

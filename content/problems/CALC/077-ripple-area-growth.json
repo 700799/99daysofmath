@@ -34,9 +34,9 @@
     {
       "title": "The thin ring picture",
       "steps": [
-        "In a short time $dt$ the ripple grows by a thin ring of width $3\\,dt$ and length (circumference) $2\\pi \\cdot 10 = 20\\pi$.",
-        "Ring area $\\approx 20\\pi \\cdot 3\\,dt = 60\\pi \\, dt$.",
-        "Divide by $dt$: the area grows at $60\\pi$ cm²/s."
+        "In a short time $dt$ the ripple adds a thin ring of width $3\\,dt$ around a circle of circumference $2\\pi \\cdot 10 = 20\\pi$ cm.",
+        "Unrolled, that ring is almost a long thin rectangle, so its area is about $20\\pi \\cdot 3\\,dt = 60\\pi\\,dt$.",
+        "Dividing by $dt$ shows the area grows at $60\\pi$ square cm per second, so $k = 60$."
       ]
     }
   ],

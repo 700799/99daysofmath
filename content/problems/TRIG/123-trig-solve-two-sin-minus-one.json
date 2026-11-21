@@ -34,8 +34,9 @@
     {
       "title": "Verify the answer",
       "steps": [
-        "$\\sin 150^\\circ = \\frac{1}{2}$, so $2\\left(\\frac{1}{2}\\right) - 1 = 0$ ✓",
-        "Checking is cheap and catches sign slips instantly."
+        "Substitute $\\theta = 150^\\circ$: since $\\sin 150^\\circ = \\frac{1}{2}$, the left side is $2\\left(\\frac{1}{2}\\right) - 1 = 0$ and the equation holds.",
+        "The other solution, $30^\\circ$, also works because $\\sin 30^\\circ = \\frac{1}{2}$ as well.",
+        "Between $150^\\circ$ and $180^\\circ$ the sine drops below $\\frac{1}{2}$, and from $180^\\circ$ to $360^\\circ$ it is never positive, so the larger solution is $150$ degrees."
       ]
     }
   ],

@@ -35,17 +35,17 @@
     {
       "title": "Second-by-second table",
       "steps": [
-        "t = 0: h = 45. t = 1: h = 45 − 5 = 40. t = 2: h = 45 − 20 = 25.",
-        "t = 3: h = 45 − 45 = 0 — the ball reaches the ground at 3 seconds.",
-        "Notice it falls faster each second: that is the parabola at work."
+        "Make a table of heights: at $t = 0$ the height is $45$, and at $t = 1$ it is $45 - 5 = 40$.",
+        "At $t = 2$ the height is $45 - 20 = 25$, so the ball is falling faster each second.",
+        "At $t = 3$ the height is $45 - 45 = 0$, so the ball hits the ground after $3$ seconds."
       ]
     },
     {
       "title": "Two roots, one real landing",
       "steps": [
-        "t² = 9 has two answers, 3 and −3 — every square does.",
-        "But t = −3 would mean 3 seconds BEFORE the drop, which makes no sense here.",
-        "Keep the positive root: 3 seconds."
+        "The equation $t^2 = 9$ has two answers, $3$ and $-3$, because both square to $9$.",
+        "A time of $-3$ would mean three seconds before the ball was dropped, which makes no sense here.",
+        "Keep the positive root, so the ball lands after $3$ seconds."
       ]
     }
   ],

@@ -58,9 +58,9 @@
     {
       "title": "Which formula, at a glance",
       "steps": [
-        "Circumference has no exponent: $2\\pi r$, or $\\pi d$.",
-        "Area has the square: $\\pi r^2$.",
-        "If the answer choices include both $14\\pi$ and $49\\pi$, the question is checking exactly this distinction."
+        "Circumference is a length, so its formula has no square: $2\\pi r$, which is the same as $\\pi d$.",
+        "Area is the formula with the square, $\\pi r^2$, and here it gives $49\\pi$, which is choice C.",
+        "The question asks for circumference, and the diameter is $14$, so the answer is $14\\pi$, choice B."
       ]
     }
   ],

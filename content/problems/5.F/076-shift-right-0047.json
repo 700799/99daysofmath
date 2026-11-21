@@ -34,8 +34,9 @@
     {
       "title": "Fraction view",
       "steps": [
-        "$0.047 = \\frac{47}{1000}$.",
-        "Multiplying by $1{,}000$ cancels the denominator: $\\frac{47}{1000} \\times 1000 = 47$ ✓"
+        "The decimal $0.047$ has three places, so it means $47$ thousandths, or $\\frac{47}{1000}$.",
+        "The power $10^3$ is $1000$, so the problem is $\\frac{47}{1000} \\times 1000$.",
+        "Multiplying by $1000$ undoes the division by $1000$ and leaves just $47$."
       ]
     }
   ],

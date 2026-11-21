@@ -37,8 +37,17 @@
     {
       "title": "Count groups of 16",
       "steps": [
-        "$16 + 16 + 16 + 16 = 64$.",
-        "Four groups, so $4$ lb."
+        "Each pound is one group of $16$ ounces, so count up in sixteens until you reach $64$.",
+        "The count goes $16$, $32$, $48$, $64$, which takes four jumps.",
+        "Four groups of $16$ ounces are $4$ pounds."
+      ]
+    },
+    {
+      "title": "Halve both numbers",
+      "steps": [
+        "The division $64 \\div 16$ keeps its value when both numbers are halved, giving $32 \\div 8$.",
+        "Halve both again to get $16 \\div 4$, which is an easy fact.",
+        "Since $16 \\div 4 = 4$, the weight of $64$ ounces is $4$ pounds."
       ]
     }
   ],

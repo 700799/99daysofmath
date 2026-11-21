@@ -38,6 +38,16 @@
     "Both $3$ and $6$ can be divided by $3$, so the fraction is not yet in simplest form.",
     "Divide top and bottom by $3$ to get $\\frac{3}{6} = \\frac{1}{2}$, so the answer is $\\frac{1}{2}$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Picture a pizza",
+      "steps": [
+        "Imagine a pizza cut into $6$ equal slices with $5$ slices on the tray, which shows $\\frac{5}{6}$.",
+        "Take away $2$ slices and $3$ slices are still on the tray.",
+        "Three slices is exactly half of the six slices in a whole pizza, so the answer is $\\frac{1}{2}$."
+      ]
+    }
+  ],
   "tags": [
     "fractions",
     "subtraction"

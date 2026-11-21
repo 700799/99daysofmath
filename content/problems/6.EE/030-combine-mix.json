@@ -38,6 +38,16 @@
     "The constant $3$ has no variable, so it cannot be combined with $3y$.",
     "The simplified expression is $3y + 3$, with two unlike terms left."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Bags of marbles",
+      "steps": [
+        "Think of $y$ as a bag of marbles, so $5y$ is five bags.",
+        "Taking away $2y$ removes two of the bags and leaves three bags, which is $3y$.",
+        "The $3$ loose marbles are not a bag, so they stay separate and the result is $3y + 3$."
+      ]
+    }
+  ],
   "tags": [
     "combine-like"
   ],

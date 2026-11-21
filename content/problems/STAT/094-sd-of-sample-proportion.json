@@ -35,9 +35,9 @@
     {
       "title": "Start from the count",
       "steps": [
-        "The count of supporters $X$ is binomial with SD $\\sqrt{100(0.4)(0.6)} = \\sqrt{24} \\approx 4.9$ voters.",
-        "$\\hat{p} = X/100$, so divide that SD by 100.",
-        "$4.9 / 100 = 0.049$."
+        "Count supporters first. The number $X$ in the sample is binomial, with standard deviation $\\sqrt{100(0.4)(0.6)} = \\sqrt{24} \\approx 4.9$ voters.",
+        "The sample proportion is $\\hat{p} = \\frac{X}{100}$, and dividing a variable by $100$ divides its standard deviation by $100$.",
+        "So the standard deviation of $\\hat{p}$ is about $\\frac{4.9}{100} = 0.049$."
       ]
     }
   ],

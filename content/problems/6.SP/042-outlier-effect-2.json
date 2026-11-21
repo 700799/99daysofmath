@@ -32,6 +32,16 @@
     "The median depends only on the middle position, and an outlier is still just one value at the end of the order.",
     "That is why outliers usually affect the mean more than the median."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Test it with numbers",
+      "steps": [
+        "Start with $1, 2, 3, 4, 5$, where the mean is $15 \\div 5 = 3$ and the median is also $3$.",
+        "Change the $5$ into an outlier of $50$: the mean becomes $60 \\div 5 = 12$, but the middle value is still $3$.",
+        "The mean jumped by $9$ while the median did not move, so outliers affect the mean more."
+      ]
+    }
+  ],
   "tags": [
     "outlier"
   ],

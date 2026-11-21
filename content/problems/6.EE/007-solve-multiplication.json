@@ -23,9 +23,9 @@
     {
       "title": "Multiplication facts",
       "steps": [
-        "Ask: \"$3$ times what equals $24$?\"",
-        "From times tables: $3 \\times 8 = 24$.",
-        "So $x = 8$."
+        "Read $3x = 24$ as a question: $3$ times what number equals $24$?",
+        "Skip count by $3$ until you reach $24$: $3, 6, 9, 12, 15, 18, 21, 24$.",
+        "That took $8$ counts, so $3 \\times 8 = 24$ and the solution is $x = 8$."
       ]
     }
   ],

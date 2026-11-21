@@ -42,16 +42,17 @@
     {
       "title": "Shrink the height instead",
       "steps": [
-        "The water only reaches $\\frac{3}{4}$ of the $12$ cm height: $\\frac{3}{4} \\times 12 = 9$ cm deep.",
-        "$20 \\times 10 \\times 9 = 1800$ cubic centimeters — the same answer."
+        "The water covers the whole base but only reaches $\\frac{3}{4}$ of the $12$ cm height.",
+        "Find the depth of the water: $\\frac{3}{4} \\times 12 = 9$ cm.",
+        "The water is a box $20$ by $10$ by $9$, so its volume is $20 \\times 10 \\times 9 = 1800$ cubic centimeters."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "The most common wrong answer is $2400$ — the full volume, with the $\\frac{3}{4}$ never used at all.",
-        "Another slip is dividing by $3$ instead of by $4$, which gives $800 \\times 3 = 2400$ again.",
-        "Escape both by asking \"should my answer be less than a full tank?\" before you write it — if it is not smaller than $2400$, something went wrong."
+        "The most common wrong answer is $2400$, the volume of the full tank, with the $\\frac{3}{4}$ never used.",
+        "Another slip is mixing up the fraction, dividing by $3$ and multiplying by $4$, which gives $3200$, more than the tank can hold.",
+        "Ask whether the answer is less than a full tank. One fourth of $2400$ is $600$, and three fourths is $3 \\times 600 = 1800$."
       ]
     }
   ],

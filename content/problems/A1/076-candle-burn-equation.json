@@ -42,15 +42,17 @@
     {
       "title": "Check an hour",
       "steps": [
-        "After $3$ hours the candle burned $3 \\times 2 = 6$ cm, leaving $20 - 6 = 14$ cm.",
-        "The equation gives $h = 20 - 2 \\times 3 = 14$ — it matches."
+        "Work out one case from the story: after $3$ hours the candle has burned $3 \\times 2 = 6$ cm, leaving $20 - 6 = 14$ cm.",
+        "Test the equation with $t = 3$: $h = 20 - 2 \\times 3 = 14$, which matches the story.",
+        "The equation agrees with the candle, so $h = 20 - 2t$ is correct."
       ]
     },
     {
       "title": "Downhill stairs table",
       "steps": [
-        "Hour $0 \\to 20$, hour $1 \\to 18$, hour $2 \\to 16$: a steady jump of $-2$.",
-        "Jump $-2$ is the slope, start $20$ is $b$: $h = -2t + 20$, the same as $20 - 2t$."
+        "Make a table of heights: hour $0 \\to 20$, hour $1 \\to 18$, hour $2 \\to 16$.",
+        "The height changes by a steady $-2$ each hour, so the slope is $-2$ and the start is $20$.",
+        "That gives $h = -2t + 20$, which is the same equation as $h = 20 - 2t$."
       ]
     }
   ],

@@ -25,18 +25,18 @@
     {
       "title": "Stack of layers method",
       "steps": [
-        "The base of the prism is a $3 \\times 4$ rectangle. Its area is $12$ square inches.",
-        "Volume = base area × height = $12 \\times 5$.",
-        "$12 \\times 5 = 60$ cubic inches.",
-        "Think of it as $5$ stacked layers, each with $12$ unit cubes — that's $60$ unit cubes total."
+        "The bottom of the prism is a $3$ by $4$ rectangle, so its area is $3 \\times 4 = 12$ square inches.",
+        "A layer one inch thick sitting on that base holds $12$ unit cubes.",
+        "The prism is $5$ inches tall, so it is a stack of $5$ of these layers.",
+        "Five layers of $12$ cubes make $12 \\times 5 = 60$ cubes, so the volume is $60$ cubic inches."
       ]
     },
     {
       "title": "Why \"cubic\" inches?",
       "steps": [
-        "Multiplying $3$ in × $4$ in × $5$ in multiplies the units: in × in × in = in³.",
-        "That's why volume uses **cubic** units — it fills a 3D space.",
-        "If you packed $1 \\text{ in} \\times 1 \\text{ in} \\times 1 \\text{ in}$ sugar cubes inside, you'd fit $60$ of them."
+        "Multiplying $3$ in by $4$ in by $5$ in multiplies three lengths, so the unit becomes in $\\times$ in $\\times$ in, or in³.",
+        "Volume fills a space with depth, so it is measured in **cubic** units, not square ones.",
+        "If you packed the prism with sugar cubes that are $1$ inch on every edge, exactly $3 \\times 4 \\times 5 = 60$ of them would fit, so the volume is $60$ cubic inches."
       ]
     }
   ],

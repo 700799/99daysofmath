@@ -38,6 +38,17 @@
     "The factors of $18$ are $1, 2, 3, 6, 9, 18$ and the factors of $24$ are $1, 2, 3, 4, 6, 8, 12, 24$. The largest shared one is $6$.",
     "You can make $6$ baskets, each holding $18 \\div 6 = 3$ apples and $24 \\div 6 = 4$ oranges."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Try basket counts from the top",
+      "steps": [
+        "The apples must split evenly, so the number of baskets is a factor of $18$. Try the big factors first: $18$, $9$, $6$.",
+        "With $18$ baskets or $9$ baskets the $24$ oranges do not split evenly, because $24 \\div 18$ and $24 \\div 9$ leave remainders.",
+        "With $6$ baskets both fruits split evenly: $18 \\div 6 = 3$ apples and $24 \\div 6 = 4$ oranges in each.",
+        "So $6$ is the largest count that works, and you can make $6$ identical baskets."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "gcf",

@@ -42,8 +42,9 @@
     {
       "title": "Layer counting",
       "steps": [
-        "One layer of unit cubes is $4 \\times 3 = 12$ cubes.",
-        "There are $2$ layers: $12 \\times 2 = 24$ cubes."
+        "Look at the bottom layer of the box. It is $4$ cubes long and $3$ cubes wide, so it holds $4 \\times 3 = 12$ unit cubes.",
+        "The box is $2$ centimeters tall, so there are $2$ layers just like that one.",
+        "Two layers of $12$ cubes make $12 \\times 2 = 24$ cubes, so the volume is $24$ cubic centimeters."
       ]
     }
   ],

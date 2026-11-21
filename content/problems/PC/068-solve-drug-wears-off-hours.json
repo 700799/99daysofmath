@@ -37,19 +37,19 @@
   ],
   "alternativeExplanations": [
     {
-      "title": "Divide first, then log",
+      "title": "Divide first, then count halves",
       "steps": [
-        "$25 \\div 400 = \\frac{1}{16}$ of the dose is left.",
-        "$\\frac{1}{16} = \\left(\\frac{1}{2}\\right)^4$, so $4$ half-lives have passed.",
-        "$4 \\times 4 = 16$ hours."
+        "Find what fraction of the dose remains: $25 \\div 400 = \\frac{1}{16}$.",
+        "Write that fraction as a power of one half: $\\frac{1}{16} = \\left(\\frac{1}{2}\\right)^4$, so $4$ half-lives have passed.",
+        "Each half-life lasts $4$ hours, so the time is $4 \\times 4 = 16$ hours."
       ]
     },
     {
       "title": "Fill in a clock table",
       "steps": [
-        "Hour 0: $400$ mg. Hour 4: $200$ mg. Hour 8: $100$ mg.",
-        "Hour 12: $50$ mg. Hour 16: $25$ mg.",
-        "The table lands on $25$ mg at hour $16$."
+        "List the amount every $4$ hours, halving each time: hour $0$ has $400$ mg, hour $4$ has $200$ mg, hour $8$ has $100$ mg.",
+        "Two more rows finish it: hour $12$ has $50$ mg and hour $16$ has $25$ mg.",
+        "The table reaches $25$ mg at hour $16$, so the answer is $16$ hours."
       ]
     }
   ],

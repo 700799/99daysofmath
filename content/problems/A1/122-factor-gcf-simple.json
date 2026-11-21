@@ -37,17 +37,17 @@
     {
       "title": "Un-multiply it",
       "steps": [
-        "Factoring runs distribution backwards: you know the spread-out answer, find what was multiplied.",
-        "Ask: 5 times WHAT gives 5x + 10? Answer: (x + 2).",
-        "So 5x + 10 = 5(x + 2). Distribute to check!"
+        "Factoring runs the distributive property backwards, so look for what was multiplied to make $5x + 10$.",
+        "Ask what $5$ must multiply to give $5x + 10$: it needs $x$ to make $5x$ and $2$ to make $10$.",
+        "So $5x + 10 = 5(x + 2)$, and distributing the $5$ confirms it."
       ]
     },
     {
       "title": "Area model backwards",
       "steps": [
-        "Picture a rectangle of area 5x + 10 with one side 5.",
-        "Split the area into 5x and 10; the other side must be x and 2.",
-        "The sides are 5 and (x + 2)."
+        "Picture a rectangle with total area $5x + 10$ and one side of length $5$.",
+        "Split the area into a piece of $5x$ and a piece of $10$; their other sides must be $x$ and $2$.",
+        "The full rectangle is $5$ by $(x + 2)$, so the factored form is $5(x + 2)$."
       ]
     }
   ],

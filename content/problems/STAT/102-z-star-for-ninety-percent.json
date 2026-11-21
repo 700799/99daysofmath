@@ -56,9 +56,9 @@
     {
       "title": "Order them by confidence",
       "steps": [
-        "More confidence needs a wider interval, so a bigger $z^*$.",
-        "$80\\% \\to 1.282$, $90\\% \\to 1.645$, $95\\% \\to 1.960$, $99\\% \\to 2.576$.",
-        "$90\\%$ sits second: $1.645$."
+        "More confidence needs a wider interval, so the critical values grow as the confidence level grows.",
+        "The four choices in increasing order, $1.282, 1.645, 1.960, 2.576$, therefore match the common levels $80$, $90$, $95$ and $99$ percent in that order.",
+        "The $90$ percent level is second in the list, so $z^* = 1.645$, which is choice B."
       ]
     }
   ],

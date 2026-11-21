@@ -35,15 +35,17 @@
     {
       "title": "Table of values",
       "steps": [
-        "Compute x² − 5x + 6 for x = 1, 2, 3, 4: you get 2, 0, 0, 2.",
-        "It hits zero at x = 2 and x = 3 — those are the solutions, and 3 is larger."
+        "Work out $x^2 - 5x + 6$ for the inputs $1, 2, 3, 4$, which gives the values $2, 0, 0, 2$.",
+        "The expression equals zero at $x = 2$ and at $x = 3$, so those are the two solutions.",
+        "The larger of the two solutions is $3$."
       ]
     },
     {
       "title": "Where the U crosses the floor",
       "steps": [
-        "The graph of y = x² − 5x + 6 is a U. Solving = 0 asks where the U touches the x-axis floor.",
-        "The U dips down and crosses at x = 2 and x = 3, so the larger crossing is 3."
+        "The graph of $y = x^2 - 5x + 6$ is a U, and solving the equation asks where the U meets the $x$-axis.",
+        "The U dips just below the axis and crosses it at $x = 2$ and again at $x = 3$.",
+        "The crossing that is further right is the larger solution, $3$."
       ]
     }
   ],

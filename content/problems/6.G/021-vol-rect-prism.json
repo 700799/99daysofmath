@@ -33,6 +33,16 @@
     "The prism is $5$ layers tall, so it holds $12 \\times 5 = 60$ cubes.",
     "The volume of the prism is $60$ cubic units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Slice it another way",
+      "steps": [
+        "Stand the prism so that a $4$ by $5$ face is at the front; that face shows $4 \\times 5 = 20$ cubes.",
+        "Behind that face the prism is $3$ cubes deep, so it is made of $3$ equal slices.",
+        "Three slices of $20$ cubes give $20 \\times 3 = 60$, so the volume is $60$ cubic units."
+      ]
+    }
+  ],
   "tags": [
     "volume",
     "prism"

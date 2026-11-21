@@ -34,6 +34,16 @@
     "For example $-3$ and $-10$ are solutions, and both sit left of $-2$.",
     "So the arrow starts at $-2$ and points left."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Test a number on each side",
+      "steps": [
+        "Pick a number on each side of $-2$, for example $-5$ on the left and $0$ on the right.",
+        "Test them: $-5 < -2$ is true, but $0 < -2$ is false.",
+        "The number that worked is on the left of $-2$, so the arrow points left."
+      ]
+    }
+  ],
   "tags": [
     "inequality"
   ],

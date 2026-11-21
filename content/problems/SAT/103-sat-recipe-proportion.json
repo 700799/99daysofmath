@@ -36,9 +36,9 @@
     {
       "title": "Find the rate per cookie first",
       "steps": [
-        "$2$ cups makes $24$ cookies, so one cookie takes $\\dfrac{2}{24} = \\dfrac{1}{12}$ cup.",
-        "$60$ cookies then take $60 \\times \\dfrac{1}{12} = 5$ cups.",
-        "The unit-rate route takes one extra step but reads more naturally, and it makes the answer easy to sanity-check."
+        "Two cups make $24$ cookies, so one cookie uses $\\dfrac{2}{24} = \\dfrac{1}{12}$ of a cup.",
+        "Multiply that unit rate by the number of cookies wanted: $60 \\times \\dfrac{1}{12}$.",
+        "The result is $5$ cups of flour, which is sensible because $60$ cookies is two and a half batches."
       ]
     }
   ],

@@ -39,16 +39,17 @@
     {
       "title": "Scissors-and-tape picture",
       "steps": [
-        "Cut the 4-by-4 photo hole out of the x-by-x poster and snip the leftover L-shape into two pieces.",
-        "Slide the pieces into one rectangle: it measures (x + 4) by (x − 4).",
-        "The rectangle sides show a = 4."
+        "Cut the $4$-by-$4$ photo out of the corner of the $x$-by-$x$ poster, then slice the leftover L-shape into two rectangles.",
+        "Slide one rectangle next to the other and they join into a single rectangle measuring $(x + 4)$ by $(x - 4)$.",
+        "Comparing those sides with $(x + a)(x - a)$ shows that $a = 4$."
       ]
     },
     {
       "title": "Check by expanding",
       "steps": [
-        "Expand (x + 4)(x − 4): x² − 4x + 4x − 16 = x² − 16.",
-        "The middle terms cancel, and the match confirms a = 4."
+        "Test the value $a = 4$ by expanding $(x + 4)(x - 4)$ into $x^2 - 4x + 4x - 16$.",
+        "The middle terms cancel, which leaves $x^2 - 16$.",
+        "That matches the leftover area, so $a = 4$."
       ]
     }
   ],

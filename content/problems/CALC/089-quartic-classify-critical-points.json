@@ -61,9 +61,9 @@
     {
       "title": "Second Derivative Test, and where it fails",
       "steps": [
-        "$f''(x) = 12x^2 - 24x = 12x(x - 2)$. At $x = 3$: $f''(3) = 36 > 0$, so a local minimum. ✓",
-        "At $x = 0$: $f''(0) = 0$, so the test is INCONCLUSIVE — it does not say \"no extremum,\" it says \"look harder.\"",
-        "Looking harder (the sign chart of $f'$) shows no sign change at $0$. Always fall back to the first-derivative sign chart when $f'' = 0$."
+        "Compute $f''(x) = 12x^2 - 24x = 12x(x - 2)$. At the critical point $x = 3$, $f''(3) = 36 > 0$, so there is a local minimum.",
+        "At the critical point $x = 0$, $f''(0) = 0$, so the test is **inconclusive**. It does not say there is no extremum, only that more work is needed.",
+        "The sign chart of $f'(x) = 4x^2(x - 3)$ shows $f'$ is negative on both sides of $0$, so there is no extremum there. That confirms choice A."
       ]
     }
   ],

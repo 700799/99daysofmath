@@ -34,8 +34,9 @@
     {
       "title": "Sanity-check the shape",
       "steps": [
-        "A $76^\\circ$ peak is wider than each $52^\\circ$ base angle, so the tent is a bit squat — that matches a tent with a broad base.",
-        "Check the total: $52 + 52 + 76 = 180$. ✓"
+        "Fold the tent down the middle from the peak to the ground, which makes two matching right triangles with angles $90^\\circ$ and $52^\\circ$.",
+        "Each right triangle has $90 - 52 = 38^\\circ$ left at the top, and the peak is two of those, so it measures $2 \\times 38 = 76^\\circ$.",
+        "The shape is sensible, since a $76^\\circ$ peak is wider than each $52^\\circ$ base angle and the total $52 + 52 + 76 = 180$ is correct."
       ]
     }
   ],

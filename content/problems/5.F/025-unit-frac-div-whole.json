@@ -36,8 +36,9 @@
     {
       "title": "Picture it",
       "steps": [
-        "Half a pizza shared by 4 friends.",
-        "The whole pizza would give each person $\\frac{1}{8}$ × 2 = wait — half gives each $\\frac{1}{8}$ of the whole pizza."
+        "Think of half a pizza being shared equally by $4$ friends.",
+        "Cut the whole pizza into $8$ equal slices, so the half that is left has exactly $4$ slices.",
+        "Each friend gets one of those slices, and one slice is $\\frac{1}{8}$ of the whole pizza, so $\\frac{1}{2} \\div 4 = \\frac{1}{8}$."
       ]
     }
   ],

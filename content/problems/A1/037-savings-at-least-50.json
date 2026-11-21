@@ -34,8 +34,9 @@
     {
       "title": "Track the jar week by week",
       "steps": [
-        "Week 1: $\\$26$. Week 2: $\\$34$. Week 3: $\\$42$. Week 4: $\\$50$.",
-        "Week 4 is the first time the jar reaches $\\$50$, so 4 weeks is the fewest."
+        "Track the money week by week, starting from $18$ dollars and adding $8$ dollars each week.",
+        "The totals are $26$, $34$, $42$ and $50$ dollars after weeks $1$, $2$, $3$ and $4$.",
+        "Week $4$ is the first time the total reaches $50$ dollars, so the fewest number of weeks is $4$."
       ]
     }
   ],

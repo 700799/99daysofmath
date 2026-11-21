@@ -44,17 +44,17 @@
     {
       "title": "A shortcut through the reference angle",
       "steps": [
-        "$105^\\circ$ is in quadrant II, where cosine is negative, and its reference angle is $180^\\circ - 105^\\circ = 75^\\circ$.",
-        "So $\\cos 105^\\circ = -\\cos 75^\\circ$.",
-        "Since $\\cos 75^\\circ = \\frac{\\sqrt{6} - \\sqrt{2}}{4}$, we get $\\cos 105^\\circ = \\frac{\\sqrt{2} - \\sqrt{6}}{4}$ — the same answer."
+        "The angle $105^\\circ$ is in Quadrant II, where cosine is negative, and its reference angle is $180^\\circ - 105^\\circ = 75^\\circ$.",
+        "That means $\\cos 105^\\circ = -\\cos 75^\\circ$, and the sum formula gives $\\cos 75^\\circ = \\cos(45^\\circ + 30^\\circ) = \\frac{\\sqrt{6} - \\sqrt{2}}{4}$.",
+        "Changing the sign gives $\\cos 105^\\circ = \\frac{\\sqrt{2} - \\sqrt{6}}{4}$, the same answer."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "The most common wrong answer is the positive $\\frac{\\sqrt{6} - \\sqrt{2}}{4}$, obtained by subtracting the smaller root from the larger one out of habit.",
-        "But $105^\\circ$ is obtuse, and cosine is NEGATIVE for every obtuse angle — a positive answer cannot possibly be right.",
-        "Before writing your final line, ask which quadrant the angle is in and check the sign matches. Here it must be negative, so $\\frac{\\sqrt{2} - \\sqrt{6}}{4}$."
+        "The most common wrong answer is the positive value $\\frac{\\sqrt{6} - \\sqrt{2}}{4}$, from subtracting the smaller root from the larger one out of habit.",
+        "But $105^\\circ$ is obtuse, and cosine is negative for every obtuse angle, so a positive answer cannot be right.",
+        "Check the quadrant before the final line: the value must be negative, so it is $\\frac{\\sqrt{2} - \\sqrt{6}}{4} \\approx -0.259$."
       ]
     }
   ],

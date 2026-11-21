@@ -61,9 +61,9 @@
     {
       "title": "Test both suspects numerically",
       "steps": [
-        "Near $x = 2$: $f(2.01) = \\frac{4.01}{3.01} \\approx 1.332$, $f(1.99) \\approx 1.334$. Calm values near $\\frac{4}{3}$ — a hole.",
-        "Near $x = -1$: $f(-0.99) = \\frac{1.01}{0.01} = 101$, $f(-1.01) = \\frac{0.99}{-0.01} = -99$. Exploding — an asymptote.",
-        "Only the uncancelled factor produces the explosion."
+        "Test near $x = 2$: $f(2.01) = \\frac{4.01}{3.01} \\approx 1.332$ and $f(1.99) = \\frac{3.99}{2.99} \\approx 1.334$. These calm values near $\\frac{4}{3}$ show a hole.",
+        "Test near $x = -1$: $f(-0.99) = \\frac{1.01}{0.01} = 101$ and $f(-1.01) = \\frac{0.99}{-0.01} = -99$. These exploding values show a vertical asymptote.",
+        "So the graph has a hole at $x = 2$ and an asymptote at $x = -1$, which is choice B. Only the factor that does not cancel produces the explosion."
       ]
     }
   ],

@@ -38,6 +38,17 @@
     "Add the four distances to get the total deviation: $4 + 1 + 2 + 3 = 10$.",
     "Divide by the number of values: $10 \\div 4 = 2.5$, so the MAD is $2.5$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Use the balance shortcut",
+      "steps": [
+        "The mean is $24 \\div 4 = 6$, and the mean is the balance point of the data.",
+        "Below the mean, the values $2$ and $5$ are $4$ and $1$ away, a total of $5$.",
+        "At a balance point the distances above must total the same, and $8$ and $9$ give $2 + 3 = 5$, so the full total is $2 \\times 5 = 10$.",
+        "Averaging over the $4$ values gives $10 \\div 4 = 2.5$, so the MAD is $2.5$."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "MAD"

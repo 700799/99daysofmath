@@ -34,18 +34,19 @@
     "Two groups of twelve make $2 \\times 12 = 24$ inches.",
     "Two feet are the same length as $24$ inches."
   ],
-  "tags": [
-    "conversion",
-    "length"
-  ],
-  "estimatedSeconds": 35,
   "alternativeExplanations": [
     {
       "title": "Check the answer",
       "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: 24 — verified."
+        "Picture two rulers laid end to end, each one $1$ foot long and marked with $12$ inches.",
+        "Count the inches along both rulers: $12$ on the first and $12$ more on the second make $24$.",
+        "Check by dividing back: $24 \\div 12 = 2$ feet, so $2$ feet is $24$ inches."
       ]
     }
-  ]
+  ],
+  "tags": [
+    "conversion",
+    "length"
+  ],
+  "estimatedSeconds": 35
 }

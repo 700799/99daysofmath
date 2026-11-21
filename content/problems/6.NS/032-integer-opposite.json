@@ -39,30 +39,31 @@
     "The opposite of $a = 7$ is $-7$, which means $b = -7$.",
     "Now compute $a - b = 7 - (-7)$. Subtracting a negative is the same as adding, so this is $7 + 7 = 14$, and the answer is $14$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Number-line picture",
+      "steps": [
+        "Mark $-7$ on a number line. Its opposite is the mirror image across $0$, which is $7$, so $a = 7$.",
+        "Now mirror $a = 7$ across $0$ again. That lands back on $-7$, so $b = -7$.",
+        "The value $a - b$ is how far you travel from $b$ up to $a$: $7$ units from $-7$ to $0$ and $7$ more to reach $7$.",
+        "The total trip is $7 + 7 = 14$ units, so $a - b = 14$."
+      ]
+    },
+    {
+      "title": "Why two flips undo",
+      "steps": [
+        "Taking the opposite twice brings any number home, since $-(-n) = n$. So $b$, the opposite of the opposite of $-7$, is $-7$ itself.",
+        "The number $a$ is just one flip away from $-7$, so $a = 7$, and $a$ and $b$ are opposites of each other.",
+        "Subtracting an opposite doubles the number: $a - b = 7 - (-7) = 7 + 7 = 14$."
+      ]
+    }
+  ],
   "tags": [
     "integer",
     "opposite",
     "MAP-practice"
   ],
   "estimatedSeconds": 90,
-  "alternativeExplanations": [
-    {
-      "title": "Number-line picture",
-      "steps": [
-        "Plot $-7$ on a number line. Its opposite is the **mirror image** across $0$: that's $+7$. So $a = 7$.",
-        "Now plot $a = 7$ and mirror across $0$ again: back to $-7$. So $b = -7$.",
-        "$a - b$ = distance from $b$ to $a$ moving right = $7 - (-7) = 14$ units."
-      ]
-    },
-    {
-      "title": "Why two flips undo",
-      "steps": [
-        "The opposite operation is its own inverse: opposite-of-opposite gets you home.",
-        "$-(-n) = n$ for every number $n$.",
-        "So whenever you see double negatives, cancel them in pairs."
-      ]
-    }
-  ],
   "diagram": {
     "kind": "inline-svg",
     "alt": "Number line marking -7 and its opposite",

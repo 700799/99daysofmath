@@ -32,17 +32,18 @@
     "$Q_3$ is the median of the upper half, which has two middle values, $6$ and $7$.",
     "Average them: $(6 + 7) \\div 2 = 6.5$, so the upper quartile is $Q_3 = 6.5$."
   ],
-  "tags": [
-    "quartile"
-  ],
-  "estimatedSeconds": 60,
   "alternativeExplanations": [
     {
       "title": "Check the answer",
       "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: 6.5 — verified."
+        "$Q_3$ should split the upper half $5, 6, 7, 8$ into two equal parts, so test $6.5$.",
+        "The values $5$ and $6$ are below $6.5$, and the values $7$ and $8$ are above it.",
+        "Two on each side within the upper half confirms $Q_3 = 6.5$."
       ]
     }
-  ]
+  ],
+  "tags": [
+    "quartile"
+  ],
+  "estimatedSeconds": 60
 }

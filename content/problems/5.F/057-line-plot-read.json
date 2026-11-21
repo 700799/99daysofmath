@@ -35,6 +35,16 @@
     "The Xs are stacked above the length they belong to, so look only at the stack above $\\frac{1}{2}$.",
     "That stack has $3$ Xs, so $3$ ribbons measured $\\frac{1}{2}$ foot."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Turn the plot into a table",
+      "steps": [
+        "Copy the line plot into a tally table with one row for each length marked on the line.",
+        "Each X is one ribbon, so the rows read: $\\frac{1}{4}$ foot has $2$, $\\frac{1}{2}$ foot has $3$, and $\\frac{3}{4}$ foot has $1$.",
+        "The row for $\\frac{1}{2}$ foot shows $3$, so $3$ ribbons measured $\\frac{1}{2}$ foot."
+      ]
+    }
+  ],
   "tags": [
     "line-plot",
     "data"

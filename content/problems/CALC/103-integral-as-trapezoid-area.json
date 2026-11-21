@@ -34,9 +34,9 @@
     {
       "title": "Rectangle plus triangle",
       "steps": [
-        "Split the region: a rectangle $6$ wide and $2$ tall (area $12$) under a triangle with base $6$ and height $6$ (area $18$).",
-        "$12 + 18 = 30$.",
-        "Any honest decomposition of the same region gives the same integral."
+        "Split the region under the line into a rectangle $6$ wide and $2$ tall, with a triangle sitting on top of it.",
+        "The rectangle has area $6 \\cdot 2 = 12$. The triangle has base $6$ and height $8 - 2 = 6$, so its area is $\\frac{1}{2}(6)(6) = 18$.",
+        "The total is $12 + 18 = 30$. Any correct way of cutting up the same region gives the same integral."
       ]
     }
   ],

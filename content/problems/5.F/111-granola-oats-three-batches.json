@@ -38,8 +38,9 @@
     {
       "title": "Just add them up",
       "steps": [
-        "$\\frac{2}{3} + \\frac{2}{3} + \\frac{2}{3} = \\frac{6}{3}$.",
-        "Three thirds make one whole, so six thirds make $2$ wholes."
+        "Three batches means adding the oats three times: $\\frac{2}{3} + \\frac{2}{3} + \\frac{2}{3} = \\frac{6}{3}$.",
+        "Three thirds make one whole cup, so six thirds make two whole cups.",
+        "Maya needs $2$ cups of oats for the three batches."
       ]
     }
   ],

@@ -34,8 +34,9 @@
     {
       "title": "Multiply straight across",
       "steps": [
-        "$\\frac{3}{5} \\times 40 = \\frac{120}{5}$.",
-        "$120 \\div 5 = 24$."
+        "Write the whole number as a fraction and multiply the tops: $\\frac{3}{5} \\times \\frac{40}{1} = \\frac{120}{5}$.",
+        "The fraction bar means division, and $120 \\div 5 = 24$.",
+        "So $24$ students take the bus, which is a bit more than half of the class of $40$."
       ]
     }
   ],

@@ -36,6 +36,25 @@
     "The data set now has one more value, so the count is $5$ instead of $4$.",
     "Divide the new total by the new count: $94 \\div 5 = 18.8$, so the new mean is $18.8$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Share out the extra",
+      "steps": [
+        "Imagine all five values starting at the old mean, $11$, so the outlier is the only one that is different.",
+        "The outlier $50$ is $50 - 11 = 39$ above that level, and this extra must be shared among all $5$ values.",
+        "Each value's share of the extra is $39 \\div 5 = 7.8$.",
+        "The mean rises from $11$ to $11 + 7.8 = 18.8$, so the new mean is $18.8$."
+      ]
+    },
+    {
+      "title": "Estimate, then check the total",
+      "steps": [
+        "One value of $50$ among five adds about $50 \\div 5 = 10$ to the mean, so expect an answer somewhat under $21$.",
+        "Test $18.8$ by rebuilding the total: five values at $18.8$ each make $5 \\times 18.8 = 94$.",
+        "The real total is $8 + 10 + 12 + 14 + 50 = 94$ too, so the new mean of $18.8$ is confirmed."
+      ]
+    }
+  ],
   "tags": [
     "CA",
     "mean",

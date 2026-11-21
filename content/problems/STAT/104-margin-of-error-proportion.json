@@ -35,9 +35,9 @@
     {
       "title": "Check the conditions first",
       "steps": [
-        "Random sample ✓. Successes $160 \\ge 10$ and failures $240 \\ge 10$ ✓. 400 is surely less than $10\\%$ of all commuters ✓.",
-        "With conditions met, the one-proportion $z$-interval applies: $\\hat{p} \\pm z^* \\sqrt{\\hat{p}(1-\\hat{p})/n}$.",
-        "The $\\pm$ part is $1.96 \\times 0.0245 \\approx 0.048$."
+        "Confirm the interval is allowed: the sample is random, there are $160$ successes and $240$ failures (both at least $10$), and $400$ commuters is under $10$ percent of all commuters.",
+        "With the conditions met, the interval is $\\hat{p} \\pm z^* \\sqrt{\\hat{p}(1-\\hat{p})/n}$ with $\\hat{p} = 0.40$, and the margin of error is the part after the $\\pm$ sign.",
+        "Multiplying the critical value by the standard error gives that part: $1.96 \\times \\sqrt{(0.4)(0.6)/400} = 1.96 \\times 0.0245 \\approx 0.048$."
       ]
     }
   ],

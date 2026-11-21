@@ -31,6 +31,16 @@
     "The right side becomes $24 \\div 3 = 8$, so the result is $x = 8$.",
     "Check: $3 \\times 8 = 24$ is true, so the solution is $x = 8$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Skip count by 3",
+      "steps": [
+        "The equation says that $x$ jumps of $3$ land exactly on $24$.",
+        "Skip count and keep a tally of the jumps: $3, 6, 9, 12, 15, 18, 21, 24$.",
+        "It took $8$ jumps to reach $24$, so the solution is $x = 8$."
+      ]
+    }
+  ],
   "tags": [
     "solve"
   ],

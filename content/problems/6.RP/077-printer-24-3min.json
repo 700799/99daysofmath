@@ -35,8 +35,9 @@
     {
       "title": "Ratio scaling",
       "steps": [
-        "$3$ min : $24$ pages. Multiply both by $10/3$.",
-        "$3 \\times \\tfrac{10}{3} = 10$ and $24 \\times \\tfrac{10}{3} = 80$."
+        "Triple the pair $3$ minutes for $24$ pages to get $9$ minutes for $72$ pages.",
+        "One more minute is a third of the first pair, which is $24 \\div 3 = 8$ pages.",
+        "Add the two amounts for $9 + 1 = 10$ minutes: $72 + 8 = 80$ pages."
       ]
     }
   ],

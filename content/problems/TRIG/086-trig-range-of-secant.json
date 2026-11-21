@@ -56,9 +56,10 @@
     {
       "title": "Try a few numbers",
       "steps": [
-        "$\\cos x = 1 \\Rightarrow \\sec x = 1$. $\\cos x = 0.5 \\Rightarrow \\sec x = 2$. $\\cos x = 0.1 \\Rightarrow \\sec x = 10$.",
-        "As cosine shrinks toward $0$, secant races off to infinity.",
-        "There is no value of $x$ that makes $\\sec x$ equal, say, $0.4$ — nothing lands inside the gap."
+        "Pick some cosine values and flip them: $\\cos x = 1$ gives $\\sec x = 1$, $\\cos x = 0.5$ gives $\\sec x = 2$, and $\\cos x = 0.1$ gives $\\sec x = 10$.",
+        "Negative cosines behave the same way: $\\cos x = -1$ gives $\\sec x = -1$ and $\\cos x = -0.25$ gives $\\sec x = -4$.",
+        "Getting $\\sec x = 0.4$ would need $\\cos x = 2.5$, which is impossible, so nothing lands between $-1$ and $1$.",
+        "The outputs are all $y \\le -1$ or $y \\ge 1$, which is choice A."
       ]
     }
   ],

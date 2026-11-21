@@ -40,17 +40,17 @@
     {
       "title": "Write it as a shrinking line",
       "steps": [
-        "$[(18 + 6) \\div 3] \\times [15 - (2 \\times 4)]$",
-        "$= [24 \\div 3] \\times [15 - 8]$",
-        "$= 8 \\times 7 = 56$."
+        "Rewrite the whole line after each round of work, starting with both inner parentheses: $[24 \\div 3] \\times [15 - 8]$.",
+        "Now finish each bracket to shrink the line again: $8 \\times 7$.",
+        "Only one multiplication is left to do, and $8 \\times 7 = 56$."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "A very common wrong answer is $140$: that comes from reading the left bracket as $18 + 6 \\div 3 = 18 + 2 = 20$, then $20 \\times 7$.",
-        "The inner parentheses around $18 + 6$ are exactly what stops that — they say add first, divide second.",
-        "Escape it by copying the expression and physically crossing out each pair of parentheses as you finish it, so you never skip one."
+        "A very common wrong answer is $140$, from reading the left bracket as $18 + 6 \\div 3 = 18 + 2 = 20$ and then $20 \\times 7$.",
+        "The inner parentheses around $18 + 6$ are there to stop that, because they say add first and divide second.",
+        "Cross out each pair of parentheses as you finish it: $24 \\div 3 = 8$, $15 - 8 = 7$, and $8 \\times 7 = 56$."
       ]
     }
   ],

@@ -33,21 +33,22 @@
     "Do the division: $96 \\div 6 = 16$, which checks because $6 \\times 16 = 96$.",
     "The area of one face is $16$ square units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Check by building the total back up from one face.",
+        "Six faces of $16$ can be added in parts: $6 \\times 10 = 60$ and $6 \\times 6 = 36$.",
+        "Together that is $60 + 36 = 96$, which matches the total, so one face has area $16$ square units."
+      ]
+    }
+  ],
   "tags": [
     "surface-area",
     "cube",
     "inverse"
   ],
   "estimatedSeconds": 45,
-  "alternativeExplanations": [
-    {
-      "title": "Check the answer",
-      "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: 16 — verified."
-      ]
-    }
-  ],
   "diagram": {
     "kind": "inline-svg",
     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 250\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"126\" y=\"44\" width=\"48\" height=\"48\" rx=\"3\" fill=\"#F59E0B1e\" stroke=\"#F59E0B\" stroke-width=\"2.2\"/><text x=\"150\" y=\"73\" font-size=\"12\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"middle\">1</text><rect x=\"126\" y=\"92\" width=\"48\" height=\"48\" rx=\"3\" fill=\"#F59E0B1e\" stroke=\"#F59E0B\" stroke-width=\"2.2\"/><text x=\"150\" y=\"121\" font-size=\"12\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"middle\">2</text><rect x=\"126\" y=\"140\" width=\"48\" height=\"48\" rx=\"3\" fill=\"#F59E0B1e\" stroke=\"#F59E0B\" stroke-width=\"2.2\"/><text x=\"150\" y=\"169\" font-size=\"12\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"middle\">3</text><rect x=\"126\" y=\"188\" width=\"48\" height=\"48\" rx=\"3\" fill=\"#F59E0B1e\" stroke=\"#F59E0B\" stroke-width=\"2.2\"/><text x=\"150\" y=\"217\" font-size=\"12\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"middle\">4</text><rect x=\"78\" y=\"92\" width=\"48\" height=\"48\" rx=\"3\" fill=\"#F59E0B1e\" stroke=\"#F59E0B\" stroke-width=\"2.2\"/><text x=\"102\" y=\"121\" font-size=\"12\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"middle\">5</text><rect x=\"174\" y=\"92\" width=\"48\" height=\"48\" rx=\"3\" fill=\"#F59E0B1e\" stroke=\"#F59E0B\" stroke-width=\"2.2\"/><text x=\"198\" y=\"121\" font-size=\"12\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"middle\">6</text><text x=\"150\" y=\"30\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">the cube, unfolded</text><text x=\"292\" y=\"128\" font-size=\"12\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">six faces, 96</text><text x=\"292\" y=\"144\" font-size=\"12\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">in all</text><text x=\"180\" y=\"246\" font-size=\"12\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">one face = ?</text></svg>",

@@ -36,9 +36,9 @@
     {
       "title": "What each form gives you",
       "steps": [
-        "Standard form $ax^2 + bx + c$ displays the $y$-intercept, $c$.",
-        "Factored form $a(x - p)(x - q)$ displays the zeros, $p$ and $q$.",
-        "Vertex form $a(x - h)^2 + k$ displays the vertex, $(h, k)$. Questions asking which form \"displays\" a feature are testing exactly this table."
+        "Standard form $ax^2 + bx + c$ shows the $y$-intercept $c$, while factored form shows the zeros and vertex form shows the vertex.",
+        "This equation is already in standard form, so the feature it displays is the constant, $c = 8$.",
+        "Its factored form $(x - 2)(x - 4)$ agrees: at $x = 0$ it gives $(-2)(-4) = 8$, so the $y$-intercept is $8$."
       ]
     }
   ],

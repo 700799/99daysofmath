@@ -42,16 +42,17 @@
     {
       "title": "Substitute a convenient value",
       "steps": [
-        "Since the identity holds for every $x$, pick one that simplifies things — say $x = 0$.",
-        "The left becomes $a \\cdot 3 = 3a$ and the right becomes $b$, so $b = 3a$ immediately.",
-        "Then use $x = 1$: $(1 + a)(4) = 1 + 11 + b$, so $4 + 4a = 12 + 3a$ and $a = 8$, giving $b = 24$."
+        "The equation holds for every $x$, so try $x = 0$: the left side is $3a$ and the right side is $b$, so $b = 3a$.",
+        "Try the value $x = 1$ next, which gives $(1 + a)(4) = 1 + 11 + b$, which is $4 + 4a = 12 + b$.",
+        "Replace $b$ with $3a$ to get $4 + 4a = 12 + 3a$, so $a = 8$ and $b = 3(8) = 24$."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "a = 8 is the halfway answer — correct work, wrong quantity, and it is among the choices.",
-        "The question asks for b, which is 3a. Note the target before matching coefficients so the last step happens."
+        "Matching the $x$-terms gives $a + 3 = 11$, so $a = 8$, but that is not what the question asks for.",
+        "The question asks for $b$, which is the constant term $3a$ of the expanded left side.",
+        "Finishing that last step gives the value asked for, $b = 3(8) = 24$."
       ]
     }
   ],

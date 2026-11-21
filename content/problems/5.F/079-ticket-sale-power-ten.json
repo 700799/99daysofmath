@@ -43,16 +43,17 @@
     {
       "title": "Subtract in friendly pieces",
       "steps": [
-        "$\\$8{,}000 - \\$1{,}000 = \\$7{,}000$.",
-        "Then take off the last $\\$500$: $\\$7{,}000 - \\$500 = \\$6{,}500$ ✓"
+        "The money from ticket sales is $10^3 \\times 8 = 1{,}000 \\times 8 = 8{,}000$ dollars.",
+        "Split the cost of $1{,}500$ into $1{,}000$ and $500$, then take off the thousand first: $8{,}000 - 1{,}000 = 7{,}000$.",
+        "Take off the last $500$ to finish: $7{,}000 - 500 = 6{,}500$ dollars left."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "A very common wrong answer is $\\$8{,}000$ — the money taken in, with the costs never subtracted.",
-        "Another is treating $10^3$ as $30$ (multiplying the base by the exponent), which gives $30 \\times 8 = 240$ and a nonsense total.",
-        "$10^3$ means $10 \\times 10 \\times 10 = 1{,}000$, and the word \"left\" tells you a subtraction still has to happen: $8{,}000 - 1{,}500 = 6{,}500$."
+        "A very common wrong answer is $8{,}000$, the money taken in, with the costs never subtracted.",
+        "Another mistake is reading $10^3$ as $10 \\times 3 = 30$, which gives only $30 \\times 8 = 240$ dollars of sales.",
+        "Remember that $10^3$ means $10 \\times 10 \\times 10 = 1{,}000$, and the word **left** calls for a subtraction: $8{,}000 - 1{,}500 = 6{,}500$."
       ]
     }
   ],

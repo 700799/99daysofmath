@@ -58,9 +58,9 @@
     {
       "title": "Compare two inputs",
       "steps": [
-        "At $t = 3$: $C = 32(3) + 150 = \\$246$. At $t = 4$: $C = 32(4) + 150 = \\$278$.",
-        "One extra hour of work added exactly $\\$32$ to the bill.",
-        "That is the definition of the slope in this context — what one more hour costs."
+        "Work out the cost for $3$ hours and for $4$ hours: $C(3) = 32(3) + 150 = 246$ and $C(4) = 32(4) + 150 = 278$.",
+        "One extra hour of work raised the bill by $278 - 246 = 32$ dollars.",
+        "So $32$ is what each additional hour costs, the cost per hour of work, which is choice B."
       ]
     }
   ],

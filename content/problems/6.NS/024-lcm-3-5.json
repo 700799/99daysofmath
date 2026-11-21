@@ -31,6 +31,16 @@
     "Multiply to find it: $3 \\times 5 = 15$. The lists $3, 6, 9, 12, 15$ and $5, 10, 15$ confirm this.",
     "So the least common multiple of $3$ and $5$ is $15$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Test multiples of 5",
+      "steps": [
+        "Any common multiple is a multiple of $5$, so walk through $5, 10, 15$ and test each one for division by $3$.",
+        "Neither $5$ nor $10$ can be divided by $3$ without a remainder, so both are ruled out.",
+        "But $15 \\div 3 = 5$ exactly, so $15$ is the first number both $3$ and $5$ divide, and the LCM is $15$."
+      ]
+    }
+  ],
   "tags": [
     "lcm"
   ],

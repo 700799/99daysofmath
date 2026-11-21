@@ -35,8 +35,9 @@
     {
       "title": "Check by multiplying back",
       "steps": [
-        "$182 \\times 24 = 182 \\times 20 + 182 \\times 4$.",
-        "$3{,}640 + 728 = 4{,}368$ ✓"
+        "If $182$ is right, then $182$ groups of $24$ must rebuild $4{,}368$.",
+        "Split the $24$ into $20 + 4$ and multiply each part: $182 \\times 20 = 3{,}640$ and $182 \\times 4 = 728$.",
+        "Add the parts: $3{,}640 + 728 = 4{,}368$, which matches, so the quotient is $182$."
       ]
     }
   ],

@@ -34,9 +34,9 @@
     {
       "title": "Ask the backwards question",
       "steps": [
-        "Instead of \"what comes out of 20?\", ask \"what number goes IN to get 20 out?\"",
-        "You need $x + 9 = 20$.",
-        "Solve: $x = 11$."
+        "The inverse asks a backwards question: which input did $f$ turn into the output $20$?",
+        "Write that question as an equation using the rule for $f$: $x + 9 = 20$.",
+        "Subtracting $9$ from both sides gives $x = 11$, so $f^{-1}(20) = 11$."
       ]
     }
   ],

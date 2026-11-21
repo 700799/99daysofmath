@@ -42,11 +42,9 @@
     {
       "title": "Repeated subtraction",
       "steps": [
-        "$60 - 12 = 48$; one book bought.",
-        "$48 - 12 = 36$; two.",
-        "$36 - 12 = 24$; three.",
-        "$24 - 12 = 12$; four.",
-        "$12 - 12 = 0$; five."
+        "Buy one book at a time and watch the money go down: $60 - 12 = 48$ and then $48 - 12 = 36$ after two books.",
+        "Keep going: $36 - 12 = 24$ after three books and $24 - 12 = 12$ after four.",
+        "A fifth book uses the last $12$ dollars, so you can buy $5$ books."
       ]
     }
   ],

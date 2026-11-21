@@ -37,8 +37,9 @@
     {
       "title": "Add the exponents",
       "steps": [
-        "$10^2 \\times 10^3$ means $(10 \\times 10) \\times (10 \\times 10 \\times 10)$.",
-        "That is five tens multiplied together, so $10^5 = 100{,}000$ ✓"
+        "Write out both powers as strings of tens: $10^2 \\times 10^3$ means $(10 \\times 10) \\times (10 \\times 10 \\times 10)$.",
+        "Count the tens being multiplied: there are $2 + 3 = 5$ of them, so the product is $10^5$.",
+        "A $1$ followed by five zeros is $100{,}000$, so the world holds $100{,}000$ blocks."
       ]
     }
   ],

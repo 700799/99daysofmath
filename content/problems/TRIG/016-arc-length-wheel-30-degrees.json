@@ -39,9 +39,9 @@
     {
       "title": "Slice of the whole rim",
       "steps": [
-        "The full rim is a circumference of $2\\pi r = 24\\pi$ inches.",
-        "$30^\\circ$ is $\\frac{30}{360} = \\frac{1}{12}$ of the circle.",
-        "$\\frac{1}{12} \\times 24\\pi = 2\\pi$ inches."
+        "The full rim is one circumference, which is $2\\pi r = 2\\pi(12) = 24\\pi$ inches.",
+        "A turn of $30^\\circ$ is $\\frac{30}{360} = \\frac{1}{12}$ of a full turn, so the gum covers one twelfth of the rim.",
+        "One twelfth of $24\\pi$ is $2\\pi$ inches, the same distance the arc formula gives."
       ]
     }
   ],

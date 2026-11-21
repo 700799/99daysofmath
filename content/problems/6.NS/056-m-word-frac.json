@@ -36,6 +36,17 @@
     "Simplify the result and write it as a mixed number: $\\frac{15}{6} = \\frac{5}{2} = 2\\frac{1}{2}$.",
     "So $2$ full pieces can be cut, and the leftover ribbon is only half of a piece. The answer is $2$ pieces."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Count in sixths",
+      "steps": [
+        "Measure everything in sixths of a meter: the ribbon is $\\frac{5}{6}$, and one piece is $\\frac{1}{3} = \\frac{2}{6}$.",
+        "Each piece uses $2$ sixths, so two pieces use $4$ sixths and three pieces would need $6$ sixths.",
+        "The ribbon has only $5$ sixths, so the third piece cannot be finished and $\\frac{1}{6}$ meter is left over.",
+        "That means exactly $2$ full pieces can be cut."
+      ]
+    }
+  ],
   "tags": [
     "CA",
     "fraction-division",

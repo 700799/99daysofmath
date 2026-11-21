@@ -39,9 +39,9 @@
     {
       "title": "Run it forward to check",
       "steps": [
-        "Start at $\\$50$. Take $20\\%$ off: that is $\\$10$ off, leaving $\\$40$.",
-        "Add the $\\$5$ shipping: $\\$45$.",
-        "That matches what you paid, so $\\$50$ is right."
+        "Try a starting price of $50$ dollars, since $20\\%$ of $50$ is an easy $10$ dollars.",
+        "Taking $10$ dollars off leaves $40$ dollars, and the flat shipping charge raises that to $40 + 5 = 45$ dollars.",
+        "The forward run ends at the $45$ dollars you paid, so the original price was $50$ dollars."
       ]
     }
   ],

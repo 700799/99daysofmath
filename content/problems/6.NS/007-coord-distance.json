@@ -23,17 +23,18 @@
     {
       "title": "Count along the y-axis",
       "steps": [
-        "Start at $(3, 2)$. To reach $(3, -4)$, go **down**.",
-        "From $y = 2$ down to $y = 0$: $2$ units.",
-        "From $y = 0$ down to $y = -4$: $4$ units.",
-        "Total: $2 + 4 = 6$ units."
+        "Both points sit on the line $x = 3$, so start at $(3, 2)$ and move straight **down** to $(3, -4)$.",
+        "Going from $y = 2$ down to the $x$-axis at $y = 0$ takes $2$ units.",
+        "Going from $y = 0$ down to $y = -4$ takes $4$ more units on the other side of the axis.",
+        "The whole trip is $2 + 4 = 6$ units, so the distance between the points is $6$."
       ]
     },
     {
       "title": "Use absolute values",
       "steps": [
-        "When points share an $x$-coordinate, distance $= |y_1 - y_2|$.",
-        "$|2 - (-4)| = |6| = 6$."
+        "The $x$-coordinates match, so the distance is the absolute value of the difference of the $y$-coordinates: $|y_1 - y_2|$.",
+        "Put in the two heights: $|2 - (-4)| = |2 + 4| = |6|$, because subtracting $-4$ adds $4$.",
+        "The absolute value of $6$ is $6$, so the points are $6$ units apart."
       ]
     }
   ],

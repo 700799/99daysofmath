@@ -33,17 +33,18 @@
     "Use the easier fact $18 \\div 3 = 6$ to see that $180 \\div 3$ is $60$.",
     "The car's speed is $60$ miles per hour."
   ],
-  "tags": [
-    "unit-rate"
-  ],
-  "estimatedSeconds": 35,
   "alternativeExplanations": [
     {
       "title": "Check the answer",
       "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: 60 — verified."
+        "Guess a speed and test it by multiplying by the $3$ hours, since speed times time gives distance.",
+        "A guess of $50$ gives $50 \\times 3 = 150$ miles, which is too short, so try $60$.",
+        "The check $60 \\times 3 = 180$ matches the trip, so the speed is $60$ miles per hour."
       ]
     }
-  ]
+  ],
+  "tags": [
+    "unit-rate"
+  ],
+  "estimatedSeconds": 35
 }

@@ -33,18 +33,19 @@
     "For the last two inputs: $3 + 3 = 6$ and $4 + 3 = 7$.",
     "Listed in the same order, the $y$-values are $4, 5, 6, 7$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Find one, then count on",
+      "steps": [
+        "Work out only the first output from the rule: $x = 1$ gives $y = 1 + 3 = 4$.",
+        "Each input after that is $1$ bigger than the one before, so each output is $1$ bigger too.",
+        "Counting on from $4$ gives the list $4, 5, 6, 7$."
+      ]
+    }
+  ],
   "tags": [
     "two-vars",
     "table"
   ],
-  "estimatedSeconds": 60,
-  "alternativeExplanations": [
-    {
-      "title": "Check the answer",
-      "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: 4, 5, 6, 7 — verified."
-      ]
-    }
-  ]
+  "estimatedSeconds": 60
 }

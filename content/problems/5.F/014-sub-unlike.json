@@ -33,6 +33,16 @@
     "Multiply the top and bottom of $\\frac{1}{2}$ by $2$ to rename it as $\\frac{2}{4}$. Its value does not change.",
     "Now subtract fourths from fourths: $\\frac{3}{4} - \\frac{2}{4} = \\frac{1}{4}$, so the answer is $\\frac{1}{4}$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Use money",
+      "steps": [
+        "Think of one dollar: $\\frac{3}{4}$ of a dollar is $75$ cents and $\\frac{1}{2}$ of a dollar is $50$ cents.",
+        "Subtract the cents: $75 - 50 = 25$ cents are left.",
+        "A coin worth $25$ cents is one quarter of a dollar, so the answer is $\\frac{1}{4}$."
+      ]
+    }
+  ],
   "tags": [
     "fractions",
     "subtraction"

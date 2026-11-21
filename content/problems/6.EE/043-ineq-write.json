@@ -40,30 +40,29 @@
     "Subtract $13$ from both sides to get $x$ alone: $x \\le 27$.",
     "Check: $27$ more riders makes exactly $40$, which is allowed, but $28$ makes $41$. The answer is $x \\le 27$."
   ],
-  "tags": [
-    "inequality",
-    "translate",
-    "MAP-practice"
-  ],
-  "estimatedSeconds": 105,
   "alternativeExplanations": [
     {
       "title": "Vocabulary check",
       "steps": [
-        "\"**At most** $N$\" → $\\le N$ (could be that much, no more).",
-        "\"**At least** $N$\" → $\\ge N$ (could be that much, no less).",
-        "\"**Fewer than** $N$\" → $< N$ (strictly under). \"**More than** $N$\" → $> N$.",
-        "This problem uses \"at most\", so $\\le$ — and the endpoint $40$ **is** allowed."
+        "\"**At most** $40$\" means $40$ is the top limit, so the riders can number $40$ or fewer, which is the symbol $\\le$.",
+        "The empty seats tell how many more can board: $40 - 13 = 27$ seats are free.",
+        "So $x$ can be $27$ or any smaller number, and the inequality is $x \\le 27$."
       ]
     },
     {
       "title": "Test values",
       "steps": [
-        "Try $x = 0$: bus has $13$ riders. $13 \\le 40$ ✓.",
-        "Try $x = 27$: bus has $40$ riders. $40 \\le 40$ ✓ (full but legal).",
-        "Try $x = 30$: bus would have $43$. $43 \\le 40$? **No.** So $x = 30$ is not a solution.",
-        "The cutoff is $x = 27$, matching $x \\le 27$."
+        "Try $x = 20$: the bus would carry $13 + 20 = 33$ riders, which is fine because $33$ is under $40$.",
+        "Try $x = 27$: the bus would carry exactly $40$ riders, which is full but still allowed.",
+        "Try $x = 28$: the bus would carry $41$ riders, which is over the limit.",
+        "The values that work stop at $27$ and include it, so the inequality is $x \\le 27$."
       ]
     }
-  ]
+  ],
+  "tags": [
+    "inequality",
+    "translate",
+    "MAP-practice"
+  ],
+  "estimatedSeconds": 105
 }

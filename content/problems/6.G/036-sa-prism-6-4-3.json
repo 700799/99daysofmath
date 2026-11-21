@@ -32,6 +32,17 @@
     "Add the doubled areas to cover all six faces: $48 + 36 + 24 = 108$.",
     "The surface area of the box is $108$ square centimeters."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Sides, then top and bottom",
+      "steps": [
+        "Rest the box on its $6$ by $4$ face, so the height is $3$ cm.",
+        "The four side faces unroll into one strip that is $6 + 4 + 6 + 4 = 20$ cm long and $3$ cm tall, with area $20 \\times 3 = 60$.",
+        "The top and the bottom are each $6 \\times 4 = 24$, which makes $48$ together.",
+        "Add the two results: $60 + 48 = 108$ square centimeters of surface area."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "surface-area"

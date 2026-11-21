@@ -31,6 +31,16 @@
     "Carry out the division to get $80 \\div 4 = 20$.",
     "This shows that $25\\%$ of $80$ is equal to $20$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Halve, then halve again",
+      "steps": [
+        "$50\\%$ is half of something, and half of $80$ is $40$.",
+        "$25\\%$ is half of $50\\%$, so take half again: half of $40$ is $20$.",
+        "Two halvings show that $25\\%$ of $80$ is $20$."
+      ]
+    }
+  ],
   "tags": [
     "percent"
   ],

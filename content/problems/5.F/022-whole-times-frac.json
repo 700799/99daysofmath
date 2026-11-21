@@ -33,6 +33,16 @@
     "Count the fifths by multiplying the whole number by the numerator: $3 \\times 2 = 6$ fifths, or $\\frac{6}{5}$.",
     "Five fifths make one whole, so $\\frac{6}{5}$ can also be written as the mixed number $1\\frac{1}{5}$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Decimal check",
+      "steps": [
+        "Write the fraction as a decimal first: $\\frac{2}{5} = \\frac{4}{10} = 0.4$.",
+        "Three groups of $0.4$ make $3 \\times 0.4 = 1.2$, which is one whole and two tenths.",
+        "Two tenths is one fifth, so $1.2 = 1\\frac{1}{5}$, which is the same as $\\frac{6}{5}$."
+      ]
+    }
+  ],
   "tags": [
     "fractions",
     "multiplication"

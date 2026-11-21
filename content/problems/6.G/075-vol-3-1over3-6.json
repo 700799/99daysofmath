@@ -31,6 +31,16 @@
     "Multiply by the remaining side of the box: $1 \\times 6 = 6$.",
     "The volume of the box is $6$ cubic units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Share the third with the six",
+      "steps": [
+        "The factors can be multiplied in any order, so start with $\\frac{1}{3} \\times 6$.",
+        "One third of $6$ is $2$, because $6$ splits into three equal groups of $2$.",
+        "Now multiply by the remaining side: $3 \\times 2 = 6$, so the volume is $6$ cubic units."
+      ]
+    }
+  ],
   "tags": [
     "volume",
     "fraction"

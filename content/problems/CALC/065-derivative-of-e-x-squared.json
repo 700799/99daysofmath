@@ -56,9 +56,9 @@
     {
       "title": "Numerical check at $x = 1$",
       "steps": [
-        "Choice A at $x = 1$ gives $2e \\approx 5.44$; choice B gives $e \\approx 2.72$.",
-        "Secant slope: $\\frac{e^{1.001^2} - e^{1}}{0.001} = \\frac{e^{1.002001} - e}{0.001} \\approx \\frac{2.72372 - 2.71828}{0.001} \\approx 5.44$.",
-        "Only choice A matches. Where the exponent is not plain $x$, the inside derivative is not optional."
+        "Evaluate two candidates at $x = 1$: choice A gives $2e \\approx 5.44$ and choice B gives $e \\approx 2.72$.",
+        "Estimate the real slope with a secant: $\\frac{e^{1.001^2} - e}{0.001} = \\frac{e^{1.002001} - e}{0.001} \\approx \\frac{2.72372 - 2.71828}{0.001} \\approx 5.44$.",
+        "Only choice A matches the measured slope. When the exponent is not plain $x$, the inside derivative cannot be left out."
       ]
     }
   ],

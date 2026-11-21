@@ -42,9 +42,9 @@
     {
       "title": "Volume ratio",
       "steps": [
-        "Big volume: $1$ cu in.",
-        "Small cube volume: $\\left(\\tfrac{1}{4}\\right)^3 = \\tfrac{1}{64}$.",
-        "Number that fit: $1 \\div \\tfrac{1}{64} = 64$."
+        "The big box is $1$ inch on each edge, so its volume is $1 \\times 1 \\times 1 = 1$ cubic inch.",
+        "Each small cube has volume $\\left(\\tfrac{1}{4}\\right)^3 = \\tfrac{1}{64}$ cubic inch.",
+        "Divide the big volume by the small one: $1 \\div \\tfrac{1}{64} = 64$, so $64$ small cubes fit inside."
       ]
     }
   ],

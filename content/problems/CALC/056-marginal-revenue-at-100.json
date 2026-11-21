@@ -34,9 +34,9 @@
     {
       "title": "Check with actual revenue",
       "steps": [
-        "$R(100) = 5000 - 2000 = 3000$ dollars.",
-        "$R(101) = 5050 - 0.2(10201) = 5050 - 2040.2 = 3009.8$ dollars.",
-        "The 101st jacket really adds $9.80$ dollars — the derivative $10$ is a very good approximation of that step."
+        "Compute the revenue from exactly $100$ jackets: $R(100) = 5000 - 2000 = 3000$ dollars.",
+        "Compute the revenue from $101$ jackets: $R(101) = 5050 - 0.2(10201) = 5050 - 2040.2 = 3009.8$ dollars.",
+        "The 101st jacket really adds $9.80$ dollars, so the derivative value $R'(100) = 10$ is a very good approximation of that step."
       ]
     }
   ],

@@ -33,6 +33,16 @@
     "Use a multiplication fact to divide: since $12 \\times 3 = 36$, the quotient is $3$.",
     "Thirty-six inches are the same length as $3$ feet."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Skip count by twelves",
+      "steps": [
+        "Each foot uses up $12$ inches, so count in twelves until you reach $36$.",
+        "The count goes $12$, $24$, $36$, and that takes three jumps.",
+        "Three jumps of one foot each means $36$ inches is $3$ feet."
+      ]
+    }
+  ],
   "tags": [
     "conversion",
     "length"

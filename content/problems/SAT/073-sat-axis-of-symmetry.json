@@ -36,9 +36,9 @@
     {
       "title": "Or expand and use −b/2a",
       "steps": [
-        "$(x + 1)(x - 5) = x^2 - 4x - 5$, so $a = 1$ and $b = -4$.",
-        "$x = -\\dfrac{b}{2a} = -\\dfrac{-4}{2} = 2$ — the same answer.",
-        "Averaging the zeros is faster when the quadratic is already factored; $-b/2a$ is the general tool."
+        "Multiply out the factors: $(x + 1)(x - 5) = x^2 - 4x - 5$, so $a = 1$ and $b = -4$.",
+        "The vertex of any quadratic $ax^2 + bx + c$ lies at the input $x = -\\dfrac{b}{2a}$.",
+        "Substituting gives $x = -\\dfrac{-4}{2(1)} = 2$, so the $x$-coordinate of the vertex is $2$."
       ]
     }
   ],

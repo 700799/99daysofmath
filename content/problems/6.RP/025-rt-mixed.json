@@ -31,6 +31,16 @@
     "Apply the rule to the middle pair, where $x = 5$: $5 \\times 4 = 20$.",
     "The missing $y$ value in the table is $20$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Halve a row",
+      "steps": [
+        "Look at the complete pair $10/40$ and notice that the missing row has $x = 5$, which is half of $10$.",
+        "Rows in a ratio table change together, so $y$ must be halved as well: $40 \\div 2 = 20$.",
+        "The middle pair is $5/20$, so the missing $y$ is $20$."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "ratio-table"

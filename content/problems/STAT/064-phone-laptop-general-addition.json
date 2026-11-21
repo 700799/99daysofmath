@@ -38,9 +38,9 @@
     {
       "title": "Venn diagram with 100 students",
       "steps": [
-        "Both: 30. Tablet only: $60 - 30 = 30$. Console only: $50 - 30 = 20$.",
-        "At least one: $30 + 30 + 20 = 80$ students, so $0.8$.",
-        "Neither: $100 - 80 = 20$ students, a handy check."
+        "Picture $100$ students in two overlapping circles. The overlap holds the $30$ who own both, which leaves $60 - 30 = 30$ with a tablet only and $50 - 30 = 20$ with a console only.",
+        "The students inside at least one circle number $30 + 30 + 20 = 80$, with $20$ left outside owning neither.",
+        "So $80$ of $100$ students own a tablet or a console, a probability of $0.8$."
       ]
     }
   ],

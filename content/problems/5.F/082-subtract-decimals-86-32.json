@@ -35,8 +35,9 @@
     {
       "title": "Check by adding back",
       "steps": [
-        "$5.4 + 3.2$ should return the starting number.",
-        "$4 + 2 = 6$ tenths and $5 + 3 = 8$ ones, giving $8.6$ ✓"
+        "Subtraction can be undone by addition, so $5.4 + 3.2$ should return the starting number.",
+        "Add the tenths, $4 + 2 = 6$, and the ones, $5 + 3 = 8$, to get $8.6$.",
+        "That is the number we started with, so $8.6 - 3.2 = 5.4$ is correct."
       ]
     }
   ],

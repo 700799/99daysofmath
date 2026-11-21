@@ -35,8 +35,9 @@
     {
       "title": "Use a friendly number",
       "steps": [
-        "$952 - 400 = 552$.",
-        "We subtracted $13$ too many, so add back: $552 + 13 = 565$."
+        "Subtract the round number $400$ in place of $387$, because it is easy to do mentally: $952 - 400 = 552$.",
+        "That took away $13$ too many, since $400$ is $13$ more than $387$.",
+        "Give the extra $13$ back to correct the result: $552 + 13 = 565$."
       ]
     }
   ],

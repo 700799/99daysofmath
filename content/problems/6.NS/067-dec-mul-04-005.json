@@ -34,6 +34,16 @@
     "Write $20$ with three decimal places. A zero is needed in front as a placeholder, giving $0.020$.",
     "The final zero can be dropped, so the product is $0.02$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Write them as fractions",
+      "steps": [
+        "Change each decimal into a fraction: $0.4 = \\frac{4}{10}$ and $0.05 = \\frac{5}{100}$.",
+        "Multiply the tops and multiply the bottoms: $\\frac{4}{10} \\times \\frac{5}{100} = \\frac{20}{1000}$.",
+        "Dividing the top and bottom by $10$ gives $\\frac{2}{100}$, and two hundredths is written $0.02$."
+      ]
+    }
+  ],
   "tags": [
     "decimal",
     "multiply"

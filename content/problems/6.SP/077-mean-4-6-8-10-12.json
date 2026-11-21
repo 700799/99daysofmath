@@ -34,8 +34,9 @@
     {
       "title": "Use symmetry",
       "steps": [
-        "Values evenly spaced around the middle one ($8$).",
-        "Mean equals the middle value: $8$."
+        "The values go up by $2$ each time, so they are evenly spaced around the middle value, $8$.",
+        "The outer pair $4$ and $12$ averages $8$, and the inner pair $6$ and $10$ averages $8$ too.",
+        "Every pair balances on the middle value, so the mean is $8$."
       ]
     }
   ],

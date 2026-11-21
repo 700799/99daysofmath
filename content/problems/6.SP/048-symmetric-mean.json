@@ -30,6 +30,16 @@
     "With no skew or tail to pull the mean away, the mean and the median are about equal.",
     "The mean is $50$, so the median is approximately $50$ as well."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Test a symmetric example",
+      "steps": [
+        "Build a symmetric data set with mean $50$, such as $40, 45, 50, 55, 60$.",
+        "Its total is $250$, so the mean is $250 \\div 5 = 50$, and the middle value of the ordered list is also $50$.",
+        "Mirror-image sides keep both centers together, so the median is approximately $50$."
+      ]
+    }
+  ],
   "tags": [
     "shape",
     "mean",

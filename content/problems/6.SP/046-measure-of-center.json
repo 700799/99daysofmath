@@ -53,6 +53,17 @@
     "The range is the largest value minus the smallest, which tells how spread out the data is.",
     "So the range, choice C, is not a measure of center."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Test each on a data set",
+      "steps": [
+        "Use the data $2, 4, 4, 10$ and compute all four measures.",
+        "The mean is $20 \\div 4 = 5$, the median is $4$ and the mode is $4$, and each of these points to a spot inside the data.",
+        "The range is $10 - 2 = 8$, which is a width and not a location where a typical value sits.",
+        "So the range, choice C, measures spread and is not a measure of center."
+      ]
+    }
+  ],
   "tags": [
     "vocabulary"
   ],

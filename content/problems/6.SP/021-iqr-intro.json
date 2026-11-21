@@ -30,6 +30,16 @@
     "There are $7$ values, an odd count, so the median is the single middle value, the $4$th.",
     "Counting in from either end, the $4$th value is $7$, so the median is $7$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Use the even spacing",
+      "steps": [
+        "The values go up by $2$ each time, so the list is evenly spaced and balanced around its center.",
+        "For an evenly spaced list the middle is halfway between the two ends: $(1 + 13) \\div 2 = 7$.",
+        "The value $7$ is in the list with three values on each side, so the median is $7$."
+      ]
+    }
+  ],
   "tags": [
     "median"
   ],

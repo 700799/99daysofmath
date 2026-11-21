@@ -21,8 +21,9 @@
     {
       "title": "Step it out in words",
       "steps": [
-        "\"$2a$\" means two times $a$. With $a = 5$ that's $10$.",
-        "Then add $b = 3$ to get $13$."
+        "Say the expression in words: \"two of $a$, and then one $b$ more\".",
+        "Two of $a$ is $5 + 5 = 10$, because the value of $a$ is $5$.",
+        "One $b$ more adds $3$, so the total is $10 + 3 = 13$."
       ]
     }
   ],

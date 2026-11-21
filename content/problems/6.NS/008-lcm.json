@@ -21,9 +21,9 @@
     {
       "title": "Prime factors method",
       "steps": [
-        "$4 = 2 \\times 2$ and $6 = 2 \\times 3$.",
-        "Take the **highest power** of each prime: $2^2$ from the $4$, and $3$ from the $6$.",
-        "Multiply: $4 \\times 3 = 12$. LCM $= 12$."
+        "Break each number into primes: $4 = 2 \\times 2$ and $6 = 2 \\times 3$.",
+        "A common multiple must contain everything each number needs, so take two $2$s for the $4$ and one $3$ for the $6$.",
+        "Multiply those primes together: $2 \\times 2 \\times 3 = 12$, so the LCM of $4$ and $6$ is $12$."
       ]
     }
   ],

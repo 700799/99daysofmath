@@ -40,17 +40,17 @@
     {
       "title": "Write both patterns out",
       "steps": [
-        "Tower A: $2, 5, 8, 11, 14, 17, 20$.",
-        "Tower B: $4, 10, 16, 22, 28, 34, 40$.",
-        "On the seventh entry, $40 - 20 = 20$ blocks apart."
+        "List Tower A day by day, adding $3$: $2, 5, 8, 11, 14, 17, 20$.",
+        "List Tower B day by day, adding $6$: $4, 10, 16, 22, 28, 34, 40$.",
+        "Compare the seventh entries: $40 - 20 = 20$, so Tower B has $20$ more blocks on day $7$."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "The most common wrong answer is $23$: it comes from adding the daily growth $7$ times ($2 + 7 \\times 3 = 23$ and $4 + 7 \\times 6 = 46$, gap $23$).",
-        "But day $1$ is the starting pile — no blocks have been added yet on day $1$.",
-        "Escape it by writing the first three days out by hand before you multiply; you will see the number of ADDITIONS is always one less than the day number."
+        "The most common wrong answer is $23$, from adding the daily growth $7$ times: $2 + 7 \\times 3 = 23$ and $4 + 7 \\times 6 = 46$.",
+        "Day $1$ is the starting pile, so no blocks have been added yet on that day.",
+        "By day $7$ there have been only $6$ additions: $2 + 6 \\times 3 = 20$ and $4 + 6 \\times 6 = 40$, a gap of $20$."
       ]
     }
   ],

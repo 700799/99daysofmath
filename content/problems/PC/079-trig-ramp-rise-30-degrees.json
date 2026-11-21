@@ -37,19 +37,19 @@
   ],
   "alternativeExplanations": [
     {
-      "title": "Half the hypotenuse",
+      "title": "Half an equilateral triangle",
       "steps": [
-        "In every $30$-$60$-$90$ triangle, the side opposite $30^\\circ$ is exactly half the hypotenuse.",
-        "The hypotenuse is $10$ ft.",
-        "Half of $10$ is $5$ ft."
+        "Stand a mirror copy of the ramp triangle under the ground line, and the two together make a triangle with $60^\\circ$ at every corner.",
+        "That equilateral triangle has all sides $10$ ft, and its vertical side is the ramp height counted twice.",
+        "So the height is half of $10$, which is $5$ ft."
       ]
     },
     {
-      "title": "Sanity-check the size",
+      "title": "Bracket the size",
       "steps": [
-        "The height must be smaller than the ramp itself, so the answer has to be under $10$ ft.",
-        "A gentle $30^\\circ$ ramp should rise only a modest amount.",
-        "$5$ ft fits both checks, while an answer like $20$ ft would be impossible."
+        "A flat ramp at $0^\\circ$ would rise $0$ ft, and a ramp standing straight up at $90^\\circ$ would rise the full $10$ ft.",
+        "At $30^\\circ$ the answer must fall between those, and the sine curve climbs fastest at the start, so it reaches half its height early.",
+        "Since $\\sin(30^\\circ) = 0.5$, the rise is $0.5 \\times 10 = 5$ ft, which sits sensibly inside the range."
       ]
     }
   ],

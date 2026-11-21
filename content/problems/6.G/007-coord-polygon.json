@@ -23,8 +23,8 @@
     {
       "title": "Add all four sides",
       "steps": [
-        "Two sides of length $4$ and two sides of length $3$.",
-        "$4 + 4 + 3 + 3 = 14$ units."
+        "Walk around the rectangle from corner to corner: the bottom and the top are each $4$ units, and the left and right sides are each $3$ units.",
+        "Perimeter is the total distance of that walk, so add the four sides: $4 + 3 + 4 + 3 = 14$ units."
       ]
     }
   ],

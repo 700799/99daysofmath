@@ -36,6 +36,16 @@
     "Next do the multiplication in the second term: $2 \\times 3 = 6$.",
     "Add the two parts: $9 + 6 = 15$. The value is $15$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Draw tiles",
+      "steps": [
+        "Show $x^2$ as a $3$ by $3$ square of tiles and $2x$ as two more rows of $3$ tiles each.",
+        "Stack the two rows under the square to make one rectangle that is $3$ tiles wide and $3 + 2 = 5$ tiles tall.",
+        "The rectangle holds $3 \\times 5 = 15$ tiles, so the value is $15$."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "evaluate",

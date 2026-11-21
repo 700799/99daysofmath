@@ -42,8 +42,9 @@
     {
       "title": "Count up",
       "steps": [
-        "From $245$ to $500$: $245 + 5 = 250$; $250 + 250 = 500$.",
-        "$5 + 250 = 255$ cans."
+        "Count up from $245$ to the goal of $500$ in two easy hops.",
+        "The first hop of $5$ reaches $250$, and the second hop of $250$ reaches $500$.",
+        "The hops total $5 + 250 = 255$, so $c = 255$ more cans are needed."
       ]
     }
   ],

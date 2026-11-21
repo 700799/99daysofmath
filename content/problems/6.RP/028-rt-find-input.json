@@ -36,6 +36,16 @@
     "Carrying out the division gives $49 \\div 7 = 7$ for the input.",
     "The missing input is $7$, and the check $7 \\times 7 = 49$ confirms it."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Build up to 49",
+      "steps": [
+        "Divide the known row $3 \\to 21$ by $3$ to get the smallest row, $1 \\to 7$.",
+        "Double the known row to get $6 \\to 42$, which is close to the output $49$.",
+        "Add the rows $6 \\to 42$ and $1 \\to 7$ to get $7 \\to 49$, so the missing input is $7$."
+      ]
+    }
+  ],
   "tags": [
     "ratio-table"
   ],

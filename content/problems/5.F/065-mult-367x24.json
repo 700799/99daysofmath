@@ -37,9 +37,9 @@
     {
       "title": "Estimate to check",
       "steps": [
-        "$367$ is close to $370$ and $24$ is close to $25$.",
-        "$370 \\times 25 = 9{,}250$.",
-        "$8{,}808$ sits just under that, so the answer is reasonable ✓"
+        "Round $367$ up to $370$, which is easier to multiply: $370 \\times 24 = 7400 + 1480 = 8{,}880$.",
+        "The rounding added $3$ extra to each of the $24$ groups, so the estimate is too high by $3 \\times 24 = 72$.",
+        "Take the extra away: $8{,}880 - 72 = 8{,}808$, so the exact product is $8808$."
       ]
     }
   ],

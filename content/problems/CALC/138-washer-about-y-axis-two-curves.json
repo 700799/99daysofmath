@@ -43,9 +43,17 @@
     {
       "title": "Roles swap when the axis changes",
       "steps": [
-        "About the $x$-axis, the line $y = x$ was the outer radius (it is higher). About the $y$-axis, the parabola is outer (it is farther right at each height).",
-        "Getting this backwards gives $\\pi\\int_0^1 (y^2 - y) \\, dy = -\\frac{\\pi}{6}$: a negative volume, which is the signal to swap.",
-        "The correct order gives $\\frac{\\pi}{6}$."
+        "About the $y$-axis, radii are horizontal distances. At each height $y$ the parabola is at $x = \\sqrt{y}$, farther right than the line at $x = y$, so the parabola is the outer radius.",
+        "Getting this backwards gives $\\pi\\int_0^1 (y^2 - y)\\,dy = -\\frac{\\pi}{6}$. A negative volume is the signal to swap the two radii.",
+        "With the parabola as the outer radius, the correct order gives $\\pi\\int_0^1 (y - y^2)\\,dy = \\pi\\left(\\frac{1}{2} - \\frac{1}{3}\\right) = \\frac{\\pi}{6}$, so $k = \\frac{1}{6}$."
+      ]
+    },
+    {
+      "title": "Use cylindrical shells",
+      "steps": [
+        "Slice the region into thin vertical strips at position $x$. Each strip has height $x - x^2$ and sweeps out a shell of radius $x$ around the $y$-axis.",
+        "Unrolled, a shell is a sheet of area $2\\pi x(x - x^2)$, so the volume is $2\\pi\\int_0^1 (x^2 - x^3)\\,dx$.",
+        "The power rule turns that shell integral into $2\\pi\\left(\\frac{1}{3} - \\frac{1}{4}\\right) = \\frac{2\\pi}{12} = \\frac{\\pi}{6}$, so $k = \\frac{1}{6}$ again."
       ]
     }
   ],

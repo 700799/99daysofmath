@@ -34,8 +34,9 @@
     {
       "title": "Money picture",
       "steps": [
-        "$\\$2.50 + \\$1.75$: $2.50 + 1.50 = 4.00$, plus $0.25$ more.",
-        "$= \\$4.25$."
+        "Read the numbers as money: $2.50$ dollars plus $1.75$ dollars.",
+        "Add $1.50$ first to reach a whole amount: $2.50 + 1.50 = 4.00$ dollars.",
+        "There are still $25$ cents of the $1.75$ left to add, so the total is $4.25$."
       ]
     }
   ],

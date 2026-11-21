@@ -33,6 +33,16 @@
     "\"At least\" includes $48$ itself and everything above it, so the symbol is $\\geq$.",
     "With $h$ for the height in inches, the inequality is $h \\geq 48$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Test some heights",
+      "steps": [
+        "Imagine three children in line who are $47$, $48$ and $50$ inches tall.",
+        "The child at $47$ inches is turned away, while the children at $48$ and $50$ inches may ride.",
+        "The inequality must accept $48$ and everything taller, so it is $h \\geq 48$."
+      ]
+    }
+  ],
   "tags": [
     "CA",
     "inequality",

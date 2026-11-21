@@ -32,6 +32,16 @@
     "Multiply each part: $1 \\times 5 = 5$, and $0.2 \\times 5 = 1.0$ because five groups of two tenths make ten tenths.",
     "Add the two parts: $5 + 1 = 6$, so the product $1.2 \\times 5$ is $6$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Double and halve",
+      "steps": [
+        "Multiplying by $5$ is the same as multiplying by $10$ and then taking half, because $5$ is half of $10$.",
+        "Multiply by $10$ first, which moves each digit one place: $1.2 \\times 10 = 12$.",
+        "Half of $12$ is $6$, so the product $1.2 \\times 5$ is exactly $6$."
+      ]
+    }
+  ],
   "tags": [
     "decimals",
     "multiplication"

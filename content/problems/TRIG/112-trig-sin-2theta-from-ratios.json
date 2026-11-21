@@ -37,9 +37,9 @@
     {
       "title": "Does the size make sense?",
       "steps": [
-        "$\\sin\\theta = 0.6$ puts $\\theta$ near $37^\\circ$, so $2\\theta$ is near $74^\\circ$.",
-        "$\\sin 74^\\circ$ should be large, close to but under $1$.",
-        "$0.96$ fits perfectly."
+        "Since $\\sin\\theta = 0.6$, the angle is close to $37^\\circ$, so $2\\theta$ is close to $74^\\circ$.",
+        "The sine of an angle near $74^\\circ$ should be large, close to $1$ but below it.",
+        "A calculator gives $\\sin 73.74^\\circ \\approx 0.96$, which is the fraction $\\frac{24}{25}$."
       ]
     }
   ],

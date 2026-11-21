@@ -30,19 +30,20 @@
     "In the set $\\{7, 10, 4, 15\\}$ the maximum is $15$ and the minimum is $4$.",
     "Subtract: $15 - 4 = 11$, so the range of the set is $11$."
   ],
-  "tags": [
-    "range"
-  ],
-  "estimatedSeconds": 35,
   "alternativeExplanations": [
     {
       "title": "Check the answer",
       "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: 11 — verified."
+        "Check by adding the range back onto the minimum value of the set.",
+        "Starting at $4$ and moving up $11$ gives $4 + 11 = 15$, which is the maximum.",
+        "Landing exactly on the largest value confirms that the range is $11$."
       ]
     }
   ],
+  "tags": [
+    "range"
+  ],
+  "estimatedSeconds": 35,
   "diagram": {
     "kind": "inline-svg",
     "alt": "Dot plot of dataset",

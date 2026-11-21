@@ -35,8 +35,9 @@
     {
       "title": "Does it make sense?",
       "steps": [
-        "$0.6$ is a bit more than half.",
-        "A bit more than half of $7$ should be a bit more than $3.5$ — and $4.2$ is ✓"
+        "The decimal $0.6$ is a bit more than one half, and half of $7$ is $3.5$, so the answer must be a bit more than $3.5$.",
+        "The extra bit is one tenth of $7$, which is $0.7$, because $0.6 = 0.5 + 0.1$.",
+        "Add the half and the extra tenth together: $3.5 + 0.7 = 4.2$."
       ]
     }
   ],

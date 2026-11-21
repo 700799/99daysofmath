@@ -30,6 +30,16 @@
     "The value $2$ occurs $3$ times, $4$ occurs $5$ times, and $6$ occurs $2$ times.",
     "The mode is the value that occurs most, and $5$ dots is the most, so the mode is $4$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Write out the list",
+      "steps": [
+        "Turn the dots back into a list: three $2$s, five $4$s and two $6$s give $2, 2, 2, 4, 4, 4, 4, 4, 6, 6$.",
+        "Look for the longest run of one value, which is the five $4$s in the middle of the list.",
+        "The value that appears most often is the mode, so the mode is $4$."
+      ]
+    }
+  ],
   "tags": [
     "dot-plot"
   ],

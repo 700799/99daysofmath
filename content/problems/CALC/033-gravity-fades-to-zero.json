@@ -34,9 +34,9 @@
     {
       "title": "The asymptote picture",
       "steps": [
-        "The graph of $\\frac{5}{d^2}$ hugs the $d$-axis more and more tightly as $d$ grows.",
-        "The line $F = 0$ is a horizontal asymptote.",
-        "Physically: deep space is \"weightless\" not because gravity switches off, but because its limit is zero."
+        "Sketch $F = \\frac{5}{d^2}$: the curve drops quickly and then hugs the $d$-axis more and more tightly as $d$ grows.",
+        "A few points confirm the sketch: $F(10) = 0.05$, $F(100) = 0.0005$ and $F(1000) = 0.000005$ newtons.",
+        "The line $F = 0$ is a horizontal asymptote, so the pull approaches $0$. Deep space feels weightless because the limit of gravity is zero, not because gravity switches off."
       ]
     }
   ],

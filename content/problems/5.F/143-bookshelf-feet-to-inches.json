@@ -34,9 +34,9 @@
     {
       "title": "Break the 12 apart",
       "steps": [
-        "$7 \\times 10 = 70$.",
-        "$7 \\times 2 = 14$.",
-        "$70 + 14 = 84$ inches."
+        "Each foot is $12$ inches, and $12$ can be split into $10 + 2$ to make the multiplying easy.",
+        "Seven tens are $7 \\times 10 = 70$, and seven twos are $7 \\times 2 = 14$.",
+        "Add the two parts to get the height: $70 + 14 = 84$ inches."
       ]
     }
   ],

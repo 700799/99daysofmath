@@ -39,15 +39,17 @@
     {
       "title": "Check with the table",
       "steps": [
-        "Try $f(7) = 17$ and $f(9) = 21$ — the output $19$ sits between them.",
-        "$f(8) = 2 \\times 8 + 3 = 19$. The input was $8$."
+        "Run the machine forward on some guesses: $f(7) = 17$ is too small and $f(9) = 21$ is too big.",
+        "The output $19$ lies between those two, so try the input between them.",
+        "$f(8) = 2 \\times 8 + 3 = 19$, which matches, so the input was $8$."
       ]
     },
     {
       "title": "⚠️ Dodge the trap",
       "steps": [
-        "Running 19 forward — 2(19) + 3 = 41 — uses the machine in the wrong direction.",
-        "Walk backwards through the machine, last step first: 19 − 3 = 16, then 16 ÷ 2 = 8."
+        "The trap is running $19$ forward to get $2(19) + 3 = 41$, which treats the output as if it were the input.",
+        "The $19$ came out of the machine, so walk backwards and undo the last step first: $19 - 3 = 16$.",
+        "Then undo the doubling: $16 \\div 2 = 8$, so the input was $8$."
       ]
     }
   ],

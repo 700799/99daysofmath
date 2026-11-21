@@ -34,9 +34,9 @@
     {
       "title": "Quartiles as 25th and 75th percentiles",
       "steps": [
-        "A quarter of the data (2 values) sits below $Q_1$, so $Q_1$ is between the 2nd and 3rd values: between 5 and 7, which is 6.",
-        "A quarter sits above $Q_3$, so $Q_3$ is between the 6th and 7th values: between 12 and 14, which is 13.",
-        "IQR $= 13 - 6 = 7$."
+        "A quarter of the $8$ values is $2$ values, so $Q_1$ must have two values below it. It sits halfway between the 2nd and 3rd values, $5$ and $7$, which is $6$.",
+        "In the same way $Q_3$ has two values above it, so it sits halfway between the 6th and 7th values, $12$ and $14$, which is $13$.",
+        "The distance between those two cut points is the interquartile range: $13 - 6 = 7$ hours."
       ]
     }
   ],

@@ -30,6 +30,16 @@
     "Every value in the list is $5$, so the largest and the smallest are both $5$.",
     "Subtract: $5 - 5 = 0$, so the range is $0$ because the data has no spread at all."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Picture the dot plot",
+      "steps": [
+        "Draw the data on a dot plot: all four dots stack up in one column above $5$.",
+        "The range is the width of the plot from the leftmost dot to the rightmost dot.",
+        "A single column has no width at all, so the range of the data is $0$."
+      ]
+    }
+  ],
   "tags": [
     "range"
   ],

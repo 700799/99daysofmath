@@ -35,8 +35,9 @@
     {
       "title": "Shortcut: move the decimal",
       "steps": [
-        "$10\\%$ of any number = move its decimal point one place left.",
-        "$250 \\to 25.0 = 25$."
+        "Taking $10\\%$ is dividing by $10$, and dividing by $10$ moves every digit one place to the right.",
+        "Write $250$ as $250.0$ and slide the decimal point one place left to get $25.00$.",
+        "The trailing zeros can be dropped, so $10\\%$ of $250$ is $25$."
       ]
     }
   ],

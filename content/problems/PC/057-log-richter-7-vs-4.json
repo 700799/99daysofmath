@@ -34,9 +34,9 @@
     {
       "title": "Climb one step at a time",
       "steps": [
-        "Magnitude $4$ to $5$: $10$ times more.",
-        "Magnitude $5$ to $6$: $10$ times more again, now $100$.",
-        "Magnitude $6$ to $7$: $10$ times again, now $1000$."
+        "Go up the scale one magnitude at a time: from $4$ to $5$ the shaking is $10$ times stronger.",
+        "From $5$ to $6$ it is $10$ times stronger again, which makes $100$ times the magnitude $4$ shaking.",
+        "From $6$ to $7$ multiplies by $10$ once more, so a magnitude $7$ quake shakes $1000$ times more."
       ]
     }
   ],

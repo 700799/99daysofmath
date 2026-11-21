@@ -34,9 +34,9 @@
     {
       "title": "Does the answer feel right?",
       "steps": [
-        "A $30^\\circ$ ramp would rise $10$ feet over a $20$-foot length, which is far more than $3$ feet.",
-        "Our rise is only about a third of that, so an angle well under $10^\\circ$ is exactly what we should expect.",
-        "$8.6^\\circ$ passes the smell test."
+        "A $30^\\circ$ ramp would rise half its length, $10$ feet over $20$ feet, which is far more than $3$ feet.",
+        "For small angles the rise is nearly proportional to the angle, and $3$ feet is $0.3$ of $10$ feet, so expect a little under $0.3 \\times 30^\\circ = 9^\\circ$.",
+        "That estimate agrees with the calculator value $\\arcsin(0.15) \\approx 8.6^\\circ$, so the answer is believable."
       ]
     }
   ],

@@ -38,8 +38,17 @@
     {
       "title": "Shift the decimal",
       "steps": [
-        "Multiplying by $1000$ moves the decimal three places right.",
-        "$2.5 \\to 2500.0 = 2500$."
+        "Multiplying by $1000$ moves every digit three places to the left, so the decimal point ends up three places to the right.",
+        "Write $2.5$ as $2.500$ and slide the point three places to get $2500$.",
+        "The shifted number shows that $2.5$ kilograms is $2500$ grams."
+      ]
+    },
+    {
+      "title": "Count half kilograms",
+      "steps": [
+        "Half a kilogram is half of $1000$ grams, which is $500$ grams.",
+        "There are $5$ half kilograms in $2.5$ kilograms, because $2.5 \\times 2 = 5$.",
+        "Five lots of $500$ grams make $2500$ grams."
       ]
     }
   ],

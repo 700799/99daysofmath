@@ -31,6 +31,16 @@
     "Apply the multiplier to the last input: $4 \\times 3 = 12$.",
     "The missing value in the table is $12$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Skip count down the column",
+      "steps": [
+        "Look only at the outputs $3$, $6$, $9$ and notice each one is $3$ more than the one before.",
+        "The inputs go up by $1$ each time, so the next output is one more jump of $3$: $9 + 3 = 12$.",
+        "Counting by threes puts $12$ in the blank next to $4$."
+      ]
+    }
+  ],
   "tags": [
     "ratio-table"
   ],

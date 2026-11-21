@@ -33,6 +33,16 @@
     "Green is $5$ parts of the ratio, so multiply $5 \\times 2 = 10$.",
     "There are $10$ green beads, along with $4$ red and $6$ blue, which add to $20$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Green as a fraction",
+      "steps": [
+        "The ratio has $2 + 3 + 5 = 10$ parts and green is $5$ of them, so green is $\\frac{5}{10}$ of the beads.",
+        "The fraction $\\frac{5}{10}$ simplifies to $\\frac{1}{2}$, so half of the bracelet is green.",
+        "Half of the $20$ beads is $10$, so there are $10$ green beads."
+      ]
+    }
+  ],
   "tags": [
     "CA",
     "ratio"

@@ -43,16 +43,16 @@
     {
       "title": "Check with the calculator formula",
       "steps": [
-        "$s_x = \\sqrt{\\frac{5}{3}} \\approx 1.291$ and $s_y = \\sqrt{\\frac{13}{3}} \\approx 2.082$, and $r = \\frac{8}{\\sqrt{5 \\cdot 13}} \\approx 0.992$.",
-        "$b = r \\frac{s_y}{s_x} = 0.992 \\times \\frac{2.082}{1.291} \\approx 1.6$. Same answer either route."
+        "Use the other slope formula, $b = r \\frac{s_y}{s_x}$. From the deviations, $s_x = \\sqrt{\\frac{5}{3}} \\approx 1.291$, $s_y = \\sqrt{\\frac{13}{3}} \\approx 2.082$ and $r = \\frac{8}{\\sqrt{5 \\cdot 13}} \\approx 0.992$.",
+        "Substituting gives $b = 0.992 \\times \\frac{2.082}{1.291} \\approx 1.6$, so this second route agrees that the slope is $1.6$."
       ]
     },
     {
       "title": "The trap: slope between two points",
       "steps": [
-        "Using just the first and last points gives $\\frac{7 - 2}{4 - 1} = \\frac{5}{3} \\approx 1.67$, which is close but not the least-squares slope.",
-        "The least-squares line uses ALL four points and minimizes the squared residuals.",
-        "That balancing act gives exactly $1.6$."
+        "Using only the first and last points gives $\\frac{7 - 2}{4 - 1} = \\frac{5}{3} \\approx 1.67$, which is close but is not the least-squares slope.",
+        "The least-squares line uses all four points and makes the sum of squared residuals as small as possible, so the two middle points pull on it too.",
+        "Balancing all four points gives $b = \\frac{8}{5} = 1.6$, slightly less steep than the two-point guess."
       ]
     }
   ],

@@ -57,9 +57,9 @@
     {
       "title": "Why the others are wrong",
       "steps": [
-        "$3$ comes from ignoring the decimal and doing $7 - 4$.",
-        "$6.96$ comes from treating $0.4$ as $0.04$.",
-        "$7.4$ comes from adding instead of subtracting."
+        "The answer $3$ ignores the decimal point and works out $7 - 4$, but $0.4$ is much smaller than $4$.",
+        "The answer $6.96$ treats $0.4$ as $0.04$, and the answer $7.4$ adds when it should subtract.",
+        "Taking away less than one whole from $7$ must leave a number between $6$ and $7$, and $7.0 - 0.4 = 6.6$, choice A."
       ]
     }
   ],

@@ -34,9 +34,9 @@
     {
       "title": "Unwrap the present",
       "steps": [
-        "The equation wrapped $x$ in two layers: first \"times 3\", then \"plus 5\".",
-        "Unwrap backwards: peel off the \"+5\" (subtract 5), then peel off the \"times 3\" (divide by 3).",
-        "Inside the wrapping you find $x = 5$."
+        "The equation wrapped $x$ in two layers: first it was multiplied by $3$, and then $5$ was added.",
+        "Unwrap in reverse order, so take off the outer layer first by subtracting $5$: $20 - 5 = 15$.",
+        "Then take off the inner layer by dividing by $3$: $15 \\div 3 = 5$, so $x = 5$."
       ]
     }
   ],

@@ -33,6 +33,16 @@
     "Multiplying by $10$ puts a zero on the end of $12$, which gives $120$.",
     "The area of the room is $120$ square feet."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Split off a square",
+      "steps": [
+        "Cut the floor into a $10$ by $10$ square and a strip that is $2$ ft by $10$ ft.",
+        "The square covers $10 \\times 10 = 100$ square feet, and the strip covers $2 \\times 10 = 20$ square feet.",
+        "Together they give $100 + 20 = 120$ square feet for the area of the room."
+      ]
+    }
+  ],
   "tags": [
     "area",
     "word"

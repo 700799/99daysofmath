@@ -33,6 +33,16 @@
     "Grams are the smaller unit, so there will be more of them. Multiply the kilograms by $1000$.",
     "Work it out: $2.5 \\times 1000 = 2500$, so $2.5$ kilograms is $2500$ grams."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Split the 2.5",
+      "steps": [
+        "Break $2.5$ kilograms into $2$ kilograms and half a kilogram.",
+        "Two kilograms is $2000$ grams, and half a kilogram is half of $1000$, which is $500$ grams.",
+        "Put the two parts back together to get $2000 + 500 = 2500$ grams."
+      ]
+    }
+  ],
   "tags": [
     "measurement",
     "metric"

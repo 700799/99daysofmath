@@ -31,6 +31,16 @@
     "Write $8$ tenths as a decimal, which is $0.8$.",
     "Check by multiplying back: $0.8 \\times 6 = 4.8$, so the answer is $0.8$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Share money equally",
+      "steps": [
+        "Think of $4.8$ as $4.80$ dollars, which is $480$ cents, shared equally among $6$ people.",
+        "Divide the cents as a whole number: $480 \\div 6 = 80$, so each person gets $80$ cents.",
+        "Eighty cents written in dollars is $0.80$, so $4.8 \\div 6 = 0.8$."
+      ]
+    }
+  ],
   "tags": [
     "decimal",
     "divide"

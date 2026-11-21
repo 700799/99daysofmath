@@ -30,6 +30,17 @@
     "Count the data points, one for each dot: there are $5$.",
     "Divide the total by the count: $17 \\div 5 = 3.4$, so the mean is $3.4$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Guess 3 and adjust",
+      "steps": [
+        "Guess a mean of $3$ and compare each dot with it: $2$ is $1$ below, the two $3$s match, $4$ is $1$ above and $5$ is $2$ above.",
+        "Altogether the data is $1 + 2 - 1 = 2$ units above the guess.",
+        "Share those $2$ extra units among the $5$ values: $2 \\div 5 = 0.4$ each.",
+        "The guess moves up by $0.4$, so the mean is $3 + 0.4 = 3.4$."
+      ]
+    }
+  ],
   "tags": [
     "dot-plot",
     "mean"

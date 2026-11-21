@@ -36,9 +36,9 @@
     {
       "title": "Check both equations before committing",
       "steps": [
-        "With $x = 4$ and $y = 2$: $3(4) + 2(2) = 16$ ✓ and $4 - 2(2) = 0$ ✓.",
-        "A solution must satisfy *both* equations; verifying only one is how a substitution error survives.",
-        "The check costs about ten seconds and catches nearly every algebra slip."
+        "The second equation says $x = 2y$, so the first becomes $3(2y) + 2y = 16$, which gives $y = 2$ and then $x = 4$.",
+        "Test the pair in the first equation: $3(4) + 2(2) = 16$, which is true.",
+        "Test it in the second equation as well: $4 - 2(2) = 0$ is also true, so $x + y = 4 + 2 = 6$."
       ]
     }
   ],

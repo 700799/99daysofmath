@@ -33,19 +33,19 @@
   ],
   "alternativeExplanations": [
     {
-      "title": "Just keep doubling",
+      "title": "Keep doubling",
       "steps": [
-        "3, 6, 12, 24, 48, 96, 192, 384.",
-        "Count them: that is eight terms, so the last one is a₈.",
-        "384 — doubling by hand is quick when n is small, and it double-checks the formula."
+        "Write the terms by doubling from the first one: $3, 6, 12, 24, 48, 96, 192, 384$.",
+        "Count the entries to make sure the list stops at the eighth term, and there are eight.",
+        "The eighth entry in the list is $384$, so $a_8 = 384$."
       ]
     },
     {
-      "title": "Count the multiplications",
+      "title": "Jump with known powers",
       "steps": [
-        "Term 1 has been multiplied zero times. Term 2 once. Term 3 twice.",
-        "So term 8 has been multiplied 7 times — that is where the exponent 7 comes from.",
-        "3 × 2⁷ = 3 × 128 = 384."
+        "Term $8$ has been doubled $7$ times, and $2^7$ can be built from smaller powers: $2^3 = 8$ and $2^4 = 16$.",
+        "Multiply those two smaller powers to get $2^7 = 8 \\times 16 = 128$.",
+        "Multiply by the first term to finish: $a_8 = 3 \\times 128 = 384$."
       ]
     }
   ],

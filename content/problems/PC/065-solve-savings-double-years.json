@@ -34,17 +34,17 @@
     {
       "title": "Walk the years",
       "steps": [
-        "Year 0: $\\$2000$. Year 7: $\\$4000$.",
-        "Year 14: $\\$8000$. Year 21: $\\$16000$.",
-        "You land on it at year $21$."
+        "List the balance at each doubling: year $0$ has $2000$ dollars and year $7$ has $4000$ dollars.",
+        "Double twice more: year $14$ has $8000$ dollars and year $21$ has $16000$ dollars.",
+        "The list reaches the target at year $21$, so the wait is $21$ years."
       ]
     },
     {
       "title": "Use the formula",
       "steps": [
-        "With doubling time $7$, the rule is $A = 2000 \\cdot 2^{t/7}$.",
-        "Set $A = 16000$: $2^{t/7} = 8 = 2^3$, so $t/7 = 3$.",
-        "Multiply both sides by $7$: $t = 21$ years."
+        "With a doubling time of $7$ years, the balance after $t$ years is $A = 2000 \\cdot 2^{t/7}$.",
+        "Set $A = 16000$ and divide by $2000$ to get $2^{t/7} = 8 = 2^3$, so $t/7 = 3$.",
+        "Multiplying both sides by $7$ gives $t = 21$ years."
       ]
     }
   ],

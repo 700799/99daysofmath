@@ -40,6 +40,24 @@
     "Tax is added to the price, so the total is $20 + 1.60 = 21.60$.",
     "The shirt costs $21.60$ dollars in total."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Tax on each dollar",
+      "steps": [
+        "A tax of $8\\%$ means $8$ cents of tax for every $1$ dollar of the price.",
+        "The shirt costs $20$ dollars, so the tax is $20 \\times 8 = 160$ cents, which is $1.60$ dollars.",
+        "Add the tax to the price: $20 + 1.60 = 21.60$ dollars in total."
+      ]
+    },
+    {
+      "title": "Multiply by 1.08",
+      "steps": [
+        "The price is $100\\%$ and the tax adds $8\\%$ more, so the total is $108\\%$ of the price.",
+        "Written as a decimal, $108\\%$ is $1.08$, and the product $1.08 \\times 20$ equals $20 + 1.60$.",
+        "One multiplication gives the total cost, $21.60$ dollars."
+      ]
+    }
+  ],
   "tags": [
     "CA",
     "percent",

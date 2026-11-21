@@ -34,9 +34,9 @@
     {
       "title": "Rate thinking",
       "steps": [
-        "If 1 in 5 calls is a sale, then sales happen at a rate of one per 5 calls.",
-        "So the typical wait for the next sale is 5 calls.",
-        "That matches $\\frac{1}{p} = \\frac{1}{0.2} = 5$."
+        "A $20$ percent success rate means that over a long run of calls, about $1$ call in every $5$ ends in a sale.",
+        "Over $1{,}000$ calls she would close about $200$ sales, so each sale uses up $1000 \\div 200 = 5$ calls on average.",
+        "The expected number of calls up to and including the first sale is therefore $5$."
       ]
     }
   ],

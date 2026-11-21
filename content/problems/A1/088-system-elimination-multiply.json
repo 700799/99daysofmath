@@ -39,15 +39,17 @@
     {
       "title": "Substitution instead",
       "steps": [
-        "From x + y = 8, we know x = 8 − y. Swap that into the first rule: 2(8 − y) + 3y = 19.",
-        "That is 16 − 2y + 3y = 19, so 16 + y = 19 and y = 3."
+        "Use substitution: the equation $x + y = 8$ says that $x = 8 - y$.",
+        "Replace $x$ in the first equation to get $2(8 - y) + 3y = 19$, which expands to $16 - 2y + 3y = 19$.",
+        "Collecting the $y$-terms simplifies that to $16 + y = 19$, so $y = 3$."
       ]
     },
     {
       "title": "Guess pairs from the easy rule",
       "steps": [
-        "Pairs that add to 8: (5, 3), (4, 4), (6, 2). Test each in 2x + 3y = 19.",
-        "(5, 3) gives 10 + 9 = 19. It works, so y = 3."
+        "List pairs $(x, y)$ that satisfy the easy equation $x + y = 8$: $(6, 2)$, $(5, 3)$ and $(4, 4)$.",
+        "Test each pair in $2x + 3y$: the results are $18$, $19$ and $20$.",
+        "Only $(5, 3)$ gives $19$, so the solution has $y = 3$."
       ]
     }
   ],

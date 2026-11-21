@@ -34,9 +34,9 @@
     {
       "title": "Grow it week by week",
       "steps": [
-        "The plant starts at 12 cm and the slope says it gains 3.5 cm per week.",
-        "Eight weeks of growth: $8 \\times 3.5 = 28$ cm.",
-        "$12 + 28 = 40$ cm."
+        "Read the line as a story: the plant starts at $12$ cm and the slope says it gains $3.5$ cm every week.",
+        "Two weeks add $7$ cm, four weeks add $14$ cm, so eight weeks add $28$ cm of growth.",
+        "Starting height plus growth is $12 + 28 = 40$ cm, the predicted height at $8$ weeks."
       ]
     }
   ],

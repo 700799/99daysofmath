@@ -48,6 +48,16 @@
     "Choices B and C claim everyone is the same age, which would mean no variability at all.",
     "So the reason for the variability is choice A, different birthdays."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Picture two students",
+      "steps": [
+        "Think of two students in the same 6th grade class, one born in September and one born the following June.",
+        "In the spring the first has already turned $12$ while the second is still $11$.",
+        "Their ages differ because their birthdays differ, which is exactly what choice A says."
+      ]
+    }
+  ],
   "tags": [
     "variability"
   ],

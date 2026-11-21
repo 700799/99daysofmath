@@ -41,16 +41,17 @@
     {
       "title": "A 30% discount is not the same thing",
       "steps": [
-        "Adding the discounts gives $30\\%$ off, or $\\$140$ — and that will be an answer choice.",
-        "The true combined multiplier is $0.80 \\times 0.90 = 0.72$, a $28\\%$ total discount, not $30\\%$.",
-        "Successive discounts always total *less* than their sum, because the second is taken on an already-reduced price."
+        "Adding the two discounts suggests $30\\%$ off, which would give a price of $140$ dollars, a tempting wrong answer.",
+        "The second discount is $10\\%$ of the sale price of $160$ dollars, which is $16$ dollars, not $10\\%$ of $200$.",
+        "The total taken off is $40 + 16 = 56$ dollars, a $28\\%$ discount, so the final price is $200 - 56 = 144$ dollars."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "Adding the discounts to 30% gives $140 — offered, and wrong because the 10% acted on an already-reduced price.",
-        "Chain multipliers instead: 0.80 × 0.90 = 0.72. Successive discounts always total LESS than their sum; expect 28%, not 30%."
+        "Adding the discounts to get $30\\%$ gives $140$ dollars, which is wrong because the $10\\%$ acts on a price that is already reduced.",
+        "Chain the multipliers instead: $0.80 \\times 0.90 = 0.72$, so the buyer pays $72\\%$ of the original price.",
+        "That is $0.72 \\times 200 = 144$ dollars, slightly more than the $140$ that adding the percents suggests."
       ]
     }
   ],

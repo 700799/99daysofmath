@@ -37,9 +37,9 @@
     {
       "title": "Verify with a real angle",
       "steps": [
-        "$\\cos\\theta = \\frac{1}{2}$ happens at $\\theta = 60^\\circ$.",
-        "Then $2\\theta = 120^\\circ$, and $\\cos 120^\\circ = -\\frac{1}{2}$ ✓",
-        "The formula and the unit circle agree."
+        "An angle whose cosine is $\\frac{1}{2}$ is $\\theta = 60^\\circ$.",
+        "Doubling it gives $2\\theta = 120^\\circ$, a Quadrant II angle with reference angle $60^\\circ$.",
+        "The unit circle gives $\\cos 120^\\circ = -\\frac{1}{2}$, the same value the formula produced."
       ]
     }
   ],

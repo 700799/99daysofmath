@@ -39,6 +39,16 @@
     "Add the pieces: $4 + 2 = 6$. The decimal method agrees, since $0.15 \\times 40 = 6$.",
     "The tip on the meal is $6$ dollars."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Use the fraction $\\frac{3}{20}$",
+      "steps": [
+        "Write $15\\%$ as $\\frac{15}{100}$ and divide top and bottom by $5$ to get $\\frac{3}{20}$.",
+        "One twentieth of the $40$ dollar meal is $40 \\div 20 = 2$ dollars.",
+        "Three twentieths is $3 \\times 2 = 6$, so the tip is $6$ dollars."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "percent",

@@ -34,6 +34,16 @@
     "That leaves $12 - 3 = 9$ more steps to the right of $0$, so $-3 + 12 = 9$.",
     "The temperature at noon is $9°$F, which is above zero."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Swap the order",
+      "steps": [
+        "Addition can be done in either order, so $-3 + 12$ has the same value as $12 + (-3)$.",
+        "Adding $-3$ means going down $3$, so $12 + (-3)$ is the same as $12 - 3$.",
+        "Since $12 - 3 = 9$, the temperature at noon is $9°$F."
+      ]
+    }
+  ],
   "tags": [
     "CA",
     "integer",

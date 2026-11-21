@@ -34,9 +34,9 @@
     {
       "title": "Count up week by week",
       "steps": [
-        "Start: $\\$15$. Each week adds $\\$10$.",
-        "After 6 weeks you have added $\\$60$ in allowance.",
-        "$\\$15 + \\$60 = \\$75$."
+        "Start with the $15$ dollars you already have and add $10$ dollars for each week.",
+        "Counting up week by week gives $25$, $35$, $45$, $55$, $65$ and then $75$ dollars.",
+        "The sixth number in the list is the total after $6$ weeks, so you have $75$ dollars."
       ]
     }
   ],

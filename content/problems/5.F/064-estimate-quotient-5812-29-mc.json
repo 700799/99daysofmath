@@ -56,9 +56,9 @@
     {
       "title": "Size-check the other options",
       "steps": [
-        "$29 \\times 20 = 580$ — way too small.",
-        "$29 \\times 2{,}000 = 58{,}000$ — way too big.",
-        "Only $200$ lands near $5{,}812$."
+        "Multiply each choice by about $29$ and see which product lands near $5{,}812$.",
+        "Choice A gives $29 \\times 20 = 580$, which is far too small, and choice C gives $29 \\times 2{,}000 = 58{,}000$, which is far too big. Choice D is bigger still.",
+        "Choice B gives $29 \\times 200 = 5{,}800$, almost exactly $5{,}812$, so the best estimate is $200$."
       ]
     }
   ],

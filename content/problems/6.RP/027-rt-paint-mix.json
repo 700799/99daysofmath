@@ -39,6 +39,24 @@
     "Scale the red by the same factor so the ratio is unchanged: $2 \\times 3 = 6$.",
     "You need $6$ of red, because $6 : 9$ simplifies to $2 : 3$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Build a ratio table",
+      "steps": [
+        "Write the mix as a row, $2$ red with $3$ blue, and keep adding the same row.",
+        "The next rows are $4$ red with $6$ blue and then $6$ red with $9$ blue.",
+        "The row with $9$ blue shows $6$ red, so you need $6$ of red."
+      ]
+    },
+    {
+      "title": "Red as a fraction of blue",
+      "steps": [
+        "In every batch the red is $\\frac{2}{3}$ as much as the blue, because the ratio is $2 : 3$.",
+        "One third of $9$ blue is $9 \\div 3 = 3$, so two thirds is $2 \\times 3 = 6$.",
+        "Taking two thirds of the blue gives $6$ of red."
+      ]
+    }
+  ],
   "tags": [
     "CA",
     "ratio"

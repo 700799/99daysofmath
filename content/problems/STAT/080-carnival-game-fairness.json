@@ -61,9 +61,9 @@
     {
       "title": "Play 4 times",
       "steps": [
-        "In 4 typical plays you win $\\$5$ once, $\\$1$ once, and nothing twice: $\\$6$ total.",
-        "You paid $4 \\times 2 = \\$8$.",
-        "Down $\\$2$ over 4 plays is $\\$0.50$ per play — choice B."
+        "Imagine $4$ plays that follow the probabilities exactly: you win $5$ dollars once, $1$ dollar once and nothing twice, for $6$ dollars in total.",
+        "Those four plays cost $4 \\times 2 = 8$ dollars, so you finish $2$ dollars behind.",
+        "Losing $2$ dollars over $4$ plays is a loss of $0.50$ dollars per play on average, which is choice B."
       ]
     }
   ],

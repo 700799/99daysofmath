@@ -33,6 +33,16 @@
     "The triangle is attached to the rectangle, so add the areas: $40 + 6 = 46$.",
     "The total area of the figure is $46$ square units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Box in the triangle",
+      "steps": [
+        "Draw a small rectangle around the triangle that is $4$ wide and $3$ tall, with area $4 \\times 3 = 12$.",
+        "The triangle fills half of that small rectangle, so it adds $12 \\div 2 = 6$ square units.",
+        "The big rectangle covers $8 \\times 5 = 40$, so the whole figure covers $40 + 6 = 46$ square units."
+      ]
+    }
+  ],
   "tags": [
     "composite",
     "area",

@@ -38,8 +38,17 @@
     {
       "title": "Reduce the fraction",
       "steps": [
-        "$\\frac{8}{32} = \\frac{1}{4}$.",
-        "$\\frac{1}{4} = 25\\%$."
+        "Write the part over the whole as $\\frac{8}{32}$ and halve both numbers three times: $\\frac{4}{16}$, $\\frac{2}{8}$, $\\frac{1}{4}$.",
+        "One quarter is one of four equal parts of $100\\%$, and $100 \\div 4 = 25$.",
+        "Each quarter is worth $25\\%$, so $8$ is $25\\%$ of $32$."
+      ]
+    },
+    {
+      "title": "See how many eights fit",
+      "steps": [
+        "Count by eights up to the whole: $8$, $16$, $24$, $32$, which is four eights.",
+        "So $8$ is one of four equal parts of $32$, and the four parts share $100\\%$ equally.",
+        "Each part is $100\\% \\div 4 = 25\\%$, so $8$ is $25\\%$ of $32$."
       ]
     }
   ],

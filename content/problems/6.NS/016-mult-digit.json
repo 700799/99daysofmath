@@ -42,29 +42,29 @@
     "For the larger part multiply by $4$ and then by $10$: $87315 \\times 4 = 349{,}260$, so $87315 \\times 40 = 3{,}492{,}600$.",
     "Add the two parts: $3{,}492{,}600 + 174{,}630 = 3{,}667{,}230$. The total cost is $3{,}667{,}230$ dollars."
   ],
-  "tags": [
-    "multiply",
-    "multi-digit",
-    "MAP-practice"
-  ],
-  "estimatedSeconds": 120,
   "alternativeExplanations": [
     {
       "title": "Standard algorithm",
       "steps": [
-        "Line up: $87315 \\times 42$.",
-        "Multiply by ones: $87315 \\times 2 = 174630$ (partial product 1).",
-        "Multiply by tens: $87315 \\times 4 = 349260$, shift left → $3{,}492{,}600$ (partial product 2).",
-        "Sum: $174{,}630 + 3{,}492{,}600 = 3{,}667{,}230$."
+        "Stack $87315$ above $42$ and multiply by one digit of $42$ at a time, starting with the ones digit.",
+        "Multiplying by the $2$ ones gives the first partial product: $87315 \\times 2 = 174{,}630$.",
+        "Multiplying by the $4$ tens gives $87315 \\times 4 = 349{,}260$, which is written one place to the left as $3{,}492{,}600$.",
+        "Add the two rows: $174{,}630 + 3{,}492{,}600 = 3{,}667{,}230$, so the buses cost $3{,}667{,}230$ dollars."
       ]
     },
     {
       "title": "Estimate to sanity-check",
       "steps": [
-        "Round: $87{,}315 \\approx 90{,}000$, $42 \\approx 40$. Estimate: $90{,}000 \\times 40 = 3{,}600{,}000$.",
-        "Final answer should be a bit more than $3.6$ million. $3{,}667{,}230$ fits.",
-        "If you had gotten $366{,}723$ or $36{,}672{,}300$, this estimate would catch the place-value slip."
+        "Round each number to one that is easy to multiply: $87{,}315$ is about $90{,}000$ and $42$ is about $40$.",
+        "The estimate is $90{,}000 \\times 40 = 3{,}600{,}000$, so the exact total should be close to $3.6$ million.",
+        "The answer $3{,}667{,}230$ is close to that, while $366{,}723$ or $36{,}672{,}300$ would be ten times off and show a place-value slip."
       ]
     }
-  ]
+  ],
+  "tags": [
+    "multiply",
+    "multi-digit",
+    "MAP-practice"
+  ],
+  "estimatedSeconds": 120
 }

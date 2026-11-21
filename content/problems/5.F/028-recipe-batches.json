@@ -42,8 +42,9 @@
     {
       "title": "Decimal check",
       "steps": [
-        "$\\frac{3}{4} = 0.75$.",
-        "$5 \\times 0.75 = 3.75 = 3\\frac{3}{4}$ ✓"
+        "Three fourths of a cup is $0.75$ cup, the same way three quarters make $75$ cents.",
+        "Five batches need $5 \\times 0.75 = 3.75$ cups, just like five lots of $75$ cents make $3.75$ dollars.",
+        "The decimal part $0.75$ is three fourths again, so the amount is $3\\frac{3}{4}$ cups."
       ]
     }
   ],

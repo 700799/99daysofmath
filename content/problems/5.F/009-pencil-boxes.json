@@ -40,8 +40,9 @@
     {
       "title": "Estimate first",
       "steps": [
-        "$24 \\times 36$ is about $25 \\times 36 = 900$.",
-        "$900 - 150 = 750$, so an answer near $714$ makes sense."
+        "Round $24$ boxes up to $25$ boxes, because $25 \\times 36$ is a quarter of $3600$, which is $900$ pencils.",
+        "That counted one extra box, so take $36$ back: $900 - 36 = 864$ pencils were really ordered.",
+        "Subtract the $150$ pencils the office keeps: $864 - 150 = 714$, which is close to the quick estimate $900 - 150 = 750$."
       ]
     }
   ],

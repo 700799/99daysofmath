@@ -34,9 +34,9 @@
     {
       "title": "Sneak up with a table",
       "steps": [
-        "$x = 3.9$: $\\frac{15.21 - 16}{-0.1} = 7.9$. $x = 3.99$: $7.99$.",
-        "$x = 4.1$: $\\frac{16.81 - 16}{0.1} = 8.1$. $x = 4.01$: $8.01$.",
-        "Both sides squeeze toward $8$, agreeing with the algebra."
+        "Try inputs just below $4$. At $x = 3.9$ the fraction is $\\frac{15.21 - 16}{-0.1} = 7.9$, and at $x = 3.99$ it is $7.99$.",
+        "Try inputs just above $4$. At $x = 4.1$ the fraction is $\\frac{16.81 - 16}{0.1} = 8.1$, and at $x = 4.01$ it is $8.01$.",
+        "Both sides squeeze toward $8$, so the limit is $8$, which agrees with the factoring method."
       ]
     }
   ],

@@ -31,6 +31,16 @@
     "The last $9$ is exactly one more nine, so nothing is left over.",
     "Add up the nines you took out: $400 + 80 + 1 = 481$, so $4{,}329 \\div 9 = 481$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Start from a rounder number",
+      "steps": [
+        "The number $4{,}500$ is easy to divide by $9$ because $45 \\div 9 = 5$, so $4{,}500 \\div 9 = 500$.",
+        "But $4{,}329$ is smaller than $4{,}500$ by $171$, and $171 = 90 + 81$ is $10 + 9 = 19$ nines.",
+        "Take those $19$ nines away from the $500$: $500 - 19 = 481$, so $4{,}329 \\div 9 = 481$."
+      ]
+    }
+  ],
   "tags": [
     "division"
   ],

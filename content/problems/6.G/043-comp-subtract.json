@@ -36,6 +36,17 @@
     "The cut-out is no longer part of the shape, so subtract it: $80 - 6 = 74$.",
     "The remaining area is $74$ square units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Split what is left",
+      "steps": [
+        "The area left does not depend on where the piece is removed, so picture it cut from a corner as a piece $2$ wide and $3$ tall.",
+        "Below the cut there is a full strip $10$ wide and $8 - 3 = 5$ tall, with area $10 \\times 5 = 50$.",
+        "Beside the cut there is a piece $10 - 2 = 8$ wide and $3$ tall, with area $8 \\times 3 = 24$.",
+        "Together the two pieces cover $50 + 24 = 74$ square units."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "composite",

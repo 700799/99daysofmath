@@ -56,9 +56,9 @@
     {
       "title": "Why the other choices are off",
       "steps": [
-        "$6{,}200$ came from only two shifts, and $62{,}000$ from three.",
-        "$6{,}200{,}000$ came from five.",
-        "The exponent $4$ tells you exactly four shifts."
+        "Each factor of $10$ shifts $62$ one place, so count the shifts behind every choice.",
+        "$6{,}200$ uses only two shifts, $62{,}000$ uses three, and $6{,}200{,}000$ uses five.",
+        "The exponent $4$ asks for exactly four shifts, which gives $620{,}000$, choice C."
       ]
     }
   ],

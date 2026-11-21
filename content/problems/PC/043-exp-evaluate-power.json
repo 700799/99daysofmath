@@ -34,9 +34,9 @@
     {
       "title": "Take the steps one at a time",
       "steps": [
-        "Start at $4$.",
-        "Step 1: $4 \\times 2 = 8$. Step 2: $8 \\times 2 = 16$. Step 3: $16 \\times 2 = 32$.",
-        "Three steps of doubling land on $32$."
+        "Begin at the start value $4$, the value when $x = 0$, and plan to double once for each step.",
+        "Double three times in a row: $4 \\times 2 = 8$, then $8 \\times 2 = 16$, then $16 \\times 2 = 32$.",
+        "Three steps of doubling land on $32$, so $y = 32$ when $x = 3$."
       ]
     }
   ],

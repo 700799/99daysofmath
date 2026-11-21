@@ -39,9 +39,9 @@
     {
       "title": "Plug in the ratio",
       "steps": [
-        "$\\frac{\\text{ME}_{\\text{new}}}{\\text{ME}_{\\text{old}}} = \\sqrt{\\frac{n_{\\text{old}}}{n_{\\text{new}}}}$, so $\\frac{0.03}{0.06} = \\sqrt{\\frac{200}{n_{\\text{new}}}}$.",
-        "Square both sides: $\\frac{1}{4} = \\frac{200}{n_{\\text{new}}}$.",
-        "$n_{\\text{new}} = 800$."
+        "Because the margin of error is proportional to $\\frac{1}{\\sqrt{n}}$, the two surveys satisfy $\\frac{\\text{ME}_{\\text{new}}}{\\text{ME}_{\\text{old}}} = \\sqrt{\\frac{n_{\\text{old}}}{n_{\\text{new}}}}$, which here reads $\\frac{0.03}{0.06} = \\sqrt{\\frac{200}{n_{\\text{new}}}}$.",
+        "Squaring both sides removes the root and gives $\\frac{1}{4} = \\frac{200}{n_{\\text{new}}}$.",
+        "Solving for the new sample size gives $n_{\\text{new}} = 4 \\times 200 = 800$ customers."
       ]
     }
   ],

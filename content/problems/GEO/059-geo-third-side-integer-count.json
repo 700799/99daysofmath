@@ -62,15 +62,17 @@
     {
       "title": "Count the ends carefully",
       "steps": [
-        "Counting a run of whole numbers means subtracting and then adding 1, because both ends are included in the run.",
-        "From 6 to 18: $18 - 6 = 12$ gaps, but $12 + 1 = 13$ numbers."
+        "List the lengths that fail first: $5$ and anything shorter cannot reach, because $7 + 5 = 12$ only lies flat, and $19$ or longer cannot be spanned by $7 + 12$.",
+        "That leaves the whole numbers from $6$ up to $18$, and both of those end values are allowed.",
+        "There are $18$ whole numbers from $1$ to $18$, and removing the five numbers $1$ to $5$ leaves $18 - 5 = 13$ lengths, which is choice A."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "The trap answer is 14, from forgetting the \"add 1 at the end\" rule or from sneaking 5 or 19 into the list.",
-        "Remember the inequality is strict: a side of exactly 19 ft would lie flat along the other two, and a side of exactly 5 ft would too. Neither makes a triangle, so the count runs 6 through 18: 13 lengths."
+        "Choice B, $14$, comes from letting $5$ or $19$ slip into the list, and choice C, $12$, comes from computing $18 - 6$ without adding $1$ for the first number.",
+        "The inequality is strict because a third side of exactly $5$ ft or $19$ ft would lie flat along the other two and make no triangle.",
+        "The count therefore runs from $6$ through $18$, which is $13$ whole numbers, so choice A is correct."
       ]
     }
   ],

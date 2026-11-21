@@ -34,9 +34,9 @@
     {
       "title": "Do not plug in $3$ alone",
       "steps": [
-        "A common slip is to answer $r(3) = 27$ — but that is the RATE at $t = 3$ in liters per hour, not a number of liters.",
-        "The amount is the area under the rate curve from $1$ to $3$, which the FTC gives as $F(3) - F(1)$.",
-        "Subtracting $F(1) = 1$ matters: $26$, not $27$."
+        "A common slip is to answer $r(3) = 27$, but that is the **rate** at $t = 3$ in liters per hour, not a number of liters.",
+        "The amount leaked is the area under the rate curve from $1$ to $3$, which is $F(3) - F(1)$ with $F(t) = t^3$.",
+        "Subtracting $F(1) = 1$ from $F(3) = 27$ matters: the leak is $26$ liters, not $27$."
       ]
     }
   ],

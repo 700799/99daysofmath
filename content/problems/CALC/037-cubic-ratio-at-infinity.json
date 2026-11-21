@@ -34,9 +34,9 @@
     {
       "title": "Why the $-5x^2$ does not matter",
       "steps": [
-        "At $x = 1000$, the bottom is $2{,}000{,}000{,}000 - 5{,}000{,}000$: the $x^3$ term is $400$ times bigger than the $x^2$ term.",
-        "At $x = 1{,}000{,}000$ it is $400{,}000$ times bigger. Lower powers lose the race by a growing margin.",
-        "So only $\\frac{6x^3}{2x^3} = 3$ survives."
+        "At $x = 1000$ the bottom is $2{,}000{,}000{,}000 - 5{,}000{,}000$, so the $x^3$ term is $400$ times bigger than the $x^2$ term.",
+        "At $x = 1{,}000{,}000$ the $x^3$ term is $400{,}000$ times bigger. Lower powers lose the race by a growing margin, and the same happens to the $x$ on top.",
+        "So only the leading terms survive for huge $x$, and the fraction behaves like $\\frac{6x^3}{2x^3} = 3$. The limit is $3$."
       ]
     }
   ],

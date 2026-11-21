@@ -56,9 +56,9 @@
     {
       "title": "Differentiate each choice",
       "steps": [
-        "The right answer must differentiate back to $4x^3 + 2$.",
-        "A: $4x^3 + 2$ ✓. B: $24x$ ✗. C: $4x^3$ ✗ (missing the $2$). D: $16x^3 + 2$ ✗.",
-        "Only A passes. Differentiating to check is always available and takes seconds."
+        "A correct antiderivative must differentiate back to $4x^3 + 2$, so take the derivative of each choice.",
+        "Choice A gives $4x^3 + 2$, choice B gives $24x$, choice C gives $4x^3$ with the $2$ missing, and choice D gives $16x^3 + 2$.",
+        "Only choice A passes the test. Differentiating to check is always available and takes only a few seconds."
       ]
     }
   ],

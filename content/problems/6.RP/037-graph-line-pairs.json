@@ -31,6 +31,16 @@
     "Dividing gives $12 \\div 3 = 4$, which means the line also passes through $(1, 4)$.",
     "The unit rate is $4$ units of $y$ for every $1$ unit of $x$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Climb in equal steps",
+      "steps": [
+        "Going from the origin to $(3, 12)$ moves $3$ to the right, so think of it as $3$ equal steps of $1$.",
+        "A straight line rises the same amount on every step, so share the rise of $12$ over $3$ steps: $4$ each.",
+        "Each step of $1$ in $x$ lifts $y$ by $4$, so the unit rate is $4$."
+      ]
+    }
+  ],
   "tags": [
     "graph",
     "unit-rate"

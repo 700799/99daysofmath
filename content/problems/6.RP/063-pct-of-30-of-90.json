@@ -35,8 +35,9 @@
     {
       "title": "Use 10% three times",
       "steps": [
-        "$10\\%$ of $90 = 9$.",
-        "$30\\%$ is three times that: $9 \\times 3 = 27$."
+        "Ten percent is one tenth, so $10\\%$ of $90$ is $90 \\div 10 = 9$.",
+        "Thirty percent is three of those tenths, so add $9$ three times or multiply $9 \\times 3$.",
+        "The total is $27$, so $30\\%$ of $90$ is $27$."
       ]
     }
   ],

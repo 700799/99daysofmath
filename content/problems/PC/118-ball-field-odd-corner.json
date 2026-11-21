@@ -40,17 +40,17 @@
     {
       "title": "Shrink the numbers first",
       "steps": [
-        "Divide both edges by 30: they become 3 ft and 5 ft with the same 120° corner.",
-        "The small triangle gives 9 + 25 + 15 = 49, so the small answer is 7.",
-        "Scale back by 30: 7 × 30 = 210 ft. Same shape, easy arithmetic."
+        "Divide both edges by $30$ to get a small triangle with sides $3$ and $5$ and the same $120^\\circ$ corner.",
+        "For the small triangle, $c^2 = 9 + 25 - 2(3)(5)\\left(-\\frac{1}{2}\\right) = 34 + 15 = 49$, so its third side is $7$.",
+        "Scale back up by $30$ to return to the real field: $7 \\times 30 = 210$ ft."
       ]
     },
     {
-      "title": "Find the square root in pieces",
+      "title": "Use coordinates",
       "steps": [
-        "√44100 looks scary, so split it: 44100 = 441 × 100.",
-        "√441 = 21 because 21 × 21 = 441, and √100 = 10.",
-        "Multiply the two roots: 21 × 10 = 210 ft."
+        "Put home plate at the origin and the first post at $(90, 0)$, so the second post is at $(150\\cos 120^\\circ, 150\\sin 120^\\circ) = (-75, 75\\sqrt{3})$.",
+        "The posts are $90 - (-75) = 165$ apart across and $75\\sqrt{3}$ apart up, so the distance squared is $165^2 + 75^2 \\times 3$.",
+        "That equals $27225 + 16875 = 44100$, and $\\sqrt{44100} = 210$, so the posts are $210$ ft apart."
       ]
     }
   ],

@@ -56,9 +56,9 @@
     {
       "title": "Derive it if you forget it",
       "steps": [
-        "Start from $\\cos(2\\theta) = \\cos^2\\theta - \\sin^2\\theta$.",
-        "Replace $\\cos^2\\theta$ with $1 - \\sin^2\\theta$: $\\cos(2\\theta) = (1 - \\sin^2\\theta) - \\sin^2\\theta$.",
-        "That simplifies to $1 - 2\\sin^2\\theta$ — you never have to memorise all three separately."
+        "Start from the form that comes straight from the sum formula, $\\cos(2\\theta) = \\cos^2\\theta - \\sin^2\\theta$.",
+        "Replace $\\cos^2\\theta$ with $1 - \\sin^2\\theta$, which the Pythagorean identity allows, to get $\\cos(2\\theta) = (1 - \\sin^2\\theta) - \\sin^2\\theta = 1 - 2\\sin^2\\theta$.",
+        "With $\\theta = \\omega t$ the expression is therefore $\\cos(2\\omega t)$, choice A, and this form never has to be memorised separately."
       ]
     }
   ],

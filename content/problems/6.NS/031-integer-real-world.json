@@ -34,6 +34,16 @@
     "The diver is $30$ feet below, so the size is $30$ and the sign is negative.",
     "The integer that represents the diver's position is $-30$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Draw a vertical number line",
+      "steps": [
+        "Draw a number line going up and down like a thermometer, and label sea level as $0$ in the middle.",
+        "Heights above the water are marked upward with positive numbers, and depths are marked downward with negative numbers.",
+        "Count $30$ feet down from $0$ to reach the diver, and the label at that mark is $-30$."
+      ]
+    }
+  ],
   "tags": [
     "integer",
     "word"

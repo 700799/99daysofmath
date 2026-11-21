@@ -34,17 +34,17 @@
     {
       "title": "Take the log of both sides",
       "steps": [
-        "After dividing by $3$ you have $2^x = 32$.",
-        "Take $\\log_2$ of both sides — the exponent slides down: $x = \\log_2(32)$.",
-        "$\\log_2(32) = 5$, so $x = 5$."
+        "Divide both sides by $3$ first so the power stands alone: $2^x = 32$.",
+        "Take $\\log_2$ of both sides, which brings the exponent down: $x = \\log_2(32)$.",
+        "Since $2^5 = 32$, the log equals $5$ and so $x = 5$."
       ]
     },
     {
       "title": "Guess and adjust",
       "steps": [
-        "Try $x = 4$: $3 \\times 16 = 48$, too small.",
-        "Try $x = 5$: $3 \\times 32 = 96$ — exactly right.",
-        "So $x = 5$."
+        "Try $x = 4$ in the original equation: $3 \\times 2^4 = 3 \\times 16 = 48$, which is too small.",
+        "The value $48$ is exactly half of $96$, so one more doubling is needed.",
+        "Try $x = 5$: $3 \\times 32 = 96$, which is exactly right, so $x = 5$."
       ]
     }
   ],

@@ -34,15 +34,17 @@
     {
       "title": "Round-by-round table",
       "steps": [
-        "Round 1: 3 people. Round 2: 9. Round 3: 27. Round 4: 81.",
-        "Each row is triple the last, so round 4 reaches 81 people."
+        "Make a table of rounds: round $1$ reaches $3$ people and round $2$ reaches $9$ people.",
+        "Each row is three times the row before, so round $3$ reaches $27$ people.",
+        "Tripling once more gives $27 \\times 3 = 81$ people in round $4$."
       ]
     },
     {
       "title": "Pair the copies",
       "steps": [
-        "Group 3⁴ as (3 × 3) × (3 × 3) = 9 × 9.",
-        "9 × 9 = 81."
+        "Group the four factors of $3$ into two pairs: $3^4 = (3 \\times 3) \\times (3 \\times 3)$.",
+        "Each pair equals $9$, so the product becomes $9 \\times 9$.",
+        "Since $9 \\times 9 = 81$, there are $81$ new people in round $4$."
       ]
     }
   ],

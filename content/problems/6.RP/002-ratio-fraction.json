@@ -28,25 +28,25 @@
     {
       "title": "As a decimal",
       "steps": [
-        "$\\frac{3}{8}$ means $3 \\div 8$.",
-        "$3 \\div 8 = 0.375$.",
-        "So $\\frac{3}{8}$ and $0.375$ name the same amount."
+        "A fraction is also a division, so the shaded amount $\\frac{3}{8}$ means $3 \\div 8$.",
+        "One eighth of the bar is $1 \\div 8 = 0.125$, so three eighths is $3 \\times 0.125 = 0.375$.",
+        "The decimal $0.375$ names the same shaded amount as the fraction $\\frac{3}{8}$."
       ]
     },
     {
       "title": "As a percent",
       "steps": [
-        "Take the decimal $0.375$ and multiply by $100$.",
-        "$0.375 \\times 100 = 37.5$.",
-        "So $\\frac{3}{8} = 37.5\\%$ of the whole bar is shaded."
+        "Each of the $8$ equal parts is $100\\% \\div 8 = 12.5\\%$ of the whole bar.",
+        "Three parts are shaded, so the shaded share is $3 \\times 12.5\\% = 37.5\\%$.",
+        "A share of $37.5\\%$ is less than half the bar, which fits the fraction $\\frac{3}{8}$."
       ]
     },
     {
       "title": "Ratio of shaded to unshaded",
       "steps": [
-        "$3$ parts are shaded, $5$ parts are not.",
-        "The ratio shaded $:$ unshaded is $3:5$.",
-        "But the question asks for the **fraction of the whole**, which is shaded out of total: $\\frac{3}{8}$."
+        "Count both kinds of parts: $3$ are shaded and $8 - 3 = 5$ are not shaded.",
+        "The ratio of shaded to unshaded is $3 : 5$, but that compares one part with the other part.",
+        "A fraction of the bar compares shaded with **all** the parts, and $3 + 5 = 8$, so the answer is $\\frac{3}{8}$."
       ]
     }
   ],

@@ -39,6 +39,16 @@
     "Pull the shared $3$ out front, which is the distributive property in reverse: $3(2x + 3)$.",
     "Check by expanding: $3 \\cdot 2x + 3 \\cdot 3 = 6x + 9$. The answer is $3(2x + 3)$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Area model in reverse",
+      "steps": [
+        "Picture a rectangle with total area $6x + 9$, split into a piece of area $6x$ and a piece of area $9$.",
+        "Both pieces share the same height, and the tallest height that divides both $6$ and $9$ is $3$.",
+        "With height $3$ the widths are $2x$ and $3$, so the rectangle is $3$ tall and $2x + 3$ wide: $3(2x + 3)$."
+      ]
+    }
+  ],
   "tags": [
     "CA",
     "factor"

@@ -41,16 +41,17 @@
     {
       "title": "Or go straight through sine",
       "steps": [
-        "$\\sin 60° = \\dfrac{\\text{height}}{20}$, so height $= 20\\sin 60° = 20 \\cdot \\dfrac{\\sqrt{3}}{2} = 10\\sqrt{3}$.",
-        "Same answer, and it does not require noticing the special triangle.",
-        "Recognizing $30$-$60$-$90$ is faster; the sine route is the reliable fallback."
+        "The height is opposite the $60°$ angle and the ladder is the hypotenuse, so $\\sin 60° = \\dfrac{\\text{height}}{20}$.",
+        "Multiply both sides by $20$ and use $\\sin 60° = \\dfrac{\\sqrt{3}}{2}$ to get a height of $20 \\cdot \\dfrac{\\sqrt{3}}{2}$.",
+        "That simplifies to $10\\sqrt{3}$ feet, so the value of $a$ is $10$."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "Entering 17.32 — the full height 10√3 as a decimal — ignores the answer-format sentence and scores zero.",
-        "The stem asks for a where the height is a√3. Formatted answers are graded on the format: re-read the final sentence before touching the keypad."
+        "The height is $10\\sqrt{3} \\approx 17.32$ feet, but entering $17.32$ does not answer the question.",
+        "The question asks for $a$ when the height is written in the form $a\\sqrt{3}$.",
+        "Comparing $10\\sqrt{3}$ with the form $a\\sqrt{3}$ shows that the number to enter is $a = 10$."
       ]
     }
   ],

@@ -39,28 +39,28 @@
     "Combining each group gives $7x + 1$, and nothing more can be combined.",
     "Terms are the parts separated by plus or minus signs, here $7x$ and $1$. The simplified expression has $2$ terms."
   ],
-  "tags": [
-    "expression",
-    "parts",
-    "MAP-practice"
-  ],
-  "estimatedSeconds": 90,
   "alternativeExplanations": [
     {
       "title": "What counts as one term?",
       "steps": [
-        "A **term** is bounded by $+$ or $-$ signs (the sign goes with the term to its right).",
-        "$7x + 1$ → terms are $7x$ and $+1$. Two terms.",
-        "If the answer had been $7x + 1 - 4$, you would first combine $1 - 4 = -3$ to get $7x - 3$ — still two terms."
+        "A term is one chunk between plus and minus signs, and like chunks count as a single term.",
+        "This expression only has two kinds of chunk: pieces with $x$ in them and plain numbers.",
+        "After simplifying to $7x + 1$ there is one chunk of each kind left, so there are $2$ terms."
       ]
     },
     {
       "title": "Why distribute first?",
       "steps": [
-        "Without distributing, you might count $(x + 2)$ as one term, but parentheses hide structure.",
-        "After distributing, every term is visible. Then like-term combining tells you the true number of terms.",
-        "Rule: **simplify completely** before counting parts of an expression."
+        "Test the count with a number: at $x = 10$ the original is $3(12) + 40 - 5 = 71$.",
+        "The simplified form $7x + 1$ gives $70 + 1 = 71$ at $x = 10$, so nothing was lost by distributing and combining.",
+        "Parentheses were hiding an $x$ and a number, and once they are opened and merged only $7x$ and $1$ remain: $2$ terms."
       ]
     }
-  ]
+  ],
+  "tags": [
+    "expression",
+    "parts",
+    "MAP-practice"
+  ],
+  "estimatedSeconds": 90
 }

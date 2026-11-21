@@ -46,8 +46,17 @@
     {
       "title": "Scale up a small box",
       "steps": [
-        "$6 \\times 3 \\times 4 = 72$.",
-        "Each edge is $10\\times$ longer, so the volume is $10 \\times 10 \\times 10 = 1000\\times$ bigger: $72 \\times 1000 = 72{,}000$."
+        "Start with a tiny box that is $6$ by $3$ by $4$. Its volume is $6 \\times 3 \\times 4 = 72$ cubic centimeters.",
+        "The real tank is $10$ times longer, $10$ times wider and $10$ times taller, so it is $10 \\times 10 \\times 10 = 1000$ times as big.",
+        "Multiply the small volume by that factor: $72 \\times 1000 = 72{,}000$ cubic centimeters."
+      ]
+    },
+    {
+      "title": "Use liter cubes",
+      "steps": [
+        "A cube that is $10$ cm on every edge holds $10 \\times 10 \\times 10 = 1000$ cubic centimeters.",
+        "The tank fits $6$ of these cubes along its length, $3$ across its width and $4$ up its height, which is $6 \\times 3 \\times 4 = 72$ cubes.",
+        "Seventy-two cubes of $1000$ cubic centimeters each give $72{,}000$ cubic centimeters."
       ]
     }
   ],

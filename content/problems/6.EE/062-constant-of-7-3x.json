@@ -30,18 +30,19 @@
     "The two terms of $7 + 3x$ are $7$ and $3x$.",
     "$3x$ changes when $x$ changes, but $7$ does not, so the constant term is $7$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Try different values",
+      "steps": [
+        "Work out $7 + 3x$ for a few values: $x = 1$ gives $7 + 3$, $x = 2$ gives $7 + 6$ and $x = 3$ gives $7 + 9$.",
+        "The second number keeps changing, from $3$ to $6$ to $9$, because it depends on $x$.",
+        "The first number is $7$ every single time, so the constant term is $7$."
+      ]
+    }
+  ],
   "tags": [
     "expression",
     "parts"
   ],
-  "estimatedSeconds": 25,
-  "alternativeExplanations": [
-    {
-      "title": "Check the answer",
-      "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: 7 — verified."
-      ]
-    }
-  ]
+  "estimatedSeconds": 25
 }

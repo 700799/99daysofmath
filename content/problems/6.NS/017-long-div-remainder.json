@@ -40,28 +40,29 @@
     "For the leftover part, use the fact that $24 \\times 3 = 72$, so $72 \\div 24 = 3$.",
     "Add the partial quotients: $200 + 3 = 203$. The remainder is $0$, so no decimal digits are needed and the answer is $203$."
   ],
-  "tags": [
-    "long-division",
-    "decimal",
-    "MAP-practice"
-  ],
-  "estimatedSeconds": 120,
   "alternativeExplanations": [
     {
       "title": "Long division",
       "steps": [
-        "$24$ into $48$ → $2$ times ($24 \\times 2 = 48$). Subtract: $0$. Bring down $7$ → $7$.",
-        "$24$ into $7$ → $0$ times. Bring down $2$ → $72$.",
-        "$24$ into $72$ → $3$ times ($24 \\times 3 = 72$). Subtract: $0$. Done.",
-        "Digits: $2$, $0$, $3$ → $203$, remainder $0$."
+        "Divide $24$ into the first two digits, $48$: it goes $2$ times exactly, so write $2$ and bring down the $7$.",
+        "Now $24$ does not fit into $7$ at all, so write $0$ in the quotient to hold the place and bring down the $2$ to make $72$.",
+        "Since $24 \\times 3 = 72$, the last digit is $3$ and nothing is left over.",
+        "Reading the quotient digits $2$, $0$, $3$ in order gives $4872 \\div 24 = 203$."
       ]
     },
     {
       "title": "Check",
       "steps": [
-        "Multiply back: $203 \\times 24 = 200 \\times 24 + 3 \\times 24 = 4800 + 72 = 4872$. ✓",
-        "Estimate: $4900 \\div 25 \\approx 196$. The true answer $203$ is right in the same neighborhood. ✓"
+        "Multiply the quotient back to test it: $203 \\times 24 = 200 \\times 24 + 3 \\times 24 = 4800 + 72$.",
+        "The sum is $4872$, which is the number we started with, so the quotient has no error.",
+        "An estimate agrees too, since $4800 \\div 24 = 200$, and that is very close to the answer $203$."
       ]
     }
-  ]
+  ],
+  "tags": [
+    "long-division",
+    "decimal",
+    "MAP-practice"
+  ],
+  "estimatedSeconds": 120
 }

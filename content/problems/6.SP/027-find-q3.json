@@ -36,6 +36,16 @@
     "$Q3$ is the median of this half. With four values, the middle two are $14$ and $16$.",
     "Average them: $(14 + 16) \\div 2 = 15$, so the upper quartile is $Q3 = 15$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Halfway between the ends",
+      "steps": [
+        "The upper half is the four values above the median $10$: $12, 14, 16, 18$.",
+        "These values are evenly spaced, so the middle of this half is halfway between its ends: $(12 + 18) \\div 2 = 15$.",
+        "Two values of the upper half are below $15$ and two are above it, so $Q3 = 15$."
+      ]
+    }
+  ],
   "tags": [
     "quartile"
   ],

@@ -43,9 +43,9 @@
     {
       "title": "Three denominators, three different answers",
       "steps": [
-        "Out of all students: $\\dfrac{35}{200} = 0.175$.",
-        "Out of all bus riders: $\\dfrac{35}{80} = 0.4375$.",
-        "Out of Grade 10: $\\dfrac{35}{90} \\approx 0.39$ ✓ — same numerator every time. The phrase after \"from\" or \"of those who\" names the denominator."
+        "The count of Grade $10$ bus riders, $35$, could be divided by three different totals.",
+        "Out of all $200$ students it gives $0.175$, and out of the $80$ bus riders it gives about $0.44$.",
+        "The student is chosen from Grade $10$, so the right total is $90$, and $\\dfrac{35}{90} \\approx 0.39$."
       ]
     }
   ],

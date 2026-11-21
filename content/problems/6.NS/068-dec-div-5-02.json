@@ -40,8 +40,9 @@
     {
       "title": "How many 0.2s fit?",
       "steps": [
-        "$0.2 + 0.2 + 0.2 + 0.2 + 0.2 = 1$.",
-        "So $5$ ones contain $5 \\times 5 = 25$ groups of $0.2$."
+        "Count how many pieces of $0.2$ fit in a single $1$: $0.2 + 0.2 + 0.2 + 0.2 + 0.2 = 1$, so five pieces fit.",
+        "The number $5$ is made of five ones, and each of those ones holds $5$ pieces of $0.2$.",
+        "That makes $5 \\times 5 = 25$ pieces altogether, so the quotient is $5 \\div 0.2 = 25$."
       ]
     }
   ],

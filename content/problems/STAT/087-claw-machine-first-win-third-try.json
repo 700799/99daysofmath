@@ -35,9 +35,9 @@
     {
       "title": "Shrinking chances",
       "steps": [
-        "Win on try 1: $0.25$.",
-        "Win first on try 2: $0.75 \\times 0.25 = 0.1875$.",
-        "Win first on try 3: another factor of $0.75$: $0.1875 \\times 0.75 = 0.140625$. Each later try is $75\\%$ as likely as the one before."
+        "Build the probabilities one try at a time. A win on try 1 has probability $0.25$.",
+        "A first win on try 2 needs one miss first, so it is $0.75 \\times 0.25 = 0.1875$; each later try is $75$ percent as likely as the one before.",
+        "A first win on try 3 is therefore $0.1875 \\times 0.75 = 0.140625$, which rounds to $0.1406$."
       ]
     }
   ],

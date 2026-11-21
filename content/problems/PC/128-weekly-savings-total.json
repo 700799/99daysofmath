@@ -40,17 +40,17 @@
     {
       "title": "Pair the ends yourself",
       "steps": [
-        "The weeks are 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60.",
-        "Pair first with last: 5 + 60 = 65. Next pair: 10 + 55 = 65. Every pair makes 65.",
-        "Twelve numbers make six pairs: 6 × 65 = 390 dollars."
+        "List what is saved in each of the twelve weeks: $5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60$.",
+        "Pair the first with the last, $5 + 60 = 65$, and the next pair, $10 + 55 = 65$, shows every pair makes $65$.",
+        "Twelve amounts make six pairs, so the total is $6 \\times 65 = 390$ dollars."
       ]
     },
     {
       "title": "Factor out the 5",
       "steps": [
-        "Every amount is a multiple of 5: the list is 5 × (1, 2, 3, …, 12).",
-        "Add 1 through 12 first using Gauss's trick: 12 × 13 ÷ 2 = 78.",
-        "Now multiply back: 5 × 78 = 390 dollars."
+        "Every weekly amount is a multiple of $5$, so the total is $5 \\times (1 + 2 + 3 + \\dots + 12)$.",
+        "Add $1$ through $12$ with the pairing trick: $12 \\times 13 \\div 2 = 78$.",
+        "Multiply back by $5$ to get the total saved: $5 \\times 78 = 390$ dollars."
       ]
     }
   ],

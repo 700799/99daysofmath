@@ -53,6 +53,16 @@
     "Choice C gives $300 \\div 6 = 50$ and choice D gives $80 \\div 2 = 40$ miles per hour.",
     "The largest unit rate is $60$ miles per hour, so the answer is choice B, $240$ miles in $4$ hours."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Scale every trip to 12 hours",
+      "steps": [
+        "Instead of dividing, stretch each trip to the same time, $12$ hours, because $3$, $4$, $6$ and $2$ all go into $12$.",
+        "A becomes $150 \\times 4 = 600$ miles, B becomes $240 \\times 3 = 720$ miles, C becomes $300 \\times 2 = 600$ miles and D becomes $80 \\times 6 = 480$ miles.",
+        "B goes farthest in the same $12$ hours, so choice B has the greatest unit rate."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "unit-rate"

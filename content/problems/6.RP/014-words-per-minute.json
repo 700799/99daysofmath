@@ -33,6 +33,16 @@
     "Since $24 \\div 4 = 6$, it follows that the larger division $240 \\div 4$ equals $60$.",
     "Mia types at a rate of $60$ words per minute."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Halve the time twice",
+      "steps": [
+        "Half of $4$ minutes is $2$ minutes, and in half the time Mia types half the words, $120$.",
+        "Halve again: in $1$ minute she types half of $120$ words, which is $60$ words.",
+        "The row for one minute gives her rate, $60$ words per minute."
+      ]
+    }
+  ],
   "tags": [
     "unit-rate"
   ],

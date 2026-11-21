@@ -42,8 +42,9 @@
     {
       "title": "Stack and add",
       "steps": [
-        "$12.75 + 12.75 = 25.50$.",
-        "$25.50 + 12.75 = 38.25$."
+        "Buying three books means paying the price three times, so add $12.75$ again and again.",
+        "Two books cost $12.75 + 12.75 = 25.50$ dollars, because the two $75$ cent parts make $1.50$.",
+        "Add the third book to that: $25.50 + 12.75 = 38.25$, so three books cost $38.25$ dollars."
       ]
     }
   ],

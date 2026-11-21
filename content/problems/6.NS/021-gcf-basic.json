@@ -31,6 +31,16 @@
     "The numbers in both lists are $1, 2, 3$ and $6$, so these are the common factors.",
     "The greatest common factor of $12$ and $18$ is $6$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Use prime factors",
+      "steps": [
+        "Write each number as a product of primes: $12 = 2 \\times 2 \\times 3$ and $18 = 2 \\times 3 \\times 3$.",
+        "Match the primes that appear in both: they share one $2$ and one $3$, but not a second $2$ or a second $3$.",
+        "Multiply the shared primes to build the biggest shared factor: $2 \\times 3 = 6$, so the GCF is $6$."
+      ]
+    }
+  ],
   "tags": [
     "gcf"
   ],

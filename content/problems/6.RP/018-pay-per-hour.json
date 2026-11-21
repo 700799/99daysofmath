@@ -34,6 +34,16 @@
     "Use a multiplication fact to divide: since $8 \\times 9 = 72$, the quotient is $9$.",
     "Liam earns $9$ dollars for each hour he works."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Estimate and adjust",
+      "steps": [
+        "Try an easy rate first: at $10$ dollars an hour, $8$ hours would pay $80$ dollars.",
+        "That is $8$ dollars too much, which is $1$ dollar too much for each of the $8$ hours.",
+        "Lower the guess by $1$ dollar to get $9$, and check that $8 \\times 9 = 72$, so he earns $9$ dollars per hour."
+      ]
+    }
+  ],
   "tags": [
     "unit-rate",
     "money"

@@ -45,9 +45,9 @@
     {
       "title": "Check with a number",
       "steps": [
-        "Pick $x = 2$. Then $g(2) = 7$ and $f(7) = 21$.",
-        "Now test the expression: $3(2) + 15 = 21$. It matches.",
-        "Testing one number is a fast way to catch a mistake in the distributing."
+        "Run one number through both machines, say $x = 2$: $g(2) = 2 + 5 = 7$, and then $f(7) = 3 \\times 7 = 21$.",
+        "The inside is tripled as a whole, so both the $x$ and the $5$ get tripled, which suggests $3x + 15$.",
+        "Test that expression with the same number: $3(2) + 15 = 21$, which matches the machines, so $f(g(x)) = 3x + 15$."
       ]
     }
   ],

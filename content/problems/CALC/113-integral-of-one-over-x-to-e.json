@@ -34,9 +34,9 @@
     {
       "title": "Power rule trap",
       "steps": [
-        "Trying the power rule on $x^{-1}$ gives $\\frac{x^0}{0}$ — division by zero. The power rule fails exactly at $n = -1$.",
-        "That gap is filled by the logarithm: $\\frac{d}{dx} \\ln x = \\frac{1}{x}$.",
-        "So the area is $\\ln e - \\ln 1 = 1$."
+        "Trying the power rule on $x^{-1}$ gives $\\frac{x^0}{0}$, a division by zero. The power rule fails exactly at the exponent $-1$.",
+        "That gap is filled by the natural logarithm, because $\\frac{d}{dx} \\ln x = \\frac{1}{x}$.",
+        "So the integral is the change in the logarithm, $\\ln e - \\ln 1 = 1 - 0 = 1$."
       ]
     }
   ],

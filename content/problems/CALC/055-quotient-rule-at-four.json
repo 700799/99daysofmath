@@ -34,9 +34,9 @@
     {
       "title": "Rewrite, then differentiate",
       "steps": [
-        "Long-divide: $\\frac{2x + 1}{x - 3} = 2 + \\frac{7}{x - 3}$.",
+        "Divide first: since $2x + 1 = 2(x - 3) + 7$, the function is $g(x) = 2 + \\frac{7}{x - 3}$.",
         "The constant $2$ has derivative $0$, and $\\frac{7}{x - 3} = 7(x - 3)^{-1}$ has derivative $-7(x - 3)^{-2}$.",
-        "At $x = 4$: $-7 \\cdot 1 = -7$. Same answer, no quotient rule needed."
+        "At $x = 4$ this is $-7 \\cdot 1 = -7$, the same answer with no quotient rule needed."
       ]
     }
   ],

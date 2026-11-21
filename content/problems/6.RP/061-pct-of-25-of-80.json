@@ -35,8 +35,9 @@
     {
       "title": "Use a friendly fraction",
       "steps": [
-        "$25\\% = \\tfrac{1}{4}$.",
-        "One quarter of $80$ is $80 \\div 4 = 20$."
+        "Four lots of $25\\%$ make $100\\%$, so $25\\%$ is the friendly fraction $\\frac{1}{4}$.",
+        "One quarter of $80$ means sharing $80$ into four equal parts: $80 \\div 4 = 20$.",
+        "No decimals are needed, and $25\\%$ of $80$ is $20$."
       ]
     }
   ],

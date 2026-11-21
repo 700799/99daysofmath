@@ -32,11 +32,11 @@
   ],
   "alternativeExplanations": [
     {
-      "title": "Just multiply it out",
+      "title": "Multiply it out",
       "steps": [
-        "$8^3 = 8 \\times 8 \\times 8 = 512$.",
-        "Now ask: $2$ to what power gives $512$? Count doublings: $2, 4, 8, 16, 32, 64, 128, 256, 512$.",
-        "That is $9$ doublings, so the answer is $9$."
+        "Work out the inside first without any log rule: $8^3 = 8 \\times 8 \\times 8 = 512$.",
+        "Now count doublings from $2$ up to $512$: $2, 4, 8, 16, 32, 64, 128, 256, 512$.",
+        "That list has $9$ numbers, so $2^9 = 512$ and the value of the log is $9$."
       ]
     }
   ],

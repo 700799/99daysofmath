@@ -31,6 +31,16 @@
     "Now add the value of $b$ to that square: $16 + 5 = 21$.",
     "The value of the expression is $21$ when $a = 4$ and $b = 5$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Count tiles",
+      "steps": [
+        "Show $a^2$ as a square of tiles with $4$ rows and $4$ tiles in each row.",
+        "Counting row by row, the square holds $4 + 4 + 4 + 4 = 16$ tiles.",
+        "Add $b = 5$ loose tiles beside it to get $16 + 5 = 21$ tiles in all."
+      ]
+    }
+  ],
   "tags": [
     "evaluate"
   ],

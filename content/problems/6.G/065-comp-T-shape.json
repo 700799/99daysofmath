@@ -33,6 +33,16 @@
     "The stem has an area of $4 \\times 3 = 12$ square units as well.",
     "Add the two rectangles: $12 + 12 = 24$, so the total area is $24$ square units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Rebuild as one rectangle",
+      "steps": [
+        "The stem holds $4 \\times 3 = 12$ unit squares, the same number as the $6 \\times 2$ top bar.",
+        "Rearrange the stem's $12$ squares into a second $6$ by $2$ bar and place it under the top bar.",
+        "The two bars make a rectangle $6$ wide and $4$ tall, so the total area is $6 \\times 4 = 24$ square units."
+      ]
+    }
+  ],
   "tags": [
     "composite",
     "area",

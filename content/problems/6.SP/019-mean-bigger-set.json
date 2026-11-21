@@ -30,6 +30,17 @@
     "Count the values in the list: there are $6$, so the total is shared six ways.",
     "Divide the total by the count: $90 \\div 6 = 15$, so the mean is $15$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Balance around a guess",
+      "steps": [
+        "Guess $15$ for the mean, since it sits among the values, and measure each value from it.",
+        "Below the guess, $11$, $13$ and $14$ are short by $4$, $2$ and $1$, a total of $7$.",
+        "Above the guess, $16$, $18$ and $18$ are over by $1$, $3$ and $3$, also a total of $7$.",
+        "The shortfall and the extra cancel exactly, so the mean is $15$."
+      ]
+    }
+  ],
   "tags": [
     "mean"
   ],

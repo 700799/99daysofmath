@@ -56,9 +56,9 @@
     {
       "title": "Why $180^\\circ k$ is wrong",
       "steps": [
-        "Choice B would include $\\theta = 180^\\circ$, but $\\cos 180^\\circ = -1$, not $1$.",
-        "That is the pendulum at the far end of its swing, the opposite of where it started.",
-        "Maximum values repeat once per period, so the spacing is a full $360^\\circ$."
+        "Choice B would include $\\theta = 180^\\circ$, but $\\cos 180^\\circ = -1$, not $1$; that is the pendulum at the far end of its swing.",
+        "Choice C misses solutions such as $720^\\circ$ and $-360^\\circ$, and choice D starts at $90^\\circ$, where the cosine is $0$.",
+        "The cosine reaches its maximum once per period, so the spacing is a full $360^\\circ$ and the answer is $\\theta = 360^\\circ k$, choice A."
       ]
     }
   ],

@@ -30,6 +30,16 @@
     "Replace $x$ with the given value $5$, which makes the rule $y = 2(5)$.",
     "Multiplying gives $10$, so the answer is $y = 10$ when $x = 5$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Add x to itself",
+      "steps": [
+        "Doubling a number is the same as adding it to itself, so $2x$ is $x + x$.",
+        "With $x = 5$ the sum to work out is $5 + 5$.",
+        "Five plus five is $10$, so the answer is $y = 10$."
+      ]
+    }
+  ],
   "tags": [
     "two-vars"
   ],

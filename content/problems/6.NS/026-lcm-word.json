@@ -38,6 +38,25 @@
     "They are both at the park on a day that is in both lists, and the first such day is the LCM of $4$ and $6$.",
     "The first shared day is $12$, so they both visit again in $12$ days."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Mark a calendar",
+      "steps": [
+        "Number the days $1$ to $12$ in a row and put an A under each of Ana's days: $4$, $8$ and $12$.",
+        "Put a B under each of Ben's days, which are days $6$ and $12$.",
+        "Day $6$ has only a B and days $4$ and $8$ have only an A, so none of those is a shared day.",
+        "Day $12$ is the first day with both letters, so they meet again in $12$ days."
+      ]
+    },
+    {
+      "title": "Build it from primes",
+      "steps": [
+        "The shared day must be a multiple of both $4 = 2 \\times 2$ and $6 = 2 \\times 3$.",
+        "The smallest such number needs two $2$s for Ana's cycle and one $3$ for Ben's cycle.",
+        "That number is $2 \\times 2 \\times 3 = 12$, so the next shared visit is in $12$ days."
+      ]
+    }
+  ],
   "tags": [
     "CA",
     "lcm",

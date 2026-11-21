@@ -36,6 +36,17 @@
     "Subtract the missing corner because it is not part of the floor: $60 - 6 = 54$.",
     "The area of the L-shaped floor plan is $54$ square units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Cut the L into two rectangles",
+      "steps": [
+        "Take the corner cut to be $3$ wide and $2$ tall, and draw a line across the floor plan level with the bottom of the cut.",
+        "Below the line is a full strip $10$ wide and $6 - 2 = 4$ tall, with area $10 \\times 4 = 40$.",
+        "Above the line is a piece $10 - 3 = 7$ wide and $2$ tall, with area $7 \\times 2 = 14$.",
+        "Adding the two rectangles gives $40 + 14 = 54$ square units."
+      ]
+    }
+  ],
   "tags": [
     "composite",
     "area"

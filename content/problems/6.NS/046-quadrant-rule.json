@@ -53,6 +53,16 @@
     "Quadrants are numbered counter-clockwise from the upper right: I upper right, II upper left, III lower left, IV lower right.",
     "The lower-left region is Quadrant III, which is choice C."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Test a sample point",
+      "steps": [
+        "Choose an easy point that fits both conditions, such as $(-1, -1)$, where $x$ and $y$ are both negative.",
+        "To plot it, go $1$ step left from the origin and then $1$ step down, which lands in the lower-left region.",
+        "The lower-left region is Quadrant III, so the answer is choice C."
+      ]
+    }
+  ],
   "tags": [
     "coordinate",
     "quadrant"

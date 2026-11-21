@@ -33,6 +33,17 @@
     "Then comes $0$, followed by the positives in order, $3$ and $5$. The full list is $-7, -2, 0, 3, 5$.",
     "The second number in the ordered list is $-2$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Pick the coldest each time",
+      "steps": [
+        "Read the numbers as temperatures and pick out the coldest one that is left each time.",
+        "The coldest of $5, -2, 0, -7, 3$ is $-7$, because it is the furthest below zero, so it goes first.",
+        "Of the numbers still left, $5, -2, 0, 3$, the only one below zero is $-2$, so it is the next coldest.",
+        "The second number in the order is therefore $-2$."
+      ]
+    }
+  ],
   "tags": [
     "integer",
     "order"

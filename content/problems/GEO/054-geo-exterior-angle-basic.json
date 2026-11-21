@@ -34,8 +34,9 @@
     {
       "title": "The long way around",
       "steps": [
-        "The third interior angle is $180 - 50 - 60 = 70^\\circ$.",
-        "The exterior angle forms a linear pair with it: $180 - 70 = 110^\\circ$. Same answer, one step longer — which is why the shortcut theorem exists."
+        "First find the interior angle at the corner where the side was extended: the three angles total $180^\\circ$, so it measures $180 - 50 - 60 = 70^\\circ$.",
+        "The exterior angle sits beside that $70^\\circ$ angle on a straight line, so the two form a linear pair.",
+        "Subtracting from the straight angle gives $180 - 70 = 110^\\circ$, the same result as adding the two remote angles."
       ]
     }
   ],

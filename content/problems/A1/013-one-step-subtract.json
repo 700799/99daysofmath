@@ -34,9 +34,9 @@
     {
       "title": "Rewind the story",
       "steps": [
-        "A number lost 6 and ended at 11.",
-        "Play the movie backwards: start at 11 and give the 6 back.",
-        "$11 + 6 = 17$, so the number began as 17."
+        "Read the equation as a story: a number lost $6$ and ended up at $11$.",
+        "Play the story backwards by starting at $11$ and giving the $6$ back.",
+        "That gives $11 + 6 = 17$, so the number started as $x = 17$."
       ]
     }
   ],

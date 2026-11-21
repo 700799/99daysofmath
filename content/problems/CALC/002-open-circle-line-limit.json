@@ -34,9 +34,9 @@
     {
       "title": "Sneak up with numbers",
       "steps": [
-        "$g(1.9) = 2(1.9) + 1 = 4.8$ and $g(1.99) = 4.98$.",
-        "$g(2.1) = 5.2$ and $g(2.01) = 5.02$.",
-        "Both sides close in on $5$. The lonely dot at $7$ never enters the calculation."
+        "Evaluate the line a little to the left of $2$: $g(1.9) = 2(1.9) + 1 = 4.8$ and $g(1.99) = 4.98$.",
+        "Now evaluate it a little to the right of $2$: $g(2.1) = 5.2$ and $g(2.01) = 5.02$.",
+        "Both lists close in on $5$, so the limit is $5$. The lonely dot at height $7$ never enters the calculation, because a limit ignores the point itself."
       ]
     }
   ],

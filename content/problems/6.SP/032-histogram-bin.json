@@ -33,6 +33,16 @@
     "Here the bin $0$-$9$ has $4$ values and the bin $10$-$19$ has $7$ values.",
     "Because $7$ is greater than $4$, the bin $10$-$19$ has more values."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Picture the two bars",
+      "steps": [
+        "Imagine the two bars side by side: one is $4$ units tall and the other is $7$ units tall.",
+        "The second bar rises $7 - 4 = 3$ units higher than the first, and height means count in a histogram.",
+        "The taller bar belongs to the bin $10$-$19$, so that bin has more values."
+      ]
+    }
+  ],
   "tags": [
     "histogram"
   ],

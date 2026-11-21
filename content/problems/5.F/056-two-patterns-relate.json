@@ -33,6 +33,16 @@
     "Divide each B term by its partner in A: $6 \\div 2 = 3$, $12 \\div 4 = 3$ and $18 \\div 6 = 3$.",
     "This happens because B adds $6$ each time, which is $3$ times the $2$ that A adds, so every B term is $3$ times the A term."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Divide matching terms",
+      "steps": [
+        "Line up the terms that match: $2$ goes with $6$, $4$ goes with $12$, and $6$ goes with $18$.",
+        "Divide each B term by its partner: $6 \\div 2 = 3$, $12 \\div 4 = 3$ and $18 \\div 6 = 3$.",
+        "The quotient is the same every time, so each B term is $3$ times the matching A term."
+      ]
+    }
+  ],
   "tags": [
     "patterns",
     "relationships"

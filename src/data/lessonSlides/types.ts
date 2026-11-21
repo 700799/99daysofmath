@@ -75,6 +75,13 @@ export interface LessonSlide {
    * Every concept slide carries one.
    */
   why?: string;
+  /**
+   * A second way in: the same idea seen differently (concepts), or the same
+   * example solved by another method (examples). Plain text, shown in its own
+   * "Another way" box. Every concept and example slide carries one; they are
+   * kept in lessonSlideAlts.json and attached when the lessons load.
+   */
+  alt?: { title: string; text: string };
 }
 
 export type SlideBank = Record<string, LessonSlide[]>; // key = `${domain}-${unit}`

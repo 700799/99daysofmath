@@ -43,16 +43,17 @@
     {
       "title": "Multiply by 1.15",
       "steps": [
-        "Total $=$ original $+$ tip $= 100\\% + 15\\% = 115\\%$.",
-        "$1.15 \\times 24 = 27.60$."
+        "The meal is $100\\%$ and the tip adds $15\\%$, so the total is $115\\%$ of the meal price.",
+        "Write $115\\%$ as the decimal $1.15$ and multiply by the meal price: $1.15 \\times 24 = 24 + 0.15 \\times 24 = 24 + 3.60$.",
+        "The total with the tip is $27.60$ dollars."
       ]
     },
     {
       "title": "Mental: 10% + 5%",
       "steps": [
-        "$10\\%$ of $24 = 2.40$.",
-        "$5\\%$ is half: $1.20$.",
-        "Tip $= 2.40 + 1.20 = 3.60$. Total $= 27.60$."
+        "Ten percent of $24$ dollars is $2.40$ dollars, found by moving the decimal point one place left.",
+        "Five percent is half of that, $1.20$ dollars, so the tip is $2.40 + 1.20 = 3.60$ dollars.",
+        "Add the tip to the meal: $24 + 3.60 = 27.60$ dollars."
       ]
     }
   ],

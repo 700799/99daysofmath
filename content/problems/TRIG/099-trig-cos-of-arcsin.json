@@ -42,17 +42,17 @@
     {
       "title": "Use the Pythagorean identity instead",
       "steps": [
-        "$\\sin^2\\theta + \\cos^2\\theta = 1$, so $\\cos^2\\theta = 1 - \\left(\\frac{3}{5}\\right)^2 = 1 - \\frac{9}{25} = \\frac{16}{25}$.",
-        "Taking the square root, $\\cos\\theta = \\pm\\frac{4}{5}$.",
-        "Since $\\arcsin$ only returns angles in $[-90^\\circ, 90^\\circ]$, where cosine is never negative, we keep $+\\frac{4}{5} = 0.8$."
+        "Call the inner angle $\\theta = \\arcsin\\frac{3}{5}$; then the identity $\\sin^2\\theta + \\cos^2\\theta = 1$ gives $\\cos^2\\theta = 1 - \\left(\\frac{3}{5}\\right)^2 = 1 - \\frac{9}{25} = \\frac{16}{25}$.",
+        "Taking the square root leaves two candidates, $\\cos\\theta = \\pm\\frac{4}{5}$.",
+        "Arcsine only returns angles from $-90^\\circ$ to $90^\\circ$, where cosine is never negative, so keep $+\\frac{4}{5} = 0.8$."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "A common wrong answer is $\\frac{3}{5} = 0.6$ — students see the $\\frac{3}{5}$ in the problem and hand it straight back.",
-        "But $\\frac{3}{5}$ is the SINE of the angle; the question asks for the COSINE of that same angle.",
-        "The cure is to name the angle $\\theta$ first and write down what you know ($\\sin\\theta = \\frac{3}{5}$) before you go hunting for what you want ($\\cos\\theta$). The two are different sides of the same triangle: $0.8$, not $0.6$."
+        "A common wrong answer is $\\frac{3}{5} = 0.6$: the $\\frac{3}{5}$ in the problem gets handed straight back.",
+        "But $\\frac{3}{5}$ is the sine of the angle, and the question asks for the cosine of that same angle.",
+        "Name the angle $\\theta$ and write $\\sin\\theta = \\frac{3}{5}$ first; the cosine uses the other leg of the $3$-$4$-$5$ triangle, so it is $0.8$ and not $0.6$."
       ]
     }
   ],

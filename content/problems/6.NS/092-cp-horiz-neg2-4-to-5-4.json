@@ -37,8 +37,9 @@
     {
       "title": "Count along the x-axis",
       "steps": [
-        "From $x = -2$, step right to $x = 5$.",
-        "That's $7$ steps."
+        "Both points are at height $4$, so only the $x$-values matter. Start at $x = -2$ and step right.",
+        "It takes $2$ steps to reach $x = 0$ and then $5$ more steps to reach $x = 5$.",
+        "Altogether that is $2 + 5 = 7$ steps, so the points are $7$ units apart."
       ]
     }
   ],

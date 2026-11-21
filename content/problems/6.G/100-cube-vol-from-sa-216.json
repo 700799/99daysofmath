@@ -43,9 +43,10 @@
     {
       "title": "Why SA = V here",
       "steps": [
-        "SA $= 6s^2$ and V $= s^3$.",
-        "They're equal when $6s^2 = s^3$, i.e. $s = 6$.",
-        "At $s = 6$, both are $216$."
+        "For a cube with edge $s$, the surface area is $6s^2$ and the volume is $s^3$, which is $s \\times s^2$.",
+        "These two are the same number only when the edge is $s = 6$, because then both are $6 \\times s^2$.",
+        "Check that $6$ fits this cube: $6 \\times 6^2 = 6 \\times 36 = 216$, which is the given surface area.",
+        "So the edge is $6$ and the volume is $6^3 = 216$ cubic units, the same number as the surface area."
       ]
     }
   ],

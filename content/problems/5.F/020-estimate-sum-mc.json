@@ -56,8 +56,9 @@
     {
       "title": "Decimal check",
       "steps": [
-        "$\\frac{7}{8} = 0.875$, $\\frac{11}{12} \\approx 0.917$.",
-        "Sum $\\approx 1.79$, closest to $2$ ✓"
+        "Change each fraction to a decimal: $\\frac{7}{8} = 0.875$ and $\\frac{11}{12}$ is about $0.917$.",
+        "Add them to get about $1.79$, which lies between the whole numbers $1$ and $2$.",
+        "The sum is $0.79$ away from $1$ but only $0.21$ away from $2$, so the closest whole number is $2$, choice C."
       ]
     }
   ],

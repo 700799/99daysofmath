@@ -39,17 +39,17 @@
     {
       "title": "Count the zeros",
       "steps": [
-        "With base $10$, the log is just the number of zeros.",
-        "$1{,}000{,}000$ has six zeros, so the log is $6$.",
-        "Decibels are ten times that: $60$."
+        "With base $10$, the log of a $1$ followed by zeros is just the number of zeros.",
+        "The ratio $1{,}000{,}000$ has six zeros, so its log is $6$.",
+        "Decibels are ten times the log, so the concert is $10 \\times 6 = 60$ decibels louder."
       ]
     },
     {
       "title": "Ten decibels at a time",
       "steps": [
-        "Every $\\times 10$ in intensity adds exactly $10$ decibels.",
-        "A million is six tens multiplied together.",
-        "Six of those jumps add $6 \\times 10 = 60$ decibels."
+        "Multiplying the intensity by $10$ raises its log by $1$, which adds exactly $10$ decibels.",
+        "A million is six tens multiplied together, so it takes six of those jumps to get from the whisper to the concert.",
+        "Six jumps of $10$ decibels add up to $6 \\times 10 = 60$ decibels."
       ]
     }
   ],

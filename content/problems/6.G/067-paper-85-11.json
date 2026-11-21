@@ -33,6 +33,16 @@
     "The two partial products are $11 \\times 8 = 88$ and $11 \\times 0.5 = 5.5$.",
     "Add them to get $88 + 5.5 = 93.5$, so the area is $93.5$ square inches."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Squeeze between two easy products",
+      "steps": [
+        "The width $8.5$ in is exactly halfway between $8$ in and $9$ in.",
+        "A sheet $11$ by $8$ would have area $88$, and a sheet $11$ by $9$ would have area $99$.",
+        "The real area is halfway between $88$ and $99$, which is $88 + 5.5 = 93.5$ square inches."
+      ]
+    }
+  ],
   "tags": [
     "area",
     "rectangle"

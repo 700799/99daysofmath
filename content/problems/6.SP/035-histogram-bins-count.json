@@ -30,6 +30,16 @@
     "The intervals given in the problem are $0$-$4$, $5$-$9$, $10$-$14$, $15$-$19$ and $20$-$24$.",
     "Counting them gives five intervals, so the histogram has $5$ bins."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Use the bin width",
+      "steps": [
+        "Each bin covers $5$ whole numbers; for example $0$-$4$ holds $0, 1, 2, 3, 4$.",
+        "All the bins together cover the whole numbers from $0$ to $24$, which is $25$ numbers.",
+        "Splitting $25$ numbers into groups of $5$ gives $25 \\div 5 = 5$, so there are $5$ bins."
+      ]
+    }
+  ],
   "tags": [
     "histogram"
   ],

@@ -39,8 +39,9 @@
     {
       "title": "Build from $45^\\circ$",
       "steps": [
-        "$225^\\circ = 5 \\times 45^\\circ$, and $45^\\circ = \\frac{\\pi}{4}$.",
-        "So the angle is $5 \\times \\frac{\\pi}{4} = \\frac{5\\pi}{4}$ — a little past half a turn, which matches an angle in Quadrant III."
+        "Count in steps of $45^\\circ$: since $225 = 5 \\times 45$, the angle is five of those steps.",
+        "Each $45^\\circ$ step is $\\frac{\\pi}{4}$ radians, so five of them make $5 \\times \\frac{\\pi}{4} = \\frac{5\\pi}{4}$.",
+        "As a sense check, $\\frac{5\\pi}{4}$ is a little more than $\\pi$, which fits an angle just past a half turn, so the answer is $\\frac{5\\pi}{4}$."
       ]
     }
   ],

@@ -36,9 +36,9 @@
     {
       "title": "Half the cylinder again",
       "steps": [
-        "The bowl sits inside a cylinder of radius $3$ and height $9$: volume $81\\pi$.",
-        "A paraboloid always fills exactly half its bounding cylinder: $\\frac{81\\pi}{2}$.",
-        "$k = 40.5$, matching the integral."
+        "The bowl sits inside a cylinder of radius $3$ and height $9$, which has volume $\\pi \\cdot 9 \\cdot 9 = 81\\pi$.",
+        "A paraboloid always fills exactly half of its bounding cylinder, because its slice area $\\pi y$ grows in a straight line from $0$ up to the full $9\\pi$.",
+        "Half of $81\\pi$ is $\\frac{81\\pi}{2}$, so $k = 40.5$, matching the integral."
       ]
     }
   ],

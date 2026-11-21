@@ -34,6 +34,16 @@
     "In a math sentence, the word \"is\" means equals.",
     "So \"twice a number is $18$\" becomes the equation $2n = 18$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Draw two equal bars",
+      "steps": [
+        "Draw two bars of the same length and label each one $n$, because \"twice\" means two of the number.",
+        "Put a bracket over both bars and label it $18$, the amount the sentence says they make.",
+        "The picture reads $n + n = 18$, and two of $n$ is written $2n$, so the equation is $2n = 18$."
+      ]
+    }
+  ],
   "tags": [
     "equation",
     "word"

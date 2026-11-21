@@ -21,16 +21,17 @@
     {
       "title": "Use the fraction $\\frac{1}{4}$",
       "steps": [
-        "$25\\%$ equals $\\frac{1}{4}$ of the whole.",
-        "$\\frac{1}{4}$ of $80$ means $80 \\div 4 = 20$.",
-        "Same answer: $20$."
+        "Four lots of $25\\%$ make $100\\%$, so $25\\%$ is one of four equal parts, or $\\frac{1}{4}$.",
+        "Share $80$ into four equal parts by halving twice: half of $80$ is $40$ and half of $40$ is $20$.",
+        "One of the four parts is $20$, so $25\\%$ of $80$ is $20$."
       ]
     },
     {
       "title": "10% trick",
       "steps": [
-        "$10\\%$ of $80$ is $8$ (move the decimal one place).",
-        "$25\\%$ is two-and-a-half times $10\\%$: $8 + 8 + 4 = 20$."
+        "Find $10\\%$ of $80$ by dividing by $10$, which gives $8$.",
+        "Build $25\\%$ from pieces: $20\\%$ is two of those, $16$, and $5\\%$ is half of one, $4$.",
+        "Add the pieces to get $16 + 4 = 20$, so $25\\%$ of $80$ is $20$."
       ]
     }
   ],

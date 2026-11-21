@@ -48,6 +48,16 @@
     "The median depends only on the middle position, so it stays with the main group of data.",
     "The mean therefore ends up less than the median, which is choice A."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Build a small example",
+      "steps": [
+        "Make data with a tail on the left, such as $0, 9, 10, 10, 11$, where one value is far below the rest.",
+        "The mean is $(0 + 9 + 10 + 10 + 11) \\div 5 = 40 \\div 5 = 8$, and the median is the middle value, $10$.",
+        "Since $8 < 10$, the mean is less than the median, which is choice A."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "shape",

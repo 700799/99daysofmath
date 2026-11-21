@@ -30,6 +30,16 @@
     "Like terms are combined by adding their coefficients: $4 + 3 = 7$.",
     "The variable stays the same, so $4x + 3x$ simplifies to $7x$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Try it with a number",
+      "steps": [
+        "Let $x$ be $10$ for a moment, so that $4x + 3x$ becomes $40 + 30 = 70$.",
+        "Seventy is $7$ tens, which is $7x$ when $x$ is $10$.",
+        "The same count works for any value, since four of something plus three of it is seven of it, so the answer is $7x$."
+      ]
+    }
+  ],
   "tags": [
     "combine-like"
   ],

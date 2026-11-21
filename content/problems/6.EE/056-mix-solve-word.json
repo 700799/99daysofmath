@@ -38,6 +38,16 @@
     "Divide both sides by $4$ to undo the multiplication: $t = 24 \\div 4 = 6$.",
     "You bought $6$ tickets, and $6 \\times 4 = 24$ confirms it."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Skip count by 4",
+      "steps": [
+        "Each ticket uses up $4$ dollars, so count by fours and keep a tally of the tickets.",
+        "The count goes $4, 8, 12, 16, 20, 24$ and stops when the $24$ dollars are used up.",
+        "That was $6$ counts, so you bought $6$ tickets."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "solve",

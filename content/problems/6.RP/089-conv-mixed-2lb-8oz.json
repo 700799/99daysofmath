@@ -42,8 +42,17 @@
     {
       "title": "Count groups of 16",
       "steps": [
-        "Two pounds is $16 + 16 = 32$ oz.",
-        "Plus $8$ more: $40$ oz total."
+        "Each pound is a group of $16$ ounces, so two pounds are $16 + 16 = 32$ ounces.",
+        "The package has $8$ ounces more than the two full pounds.",
+        "Count on from $32$ by $8$ to get $40$ ounces in total."
+      ]
+    },
+    {
+      "title": "Use half pounds",
+      "steps": [
+        "Half a pound is $8$ ounces, because half of $16$ is $8$.",
+        "So $2$ pounds $8$ ounces is $2.5$ pounds, which is $5$ half pounds.",
+        "Five half pounds of $8$ ounces each make $5 \\times 8 = 40$ ounces."
       ]
     }
   ],

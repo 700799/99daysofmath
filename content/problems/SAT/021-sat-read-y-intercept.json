@@ -36,9 +36,9 @@
     {
       "title": "Watch the sign",
       "steps": [
-        "The equation is $y = 3x + (-4)$, so $b = -4$, not $4$.",
-        "A positive $4$ will always be one of the answer choices on a question like this.",
-        "Rewriting a subtraction as \"plus a negative\" once, in your head, removes the ambiguity."
+        "Rewrite the subtraction as adding a negative: $y = 3x + (-4)$, which matches $y = mx + b$ with $b = -4$.",
+        "The tempting answer $4$ drops the sign, but the point $(0, 4)$ would need $4 = 3(0) - 4$, which is false.",
+        "The point $(0, -4)$ does satisfy the equation, so the $y$-intercept is $-4$."
       ]
     }
   ],

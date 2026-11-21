@@ -30,6 +30,16 @@
     "In the list $1, 8, 4, 12, 2$ the largest value is $12$ and the smallest is $1$.",
     "Subtract: $12 - 1 = 11$, so the range of the five numbers is $11$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Add the gaps",
+      "steps": [
+        "Sort the list so that neighbours are next to each other: $1, 2, 4, 8, 12$.",
+        "Find the gap between each pair of neighbours: $1$, then $2$, then $4$, then $4$.",
+        "The gaps join up to cover the whole stretch of the data: $1 + 2 + 4 + 4 = 11$, so the range is $11$."
+      ]
+    }
+  ],
   "tags": [
     "range"
   ],

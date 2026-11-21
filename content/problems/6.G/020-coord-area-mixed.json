@@ -36,6 +36,17 @@
     "Multiply width by height to get the area of the rectangle: $8 \\times 6 = 48$.",
     "The area of the rectangle is $48$ square units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Split along the axes",
+      "steps": [
+        "The $x$-axis and the $y$-axis cut this rectangle into four smaller rectangles, one in each quadrant.",
+        "Left of the $y$-axis the width is $3$ and right of it the width is $5$; below the $x$-axis the height is $2$ and above it the height is $4$.",
+        "The four pieces have areas $3 \\times 2 = 6$, $5 \\times 2 = 10$, $3 \\times 4 = 12$ and $5 \\times 4 = 20$.",
+        "Adding the pieces gives $6 + 10 + 12 + 20 = 48$, so the area is $48$ square units."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "coord",

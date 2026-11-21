@@ -31,6 +31,16 @@
     "Area is width times height, so $A = 4 \\times 4 = 16$.",
     "The area of the rectangle is $16$ square units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Draw it and count squares",
+      "steps": [
+        "The other two corners must line up with the given ones, so they are $(6, 1)$ and $(2, 5)$.",
+        "Draw the rectangle on a grid: it covers the columns between $x = 2$ and $x = 6$, which is $4$ columns.",
+        "Each column has $4$ squares between $y = 1$ and $y = 5$, so the area is $4 + 4 + 4 + 4 = 16$ square units."
+      ]
+    }
+  ],
   "tags": [
     "coord",
     "area"

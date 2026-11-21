@@ -39,6 +39,24 @@
     "Check it: $10\\%$ of $20$ is $2$, and $20 + 2 = 22$, which matches the new wage.",
     "The original wage was $20$ dollars per hour."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Think in tenths",
+      "steps": [
+        "Cut the original wage into $10$ equal parts, so each part is $10\\%$ of it.",
+        "A $10\\%$ raise adds one more part, so the new wage of $22$ dollars is $11$ parts and each part is $22 \\div 11 = 2$ dollars.",
+        "The original wage is $10$ parts, which is $10 \\times 2 = 20$ dollars per hour."
+      ]
+    },
+    {
+      "title": "Guess and check",
+      "steps": [
+        "The original wage must be a little less than $22$ dollars, so try $20$ dollars.",
+        "A $10\\%$ raise on $20$ dollars is $2$ dollars, giving $22$ dollars, which matches the new wage.",
+        "A guess of $21$ would give $23.10$, which is too high, so the original wage was $20$ dollars per hour."
+      ]
+    }
+  ],
   "tags": [
     "CA",
     "percent",

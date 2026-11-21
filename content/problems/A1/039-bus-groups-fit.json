@@ -39,16 +39,17 @@
     {
       "title": "Count the empty seats",
       "steps": [
-        "The bus has $40 - 12 = 28$ empty seats.",
-        "Each group fills 4 seats, so $28 \\div 4 = 7$ groups fit exactly.",
-        "An 8th group would need 4 more seats than the bus has."
+        "Count the empty seats first: the bus has $40 - 12 = 28$ seats left.",
+        "Each group fills $4$ seats, so $28 \\div 4 = 7$ groups fit exactly.",
+        "An eighth group would need $4$ more seats than the bus has, so the greatest number of groups is $7$."
       ]
     },
     {
       "title": "⚠️ Dodge the trap",
       "steps": [
-        "40 ÷ 4 = 10 groups forgets the 12 students already in their seats.",
-        "Seats left: 40 − 12 = 28. Then 28 ÷ 4 = 7 groups. Subtract what is used before dividing what is left."
+        "The trap is to work out $40 \\div 4 = 10$ groups, which forgets the $12$ students already in their seats.",
+        "Check it: $10$ groups would put $12 + 40 = 52$ students on a bus that holds $40$.",
+        "Subtract the used seats before dividing: $40 - 12 = 28$, and $28 \\div 4 = 7$ groups."
       ]
     }
   ],

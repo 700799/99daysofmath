@@ -38,6 +38,16 @@
     "Both $6$ and $10$ are even, so the fraction can be simplified by dividing each by $2$.",
     "That gives $\\frac{3}{5}$, and nothing else divides both $3$ and $5$, so $0.6 = \\frac{3}{5}$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Think of dimes",
+      "steps": [
+        "Read $0.6$ of a dollar as $6$ dimes, out of the $10$ dimes that make a whole dollar.",
+        "Put the $10$ dimes into $5$ pairs. The $6$ dimes you have fill exactly $3$ of those pairs.",
+        "Three pairs out of five is $\\frac{3}{5}$, so $0.6 = \\frac{3}{5}$."
+      ]
+    }
+  ],
   "tags": [
     "decimals",
     "fractions"

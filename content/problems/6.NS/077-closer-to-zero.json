@@ -39,6 +39,17 @@
     "So $-4$ is $4$ units from $0$, while $6$ is $6$ units from $0$.",
     "Since $4 < 6$, the number closer to $0$ is $-4$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Fold the line at zero",
+      "steps": [
+        "Imagine folding the number line at $0$ so the negative side lies on top of the positive side.",
+        "After the fold, $-4$ lands on $4$, right beside the numbers $5$ and $6$ on the positive side.",
+        "On the folded line, $4$ is nearer to $0$ than $6$ is, by $2$ units.",
+        "So the original number $-4$ is the one closer to $0$."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "absolute-value"

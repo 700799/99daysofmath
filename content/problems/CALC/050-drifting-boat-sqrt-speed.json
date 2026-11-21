@@ -41,9 +41,17 @@
     {
       "title": "Average speeds over shrinking windows",
       "steps": [
-        "From $t = 4$ to $t = 5$: $\\frac{\\sqrt{5} - 2}{1} \\approx 0.236$ km/h.",
-        "From $4$ to $4.01$: $\\frac{\\sqrt{4.01} - 2}{0.01} \\approx \\frac{0.0024984}{0.01} \\approx 0.2498$ km/h.",
-        "The averages close in on $0.25 = \\frac{1}{4}$ km/h."
+        "Take the hour from $t = 4$ to $t = 5$: the average speed is $\\frac{\\sqrt{5} - 2}{1} \\approx 0.236$ km/h.",
+        "Take a much shorter window from $4$ to $4.01$: $\\frac{\\sqrt{4.01} - 2}{0.01} \\approx \\frac{0.0024984}{0.01} \\approx 0.2498$ km/h.",
+        "The averages close in on $0.25$, so the instantaneous speed at $t = 4$ is $\\frac{1}{4}$ km/h."
+      ]
+    },
+    {
+      "title": "Power rule check",
+      "steps": [
+        "Write the position as a power, $s(t) = t^{1/2}$, so that the power rule can be used.",
+        "The power rule gives $s'(t) = \\frac{1}{2}t^{-1/2} = \\frac{1}{2\\sqrt{t}}$, the speed at any time $t$.",
+        "At $t = 4$ this is $\\frac{1}{2 \\cdot 2} = \\frac{1}{4}$ km/h, matching the value of the limit."
       ]
     }
   ],

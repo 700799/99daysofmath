@@ -34,17 +34,17 @@
     {
       "title": "Tangent is steepness",
       "steps": [
-        "Tangent is just rise over run — the slope of the slanted side.",
-        "The triangle rises $6$ while running $8$ across.",
-        "$6 \\div 8 = 0.75$, so it climbs $0.75$ for every $1$ across."
+        "Tangent is the rise over the run, which is the slope of the slanted side.",
+        "From this angle the triangle rises $6$ while it runs $8$ across.",
+        "The slope is $6 \\div 8 = 0.75$, so the side climbs $0.75$ for every $1$ across and the tangent is $0.75$."
       ]
     },
     {
       "title": "Shrink to the 3-4-5",
       "steps": [
-        "The $6$-$8$-$10$ triangle is a $3$-$4$-$5$ triangle doubled.",
-        "Same shape means the same angles and the same ratios.",
-        "Tangent is $\\frac{3}{4} = 0.75$ either way."
+        "Halve every side of the $6$-$8$-$10$ triangle and you get the familiar $3$-$4$-$5$ triangle.",
+        "Shrinking keeps the shape, so the angles and the side ratios stay the same.",
+        "In the small triangle the tangent is opposite over adjacent, $\\frac{3}{4} = 0.75$, and the big triangle has the same value."
       ]
     }
   ],

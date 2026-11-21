@@ -42,8 +42,8 @@
     {
       "title": "Recognize $3^3 = 27$",
       "steps": [
-        "$3 \\cdot 3 \\cdot 3 = 27$, so the edge is $3$.",
-        "Surface area: $54$."
+        "The number $27$ is a perfect cube, since $3 \\cdot 3 \\cdot 3 = 27$, so the edge of the cube is $3$.",
+        "With edge $3$, each face has area $3^2 = 9$, and the six faces give $6 \\cdot 9 = 54$ square units of surface area."
       ]
     }
   ],

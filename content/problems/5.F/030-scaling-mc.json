@@ -52,6 +52,16 @@
     "$\\frac{7}{8}$, $\\frac{3}{4}$ are less than $1$ (products shrink); $\\times 1$ keeps it equal.",
     "$\\frac{9}{8} > 1$, so $\\frac{5}{6} \\times \\frac{9}{8}$ is the only product bigger than $\\frac{5}{6}$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Work out each product",
+      "steps": [
+        "Write $\\frac{5}{6}$ as $\\frac{40}{48}$ so it can be compared with every product.",
+        "The products are $\\frac{35}{48}$ for A, $\\frac{40}{48}$ for B, $\\frac{45}{48}$ for C and $\\frac{15}{24} = \\frac{30}{48}$ for D.",
+        "Only $\\frac{45}{48}$ is bigger than $\\frac{40}{48}$, so choice C is the product greater than $\\frac{5}{6}$."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "scaling",

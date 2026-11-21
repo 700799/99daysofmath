@@ -33,6 +33,16 @@
     "The second product is $4$ times $7$, which is $28$.",
     "Adding the two products gives the answer $4x + 28$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Try it with ten",
+      "steps": [
+        "Let $x$ be $10$ for a moment, so that $4(x + 7)$ becomes $4 \\times 17$.",
+        "Mental math splits this into two easy products: $4 \\times 10 + 4 \\times 7 = 40 + 28 = 68$.",
+        "The $40$ came from $4$ times $x$ and the $28$ from $4$ times $7$, so with the letter back in place the answer is $4x + 28$."
+      ]
+    }
+  ],
   "tags": [
     "distributive"
   ],

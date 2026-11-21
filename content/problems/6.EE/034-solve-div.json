@@ -31,6 +31,16 @@
     "The left side becomes $x$ and the right side becomes $5 \\times 4 = 20$.",
     "Check: $20 \\div 4 = 5$ is true, so the solution is $x = 20$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Rebuild the groups",
+      "steps": [
+        "The equation says $x$ was split into $4$ equal groups and each group holds $5$.",
+        "Put the four groups back together by adding them: $5 + 5 + 5 + 5$.",
+        "The sum is $20$, so the number that was split is $x = 20$."
+      ]
+    }
+  ],
   "tags": [
     "solve"
   ],

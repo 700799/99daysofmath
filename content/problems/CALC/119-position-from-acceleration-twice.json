@@ -39,9 +39,17 @@
     {
       "title": "Net change twice",
       "steps": [
-        "Displacement $= \\int_0^2 v(t) \\, dt = \\int_0^2 (3t^2 - 4t + 1) \\, dt = [t^3 - 2t^2 + t]_0^2 = 8 - 8 + 2 = 2$ m.",
-        "Position $=$ start $+$ displacement $= 2 + 2 = 4$ m.",
-        "You still need $v(t)$ first, so the first constant $C_1 = 1$ is unavoidable — but the second one can be skipped this way."
+        "First recover the velocity from its starting value: $v(t) = 1 + \\int_0^t (6u - 4)\\,du = 3t^2 - 4t + 1$.",
+        "Integrate that velocity to find the displacement: $\\int_0^2 (3t^2 - 4t + 1)\\,dt = [t^3 - 2t^2 + t]_0^2 = 8 - 8 + 2 = 2$ m.",
+        "The position is the start plus the displacement, $2 + 2 = 4$ m. The first constant is still needed for $v$, but the second one is skipped this way."
+      ]
+    },
+    {
+      "title": "Add a constant-velocity check",
+      "steps": [
+        "If the velocity stayed at its starting value of $1$ m/s, the particle would move $2$ m in two seconds and end at $2 + 2 = 4$ m.",
+        "The acceleration changes that by $\\int_0^2 (v(t) - 1)\\,dt$, where $v(t) - 1 = 3t^2 - 4t$ is the velocity gained from acceleration.",
+        "That extra integral is $[t^3 - 2t^2]_0^2 = 8 - 8 = 0$, so the slowdown and the later speedup cancel and the position is still $4$ m."
       ]
     }
   ],

@@ -39,16 +39,17 @@
     {
       "title": "Two sticker piles",
       "steps": [
-        "x²-terms are one kind of sticker, x-terms are another — never mix the piles.",
-        "x² pile: 3 minus 1 leaves 2, so 2x². x pile: 5 minus 2 leaves 3, so 3x.",
-        "Profit: 2x² + 3x."
+        "Treat the $x^2$-terms as one kind of sticker and the $x$-terms as another kind, kept in separate piles.",
+        "In the $x^2$ pile, $3$ take away $1$ leaves $2$, and in the $x$ pile, $5$ take away $2$ leaves $3$.",
+        "Putting the piles side by side gives the profit $2x^2 + 3x$ dollars."
       ]
     },
     {
       "title": "Try a sales number",
       "steps": [
-        "Say x = 10 cases. Revenue: 3(100) + 50 = 350 dollars. Cost: 100 + 20 = 120 dollars.",
-        "Profit: 350 − 120 = 230. Check the formula: 2(100) + 3(10) = 230. It works."
+        "Try a sales number such as $x = 10$: revenue is $3(100) + 50 = 350$ dollars and cost is $100 + 20 = 120$ dollars.",
+        "The profit for that case is $350 - 120 = 230$ dollars.",
+        "The formula $2x^2 + 3x$ gives $200 + 30 = 230$ as well, so it is correct."
       ]
     }
   ],

@@ -36,6 +36,16 @@
     "The data set now has $4$ values instead of $3$.",
     "Divide the new total by the new count: $24 \\div 4 = 6$, so the new mean is $6$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Share out the extra",
+      "steps": [
+        "Compare the new value with the old mean: $12$ is $12 - 4 = 8$ above it.",
+        "That extra $8$ is shared among all $4$ values now in the data, which is $8 \\div 4 = 2$ each.",
+        "The mean rises from $4$ to $4 + 2 = 6$, so the new mean is $6$."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "mean",

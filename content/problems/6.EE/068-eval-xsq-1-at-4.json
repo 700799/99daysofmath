@@ -36,6 +36,16 @@
     "Then add the $1$ to that square: $16 + 1 = 17$.",
     "The value of the expression is $17$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Add four fours",
+      "steps": [
+        "Squaring $4$ means four groups of four, which is $4 + 4 + 4 + 4$.",
+        "Skip counting by fours gives $4, 8, 12, 16$, so $x^2$ is $16$.",
+        "One more makes $16 + 1 = 17$, so the value is $17$."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "evaluate",

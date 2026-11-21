@@ -36,15 +36,17 @@
     {
       "title": "Sticker sorting",
       "steps": [
-        "Picture 4 apple stickers and 3 more apple stickers — all the same kind.",
-        "Same kind means you can count them together: 7 apple stickers, so 7x."
+        "Picture $4$ apple stickers and then $3$ more apple stickers, all of the same kind.",
+        "Stickers of the same kind can be counted together, and $4 + 3 = 7$.",
+        "Seven stickers of the kind called $x$ is written $7x$."
       ]
     },
     {
       "title": "Test a value",
       "steps": [
-        "Try x = 2: then 4x + 3x = 8 + 6 = 14.",
-        "And 7x = 14 too — the shorter form gives the same value, so 7x is right."
+        "Test a value such as $x = 2$ in the original expression: $4(2) + 3(2) = 8 + 6 = 14$.",
+        "Test the same value in the short form: $7(2) = 14$.",
+        "Both forms give $14$, which supports the answer $7x$."
       ]
     }
   ],

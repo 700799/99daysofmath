@@ -37,11 +37,11 @@
   ],
   "alternativeExplanations": [
     {
-      "title": "Watch the medicine fade",
+      "title": "Scale a simpler fraction",
       "steps": [
-        "At $t = 1$: $\\frac{20}{5} = 4$ mg/L, climbing.",
-        "At $t = 2$: $\\frac{40}{8} = 5$ mg/L — the peak.",
-        "At $t = 6$: $\\frac{120}{40} = 3$ mg/L, fading. The bottom eventually grows faster, so the level slides back toward 0."
+        "Notice that $t = 2$ makes the bottom $2^2 + 4 = 8$, and the top is $20$ copies of $t = 2$.",
+        "So $C(2)$ is $20$ times the small fraction $\\frac{2}{8} = \\frac{1}{4}$.",
+        "A quarter of $20$ is $5$, so $C(2) = 5$ mg per liter, and nearby values $C(1) = 4$ and $C(3) \\approx 4.6$ are sensible neighbors."
       ]
     }
   ],

@@ -39,9 +39,17 @@
     {
       "title": "The trap answer",
       "steps": [
-        "Computing $s(5) - s(0) = 20$ gives the displacement, not the distance.",
-        "Between $t = 2$ and $t = 4$ the particle backs up $4$ m, and that $4$ m counts twice in the distance: once going back, once recovering.",
-        "$20 + 2(4) = 28$ m."
+        "Computing $s(5) - s(0) = 20 - 0 = 20$ gives the displacement, which is not the total distance.",
+        "Between $t = 2$ and $t = 4$ the particle backs up from $20$ m to $16$ m. That $4$ m counts twice in the distance, once going back and once recovering.",
+        "Add the doubled stretch to the displacement: $20 + 2(4) = 28$ meters traveled."
+      ]
+    },
+    {
+      "title": "Integrate the speed",
+      "steps": [
+        "The velocity is $v(t) = 3t^2 - 18t + 24 = 3(t - 2)(t - 4)$, positive on $(0, 2)$ and $(4, 5)$ and negative on $(2, 4)$.",
+        "Distance is the integral of speed $|v|$, so integrate each stretch and make the middle one positive: $\\int_0^2 v\\,dt = 20$, $\\int_2^4 v\\,dt = -4$ and $\\int_4^5 v\\,dt = 4$.",
+        "Adding the sizes gives $20 + 4 + 4 = 28$ meters of travel."
       ]
     }
   ],

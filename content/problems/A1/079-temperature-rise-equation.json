@@ -47,15 +47,17 @@
     {
       "title": "Check at noon-ish",
       "steps": [
-        "After $4$ hours it should be $55 + 3 \\times 4 = 67$ degrees.",
-        "Counting by threes from $55$: $58, 61, 64, 67$ — the equation agrees."
+        "Test the equation $y = 3x + 55$ at $4$ hours: $3 \\times 4 + 55 = 67$ degrees.",
+        "Count by threes from $55$ using only the story: $58$, $61$, $64$, $67$.",
+        "The story and the equation both give $67$ degrees after $4$ hours, so $y = 3x + 55$ is right."
       ]
     },
     {
       "title": "Table of hours",
       "steps": [
-        "Hour $0 \\to 55$, hour $1 \\to 58$, hour $2 \\to 61$: constant jump $+3$.",
-        "Jump $3$ is $m$, hour-zero value $55$ is $b$: $y = 3x + 55$."
+        "Make a table of temperatures: hour $0 \\to 55$, hour $1 \\to 58$, hour $2 \\to 61$.",
+        "The temperature rises by a constant $3$ each hour, so the slope is $m = 3$.",
+        "The value at hour $0$ is $b = 55$, so the equation is $y = 3x + 55$."
       ]
     }
   ],

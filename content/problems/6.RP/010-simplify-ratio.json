@@ -35,6 +35,16 @@
     "Dividing both parts by $6$ keeps the ratio equivalent and gives $12 \\div 6 = 2$ and $18 \\div 6 = 3$.",
     "The simplest form is $2 : 3$, because $2$ and $3$ share no factor other than $1$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Simplify in small steps",
+      "steps": [
+        "Both $12$ and $18$ are even, so halve each part to get $6 : 9$.",
+        "Both $6$ and $9$ are in the $3$ times table, so divide each part by $3$ to get $2 : 3$.",
+        "Nothing bigger than $1$ divides both $2$ and $3$, so the lowest terms are $2 : 3$."
+      ]
+    }
+  ],
   "tags": [
     "ratio",
     "simplify"

@@ -52,6 +52,17 @@
     "The teacher's age, the time right now, and the days in a week each have one fixed answer, so A, C and D are not statistical.",
     "Heights differ across the students in a class, so choice B is the statistical question."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Imagine collecting the answers",
+      "steps": [
+        "Picture asking each question and writing down every answer you would collect.",
+        "For A, C and D the list is a single number: one age, one clock time, and $7$ days.",
+        "For B you would write a different height for almost every student, giving a whole list of numbers to plot.",
+        "Only the heights make a data set that varies, so the statistical question is choice B."
+      ]
+    }
+  ],
   "tags": [
     "statistical-question"
   ],

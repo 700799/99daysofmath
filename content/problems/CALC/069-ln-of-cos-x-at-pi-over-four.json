@@ -39,9 +39,9 @@
     {
       "title": "Common trap",
       "steps": [
-        "Forgetting the inside gives $\\frac{1}{\\cos x}$, which at $\\frac{\\pi}{4}$ is $\\sqrt{2} \\approx 1.41$: positive, yet $\\ln(\\cos x)$ is clearly decreasing there.",
-        "Check with values: $\\ln(\\cos 0.78) \\approx \\ln(0.7109) \\approx -0.3412$ and $\\ln(\\cos 0.79) \\approx \\ln(0.7038) \\approx -0.3512$.",
-        "Secant slope $\\frac{-0.3512 - (-0.3412)}{0.01} \\approx -1.0$. The chain-rule answer $-1$ is the one the numbers support."
+        "Forgetting the inside gives $\\frac{1}{\\cos x}$, which at $\\frac{\\pi}{4}$ is $\\sqrt{2} \\approx 1.41$. That is positive, yet $\\ln(\\cos x)$ is clearly decreasing there.",
+        "Check with two nearby values: $\\ln(\\cos 0.78) \\approx \\ln(0.7109) \\approx -0.3412$ and $\\ln(\\cos 0.79) \\approx \\ln(0.7038) \\approx -0.3512$.",
+        "The secant slope is $\\frac{-0.3512 - (-0.3412)}{0.01} \\approx -1.0$, so the chain rule answer $-\\tan\\frac{\\pi}{4} = -1$ is the one the numbers support."
       ]
     }
   ],

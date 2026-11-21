@@ -42,6 +42,16 @@
     "This question is about a single building, and that building has one fixed height.",
     "With only one possible answer there is no variability, so the answer is No, choice B."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Imagine collecting the data",
+      "steps": [
+        "Picture looking up the building's height in ten different books or websites.",
+        "Every source would report the same height, so a dot plot of the answers would be one single stack.",
+        "Data that never varies means the question is not statistical, so the answer is No, choice B."
+      ]
+    }
+  ],
   "tags": [
     "statistical-question"
   ],

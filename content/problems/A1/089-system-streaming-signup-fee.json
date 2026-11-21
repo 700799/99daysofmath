@@ -39,15 +39,17 @@
     {
       "title": "Gap-closing story",
       "steps": [
-        "The fee puts you $12 behind on service one from day zero. But each month it charges $2 LESS than the rival.",
-        "Saving $2 a month erases a $12 head start in 12 ÷ 2 = 6 months."
+        "At the start the first service is $12$ dollars more expensive, because of its sign-up fee.",
+        "Each month it charges $10 - 8 = 2$ dollars less than the rival, so the gap shrinks by $2$ dollars a month.",
+        "A gap of $12$ dollars closing at $2$ dollars a month is gone after $12 \\div 2 = 6$ months."
       ]
     },
     {
       "title": "Build a table",
       "steps": [
-        "Month 2: fee plan = 28, rival = 20. Month 4: 44 vs 40. Month 6: 60 vs 60.",
-        "The totals tie at month 6."
+        "Build a table of totals: at month $2$ the fee plan has cost $28$ dollars and the rival $20$ dollars.",
+        "At month $4$ the totals are $44$ and $40$ dollars, so the gap is shrinking.",
+        "At month $6$ both totals are $60$ dollars, so the costs are equal after $6$ months."
       ]
     }
   ],

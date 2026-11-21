@@ -36,6 +36,16 @@
     "For $5$, first $5 \\times 5 = 25$ and then $25 \\times 5 = 125$, which matches the volume.",
     "The length of one edge of the cube is $5$ units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Break 125 into factors",
+      "steps": [
+        "The number $125$ ends in $5$, so divide it by $5$: $125 \\div 5 = 25$.",
+        "Break $25$ down as well: $25 = 5 \\times 5$, which means $125 = 5 \\times 5 \\times 5$.",
+        "The volume is three equal edges multiplied together, so each edge of the cube is $5$ units."
+      ]
+    }
+  ],
   "tags": [
     "volume",
     "cube"

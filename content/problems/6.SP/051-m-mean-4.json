@@ -30,6 +30,16 @@
     "The total is shared among $4$ values, so $4$ is the number to divide by.",
     "Divide: $100 \\div 4 = 25$, so the mean of the four numbers is $25$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Pair up the values",
+      "steps": [
+        "Match the outer values: $10 + 40 = 50$, so that pair averages $25$.",
+        "Match the inner values: $20 + 30 = 50$, so that pair averages $25$ as well.",
+        "Both pairs balance at the same point, so the mean of the four numbers is $25$."
+      ]
+    }
+  ],
   "tags": [
     "mean"
   ],

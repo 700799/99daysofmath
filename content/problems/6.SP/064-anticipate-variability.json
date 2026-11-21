@@ -42,29 +42,29 @@
     "4) The lunch question covers many students whose times vary, so it is **S**.",
     "Putting the four labels in order gives the answer $NSNS$."
   ],
-  "tags": [
-    "vocabulary",
-    "MAP-practice"
-  ],
-  "estimatedSeconds": 100,
   "alternativeExplanations": [
     {
       "title": "Rule of thumb",
       "steps": [
-        "Singular subject + specific fact = not statistical (one answer).",
-        "Group subject + measurable quantity = statistical (many answers, varying).",
-        "The words \"**each**\", \"**every**\", \"**students**\", \"**players**\" almost always signal a statistical question."
+        "A question about one person or one thing has one answer, so it is not statistical.",
+        "A question about a group, signalled by words such as **each**, **players** or **students**, has many answers that vary.",
+        "Questions 1 and 3 name one person and one building, while 2 and 4 name a team and a class.",
+        "Reading the labels in order gives $NSNS$."
       ]
     },
     {
       "title": "Could you graph the data?",
       "steps": [
-        "If you imagined collecting data, would there be a spread to **plot**?",
-        "1) Just one height → nothing to spread. N.",
-        "2) Heights of many players → dot plot of heights. S.",
-        "3) One building's height → no spread. N.",
-        "4) Lunchtimes of many students → dot plot of times. S."
+        "Imagine collecting the data for each question and drawing it as a dot plot.",
+        "Questions 1 and 3 each give a single measurement, so each plot is one lonely dot with nothing to compare.",
+        "Questions 2 and 4 give a height for every player and a time for every student, so the dots spread along the line.",
+        "Only plots with spread come from statistical questions, so the labels are $NSNS$."
       ]
     }
-  ]
+  ],
+  "tags": [
+    "vocabulary",
+    "MAP-practice"
+  ],
+  "estimatedSeconds": 100
 }

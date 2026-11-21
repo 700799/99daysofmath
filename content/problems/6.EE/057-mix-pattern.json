@@ -38,6 +38,16 @@
     "That suggests the rule is $y = 4x + 1$, but it should be tested.",
     "Check the other pairs: $4(2) + 1 = 9$ and $4(3) + 1 = 13$. The rule is $y = 4x + 1$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Step back to zero",
+      "steps": [
+        "The outputs $5, 9, 13$ climb by $4$ each time $x$ climbs by $1$, so the rule multiplies $x$ by $4$.",
+        "Step the pattern back one place to $x = 0$: the output would be $5 - 4 = 1$.",
+        "A table that starts at $1$ and climbs by $4$ has the rule $y = 4x + 1$, and $4(3) + 1 = 13$ confirms it."
+      ]
+    }
+  ],
   "tags": [
     "CA",
     "two-vars",

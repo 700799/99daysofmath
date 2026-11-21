@@ -31,6 +31,17 @@
     "Tenths: only $5$ tenths remain, and $5 - 8$ needs regrouping too, so take one whole and compute $15 - 8 = 7$.",
     "Ones: $4$ ones remain, and $4 - 2 = 2$. Reading the digits with the point in place, the answer is $2.76$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Count up from 2.84",
+      "steps": [
+        "Subtraction finds the gap between two numbers, so count up from $2.84$ until you reach $5.6$.",
+        "First jump to the next whole number: $2.84 + 0.16 = 3$, so the first jump is $0.16$.",
+        "Then jump from $3$ to $5.6$, which is a second jump of $2.6$.",
+        "Add the two jumps to get the whole gap: $0.16 + 2.6 = 2.76$, so $5.6 - 2.84 = 2.76$."
+      ]
+    }
+  ],
   "tags": [
     "decimal"
   ],

@@ -41,15 +41,17 @@
     {
       "title": "Walk down the staircase",
       "steps": [
-        "2² = 4, 2¹ = 2, 2⁰ = 1. Each step down divides by 2.",
-        "Keep going: 2⁻¹ = 1/2, 2⁻² = 1/4, 2⁻³ = 1/8."
+        "Write the powers of $2$ going down: $2^2 = 4$, $2^1 = 2$ and $2^0 = 1$.",
+        "Each step down in the exponent divides the value by $2$, so $2^{-1} = \\frac{1}{2}$ and $2^{-2} = \\frac{1}{4}$.",
+        "One more step down the list halves again and gives $2^{-3} = \\frac{1}{8}$."
       ]
     },
     {
       "title": "Use the quotient rule",
       "steps": [
-        "2⁻³ is the same as 2¹ ÷ 2⁴, since 1 − 4 = −3.",
-        "That is 2/16 = 1/8."
+        "Use the quotient rule: $2^1 \\div 2^4 = 2^{1-4} = 2^{-3}$, because dividing powers subtracts the exponents.",
+        "Work out the same division with numbers: $2 \\div 16 = \\frac{2}{16}$.",
+        "Simplify the fraction to get $\\frac{1}{8}$, so $2^{-3} = \\frac{1}{8}$."
       ]
     }
   ],

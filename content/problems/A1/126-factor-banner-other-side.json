@@ -38,16 +38,17 @@
     {
       "title": "Un-multiply the area",
       "steps": [
-        "Area = side × side, so ask: (x + 3) times WHAT equals x² + 7x + 12?",
-        "The mystery side must start with x (to make x²) and end with 4 (since 3 × 4 = 12).",
-        "Check: (x + 3)(x + 4) = x² + 7x + 12. The other side is x + 4."
+        "Area is side times side, so ask what $(x + 3)$ must be multiplied by to give $x^2 + 7x + 12$.",
+        "The other side must start with $x$ to make $x^2$, and end with $4$ because $3 \\times 4 = 12$.",
+        "Check by expanding: $(x + 3)(x + 4) = x^2 + 7x + 12$, so the other side is $x + 4$."
       ]
     },
     {
       "title": "Try a real banner",
       "steps": [
-        "Let x = 2: the area is 4 + 14 + 12 = 30 square feet, and the known side is 5 feet.",
-        "The other side must be 30 ÷ 5 = 6 feet — exactly x + 4 = 6. It fits."
+        "Try a real banner with $x = 2$: the area is $4 + 14 + 12 = 30$ square feet and the known side is $5$ feet.",
+        "The other side must be $30 \\div 5 = 6$ feet long.",
+        "Six is $4$ more than $x = 2$, which fits a side of $x + 4$."
       ]
     }
   ],

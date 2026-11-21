@@ -59,9 +59,9 @@
     {
       "title": "Why the middle term vanishes",
       "steps": [
-        "Multiplying $(x + 3)(x - 3)$ produces $-3x$ and $+3x$, which cancel.",
-        "That cancellation is the whole reason the difference of squares factors so cleanly.",
-        "It is the single most frequently used factoring pattern on the SAT — recognizing \"square minus square\" on sight is worth real points."
+        "Expand choice B one term at a time: $(x + 3)(x - 3) = x^2 - 3x + 3x - 9$.",
+        "The middle terms $-3x$ and $+3x$ are opposites, so they cancel and leave $x^2 - 9$.",
+        "Choices A, C and D each keep a middle term when expanded ($-6x$, $+6x$ and $-8x$), so only B is equivalent."
       ]
     }
   ],

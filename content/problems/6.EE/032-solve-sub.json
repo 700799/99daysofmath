@@ -31,6 +31,16 @@
     "The left side becomes $x$ and the right side becomes $9 + 4 = 13$.",
     "Check: $13 - 4 = 9$ is true, so the solution is $x = 13$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Tell the story backwards",
+      "steps": [
+        "Turn the equation into a story: you had $x$ stickers, gave away $4$, and $9$ are left.",
+        "Run the story backwards by handing the $4$ stickers back to the pile of $9$.",
+        "The pile is $9 + 4 = 13$ again, so the starting amount was $x = 13$."
+      ]
+    }
+  ],
   "tags": [
     "solve"
   ],

@@ -38,6 +38,17 @@
     "Double the sum because each face has a matching opposite face: $2 \\times 31 = 62$.",
     "The surface area of the prism is $62$ square units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Wrap the sides first",
+      "steps": [
+        "Stand the prism on its $5$ by $3$ base, so the height is $2$.",
+        "The four sides unroll into a strip $5 + 3 + 5 + 3 = 16$ long and $2$ tall, with area $16 \\times 2 = 32$.",
+        "The top and the bottom are each $5 \\times 3 = 15$, which makes $30$.",
+        "The surface area is $32 + 30 = 62$ square units."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "surface-area",

@@ -34,17 +34,17 @@
     {
       "title": "Adjacent means next door",
       "steps": [
-        "Two sides touch the angle: one leg and the hypotenuse.",
-        "The leg that touches is the ADJACENT side — the neighbour.",
-        "Cosine is that neighbour over the hypotenuse: $\\frac{4}{5} = 0.8$."
+        "Two sides touch the angle: one of the legs and the hypotenuse.",
+        "The leg that touches is called the adjacent side, and here it has length $4$.",
+        "Cosine is that neighbor leg over the hypotenuse, so it is $\\frac{4}{5} = 0.8$."
       ]
     },
     {
-      "title": "Sine and cosine trade places",
+      "title": "Use the Pythagorean identity",
       "steps": [
-        "For this angle sine was $\\frac{3}{5}$, using the far side.",
-        "Cosine uses the other leg instead, so it is $\\frac{4}{5}$.",
-        "$\\frac{4}{5} = 0.8$."
+        "The sine of this angle is $\\frac{3}{5} = 0.6$, and sine and cosine always satisfy $\\sin^2 + \\cos^2 = 1$.",
+        "Solve for the squared cosine by subtracting: $\\cos^2 = 1 - 0.6^2 = 1 - 0.36 = 0.64$.",
+        "The cosine of an acute angle is positive, so it is $\\sqrt{0.64} = 0.8$."
       ]
     }
   ],

@@ -36,6 +36,17 @@
     "The base and height meet at a right angle, so the formula $A = \\frac{1}{2}bh$ applies: $\\frac{1}{2}(6)(4)$.",
     "Half of $24$ is $12$, so the area of the triangle is $12$ square units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Half of a rectangle",
+      "steps": [
+        "Add the point $(6, 4)$ to make a rectangle with corners $(0, 0)$, $(6, 0)$, $(6, 4)$ and $(0, 4)$.",
+        "This rectangle is $6$ wide and $4$ tall, so it covers $6 \\times 4 = 24$ square units.",
+        "The slanted side of the triangle is a diagonal that cuts the rectangle into two equal triangles.",
+        "The triangle is half of the rectangle, so its area is $24 \\div 2 = 12$ square units."
+      ]
+    }
+  ],
   "tags": [
     "CA",
     "coord",

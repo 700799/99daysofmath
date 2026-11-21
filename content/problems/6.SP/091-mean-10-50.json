@@ -34,8 +34,9 @@
     {
       "title": "Symmetry shortcut",
       "steps": [
-        "Values evenly spaced around $30$.",
-        "Mean equals the middle: $30$."
+        "The values go up by $10$ each time, so they are evenly spaced around the middle value, $30$.",
+        "The pair $10$ and $50$ averages $30$, and the pair $20$ and $40$ averages $30$ too.",
+        "Each pair balances on the middle value, so the mean is $30$."
       ]
     }
   ],

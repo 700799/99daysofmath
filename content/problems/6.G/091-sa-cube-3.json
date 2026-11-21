@@ -33,20 +33,21 @@
     "Multiply to add the six equal faces: $6 \\times 9 = 54$.",
     "The surface area of the cube is $54$ square units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Work backwards from the answer by sharing the surface area equally among the faces.",
+        "Six equal faces share $54$, so one face is $54 \\div 6 = 9$.",
+        "A face with edge $3$ has area $3 \\times 3 = 9$, which matches, so the surface area is $54$ square units."
+      ]
+    }
+  ],
   "tags": [
     "surface-area",
     "cube"
   ],
   "estimatedSeconds": 40,
-  "alternativeExplanations": [
-    {
-      "title": "Check the answer",
-      "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: 54 — verified."
-      ]
-    }
-  ],
   "diagram": {
     "kind": "inline-svg",
     "alt": "Cube with side 3",

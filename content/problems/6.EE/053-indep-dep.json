@@ -34,6 +34,16 @@
     "The total cost adds the two parts: $c = 2m + 3$.",
     "Check with $1$ mile: $2(1) + 3 = 5$ dollars, which matches the story."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Build a table first",
+      "steps": [
+        "List the cost for a few trips: $0$ miles costs $3$ dollars, $1$ mile costs $5$, $2$ miles cost $7$ and $3$ miles cost $9$.",
+        "The cost climbs by $2$ for every extra mile, so the miles are multiplied by $2$.",
+        "The table starts at $3$ when $m = 0$, so $3$ is added on, and the rule is $c = 2m + 3$."
+      ]
+    }
+  ],
   "tags": [
     "CA",
     "two-vars",

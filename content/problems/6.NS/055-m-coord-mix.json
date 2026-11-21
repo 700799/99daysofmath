@@ -34,6 +34,16 @@
     "For this point, $x$ stays $5$ and the value $y = -2$ becomes $2$.",
     "So the reflected point has coordinates $(5, 2)$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Measure to the mirror",
+      "steps": [
+        "The $x$-axis is the mirror line, and the point $(5, -2)$ sits $2$ units below it.",
+        "Its image must be the same distance from the mirror on the other side, so it sits $2$ units above the axis, at $y = 2$.",
+        "The point does not move left or right, so $x$ is still $5$ and the image is $(5, 2)$."
+      ]
+    }
+  ],
   "tags": [
     "coordinate"
   ],

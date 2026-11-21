@@ -35,7 +35,9 @@
     {
       "title": "Test the answer",
       "steps": [
-        "Check: $17 - 5 = 12$. ✓"
+        "Guess a value and test it: $x = 15$ gives $15 - 5 = 10$, which is $2$ too small.",
+        "Raise the guess by $2$ and test again: $x = 17$ gives $17 - 5 = 12$.",
+        "That matches the right side of the equation, so the solution is $x = 17$."
       ]
     }
   ],

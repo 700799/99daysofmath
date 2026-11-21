@@ -31,6 +31,16 @@
     "Then add the $1$ to that product to get $12 + 1 = 13$.",
     "So the value of $y$ is $13$ when $x = 4$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Count up in a table",
+      "steps": [
+        "Start the table at $x = 0$, where the rule gives $y = 3(0) + 1 = 1$.",
+        "Each step of $1$ in $x$ adds $3$ to $y$, so the outputs run $1, 4, 7, 10, 13$.",
+        "The last entry belongs to $x = 4$, so $y = 13$."
+      ]
+    }
+  ],
   "tags": [
     "two-vars"
   ],

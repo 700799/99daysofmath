@@ -34,15 +34,17 @@
     {
       "title": "Count the beats in one turn",
       "steps": [
-        "b = 6 means 6 whole waves fit into 360°.",
-        "Share 360° out among 6 beats: 360 ÷ 6 = 60° each."
+        "The $6$ inside the sine means the wave runs six times as fast, so $6$ whole beats fit into $360^\\circ$.",
+        "Share the $360^\\circ$ equally among those $6$ beats to find the width of one.",
+        "Each beat on the monitor is $360 \\div 6 = 60$ degrees wide."
       ]
     },
     {
       "title": "Follow the inside",
       "steps": [
-        "A wave finishes when the inside of the sine has run from 0 all the way to 360.",
-        "The inside is 6x, so 6x = 360 gives x = 60. One beat spans 60° of x."
+        "One wave is complete when the inside of the sine has run from $0^\\circ$ all the way to $360^\\circ$.",
+        "Here the inside is $6x$, so the wave ends when $6x = 360$.",
+        "Dividing both sides by $6$ gives $x = 60$, so one beat spans $60^\\circ$."
       ]
     }
   ],

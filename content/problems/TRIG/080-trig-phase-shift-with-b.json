@@ -61,17 +61,17 @@
     {
       "title": "Find where the cycle starts",
       "steps": [
-        "A sine cycle begins when its input is $0$: set $2x - \\frac{\\pi}{2} = 0$.",
-        "Solve: $2x = \\frac{\\pi}{2}$, so $x = \\frac{\\pi}{4}$.",
-        "The cycle that normally starts at $x = 0$ now starts at $x = \\frac{\\pi}{4}$ — a shift right of $\\frac{\\pi}{4}$."
+        "A sine cycle begins where its input is $0$, so set $2x - \\frac{\\pi}{2} = 0$.",
+        "Solving that equation gives $2x = \\frac{\\pi}{2}$, so the cycle begins at $x = \\frac{\\pi}{4}$.",
+        "The cycle that normally starts at $x = 0$ now starts at $x = \\frac{\\pi}{4}$, a shift of $\\frac{\\pi}{4}$ to the right, choice A."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "The trap is answering $\\frac{\\pi}{2}$ to the right (choice B) by reading the number off the end of the expression.",
-        "That only works when the coefficient of $x$ is $1$. Here the $2$ compresses everything, so the actual slide is half as big.",
-        "Rule: always factor out $B$ first, or solve \"inside $= 0$\". Both give $\\frac{\\pi}{4}$, never $\\frac{\\pi}{2}$."
+        "The trap is choice B, $\\frac{\\pi}{2}$ to the right, read straight off the end of the expression.",
+        "That reading only works when the coefficient of $x$ is $1$; here the $2$ squeezes the graph, so the slide is half as big.",
+        "Always factor out $B$ first or solve \"inside $= 0$\"; both give a shift of $\\frac{\\pi}{4}$ to the right."
       ]
     }
   ],

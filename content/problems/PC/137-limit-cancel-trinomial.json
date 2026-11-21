@@ -35,17 +35,17 @@
     {
       "title": "Sneak up from both sides",
       "steps": [
-        "At x = 1.9 the fraction gives (3.61 − 13.3 + 10)/(−0.1) = −3.1.",
-        "At x = 2.1 it gives (4.41 − 14.7 + 10)/(0.1) = −2.9.",
-        "The two sides squeeze toward −3 — the table confirms the cancelling."
+        "Just left of $2$, at $x = 1.9$, the fraction is $\\frac{3.61 - 13.3 + 10}{-0.1} = \\frac{0.31}{-0.1} = -3.1$.",
+        "Just right of $2$, at $x = 2.1$, it is $\\frac{4.41 - 14.7 + 10}{0.1} = \\frac{-0.29}{0.1} = -2.9$.",
+        "The two sides close in on the number between them, so the limit is $-3$."
       ]
     },
     {
-      "title": "Why a factor must cancel",
+      "title": "Divide instead of factoring",
       "steps": [
-        "Plugging in x = 2 made the top zero, which means (x − 2) is one of its factors.",
-        "So the top and bottom share that factor, and sharing is exactly what makes a hole instead of a wall.",
-        "Peel the shared factor off and the leftover, x − 5, hands you the height of the hole: −3."
+        "The top equals $0$ at $x = 2$, so $(x - 2)$ must divide it, and long division can find the other factor.",
+        "Dividing $x^2 - 7x + 10$ by $x - 2$ gives $x - 5$ with no remainder, since $x \\cdot x = x^2$ and $-5 \\cdot (-2) = 10$.",
+        "Near $x = 2$ the fraction behaves like $x - 5$, which heads to $2 - 5 = -3$."
       ]
     }
   ],

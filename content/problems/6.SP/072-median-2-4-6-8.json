@@ -30,18 +30,19 @@
     "With an even count, the median is the average of the two middle values, which are $4$ and $6$.",
     "$(4 + 6) \\div 2 = 5$, so the median of the set is $5$."
   ],
-  "tags": [
-    "median",
-    "even-count"
-  ],
-  "estimatedSeconds": 40,
   "alternativeExplanations": [
     {
       "title": "Check the answer",
       "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: 5 — verified."
+        "Test $5$ by counting the values on each side of it.",
+        "The values $2$ and $4$ are below $5$, and the values $6$ and $8$ are above it.",
+        "It is also $1$ away from both middle values, so the median $5$ is confirmed."
       ]
     }
-  ]
+  ],
+  "tags": [
+    "median",
+    "even-count"
+  ],
+  "estimatedSeconds": 40
 }

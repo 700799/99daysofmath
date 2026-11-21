@@ -34,9 +34,9 @@
     {
       "title": "Swap x and y",
       "steps": [
-        "Write $y = 2x + 1$, then swap the letters: $x = 2y + 1$.",
-        "Solve for $y$: $y = \\frac{x - 1}{2}$.",
-        "Now plug in $x = 9$: $y = \\frac{8}{2} = 4$."
+        "Write the function as $y = 2x + 1$ and swap the two letters, because an inverse trades inputs with outputs: $x = 2y + 1$.",
+        "Solve the swapped equation for $y$ by subtracting $1$ and dividing by $2$: $y = \\frac{x - 1}{2}$.",
+        "This is the rule for $f^{-1}$, so put in $x = 9$ to get $\\frac{9 - 1}{2} = \\frac{8}{2} = 4$."
       ]
     }
   ],

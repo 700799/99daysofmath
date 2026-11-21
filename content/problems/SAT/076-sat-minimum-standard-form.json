@@ -37,9 +37,9 @@
     {
       "title": "Complete the square instead",
       "steps": [
-        "$x^2 - 8x + 12 = (x^2 - 8x + 16) - 16 + 12 = (x - 4)^2 - 4$.",
-        "Now it is in vertex form and the vertex $(4, -4)$ is visible without computing anything.",
-        "Completing the square costs a few more seconds but produces the whole vertex, not just half of it."
+        "Half of $-8$ is $-4$ and its square is $16$, so write $x^2 - 8x + 12 = (x^2 - 8x + 16) - 16 + 12$.",
+        "That simplifies to $(x - 4)^2 - 4$, which is the vertex form of the function.",
+        "The square is smallest, namely $0$, when $x = 4$, so the minimum value of the function is $-4$."
       ]
     }
   ],

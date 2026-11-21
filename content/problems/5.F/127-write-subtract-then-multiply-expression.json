@@ -42,9 +42,9 @@
     {
       "title": "Why order matters",
       "steps": [
-        "$(40 - 9) \\times 5 = 31 \\times 5 = 155$.",
-        "$40 - 9 \\times 5 = 40 - 45$, which is not even a whole-number answer a 5th grader would want.",
-        "The parentheses protect the step you meant to do first."
+        "Follow the words with numbers: $40 - 9 = 31$, and then $31 \\times 5 = 155$.",
+        "Without parentheses, $40 - 9 \\times 5$ multiplies first and becomes $40 - 45$, which is not what the words say.",
+        "Parentheses force the subtraction to happen first, so the expression is $(40 - 9) \\times 5$."
       ]
     }
   ],

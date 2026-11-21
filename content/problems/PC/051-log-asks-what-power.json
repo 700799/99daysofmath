@@ -34,9 +34,9 @@
     {
       "title": "Count the doublings",
       "steps": [
-        "Start at $1$ and keep doubling: $1, 2, 4, 8, 16, 32$ — that is $5$ doublings.",
-        "The number of doublings IS the logarithm.",
-        "So $\\log_2(32) = 5$."
+        "Start at $1$ and keep doubling until you reach $32$: the list is $1, 2, 4, 8, 16, 32$.",
+        "Count the jumps between numbers, not the numbers themselves, and there are $5$ jumps.",
+        "The number of doublings is the exponent on $2$, so $\\log_2(32) = 5$."
       ]
     }
   ],

@@ -36,6 +36,16 @@
     "The side is the number that multiplies by itself to make $4$, and $2 \\times 2 = 4$.",
     "The side length of the cube is $2$ units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Try small side lengths",
+      "steps": [
+        "Test a side of $1$: each face has area $1$, so the surface area would be $6 \\times 1 = 6$, which is too small.",
+        "Test a side of $2$: each face has area $2 \\times 2 = 4$, so the surface area is $6 \\times 4 = 24$.",
+        "A side of $2$ gives exactly the surface area in the problem, so the side length is $2$ units."
+      ]
+    }
+  ],
   "tags": [
     "surface-area",
     "cube"

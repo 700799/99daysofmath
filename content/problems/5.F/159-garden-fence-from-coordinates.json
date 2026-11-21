@@ -42,16 +42,17 @@
     {
       "title": "Use the perimeter formula",
       "steps": [
-        "$P = 2 \\times (\\text{width} + \\text{height})$.",
-        "$2 \\times (6 + 4) = 2 \\times 10 = 20$ meters."
+        "Read the side lengths from the corners: the width is $8 - 2 = 6$ meters and the height is $5 - 1 = 4$ meters.",
+        "A rectangle has two of each side, so use $P = 2 \\times (\\text{width} + \\text{height})$.",
+        "Put the side lengths in to get $2 \\times (6 + 4) = 2 \\times 10 = 20$ meters of fence."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "A common wrong answer is $24$: it comes from counting grid LINES instead of gaps — thinking the side from $x = 2$ to $x = 8$ is $7$ units because you count $2,3,4,5,6,7,8$.",
-        "Fence length measures the spaces between the lines, not the lines themselves, so you subtract: $8 - 2 = 6$.",
-        "Escape it by drawing the two end points and counting the hops from one to the other, the way you would count steps on a sidewalk."
+        "A common wrong answer is $24$, from counting grid lines $2, 3, 4, 5, 6, 7, 8$ and calling the side $7$ units long.",
+        "Fence length measures the spaces between the lines, so subtract the coordinates: $8 - 2 = 6$ and $5 - 1 = 4$.",
+        "Counting hops the right way gives sides of $6, 4, 6$ and $4$, and $6 + 4 + 6 + 4 = 20$ meters."
       ]
     }
   ],

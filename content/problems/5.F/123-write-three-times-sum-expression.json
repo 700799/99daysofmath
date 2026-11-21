@@ -42,8 +42,9 @@
     {
       "title": "Check the meaning",
       "steps": [
-        "$8 + 5 = 13$, and three times $13$ is $39$.",
-        "$3 \\times 8 + 5 = 29$, which is not \"three times the sum\" — proof that the parentheses matter."
+        "Work out what the words describe: the sum of $8$ and $5$ is $13$, and three times $13$ is $39$.",
+        "Test the expression without parentheses: $3 \\times 8 + 5 = 24 + 5 = 29$, which is not $39$.",
+        "With parentheses, $3 \\times (8 + 5) = 3 \\times 13 = 39$, so $3 \\times (8 + 5)$ is the expression that matches the words."
       ]
     }
   ],

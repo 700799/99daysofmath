@@ -33,6 +33,16 @@
     "Divide the flour by $3$ to get $3 \\div 3 = 1$ cup.",
     "You need $1$ cup of flour to make $4$ cookies, which matches the rate of $4$ cookies per cup."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Use cookies per cup",
+      "steps": [
+        "Find how many cookies one cup of flour makes: $12 \\div 3 = 4$ cookies per cup.",
+        "The small batch is $4$ cookies, which is exactly what one cup makes.",
+        "So $4$ cookies need $1$ cup of flour."
+      ]
+    }
+  ],
   "tags": [
     "CA",
     "ratio-table"

@@ -48,6 +48,17 @@
     "A histogram groups the values into bins, and the bar heights show where data piles up and where it thins out.",
     "So the histogram, choice B, is best for showing the shape of a large distribution."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Try it with 200 values",
+      "steps": [
+        "Imagine $200$ test scores and think about what each display would look like.",
+        "The dot plot would need $200$ separate dots, and the box plot would shrink them all to just five numbers.",
+        "The histogram would show about ten bars whose heights rise and fall, so peaks and tails are easy to see.",
+        "Only the histogram keeps the picture readable and still shows the shape, so the answer is choice B."
+      ]
+    }
+  ],
   "tags": [
     "CA",
     "display"

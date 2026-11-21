@@ -33,6 +33,16 @@
     "Multiply both sides by $5$ to undo the division: $x = 5 \\times 4 = 20$.",
     "The box held $20$ cookies, and $20 \\div 5 = 4$ confirms it."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Add up the shares",
+      "steps": [
+        "Every cookie in the box ended up with one of the $5$ friends, so the box is the shares added together.",
+        "Each share is $4$ cookies, so add five shares: $4 + 4 + 4 + 4 + 4$.",
+        "The sum is $20$, so the box held $20$ cookies."
+      ]
+    }
+  ],
   "tags": [
     "word",
     "solve"

@@ -30,6 +30,16 @@
     "Count the values. The $0$ is a real data value, so the count is $4$, not $3$.",
     "Divide the total by the count: $20 \\div 4 = 5$, so the mean is $5$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Pair up the values",
+      "steps": [
+        "Match the smallest value with the largest: $0$ and $10$ add to $10$, so that pair averages $5$.",
+        "Match the two values left over: $4$ and $6$ also add to $10$, so this pair averages $5$ as well.",
+        "Both pairs balance at the same number, so the mean of all four values is $5$."
+      ]
+    }
+  ],
   "tags": [
     "mean"
   ],

@@ -40,17 +40,17 @@
     {
       "title": "Both triangles, side by side",
       "steps": [
-        "Triangle 1: $B \\approx 47.5^\\circ$, so $C \\approx 97.5^\\circ$ — a tall, open triangle.",
-        "Triangle 2: $B \\approx 132.5^\\circ$, so $C \\approx 12.5^\\circ$ — a long, flat sliver.",
-        "Both have $A = 35^\\circ$, $a = 7$ and $b = 9$, which is exactly why the SSA case is called ambiguous."
+        "Triangle 1 has $B \\approx 47.5^\\circ$, so $C \\approx 180^\\circ - 35^\\circ - 47.5^\\circ = 97.5^\\circ$, a tall and open triangle.",
+        "Triangle 2 has $B \\approx 132.5^\\circ$, so $C \\approx 12.5^\\circ$, a long and flat sliver.",
+        "Both have $A = 35^\\circ$, $a = 7$ and $b = 9$, which is why SSA is called ambiguous, and the obtuse value asked for is $B \\approx 132.5^\\circ$."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "The trap is reporting $47.5^\\circ$ and stopping, because that is the number the calculator displayed.",
-        "$\\arcsin$ only ever returns angles from $-90^\\circ$ to $90^\\circ$, so it is structurally incapable of showing you an obtuse answer — it is not wrong, just incomplete.",
-        "Whenever you find an angle with the Law of Sines in an SSA problem, compute $180^\\circ$ minus your answer and test whether it still fits under $180^\\circ$ with the given angle. Here it does, giving $132.5^\\circ$."
+        "The trap is reporting $47.5^\\circ$ and stopping, because that is the number the calculator displays.",
+        "The function $\\arcsin$ only returns angles from $-90^\\circ$ to $90^\\circ$, so it can never show an obtuse answer; it is not wrong, only incomplete.",
+        "In an SSA problem always test $180^\\circ$ minus the calculator angle: $132.5^\\circ + 35^\\circ$ is under $180^\\circ$, so $132.5^\\circ$ is the obtuse value."
       ]
     }
   ],

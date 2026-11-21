@@ -53,6 +53,16 @@
     "Choice D, $5 : 7$, is already in simplest form and it is not $2 : 3$.",
     "The ratio that is NOT equivalent to $4 : 6$ is $5 : 7$, choice D."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Test with cross products",
+      "steps": [
+        "A ratio $a : b$ is equivalent to $4 : 6$ exactly when $4 \\times b$ equals $6 \\times a$.",
+        "A gives $12$ and $12$, B gives $48$ and $48$, and C gives $36$ and $36$, so those three are equivalent.",
+        "D gives $4 \\times 7 = 28$ but $6 \\times 5 = 30$, which do not match, so $5 : 7$ (choice D) is NOT equivalent."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "equivalent"

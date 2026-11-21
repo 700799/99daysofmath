@@ -34,9 +34,9 @@
     {
       "title": "Shrinking box",
       "steps": [
-        "At $t = 0.1$ the displacement is somewhere in $[-0.01, 0.01]$.",
-        "At $t = 0.01$ it is somewhere in $[-0.0001, 0.0001]$.",
-        "The box around $d(t)$ shrinks to the single point $0$, so that is the limit — no formula required."
+        "At $t = 0.1$ the two fences are $\\pm 0.01$, so the displacement lies somewhere in the interval $[-0.01, 0.01]$.",
+        "At $t = 0.01$ the fences are $\\pm 0.0001$, so the displacement is trapped in the much smaller interval $[-0.0001, 0.0001]$.",
+        "The box around $d(t)$ keeps shrinking onto the single number $0$, so the limit is $0$ and no formula for $d$ is needed."
       ]
     }
   ],

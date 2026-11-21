@@ -34,6 +34,16 @@
     "Each interval starts where the previous one ends, so neighbouring bars share an edge.",
     "The bars are therefore drawn without gaps, and the statement is true."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Contrast with a bar graph",
+      "steps": [
+        "A bar graph of pets has bars for cat, dog and fish, and gaps show that these are separate categories.",
+        "A histogram's intervals, such as $0$-$9$ and $10$-$19$, are pieces of one number line with nothing between them.",
+        "With no space between the intervals there is no space between the bars, so the statement is true."
+      ]
+    }
+  ],
   "tags": [
     "histogram"
   ],

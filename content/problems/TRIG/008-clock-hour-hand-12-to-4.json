@@ -34,8 +34,9 @@
     {
       "title": "As a fraction of the circle",
       "steps": [
-        "From 12 to 4 is $\\frac{4}{12} = \\frac{1}{3}$ of the way around the clock.",
-        "One third of $360^\\circ$ is $120^\\circ$."
+        "From 12 to 4 covers 4 of the 12 hour gaps, which is $\\frac{4}{12} = \\frac{1}{3}$ of the way around the clock.",
+        "A full trip around the clock face is $360^\\circ$, so take one third of that amount.",
+        "One third of $360^\\circ$ is $120^\\circ$, so the hour hand has turned $120$ degrees."
       ]
     }
   ],

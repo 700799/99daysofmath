@@ -38,19 +38,19 @@
   ],
   "alternativeExplanations": [
     {
-      "title": "Just add the six days",
+      "title": "Add the six days",
       "steps": [
-        "Write the days out: 2, 4, 8, 16, 32, 64.",
-        "Add them left to right: 6, 14, 30, 62, 126.",
-        "126 messages — and notice each running total is exactly one less than the next day's count."
+        "Write out the six daily counts by doubling: $2, 4, 8, 16, 32, 64$.",
+        "Add from left to right and keep a running total: $6, 14, 30, 62, 126$.",
+        "The last running total is the answer, so $126$ messages are sent in all."
       ]
     },
     {
-      "title": "One less than the next term",
+      "title": "One doubling too far",
       "steps": [
-        "Look at the running totals: 2, 6, 14, 30, 62, 126.",
-        "Compare each to the next day's count: 4, 8, 16, 32, 64, 128. Every total is one short.",
-        "So the six-day total is 128 − 2 = 126. That \"one short\" pattern IS the formula, in disguise."
+        "Compare the running totals $2, 6, 14, 30, 62$ with the NEXT day's count: $4, 8, 16, 32, 64$.",
+        "Each total is exactly $2$ less than the following day's count, and the pattern keeps going.",
+        "Day $7$ would send $128$ messages, so the six-day total is $128 - 2 = 126$."
       ]
     }
   ],

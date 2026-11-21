@@ -34,17 +34,17 @@
     {
       "title": "Build it in two chunks",
       "steps": [
-        "$5^2 = 25$, and $25 \\times 25 = 625$.",
-        "So $625 = 5^2 \\times 5^2 = 5^4$.",
-        "Matching exponents gives $x = 4$."
+        "Use a square you already know: $5^2 = 25$, and $25 \\times 25 = 625$.",
+        "So $625 = 5^2 \\times 5^2$, and multiplying powers of the same base adds the exponents to give $5^4$.",
+        "The equation is now $5^x = 5^4$, so the exponents must match and $x = 4$."
       ]
     },
     {
       "title": "Ask the log question",
       "steps": [
-        "The equation is the same as $x = \\log_5(625)$.",
-        "A log asks: $5$ to what power gives $625$?",
-        "The answer is $4$."
+        "The equation $5^x = 625$ says the same thing as $x = \\log_5(625)$.",
+        "That log asks how many times $625$ can be divided by $5$ until $1$ is left: $625 \\to 125 \\to 25 \\to 5 \\to 1$.",
+        "It took four divisions to reach $1$, so $x = 4$."
       ]
     }
   ],

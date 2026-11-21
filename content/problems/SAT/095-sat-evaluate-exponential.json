@@ -36,9 +36,9 @@
     {
       "title": "Step it out",
       "steps": [
-        "Start at $f(0) = 5$. Each step in $x$ multiplies by $3$.",
-        "$f(1) = 15$, then $f(2) = 45$.",
-        "Stepping is slower for large inputs but makes the structure obvious, and it never falls for the order-of-operations trap."
+        "Start with $f(0) = 5(3)^0 = 5$, because any nonzero number to the power $0$ is $1$.",
+        "Each increase of $1$ in $x$ multiplies the output by $3$, so $f(1) = 15$.",
+        "One more step of the same kind gives $f(2) = 15 \\times 3 = 45$."
       ]
     }
   ],

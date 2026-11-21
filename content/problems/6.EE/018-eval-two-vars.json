@@ -31,6 +31,16 @@
     "Add the value of $b$ to finish: $6 + 5 = 11$.",
     "The value of the expression is $11$ when $a = 3$ and $b = 5$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Add the copies",
+      "steps": [
+        "Write $2a$ as two copies of $a$, so the expression becomes $a + a + b$.",
+        "Replace each letter with its value to get $3 + 3 + 5$.",
+        "Adding the three numbers gives $11$, so the expression is worth $11$."
+      ]
+    }
+  ],
   "tags": [
     "evaluate"
   ],

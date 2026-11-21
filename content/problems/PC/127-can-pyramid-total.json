@@ -35,17 +35,17 @@
     {
       "title": "Pair the ends by hand",
       "steps": [
-        "Pair the bottom row with the top: 20 + 1 = 21. Next pair in: 19 + 2 = 21. Then 18 + 3 = 21.",
-        "Twenty rows make ten pairs, and every pair totals 21.",
-        "10 × 21 = 210 cans."
+        "Pair the bottom row with the top row: $20 + 1 = 21$ cans, and the next pair in is $19 + 2 = 21$ as well.",
+        "Twenty rows make ten pairs, and every pair holds $21$ cans.",
+        "So the whole stack holds $10 \\times 21 = 210$ cans."
       ]
     },
     {
       "title": "Two pyramids make a rectangle",
       "steps": [
-        "Build a second identical pyramid, flip it upside down, and push it against the first.",
-        "Every row now holds 20 + 1 = 21 cans, and there are 20 rows: 420 cans.",
-        "That is two pyramids, so one pyramid is 420 ÷ 2 = 210."
+        "Build a second identical pyramid, turn it upside down, and push it against the first.",
+        "Every row of the combined shape holds $20 + 1 = 21$ cans, and there are $20$ rows, making $420$ cans.",
+        "That is two pyramids, so one pyramid holds $420 \\div 2 = 210$ cans."
       ]
     }
   ],

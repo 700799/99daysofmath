@@ -43,9 +43,9 @@
     {
       "title": "With the formula",
       "steps": [
-        "$P(\\text{job} \\mid \\text{senior}) = \\frac{P(\\text{job and senior})}{P(\\text{senior})} = \\frac{45/120}{70/120}$.",
-        "The 120s cancel, leaving $\\frac{45}{70} = \\frac{9}{14}$.",
-        "Compare: $P(\\text{job}) = \\frac{75}{120} = 0.625$, so seniors are a little more likely than students overall to have a job."
+        "Use the definition $P(\\text{job} \\mid \\text{senior}) = \\frac{P(\\text{job and senior})}{P(\\text{senior})}$, with both probabilities taken out of all $120$ students.",
+        "That gives $\\frac{45/120}{70/120}$, and the two $120$s cancel because both counts come from the same total.",
+        "What remains is $\\frac{45}{70} = \\frac{9}{14}$, the same value found by reading along the senior row."
       ]
     }
   ],

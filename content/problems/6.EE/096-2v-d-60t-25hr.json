@@ -43,9 +43,17 @@
     {
       "title": "Break $2.5$ into $2 + 0.5$",
       "steps": [
-        "$60 \\cdot 2 = 120$.",
-        "$60 \\cdot 0.5 = 30$.",
-        "$120 + 30 = 150$."
+        "Think of the trip one hour at a time: each full hour covers $60$ miles, so two hours cover $120$ miles.",
+        "The extra half hour covers half of $60$ miles, which is $30$ miles.",
+        "Adding the two parts, the total distance is $120 + 30 = 150$ miles."
+      ]
+    },
+    {
+      "title": "Double, then halve",
+      "steps": [
+        "Doubling the time gives a whole number of hours: $2.5$ hours doubled is $5$ hours.",
+        "In $5$ hours the car would go $60 \\times 5 = 300$ miles.",
+        "The real trip is half as long, so the distance is half of $300$, which is $150$ miles."
       ]
     }
   ],

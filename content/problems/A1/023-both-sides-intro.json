@@ -34,9 +34,9 @@
     {
       "title": "As a balance scale",
       "steps": [
-        "Left pan: 5 boxes. Right pan: 2 boxes plus a 12-gram weight.",
-        "Lift 2 boxes off EACH pan: 3 boxes balance 12 grams.",
-        "Each box is $12 \\div 3 = 4$ grams."
+        "Picture a balance scale with $5$ identical boxes on the left pan and $2$ boxes plus a $12$-gram weight on the right pan.",
+        "Lift $2$ boxes off each pan, which keeps the scale level and leaves $3$ boxes balancing $12$ grams.",
+        "Share the $12$ grams equally among the $3$ boxes: each box weighs $12 \\div 3 = 4$ grams, so $x = 4$."
       ]
     }
   ],

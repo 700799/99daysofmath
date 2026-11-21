@@ -38,6 +38,16 @@
     "The pool is inside the yard, so subtract it to leave the rest: $600 - 50 = 550$.",
     "The non-pool area of the backyard is $550$ square feet."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Count pool-sized patches",
+      "steps": [
+        "Use the $5$ by $10$ pool as a patch that covers $50$ square feet.",
+        "The yard is $20 \\div 5 = 4$ patches one way and $30 \\div 10 = 3$ patches the other way, so it holds $4 \\times 3 = 12$ patches.",
+        "The pool uses one patch, so $11$ patches are left, and $11 \\times 50 = 550$ square feet is not pool."
+      ]
+    }
+  ],
   "tags": [
     "CA",
     "composite",

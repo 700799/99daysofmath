@@ -37,8 +37,9 @@
     {
       "title": "Treat as one rectangle",
       "steps": [
-        "Side-by-side, total length $= 3 + 2 = 5$ and width $= 4$.",
-        "Area $= 4 \\cdot 5 = 20$."
+        "The two rectangles share a side of length $4$, so side by side they form one long rectangle.",
+        "The other sides join end to end, which gives a total length of $3 + 2 = 5$.",
+        "The joined rectangle has area $4 \\times 5 = 20$, so the total area is $20$ square units."
       ]
     }
   ],

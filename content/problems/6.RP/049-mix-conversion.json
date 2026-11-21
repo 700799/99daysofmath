@@ -33,6 +33,16 @@
     "Carrying out the multiplication gives $3 \\times 4 = 12$ quarts.",
     "Three gallons are the same amount as $12$ quarts."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Skip count by fours",
+      "steps": [
+        "Each gallon is $4$ quarts, so count one jump of $4$ for every gallon.",
+        "Three gallons means three jumps: $4$, then $8$, then $12$.",
+        "The third jump lands on $12$, so $3$ gallons hold $12$ quarts."
+      ]
+    }
+  ],
   "tags": [
     "conversion"
   ],

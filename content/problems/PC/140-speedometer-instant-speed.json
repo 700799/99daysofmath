@@ -40,17 +40,17 @@
     {
       "title": "Do the algebra with a step h",
       "steps": [
-        "Over a step of size h the average is (5(2 + h)² − 20) ÷ h.",
-        "Expand: 5(4 + 4h + h²) − 20 = 20h + 5h². Divide by h to get 20 + 5h.",
-        "Let h shrink to 0 and only 20 survives — h = 0.1 gave 20.5 and h = 0.01 gave 20.05, exactly as predicted."
+        "Over a time step of size $h$ starting at $t = 2$, the average speed is $\\frac{5(2 + h)^2 - 20}{h}$.",
+        "Expanding the top gives $20h + 5h^2$, and dividing by $h$ leaves $20 + 5h$.",
+        "As $h$ shrinks to $0$ the extra $5h$ vanishes, so the speedometer reads $20$ m/s, matching $20.5$ and $20.05$ for $h = 0.1$ and $0.01$."
       ]
     },
     {
-      "title": "Trip summary versus right now",
+      "title": "Squeeze from both sides",
       "steps": [
-        "A 2-hour road trip averaging 60 km/h says nothing about any single moment — you stopped, you sped up.",
-        "Shrink the trip to a minute, then a second, then a blink, and the average has no room left to hide anything.",
-        "The number those shrinking averages settle on is the speedometer reading: 20 m/s here."
+        "Compute an average just BEFORE $t = 2$ as well: from $t = 1.9$ to $t = 2$ it is $\\frac{20 - 18.05}{0.1} = 19.5$ m/s.",
+        "So the speed at the instant is trapped between $19.5$ from the left and $20.5$ from the right.",
+        "Both averages are the same distance from $20$ and close in on it as the window shrinks, so the reading is $20$ m/s."
       ]
     }
   ],

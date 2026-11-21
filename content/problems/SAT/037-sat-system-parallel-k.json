@@ -41,16 +41,17 @@
     {
       "title": "Scale to match, then compare",
       "steps": [
-        "Multiply the second equation by $3$: $6x + 3y = 15$.",
-        "For no solution the $x$ and $y$ coefficients must match the first equation while the constants differ.",
-        "Matching $6x$ requires $k = 6$, and the constants $9$ and $15$ do differ — confirming no solution rather than infinitely many."
+        "Multiply the second equation by $3$ so its $y$-term matches the first: $6x + 3y = 15$.",
+        "A system has no solution when the $x$ and $y$ parts are identical but the constants disagree, so $kx$ must equal $6x$.",
+        "That gives $k = 6$, and the constants $9$ and $15$ are different, so the lines are parallel and never meet."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "A sign slip in the slope comparison hands you k = −6, and stopping early can hand you the infinitely-many case by accident.",
-        "After finding k, always compare the constants too: same slope with the SAME constant is one line, not parallel lines."
+        "A sign slip when comparing the slopes $-\\dfrac{k}{3}$ and $-2$ produces $k = -6$, which gives lines that cross once.",
+        "With $k = 6$ the first equation is $6x + 3y = 9$, which simplifies to $2x + y = 3$.",
+        "That has the same left side as $2x + y = 5$ but a different constant, so there is no solution and $k = 6$ is right."
       ]
     }
   ],

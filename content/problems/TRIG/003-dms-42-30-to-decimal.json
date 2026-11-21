@@ -34,9 +34,9 @@
     {
       "title": "Half past 42",
       "steps": [
-        "If someone says \"half past four,\" you know 30 minutes is half an hour.",
-        "Angle minutes behave the same way — 30 minutes is half a degree.",
-        "Half past $42^\\circ$ is $42.5^\\circ$."
+        "On a clock, $30$ minutes is half of an hour, which is why people say \"half past four\".",
+        "Angle minutes split a degree the same way, so $30'$ is half of one degree.",
+        "Half past $42^\\circ$ is therefore $42.5^\\circ$ when written as a decimal."
       ]
     }
   ],

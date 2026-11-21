@@ -36,6 +36,24 @@
     "$24$ is the first number in both lists. Neither $8$, $12$ nor $16$ is a multiple of both.",
     "So the least common multiple of $8$ and $12$ is $24$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Prime factors",
+      "steps": [
+        "Break both numbers into primes: $8 = 2 \\times 2 \\times 2$ and $12 = 2 \\times 2 \\times 3$.",
+        "The LCM needs enough primes to cover each number, so take three $2$s for the $8$ and one $3$ for the $12$.",
+        "Multiply them: $2 \\times 2 \\times 2 \\times 3 = 24$, so the LCM of $8$ and $12$ is $24$."
+      ]
+    },
+    {
+      "title": "Test multiples of 12",
+      "steps": [
+        "The LCM is a multiple of the larger number, so test $12, 24, 36$ in turn for division by $8$.",
+        "The first one fails, because $12 \\div 8$ leaves a remainder of $4$.",
+        "The second one works, because $24 \\div 8 = 3$ exactly, so the least common multiple is $24$."
+      ]
+    }
+  ],
   "tags": [
     "lcm"
   ],

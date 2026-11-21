@@ -53,6 +53,17 @@
     "Set $B$ has range $11 - 1 = 10$, so its values reach much farther from $6$.",
     "Since $10 > 2$, set $B$ has the greater spread, which is choice B."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Measure from the shared middle",
+      "steps": [
+        "Both sets have the same middle value, $6$, so compare how far the other values sit from it.",
+        "In set $A$ the outer values $5$ and $7$ are each only $1$ away from $6$.",
+        "In set $B$ the outer values $1$ and $11$ are each $5$ away from $6$.",
+        "The values of $B$ sit five times as far from the center, so $B$ has the greater spread, choice B."
+      ]
+    }
+  ],
   "tags": [
     "spread"
   ],

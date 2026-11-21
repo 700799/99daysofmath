@@ -30,6 +30,16 @@
     "The base is $9$ and the height is $4$, which gives $A = 9 \\times 4$.",
     "Multiplying gives $9 \\times 4 = 36$, so the area is $36$ square units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Cut and slide",
+      "steps": [
+        "Cut a right triangle off one slanted end of the parallelogram with a straight up-and-down cut.",
+        "Slide that triangle to the other end, where it fills the gap and makes a rectangle $9$ wide and $4$ tall.",
+        "No area was added or lost, so the parallelogram covers $9 \\times 4 = 36$ square units."
+      ]
+    }
+  ],
   "tags": [
     "area",
     "parallelogram"

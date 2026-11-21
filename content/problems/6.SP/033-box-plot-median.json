@@ -32,6 +32,16 @@
     "The whisker ends show the minimum and maximum, and the two edges of the box show $Q1$ and $Q3$.",
     "That leaves the line drawn inside the box, which marks the median of the data."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Build a small box plot",
+      "steps": [
+        "Use the data $1, 2, 3, 4, 5, 6, 7$: its median is $4$, and the quartiles are $Q1 = 2$ and $Q3 = 6$.",
+        "The box is drawn from $2$ to $6$ and the whiskers run out to $1$ and $7$.",
+        "The only summary number left to draw is $4$, and it falls inside the box, so the line inside the box is the median."
+      ]
+    }
+  ],
   "tags": [
     "box-plot"
   ],

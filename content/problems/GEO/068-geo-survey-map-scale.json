@@ -34,8 +34,9 @@
     {
       "title": "Split the inches",
       "steps": [
-        "3 inches represents $3 \\times 40 = 120$ feet.",
-        "The extra half inch is $0.5 \\times 40 = 20$ feet. Together: $120 + 20 = 140$ feet."
+        "Break the map length into $3$ whole inches and one half inch, because each part is easy to convert.",
+        "The $3$ inches stand for $3 \\times 40 = 120$ feet, and the half inch stands for half of $40$, which is $20$ feet.",
+        "Adding the two parts gives $120 + 20 = 140$ feet for the real property line."
       ]
     }
   ],

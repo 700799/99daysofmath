@@ -34,9 +34,9 @@
     {
       "title": "Deal out the dollars",
       "steps": [
-        "Give everyone $\\$10$ first: that uses $\\$80$ and leaves $\\$40$.",
-        "Give everyone $\\$5$ more: that uses the last $\\$40$.",
-        "Each friend paid $10 + 5 = \\$15$."
+        "Hand out the bill in rounds, starting with $10$ dollars from each of the $8$ friends, which covers $80$ dollars.",
+        "That leaves $120 - 80 = 40$ dollars, and $40$ shared among $8$ people is $5$ dollars more each.",
+        "Each friend pays $10 + 5 = 15$ dollars, and the check $8 \\times 15 = 120$ confirms it."
       ]
     }
   ],

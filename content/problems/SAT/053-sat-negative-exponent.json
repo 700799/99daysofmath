@@ -58,9 +58,9 @@
     {
       "title": "Only what carries the exponent moves",
       "steps": [
-        "In $3x^{-2}$, the $-2$ sits on $x$ alone.",
-        "Had the expression been $(3x)^{-2}$, the whole product would move down, giving $\\dfrac{1}{9x^2}$.",
-        "Reading exactly what the exponent attaches to is the whole question here — and it is a standard SAT distinction."
+        "In $3x^{-2}$ the exponent $-2$ is attached to $x$ only, so only $x^2$ moves to the denominator and the result is $\\dfrac{3}{x^2}$.",
+        "If the expression were $(3x)^{-2}$, the $3$ would move too and the result would be $\\dfrac{1}{9x^2}$, a different expression.",
+        "A test with $x = 2$ agrees: $3 \\cdot 2^{-2} = \\dfrac{3}{4}$, and choice B also gives $\\dfrac{3}{4}$."
       ]
     }
   ],

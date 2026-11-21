@@ -33,6 +33,16 @@
     "For the second term, multiply the two numbers: $5 \\cdot 3 = 15$.",
     "Join the products with a plus sign to get $10x + 15$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Add five copies",
+      "steps": [
+        "Five groups of $(2x + 3)$ contain the term $2x$ five times and the number $3$ five times.",
+        "Five copies of $2x$ added together make $2x + 2x + 2x + 2x + 2x = 10x$.",
+        "Five copies of $3$ make $15$, so the expanded form is $10x + 15$."
+      ]
+    }
+  ],
   "tags": [
     "distributive"
   ],

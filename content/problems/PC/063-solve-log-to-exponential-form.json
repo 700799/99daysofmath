@@ -34,17 +34,17 @@
     {
       "title": "Read it as a sentence",
       "steps": [
-        "Say it out loud: \"$4$ to WHAT power is $x$? The answer is $3$.\"",
-        "So $x$ must be $4$ multiplied by itself $3$ times.",
-        "$4 \\times 4 \\times 4 = 64$."
+        "Say the equation in words: the power you put on $4$ to get $x$ is $3$.",
+        "So $x$ is three fours multiplied together, which is $4 \\times 4 \\times 4$.",
+        "Multiply in two stages: $4 \\times 4 = 16$ and $16 \\times 4 = 64$, so $x = 64$."
       ]
     },
     {
       "title": "Undo with a power",
       "steps": [
-        "Logs and exponents are undo twins.",
-        "Raise $4$ to both sides: $4^{\\log_4(x)} = 4^3$.",
-        "The left side collapses to $x$, so $x = 64$."
+        "A log with base $4$ is undone by raising $4$ to a power, so make each side an exponent on $4$.",
+        "This gives $4^{\\log_4(x)} = 4^3$, and the left side collapses to plain $x$.",
+        "The right side is $4^3 = 64$, so the solution is $x = 64$."
       ]
     }
   ],

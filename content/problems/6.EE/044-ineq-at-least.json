@@ -41,28 +41,28 @@
     "Put the two parts together to get the inequality $8y \\ge 500$.",
     "As a check, $63$ tickets bring in $504$ dollars, which is enough, and $62$ tickets bring in only $496$."
   ],
-  "tags": [
-    "inequality",
-    "translate",
-    "MAP-practice"
-  ],
-  "estimatedSeconds": 100,
   "alternativeExplanations": [
     {
       "title": "Why \"at least\" uses $\\ge$",
       "steps": [
-        "\"At least $\\$500$\" means the sales **could be exactly** $\\$500$ or **more** — but not less.",
-        "The inequality $8y \\ge 500$ includes equality (the endpoint counts).",
-        "Compare: \"more than $\\$500$\" would be $8y > 500$ (strictly above, $500$ wouldn't count)."
+        "\"At least $500$ dollars\" sets a floor: sales of exactly $500$ are fine, and so is anything above.",
+        "A floor that is itself allowed needs the symbol with the bar under it, $\\ge$, and not the plain $>$.",
+        "The sales are $8$ dollars for each of $y$ tickets, so the inequality is $8y \\ge 500$."
       ]
     },
     {
       "title": "Sanity-check with numbers",
       "steps": [
-        "$y = 60$: sales $= 8 \\cdot 60 = 480$. $480 \\ge 500$? No. Not enough.",
-        "$y = 63$: sales $= 504$. $504 \\ge 500$? Yes. Enough.",
-        "$y = 100$: sales $= 800$. Plenty. All values $\\ge 63$ work, matching $8y \\ge 500$."
+        "Try $y = 60$ tickets: sales are $8 \\times 60 = 480$ dollars, which is short of $500$.",
+        "Try $y = 70$ tickets: sales are $8 \\times 70 = 560$ dollars, which is enough.",
+        "The inequality $8y \\ge 500$ agrees with both tests, since $480 \\ge 500$ is false and $560 \\ge 500$ is true."
       ]
     }
-  ]
+  ],
+  "tags": [
+    "inequality",
+    "translate",
+    "MAP-practice"
+  ],
+  "estimatedSeconds": 100
 }

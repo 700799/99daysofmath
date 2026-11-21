@@ -34,9 +34,9 @@
     {
       "title": "Two routes, one answer",
       "steps": [
-        "Column view: tenth graders are $50/200 = 25\\%$ of the school, so expect $25\\%$ of the 80 pizza fans: $20$.",
-        "Row view: pizza is chosen by $40\\%$ of students, so expect $40\\%$ of 50 tenth graders: $20$.",
-        "Independence means both views agree."
+        "Start from the column instead of the row. Tenth graders are $\\frac{50}{200} = 25$ percent of the students surveyed.",
+        "If grade and lunch choice are independent, tenth graders should also be $25$ percent of the $80$ pizza fans, which is $20$ students.",
+        "The row view gives the same number, $40$ percent of $50$, so the expected count is $20$."
       ]
     }
   ],

@@ -32,18 +32,19 @@
     "The temperature is $5$ degrees away from zero, and the word \"below\" means it is on the negative side.",
     "So \"$5$ degrees below zero\" is written as $-5$."
   ],
-  "tags": [
-    "integer",
-    "context"
-  ],
-  "estimatedSeconds": 30,
   "alternativeExplanations": [
     {
       "title": "Check the answer",
       "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: -5 — verified."
+        "Test $-5$ on a thermometer by starting at the $0$ mark and counting down one degree at a time.",
+        "The marks you pass going down are $-1, -2, -3, -4, -5$, which is five degrees of cooling.",
+        "After $5$ degrees you are at $-5$, so $-5$ matches \"$5$ degrees below zero\"."
       ]
     }
-  ]
+  ],
+  "tags": [
+    "integer",
+    "context"
+  ],
+  "estimatedSeconds": 30
 }

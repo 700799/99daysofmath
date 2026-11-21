@@ -24,18 +24,18 @@
     {
       "title": "Spotting the middle pattern",
       "steps": [
-        "These numbers are evenly spaced: $4, 5, 6, 7, 8$.",
-        "For an evenly-spaced list, the mean equals the **middle** value.",
-        "The middle value here is $6$. So the mean is $6$. ✓ (matches the sum-divided-by-count answer)"
+        "Look at the spacing first: $4, 5, 6, 7, 8$ goes up by $1$ each time, so the list is evenly spaced.",
+        "In an evenly spaced list the values pair off around the middle: $4$ and $8$ average to $6$, and so do $5$ and $7$.",
+        "Every pair balances at the middle value, so the mean is $6$ with no long addition needed."
       ]
     },
     {
       "title": "Leveling the data (the 'fair share')",
       "steps": [
-        "Imagine each number is a stack of blocks of that height.",
-        "Move blocks from the taller stacks to the shorter stacks until all stacks are the **same height**.",
-        "From the $7$ and $8$ stacks, give $1$ to the $5$ stack and $2$ to the $4$ stack.",
-        "Now every stack has $6$ blocks. That fair-share height $6$ is the mean."
+        "Picture each number as a stack of blocks, with heights $4, 5, 6, 7$ and $8$.",
+        "Move $2$ blocks from the $8$ stack onto the $4$ stack, so both of those stacks become $6$ tall.",
+        "Move $1$ block from the $7$ stack onto the $5$ stack, so those two stacks also become $6$ tall.",
+        "All five stacks are now level at $6$ blocks, and that fair-share height is the mean, $6$."
       ]
     }
   ],

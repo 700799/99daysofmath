@@ -34,9 +34,9 @@
     {
       "title": "Midpoint of the two extremes",
       "steps": [
-        "$f'(x) = 3(x - 1)(x - 3)$, so $f$ has a local max at $x = 1$ and a local min at $x = 3$.",
-        "Every cubic is symmetric about its inflection point, which sits exactly halfway between its two turning points.",
-        "Halfway between $1$ and $3$ is $2$."
+        "Since $f'(x) = 3x^2 - 12x + 9 = 3(x - 1)(x - 3)$, the function has a local maximum at $x = 1$ and a local minimum at $x = 3$.",
+        "Every cubic graph is symmetric about its inflection point, which sits exactly halfway between its two turning points.",
+        "Halfway between $1$ and $3$ is $2$, so the inflection point is at $x = 2$."
       ]
     }
   ],

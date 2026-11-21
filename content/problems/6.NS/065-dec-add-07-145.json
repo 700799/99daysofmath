@@ -33,6 +33,16 @@
     "Ones: $0 + 1 + 1 = 2$, where the extra $1$ is the carry.",
     "Placing the point between the ones and tenths, the sum is $2.15$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Make a whole first",
+      "steps": [
+        "The number $0.7$ needs $0.3$ more to become $1$, so borrow $0.3$ from the other number.",
+        "Taking $0.3$ away from $1.45$ leaves $1.15$, so the sum turns into $1 + 1.15$.",
+        "Adding a whole number is easy, and $1 + 1.15 = 2.15$, so $0.7 + 1.45 = 2.15$."
+      ]
+    }
+  ],
   "tags": [
     "decimal",
     "add"

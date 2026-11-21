@@ -42,16 +42,17 @@
     {
       "title": "Estimate to check",
       "steps": [
-        "The prices are roughly $\\$5 + \\$3 + \\$6.50 = \\$14.50$.",
-        "$\\$20 - \\$14.50 = \\$5.50$, so a change near $\\$5.46$ is right ✓"
+        "Round the popcorn to $5$ dollars and the soda to $3$ dollars: about $5 + 3 + 6.50 = 14.50$ dollars spent, and about $5.50$ dollars change.",
+        "Fix the rounding: the popcorn is $21$ cents cheaper than $5$ and the soda is $25$ cents dearer than $3$, so the real total is $14.50 - 0.21 + 0.25 = 14.54$ dollars.",
+        "The change is $20.00 - 14.54 = 5.46$ dollars, right next to the estimate."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "The usual wrong answer is $\\$14.54$ — the amount spent, handed in as if it were the change.",
-        "A second slip is subtracting only one item, like $20 - 6.50 = 13.50$.",
-        "Underline the question: it asks what comes **back** to you, so every price has to be added first and then subtracted from $\\$20.00$: $20.00 - 14.54 = \\$5.46$."
+        "The usual wrong answer is $14.54$, which is the amount spent and not the change.",
+        "A second slip is subtracting only one item, such as $20 - 6.50 = 13.50$, and forgetting the other two.",
+        "The question asks what comes **back** to you, so add every price first and then subtract: $20.00 - 14.54 = 5.46$ dollars."
       ]
     }
   ],

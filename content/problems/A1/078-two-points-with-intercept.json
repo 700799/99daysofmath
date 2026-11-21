@@ -45,15 +45,17 @@
     {
       "title": "Growth story",
       "steps": [
-        "Read the points as a plant: $6$ cm at week $0$, $12$ cm at week $2$.",
-        "It grew $6$ cm in $2$ weeks — $3$ cm per week from a $6$ cm start: $y = 3x + 6$."
+        "Read the points as a plant that is $6$ cm tall at week $0$ and $12$ cm tall at week $2$.",
+        "It grew $6$ cm in $2$ weeks, which is $3$ cm per week, so the slope is $3$.",
+        "A start of $6$ and a growth of $3$ per week gives the equation $y = 3x + 6$."
       ]
     },
     {
       "title": "Fill in the table",
       "steps": [
-        "Between $x = 0$ and $x = 2$, $y$ goes $6 \\to ? \\to 12$; the middle must be $9$.",
-        "Jump $+3$ per step and start $6$: $y = 3x + 6$."
+        "Put the points in a table with a gap: $x = 0 \\to 6$, $x = 1 \\to\\ ?$, $x = 2 \\to 12$.",
+        "A line climbs by equal jumps, so the middle value is halfway between $6$ and $12$, which is $9$.",
+        "The jump is $3$ per step and the value at $x = 0$ is $6$, so $y = 3x + 6$."
       ]
     }
   ],

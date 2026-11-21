@@ -53,6 +53,16 @@
     "The choice $3$ works because $3 \\leq 3$ allows the two sides to be equal.",
     "The only solution listed is $3$, which is choice C."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Use a number line",
+      "steps": [
+        "Graph $x \\leq 3$ with a filled circle at $3$ and shading that runs to the left.",
+        "Place the four choices on the line: $4$, $5$ and $7$ all sit to the right of $3$, outside the shading.",
+        "The choice $3$ lands on the filled circle, which is included, so the answer is choice C."
+      ]
+    }
+  ],
   "tags": [
     "inequality",
     "check"

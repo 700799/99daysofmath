@@ -34,6 +34,16 @@
     "Dividing top and bottom by $25$ gives $\\frac{3}{4}$, and no number bigger than $1$ divides both $3$ and $4$.",
     "Written as a fraction in simplest form, $75\\%$ is $\\frac{3}{4}$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Count in quarters",
+      "steps": [
+        "$25\\%$ is one quarter, because four lots of $25\\%$ make the whole $100\\%$.",
+        "$75\\%$ is three lots of $25\\%$, so it is three quarters.",
+        "Three quarters is written $\\frac{3}{4}$, and it cannot be simplified any further."
+      ]
+    }
+  ],
   "tags": [
     "percent",
     "fraction"

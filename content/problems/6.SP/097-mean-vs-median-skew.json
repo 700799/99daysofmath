@@ -53,6 +53,17 @@
     "A few very small values would do that, while large values would push the mean up instead.",
     "So the data likely has low outliers, which is choice A."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Build an example",
+      "steps": [
+        "Invent five scores that fit, such as $10, 85, 85, 85, 85$, with one very low score.",
+        "The median is the middle score, $85$, and the mean is $350 \\div 5 = 70$.",
+        "These match the teacher's numbers, and it took a very small value to drag the mean down.",
+        "So the data likely has low outliers, which is choice A."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "mean-vs-median",

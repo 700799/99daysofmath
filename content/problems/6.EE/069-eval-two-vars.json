@@ -36,6 +36,16 @@
     "Then add the value of $y$ to that product: $6 + 7 = 13$.",
     "The value of the expression is $13$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Tell a money story",
+      "steps": [
+        "Let $x$ be the price of a ticket, $3$ dollars, and $y$ the price of a snack, $7$ dollars.",
+        "Then $2x + y$ is the cost of two tickets and one snack.",
+        "Two tickets cost $3 + 3 = 6$ dollars and the snack adds $7$, for a total of $13$."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "evaluate",

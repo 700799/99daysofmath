@@ -42,9 +42,17 @@
     {
       "title": "Sanity check with a trapezoid",
       "steps": [
-        "The integrand $x\\sqrt{x + 1}$ is $0$ at $x = 0$ and $6$ at $x = 3$; at $x = 1.5$ it is $1.5\\sqrt{2.5} \\approx 2.37$.",
-        "Two trapezoids of width $1.5$: $1.5 \\cdot \\frac{0 + 2.37}{2} + 1.5 \\cdot \\frac{2.37 + 6}{2} \\approx 1.78 + 6.28 = 8.06$.",
-        "The curve is concave up, so trapezoids overestimate; the exact $7.73$ sitting just below $8.06$ is right where it should be."
+        "The integrand $x\\sqrt{x + 1}$ is $0$ at $x = 0$ and $6$ at $x = 3$. At the midpoint $x = 1.5$ it is $1.5\\sqrt{2.5} \\approx 2.37$.",
+        "Two trapezoids of width $1.5$ give an estimate of $1.5 \\cdot \\frac{0 + 2.37}{2} + 1.5 \\cdot \\frac{2.37 + 6}{2} \\approx 1.78 + 6.28 = 8.06$.",
+        "The curve is concave up, so trapezoids overestimate. The exact value $\\frac{116}{15} \\approx 7.73$ sits just below $8.06$, right where it should be."
+      ]
+    },
+    {
+      "title": "Split the factor of x",
+      "steps": [
+        "Write $x$ as $(x + 1) - 1$, so the integrand becomes $(x + 1)^{3/2} - (x + 1)^{1/2}$ with no substitution of limits needed.",
+        "Integrate each power: $\\left[\\frac{2}{5}(x + 1)^{5/2} - \\frac{2}{3}(x + 1)^{3/2}\\right]_0^3$. At $x = 3$ this is $\\frac{64}{5} - \\frac{16}{3} = \\frac{112}{15}$.",
+        "At $x = 0$ it is $\\frac{2}{5} - \\frac{2}{3} = -\\frac{4}{15}$, so the integral is $\\frac{112}{15} + \\frac{4}{15} = \\frac{116}{15}$."
       ]
     }
   ],

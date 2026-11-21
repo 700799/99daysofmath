@@ -34,8 +34,9 @@
     {
       "title": "Count the cycles",
       "steps": [
-        "If four complete waves fit between $0^\\circ$ and $360^\\circ$, each one takes a quarter of that stretch.",
-        "A quarter of $360^\\circ$ is $90^\\circ$."
+        "The input $4x$ runs through a full $360^\\circ$ four times while $x$ goes from $0^\\circ$ to $360^\\circ$, so four complete waves fit in that stretch.",
+        "Four equal waves share $360^\\circ$, so each one takes a quarter of it.",
+        "A quarter of $360^\\circ$ is $90^\\circ$, so the period is $90$ degrees."
       ]
     }
   ],

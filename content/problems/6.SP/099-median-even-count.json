@@ -35,6 +35,16 @@
     "With an even count, the median is the average of the $3$rd and $4$th values, $18$ and $20$.",
     "$(18 + 20) \\div 2 = 19$, so the median of the six values is $19$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Cross off the ends",
+      "steps": [
+        "Cross off the smallest and largest values, $12$ and $26$, then the next pair, $14$ and $25$.",
+        "The values $18$ and $20$ are left in the middle, and the median is the point halfway between them.",
+        "The number $19$ is $1$ above $18$ and $1$ below $20$, so the median is $19$."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "median",

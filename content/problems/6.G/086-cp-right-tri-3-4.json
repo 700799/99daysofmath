@@ -33,6 +33,16 @@
     "The legs are perpendicular, so they act as base and height: $A = \\frac{1}{2} \\times 3 \\times 4$.",
     "Half of $12$ is $6$, so the area of the triangle is $6$ square units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Half of a rectangle",
+      "steps": [
+        "Add the corner $(3, 4)$ to turn the triangle into a rectangle that is $3$ wide and $4$ tall.",
+        "The rectangle covers $3 \\times 4 = 12$ unit squares, counted as rows.",
+        "The triangle is one of two equal halves of this rectangle, so its area is $12 \\div 2 = 6$ square units."
+      ]
+    }
+  ],
   "tags": [
     "coordinate-plane",
     "triangle",

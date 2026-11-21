@@ -34,15 +34,17 @@
     {
       "title": "Use the actual values",
       "steps": [
-        "sin 45° = √2/2 ≈ 0.707 and cos 45° = √2/2 ≈ 0.707.",
-        "0.707 ÷ 0.707 = 1. The messy square roots cancel each other out."
+        "The exact values are $\\sin 45^\\circ = \\frac{\\sqrt{2}}{2}$ and $\\cos 45^\\circ = \\frac{\\sqrt{2}}{2}$, each about $0.707$.",
+        "Divide the sine by the cosine: $0.707 \\div 0.707 = 1$, because the matching square roots cancel.",
+        "Any nonzero number divided by itself is $1$, so $\\tan 45^\\circ = 1$."
       ]
     },
     {
       "title": "Tangent is slope",
       "steps": [
-        "tan θ is rise over run — the steepness of the line from the centre out to the point.",
-        "At 45° the line rises 1 for every 1 it runs, which is a slope of exactly 1."
+        "The tangent of an angle is the slope of the line drawn from the centre at that angle.",
+        "A line at $45^\\circ$ is the diagonal $y = x$, which rises $1$ unit for every $1$ unit it runs.",
+        "Rise over run for that diagonal is $1 \\div 1 = 1$, so $\\tan 45^\\circ = 1$."
       ]
     }
   ],

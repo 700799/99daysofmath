@@ -36,6 +36,16 @@
     "Adding six equal areas is the same as multiplying: $6 \\times 9 = 54$.",
     "The total surface area of the cube is $54$ square centimeters."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Add opposite faces in pairs",
+      "steps": [
+        "Group the six faces of the cube into three opposite pairs: top and bottom, front and back, left and right.",
+        "Each pair has a combined area of $9 + 9 = 18$ square centimeters.",
+        "Three pairs give $18 + 18 + 18 = 54$, so the total surface area is $54$ square centimeters."
+      ]
+    }
+  ],
   "tags": [
     "surface-area"
   ],

@@ -44,8 +44,10 @@
     {
       "title": "Number-line walk",
       "steps": [
-        "Start at $-8$.",
-        "Move $5$ to the left (colder): $-9,\\ -10,\\ -11,\\ -12,\\ -13$."
+        "Picture a thermometer lying on its side as a number line, and put your finger on $-8$.",
+        "A drop in temperature moves the finger left, one degree for each step, and there are $5$ steps to take.",
+        "The steps land on $-9,\\ -10,\\ -11,\\ -12,\\ -13$ in turn.",
+        "The finger stops at $-13$, so the new temperature is $-13\\degree$F."
       ]
     }
   ],

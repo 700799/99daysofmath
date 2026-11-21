@@ -36,6 +36,17 @@
     "The patio is what is left after removing the corner: $48 - 6 = 42$.",
     "The area of the L-shaped patio is $42$ square units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Two rectangles instead",
+      "steps": [
+        "Take the missing corner to be $3$ wide and $2$ tall, and cut the patio with a line level with the bottom of that corner.",
+        "The lower part is a full strip $8$ wide and $6 - 2 = 4$ tall, with area $8 \\times 4 = 32$.",
+        "The upper part is $8 - 3 = 5$ wide and $2$ tall, with area $5 \\times 2 = 10$.",
+        "Adding both parts shows the patio covers $32 + 10 = 42$ square units."
+      ]
+    }
+  ],
   "tags": [
     "CA",
     "composite",

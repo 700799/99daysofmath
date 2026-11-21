@@ -33,6 +33,16 @@
     "For the second term, $2 \\cdot 4 = 8$, and it is still being subtracted.",
     "Keeping the minus sign gives the answer $6x - 8$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Add two copies",
+      "steps": [
+        "Multiplying by $2$ means adding two copies: $(3x - 4) + (3x - 4)$.",
+        "The two $3x$ terms add up to $6x$.",
+        "Taking away $4$ twice takes away $8$ in all, so the answer is $6x - 8$."
+      ]
+    }
+  ],
   "tags": [
     "distributive"
   ],

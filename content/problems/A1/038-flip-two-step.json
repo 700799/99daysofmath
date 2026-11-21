@@ -45,16 +45,17 @@
     {
       "title": "Dodge the flip entirely",
       "steps": [
-        "Add $2x$ to both sides instead: $5 \\le 11 + 2x$.",
-        "Subtract 11: $-6 \\le 2x$. Divide by positive 2: $-3 \\le x$.",
-        "Same answer, $x \\ge -3$, and you never divided by a negative."
+        "Avoid dividing by a negative by adding $2x$ to both sides, which gives $5 \\le 11 + 2x$.",
+        "Subtract $11$ from both sides to get $-6 \\le 2x$, then divide by positive $2$ to get $-3 \\le x$.",
+        "Reading that from the $x$ side gives the same answer, $x \\ge -3$, with no flip needed."
       ]
     },
     {
       "title": "⚠️ Dodge the trap",
       "steps": [
-        "x ≤ −3 is the no-flip answer, and it fails the smell test: try x = −10 and 5 − 2(−10) = 25, which is NOT ≤ 11.",
-        "You divided by −2, so the sign flips: x ≥ −3. One test number always exposes a missing flip."
+        "The answer you get if you forget to flip is $x \\le -3$, and one test number shows it is wrong.",
+        "Try $x = -10$: $5 - 2(-10) = 25$, and $25 \\le 11$ is false, so numbers below $-3$ do not work.",
+        "Dividing by $-2$ reverses the sign, so the correct answer is $x \\ge -3$."
       ]
     }
   ],

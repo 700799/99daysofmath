@@ -38,6 +38,17 @@
     "Opposite sides of a rectangle are equal, so the perimeter is $2(5 + 3) = 2(8)$.",
     "That gives $16$, so the perimeter is $16$ units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Walk around the rectangle",
+      "steps": [
+        "Follow the vertices in order and add each side as you go. From $(0, 0)$ to $(5, 0)$ is $5$ units.",
+        "From $(5, 0)$ up to $(5, 3)$ is $3$ units, and from $(5, 3)$ back across to $(0, 3)$ is $5$ units.",
+        "The last side, from $(0, 3)$ down to $(0, 0)$, is $3$ units.",
+        "The full walk is $5 + 3 + 5 + 3 = 16$, so the perimeter is $16$ units."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "coordinate-plane",

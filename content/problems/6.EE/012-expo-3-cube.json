@@ -31,6 +31,16 @@
     "Multiply by the last two to get $4 \\times 2 = 8$.",
     "So the value of $2^3$ is $8$, which is different from $2 \\times 3 = 6$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Keep doubling",
+      "steps": [
+        "Each factor of $2$ doubles what you have, so start with one $2$ and double it.",
+        "Doubling $2$ gives $4$, which is the value of $2^2$.",
+        "Doubling once more gives $8$, and three twos have now been used, so $2^3 = 8$."
+      ]
+    }
+  ],
   "tags": [
     "exponent"
   ],

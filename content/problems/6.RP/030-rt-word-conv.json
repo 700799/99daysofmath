@@ -39,6 +39,16 @@
     "Four feet is $4 \\times 12 = 48$ inches and half a foot is $6$ inches, which add to $54$.",
     "There are $54$ inches in a length of $4.5$ feet."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Count in half feet",
+      "steps": [
+        "Half a foot is $12 \\div 2 = 6$ inches, and that is an easy number to count with.",
+        "There are two half feet in every foot, so $4.5$ feet is $4.5 \\times 2 = 9$ half feet.",
+        "Nine half feet of $6$ inches each make $9 \\times 6 = 54$ inches."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "conversion",

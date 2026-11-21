@@ -37,8 +37,9 @@
     {
       "title": "Cancel first",
       "steps": [
-        "The $3$s cancel: $\\frac{2}{\\cancel{3}} \\times \\frac{\\cancel{3}}{4} = \\frac{2}{4}$.",
-        "$\\frac{2}{4} = \\frac{1}{2}$."
+        "There is a $3$ on the bottom of the first fraction and a $3$ on the top of the second, and dividing both by $3$ turns each into $1$.",
+        "What is left is $\\frac{2}{1} \\times \\frac{1}{4} = \\frac{2}{4}$, a much smaller multiplication.",
+        "Divide the top and bottom by $2$ to simplify: $\\frac{2}{4} = \\frac{1}{2}$."
       ]
     }
   ],

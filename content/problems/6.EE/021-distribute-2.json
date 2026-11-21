@@ -34,6 +34,16 @@
     "Multiply $3$ by the second term, $4$, to get $12$.",
     "Add the two products to get the answer $3x + 12$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Add three copies",
+      "steps": [
+        "Multiplying by $3$ means adding three copies: $(x + 4) + (x + 4) + (x + 4)$.",
+        "Collect the letters first: $x + x + x$ is three $x$, written $3x$.",
+        "Collect the numbers next: $4 + 4 + 4 = 12$, so the answer is $3x + 12$."
+      ]
+    }
+  ],
   "tags": [
     "distributive"
   ],

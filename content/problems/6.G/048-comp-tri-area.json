@@ -30,6 +30,16 @@
     "The figure has two of these equal triangles, so multiply by $2$.",
     "That gives $2 \\times 6 = 12$, so the total area is $12$ square units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Join them into a parallelogram",
+      "steps": [
+        "Turn one triangle upside down and fit it against the other, so the two equal triangles form a parallelogram.",
+        "The parallelogram has the same base of $4$ and the same height of $3$ as each triangle.",
+        "Its area is base times height, $4 \\times 3 = 12$, so the two triangles cover $12$ square units together."
+      ]
+    }
+  ],
   "tags": [
     "composite"
   ],

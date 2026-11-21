@@ -58,9 +58,9 @@
     {
       "title": "Check the ratios",
       "steps": [
-        "Compare $\\dfrac{4}{2}$, $\\dfrac{6}{3}$, and $\\dfrac{24}{12}$ — all equal $2$.",
-        "All three ratios equal means the same line: infinitely many solutions. All three equal *except* the constant means parallel lines: no solutions.",
-        "This ratio check answers every \"how many solutions\" question in about ten seconds, without solving anything."
+        "Divide each number in the second equation by the matching number in the first: $\\dfrac{4}{2}$, $\\dfrac{6}{3}$ and $\\dfrac{24}{12}$.",
+        "All three ratios equal $2$, so the second equation is the first one doubled and both describe one line.",
+        "Every point on that line solves both equations, so there are infinitely many solutions, choice D."
       ]
     }
   ],

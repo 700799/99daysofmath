@@ -58,27 +58,28 @@
     "After the reflection the negative $x$ becomes positive, so the signs of $P'$ are $(+, -)$.",
     "A point with positive $x$ and negative $y$ is in **Quadrant IV**, which is choice D."
   ],
-  "tags": [
-    "coordinate",
-    "MAP-practice"
-  ],
-  "estimatedSeconds": 90,
   "alternativeExplanations": [
     {
       "title": "Quadrant sign chart",
       "steps": [
-        "Quadrant I: $(+, +)$ (top-right). Quadrant II: $(-, +)$ (top-left).",
-        "Quadrant III: $(-, -)$ (bottom-left). Quadrant IV: $(+, -)$ (bottom-right).",
-        "Reflecting across the $y$-axis swaps left ↔ right, so the quadrant changes side: III ↔ IV, II ↔ I."
+        "Lay out the quadrants by position: I is top-right, II is top-left, III is bottom-left and IV is bottom-right.",
+        "The $y$-axis is a vertical mirror, so a reflection across it swaps left and right but keeps top and bottom.",
+        "A point in the bottom-left therefore moves to the bottom-right.",
+        "The bottom-right region is Quadrant IV, so the answer is choice D."
       ]
     },
     {
       "title": "Concrete check",
       "steps": [
-        "Let $P = (-3, -5)$ (Quadrant III).",
-        "Reflect across $y$-axis: $P' = (3, -5)$.",
-        "Positive $x$, negative $y$ → Quadrant IV. ✓"
+        "Choose any point in Quadrant III to test, for example $P = (-3, -5)$, which is left of and below the origin.",
+        "Reflecting across the $y$-axis changes the sign of $x$ only, so $P' = (3, -5)$.",
+        "The image has a positive $x$ and a negative $y$, so it lies right of and below the origin, in Quadrant IV (choice D)."
       ]
     }
-  ]
+  ],
+  "tags": [
+    "coordinate",
+    "MAP-practice"
+  ],
+  "estimatedSeconds": 90
 }

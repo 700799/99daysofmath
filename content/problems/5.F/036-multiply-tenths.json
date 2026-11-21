@@ -37,8 +37,9 @@
     {
       "title": "Fraction check",
       "steps": [
-        "$\\frac{4}{10} \\times \\frac{6}{10} = \\frac{24}{100}$.",
-        "$= 0.24$ ✓"
+        "Write both decimals as tenths: $0.4 = \\frac{4}{10}$ and $0.6 = \\frac{6}{10}$.",
+        "Multiply tops and bottoms: $\\frac{4}{10} \\times \\frac{6}{10} = \\frac{24}{100}$, because tenths of tenths are hundredths.",
+        "Twenty-four hundredths is written as the decimal $0.24$, so $0.4 \\times 0.6 = 0.24$."
       ]
     }
   ],

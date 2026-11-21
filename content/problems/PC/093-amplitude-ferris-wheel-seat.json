@@ -32,17 +32,19 @@
   ],
   "alternativeExplanations": [
     {
-      "title": "From the highest and lowest points",
+      "title": "From highest and lowest points",
       "steps": [
-        "Highest is 22 + 18 = 40 m; lowest is 22 − 18 = 4 m.",
-        "Amplitude is HALF the gap: (40 − 4) ÷ 2 = 36 ÷ 2 = 18 m."
+        "The sine part swings between $-1$ and $1$, so the highest seat is $18 + 22 = 40$ m and the lowest is $-18 + 22 = 4$ m.",
+        "Amplitude is half the distance between the highest and lowest heights.",
+        "That is $\\frac{40 - 4}{2} = \\frac{36}{2} = 18$, so the amplitude is $18$ m."
       ]
     },
     {
       "title": "Picture the wheel",
       "steps": [
-        "The centre of the wheel sits 22 m up — that is the midline.",
-        "The wheel carries you 18 m above and 18 m below that centre, so the amplitude IS the radius: 18 m."
+        "The centre of the wheel sits at the middle height, which is the $22$ m midline.",
+        "A seat travels one radius above the centre and one radius below it as the wheel turns.",
+        "The rule shows the seat moving $18$ m either side of $22$ m, so the amplitude is the radius, $18$ m."
       ]
     }
   ],

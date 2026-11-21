@@ -34,9 +34,9 @@
     {
       "title": "In and out separately",
       "steps": [
-        "Total in: $20 \\cdot 8 = 160$ m³.",
-        "Total out: $\\int_0^8 2t \\, dt = 64$ m³ (a triangle of base $8$ and height $16$).",
-        "$1000 + 160 - 64 = 1096$ m³."
+        "Count the water that flows in: a steady $20$ m$^3$ per hour for $8$ hours is $20 \\cdot 8 = 160$ m$^3$.",
+        "Count the water pumped out: $\\int_0^8 2t\\,dt = 64$ m$^3$, the area of a triangle with base $8$ and height $16$.",
+        "Start with $1000$, add what came in and remove what went out: $1000 + 160 - 64 = 1096$ cubic meters."
       ]
     }
   ],

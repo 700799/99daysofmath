@@ -34,17 +34,17 @@
     {
       "title": "Count the doublings",
       "steps": [
-        "Start at $1$ and double: $2, 4, 8, 16, 32$.",
-        "That took $5$ doublings.",
-        "So $x = 5$."
+        "Start at $2$ and keep doubling while counting the terms: $2, 4, 8, 16, 32$.",
+        "The number $32$ is the fifth entry, which means five twos were multiplied together.",
+        "So $2^5 = 32$, and the solution of the equation is $x = 5$."
       ]
     },
     {
       "title": "Take a log of both sides",
       "steps": [
-        "Apply $\\log_2$ to both sides: $\\log_2(2^x) = \\log_2(32)$.",
+        "Apply $\\log_2$ to both sides of the equation: $\\log_2(2^x) = \\log_2(32)$.",
         "A log and a power with the same base undo each other, so the left side is just $x$.",
-        "$\\log_2(32) = 5$, so $x = 5$."
+        "The right side is $\\log_2(32) = 5$ because $2^5 = 32$, so the solution is $x = 5$."
       ]
     }
   ],

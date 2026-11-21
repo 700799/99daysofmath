@@ -43,8 +43,17 @@
     {
       "title": "Proportion",
       "steps": [
-        "$\\dfrac{14}{7} = \\dfrac{x}{12}$.",
-        "Cross-multiply: $7x = 14 \\cdot 12 = 168$. So $x = 24$."
+        "Set the two rates equal with dollars on top and pounds below: $\\frac{14}{7} = \\frac{x}{12}$.",
+        "Cross-multiply, because equal fractions have equal cross products: $7x = 14 \\times 12 = 168$.",
+        "Divide by $7$ to get $x = 24$, so $12$ pounds cost $24$ dollars."
+      ]
+    },
+    {
+      "title": "Add what the extra pounds cost",
+      "steps": [
+        "Twelve pounds is the $7$ pounds already priced plus $5$ more pounds.",
+        "The $7$ pounds cost $14$ dollars, which is $2$ dollars a pound, so $5$ more pounds cost $10$ dollars.",
+        "The total is $14 + 10 = 24$ dollars for $12$ pounds."
       ]
     }
   ],

@@ -33,6 +33,16 @@
     "Quarts are smaller than gallons, so more of them are needed. Multiply the gallons by $4$.",
     "Work it out: $3 \\times 4 = 12$, so $3$ gallons is $12$ quarts."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Quart means quarter",
+      "steps": [
+        "The word quart comes from quarter: one quart is a quarter of a gallon, so $4$ quarts fill $1$ gallon.",
+        "Build a small table: $1$ gallon is $4$ quarts, $2$ gallons is $8$ quarts, $3$ gallons is $12$ quarts.",
+        "So $3$ gallons equals $12$ quarts, just as $3$ dollars is $12$ quarters."
+      ]
+    }
+  ],
   "tags": [
     "measurement",
     "customary"

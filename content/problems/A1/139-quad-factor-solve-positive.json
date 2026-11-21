@@ -40,16 +40,17 @@
     {
       "title": "Sign detective",
       "steps": [
-        "Product −15 is negative, so the two numbers have different signs.",
-        "Sum −2 is negative, so the bigger-sized number is negative: −5 with +3.",
-        "Factors (x − 5)(x + 3) give x = 5 as the positive root."
+        "The product $-15$ is negative, so the two numbers have different signs.",
+        "The sum $-2$ is negative, so the number with the larger size is the negative one, giving $-5$ and $+3$.",
+        "The factors $(x - 5)(x + 3)$ give the roots $5$ and $-3$, so the positive solution is $5$."
       ]
     },
     {
       "title": "Check both candidates",
       "steps": [
-        "Plug in x = 5: 25 − 10 − 15 = 0. Yes.",
-        "Plug in x = −3: 9 + 6 − 15 = 0. Also yes — two roots, and the positive one is 5."
+        "Check a candidate by substituting $x = 5$: $25 - 10 - 15 = 0$, so it is a solution.",
+        "Check the other candidate $x = -3$: $9 + 6 - 15 = 0$, so it is a solution too.",
+        "Of the two roots, the positive one is $5$."
       ]
     }
   ],

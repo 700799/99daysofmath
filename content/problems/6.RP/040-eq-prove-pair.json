@@ -58,6 +58,16 @@
     "The other choices give $45$, $80$ and $45$ miles per hour, so they are different speeds.",
     "The pair with an equivalent rate is $300$ miles in $5$ hours, choice B."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Scale the given rate",
+      "steps": [
+        "Halve the given pair to get $60$ miles in $1$ hour, then build each time in the choices from it.",
+        "At this speed the car covers $240$ miles in $4$ hours, $300$ miles in $5$ hours, $180$ miles in $3$ hours and $120$ miles in $2$ hours.",
+        "Only choice B, $300$ miles in $5$ hours, agrees with that list, so B is the equivalent rate."
+      ]
+    }
+  ],
   "tags": [
     "CA",
     "equivalent"

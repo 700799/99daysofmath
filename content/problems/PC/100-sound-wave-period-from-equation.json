@@ -39,15 +39,17 @@
     {
       "title": "Count the waves in one turn",
       "steps": [
-        "b = 9 means 9 complete waves are squeezed into a 360° stretch.",
-        "Share the 360° among 9 waves: 360 ÷ 9 = 40° each."
+        "The $9$ inside the sine means $9$ complete waves are squeezed into a $360^\\circ$ stretch.",
+        "All nine waves are the same length, so share the $360^\\circ$ equally among them.",
+        "Each wave of the tone is $360 \\div 9 = 40$ degrees long."
       ]
     },
     {
       "title": "Follow the inside",
       "steps": [
-        "A wave is finished when the inside of the sine has gone from 0 up to 360.",
-        "The inside is 9x, so set 9x = 360. Dividing gives x = 40, so the x-trip is 40°."
+        "A wave is finished when the inside of the sine has gone from $0^\\circ$ up to $360^\\circ$.",
+        "The inside is $9x$, so set $9x = 360$ to find where the first wave ends.",
+        "Dividing by $9$ gives $x = 40$, so one full wave is $40^\\circ$ long."
       ]
     }
   ],

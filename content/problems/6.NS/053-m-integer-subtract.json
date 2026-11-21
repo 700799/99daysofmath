@@ -30,6 +30,16 @@
     "The opposite of $-2$ is $2$, so $4 - (-2)$ becomes $4 + 2$.",
     "Adding gives $4 + 2 = 6$, so the answer is $6$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Measure the gap",
+      "steps": [
+        "A subtraction such as $4 - (-2)$ tells how far apart the two numbers are, measured from $-2$ up to $4$.",
+        "On a number line it takes $2$ steps to go from $-2$ to $0$, and then $4$ more steps to reach $4$.",
+        "The whole gap is $2 + 4 = 6$ steps, so $4 - (-2) = 6$."
+      ]
+    }
+  ],
   "tags": [
     "integer"
   ],

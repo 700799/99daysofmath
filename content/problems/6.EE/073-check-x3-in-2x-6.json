@@ -33,17 +33,18 @@
     "The left side becomes $2(3)$, which is $6$.",
     "Both sides are $6$, so yes, $x = 3$ is a solution."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Share into two groups",
+      "steps": [
+        "The equation $2x = 6$ says two equal groups of size $x$ make $6$.",
+        "Share $6$ counters into two equal groups and each group gets $3$.",
+        "The group size is $3$, the value being tested, so yes, $x = 3$ is a solution."
+      ]
+    }
+  ],
   "tags": [
     "check-solution"
   ],
-  "estimatedSeconds": 30,
-  "alternativeExplanations": [
-    {
-      "title": "Check the answer",
-      "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: yes — verified."
-      ]
-    }
-  ]
+  "estimatedSeconds": 30
 }

@@ -31,6 +31,16 @@
     "Dividing by one half doubles the number, so $x = 8$.",
     "Check: $0.5 \\times 8 = 4$ is true, so the solution is $x = 8$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Half of what is 4?",
+      "steps": [
+        "Multiplying by $0.5$ is the same as taking one half, so the equation says half of $x$ is $4$.",
+        "A whole is made of two halves, and each half here is $4$.",
+        "Put the two halves together to get $4 + 4 = 8$, so $x = 8$."
+      ]
+    }
+  ],
   "tags": [
     "solve",
     "decimal"

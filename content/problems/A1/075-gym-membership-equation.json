@@ -42,15 +42,17 @@
     {
       "title": "Check with 3 months",
       "steps": [
-        "Three months should cost $25 + 10 + 10 + 10 = \\$55$.",
-        "The equation gives $10 \\times 3 + 25 = 55$ — it checks out."
+        "Work out a three-month bill straight from the story: $25 + 10 + 10 + 10 = 55$ dollars.",
+        "Now test the equation with $x = 3$: $y = 10 \\times 3 + 25 = 55$, which matches the story.",
+        "A rule such as $y = 25x + 10$ would give $85$ instead, so the correct equation is $y = 10x + 25$."
       ]
     },
     {
       "title": "Table of bills",
       "steps": [
-        "Month $0 \\to 25$, month $1 \\to 35$, month $2 \\to 45$: constant jump $+10$.",
-        "Jump $10$ is $m$; month-zero bill $25$ is $b$: $y = 10x + 25$."
+        "Make a table of bills: month $0 \\to 25$, month $1 \\to 35$, month $2 \\to 45$.",
+        "The bill rises by a constant $10$ each month, so the slope is $m = 10$.",
+        "The bill at month $0$ is the starting value $b = 25$, so the equation is $y = 10x + 25$."
       ]
     }
   ],

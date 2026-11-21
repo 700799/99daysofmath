@@ -56,9 +56,9 @@
     {
       "title": "Make it concrete",
       "steps": [
-        "An adult exercising 100 minutes a week is predicted at $78 - 0.05(100) = 73$ bpm.",
-        "Another at 200 minutes: $78 - 10 = 68$ bpm.",
-        "100 more minutes dropped the prediction by 5 bpm, so each minute is worth $0.05$ bpm."
+        "Try two adults. One who exercises $100$ minutes a week is predicted at $78 - 0.05(100) = 73$ bpm.",
+        "One who exercises $200$ minutes a week is predicted at $78 - 0.05(200) = 68$ bpm.",
+        "An extra $100$ minutes lowered the prediction by $5$ bpm, which is $0.05$ bpm for each extra minute. That is the statement in choice B."
       ]
     }
   ],

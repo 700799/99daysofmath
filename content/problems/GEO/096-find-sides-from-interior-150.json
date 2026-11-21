@@ -34,8 +34,9 @@
     {
       "title": "The long way, as a check",
       "steps": [
-        "If there are $n$ sides, then $\\frac{(n - 2) \\times 180}{n} = 150$.",
-        "Multiply out: $180n - 360 = 150n$, so $30n = 360$ and $n = 12$ ✓ — the same answer the exterior-angle shortcut gave."
+        "If the polygon has $n$ sides, its angles total $(n - 2) \\times 180$, and that total must also equal $n$ angles of $150^\\circ$, so $180n - 360 = 150n$.",
+        "Collecting the $n$ terms gives $30n = 360$, which means $n = 12$.",
+        "Test it both ways: a $12$-sided polygon has angle sum $10 \\times 180 = 1800^\\circ$, and $1800 \\div 12 = 150^\\circ$, so $12$ sides is right."
       ]
     }
   ],

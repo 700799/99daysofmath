@@ -36,9 +36,9 @@
     {
       "title": "Read it as slope between two points",
       "steps": [
-        "$f(0) = -4$ and $f(5) = 11$ are the points $(0, -4)$ and $(5, 11)$.",
-        "The constant $a$ in $ax + b$ *is* the slope: $\\dfrac{11 - (-4)}{5 - 0} = \\dfrac{15}{5} = 3$.",
-        "Seeing function values as coordinates turns most of these questions into a one-line slope computation."
+        "The facts $f(0) = -4$ and $f(5) = 11$ say the graph passes through the points $(0, -4)$ and $(5, 11)$.",
+        "In $f(x) = ax + b$ the constant $a$ is the slope of that line, so compute rise over run between the two points.",
+        "The slope is $\\dfrac{11 - (-4)}{5 - 0} = \\dfrac{15}{5} = 3$, so the value of $a$ is $3$."
       ]
     }
   ],

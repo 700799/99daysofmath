@@ -58,9 +58,9 @@
     {
       "title": "Test with a number",
       "steps": [
-        "Let $x = 2$. Then $(2 \\cdot 2^3)^2 = (16)^2 = 256$.",
-        "Check the choices at $x = 2$: A gives $128$, B gives $128$, C gives $4 \\cdot 64 = 256$ ✓, D gives $64$.",
-        "Picking a single value eliminated three choices at once, with no rules needed."
+        "Choose $x = 2$ and evaluate the original expression: $(2 \\cdot 2^3)^2 = 16^2 = 256$.",
+        "Evaluate each choice at $x = 2$: A gives $128$, B gives $128$, C gives $4 \\cdot 64 = 256$ and D gives $64$.",
+        "Only choice C matches the value $256$, so $4x^6$ is the equivalent expression."
       ]
     }
   ],

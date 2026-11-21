@@ -38,6 +38,16 @@
     "Dogs are $2$ parts, so there are $2 \\times 2 = 4$ dogs.",
     "Add the two groups, $10 + 4 = 14$, so the shelter has $14$ animals in total."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Use a cats-to-total ratio",
+      "steps": [
+        "With $5$ parts cats and $2$ parts dogs, the whole shelter is $5 + 2 = 7$ parts, so cats to total is $5 : 7$.",
+        "The real number of cats is $10$, which is $5$ doubled, so the scale factor is $2$.",
+        "Double the total part as well: $7 \\times 2 = 14$ animals in the shelter."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "ratio"

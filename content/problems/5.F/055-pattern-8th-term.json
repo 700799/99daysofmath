@@ -34,7 +34,9 @@
     {
       "title": "Just list them",
       "steps": [
-        "1st 0, 2nd 3, 3rd 6, 4th 9, 5th 12, 6th 15, 7th 18, 8th 21."
+        "Keep adding $3$ and number each term as you write it: 1st is $0$, 2nd is $3$, 3rd is $6$, 4th is $9$.",
+        "Carry on with the same rule: 5th is $12$, 6th is $15$, 7th is $18$ and 8th is $21$.",
+        "The term in the 8th spot is $21$. Notice it is $7$ jumps of $3$, not $8$, because the list starts at $0$."
       ]
     }
   ],

@@ -34,8 +34,9 @@
     {
       "title": "Check by multiplying back",
       "steps": [
-        "$4.5 \\times 1{,}000$ shifts the point three places right.",
-        "$4.5 \\to 45 \\to 450 \\to 4{,}500$ ✓"
+        "If $4.5$ is the quotient, then $4.5 \\times 1{,}000$ must give back $4{,}500$.",
+        "Multiplying by $1{,}000$ moves each digit three places to the left: $4.5$ becomes $45$, then $450$, then $4{,}500$.",
+        "The product matches the starting number, so $4{,}500 \\div 1{,}000 = 4.5$."
       ]
     }
   ],

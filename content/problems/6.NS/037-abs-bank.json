@@ -33,6 +33,16 @@
     "Compute the absolute value by dropping the negative sign: $|{-45}| = 45$.",
     "The size of the debt is $45$ dollars."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Ask what deposit clears it",
+      "steps": [
+        "The size of a debt is the amount you must pay in to bring the balance back to exactly zero.",
+        "Starting at $-45$, a deposit of $45$ dollars gives $-45 + 45 = 0$, and no smaller deposit reaches zero.",
+        "So the debt is $45$ dollars, a positive amount even though the balance is negative."
+      ]
+    }
+  ],
   "tags": [
     "absolute-value",
     "word"

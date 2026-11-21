@@ -32,6 +32,16 @@
     "On a horizontal line, the distance is just how far apart the $x$-coordinates are.",
     "Subtract them: $6 - 1 = 5$, so the points are $5$ units apart."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Count the hops",
+      "steps": [
+        "Both points have a $y$-coordinate of $2$, so they sit on the same flat grid line.",
+        "Hop from $x = 1$ to $x = 6$ one unit at a time: you land on $2$, $3$, $4$, $5$ and $6$.",
+        "That is $5$ hops, so the points are $5$ units apart."
+      ]
+    }
+  ],
   "tags": [
     "coordinate-plane",
     "distance"

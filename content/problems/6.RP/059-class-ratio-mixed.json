@@ -33,6 +33,16 @@
     "Boys are $2$ of the parts, so multiply the part size by $2$: $2 \\times 8 = 16$.",
     "There are $16$ boys and $8$ girls, which is a ratio of $2 : 1$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Build a ratio table",
+      "steps": [
+        "List boys and girls in the ratio $2 : 1$ and write the class size beside each row: $2$ and $1$ make $3$.",
+        "Double the row each time: $4$ and $2$ make $6$, $8$ and $4$ make $12$, $16$ and $8$ make $24$.",
+        "The row with $24$ students has $16$ boys, so there are $16$ boys."
+      ]
+    }
+  ],
   "tags": [
     "ratio"
   ],

@@ -34,9 +34,9 @@
     {
       "title": "Where the formula comes from",
       "steps": [
-        "The usual area formula is $\\frac{1}{2} \\times \\text{base} \\times \\text{height}$.",
-        "Take the $10$ m side as the base; the height is the $8$ m side leaning over, which is $8\\sin 30^\\circ = 4$ m tall.",
-        "$\\frac{1}{2}(10)(4) = 20$ — the sine is just the tool that turns a slanted side into a true height."
+        "The usual area formula is $\\frac{1}{2} \\times \\text{base} \\times \\text{height}$, so take the $10$ m side as the base.",
+        "The $8$ m side leans at $30^\\circ$ to the base, so the height it reaches is $8\\sin 30^\\circ = 4$ m.",
+        "The area is $\\frac{1}{2}(10)(4) = 20$ square metres; the sine simply turns a slanted side into a true height."
       ]
     }
   ],

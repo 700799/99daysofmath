@@ -58,9 +58,9 @@
     {
       "title": "Reason in quarter-turns",
       "steps": [
-        "$180°$ is $\\pi$, so $90°$ is $\\dfrac{\\pi}{2}$ and $45°$ is $\\dfrac{\\pi}{4}$.",
-        "$135° = 3 \\times 45°$, so it is $3 \\times \\dfrac{\\pi}{4} = \\dfrac{3\\pi}{4}$.",
-        "Also a quick check: $135°$ is between $90°$ and $180°$, so the answer must be between $\\dfrac{\\pi}{2}$ and $\\pi$ — which eliminates B and D immediately."
+        "A half turn of $180°$ is $\\pi$ radians, so $90°$ is $\\dfrac{\\pi}{2}$ and $45°$ is $\\dfrac{\\pi}{4}$.",
+        "The angle $135°$ is three lots of $45°$, so it is $3 \\times \\dfrac{\\pi}{4} = \\dfrac{3\\pi}{4}$.",
+        "That is choice A, and it fits because $135°$ lies between $90°$ and $180°$, just as $\\dfrac{3\\pi}{4}$ lies between $\\dfrac{\\pi}{2}$ and $\\pi$."
       ]
     }
   ],

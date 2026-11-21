@@ -40,16 +40,17 @@
     {
       "title": "Check by multiplying back",
       "steps": [
-        "$69 \\times 18 = 69 \\times 20 - 69 \\times 2 = 1{,}380 - 138 = 1{,}242$.",
-        "$1{,}242 + 8 = 1{,}250$ ✓ — quotient times divisor plus remainder gives the original number."
+        "A quick estimate says about $1{,}250 \\div 18 \\approx 70$ boxes, so test $69$ full boxes.",
+        "Those boxes hold $69 \\times 18$ cookies, which is $69 \\times 20 - 69 \\times 2 = 1{,}380 - 138 = 1{,}242$ cookies.",
+        "The cookies not in a box are $1{,}250 - 1{,}242 = 8$. Since $8$ is less than $18$, no other box can be filled, and $8$ cookies are left over."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "Most students answer $69$ — that is the number of boxes, not the cookies left over.",
-        "The remainder is what could not fill another box.",
-        "Read the last line of the story before writing your answer: \"how many cookies are left over\" means the remainder, $8$."
+        "Many students answer $69$, but that is the number of full boxes and not the number of cookies left over.",
+        "The remainder is the part that could not fill another box, so it must be smaller than $18$.",
+        "Reread the last line of the story: it asks how many cookies are left over, which is the remainder $8$."
       ]
     }
   ],

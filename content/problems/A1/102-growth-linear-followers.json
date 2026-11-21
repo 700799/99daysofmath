@@ -34,15 +34,17 @@
     {
       "title": "Week-by-week table",
       "steps": [
-        "Week 1: 300. Week 2: 400. Week 3: 500.",
-        "Each row climbs by exactly 100 — a straight staircase to 500."
+        "Make a week-by-week table, adding $100$ to the previous total each time.",
+        "From $200$ followers, week $1$ gives $300$ and week $2$ gives $400$.",
+        "One more step of $100$ gives $500$ followers after week $3$."
       ]
     },
     {
       "title": "Picture a straight ramp",
       "steps": [
-        "On a graph, linear growth is a straight line starting at 200 and rising 100 per week.",
-        "Three equal steps up from 200 lands at 500."
+        "On a graph, this growth is a straight line that starts at height $200$ and rises $100$ for each week.",
+        "Three weeks means three equal steps up the line, a total rise of $300$.",
+        "Starting at $200$ and rising $300$ puts the line at $500$ followers."
       ]
     }
   ],

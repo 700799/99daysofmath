@@ -34,9 +34,9 @@
     {
       "title": "Watch one step happen",
       "steps": [
-        "At $x = 0$ you have $200$. At $x = 1$ you have $200 \\times 1.5 = 300$.",
-        "Compare: $300 \\div 200 = 1.5$.",
-        "The number you multiply by is $1.5$ — the growth factor."
+        "Compute two neighboring values: at $x = 0$ the amount is $200$, and at $x = 1$ it is $200 \\times 1.5 = 300$.",
+        "Divide the later value by the earlier one to see what one step did: $300 \\div 200 = 1.5$.",
+        "One step multiplied the amount by $1.5$, so the growth factor is $1.5$."
       ]
     }
   ],

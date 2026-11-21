@@ -33,6 +33,16 @@
     "Divide both parts by $4$ to get $120 \\div 4 = 30$ miles for each gallon.",
     "The car travels $30$ miles per gallon."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Halve both amounts",
+      "steps": [
+        "Write the pair as $120$ miles on $4$ gallons, then halve both to get $60$ miles on $2$ gallons.",
+        "Halve both again to reach a single gallon: $30$ miles on $1$ gallon.",
+        "The amount for one gallon is the unit rate, so the car gets $30$ miles per gallon."
+      ]
+    }
+  ],
   "tags": [
     "unit-rate"
   ],

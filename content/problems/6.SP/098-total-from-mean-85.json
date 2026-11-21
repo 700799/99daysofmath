@@ -35,6 +35,17 @@
     "Here the mean is $85$ and the count is $20$ students, so the total is $85 \\times 20$.",
     "$85 \\times 20 = 1700$, so the total of all the scores is $1700$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Picture level scores",
+      "steps": [
+        "The mean is the fair share, so the total is the same as if all $20$ students had scored exactly $85$.",
+        "Ten students at $85$ make $850$ points, and the other ten make another $850$.",
+        "Together that is $850 + 850 = 1700$, and checking back, $1700 \\div 20 = 85$.",
+        "The total of all the scores is $1700$."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "mean",

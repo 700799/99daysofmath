@@ -41,9 +41,9 @@
     {
       "title": "Use the quadratic formula, or Desmos",
       "steps": [
-        "With $a = 2$, $b = 5$, $c = -3$: $x = \\dfrac{-5 \\pm \\sqrt{25 + 24}}{4} = \\dfrac{-5 \\pm 7}{4}$.",
-        "That gives $\\tfrac{2}{4} = \\tfrac{1}{2}$ and $\\tfrac{-12}{4} = -3$ — the same answers.",
-        "Faster still on test day: graph $y = 2x^2 + 5x - 3$ in Desmos and click the $x$-intercepts."
+        "Read $a = 2$, $b = 5$ and $c = -3$, so the discriminant is $25 - 4(2)(-3) = 49$.",
+        "The formula gives $x = \\dfrac{-5 \\pm 7}{4}$, which is $\\dfrac{2}{4} = 0.5$ or $\\dfrac{-12}{4} = -3$.",
+        "The positive solution is $0.5$, and graphing $y = 2x^2 + 5x - 3$ in Desmos shows the same $x$-intercepts."
       ]
     }
   ],

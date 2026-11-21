@@ -34,9 +34,9 @@
     {
       "title": "A typical hour",
       "steps": [
-        "In a typical hour, 12 cars come through.",
-        "Revenue: $12 \\times 8 = \\$96$. Subtract the $\\$20$ cost: $\\$76$.",
-        "Because the rule $8X - 20$ is linear, the \"typical hour\" calculation gives exactly the mean of $Y$."
+        "Picture an hour in which exactly the mean number of cars, $12$, comes through the wash.",
+        "Those cars bring in $12 \\times 8 = 96$ dollars, and paying the $20$ dollar running cost leaves $76$ dollars.",
+        "Because the profit rule $8X - 20$ is linear, the profit in this average hour equals the average profit, so the mean of $Y$ is $76$ dollars."
       ]
     }
   ],

@@ -34,9 +34,9 @@
     {
       "title": "Midline plus amplitude",
       "steps": [
-        "The $+2$ sets the midline at $y = 2$ — the level the wave rocks around.",
-        "The amplitude $3$ says it rises $3$ above that line and falls $3$ below.",
-        "Top $= 2 + 3 = 5$, bottom $= 2 - 3 = -1$."
+        "The $+2$ sets the midline at $y = 2$, the level the wave rocks around.",
+        "The amplitude $3$ says the wave rises $3$ above that line and falls $3$ below it.",
+        "The top is $2 + 3 = 5$ and the bottom is $2 - 3 = -1$, so the largest value is $5$."
       ]
     }
   ],

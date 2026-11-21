@@ -37,9 +37,9 @@
     {
       "title": "Four equal pieces",
       "steps": [
-        "The five-number summary cuts the data into four quarters: 12 to 18, 18 to 24, 24 to 31 and 31 to 40.",
-        "Each piece holds 25 percent of the members, even though the pieces are different widths.",
-        "18 to 31 covers two pieces: $25 + 25 = 50$ percent."
+        "The five numbers cut the members into four groups: $12$ to $18$, $18$ to $24$, $24$ to $31$ and $31$ to $40$ pages.",
+        "Each group holds about $25$ percent of the members, even though the groups have different widths on the page axis.",
+        "The stretch from $18$ to $31$ covers the two middle groups, so it holds $25 + 25 = 50$ percent of the members."
       ]
     }
   ],

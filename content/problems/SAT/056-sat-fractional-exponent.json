@@ -36,9 +36,9 @@
     {
       "title": "Rewrite the base as a power",
       "steps": [
-        "$27 = 3^3$, so $27^{2/3} = (3^3)^{2/3}$.",
-        "Powers of powers multiply: $3^{3 \\cdot 2/3} = 3^2 = 9$.",
-        "When the base is a perfect power, this route is the cleanest and involves no roots at all."
+        "Write the base as a power of $3$: since $27 = 3^3$, the expression is $(3^3)^{2/3}$.",
+        "A power raised to a power multiplies the exponents, and $3 \\cdot \\tfrac{2}{3} = 2$.",
+        "So the expression equals $3^2 = 9$, with no roots needed."
       ]
     }
   ],

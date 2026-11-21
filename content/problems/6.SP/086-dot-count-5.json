@@ -30,6 +30,16 @@
     "In $\\{2, 3, 3, 5, 5, 5\\}$ the value $5$ appears three times.",
     "Three copies of $5$ make three dots, so $3$ dots sit above the value $5$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Draw the plot",
+      "steps": [
+        "Build the dot plot one value at a time: one dot above $2$, two dots above $3$, then a dot for each $5$.",
+        "The stack above $5$ grows to $3$ dots, and the whole plot has $1 + 2 + 3 = 6$ dots.",
+        "Six dots match the six data values, so the count of $3$ dots above $5$ is right."
+      ]
+    }
+  ],
   "tags": [
     "dot-plot"
   ],

@@ -39,15 +39,17 @@
     {
       "title": "Think in half-dollars",
       "steps": [
-        "$\\$4.50$ a week is 9 half-dollars a week, and you need $\\$27$ more, which is 54 half-dollars.",
-        "$54 \\div 9 = 6$ weeks — same answer, no decimals needed."
+        "Count in half-dollars: $4.50$ dollars a week is $9$ half-dollars a week.",
+        "You already have $9$ dollars, so you still need $36 - 9 = 27$ dollars, which is $54$ half-dollars.",
+        "Dividing gives $54 \\div 9 = 6$ weeks, with no decimals in the working."
       ]
     },
     {
       "title": "⚠️ Dodge the trap",
       "steps": [
-        "Dividing 36 by 4.50 right away gives 8 weeks — it spends your $9 of savings twice.",
-        "The $9 was already in the jar, so subtract it first: 4.5w = 27, and w = 6. Fixed money first, weekly money second."
+        "The trap is dividing $36$ by $4.5$ straight away, which gives $8$ weeks and ignores the $9$ dollars already in the jar.",
+        "Check it: after $8$ weeks you would have $4.5 \\times 8 + 9 = 45$ dollars, which is past the goal.",
+        "Subtract the starting money first to get $4.5w = 27$, then divide to get $w = 6$ weeks."
       ]
     }
   ],

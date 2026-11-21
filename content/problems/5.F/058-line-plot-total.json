@@ -48,8 +48,17 @@
     {
       "title": "Decimals",
       "steps": [
-        "$2(0.25) + 3(0.5) + 1(0.75)$.",
-        "$0.5 + 1.5 + 0.75 = 2.75$ ft ✓"
+        "Write each length as a decimal: $\\frac{1}{4} = 0.25$, $\\frac{1}{2} = 0.5$ and $\\frac{3}{4} = 0.75$ feet.",
+        "Multiply each length by how many ribbons have it: $2 \\times 0.25 = 0.5$, $3 \\times 0.5 = 1.5$ and $1 \\times 0.75 = 0.75$.",
+        "Add the three results to get $0.5 + 1.5 + 0.75 = 2.75$ feet."
+      ]
+    },
+    {
+      "title": "Pair pieces into whole feet",
+      "steps": [
+        "Lay the six ribbons out and look for pieces that join to make exactly one foot.",
+        "Two of the $\\frac{1}{2}$-foot ribbons make $1$ foot, and the two $\\frac{1}{4}$-foot ribbons with the last $\\frac{1}{2}$-foot ribbon make another $1$ foot.",
+        "Only the $\\frac{3}{4}$-foot ribbon is left over, so the total is $2 + 0.75 = 2.75$ feet."
       ]
     }
   ],

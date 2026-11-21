@@ -33,6 +33,16 @@
     "Multiply the number of faces by the area of each: $6 \\times 25 = 150$.",
     "The total surface area of the cube is $150$ square units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Think of quarters",
+      "steps": [
+        "Each face has area $25$, like a quarter that is worth $25$ cents.",
+        "Four quarters make $100$ cents, and two more quarters make $50$ cents.",
+        "Six quarters are worth $100 + 50 = 150$ cents, so six faces have a total area of $150$ square units."
+      ]
+    }
+  ],
   "tags": [
     "surface-area",
     "cube"

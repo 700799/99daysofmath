@@ -41,9 +41,9 @@
     {
       "title": "Count the arrangements",
       "steps": [
-        "Zero desserts: one arrangement (N N N N N), probability $0.7^5 = 0.16807$.",
-        "Exactly one dessert: the dessert customer could be any of 5 positions, each arrangement with probability $0.3 \\times 0.7^4 = 0.07203$; total $5 \\times 0.07203 = 0.36015$.",
-        "Add: $0.52822 \\approx 0.528$."
+        "Write each customer as D or N. No desserts is the single arrangement NNNNN, with probability $0.7^5 = 0.16807$.",
+        "Exactly one dessert has $5$ arrangements, since the D can sit in any position, and each has probability $0.3 \\times 0.7^4 = 0.07203$, giving $5 \\times 0.07203 = 0.36015$.",
+        "Adding the two cases gives $0.16807 + 0.36015 = 0.52822$, which rounds to $0.528$."
       ]
     }
   ],

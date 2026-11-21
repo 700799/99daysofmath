@@ -33,6 +33,16 @@
     "Halving the base first keeps the numbers small: $\\frac{1}{2} \\times 12 = 6$, and then $6 \\times 5 = 30$.",
     "The area of the triangle is $30$ square feet."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Two copies make a parallelogram",
+      "steps": [
+        "Put a second copy of the triangle upside down next to the first, so the pair forms a parallelogram.",
+        "That parallelogram has base $12$ ft and height $5$ ft, so its area is $12 \\times 5 = 60$ square feet.",
+        "The triangle is one of two equal halves, so its area is $60 \\div 2 = 30$ square feet."
+      ]
+    }
+  ],
   "tags": [
     "area",
     "triangle"

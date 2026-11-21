@@ -41,16 +41,17 @@
     {
       "title": "Estimate to check the magnitude",
       "steps": [
-        "$7.8$ is nearly $8$, and $8 \\times 250 = 2000$.",
-        "The exact answer of $1950$ sits just below that, exactly as expected.",
-        "A five-second estimate catches an order-of-magnitude error, which is the kind that costs a whole question."
+        "Round the density up to $8$ grams per cubic centimeter, which gives about $8 \\times 250 = 2000$ grams.",
+        "The rounding added $0.2$ grams for each of the $250$ cubic centimeters, which is $0.2 \\times 250 = 50$ grams too many.",
+        "Removing that excess from the estimate gives the exact mass, $2000 - 50 = 1950$ grams."
       ]
     },
     {
       "title": "⚠️ The trap here",
       "steps": [
-        "Dividing gives about 32 grams — a feather-weight answer for a quarter-liter block of metal.",
-        "Density × volume = mass, and the cm³ units cancel to confirm it. When the units work out, the operation was right."
+        "Dividing $250$ by $7.8$ gives about $32$, far too light for a metal block of this size.",
+        "The units show the right operation: grams per cubic centimeter times cubic centimeters leaves grams.",
+        "So the two numbers must be multiplied, and $7.8 \\times 250 = 1950$ grams."
       ]
     }
   ],

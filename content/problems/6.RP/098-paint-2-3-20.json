@@ -43,8 +43,17 @@
     {
       "title": "Use $\\tfrac{3}{5}$ of the whole",
       "steps": [
-        "Yellow is $\\tfrac{3}{5}$ of the mix.",
-        "$\\tfrac{3}{5} \\times 20 = 12$."
+        "The mix has $2 + 3 = 5$ parts and yellow is $3$ of them, so yellow is $\\frac{3}{5}$ of the mix.",
+        "Multiply the fraction by the total: $\\frac{3}{5} \\times 20 = \\frac{60}{5}$.",
+        "Dividing gives $12$, so $12$ gallons of yellow are needed."
+      ]
+    },
+    {
+      "title": "Build a ratio table",
+      "steps": [
+        "List blue and yellow with their total: $2$ and $3$ make $5$ gallons of mix.",
+        "Double to get $4$ and $6$ for $10$ gallons, and double again to get $8$ and $12$ for $20$ gallons.",
+        "The row for $20$ gallons shows $12$ gallons of yellow."
       ]
     }
   ],

@@ -34,9 +34,9 @@
     {
       "title": "Split the fence in half",
       "steps": [
-        "At the optimum, the two perpendicular sides together use $60$ m and the parallel side uses $60$ m — the fence splits evenly between the two directions.",
-        "That is a general pattern in these problems: the fence budget divides equally between \"across\" and \"along.\"",
-        "So $x = 30$, $y = 60$, area $1800$ m²."
+        "In barn problems the best pen uses half the fence across and half along. Here the two sides touching the barn share $60$ m and the side parallel to it uses $60$ m.",
+        "Check with neighbors: depth $25$ gives $25 \\cdot 70 = 1750$ and depth $35$ gives $35 \\cdot 50 = 1750$, both less than depth $30$ gives.",
+        "So each perpendicular side is $30$ m, the parallel side is $60$ m, and the largest area is $30 \\cdot 60 = 1800$ square meters."
       ]
     }
   ],

@@ -37,8 +37,17 @@
     {
       "title": "Fraction of the whole",
       "steps": [
-        "Dogs make up $\\tfrac{3}{8}$ of the total.",
-        "$\\tfrac{3}{8} \\times 24 = 9$."
+        "The ratio has $3 + 5 = 8$ parts and dogs are $3$ of them, so dogs are $\\frac{3}{8}$ of the animals.",
+        "One eighth of the $24$ animals is $24 \\div 8 = 3$ animals.",
+        "Three eighths is $3 \\times 3 = 9$, so there are $9$ dogs."
+      ]
+    },
+    {
+      "title": "Build a ratio table",
+      "steps": [
+        "List dogs and cats in the ratio and add them for a total: $3$ and $5$ make $8$.",
+        "Double the row to get $6$ and $10$, which make $16$, then add the first row again to get $9$ and $15$, which make $24$.",
+        "The row with $24$ animals has $9$ dogs."
       ]
     }
   ],

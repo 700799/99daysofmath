@@ -37,6 +37,25 @@
     "Multiply this average width by the height: $8 \\times 4 = 32$.",
     "The area of the trapezoid is $32$ square units."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Rectangle plus two triangles",
+      "steps": [
+        "Drop two heights from the ends of the short side, which splits the trapezoid into a middle rectangle and two end triangles.",
+        "The rectangle is $6$ wide and $4$ tall, so its area is $6 \\times 4 = 24$.",
+        "The triangles share the leftover $10 - 6 = 4$ units of base, and together their area is $\\frac{1}{2} \\times 4 \\times 4 = 8$.",
+        "Add the parts to get the whole trapezoid: $24 + 8 = 32$ square units."
+      ]
+    },
+    {
+      "title": "Double the trapezoid",
+      "steps": [
+        "Make a second copy of the trapezoid, turn it upside down, and fit it against the first one.",
+        "Together they form a parallelogram with base $6 + 10 = 16$ and height $4$, so its area is $16 \\times 4 = 64$.",
+        "One trapezoid is half of that parallelogram, so its area is $64 \\div 2 = 32$ square units."
+      ]
+    }
+  ],
   "tags": [
     "MAP-practice",
     "area",

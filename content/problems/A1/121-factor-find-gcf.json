@@ -34,16 +34,17 @@
     {
       "title": "Equal gift bags",
       "steps": [
-        "You have 4 pencils and 8 erasers to split into identical bags with nothing left over.",
-        "The most bags you can make is 4 — each bag gets 1 pencil (an x) and 2 erasers.",
-        "That bag count IS the GCF: 4."
+        "Imagine $4$ pencils and $8$ erasers that must be split into identical gift bags with nothing left over.",
+        "The most bags you can make is $4$, with $1$ pencil and $2$ erasers in each bag.",
+        "That largest bag count is the greatest common factor of $4x$ and $8$, which is $4$."
       ]
     },
     {
       "title": "Factor lists",
       "steps": [
-        "Factors of 4: 1, 2, 4. Factors of 8: 1, 2, 4, 8.",
-        "The largest number on both lists is 4."
+        "List the factors of each number: $4$ has $1, 2, 4$ and $8$ has $1, 2, 4, 8$.",
+        "The numbers that appear on both lists are $1$, $2$ and $4$.",
+        "The largest shared number is $4$, so the greatest common factor is $4$."
       ]
     }
   ],

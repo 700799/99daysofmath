@@ -35,7 +35,9 @@
     {
       "title": "Check by dividing",
       "steps": [
-        "$36 \\div 4 = 9$. ✓"
+        "The equation says that $x$ makes $4$ equal groups with $9$ in each group.",
+        "Four groups of $9$ hold $9 + 9 + 9 + 9 = 36$, so $x$ should be $36$.",
+        "Check by dividing: $36 \\div 4 = 9$, which matches the equation, so $x = 36$."
       ]
     }
   ],

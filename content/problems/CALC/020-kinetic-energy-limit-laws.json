@@ -39,9 +39,9 @@
     {
       "title": "Common trap",
       "steps": [
-        "Do not square the mass or forget the $\\frac{1}{2}$: $3^2 \\cdot 6 = 54$ happens to match here only by coincidence, so check the structure, not the number.",
-        "The formula squares the SPEED: $v^2 = 36$. Then multiply by mass $3$ and by $\\frac{1}{2}$.",
-        "$\\frac{1}{2}(3)(36) = 54$."
+        "A tempting slip is to square the mass and forget the half: $3^2 \\cdot 6 = 54$ matches here only by coincidence, so check the structure and not just the number.",
+        "The formula squares the **speed**, so first use the power law to get $v^2 \\to 6^2 = 36$.",
+        "Then multiply by the mass limit $3$ and by the constant $\\frac{1}{2}$: $\\frac{1}{2}(3)(36) = 54$ joules."
       ]
     }
   ],

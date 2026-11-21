@@ -35,6 +35,16 @@
     "Multiply the second part by the same $3$ to get $5 \\times 3 = 15$.",
     "The equivalent ratio is $6 : 15$, which simplifies back to $2 : 5$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Draw three copies",
+      "steps": [
+        "Picture one group with $2$ red counters and $5$ blue counters, which shows the ratio $2 : 5$.",
+        "Multiplying by $3$ means laying out three of these groups, giving $2 + 2 + 2 = 6$ red and $5 + 5 + 5 = 15$ blue.",
+        "Every group still has $2$ red for $5$ blue, so the equivalent ratio is $6 : 15$."
+      ]
+    }
+  ],
   "tags": [
     "equivalent",
     "ratio"
