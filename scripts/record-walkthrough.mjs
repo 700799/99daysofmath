@@ -31,7 +31,8 @@ const SEED = {
     dailyStreak: 12,
     onboardingComplete: true,
     startingCourse: 'grade6',
-    lessonsViewed: ['6.RP-1', '6.RP-2', '6.RP-3'],
+    // Unit 1's lesson is left unseen so it opens by itself on the unit page.
+    lessonsViewed: ['6.RP-2', '6.RP-3'],
     byDomain: { '6.RP': { unitStars: { 1: 3, 2: 2, 3: 1 } } },
     arcadeConfig: { unlimited: true, answerRevealSeconds: 0 },
   },
@@ -122,6 +123,8 @@ async function main() {
         window.scrollTo(0, 0);
       }, to);
     const lesson = page.locator('[aria-label^="Lesson:"]');
+    // A step that cannot be done is skipped quickly, never waited on.
+    const QUICK = { timeout: 2500 };
 
     for (const step of STEPS) {
       if (step.go) {
@@ -132,22 +135,26 @@ async function main() {
       if (step.act === 'hints') {
         // Leave the lesson, then open two hint tiers on the first problem.
         await clearCaption();
-        await page.getByRole('button', { name: 'Maybe later' }).click().catch(() => {});
+        await page.getByRole('button', { name: 'Maybe later' }).click(QUICK).catch(() => {});
         await page.waitForTimeout(700);
         const hint = page.getByRole('button', { name: /Show hint/ });
-        await hint.scrollIntoViewIfNeeded().catch(() => {});
-        await hint.click().catch(() => {});
+        await hint.scrollIntoViewIfNeeded(QUICK).catch(() => {});
+        await hint.click(QUICK).catch(() => {});
         await page.waitForTimeout(900);
-        await page.getByRole('button', { name: /another hint/ }).click().catch(() => {});
+        await page.getByRole('button', { name: /another hint/ }).click(QUICK).catch(() => {});
         await page.waitForTimeout(500);
-        await page.getByText('Guide').first().scrollIntoViewIfNeeded().catch(() => {});
+        await page.getByText('Guide').first().scrollIntoViewIfNeeded(QUICK).catch(() => {});
       }
       await page.evaluate(CAPTION_JS, step.caption);
       await page.waitForTimeout(step.hold);
       if (step.act === 'lesson') {
-        // Page through the lesson so the slides are seen, not just the cover.
-        for (let i = 0; i < 4; i++) {
-          await lesson.locator('button.bg-duo-green').last().click({ force: true }).catch(() => {});
+        // Jump through the lesson's sections so the slides are seen, not just
+        // the cover. (Next has a reading timer; the section chips do not.)
+        for (const name of [/key idea/i, /examples/i]) {
+          await lesson.getByRole('button', { name }).first().click(QUICK).catch(() => {});
+          await page.waitForTimeout(1600);
+          await page.mouse.move(200, 400);
+          await page.mouse.wheel(0, 420);
           await page.waitForTimeout(1500);
         }
       }
