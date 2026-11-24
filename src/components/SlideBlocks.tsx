@@ -21,9 +21,9 @@ import type {
 
 const TONE: Record<SlideTone, { box: string; label: string; chip: string }> = {
   accent: { box: 'border-accent/40 bg-accent-soft', label: 'text-accent', chip: 'bg-accent text-on-accent' },
-  ok: { box: 'border-ok/40 bg-ok-soft', label: 'text-ok', chip: 'bg-ok text-white' },
-  warn: { box: 'border-warn/45 bg-warn-soft', label: 'text-warn', chip: 'bg-warn text-white' },
-  bad: { box: 'border-bad/45 bg-bad-soft', label: 'text-bad', chip: 'bg-bad text-white' },
+  ok: { box: 'border-ok/40 bg-ok-soft', label: 'text-ok', chip: 'bg-ok text-canvas' },
+  warn: { box: 'border-warn/45 bg-warn-soft', label: 'text-warn', chip: 'bg-warn text-canvas' },
+  bad: { box: 'border-bad/45 bg-bad-soft', label: 'text-bad', chip: 'bg-bad text-canvas' },
   plain: { box: 'border-line bg-surface-2', label: 'text-ink-muted', chip: 'bg-ink-muted text-surface' },
 };
 
