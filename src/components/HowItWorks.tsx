@@ -5,28 +5,33 @@
 const STEPS: { emoji: string; title: string; body: string }[] = [
   {
     emoji: '🗺️',
-    title: 'Pick a math trail',
-    body: 'Choose a topic — ratios, fractions, decimals, geometry, expressions, or statistics.',
+    title: 'Pick your course',
+    body: 'Choose from 5th grade math through Algebra, Geometry, Precalculus, SAT Math, AP Calculus and AP Statistics.',
   },
   {
-    emoji: '🎬',
-    title: 'Watch the idea video',
-    body: 'A short animated lesson builds the concept step by step, then works one example.',
+    emoji: '📘',
+    title: 'Learn the idea',
+    body: 'Each lesson builds the concept slide by slide, says why it works, and shows another way to see it.',
   },
   {
     emoji: '✏️',
-    title: 'Read the worked examples',
-    body: 'See each problem solved line by line, with pro tips and common traps called out.',
+    title: 'Follow the worked examples',
+    body: 'See each problem solved one explained step at a time, with common traps called out.',
   },
   {
     emoji: '🧠',
-    title: 'Practice until it clicks',
-    body: 'Answer adaptive practice questions with hints — earn stars, XP, and coins.',
+    title: 'Practice with hints',
+    body: 'Hints build up from a nudge to a full solution, so you take only the help you need, and earn stars, XP and coins.',
+  },
+  {
+    emoji: '🎬',
+    title: 'Watch the lesson video',
+    body: 'Every lesson has a short video that walks through the same ideas and examples.',
   },
   {
     emoji: '🕹️',
     title: 'Earn arcade time',
-    body: 'Learning unlocks the arcade — dozens of original games that reward what you know.',
+    body: 'Learning unlocks the arcade: dozens of original games that reward what you know.',
   },
 ];
 
@@ -43,9 +48,9 @@ export function HowItWorks() {
         How Math10x works
       </h2>
       <p className="mt-1.5 text-sm sm:text-base text-ink-muted">
-        Math10x is a free way for kids to learn math, from grade-5 foundations through Algebra 1 and Precalculus — animated video
-        lessons, worked examples, and adaptive practice for ratios, fractions, decimals,
-        geometry, expressions, and statistics — with an arcade kids unlock by learning.
+        Math10x is a free way for students to learn math, from 5th grade through AP Calculus and AP Statistics:
+        lessons that explain why, worked examples, practice with layered hints, a short video for every lesson,
+        and an arcade unlocked by learning.
       </p>
 
       {/* Short screen-recording walkthrough (tap to play). */}
